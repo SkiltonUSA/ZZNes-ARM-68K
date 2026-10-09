@@ -1,0 +1,8 @@
+OWNED amiga=50000040 arm_candidate=101f0040 size=4194304 nonce=6ac92c62
+BOOTSTRAP amiga=40c5cc00 arm=00e4cc00 (P96 allocated/locked)
+MAP status=4d415031 SCTLR=08c50878 MIDR=413fc090 MPIDR=80000001
+MAPPING PASS (eight nonce-derived words)
+ARM ready=41524d31 SCTLR=08c5187d MIDR=413fc090 MPIDR=80000001
+CARTRIDGE mapper=90 PRG=524288 CHR=262144 battery=0
+STAGE ROM published; initializing core
+STAGE core initialized; calibrating clock

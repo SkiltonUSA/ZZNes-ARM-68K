@@ -1,0 +1,4 @@
+amiga_run_script [OK]
+Directory "SD032G:Dev/FceuxBench" is empty
+amiga_fetch_url Fetched 186344 bytes from http://127.0.0.1:55029/ZZFceuxBench
+Transferred 186344 bytes in 8.7s (21418 B/s), 182 chunks, CRC32 verified

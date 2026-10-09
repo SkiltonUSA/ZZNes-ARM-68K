@@ -1,0 +1,17 @@
+amiga_fetch_url Fetched 179 bytes from http://127.0.0.1:55029/Start-Sonic-ahi
+Transferred 179 bytes in 0.0s (3882 B/s), 1 chunks, CRC32 verified
+amiga_fetch_url Fetched 183 bytes from http://127.0.0.1:55029/Start-Sonic-paula
+Transferred 183 bytes in 0.0s (4620 B/s), 1 chunks, CRC32 verified
+amiga_fetch_url Fetched 1807 bytes from http://127.0.0.1:55029/ReadMe-Local-Tests.txt
+Transferred 1807 bytes in 0.1s (16398 B/s), 2 chunks, CRC32 verified
+amiga_run_script [OK]
+908c5324c19c04e28cae9d4343b6fb40  SD032G:Dev/ZZPicoDriveMD/ZZPicodriveMD_v1.1
+rom=SD032G:Dev/ZZPicoDriveMD/ROMs/Sonic1.bin
+region=2
+audio=0
+input=0
+port=1
+players=1
+input2=1
+port2=0
+fps=0

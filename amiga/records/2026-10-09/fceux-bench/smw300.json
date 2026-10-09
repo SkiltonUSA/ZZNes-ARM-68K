@@ -1,0 +1,16 @@
+{
+  "frames": 300,
+  "samples": 159724,
+  "nonzero_samples": 156971,
+  "timer_hz": 333326335,
+  "native_all_frames_match": true,
+  "core_mean_ms": 6.104010000000001,
+  "core_equivalent_fps": 163.82673029696872,
+  "headless_elapsed_ms": 2383.646,
+  "headless_throughput_fps": 125.85761476326603,
+  "core_frame_min_ms": 2.779171348702466,
+  "core_frame_max_ms": 6.598887543643979,
+  "frames_over_ntsc_16_639ms": 0,
+  "clean_return": true,
+  "note": "Core throughput and headless throughput are not displayed FPS; no AHI playback"
+}

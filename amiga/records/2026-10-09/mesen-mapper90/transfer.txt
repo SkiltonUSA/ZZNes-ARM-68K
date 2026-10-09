@@ -1,0 +1,10 @@
+amiga_fetch_url Fetched 10089 bytes from http://127.0.0.1:55029/build-mapper90.json
+Transferred 10089 bytes in 0.5s (21001 B/s), 10 chunks, CRC32 verified
+amiga_fetch_url Fetched 416820 bytes from http://127.0.0.1:55029/ZZNes-mapper90
+Transferred 416820 bytes in 24.2s (17230 B/s), 408 chunks, CRC32 verified
+amiga_fetch_url Fetched 228 bytes from http://127.0.0.1:55029/Start-SuperMarioWorld
+Transferred 228 bytes in 0.0s (6508 B/s), 1 chunks, CRC32 verified
+amiga_fetch_url Fetched 3177 bytes from http://127.0.0.1:55029/ReadMe-mapper90.txt
+Transferred 3177 bytes in 0.2s (15786 B/s), 4 chunks, CRC32 verified
+amiga_fetch_url Fetched 244 bytes from http://127.0.0.1:55029/checksums-mapper90.json
+Transferred 244 bytes in 0.0s (7752 B/s), 1 chunks, CRC32 verified

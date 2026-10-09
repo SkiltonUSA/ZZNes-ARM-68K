@@ -1,0 +1,32 @@
+OWNED amiga=50000040 arm_candidate=101f0040 size=4194304 nonce=9fc00101
+BOOTSTRAP amiga=40c84400 arm=00e74400 (P96 allocated/locked)
+MAP status=4d415031 SCTLR=08c50878 MIDR=413fc090 MPIDR=80000001
+MAPPING PASS (eight nonce-derived words)
+ARM ready=41524d31 SCTLR=08c5187d MIDR=413fc090 MPIDR=80000001
+FCEUX INIT bytes=24592 mapper=0 frames=6 NTSC rate=32000 quality=0 frameskip=0 sprites=8
+CLOCK timer_hz=333316853
+FRAME n=1 cycles=29782 video=6fde1dc5 audio=77c8d7e5 samples=532 nonzero=0 ticks=757163
+FRAME n=2 cycles=59564 video=6fde1dc5 audio=77c8d7e5 samples=532 nonzero=0 ticks=754147
+FRAME n=3 cycles=89344 video=6fde1dc5 audio=860daeed samples=533 nonzero=0 ticks=1147269
+FRAME n=4 cycles=119125 video=6fde1dc5 audio=77c8d7e5 samples=532 nonzero=0 ticks=1178361
+FRAME n=5 cycles=148903 video=6fde1dc5 audio=860daeed samples=533 nonzero=0 ticks=1205602
+FRAME n=6 cycles=178688 video=6fde1dc5 audio=77c8d7e5 samples=532 nonzero=0 ticks=1627335
+FCEUX END exit=0 frames=6 elapsed_us=29744 core_total_us=20010 samples=3194 nonzero=0
+EXIT epilogue=52455431 cache_echoes=0 rounds=0
+CACHE original=08c50878 running=08c5187d restored=08c50878
+MMU_RESTORE phase=3 register_mismatches=00000000 cpsr_control=1d3 expected=1d3 ttbr=10234000 ccsidr=701fe019 witness_bad=0 mailbox_rounds=9
+REGISTER n=0 original=08c50878 restored=08c50878
+REGISTER n=1 original=10234000 restored=10234000
+REGISTER n=2 original=02000001 restored=02000001
+REGISTER n=3 original=00000000 restored=00000000
+REGISTER n=4 original=00000001 restored=00000001
+REGISTER n=5 original=00000001 restored=00000001
+REGISTER n=6 original=600101d3 restored=600101d3
+REGISTER n=7 original=00000006 restored=00000006
+REGISTER n=8 original=00000000 restored=00000000
+REGISTER n=9 original=00098aa4 restored=00098aa4
+REGISTER n=10 original=44e048e0 restored=44e048e0
+REGISTER n=11 original=00000000 restored=00000000
+REGISTER n=12 original=00000001 restored=00000001
+REGISTER n=13 original=72360000 restored=72360000
+LAUNCHER exit=0; owned memory released

@@ -1,0 +1,24 @@
+amiga_list_screens Screens (2):
+
+  ZZFceux fullscreen  320x240  8bpp  LORES  @97C7A68
+  Workbench Screen  1920x800  8bpp  LORES  @82BDF88
+amiga_list_ports Public Message Ports (19):
+  TSPORT
+  WORKBENCH
+  DEFICONS
+  ToolsDaemon 2.1a © Nico François
+  REXX
+  AREXX
+  MagicMenu
+  SIXIES.BRIDGE.NETWATCH
+  AssignWedge.port
+  ZZTemperature.1
+  NewMeter
+  POPO.1
+  QDock
+  ROADIE
+  TCP/IP Control
+  AMIGABRIDGE
+  Sixies.ARM.Debug.Owner
+  ConClip.rendezvous
+  deficons

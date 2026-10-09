@@ -1,0 +1,55 @@
+amiga_list_screens Screens (2):
+
+  (untitled)  320x240  1bpp  LORES  @94473A0
+  Workbench Screen  1920x800  8bpp  LORES  @895EF20
+amiga_inspect_memory 44510000  43 49 50 5A 01 00 00 00 02 00 00 00 03 00 00 00   CIPZ............
+44510010  03 00 00 00 03 00 00 00 35 27 03 00 70 EB 00 00   ........5'..p...
+amiga_input_key Key 60 down
+amiga_input_key Key 45 down
+amiga_input_key Key 45 up
+amiga_input_key Key 60 up
+amiga_list_screens Screens (2):
+
+  (untitled)  320x240  1bpp  LORES  @94473A0
+  Workbench Screen  1920x800  8bpp  LORES  @895EF20
+amiga_list_screens Screens (2):
+
+  (untitled)  320x240  1bpp  LORES  @94473A0
+  Workbench Screen  1920x800  8bpp  LORES  @895EF20
+amiga_list_screens Screens (2):
+
+  (untitled)  320x240  1bpp  LORES  @94473A0
+  Workbench Screen  1920x800  8bpp  LORES  @895EF20
+amiga_list_screens Screens (2):
+
+  (untitled)  320x240  1bpp  LORES  @94473A0
+  Workbench Screen  1920x800  8bpp  LORES  @895EF20
+amiga_list_screens Screens (2):
+
+  (untitled)  320x240  1bpp  LORES  @94473A0
+  Workbench Screen  1920x800  8bpp  LORES  @895EF20
+amiga_list_screens Screens (2):
+
+  (untitled)  320x240  1bpp  LORES  @94473A0
+  Workbench Screen  1920x800  8bpp  LORES  @895EF20
+amiga_list_screens Screens (2):
+
+  (untitled)  320x240  1bpp  LORES  @94473A0
+  Workbench Screen  1920x800  8bpp  LORES  @895EF20
+amiga_list_screens Screens (2):
+
+  (untitled)  320x240  1bpp  LORES  @94473A0
+  Workbench Screen  1920x800  8bpp  LORES  @895EF20
+amiga_list_screens Screens (2):
+
+  (untitled)  320x240  1bpp  LORES  @94473A0
+  Workbench Screen  1920x800  8bpp  LORES  @895EF20
+amiga_list_screens Screens (2):
+
+  (untitled)  320x240  1bpp  LORES  @94473A0
+  Workbench Screen  1920x800  8bpp  LORES  @895EF20
+amiga_list_screens Screens (1):
+
+  Amiga Workbench Release 3.2 Kickstart 47  1920x800  8bpp  LORES  @895EF20
+amiga_inspect_memory 44510000  43 49 50 5A 01 00 00 00 FF 00 00 00 04 00 00 00   CIPZ............
+44510010  04 00 00 00 04 00 00 00 3B 27 03 00 75 EB 00 00   ........;'..u...

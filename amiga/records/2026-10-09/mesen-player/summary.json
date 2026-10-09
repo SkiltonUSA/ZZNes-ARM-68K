@@ -1,0 +1,27 @@
+{
+  "version": "0.3-dev",
+  "executable_md5": "6e4e23072476a232f0b955d4a5d32a0d",
+  "physical_sound": {
+    "frames": 120,
+    "elapsed_us": 7873175,
+    "fps": 15.24162742476828,
+    "ahi_samples": 63850,
+    "detected_gaps": 119,
+    "flips": 120,
+    "readbacks": 3
+  },
+  "save_reload": {
+    "bytes": 8192,
+    "first_counter": 117,
+    "reloaded_counter": 120,
+    "backup_matches_previous": true
+  },
+  "quit_test": {
+    "limit": 1200,
+    "actual_frames": 433,
+    "exit": 0
+  },
+  "native_timing_roms": 13,
+  "owner_picture_sound_acceptance": "pending; owner missed bounded test",
+  "postflight": "Workbench only; Roadie and AMIGABRIDGE present; no Core1 owner port"
+}

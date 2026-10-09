@@ -1,0 +1,7 @@
+amiga_list_screens Screens (1):
+
+  Amiga Workbench Release 3.2 Kickstart 47  1920x800  8bpp  LORES  @895EF20
+amiga_fetch_url Fetched 425888 bytes from http://127.0.0.1:55029/ZZNes-audio-task
+Transferred 425888 bytes in 20.7s (20622 B/s), 416 chunks, CRC32 verified
+amiga_run_script [OK]
+7cda8de838233fd3cd4934ba388076b9  SD032G:Dev/ZZNesPlayer/ZZNes-audio-task

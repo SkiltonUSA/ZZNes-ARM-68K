@@ -1,0 +1,19 @@
+{
+  "repository": "https://github.com/christopherpow/nes-test-roms",
+  "commit": "95d8f621ae55cee0d09b91519a8989ae0e64753b",
+  "files": {
+    "apu_test/rom_singles/1-len_ctr.nes": "aacf86c1d773badd11392e54506a43a06a3dd0b67a4c255909d1daf770a4a1e2",
+    "apu_test/rom_singles/2-len_table.nes": "c002ff1483b4dfb36a6eb004d49739cd58a2dff16e0bac167d5a7c12235caeeb",
+    "apu_test/rom_singles/3-irq_flag.nes": "dd888551665937391a2d691b1f96d1858316dbfce4951306146e9e396367f079",
+    "apu_test/rom_singles/4-jitter.nes": "bff573d72d0f134fe307f0bb8b968b8d2ffdb85e8aadad9c152839068d6db32a",
+    "apu_test/rom_singles/5-len_timing.nes": "4d88f8cc0b21303dc151af4d0f4169d79284634a73082d7ea1ae5cfafedd1e46",
+    "apu_test/rom_singles/6-irq_flag_timing.nes": "fc1daff82dd1a49c7c1242392ffbf1c6f44fb70156868582117f2a844cc4dffd",
+    "apu_test/rom_singles/7-dmc_basics.nes": "547324867ee0ba2aa11401001d8d1288530aa4e0ecaaac1667ce79980a388ec1",
+    "apu_test/rom_singles/8-dmc_rates.nes": "5d9a79a505b37fa277cacc95a362f7e2a56e59ace7a698213d78432cc06a8867",
+    "mmc3_test_2/rom_singles/1-clocking.nes": "b06d8a97f0ca672be92c841d6af7d1e650696e86e9cc0cf6eeb90d67a6ab499b",
+    "mmc3_test_2/rom_singles/2-details.nes": "e7af16c764b119e60effb7b1cfeec3dd8e2e657041283693cdbbeedb4081f1e3",
+    "mmc3_test_2/rom_singles/3-A12_clocking.nes": "b375f15b9f9d372c8084b9c50928be9e41a3ac48be831ce82d203c18891433ad",
+    "mmc3_test_2/rom_singles/4-scanline_timing.nes": "14a220b9d1272acc7a820ab38e9762a7cdf2d54c65e753be87f23dfcaf1bb845",
+    "mmc3_test_2/rom_singles/5-MMC3.nes": "e0824123d60b83868dac1189b28250f8e10376a01be468a5a74aa59937cb32ca"
+  }
+}

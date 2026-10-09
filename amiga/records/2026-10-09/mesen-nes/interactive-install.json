@@ -1,0 +1,19 @@
+{
+  "executable_md5": "176807e1edc3ae7ef9663b169c2dc5c9",
+  "frames": 1104,
+  "elapsed_us": 114369181,
+  "core_total_us": 25921242,
+  "displayed_frames_per_second": 9.652950124736838,
+  "scope": "observed interactive original-demo rate including CPU/PPU, validation, mailbox polling, transfer/conversion and P96 drawing; not general NES game FPS",
+  "user_confirmed": "Picture and movement both work (option 1)",
+  "quit": "MCP injected Q down/up before frame limit; RET1, exit 0, witness and restoration checks passed",
+  "screenshot_capture": false,
+  "installed_directory": "SD032G:Dev/ZZNesPreview",
+  "installed_files_md5": {
+    "Start-ZZNes": "6aec4c0ce479d1c91a7bb6fa9cd39951",
+    "ReadMe-Amiga.txt": "05dd1a99992397cba7e2d62a26ed7eca",
+    "ZZNes": "176807e1edc3ae7ef9663b169c2dc5c9",
+    "COPYING": "d32239bcb673463ab874e80d47fae504",
+    "build.json": "d22b443f2dfcb8c49e274fc7d46a575b"
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "scope": "120-frame original silent NROM demo; validation policy differs for direct; not general NES game FPS",
+  "runs": {
+    "legacy": {
+      "frames": 120,
+      "wall_us": 12413610,
+      "fps": 9.666809252103135,
+      "core_ms": 23.375866666666663,
+      "request_ms": 30.764641666666666,
+      "copy_ms": 0.03944166666666667,
+      "colour_ms": 30.427799999999998,
+      "draw_ms": 41.902366666666666,
+      "validation": "ARM and 68k output hashes every frame"
+    },
+    "host": {
+      "frames": 120,
+      "wall_us": 12139926,
+      "fps": 9.884739000880236,
+      "core_ms": 23.328775,
+      "request_ms": 26.3685,
+      "copy_ms": 10.509216666666667,
+      "colour_ms": 24.907091666666666,
+      "draw_ms": 39.041625,
+      "validation": "ARM and 68k output hashes every frame"
+    },
+    "fast": {
+      "frames": 120,
+      "wall_us": 11998940,
+      "fps": 10.000883411368005,
+      "core_ms": 21.80484166666667,
+      "request_ms": 24.966858333333334,
+      "copy_ms": 10.63355,
+      "colour_ms": 24.095733333333335,
+      "draw_ms": 39.97324166666667,
+      "validation": "ARM and 68k output hashes every frame"
+    },
+    "direct": {
+      "frames": 120,
+      "wall_us": 4219675,
+      "fps": 28.438209103781688,
+      "core_ms": 21.536733333333334,
+      "request_ms": 24.292125,
+      "copy_ms": 0.0,
+      "colour_ms": 0.0,
+      "draw_ms": 10.538366666666667,
+      "arm_colour_copy_ms": 3.749216666666667,
+      "bitmap_verified_frames": 3,
+      "validation": "ARM hashes and address challenges every frame; full bitmap readback frames 1/60/120"
+    }
+  },
+  "speedup": 1.034558886034933,
+  "direct_speedup": 2.941840307606628,
+  "core_speedup": 1.0720493651830383
+}

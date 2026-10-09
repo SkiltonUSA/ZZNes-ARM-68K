@@ -1,0 +1,31 @@
+amiga_run_script [OK]
+9179e735764feebf46fd9b00601bef45  SD032G:Dev/ZZNesPlayer/ZZNesSoundTest.nes
+4bf661c1e3793e55c8d1051bc5e0ae21  SD032G:Dev/ZZNesPlayer/COPYING.LGPL
+8d9a8d72112536404196d86a9c44170c  SD032G:Dev/ZZNesPlayer/ReadMe-Amiga.txt
+6e4e23072476a232f0b955d4a5d32a0d  SD032G:Dev/ZZNesPlayer/ZZNes
+d32239bcb673463ab874e80d47fae504  SD032G:Dev/ZZNesPlayer/COPYING
+049a1ea4a69c9a33eb1fc09a040963c4  SD032G:Dev/ZZNesPlayer/Start-ZZNesPlayer
+73c24c57093437077db2534a9ee70bed  SD032G:Dev/ZZNesPlayer/ZZNesDemo.nes
+e18b2a9f6665d05872588d8d214af986  SD032G:Dev/ZZNesPlayer/build.json
+amiga_list_ports Public Message Ports (18):
+  TSPORT
+  WORKBENCH
+  DEFICONS
+  ToolsDaemon 2.1a © Nico François
+  REXX
+  AREXX
+  MagicMenu
+  SIXIES.BRIDGE.NETWATCH
+  AssignWedge.port
+  ZZTemperature.1
+  NewMeter
+  POPO.1
+  QDock
+  ROADIE
+  TCP/IP Control
+  AMIGABRIDGE
+  ConClip.rendezvous
+  deficons
+amiga_list_screens Screens (1):
+
+  Workbench Screen  1920x800  8bpp  LORES  @898BE20

@@ -1,0 +1,14 @@
+{
+  "commit": "8bb998e4f9cac88d519ccdf3559c8a404fb6381d",
+  "firmware_source_url": "https://raw.githubusercontent.com/Xanxi-Amiga/XACP-ZZ9000/8bb998e4f9cac88d519ccdf3559c8a404fb6381d/firmware/source/XX19c/ZZ9000_proto.sdk/ZZ9000OS/src/main.c",
+  "firmware_source_sha256": "b15d3a9101960268a2223aa5c8c82dadb33127d8980a62906b8d82f6bc76db35",
+  "registers": {
+    "USER3": "0x44: 1 arm next PAN, 2 cancel/disarm",
+    "USER4": "0x46: 16-bit ACK counter",
+    "PAN": "0x0a high/0x0c low commit",
+    "X1_Y1": "0x10/0x12 zero",
+    "X2": "0x14 pitch / 4",
+    "COLORMODE": "0x30 = 2 for 32-bit pitch calculation"
+  },
+  "notes": "Pending offset applied at rising vblank; ACK increments once; no Core1/PL310 policy change."
+}

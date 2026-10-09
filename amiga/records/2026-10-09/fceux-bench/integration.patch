@@ -1,0 +1,453 @@
+--- upstream/x6502.cpp
++++ generated/x6502.cpp
+@@ -1,3 +1,5 @@
++#include "platform.h"
++#include "x6502abbrev.h"
+ /* FCE Ultra - NES/Famicom Emulator
+  *
+  * Copyright notice for this file:
+@@ -18,18 +20,10 @@
+  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
+  */
+ 
+-#include "types.h"
+-#include "x6502.h"
+-#include "fceu.h"
+-#include "debug.h"
+-#include "sound.h"
+ #ifdef _S9XLUA_H
+-#include "fceulua.h"
+ #endif
+ 
+-#include "x6502abbrev.h"
+-
+-#include <cstring>
++
+ X6502 X;
+ uint32 timestamp;
+ uint32 soundtimestamp;
+--- upstream/ppu.cpp
++++ generated/ppu.cpp
+@@ -1,3 +1,4 @@
++#include "platform.h"
+ /* FCE Ultra - NES/Famicom Emulator
+  *
+  * Copyright notice for this file:
+@@ -19,27 +20,8 @@
+  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
+  */
+ 
+-#include "types.h"
+-#include "x6502.h"
+-#include "fceu.h"
+-#include "ppu.h"
+-#include "nsf.h"
+-#include "sound.h"
+-#include "file.h"
+-#include "utils/endian.h"
+-#include "utils/memory.h"
+ 		 
+-#include "cart.h"
+-#include "palette.h"
+-#include "state.h"
+-#include "video.h"
+-#include "input.h"
+-#include "driver.h"
+-#include "debug.h"
+ 		 
+-#include <cstring>
+-#include <cstdio>
+-#include <cstdlib>
+ 
+ #define VBlankON    (PPU[0] & 0x80)	//Generate VBlank NMI
+ #define Sprite16    (PPU[0] & 0x20)	//Sprites 8x16/8x8
+@@ -74,11 +56,11 @@
+ 
+ template<typename T, int BITS>
+ struct BITREVLUT {
+-	T* lut;
+-	BITREVLUT() {
++	T lut[1 << BITS];
++	void init() {
+ 		int bits = BITS;
+ 		int n = 1 << BITS;
+-		lut = new T[n];
++		// Storage belongs to the launcher allocation.
+ 
+ 		int m = 1;
+ 		int a = n >> 1;
+@@ -1162,7 +1144,7 @@
+ 		uint32 tem;
+ 		tem = READPAL(0) | (READPAL(0) << 8) | (READPAL(0) << 16) | (READPAL(0) << 24);
+ 		tem |= 0x40404040;
+-		*(uint32*)Plinef = *(uint32*)(Plinef + 4) = tem;
++		*(FC_Unaligned32 *)Plinef = *(FC_Unaligned32 *)(Plinef + 4) = tem;
+ 	}
+ 
+ 	if (!ScreenON) {
+@@ -1260,24 +1242,24 @@
+ 	{
+ 		if (PPU[1] & 0x01) {
+ 			for (x = 63; x >= 0; x--)
+-				*(uint32*)&target[x << 2] = (*(uint32*)&target[x << 2]) & 0x30303030;
++				*(FC_Unaligned32 *)&target[x << 2] = (*(FC_Unaligned32 *)&target[x << 2]) & 0x30303030;
+ 		}
+ 	}
+ 
+ 	//some pathetic attempts at deemph
+ 	if ((PPU[1] >> 5) == 0x7) {
+ 		for (x = 63; x >= 0; x--)
+-			*(uint32*)&target[x << 2] = ((*(uint32*)&target[x << 2]) & 0x3f3f3f3f) | 0xc0c0c0c0;
++			*(FC_Unaligned32 *)&target[x << 2] = ((*(FC_Unaligned32 *)&target[x << 2]) & 0x3f3f3f3f) | 0xc0c0c0c0;
+ 	} else if (PPU[1] & 0xE0)
+ 		for (x = 63; x >= 0; x--)
+-			*(uint32*)&target[x << 2] = (*(uint32*)&target[x << 2]) | 0x40404040;
++			*(FC_Unaligned32 *)&target[x << 2] = (*(FC_Unaligned32 *)&target[x << 2]) | 0x40404040;
+ 	else
+ 		for (x = 63; x >= 0; x--)
+-			*(uint32*)&target[x << 2] = ((*(uint32*)&target[x << 2]) & 0x3f3f3f3f) | 0x80808080;
++			*(FC_Unaligned32 *)&target[x << 2] = ((*(FC_Unaligned32 *)&target[x << 2]) & 0x3f3f3f3f) | 0x80808080;
+ 
+ 	//write the actual deemph
+ 	for (x = 63; x >= 0; x--)
+-		*(uint32*)&dtarget[x << 2] = ((PPU[1]>>5)<<0)|((PPU[1]>>5)<<8)|((PPU[1]>>5)<<16)|((PPU[1]>>5)<<24);
++		*(FC_Unaligned32 *)&dtarget[x << 2] = ((PPU[1]>>5)<<0)|((PPU[1]>>5)<<8)|((PPU[1]>>5)<<16)|((PPU[1]>>5)<<24);
+ 
+ 	sphitx = 0x100;
+ 
+@@ -1390,7 +1372,7 @@
+ 					dst.x = spr->x;
+ 					dst.atr = spr->atr;
+ 
+-					*(uint32*)&SPRBUF[ns << 2] = *(uint32*)&dst;
++					*(FC_Unaligned32 *)&SPRBUF[ns << 2] = *(FC_Unaligned32 *)&dst;
+ 				}
+ 
+ 				ns++;
+@@ -1447,7 +1429,7 @@
+ 					dst.atr = spr->atr;
+ 
+ 
+-					*(uint32*)&SPRBUF[ns << 2] = *(uint32*)&dst;
++					*(FC_Unaligned32 *)&SPRBUF[ns << 2] = *(FC_Unaligned32 *)&dst;
+ 				}
+ 
+ 				ns++;
+@@ -1596,7 +1578,7 @@
+ 
+  loopskie:
+ 	{
+-		uint32 t = *(uint32*)(sprlinebuf + n);
++		uint32 t = *(FC_Unaligned32 *)(sprlinebuf + n);
+ 
+ 		if (t != 0x80808080) {
+ 			#ifdef LSB_FIRST
+@@ -1671,6 +1653,7 @@
+ 
+ //Initializes the PPU
+ void FCEUPPU_Init(void) {
++ bitrevlut.init();
+ 	makeppulut();
+ }
+ 
+--- upstream/sound.cpp
++++ generated/sound.cpp
+@@ -1,3 +1,8 @@
++#ifdef FC_ARM
++static const unsigned fc_l1[]={0,190,375,557,734,906,1075,1240,1402,1560,1714,1865,2013,2157,2299,2438,2574,2707,2837,2965,3090,3213,3333,3451,3567,3681,3792,3902,4009,4115,4219,4320};
++static const unsigned fc_l2[]={0,109,218,326,433,540,645,749,853,956,1058,1159,1260,1360,1459,1557,1654,1751,1847,1942,2036,2130,2223,2316,2407,2498,2589,2678,2767,2855,2943,3030,3117,3202,3288,3372,3456,3539,3622,3704,3786,3867,3947,4027,4106,4185,4263,4341,4418,4495,4571,4647,4722,4796,4870,4944,5017,5090,5162,5233,5304,5375,5445,5515,5584,5653,5722,5790,5857,5924,5991,6057,6123,6189,6254,6318,6382,6446,6510,6573,6635,6697,6759,6821,6882,6943,7003,7063,7123,7182,7241,7299,7357,7415,7473,7530,7587,7643,7700,7755,7811,7866,7921,7976,8030,8084,8137,8191,8244,8296,8349,8401,8453,8504,8556,8607,8657,8708,8758,8808,8857,8906,8955,9004,9053,9101,9149,9197,9244,9291,9338,9385,9431,9478,9523,9569,9615,9660,9705,9750,9794,9838,9883,9926,9970,10013,10057,10099,10142,10185,10227,10269,10311,10353,10394,10435,10476,10517,10558,10598,10638,10678,10718,10758,10797,10836,10875,10914,10953,10991,11030,11068,11106,11143,11181,11218,11256,11293,11329,11366,11403,11439,11475,11511,11547,11583,11618,11653,11689,11723,11758,11793,11828,11862,11896,11930,11964,11998,12031,12065,12098,12131,12164};
++#endif
++#include "platform.h"
+ /* FCE Ultra - NES/Famicom Emulator
+  *
+  * Copyright notice for this file:
+@@ -18,19 +23,8 @@
+  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
+  */
+ 
+-#include "types.h"
+-#include "x6502.h"
+-
+-#include "fceu.h"
+-#include "sound.h"
+-#include "filter.h"
+-#include "state.h"
+-#include "wave.h"
+-#include "debug.h"
+-
+-#include <cstdlib>
+-#include <cstdio>
+-#include <cstring>
++
++
+ 
+ static uint32 wlookup1[32];
+ static uint32 wlookup2[203];
+@@ -1238,13 +1232,25 @@
+    wlookup1[0]=0;
+    for(x=1;x<32;x++)
+    {
+-    wlookup1[x]=(double)16*16*16*4*95.52/((double)8128/(double)x+100);
++    
++#ifdef FC_ARM
++ wlookup1[x]=fc_l1[x];
++#else
++ wlookup1[x]=(double)16*16*16*4*95.52/((double)8128/(double)x+100);
++#endif
++
+     if(!FSettings.soundq) wlookup1[x]>>=4;
+    }
+    wlookup2[0]=0;
+    for(x=1;x<203;x++)
+    {
+-    wlookup2[x]=(double)16*16*16*4*163.67/((double)24329/(double)x+100);
++    
++#ifdef FC_ARM
++ wlookup2[x]=fc_l2[x];
++#else
++ wlookup2[x]=(double)16*16*16*4*163.67/((double)24329/(double)x+100);
++#endif
++
+     if(!FSettings.soundq) wlookup2[x]>>=4;
+    }
+    if(FSettings.soundq>=1)
+@@ -1276,13 +1282,25 @@
+   if(GameExpSound.RChange)
+    GameExpSound.RChange();
+ 
+-  nesincsize=(int64)(((int64)1<<17)*(double)(PAL?PAL_CPU:NTSC_CPU)/(FSettings.SndRate * 16));
++  
++#ifdef FC_ARM
++ nesincsize=458181;
++#else
++ nesincsize=(int64)(((int64)1<<17)*(double)(PAL?PAL_CPU:NTSC_CPU)/(FSettings.SndRate * 16));
++#endif
++
+   memset(sqacc,0,sizeof(sqacc));
+   memset(ChannelBC,0,sizeof(ChannelBC));
+ 
+   LoadDMCPeriod(DMCFormat&0xF);  // For changing from PAL to NTSC
+ 
+-  soundtsinc=(uint32)((uint64)(PAL?(long double)PAL_CPU*65536:(long double)NTSC_CPU*65536)/(FSettings.SndRate * 16));
++  
++#ifdef FC_ARM
++ soundtsinc=229090;
++#else
++ soundtsinc=(uint32)((uint64)(PAL?(long double)PAL_CPU*65536:(long double)NTSC_CPU*65536)/(FSettings.SndRate * 16));
++#endif
++
+ }
+ 
+ void FCEUI_Sound(int Rate)
+--- upstream/filter.cpp
++++ generated/filter.cpp
+@@ -1,17 +1,11 @@
++#include "platform.h"
++#include "fcoeffs.h"
+ /// \file
+ /// \brief Sound filtering code
+ 
+-#include "types.h"
+-
+-#include "sound.h"
+-#include "x6502.h"
+-#include "fceu.h"
+-#include "filter.h"
+-
+-#include "fcoeffs.h"
+-
+-#include <cmath>
+-#include <cstdio>
++
++
++
+ 
+ static int32 sq2coeffs[SQ2NCOEFFS];
+ static int32 coeffs[NCOEFFS];
+@@ -182,7 +176,13 @@
+   nco=NCOEFFS;
+ 
+  mrindex=(nco+1)<<16;
++ 
++#ifdef FC_ARM
++ mrratio=3665454;
++#else
+  mrratio=(PAL?(int64)(PAL_CPU*65536):(int64)(NTSC_CPU*65536))/rate;
++#endif
++
+ 
+  if(FSettings.soundq==2)
+   tmp=sq2tabs[(PAL?1:0)|(rate==48000?2:0)|(rate==96000?4:0)];
+--- upstream/cart.cpp
++++ generated/cart.cpp
+@@ -1,3 +1,4 @@
++#include "platform.h"
+ /* FCE Ultra - NES/Famicom Emulator
+  *
+  * Copyright notice for this file:
+@@ -21,22 +22,10 @@
+ /// \file
+ /// \brief This file contains all code for coordinating the mapping in of the address space external to the NES.
+ 
+-#include "types.h"
+-#include "fceu.h"
+-#include "ppu.h"
+-#include "driver.h"
+-
+-#include "cart.h"
+-#include "x6502.h"
+-
+-#include "file.h"
+-#include "utils/memory.h"
+-
+-
+-#include <cstring>
+-#include <cstdlib>
+-#include <cstdio>
+-#include <climits>
++
++
++
++
+ 
+ uint8 *Page[32], *VPage[8];
+ uint8 **VPageR = VPage;
+@@ -341,62 +330,7 @@
+ void FixGenieMap(void);
+ 
+ // Called when a game(file) is opened successfully. Returns TRUE on error.
+-bool FCEU_OpenGenie(void)
+-{
+-	FILE *fp;
+-	int x;
+-
+-	if (!GENIEROM)
+-	{
+-		char *fn;
+-
+-		if (!(GENIEROM = (uint8*)FCEU_malloc(4096 + 1024)))
+-			return true;
+-
+-		fn = strdup(FCEU_MakeFName(FCEUMKF_GGROM, 0, 0).c_str());
+-		fp = FCEUD_UTF8fopen(fn, "rb");
+-		if (!fp)
+-		{
+-			FCEU_PrintError("Error opening Game Genie ROM image!\nIt should be named \"gg.rom\"!");
+-			free(GENIEROM);
+-			GENIEROM = 0;
+-			return true;
+-		}
+-		if (fread(GENIEROM, 1, 16, fp) != 16)
+-		{
+- grerr:
+-			FCEU_PrintError("Error reading from Game Genie ROM image!");
+-			free(GENIEROM);
+-			GENIEROM = 0;
+-			fclose(fp);
+-			return true;
+-		}
+-		if (GENIEROM[0] == 0x4E)
+-		{
+-			/* iNES ROM image */
+-			if (fread(GENIEROM, 1, 4096, fp) != 4096)
+-				goto grerr;
+-			if (fseek(fp, 16384 - 4096, SEEK_CUR))
+-				goto grerr;
+-			if (fread(GENIEROM + 4096, 1, 256, fp) != 256)
+-				goto grerr;
+-		} else
+-		{
+-			if (fread(GENIEROM + 16, 1, 4352 - 16, fp) != (4352 - 16))
+-				goto grerr;
+-		}
+-		fclose(fp);
+-
+-		/* Workaround for the FCE Ultra CHR page size only being 1KB */
+-		for (x = 0; x < 4; x++)
+-		{
+-			memcpy(GENIEROM + 4096 + (x << 8), GENIEROM + 4096, 256);
+-		}
+-	}
+-
+-	geniestage = 1;
+-	return false;
+-}
++
+ 
+ /* Called when a game is closed. */
+ void FCEU_CloseGenie(void) {
+@@ -529,39 +463,12 @@
+ }
+ 
+ 
+-void FCEU_SaveGameSave(CartInfo *LocalHWInfo) {
+-	if (LocalHWInfo->battery && LocalHWInfo->SaveGame[0]) {
+-		FILE *sp;
+-
+-		std::string soot = FCEU_MakeFName(FCEUMKF_SAV, 0, "sav");
+-		if ((sp = FCEUD_UTF8fopen(soot, "wb")) == NULL) {
+-			FCEU_PrintError("WRAM file \"%s\" cannot be written to.\n", soot.c_str());
+-		} else {
+-			for (int x = 0; x < 4; x++)
+-				if (LocalHWInfo->SaveGame[x]) {
+-					fwrite(LocalHWInfo->SaveGame[x], 1,
+-						   LocalHWInfo->SaveGameLen[x], sp);
+-				}
+-		}
+-	}
+-}
++
+ 
+ // hack, movie.cpp has to communicate with this function somehow
+ int disableBatteryLoading = 0;
+ 
+-void FCEU_LoadGameSave(CartInfo *LocalHWInfo) {
+-	if (LocalHWInfo->battery && LocalHWInfo->SaveGame[0] && !disableBatteryLoading) {
+-		FILE *sp;
+-
+-		std::string soot = FCEU_MakeFName(FCEUMKF_SAV, 0, "sav");
+-		sp = FCEUD_UTF8fopen(soot, "rb");
+-		if (sp != NULL) {
+-			for (int x = 0; x < 4; x++)
+-				if (LocalHWInfo->SaveGame[x])
+-					fread(LocalHWInfo->SaveGame[x], 1, LocalHWInfo->SaveGameLen[x], sp);
+-		}
+-	}
+-}
++
+ 
+ //clears all save memory. call this if you want to pretend the saveram has been reset (it doesnt touch what is on disk though)
+ void FCEU_ClearGameSave(CartInfo *LocalHWInfo) {
+--- upstream/git.h
++++ generated/git.h
+@@ -114,12 +114,12 @@
+ }
+ 
+ 
+-#include "utils/md5.h"
++struct MD5DATA { uint8 bytes[16]; };
+ 
+ struct FCEUGI
+ {
+-	FCEUGI();
+-	~FCEUGI();
++	
++	
+ 
+ 	uint8 *name;	//Game name, UTF8 encoding
+ 	int mappernum;
+--- upstream/boards/90.cpp
++++ generated/boards/90.cpp
+@@ -1,3 +1,4 @@
++#include "platform.h"
+ /* FCE Ultra - NES/Famicom Emulator
+  *
+  * Copyright notice for this file:
+@@ -19,7 +20,6 @@
+  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
+  */
+ 
+-#include "mapinc.h"
+ //#define DEBUG90
+ 
+ // Mapper 090 is simpliest mapper hardware and have not extended nametable control and latched chr banks in 4k mode

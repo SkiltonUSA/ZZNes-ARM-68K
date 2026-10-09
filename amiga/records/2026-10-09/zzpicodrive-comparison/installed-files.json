@@ -1,0 +1,32 @@
+{
+  "ZZPicodriveMD_v1.1.info": {
+    "bytes": 1161,
+    "md5": "c1ba601117ec3c654dc5be0047a23207",
+    "sha256": "3bab62e9f79a845b049de559fcc6a2920f9dfaa1e4bcf8046c28de9417c9e8dc"
+  },
+  "INSTALL.txt": {
+    "bytes": 2347,
+    "md5": "c0edded98b82fc3dd04896c272cc925f",
+    "sha256": "7cadcd335f5e9f967afd0af5b03f8d2ee7ae864b0a10c1eab185f3159a207649"
+  },
+  "ZZPicodriveMD_v1.1": {
+    "bytes": 641988,
+    "md5": "908c5324c19c04e28cae9d4343b6fb40",
+    "sha256": "be985a6a2119e410c73bc2e8276af227c19e3257d5f5455c1aee98309425ea89"
+  },
+  "NOTICE.txt": {
+    "bytes": 364,
+    "md5": "ab0090b715db4473377d96fff036a8d4",
+    "sha256": "e58d6f8a61f484f716db777da227ff322a92b3a0d8b9d5e7ea0667d044da1d67"
+  },
+  "README.txt": {
+    "bytes": 3929,
+    "md5": "1b4475ae2e55c51c6e2b0ae48a6a85eb",
+    "sha256": "38ddb6fa284a8dbcbe68cc06cee26a002321a893a2cecdaeb3fd503a6615a219"
+  },
+  "ROMs/Sonic1.bin": {
+    "bytes": 524288,
+    "md5": "1bc674be034e43c96b86487ac69d9293",
+    "sha256": "46160baa06362c711c9f1a5017cb7371026444936c8af5e93a78996cf32ff2a6"
+  }
+}

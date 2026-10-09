@@ -1,0 +1,22 @@
+amiga_list_ports Public Message Ports (18):
+  TSPORT
+  WORKBENCH
+  DEFICONS
+  ToolsDaemon 2.1a © Nico François
+  REXX
+  AREXX
+  MagicMenu
+  SIXIES.BRIDGE.NETWATCH
+  AssignWedge.port
+  ZZTemperature.1
+  NewMeter
+  POPO.1
+  QDock
+  ROADIE
+  TCP/IP Control
+  AMIGABRIDGE
+  ConClip.rendezvous
+  deficons
+amiga_fetch_url Fetched 419176 bytes from http://127.0.0.1:55029/ZZNes-pipeline
+Transferred 419176 bytes in 21.1s (19867 B/s), 410 chunks, CRC32 verified
+amiga_run_script ERROR: lost connection to the Amiga bridge — 'run_script' could not be delivered. Reconnect and retry (this is a connection failure, not an unsupported command).

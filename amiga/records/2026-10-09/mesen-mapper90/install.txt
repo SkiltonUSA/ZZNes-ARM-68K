@@ -1,0 +1,6 @@
+amiga_run_script [OK]
+a1697c90b4f9427ca6b670fe73d69385  ZZNes
+6e4e23072476a232f0b955d4a5d32a0d  ZZNes.before-mapper90
+40c4c022fc481a536b34f7ca5e90caa7  build.json
+a106ab5e546951bc8685e6ef23055eb5  ReadMe-Amiga.txt
+cc3534b693338f4744180541f175367f  Start-SuperMarioWorld

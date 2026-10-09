@@ -1,0 +1,4 @@
+amiga_fetch_url Fetched 209452 bytes from http://127.0.0.1:55029/ZZNesFullscreen
+Transferred 209452 bytes in 9.1s (23132 B/s), 205 chunks, CRC32 verified
+amiga_run_script [OK]
+6a053030bd7b8376d8d4a1d93ee63928  RAM:ZZNesPerf/Fullscreen

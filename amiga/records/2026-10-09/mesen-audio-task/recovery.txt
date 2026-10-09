@@ -1,0 +1,5 @@
+amiga_connect Connected via TCP to 10.0.0.40:2345
+amiga_ping Amiga alive - clients: 0, chip: 2022928 bytes, fast: 618231288 bytes
+amiga_list_screens Screens (1):
+
+  Workbench Screen  1920x800  8bpp  LORES  @82BDF88

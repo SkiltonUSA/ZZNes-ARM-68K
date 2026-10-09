@@ -1,0 +1,77 @@
+{
+  "scope": "Mesen CPU ONLY; no PPU/APU/game FPS",
+  "cache_policy": "MMU/I-cache/D-cache off",
+  "compiler": "Apple clang version 21.0.0 (clang-2100.3.34.2)\nTarget: arm64-apple-darwin25.6.0\nThread model: posix\nInstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin\n",
+  "flags": [
+    "--target=arm-none-eabi",
+    "-mcpu=cortex-a9",
+    "-marm",
+    "-mfloat-abi=soft",
+    "-mno-unaligned-access",
+    "-ffreestanding",
+    "-fno-builtin",
+    "-fPIC",
+    "-fvisibility=hidden",
+    "-fno-stack-protector",
+    "-O2",
+    "-g",
+    "-DZZ_BLOCK_SIZE=0x100000",
+    "-DZZ_CONTROL=0x80000"
+  ],
+  "upstream": {
+    "repository": "https://github.com/SourMesen/Mesen",
+    "commit": "e1180957b31979d4b82d613af9263fcb9442a685",
+    "license": "GPL-3.0-or-later",
+    "files": {
+      "LICENSE": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903",
+      "Types.h": "dc307ee41735da89d271ca2aa256609b50a12f47779c32915b5e3fe7496e44ca",
+      "CPU.h": "46a26d125a2556880f6a9d5404e473c7803c859bdf14f2fb36087bb0cc2f0693",
+      "CPU.cpp": "b4d63b84d6f6968d0f38f410fb7d05e9ff4758c928164ed06a283330a9d3dcf4"
+    }
+  },
+  "fixtures": {
+    "repository": "https://github.com/christopherpow/nes-test-roms",
+    "commit": "95d8f621ae55cee0d09b91519a8989ae0e64753b",
+    "author": "Kevin Horton (nestest ROM)",
+    "files": {
+      "nestest.log": "442c4dd5539c7e88b3fd73c7b732a7eadbd22b47c2cd9e58397ef147f64f6f8f",
+      "nestest.txt": "8291241ba9a0885b9a604a4685101a1473e22b3aa070bc828e3b8c342d7f71fb",
+      "nestest.nes": "f67d55fd6b3cf0bad1cc85f1df0d739c65b53e79cecb7fea8f77ec0eadab0004"
+    }
+  },
+  "image_bytes": 151432,
+  "relocations": 256,
+  "trace_states": 8991,
+  "expected_cycles": 26553,
+  "expected_hash": "f86dd990",
+  "sources": {
+    "amiga/mesen_bench/wire.h": "60ce2eb85869c9b73f66ef5e0e751a2e5ea3969d8e16898ec9a3f13b8e47f9c0",
+    "amiga/mesen_bench/runtime.c": "ba4920e21bad0d91ca1172cedf360f3f79fddf328a6e010b69f80a327d1d1437",
+    "amiga/mesen_bench/worker.cpp": "f3a0ea35dd4a1bf5ca05ed81d2b466c19c7501684fb4bf918417bb68398a2ebd",
+    "amiga/mesen_bench/bench.h": "a20e8c89f42e6b90396974a8cb87fa808775f3b0af59170280d4bdd56aa7e521",
+    "amiga/mesen_bench/native.cpp": "3bd849b63f5c3de5c8d1b8e148635a345e17498d163ceac2b765b07039e291ec",
+    "amiga/mesen_bench/host.c": "f826d82986da812113ee10ad66cdc62c189d10855338046cb1eb79ece963dab2",
+    "amiga/mesen_bench/fixtures.json": "78680f34f760a4a79ca5ecfe5d74f9e9bb6f8c0384550a9013383b145941eb96",
+    "amiga/mesen_bench/bench.cpp": "5d3478058632c8dd9f1b013f029db1ce2bfd0279369a76347bc79192deaf2e39",
+    "amiga/mesen_bench/platform.h": "ae4db339fa859ca833ed62e20ef0b78f781883ad944ac661d70fadb2878a4373",
+    "amiga/mesen_bench/vendor/LICENSE": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903",
+    "amiga/mesen_bench/vendor/Types.h": "dc307ee41735da89d271ca2aa256609b50a12f47779c32915b5e3fe7496e44ca",
+    "amiga/mesen_bench/vendor/CPU.h": "46a26d125a2556880f6a9d5404e473c7803c859bdf14f2fb36087bb0cc2f0693",
+    "amiga/mesen_bench/vendor/CPU.cpp": "b4d63b84d6f6968d0f38f410fb7d05e9ff4758c928164ed06a283330a9d3dcf4",
+    "amiga/mesen_bench/vendor/upstream.json": "e5453cb0f18a25662182e013e659102918df0e3f2409c4d2755aa7f4d88debc6",
+    "scripts/build_mesen_bench.py": "2bc7dc865ad65d47bf93e81b93d81cddbf067e50a55f7c26e8cdc8cc9d23ed05",
+    "amiga/arm_debug/zz9000/entry.S": "5a39a7684338659b9f90c622c1394e79b9af92d1ec55947a49ef66ea83950c01",
+    "amiga/arm_debug/zz9000/launcher.c": "c317b367730750a9bc3225cfe147cba9c567ddebb10c909cb71b886bb719a559",
+    "amiga/arm_debug/zz9000/layout.h": "ad287948f8fed9b54e3bf3ca177d1e2e5c2bb590d55ff209d99eb3ad767f3ff6",
+    "amiga/arm_debug/zz9000/payload.ld": "819201e08256373c1c67b74e3be52516d1421a82aa9ec8d8c4802fff400fcb0e",
+    "amiga/arm_debug/zz9000/mapping_probe.S": "ceddcbe4b077c0fd0b723d9f8f1ad06d2380433dc15c3b2d9ca6b7f734439b1d",
+    "amiga/arm_debug/protocol.h": "66a0b4ffa70ae72c5b2222749ddfccc2706014ce631122bca59ad6635e18c0f4"
+  },
+  "outputs": {
+    "mesen.elf": "81e7df61cc4c1c1a3b7d579ffc38c6595b636dc57c07a3ac7d12e465afb05df9",
+    "ZZMesenBench": "ee56be413f12eb114381acff5fdc08b260d78e22e8e369452830d8089fb7ea0a",
+    "integration.patch": "6710593f53681517d9bccbb1bb2747ef4a93e147e578d3fb009fb02f54ddf351",
+    "native.log": "744c13b79d146864f2bfcb322392cf24796efc6534be047e82e0dcbccb1037c8"
+  },
+  "executable_md5": "6ccab92c3dbce994759e24b650296a9c"
+}

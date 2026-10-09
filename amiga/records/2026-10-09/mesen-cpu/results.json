@@ -1,0 +1,29 @@
+{
+  "scope": "CPU-only synthetic diagnostic; no game FPS measured",
+  "uncached": {
+    "median_cpu_us": 106183.0,
+    "min_cpu_us": 105997,
+    "max_cpu_us": 106413,
+    "measured_samples": 10,
+    "instructions_per_sample": 8991,
+    "nes_cycles_per_sample": 26553,
+    "nes_time_represented_us": 14835.959644044244,
+    "nes_cpu_cycles_per_host_second": 250068.27834964165,
+    "fraction_of_ntsc_cpu_realtime": 0.1397206675649044,
+    "timer_estimated_hz": 333332204
+  },
+  "instruction_cache": {
+    "median_cpu_us": 99766.0,
+    "min_cpu_us": 99544,
+    "max_cpu_us": 99907,
+    "measured_samples": 10,
+    "instructions_per_sample": 8991,
+    "nes_cycles_per_sample": 26553,
+    "nes_time_represented_us": 14835.959644044244,
+    "nes_cpu_cycles_per_host_second": 266152.79754625825,
+    "fraction_of_ntsc_cpu_realtime": 0.1487075721592952,
+    "timer_estimated_hz": 333331966
+  },
+  "speedup": 1.0643205099933846,
+  "cpu_time_reduction_percent": 6.043340271041508
+}

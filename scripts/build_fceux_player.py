@@ -1,0 +1,99 @@
+#!/usr/bin/env python3
+"""Build the FCEUX frontend candidate; never deploys or launches hardware."""
+from pathlib import Path
+import argparse,difflib,hashlib,json,re,subprocess,sys
+import build_fceux_bench as bench
+from build_zz9000_debug import unpack_elf
+from amiga import PIN,container_command
+ROOT=bench.ROOT;SRC=ROOT/'amiga/fceux_player';FRONT=ROOT/'amiga/mesen_nes'
+OUT=ROOT/'.context/amiga/fceux-player'
+
+def prepare_frontend():
+ # Same display palette/emphasis approximation as the existing player.
+ colors=[int(x,16) for x in re.findall(r'0x([0-9A-Fa-f]{8})',(FRONT/'palette.h').read_text())]
+ full=[]
+ for emphasis in range(8):
+  for color in colors:
+   rgb=[float((color>>shift)&255) for shift in (16,8,0)]
+   for bit in range(3):
+    if emphasis&(1<<bit):rgb=[v*(1.1 if ch==bit else 0.9) for ch,v in enumerate(rgb)]
+   full.append(0xff000000|(int(min(255,rgb[0]))<<16)|(int(min(255,rgb[1]))<<8)|int(min(255,rgb[2])))
+ (OUT/'player_palette.h').write_text('static const uint32_t nes_player_palette[512]={'+','.join(hex(v) for v in full)+'};\n')
+ patch=''
+ for name in ['host.c','player_frontend.h','player_audio.h','fullscreen.h','wire.h']:
+  original=(FRONT/name).read_text();s=original
+  if name=='host.c':
+   s=s.replace('static int core_only;', 'static int core_only;\nstatic int player_audit;\nstatic int verify_frame(unsigned n){return n==1 || (player_audit && n%60==0);}')
+   s=s.replace('int verify=frame==1 || frame%60==0;', 'int verify=verify_frame(frame);')
+   s=s.replace('request(NES_FRAME,buttons)', 'request(NES_FRAME,buttons | (verify_frame(frames+1)?256u:0u))')
+   start=s.index('int nes_arguments(');end=s.index('static void paint(',start)
+   s=s[:start]+'''int nes_arguments(int argc,char **argv){
+ if(argc<=1)return argc;
+ if(argc==2){rom_path=argv[1];return 1;}
+ if(argc<4||argc>6){puts("Usage: ZZFceux [ROM.nes] or <nonce> RUN <ROM.nes> [frame_limit] [VERIFY]");return -1;}
+ rom_path=argv[3];
+ if(argc>=5){char *end;errno=0;frame_limit=strtoul(argv[4],&end,10);if(errno||*end||!frame_limit||frame_limit>36000)return -1;}
+ if(argc==6){if(strcmp(argv[5],"VERIFY"))return -1;player_audit=1;}
+ return 3;
+}
+'''+s[end:]
+   s=s.replace('mapper 0/1/2/3/4/7/90','mapper 0/90, CHR ROM, no battery/trainer/four-screen')
+   s=s.replace('Only NTSC iNES NROM, 16/32 KiB PRG, 0/8 KiB CHR; no trainer/battery supported','FCEUX core rejected cartridge: NTSC mapper 0/90 CHR ROM only')
+   s=s.replace('PLAYER Mesen CPU/PPU/APU, NTSC; P pause, M mute, Q/Esc quit; no timing hacks','PLAYER FCEUX CPU/old PPU/APU, NTSC 32kHz quality0; P pause, M mute, Q/Esc quit; no frameskip')
+  if name=='host.c':
+   s=s.replace('static int player_audit;', 'static int player_audit;\nstatic ULONG present_pre_us,present_request_us,present_post_us;')
+   s=s.replace('if(!pause_us(1000))return 0;', '/* PRESENT holds a bitmap lock: bounded polling avoids yielding here. */\n  if(op!=NES_PRESENT && !pause_us(1000))return 0;')
+   s=s.replace('static uint32_t sequence;', 'static uint32_t sequence;\nstatic uint64_t frame_reply_ticks,present_reply_ticks;')
+   s=s.replace('   return 1;}','   if(op==NES_FRAME)frame_reply_ticks+=ad_get(reply,48);\n   if(op==NES_PRESENT)present_reply_ticks+=ad_get(reply,48);\n   return 1;}')
+   s=s.replace('static int present(ULONG raw_hash,ULONG frame){', 'static int present(ULONG raw_hash,ULONG frame){\n ULONG profile_start=us(),profile_request,profile_after;')
+   s=s.replace('if(!request(NES_PRESENT,addr))return 0;', 'profile_request=us();present_pre_us+=profile_request-profile_start;\n if(!request(NES_PRESENT,addr))return 0;')
+   s=s.replace('if(ad_get(shared+MB_REPLY,24)!=raw_hash)return 0;', 'profile_after=us();present_request_us+=profile_after-profile_request;\n if(ad_get(shared+MB_REPLY,24)!=raw_hash)return 0;')
+   s=s.replace(' direct_ready=1;\n return 1;', ' present_post_us+=us()-profile_after;\n direct_ready=1;\n return 1;')
+   s=s.replace(' printf("PROFILE frames=', ' printf("PRESENT_PROFILE pre_us=%u request_us=%u post_us=%u\\n",present_pre_us,present_request_us,present_post_us);\n printf("PROFILE frames=')
+  if name=='host.c':
+   s=s.replace(' printf("PRESENT_PROFILE', ' printf("ARM_REQUEST_PROFILE frame_us=%u present_us=%u\\n",rate?(ULONG)(frame_reply_ticks*1000000u/rate):0,rate?(ULONG)(present_reply_ticks*1000000u/rate):0);\n printf("PRESENT_PROFILE')
+  s=s.replace('ZZNes','ZZFceux').replace('ZZNES','ZZFCEUX')
+  (OUT/name).write_text(s)
+  patch+=''.join(difflib.unified_diff(original.splitlines(True),s.splitlines(True),'mesen_nes/'+name,'fceux-player/'+name))
+ original=(FRONT/'worker.cpp').read_text();worker=original.replace('#include "core.h"','#include "nes_api.h"').replace('if(!error)publish_frame();','if(!error && (arg&256u))publish_frame();').replace('if(op==NES_FRAME && !error)for','if(op==NES_FRAME && !error && (arg&256u))for')
+ worker=worker.replace('barrier();uint32_t op=', 'barrier();uint32_t request_start=(uint32_t)ticks();uint32_t op=')
+ worker=worker.replace('ad_put(reply,32,hash);', 'ad_put(reply,48,(uint32_t)ticks()-request_start);ad_put(reply,32,hash);')
+ (OUT/'worker.cpp').write_text(worker)
+ patch+=''.join(difflib.unified_diff(original.splitlines(True),worker.splitlines(True),'mesen_nes/worker.cpp','fceux-player/worker.cpp'))
+ (OUT/'frontend.patch').write_text(patch)
+ (OUT/'nes_api.h').write_bytes((FRONT/'core.h').read_bytes())
+ (OUT/'cartridge.h').write_bytes((SRC/'cartridge.h').read_bytes())
+ (OUT/'demo.h').write_text('/* ROM selection is required; no built-in game. */\nstatic const uint8_t demo_rom[1]={0};\n')
+
+def main():
+ p=argparse.ArgumentParser(description=__doc__);p.add_argument('--container-command');a=p.parse_args()
+ bench.OUT=OUT;sources=bench.prepare();prepare_frontend()
+ bench.build_native(sources)
+ flags=['-std=c++14','-DDINGUX','-DNES_PLAYER','-O3','-g','-fwrapv','-fno-exceptions','-fno-rtti','-Wno-deprecated-register','-Wno-writable-strings','-Wno-non-c-typedef-for-linkage','-I'+str(bench.SRC),'-I'+str(OUT)]
+ for name,extra in [('player-native',[]),('player-sanitize',['-fsanitize=address,undefined','-fno-sanitize=array-bounds,pointer-overflow','-fno-sanitize-recover=all'])]:
+  subprocess.run(['clang++',*flags,*extra,*sources,bench.SRC/'core.cpp',SRC/'adapter.cpp',SRC/'native.cpp','-o',OUT/name],cwd=ROOT,check=True)
+ flags=bench.arm_objects(sources,worker=OUT/'worker.cpp',extras=[SRC/'adapter.cpp',FRONT/'direct.cpp'],defines=['-DNES_PLAYER','-DNES_DIRECT','-I'+str(FRONT)])
+ sys.path.insert(0,str(bench.SRC));from elf import unpack
+ image,rel,entry=unpack((OUT/'fceux.elf').read_bytes());ld='/opt/homebrew/opt/lld/bin/ld.lld'
+ subprocess.run(['clang',*flags,'-c',ROOT/'amiga/arm_debug/zz9000/mapping_probe.S','-o',OUT/'mapping.o'],check=True)
+ subprocess.run([ld,'-shared','-Bsymbolic','--no-undefined','-T',ROOT/'amiga/arm_debug/zz9000/payload.ld',OUT/'mapping.o','-o',OUT/'mapping.elf'],check=True)
+ mapping,mrel,point=unpack_elf((OUT/'mapping.elf').read_bytes());assert not mrel and not point and len(mapping)<=1024
+ def array(name,data):return 'static const unsigned char '+name+'[]={'+','.join(map(str,data))+'};\n'
+ (OUT/'zz_payload.h').write_text(f'#define ZZ_ENTRY {entry}u\n'+array('zz_image',image)+array('zz_mapping_probe',mapping)+'static const unsigned long zz_relocations[]={'+','.join(map(str,rel))+'};\n')
+ command=json.loads(a.container_command) if a.container_command else container_command();relative=OUT.relative_to(ROOT)
+ subprocess.run([*command,'run','--rm','--platform','linux/amd64','-v',f'{ROOT}:/work','-w','/work',PIN['image'],
+ 'm68k-amigaos-gcc','-std=c99','-noixemul','-m68020','-O2','-g','-Wall','-Wextra','-Werror',
+ '-DZZ_HEADLESS_BENCH','-DZZ_RELEASE','-DZZ_NES','-DZZ_BLOCK_SIZE=0x400000','-DZZ_CONTROL=0x80000',
+ '-DZZ_APP_NAME="ZZFceux"','-DZZ_APP_VERSION="0.1-dev"','-DZZ_MIN_STACK=65536','-DMB_ALLOCATION=0x400000u','-DMB_MMU','-DMB_DCACHE','-DZZ_HEADLESS_MMU','-DZZ_HEADLESS_ICACHE',
+ '-DNES_PLAYER','-DNES_DIRECT','-DNES_FULLSCREEN','-I'+str(relative),'-Iamiga/mesen_nes','-Iamiga/mesen_bench','-Iamiga/arm_debug','-Iamiga/arm_debug/zz9000',
+ 'amiga/arm_debug/zz9000/launcher.c',str(relative/'host.c'),'-lamiga','-o',str(relative/'ZZFceux')],cwd=ROOT,check=True)
+ binary=OUT/'ZZFceux';assert binary.read_bytes()[:4]==b'\0\0\x03\xf3'
+ recorded=[*SRC.rglob('*'),*bench.SRC.rglob('*'),*FRONT.glob('*.h'),FRONT/'worker.cpp',FRONT/'direct.cpp',FRONT/'host.c',
+ ROOT/'scripts/build_fceux_player.py',ROOT/'scripts/build_fceux_bench.py',*ROOT.joinpath('amiga/mesen_bench').glob('mmu*'),ROOT/'amiga/mesen_bench/runtime.c',
+ ROOT/'amiga/arm_debug/zz9000/launcher.c',ROOT/'amiga/arm_debug/zz9000/layout.h',ROOT/'amiga/arm_debug/zz9000/mapping_probe.S',ROOT/'amiga/arm_debug/protocol.h']
+ record={'upstream':bench.COMMIT,'scope':'FCEUX NTSC mapper0/90 player; old PPU quality0 32kHz mono; every frame displayed; XACP XX19c fullscreen; AHI0 DOS Process',
+ 'image_bytes':len(image),'relocations':len(rel),'flags':[x for x in flags if not x.startswith('-I')],'compiler':subprocess.check_output(['clang','--version'],text=True),
+ 'sources':{str(p.relative_to(ROOT)):hashlib.sha256(p.read_bytes()).hexdigest() for p in recorded if p.is_file() and '__pycache__' not in p.parts},
+ 'outputs':{p.name:hashlib.sha256(p.read_bytes()).hexdigest() for p in [binary,OUT/'fceux.elf',OUT/'integration.patch',OUT/'frontend.patch']},'executable_md5':hashlib.md5(binary.read_bytes()).hexdigest()}
+ (OUT/'build.json').write_text(json.dumps(record,indent=2)+'\n');print(f'Built {binary}: {binary.stat().st_size} bytes; ARM image {len(image)} bytes')
+if __name__=='__main__':main()

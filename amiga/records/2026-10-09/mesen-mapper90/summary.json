@@ -1,0 +1,29 @@
+{
+  "version": "0.3.1-dev",
+  "mapper": 90,
+  "rom_bytes": 786448,
+  "rom_sha256": "b5cc8b38ce2b0149b7d90c612dd88d8c5fd58285f68c90e52f7485637e8107a9",
+  "rom_in_repository": false,
+  "installed_path": "SD032G:Dev/ZZNesPlayer/ZZNes",
+  "installed_md5": "a1697c90b4f9427ca6b670fe73d69385",
+  "backup": "ZZNes.before-mapper90",
+  "native_frames": 900,
+  "native_changed_frames": 327,
+  "physical_frames": 120,
+  "elapsed_us": 8168770,
+  "fps": 14.69009410229447,
+  "core_mean_us": 32475.491666666665,
+  "flips": 120,
+  "verified_readbacks": 3,
+  "audio_samples": 63850,
+  "audio_gaps": 119,
+  "exit": 0,
+  "mmu_register_mismatches": 0,
+  "witness_bad": 0,
+  "owner_picture_audio_acceptance": "pending",
+  "limitations": [
+    "Not full-speed NTSC",
+    "120 physical intro frames do not prove sustained gameplay or every mapper 90 cartridge",
+    "AHI submissions do not prove audible speaker output"
+  ]
+}

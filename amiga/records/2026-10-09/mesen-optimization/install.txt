@@ -1,0 +1,12 @@
+amiga_fetch_url Fetched 10202 bytes from http://127.0.0.1:55029/build-optimization.json
+Transferred 10202 bytes in 0.5s (21052 B/s), 10 chunks, CRC32 verified
+amiga_fetch_url Fetched 3627 bytes from http://127.0.0.1:55029/ReadMe-optimization.txt
+Transferred 3627 bytes in 0.2s (18339 B/s), 4 chunks, CRC32 verified
+amiga_fetch_url Fetched 500 bytes from http://127.0.0.1:55029/checksums-optimization.json
+Transferred 500 bytes in 0.1s (8979 B/s), 1 chunks, CRC32 verified
+amiga_run_script [OK]
+d54d086434df49e7f5ece528316a6f29  ZZNes
+a1697c90b4f9427ca6b670fe73d69385  ZZNes.before-optimization
+f6f381a1c3b2694bd97b6f9452d797eb  build.json
+9674defab1e47465faa2e929471f0635  ReadMe-Amiga.txt
+027e2fb1774e76e1d2cfbe431dc50012  checksums.json

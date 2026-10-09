@@ -1,0 +1,50 @@
+amiga_run_script [OK] (no output)
+amiga_fetch_url Fetched 164447 bytes from http://127.0.0.1:55029/ZZPicodriveMD_v1.1.lha
+Transferred 164447 bytes in 10.0s (16501 B/s), 161 chunks, CRC32 verified
+amiga_fetch_url Fetched 524288 bytes from http://127.0.0.1:55029/Sonic1.bin
+Transferred 524288 bytes in 25.8s (20355 B/s), 512 chunks, CRC32 verified
+amiga_fetch_url Fetched 1702 bytes from http://127.0.0.1:55029/COPYING_PICODRIVE.txt
+Transferred 1702 bytes in 0.1s (17233 B/s), 2 chunks, CRC32 verified
+amiga_fetch_url Fetched 1892 bytes from http://127.0.0.1:55029/THIRD_PARTY_NOTICES.md
+Transferred 1892 bytes in 0.1s (17090 B/s), 2 chunks, CRC32 verified
+amiga_fetch_url Fetched 1082 bytes from http://127.0.0.1:55029/LICENSE_NOTICE.md
+Transferred 1082 bytes in 0.1s (12748 B/s), 2 chunks, CRC32 verified
+amiga_fetch_url Fetched 154 bytes from http://127.0.0.1:55029/Start-Sonic-ahi
+Transferred 154 bytes in 0.0s (5089 B/s), 1 chunks, CRC32 verified
+amiga_fetch_url Fetched 158 bytes from http://127.0.0.1:55029/Start-Sonic-paula
+Transferred 158 bytes in 0.0s (4505 B/s), 1 chunks, CRC32 verified
+amiga_fetch_url Fetched 162 bytes from http://127.0.0.1:55029/Start-Sonic-silence
+Transferred 162 bytes in 0.0s (4830 B/s), 1 chunks, CRC32 verified
+amiga_run_script [OK]
+LhA Freeware Version 2.15 68040+ 
+Copyright (c) 1991-94 by Stefan Boberg.
+Copyright (c) 1998,1999 by Jim Cooper and David Tritscher.
+Copyright (c) 2004-2011 by Sven Ottemann.
+
+0 pExtracting from archive 'ZZPicodriveMD_v1.1.lha':
+ Extracting: (       0/    2347)  INSTALL.txtK14C    234714C    2347
+27m Extracting: (       0/     364)  NOTICE.txtK14C     36414C     364
+27m Extracting: (       0/    3929)  README.txtK14C    392914C    3929
+27m Extracting: (       0/  641988)  ZZPicodriveMD_v1.1K14C  13107214C  26214414C  39321614C  52428814C  64198814C  641988
+27m Extracting: (       0/    1161)  ZZPicodriveMD_v1.1.infoK14C    116114C    1161
+27m5 files extracted, all files OK.K
+
+Operation successful.
+ p27m
+908c5324c19c04e28cae9d4343b6fb40  ZZPicodriveMD_v1.1
+1bc674be034e43c96b86487ac69d9293  ROMs/Sonic1.bin
+ROMs                            Dir ----rwed Today     16:04:57
+Logs                            Dir ----rwed Today     16:04:46
+ZZPicodriveMD_v1.1.lha       164447 ----rwed Today     16:04:56
+COPYING_PICODRIVE.txt          1702 ----rwed Today     16:05:23
+THIRD_PARTY_NOTICES.md         1892 ----rwed Today     16:05:23
+LICENSE_NOTICE.md              1082 ----rwed Today     16:05:23
+Start-Sonic-ahi                 154 -s--rwed Today     16:05:23
+Start-Sonic-paula               158 -s--rwed Today     16:05:23
+Start-Sonic-silence             162 -s--rwed Today     16:05:23
+INSTALL.txt                    2347 ----rwed Future    22:59:34
+NOTICE.txt                      364 ----rw-d Future    22:20:50
+README.txt                     3929 ----rwed Future    22:59:36
+ZZPicodriveMD_v1.1           641988 ----rwed Future    21:55:22
+ZZPicodriveMD_v1.1.info        1161 ----rw-d Future    21:52:52
+12 files - 800K bytes - 2 directories - 823 blocks used

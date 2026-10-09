@@ -1,0 +1,167 @@
+[
+  {
+    "time": 1791567662.656906,
+    "tool": "amiga_list_ports",
+    "args": {},
+    "result": "Public Message Ports (18):\n  TSPORT\n  WORKBENCH\n  DEFICONS\n  ToolsDaemon 2.1a \u00a9 Nico Fran\u00e7ois\n  REXX\n  AREXX\n  MagicMenu\n  SIXIES.BRIDGE.NETWATCH\n  AssignWedge.port\n  ZZTemperature.1\n  NewMeter\n  POPO.1\n  QDock\n  ROADIE\n  TCP/IP Control\n  AMIGABRIDGE\n  ConClip.rendezvous\n  deficons"
+  },
+  {
+    "time": 1791567662.667014,
+    "tool": "amiga_list_screens",
+    "args": {},
+    "result": "Screens (1):\n\n  Workbench Screen  1920x800  8bpp  LORES  @895EF20"
+  },
+  {
+    "time": 1791567662.681278,
+    "tool": "amiga_inspect_memory",
+    "args": {
+      "address": "44510000",
+      "size": 32
+    },
+    "result": "44510000  43 49 50 5A 01 00 00 00 FF 00 00 00 04 00 00 00   CIPZ............\n44510010  04 00 00 00 04 00 00 00 9C 17 02 00 82 06 00 00   ................"
+  },
+  {
+    "time": 1791567663.7117922,
+    "tool": "amiga_run_script",
+    "args": {
+      "script": "Stack 131072\nCD SD032G:Dev/ZZPicoDriveMD\nRun >NIL: ZZPicodriveMD_v1.1 ROMs/Sonic1.bin embedded usa paula kbd >SD032G:Dev/ZZPicoDriveMD/Logs/test-paula.log\n",
+      "timeout": 15
+    },
+    "result": "[OK] (no output)"
+  },
+  {
+    "time": 1791567667.733553,
+    "tool": "amiga_inspect_memory",
+    "args": {
+      "address": "44510000",
+      "size": 32
+    },
+    "result": "44510000  43 49 50 5A 01 00 00 00 02 00 00 00 03 00 00 00   CIPZ............\n44510010  03 00 00 00 03 00 00 00 7D 73 01 00 C3 00 00 00   ........}s......"
+  },
+  {
+    "time": 1791567667.7516532,
+    "tool": "amiga_list_screen_windows",
+    "args": {},
+    "result": "Windows on screen @940EB08 (1):\n\n  (untitled)  pos=(0,0)  size=320x240  @9413C34"
+  },
+  {
+    "time": 1791567692.766769,
+    "tool": "amiga_list_screen_windows",
+    "args": {},
+    "result": "Windows on screen @940EB08 (1):\n\n  (untitled)  pos=(0,0)  size=320x240  @9413C34"
+  },
+  {
+    "time": 1791567692.807414,
+    "tool": "amiga_input_key",
+    "args": {
+      "rawkey": "60",
+      "direction": "down"
+    },
+    "result": "Key 60 down"
+  },
+  {
+    "time": 1791567692.856082,
+    "tool": "amiga_input_key",
+    "args": {
+      "rawkey": "45",
+      "direction": "down"
+    },
+    "result": "Key 45 down"
+  },
+  {
+    "time": 1791567692.890611,
+    "tool": "amiga_input_key",
+    "args": {
+      "rawkey": "45",
+      "direction": "up"
+    },
+    "result": "Key 45 up"
+  },
+  {
+    "time": 1791567692.939726,
+    "tool": "amiga_input_key",
+    "args": {
+      "rawkey": "60",
+      "direction": "up"
+    },
+    "result": "Key 60 up"
+  },
+  {
+    "time": 1791567693.953561,
+    "tool": "amiga_inspect_memory",
+    "args": {
+      "address": "44510000",
+      "size": 32
+    },
+    "result": "44510000  43 49 50 5A 01 00 00 00 02 00 00 00 04 00 00 00   CIPZ............\n44510010  04 00 00 00 03 00 00 00 5D 79 01 00 A3 06 00 00   ........]y......"
+  },
+  {
+    "time": 1791567694.968228,
+    "tool": "amiga_inspect_memory",
+    "args": {
+      "address": "44510000",
+      "size": 32
+    },
+    "result": "44510000  43 49 50 5A 01 00 00 00 02 00 00 00 04 00 00 00   CIPZ............\n44510010  04 00 00 00 03 00 00 00 5D 79 01 00 A3 06 00 00   ........]y......"
+  },
+  {
+    "time": 1791567695.9845572,
+    "tool": "amiga_inspect_memory",
+    "args": {
+      "address": "44510000",
+      "size": 32
+    },
+    "result": "44510000  43 49 50 5A 01 00 00 00 02 00 00 00 04 00 00 00   CIPZ............\n44510010  04 00 00 00 03 00 00 00 5D 79 01 00 A3 06 00 00   ........]y......"
+  },
+  {
+    "time": 1791567697.0054731,
+    "tool": "amiga_inspect_memory",
+    "args": {
+      "address": "44510000",
+      "size": 32
+    },
+    "result": "44510000  43 49 50 5A 01 00 00 00 02 00 00 00 04 00 00 00   CIPZ............\n44510010  04 00 00 00 03 00 00 00 5D 79 01 00 A3 06 00 00   ........]y......"
+  },
+  {
+    "time": 1791567698.018833,
+    "tool": "amiga_inspect_memory",
+    "args": {
+      "address": "44510000",
+      "size": 32
+    },
+    "result": "44510000  43 49 50 5A 01 00 00 00 02 00 00 00 04 00 00 00   CIPZ............\n44510010  04 00 00 00 03 00 00 00 5D 79 01 00 A3 06 00 00   ........]y......"
+  },
+  {
+    "time": 1791567699.047124,
+    "tool": "amiga_inspect_memory",
+    "args": {
+      "address": "44510000",
+      "size": 32
+    },
+    "result": "44510000  43 49 50 5A 01 00 00 00 02 00 00 00 04 00 00 00   CIPZ............\n44510010  04 00 00 00 03 00 00 00 5D 79 01 00 A3 06 00 00   ........]y......"
+  },
+  {
+    "time": 1791567700.063992,
+    "tool": "amiga_inspect_memory",
+    "args": {
+      "address": "44510000",
+      "size": 32
+    },
+    "result": "44510000  43 49 50 5A 01 00 00 00 02 00 00 00 04 00 00 00   CIPZ............\n44510010  04 00 00 00 03 00 00 00 5D 79 01 00 A3 06 00 00   ........]y......"
+  },
+  {
+    "time": 1791567701.1736739,
+    "tool": "amiga_inspect_memory",
+    "args": {
+      "address": "44510000",
+      "size": 32
+    },
+    "result": "44510000  43 49 50 5A 01 00 00 00 FF 00 00 00 04 00 00 00   CIPZ............\n44510010  04 00 00 00 04 00 00 00 5E 79 01 00 A3 06 00 00   ........^y......"
+  },
+  {
+    "time": 1791567702.288276,
+    "tool": "amiga_list_screens",
+    "args": {},
+    "result": "Screens (2):\n\n  (untitled)  320x240  1bpp  LORES  @940EB08\n  Workbench Screen  1920x800  8bpp  LORES  @895EF20"
+  }
+]

@@ -1,0 +1,8 @@
+amiga_fetch_url Fetched 34344 bytes from http://127.0.0.1:55029/ZZNesAudioProbe
+Transferred 34344 bytes in 2.1s (16466 B/s), 34 chunks, CRC32 verified
+amiga_run_script [OK]
+AUDIO_PROBE starting DOS worker; no ARM or display access
+AUDIO task: AHI unit 0, 32000 Hz mono; 8 queue slots, 3-frame prebuffer
+AUDIO_PROBE AHI opened
+AUDIO_TASK queued=17056 submitted=17056 completed=17056 highwater=1 error=0 stopped=1
+AUDIO_PROBE exit=0 samples=17056 gaps=31 wait_us=1718 copy_us=2667 main_send_us=0

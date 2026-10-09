@@ -1,0 +1,2 @@
+amiga_input_key Key 19 down
+amiga_input_key Key 19 up

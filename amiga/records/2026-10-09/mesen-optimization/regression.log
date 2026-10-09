@@ -1,0 +1,58 @@
+/Users/dskilton/conductor/workspaces/sixies_development/port-louis/.context/amiga/mesen-player/fixtures/apu_test/rom_singles/1-len_ctr.nes result=0 frames=21 samples=11136 range=-651..839
+
+1-len_ctr
+
+Passed
+
+/Users/dskilton/conductor/workspaces/sixies_development/port-louis/.context/amiga/mesen-player/fixtures/apu_test/rom_singles/2-len_table.nes result=0 frames=16 samples=8474 range=-294..1066
+
+2-len_table
+
+Passed
+
+/Users/dskilton/conductor/workspaces/sixies_development/port-louis/.context/amiga/mesen-player/fixtures/apu_test/rom_singles/3-irq_flag.nes result=0 frames=21 samples=11136 range=-67..736
+
+3-irq_flag
+
+Passed
+
+/Users/dskilton/conductor/workspaces/sixies_development/port-louis/.context/amiga/mesen-player/fixtures/apu_test/rom_singles/4-jitter.nes result=0 frames=21 samples=11136 range=-67..738
+
+4-jitter
+
+Passed
+
+/Users/dskilton/conductor/workspaces/sixies_development/port-louis/.context/amiga/mesen-player/fixtures/apu_test/rom_singles/5-len_timing.nes result=0 frames=115 samples=61188 range=-622..742
+
+5-len_timing
+
+Passed
+
+/Users/dskilton/conductor/workspaces/sixies_development/port-louis/.context/amiga/mesen-player/fixtures/apu_test/rom_singles/6-irq_flag_timing.nes result=0 frames=22 samples=11669 range=-64..746
+
+6-irq_flag_timing
+
+Passed
+
+/Users/dskilton/conductor/workspaces/sixies_development/port-louis/.context/amiga/mesen-player/fixtures/apu_test/rom_singles/7-dmc_basics.nes result=0 frames=25 samples=13266 range=-65..741
+
+7-dmc_basics
+
+Passed
+
+/Users/dskilton/conductor/workspaces/sixies_development/port-louis/.context/amiga/mesen-player/fixtures/apu_test/rom_singles/8-dmc_rates.nes result=0 frames=29 samples=15396 range=-64..748
+
+8-dmc_rates
+
+Passed
+
+/Users/dskilton/conductor/workspaces/sixies_development/port-louis/.context/amiga/mesen-player/fixtures/mmc3_test_2/rom_singles/1-clocking.nes PASS via PPU nametable (600 frames); MMC3 WRAM disabled by fixture
+/Users/dskilton/conductor/workspaces/sixies_development/port-louis/.context/amiga/mesen-player/fixtures/mmc3_test_2/rom_singles/2-details.nes PASS via PPU nametable (600 frames); MMC3 WRAM disabled by fixture
+/Users/dskilton/conductor/workspaces/sixies_development/port-louis/.context/amiga/mesen-player/fixtures/mmc3_test_2/rom_singles/3-A12_clocking.nes PASS via PPU nametable (600 frames); MMC3 WRAM disabled by fixture
+/Users/dskilton/conductor/workspaces/sixies_development/port-louis/.context/amiga/mesen-player/fixtures/mmc3_test_2/rom_singles/4-scanline_timing.nes PASS via PPU nametable (600 frames); MMC3 WRAM disabled by fixture
+/Users/dskilton/conductor/workspaces/sixies_development/port-louis/.context/amiga/mesen-player/fixtures/mmc3_test_2/rom_singles/5-MMC3.nes PASS via PPU nametable (600 frames); MMC3 WRAM disabled by fixture
+PASS mapper 90 PRG/CHR modes, registers/open bus, mirroring, read-only $6000, four IRQ sources, direction/prescaler/XOR, acknowledge, bounded header
+PASS cartridge rejection, mapper 0/1/2/3/4/7 banks, MMC1 serial/CHR, MMC3 WRAM protection, battery RAM round trip
+PASS: 16384 allocation alignments; private/shared/table/boundary permissions; L2 and unrelated RAM unmapped
+PASS: 16384 allocation alignments; private/shared/table/boundary permissions; L2 and unrelated RAM unmapped
+PASS 13 pinned APU/MMC3 timing ROMs; ASan/UBSan

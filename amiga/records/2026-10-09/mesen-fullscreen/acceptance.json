@@ -1,0 +1,10 @@
+{
+  "owner_confirmed_picture_and_controls": true,
+  "fullscreen_executable_bytes": 213032,
+  "fullscreen_executable_md5": "ce06e0f7dc480332051af06e8e2b1253",
+  "architecture_credit": "Xanxi / XANI, XACP-ZZ9000 / ZZPicoDriveMD",
+  "source_reuse": "Independent implementation; no PicoDrive source copied",
+  "firmware_changed": false,
+  "windowed_install_unchanged": true,
+  "screenshot_requested": false
+}

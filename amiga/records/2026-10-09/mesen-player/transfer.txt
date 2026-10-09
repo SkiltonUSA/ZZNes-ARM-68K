@@ -1,0 +1,19 @@
+amiga_run_script [OK] (no output)
+amiga_fetch_url Fetched 24592 bytes from http://127.0.0.1:55029/ZZNesSoundTest.nes
+Transferred 24592 bytes in 1.4s (17264 B/s), 25 chunks, CRC32 verified
+amiga_fetch_url Fetched 26419 bytes from http://127.0.0.1:55029/COPYING.LGPL
+Transferred 26419 bytes in 1.5s (17851 B/s), 26 chunks, CRC32 verified
+amiga_fetch_url Fetched 2749 bytes from http://127.0.0.1:55029/ReadMe-Amiga.txt
+Transferred 2749 bytes in 0.1s (19551 B/s), 3 chunks, CRC32 verified
+amiga_fetch_url Fetched 408972 bytes from http://127.0.0.1:55029/ZZNes
+Transferred 408972 bytes in 20.4s (20040 B/s), 400 chunks, CRC32 verified
+amiga_fetch_url Fetched 35147 bytes from http://127.0.0.1:55029/COPYING
+Transferred 35147 bytes in 1.7s (21119 B/s), 35 chunks, CRC32 verified
+amiga_fetch_url Fetched 437 bytes from http://127.0.0.1:55029/checksums.json
+Transferred 437 bytes in 0.0s (10869 B/s), 1 chunks, CRC32 verified
+amiga_fetch_url Fetched 153 bytes from http://127.0.0.1:55029/Start-ZZNesPlayer
+Transferred 153 bytes in 0.0s (5246 B/s), 1 chunks, CRC32 verified
+amiga_fetch_url Fetched 24592 bytes from http://127.0.0.1:55029/ZZNesDemo.nes
+Transferred 24592 bytes in 1.2s (21188 B/s), 25 chunks, CRC32 verified
+amiga_fetch_url Fetched 9868 bytes from http://127.0.0.1:55029/build.json
+Transferred 9868 bytes in 0.5s (19526 B/s), 10 chunks, CRC32 verified

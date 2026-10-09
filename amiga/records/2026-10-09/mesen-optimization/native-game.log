@@ -1,0 +1,19 @@
+ROM bytes=786448 mapper=90
+FRAME n=1 cycles=27279 hash=48ef4dc5 colors=1 audio=487
+FRAME n=60 cycles=1784331 hash=89754158 colors=14 audio=31902
+FRAME n=120 cycles=3571160 hash=89754158 colors=14 audio=63850
+FRAME n=180 cycles=5357995 hash=f54fd026 colors=14 audio=95797
+FRAME n=240 cycles=7144820 hash=b43bfb5d colors=10 audio=127744
+FRAME n=300 cycles=8931653 hash=b43bfb5d colors=10 audio=159692
+FRAME n=360 cycles=10718481 hash=af788235 colors=10 audio=191639
+FRAME n=420 cycles=12505310 hash=af788235 colors=10 audio=223586
+FRAME n=480 cycles=14292143 hash=d252800e colors=10 audio=255534
+FRAME n=540 cycles=16078973 hash=85708ab0 colors=10 audio=287481
+FRAME n=600 cycles=17865803 hash=b7cb77ea colors=10 audio=319429
+FRAME n=660 cycles=19652632 hash=06c49670 colors=10 audio=351376
+FRAME n=720 cycles=21439464 hash=d56ecdc5 colors=1 audio=383323
+FRAME n=780 cycles=23226293 hash=901cd09a colors=11 audio=415271
+FRAME n=840 cycles=25013123 hash=901cd09a colors=11 audio=447218
+FRAME n=900 cycles=26799953 hash=0ad3f12a colors=11 audio=479166
+TRACE frames=51e910ee pcm=ce72c34a
+PASS 900 frames, input sequence, cancellation; changed_frames=327

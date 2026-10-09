@@ -1,0 +1,46 @@
+OWNED amiga=50000040 arm_candidate=101f0040 size=4194304 nonce=6ac92e3c
+BOOTSTRAP amiga=40c84400 arm=00e74400 (P96 allocated/locked)
+MAP status=4d415031 SCTLR=08c50878 MIDR=413fc090 MPIDR=80000001
+MAPPING PASS (eight nonce-derived words)
+ARM ready=41524d31 SCTLR=08c5187d MIDR=413fc090 MPIDR=80000001
+CARTRIDGE mapper=90 PRG=524288 CHR=262144 battery=0
+STAGE ROM published; initializing core
+STAGE core initialized; calibrating clock
+STAGE opening display
+FULLSCREEN_BITMAP allocated=0819c7ac screen=097653b0 width=320 height=240 allocated_height=720 screen_height=720 on_board=1/1 memory=09be6794/40c84400 pitch=1280/1280
+FULLSCREEN mode=50031303 native_format=9 depth=32 slots=3 geometry=320x240 NES=256x240
+BUFFERS pixels=00000000 indices=09acb694 legacy_host=0
+AUDIO task: AHI unit 0, 32000 Hz mono; 8 queue slots, 3-frame prebuffer
+PLAYER Mesen CPU/PPU/APU, NTSC; P pause, M mute, Q/Esc quit; no timing hacks
+ZZNES START ROM=SD032G:Dev/ZZNesPlayer/ROMs/002 Super Mario World.nes bytes=786448 timer_hz=333331796 core_only=0
+FRAME n=1 cycles=27279 core_hash=48ef4dc5 output_hash=8a91ddc5 cpu_ppu_us=22132
+FRAME n=60 cycles=1784331 core_hash=89754158 output_hash=d5dd4ffe cpu_ppu_us=31721
+FRAME n=120 cycles=3571160 core_hash=89754158 output_hash=d5dd4ffe cpu_ppu_us=31784
+FRAME n=180 cycles=5357995 core_hash=f54fd026 output_hash=6dbc8f24 cpu_ppu_us=31861
+FULLSCREEN_END queued=193 flips=193 pending=-1 ack_wait_us=1760379 fault=0
+AUDIO_TASK queued=102719 submitted=102719 completed=102719 highwater=3 error=0 stopped=1
+AUDIO_END samples=102719 gaps=192
+STAGE closing frontend; requesting ARM return next
+ZZNES END exit=0 frames=193 elapsed_us=12244183 core_total_us=6021482 output_hash=35f3b02b
+DIRECT_END challenges=193 verified_frames=4 copy_us=713320
+PLAYER_PROFILE audio_prepare_us=69275 flip_drain_us=34306 audio_wait_us=6277 audio_copy_us=45375 audio_send_us=0
+PROFILE frames=193 request_us=6648368 copy_us=0 colour_us=0 draw_us=2298417 waits=5741
+EXIT epilogue=52455431 cache_echoes=0 rounds=0
+CACHE original=08c50878 running=08c5187d restored=08c50878
+MMU_RESTORE phase=3 register_mismatches=00000000 cpsr_control=1d3 expected=1d3 ttbr=10234000 ccsidr=701fe019 witness_bad=0 mailbox_rounds=390
+REGISTER n=0 original=08c50878 restored=08c50878
+REGISTER n=1 original=10234000 restored=10234000
+REGISTER n=2 original=02000001 restored=02000001
+REGISTER n=3 original=00000000 restored=00000000
+REGISTER n=4 original=00000001 restored=00000001
+REGISTER n=5 original=00000001 restored=00000001
+REGISTER n=6 original=600101d3 restored=600101d3
+REGISTER n=7 original=00000006 restored=00000006
+REGISTER n=8 original=00000000 restored=00000000
+REGISTER n=9 original=00098aa4 restored=00098aa4
+REGISTER n=10 original=44e048e0 restored=44e048e0
+REGISTER n=11 original=00000000 restored=00000000
+REGISTER n=12 original=00000001 restored=00000001
+REGISTER n=13 original=72360000 restored=72360000
+LAUNCHER exit=0; owned memory released
+

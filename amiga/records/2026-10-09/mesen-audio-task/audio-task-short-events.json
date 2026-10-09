@@ -1,0 +1,30 @@
+[
+  {
+    "tool": "amiga_list_screens",
+    "args": {},
+    "result": "Screens (1):\n\n  Amiga Workbench Release 3.2 Kickstart 47  1920x800  8bpp  LORES  @895EF20"
+  },
+  {
+    "tool": "amiga_list_ports",
+    "args": {},
+    "result": "Public Message Ports (18):\n  TSPORT\n  WORKBENCH\n  DEFICONS\n  ToolsDaemon 2.1a \u00a9 Nico Fran\u00e7ois\n  REXX\n  AREXX\n  MagicMenu\n  SIXIES.BRIDGE.NETWATCH\n  AssignWedge.port\n  ZZTemperature.1\n  NewMeter\n  POPO.1\n  QDock\n  ROADIE\n  TCP/IP Control\n  AMIGABRIDGE\n  ConClip.rendezvous\n  deficons"
+  },
+  {
+    "tool": "amiga_run_script",
+    "args": {
+      "script": "Stack 65536\nRun >NIL: SD032G:Dev/ZZNesPlayer/ZZNes-audio-task 6ac92c62 RUN \"SD032G:Dev/ZZNesPlayer/ROMs/002 Super Mario World.nes\" 2 >SD032G:Dev/ZZNes-Diagnostic/audio-task-short.log\n",
+      "timeout": 15
+    },
+    "result": "[OK] (no output)"
+  },
+  {
+    "tool": "amiga_list_ports",
+    "args": {},
+    "result": "ERROR: the Amiga bridge did not respond to 'PORTS' within the timeout. It is reachable but not answering \u2014 most likely busy running a long command or wedged. This is a communication timeout, NOT an unsupported command."
+  },
+  {
+    "tool": "amiga_list_screens",
+    "args": {},
+    "result": "Timeout waiting for screen list"
+  }
+]

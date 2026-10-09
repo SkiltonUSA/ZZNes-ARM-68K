@@ -1,0 +1,5 @@
+CPU_PPU frames=120 cycles=3571159 hash=ed354ee5 colors=4
+CONTROLLER right=10_frames hash=9bbb3e9b PASS
+CANCEL PASS
+UNSUPPORTED_MAPPER rejected PASS
+Built /Users/dskilton/conductor/workspaces/sixies_development/port-louis/.context/amiga/mesen-player/ZZNes: 425888 bytes; ARM image 255728 bytes; 396 relocations

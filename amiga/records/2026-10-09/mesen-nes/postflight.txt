@@ -1,0 +1,38 @@
+amiga_ping Amiga alive - clients: 0, chip: 2022928 bytes, fast: 617869576 bytes
+amiga_list_clients Clients (0): none
+amiga_list_ports Public Message Ports (18):
+  TSPORT
+  WORKBENCH
+  DEFICONS
+  ToolsDaemon 2.1a © Nico François
+  REXX
+  AREXX
+  MagicMenu
+  SIXIES.BRIDGE.NETWATCH
+  AssignWedge.port
+  ZZTemperature.1
+  NewMeter
+  POPO.1
+  QDock
+  ROADIE
+  TCP/IP Control
+  AMIGABRIDGE
+  ConClip.rendezvous
+  deficons
+amiga_list_screen_windows Windows on screen @898BE20 (6):
+
+  Roadshow Connection Details  pos=(0,0)  size=1126x116  @88628AC
+  AmigaBridge v1.20  -  TCP  2345 (bsdsock  pos=(10,20)  size=420x117  @8867234
+  Network log output  pos=(0,56)  size=1920x200  @886CAE4
+  Roadie 1.3.9  pos=(60,60)  size=230x250  @90A6404
+  (untitled)  pos=(21,713)  size=600x63  @8FAA23C
+  (untitled)  pos=(0,11)  size=1920x789  @811D82C
+amiga_run_script [OK]
+Process  1: stk  4000, gv 150, pri   0 Loaded as command: TCP/IP Superserver
+Process  2: stk 16384, gv 150, pri   0 Loaded as command: Status
+Process  3: stk 32768, gv 150, pri   0 Loaded as command: SD032G:amiga-bridge/amiga-bridge
+Process  4: stk  4096, gv 150, pri   0 Loaded as command: SYS:C/TitleShadow
+Process  5: stk  4096, gv 150, pri   0 Loaded as command: MagicMenu
+Process  6: stk 32768, gv 150, pri  -5 Loaded as command: C:bridge-netwatch
+Process  7: stk  8000, gv 150, pri   1 Loaded as command: Workbench
+Process  8: stk  4000, gv 150, pri   2 Loaded as command: ToolsDaemon

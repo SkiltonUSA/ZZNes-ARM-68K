@@ -1,0 +1,42 @@
+amiga_ping Amiga alive - clients: 0, chip: 2027032 bytes, fast: 616704376 bytes
+amiga_list_ports Public Message Ports (18):
+  TSPORT
+  WORKBENCH
+  DEFICONS
+  ToolsDaemon 2.1a © Nico François
+  REXX
+  AREXX
+  MagicMenu
+  SIXIES.BRIDGE.NETWATCH
+  AssignWedge.port
+  ZZTemperature.1
+  NewMeter
+  POPO.1
+  QDock
+  ROADIE
+  TCP/IP Control
+  AMIGABRIDGE
+  ConClip.rendezvous
+  deficons
+amiga_list_screens Screens (1):
+
+  Workbench Screen  1920x800  8bpp  LORES  @895EF20
+amiga_run_script [OK]
+ZZ9000.card 1.13 (10/04/2022)
+Directory "SD032G:Dev" on Thursday 09-Oct-25
+ZZFractal                       Dir ----rwed Today     17:45:24
+ZZFractal-0.1                   Dir ----rwed Today     18:19:13
+ZZFractal-0.1.info              544 ----rwed Today     18:19:13
+SDLZZFractal-0.2                Dir ----rwed Today     20:48:16
+SDLZZFractal-0.2.info           544 ----rw-d Today     20:48:17
+SDLZZFractal-0.3                Dir ----rwed Today     22:21:44
+SDLZZFractal-0.3.info           544 ----rw-d Today     22:21:45
+ZZVideo-0.1                     Dir ----rwed Today     23:20:51
+ZZVideo-0.1.info                544 ----rwed Today     23:14:55
+SDLZZFractal-0.4                Dir ----rwed Today     17:04:21
+SDLZZFractal-0.4.info           544 ----rw-d Today     17:04:22
+ZZNes-Diagnostic                Dir ----rwed Today     15:56:58
+ZZNesPreview                    Dir ----rwed Today     16:00:55
+ZZNesPlayer                     Dir ----rwed Today     15:58:03
+ZZNesFullscreen                 Dir ----rwed Today     16:45:56
+5 files - 2K bytes - 10 directories - 30 blocks used

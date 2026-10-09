@@ -1,0 +1,35 @@
+OWNED amiga=50000040 arm_candidate=101f0040 size=1048576 nonce=b4a48097
+BOOTSTRAP amiga=40c8c980 arm=00e7c980 (P96 allocated/locked)
+MAP status=4d415031 SCTLR=08c50878 MIDR=413fc090 MPIDR=80000001
+MAPPING PASS (eight nonce-derived words)
+ARM ready=41524d31 SCTLR=08c5187d MIDR=413fc090 MPIDR=80000001
+STAGE ROM published; initializing core
+STAGE core initialized; calibrating clock
+STAGE opening display
+DISPLAY bitmap_depth=24 path=Picasso96 ARGB
+BUFFERS pixels=096ecc84 indices=095fcda4 legacy_host=0
+ZZNES START core=Mesen CPU+PPU NROM silent ROM=built-in original demo bytes=24592 timer_hz=333332811 core_only=0
+FRAME n=1 cycles=27280 core_hash=48ef4dc5 output_hash=48ef4dc5 cpu_ppu_us=16877
+FRAME n=60 cycles=1784329 core_hash=ed354ee5 output_hash=ed354ee5 cpu_ppu_us=23605
+FRAME n=120 cycles=3571159 core_hash=ed354ee5 output_hash=ed354ee5 cpu_ppu_us=23579
+STAGE closing frontend; requesting ARM return next
+ZZNES END exit=0 frames=120 elapsed_us=12139926 core_total_us=2799453 output_hash=ed354ee5
+PROFILE frames=120 request_us=3164220 copy_us=1261106 colour_us=2988851 draw_us=4684995 waits=2182
+EXIT epilogue=52455431 cache_echoes=0 rounds=0
+CACHE original=08c50878 running=08c5187d restored=08c50878
+MMU_RESTORE phase=3 register_mismatches=00000000 cpsr_control=1d3 expected=1d3 ttbr=10234000 ccsidr=701fe019 witness_bad=0 mailbox_rounds=123
+REGISTER n=0 original=08c50878 restored=08c50878
+REGISTER n=1 original=28a4d001 restored=28a4d001
+REGISTER n=2 original=21080000 restored=21080000
+REGISTER n=3 original=00000000 restored=00000000
+REGISTER n=4 original=084e0000 restored=084e0000
+REGISTER n=5 original=00000001 restored=00000001
+REGISTER n=6 original=600101d3 restored=600101d3
+REGISTER n=7 original=00000006 restored=00000006
+REGISTER n=8 original=000c1000 restored=000c1000
+REGISTER n=9 original=00098aa4 restored=00098aa4
+REGISTER n=10 original=44e048e0 restored=44e048e0
+REGISTER n=11 original=00000000 restored=00000000
+REGISTER n=12 original=00000001 restored=00000001
+REGISTER n=13 original=72360000 restored=72360000
+LAUNCHER exit=0; owned memory released

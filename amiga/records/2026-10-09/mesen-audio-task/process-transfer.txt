@@ -1,0 +1,4 @@
+amiga_fetch_url Fetched 426584 bytes from http://127.0.0.1:55029/ZZNes-audio-process
+Transferred 426584 bytes in 20.4s (20907 B/s), 417 chunks, CRC32 verified
+amiga_run_script [OK]
+d5a4bd29ff0a6158a777a8e8312d9785  SD032G:Dev/ZZNesPlayer/ZZNes-audio-process

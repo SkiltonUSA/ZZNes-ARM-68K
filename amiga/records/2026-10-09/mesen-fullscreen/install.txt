@@ -1,0 +1,37 @@
+amiga_list_ports Public Message Ports (18):
+  TSPORT
+  WORKBENCH
+  DEFICONS
+  ToolsDaemon 2.1a © Nico François
+  REXX
+  AREXX
+  MagicMenu
+  SIXIES.BRIDGE.NETWATCH
+  AssignWedge.port
+  ZZTemperature.1
+  NewMeter
+  POPO.1
+  QDock
+  ROADIE
+  TCP/IP Control
+  AMIGABRIDGE
+  ConClip.rendezvous
+  deficons
+amiga_list_screens Screens (1):
+
+  Amiga Workbench Release 3.2 Kickstart 47  1920x800  8bpp  LORES  @898BE20
+amiga_run_script [OK] (no output)
+amiga_fetch_url Fetched 230 bytes from http://127.0.0.1:55029/Start-ZZNesFullscreen
+Transferred 230 bytes in 0.0s (7068 B/s), 1 chunks, CRC32 verified
+amiga_fetch_url Fetched 1834 bytes from http://127.0.0.1:55029/ReadMe-Amiga.txt
+Transferred 1834 bytes in 0.1s (18198 B/s), 2 chunks, CRC32 verified
+amiga_fetch_url Fetched 35147 bytes from http://127.0.0.1:55029/COPYING
+Transferred 35147 bytes in 1.7s (21036 B/s), 35 chunks, CRC32 verified
+amiga_fetch_url Fetched 5472 bytes from http://127.0.0.1:55029/build.json
+Transferred 5472 bytes in 0.3s (20096 B/s), 6 chunks, CRC32 verified
+amiga_run_script [OK]
+ce06e0f7dc480332051af06e8e2b1253  SD032G:Dev/ZZNesFullscreen/ZZNes
+7e2ea80c8117421feb314e8ff22a53ef  SD032G:Dev/ZZNesFullscreen/Start-ZZNesFullscreen
+f1b9b3dab13e8b057a9d69d4fe4cac7a  SD032G:Dev/ZZNesFullscreen/ReadMe-Amiga.txt
+d32239bcb673463ab874e80d47fae504  SD032G:Dev/ZZNesFullscreen/COPYING
+1f8a6aab7e2c977320fdb63dcc37c111  SD032G:Dev/ZZNesFullscreen/build.json

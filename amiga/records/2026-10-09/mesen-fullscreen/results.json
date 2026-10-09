@@ -1,0 +1,24 @@
+{
+  "scope": "Original silent NROM demo, sampled pixel readback; single short run, not game FPS",
+  "short_check": {
+    "frames": 6,
+    "elapsed_us": 361745,
+    "fps": 16.586269333370193,
+    "cpu_ppu_ms": 19.041666666666668,
+    "arm_colour_copy_ms": 3.749,
+    "acknowledged_flips": 6,
+    "verified_pixel_frames": 1
+  },
+  "fullscreen": {
+    "frames": 120,
+    "elapsed_us": 4155026,
+    "fps": 28.880685704493786,
+    "cpu_ppu_ms": 21.631183333333333,
+    "arm_colour_copy_ms": 3.7533833333333333,
+    "acknowledged_flips": 120,
+    "verified_pixel_frames": 3
+  },
+  "windowed_direct_fps": 28.438209103781688,
+  "relative_to_windowed_direct": 1.0155592287509152,
+  "relative_to_original": 2.9876130739013425
+}

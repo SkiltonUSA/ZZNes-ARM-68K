@@ -1,0 +1,8 @@
+{
+  "executable_bytes": 200828,
+  "executable_md5": "647efc2b45ebd0ae1c3159beb5baea75",
+  "transfer": "amiga_fetch_url: 197 chunks, CRC32 verified",
+  "amiga_md5": "647efc2b45ebd0ae1c3159beb5baea75",
+  "destination": "RAM:ZZNesPerf/Direct",
+  "installed_preview_unchanged": true
+}

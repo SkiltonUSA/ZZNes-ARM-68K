@@ -1,0 +1,7 @@
+{
+  "question": "Mario Bros is running in the new ZZFceux player. Press Return to start. Is the picture correct, and is the sound clear through your usual Amiga audio output?",
+  "response": "1",
+  "selected_option": "Picture and sound work",
+  "executable_md5": "ce77a7b5fd6a453d50a9a697b86d3ae9",
+  "scope": "Owner acceptance of picture and sound in live Mario Bros test; does not establish 60 FPS, other games or audible mute/unmute validation."
+}

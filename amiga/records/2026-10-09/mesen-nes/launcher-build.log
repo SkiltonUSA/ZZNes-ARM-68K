@@ -1,0 +1,21 @@
+python3 scripts/build_zz9000_debug.py --container-command '["podman", "--connection", "nuflix-converter-root"]'
+{
+  "build_id": 3876864480,
+  "source_identity_sha256": "e71441e0dc41a97ffa32c69a91a520365ab6a50641502a5be4a0f7a94109405c",
+  "image_bytes": 3508,
+  "application": "zzarm-debug",
+  "standalone_release": false,
+  "relocations": [
+    3264,
+    3268,
+    3272,
+    3276
+  ],
+  "entry": 0,
+  "arm_execution_verified": false,
+  "files": {
+    "zzarm.elf": "3471a87408470446a00e4c97aaa28a0c12a9dcf1038d3063defa4694df17fb93",
+    "zzarm-debug": "098a4e72ee84b1965be48af558c794523b53438d2404bab17c4bdde4fdd8a7c5",
+    "zz_payload.h": "2bc656d189581fa2c49c9c429afe68cbff206324ef07eaa7ee42c5af11987624"
+  }
+}

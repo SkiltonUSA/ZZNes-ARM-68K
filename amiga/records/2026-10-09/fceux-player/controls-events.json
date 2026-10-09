@@ -1,0 +1,71 @@
+[
+  {
+    "time": 1791572679.157907,
+    "tool": "amiga_list_screens",
+    "args": {},
+    "result": "Screens (1):\n\n  Workbench Screen  1920x800  8bpp  LORES  @82BDF88"
+  },
+  {
+    "time": 1791572679.1679099,
+    "tool": "amiga_list_ports",
+    "args": {},
+    "result": "Public Message Ports (18):\n  TSPORT\n  WORKBENCH\n  DEFICONS\n  ToolsDaemon 2.1a \u00a9 Nico Fran\u00e7ois\n  REXX\n  AREXX\n  MagicMenu\n  SIXIES.BRIDGE.NETWATCH\n  AssignWedge.port\n  ZZTemperature.1\n  NewMeter\n  POPO.1\n  QDock\n  ROADIE\n  TCP/IP Control\n  AMIGABRIDGE\n  ConClip.rendezvous\n  deficons"
+  },
+  {
+    "time": 1791572679.821347,
+    "tool": "amiga_run_script",
+    "args": {
+      "script": "Stack 65536\nRun >NIL: SD032G:Dev/ZZFceuxPlayer/ZZFceux 9fc10109 RUN \"SD032G:Dev/ZZNesPlayer/ROMs/011 Mario Bros.nes\" 600 >SD032G:Dev/ZZFceuxPlayer/controls.log\n",
+      "timeout": 15
+    },
+    "result": "[OK] (no output)"
+  },
+  {
+    "time": 1791572683.849208,
+    "tool": "amiga_list_screens",
+    "args": {},
+    "result": "Screens (2):\n\n  ZZFceux fullscreen  320x240  8bpp  LORES  @97B4468\n  Workbench Screen  1920x800  8bpp  LORES  @82BDF88"
+  },
+  {
+    "time": 1791572683.943097,
+    "tool": "amiga_input_key",
+    "args": {
+      "rawkey": "44",
+      "direction": "down"
+    },
+    "result": "Key 44 down"
+  },
+  {
+    "time": 1791572684.16222,
+    "tool": "amiga_input_key",
+    "args": {
+      "rawkey": "44",
+      "direction": "up"
+    },
+    "result": "Key 44 up"
+  },
+  {
+    "time": 1791572685.252565,
+    "tool": "amiga_list_screens",
+    "args": {},
+    "result": "Screens (2):\n\n  ZZFceux fullscreen  320x240  8bpp  LORES  @97B4468\n  Workbench Screen  1920x800  8bpp  LORES  @82BDF88"
+  },
+  {
+    "time": 1791572685.378033,
+    "tool": "amiga_input_key",
+    "args": {
+      "rawkey": "19",
+      "direction": "down"
+    },
+    "result": "Key 19 down"
+  },
+  {
+    "time": 1791572685.541891,
+    "tool": "amiga_input_key",
+    "args": {
+      "rawkey": "19",
+      "direction": "up"
+    },
+    "result": "Key 19 up"
+  }
+]

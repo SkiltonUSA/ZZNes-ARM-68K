@@ -1,0 +1,28 @@
+amiga_run_script [OK]
+a1697c90b4f9427ca6b670fe73d69385  SD032G:Dev/ZZNesPlayer/ZZNes-mapper90
+6e4e23072476a232f0b955d4a5d32a0d  SD032G:Dev/ZZNesPlayer/ZZNes
+40c4c022fc481a536b34f7ca5e90caa7  SD032G:Dev/ZZNesPlayer/build-mapper90.json
+a106ab5e546951bc8685e6ef23055eb5  SD032G:Dev/ZZNesPlayer/ReadMe-mapper90.txt
+cc3534b693338f4744180541f175367f  SD032G:Dev/ZZNesPlayer/Start-SuperMarioWorld
+amiga_list_ports Public Message Ports (18):
+  TSPORT
+  WORKBENCH
+  DEFICONS
+  ToolsDaemon 2.1a © Nico François
+  REXX
+  AREXX
+  MagicMenu
+  SIXIES.BRIDGE.NETWATCH
+  AssignWedge.port
+  ZZTemperature.1
+  NewMeter
+  POPO.1
+  QDock
+  ROADIE
+  TCP/IP Control
+  AMIGABRIDGE
+  ConClip.rendezvous
+  deficons
+amiga_list_screens Screens (1):
+
+  Workbench Screen  1920x800  8bpp  LORES  @898BE20

@@ -1,0 +1,23 @@
+[
+  {
+    "time": 1791567839.9050822,
+    "tool": "amiga_inspect_memory",
+    "args": {
+      "address": "44510270",
+      "size": 48
+    },
+    "result": "44510270  D2 6A 21 00 C7 E9 21 00 61 40 00 00 00 00 00 00   .j!...!.a@......\n44510280  05 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................\n44510290  D1 56 3C 00 22 33 02 00 27 4B 3C 00 2C 4C 00 00   .V<.\"3..'K<.,L.."
+  },
+  {
+    "time": 1791567839.91406,
+    "tool": "amiga_list_ports",
+    "args": {},
+    "result": "Public Message Ports (18):\n  TSPORT\n  WORKBENCH\n  DEFICONS\n  ToolsDaemon 2.1a \u00a9 Nico Fran\u00e7ois\n  REXX\n  AREXX\n  MagicMenu\n  SIXIES.BRIDGE.NETWATCH\n  AssignWedge.port\n  ZZTemperature.1\n  NewMeter\n  POPO.1\n  QDock\n  ROADIE\n  TCP/IP Control\n  AMIGABRIDGE\n  ConClip.rendezvous\n  deficons"
+  },
+  {
+    "time": 1791567839.926768,
+    "tool": "amiga_list_screens",
+    "args": {},
+    "result": "Screens (2):\n\n  (untitled)  320x240  1bpp  LORES  @94473A0\n  Workbench Screen  1920x800  8bpp  LORES  @895EF20"
+  }
+]

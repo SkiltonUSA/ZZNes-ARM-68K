@@ -1,0 +1,73 @@
+OWNED amiga=50000040 arm_candidate=101f0040 size=1048576 nonce=85947d77
+BOOTSTRAP amiga=40c8c980 arm=00e7c980 (P96 allocated/locked)
+MAP status=4d415031 SCTLR=08c50878 MIDR=413fc090 MPIDR=80000001
+MAPPING PASS (eight nonce-derived words)
+ARM ready=41524d31 SCTLR=08c5187d MIDR=413fc090 MPIDR=80000001
+STAGE ROM published; initializing core
+STAGE core initialized; calibrating clock
+STAGE opening display
+FULLSCREEN_BITMAP allocated=093596bc screen=095ae320 width=320 height=240 allocated_height=720 screen_height=720 on_board=1/1 memory=0975aad4/40ce7c00 pitch=1280/1280
+FULLSCREEN mode=50031303 native_format=9 depth=32 slots=3 geometry=320x240 NES=256x240
+BUFFERS pixels=00000000 indices=0992bae4 legacy_host=0
+ZZNES START core=Mesen CPU+PPU NROM silent ROM=built-in original demo bytes=24592 timer_hz=333332309 core_only=0
+FRAME n=1 cycles=27280 core_hash=48ef4dc5 output_hash=48ef4dc5 cpu_ppu_us=15138
+FRAME n=60 cycles=1784329 core_hash=ed354ee5 output_hash=ed354ee5 cpu_ppu_us=21731
+FRAME n=120 cycles=3571159 core_hash=ed354ee5 output_hash=ed354ee5 cpu_ppu_us=21829
+FRAME n=180 cycles=5357989 core_hash=ed354ee5 output_hash=ed354ee5 cpu_ppu_us=21914
+FRAME n=240 cycles=7144819 core_hash=ed354ee5 output_hash=ed354ee5 cpu_ppu_us=21949
+FRAME n=300 cycles=8931649 core_hash=ed354ee5 output_hash=ed354ee5 cpu_ppu_us=21722
+FRAME n=360 cycles=10718479 core_hash=ed354ee5 output_hash=ed354ee5 cpu_ppu_us=21678
+FRAME n=420 cycles=12505309 core_hash=ed354ee5 output_hash=ed354ee5 cpu_ppu_us=21869
+FRAME n=480 cycles=14292139 core_hash=ed354ee5 output_hash=ed354ee5 cpu_ppu_us=21928
+FRAME n=540 cycles=16078969 core_hash=ed354ee5 output_hash=ed354ee5 cpu_ppu_us=21677
+FRAME n=600 cycles=17865799 core_hash=ed354ee5 output_hash=ed354ee5 cpu_ppu_us=21906
+FRAME n=660 cycles=19652629 core_hash=ed354ee5 output_hash=ed354ee5 cpu_ppu_us=21731
+FRAME n=720 cycles=21439459 core_hash=ed354ee5 output_hash=ed354ee5 cpu_ppu_us=21864
+FRAME n=780 cycles=23226289 core_hash=ed354ee5 output_hash=ed354ee5 cpu_ppu_us=21858
+FRAME n=840 cycles=25013119 core_hash=ed354ee5 output_hash=ed354ee5 cpu_ppu_us=21824
+FRAME n=900 cycles=26799949 core_hash=ed354ee5 output_hash=ed354ee5 cpu_ppu_us=21751
+FRAME n=960 cycles=28586779 core_hash=ed354ee5 output_hash=ed354ee5 cpu_ppu_us=21624
+FRAME n=1020 cycles=30373610 core_hash=f38d8a9e output_hash=f38d8a9e cpu_ppu_us=21982
+FRAME n=1080 cycles=32160440 core_hash=8793f263 output_hash=8793f263 cpu_ppu_us=21661
+FRAME n=1140 cycles=33947269 core_hash=d6527ef6 output_hash=d6527ef6 cpu_ppu_us=21601
+FRAME n=1200 cycles=35734099 core_hash=78651a30 output_hash=78651a30 cpu_ppu_us=21641
+FRAME n=1260 cycles=37520929 core_hash=78651a30 output_hash=78651a30 cpu_ppu_us=21839
+FRAME n=1320 cycles=39307759 core_hash=78651a30 output_hash=78651a30 cpu_ppu_us=21626
+FRAME n=1380 cycles=41094589 core_hash=78651a30 output_hash=78651a30 cpu_ppu_us=21872
+FRAME n=1440 cycles=42881419 core_hash=78651a30 output_hash=78651a30 cpu_ppu_us=21751
+FRAME n=1500 cycles=44668249 core_hash=78651a30 output_hash=78651a30 cpu_ppu_us=21646
+FRAME n=1560 cycles=46455079 core_hash=78651a30 output_hash=78651a30 cpu_ppu_us=21769
+FRAME n=1620 cycles=48241909 core_hash=78651a30 output_hash=78651a30 cpu_ppu_us=21722
+FRAME n=1680 cycles=50028739 core_hash=78651a30 output_hash=78651a30 cpu_ppu_us=21672
+FRAME n=1740 cycles=51815569 core_hash=78651a30 output_hash=78651a30 cpu_ppu_us=21666
+FRAME n=1800 cycles=53602399 core_hash=78651a30 output_hash=78651a30 cpu_ppu_us=21931
+FRAME n=1860 cycles=55389229 core_hash=78651a30 output_hash=78651a30 cpu_ppu_us=21731
+FRAME n=1920 cycles=57176059 core_hash=78651a30 output_hash=78651a30 cpu_ppu_us=21793
+FRAME n=1980 cycles=58962889 core_hash=78651a30 output_hash=78651a30 cpu_ppu_us=21646
+FRAME n=2040 cycles=60749719 core_hash=78651a30 output_hash=78651a30 cpu_ppu_us=21676
+FRAME n=2100 cycles=62536549 core_hash=78651a30 output_hash=78651a30 cpu_ppu_us=21644
+FRAME n=2160 cycles=64323379 core_hash=78651a30 output_hash=78651a30 cpu_ppu_us=21587
+FRAME n=2220 cycles=66110209 core_hash=78651a30 output_hash=78651a30 cpu_ppu_us=21896
+FULLSCREEN_END queued=2262 flips=2262 pending=-1 ack_wait_us=20712760 fault=0
+STAGE closing frontend; requesting ARM return next
+ZZNES END exit=0 frames=2262 elapsed_us=74419783 core_total_us=49220895 output_hash=78651a30
+DIRECT_END challenges=2262 verified_frames=38 copy_us=8492412
+PROFILE frames=2262 request_us=55323764 copy_us=0 colour_us=0 draw_us=18497984 waits=51960
+EXIT epilogue=52455431 cache_echoes=0 rounds=0
+CACHE original=08c50878 running=08c5187d restored=08c50878
+MMU_RESTORE phase=3 register_mismatches=00000000 cpsr_control=1d3 expected=1d3 ttbr=10234000 ccsidr=701fe019 witness_bad=0 mailbox_rounds=4528
+REGISTER n=0 original=08c50878 restored=08c50878
+REGISTER n=1 original=28a4d001 restored=28a4d001
+REGISTER n=2 original=21080000 restored=21080000
+REGISTER n=3 original=00000000 restored=00000000
+REGISTER n=4 original=084e0000 restored=084e0000
+REGISTER n=5 original=00000001 restored=00000001
+REGISTER n=6 original=600101d3 restored=600101d3
+REGISTER n=7 original=00000006 restored=00000006
+REGISTER n=8 original=000c1000 restored=000c1000
+REGISTER n=9 original=00098aa4 restored=00098aa4
+REGISTER n=10 original=44e048e0 restored=44e048e0
+REGISTER n=11 original=00000000 restored=00000000
+REGISTER n=12 original=00000001 restored=00000001
+REGISTER n=13 original=72360000 restored=72360000
+LAUNCHER exit=0; owned memory released

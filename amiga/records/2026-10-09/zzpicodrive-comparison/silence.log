@@ -1,0 +1,48 @@
+ZZPicoDrive VTC - visual timing clean (region PAL/NTSC, pacing, bandes noires)
+board=0x40000000 fb=0x40010000 shared=0x44510000
+ROM: 524288 bytes
+Blob: 598968 bytes (embarque dans l'executable)
+Core1 READY.
+ROM loaded (CRC_ARM=0xF9394E97)
+region=USA_NTSC->NTSC  target=60Hz  regionOverride=4
+RUNNING. Opening 32-bit screen + double buffer...
+pacing_mode=VBLANK_HW (vblank probe=OK)
+P96 modeid=0x50031303
+OpenScreen strict: FAIL -> methode C permissive
+OpenScreen method C: OK
+backbuffers: AllocScreenBuffer not VRAM -> p96AllocBitMap (friend=screen)
+buf[0] mem=0x40C97400 bpr=1280
+buf[1] mem=0x40CE2400 bpr=1280
+buf[2] mem=0x40D2D400 bpr=1280
+AUDIO: backend AHI (tache separee)
+Direct P96 render ON. screen=320x240 modeid=0x50031303 pacing=VBLANK_HW target=60Hz
+Press any key to STOP.
+AUDIO: src_rate=22050 ahi_rate=22050 ring_size=524288 unit=0 buf=512
+AHI: refills=1620 underruns=0
+Core1 stopped.
+
+=== TIMING VTC ===
+region=USA_NTSC->NTSC target=60Hz pacing=VBLANK_HW  active_h=224 y_offset=8 screen=320x240
+frames=5  duree=37.7s  FPS=0.1
+rendu ARM moyen=0.0 ms/frame   flip moyen=0.0 ms/frame
+--- decoupe rendu (dernier frame, cycles CCNT @~666MHz) ---
+PicoFrame = 2222535 cyc (3.3 ms, 75%)
+conversion= 579070 cyc (0.8 ms, 19%)
+copie P96 = 0 cyc (0.0 ms)
+dcache_cln= 144120 cyc (0.2 ms, 4%)
+--- benchmark ecriture 76800 mots (frame 1) ---
+vers P96  = 0 cyc (0.0 ms)  desc=0x00000000
+vers FB3B = 0 cyc (0.0 ms)  desc=0x00000000 (ref cachee)
+desc P96 AVANT remap=0x00f10c02  APRES=0x00000000
+(desc: TEX[14:12] C[3] B[2] ; WB/WA=TEX001 C1 B1)
+
+=== NTSC_TIMING_DIAG (session) ===
+PicoFrame blob (4 frames)  min=3.2  moy=3.2  max=3.3 ms
+  frames  >12ms=0   >14ms=0   >16.67ms=0
+  convert min=0.8  moy=3.3  max=5.9 ms   dclean max=0.2 ms
+render 68k (r1-r0)  min=0.0  max=0.0 ms   [>12=0 >14=0 >16.67=0]
+frame PAN-to-PAN    min=0.0  max=0.0 ms   missed_vblank=0
+vblanks attendus/PAN  moy=0.0  max=0
+--- lecture : missed_vblank~0 => NTSC verrouille. Comparer convert moy/max
+    avec/sans asm_memory pour voir le gain sur les pics.
+Done (rc=0).

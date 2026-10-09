@@ -1,0 +1,62 @@
+[
+  {
+    "time": 1791567751.708525,
+    "tool": "amiga_inspect_memory",
+    "args": {
+      "address": "44510270",
+      "size": 48
+    },
+    "result": "44510270  B4 35 16 00 1D 18 B3 00 24 11 24 01 00 00 00 00   .5......$.$.....\n44510280  1C 0D 00 00 0E 00 00 00 09 00 00 00 02 00 00 00   ................\n44510290  28 71 E3 FF 4D 3A 02 00 FD BA 08 00 63 5C 64 36   (q..M:......c\\d6"
+  },
+  {
+    "time": 1791567751.717634,
+    "tool": "amiga_list_ports",
+    "args": {},
+    "result": "Public Message Ports (18):\n  TSPORT\n  WORKBENCH\n  DEFICONS\n  ToolsDaemon 2.1a \u00a9 Nico Fran\u00e7ois\n  REXX\n  AREXX\n  MagicMenu\n  SIXIES.BRIDGE.NETWATCH\n  AssignWedge.port\n  ZZTemperature.1\n  NewMeter\n  POPO.1\n  QDock\n  ROADIE\n  TCP/IP Control\n  AMIGABRIDGE\n  ConClip.rendezvous\n  deficons"
+  },
+  {
+    "time": 1791567751.725858,
+    "tool": "amiga_list_screens",
+    "args": {},
+    "result": "Screens (1):\n\n  Workbench Screen  1920x800  8bpp  LORES  @895EF20"
+  },
+  {
+    "time": 1791567751.7353659,
+    "tool": "amiga_inspect_memory",
+    "args": {
+      "address": "44510000",
+      "size": 32
+    },
+    "result": "44510000  43 49 50 5A 01 00 00 00 FF 00 00 00 04 00 00 00   CIPZ............\n44510010  04 00 00 00 04 00 00 00 5E 79 01 00 A3 06 00 00   ........^y......"
+  },
+  {
+    "time": 1791567752.848468,
+    "tool": "amiga_run_script",
+    "args": {
+      "script": "Stack 131072\nCD SD032G:Dev/ZZPicoDriveMD\nRun >NIL: ZZPicodriveMD_v1.1 ROMs/Sonic1.bin embedded usa silence kbd >SD032G:Dev/ZZPicoDriveMD/Logs/test-silence.log\n",
+      "timeout": 15
+    },
+    "result": "[OK] (no output)"
+  },
+  {
+    "time": 1791567756.863324,
+    "tool": "amiga_inspect_memory",
+    "args": {
+      "address": "44510000",
+      "size": 32
+    },
+    "result": "44510000  43 49 50 5A 01 00 00 00 02 00 00 00 03 00 00 00   CIPZ............\n44510010  03 00 00 00 03 00 00 00 F7 82 01 00 04 00 00 00   ................"
+  },
+  {
+    "time": 1791567756.875385,
+    "tool": "amiga_list_screen_windows",
+    "args": {},
+    "result": "Windows on screen @940EB08 (1):\n\n  (untitled)  pos=(0,0)  size=320x240  @9413C34"
+  },
+  {
+    "time": 1791567781.897325,
+    "tool": "amiga_list_screen_windows",
+    "args": {},
+    "result": "Windows on screen @895EF20 (8):\n\n  HDD50Gig  19% full  42.4GB free  9.8GB i  pos=(178,140)  size=692x593  @88669CC\n  SD032G  7% full  27.1GB free  2GB in use  pos=(314,53)  size=1149x404  @886195C\n  AmigaBridge v1.20  -  TCP  2345 (bsdsock  pos=(10,20)  size=420x117  @88634D4\n  Roadie 1.3.9  pos=(60,60)  size=230x250  @91781FC\n  FinalWriter7.3  pos=(113,26)  size=1066x181  @9098CB4\n  APPS  pos=(314,53)  size=457x419  @909ADB4\n  (untitled)  pos=(21,713)  size=600x63  @8FB969C\n  (untitled)  pos=(0,11)  size=1920x789  @811B52C"
+  }
+]

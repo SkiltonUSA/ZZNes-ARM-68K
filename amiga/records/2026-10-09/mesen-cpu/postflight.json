@@ -1,0 +1,13 @@
+{
+  "ping": "Amiga alive - clients: 0, chip: 2022928 bytes, fast: 617273392 bytes",
+  "clients": "Clients (0): none",
+  "ports": "Public Message Ports (18):\n  TSPORT\n  WORKBENCH\n  DEFICONS\n  ToolsDaemon 2.1a © Nico François\n  REXX\n  AREXX\n  MagicMenu\n  SIXIES.BRIDGE.NETWATCH\n  AssignWedge.port\n  ZZTemperature.1\n  NewMeter\n  POPO.1\n  QDock\n  ROADIE\n  TCP/IP Control\n  AMIGABRIDGE\n  ConClip.rendezvous\n  deficons",
+  "screens": "Screens (1):\n\n  Workbench Screen  1920x800  8bpp  LORES  @8989D90",
+  "transferred_md5": {
+    "uncached": "6ccab92c3dbce994759e24b650296a9c",
+    "instruction_cache": "a4a2bd7780ad11260d388d1386ee08fc"
+  },
+  "temporary_amiga_directory_removed": "RAM:ZZMesenBench",
+  "fractal_closed_cleanly": true,
+  "fractal_restarted": false
+}

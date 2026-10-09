@@ -1,0 +1,12 @@
+{
+  "frames": 360,
+  "configured_limit": 600,
+  "elapsed_us": 67602095,
+  "audio_completed": 191669,
+  "all_flips_completed": true,
+  "ret1_registers_witness_pass": true,
+  "start_changed_title_hash": true,
+  "pause_resume_evidence": "App remained alive beyond normal 600-frame duration, then resumed and Q exited before limit. Live file could not be read while open.",
+  "mute": "M twice dispatched; audible muting not independently confirmed",
+  "original_script": "Aborted on denied live-log read; resumed and exited through subsequent recorded key calls. No target crash."
+}

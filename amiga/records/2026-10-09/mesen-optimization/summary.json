@@ -1,0 +1,77 @@
+{
+  "baseline": {
+    "frames": 120,
+    "elapsed_us": 8027031,
+    "fps": 14.949487550253636,
+    "core_us": 3900658,
+    "core_ms_per_frame": 32.50548333333333
+  },
+  "sparse": {
+    "frames": 120,
+    "elapsed_us": 7795498,
+    "fps": 15.393500197165082,
+    "core_us": 3692216,
+    "core_ms_per_frame": 30.76846666666667
+  },
+  "core_time_reduction_percent": 5.343765077584351,
+  "fps_gain_percent": 2.9700860676251883,
+  "scheduling_candidate": "Passed physical 120- and 300-frame tests; matched baseline hashes and clean teardown",
+  "installed": {
+    "version": "0.3.2-dev",
+    "path": "SD032G:Dev/ZZNesPlayer/ZZNes",
+    "bytes": 420832,
+    "md5": "d54d086434df49e7f5ece528316a6f29",
+    "backup": "ZZNes.before-optimization"
+  },
+  "owner_report": "Workbench remained responsive; Roadie and bridge running; connection restored",
+  "candidates": {
+    "ZZNes-sparse": {
+      "bytes": 418468,
+      "md5": "a92c70840cc8d20162d412a71b76f4af",
+      "physical_test": "passed"
+    },
+    "ZZNes-pipeline": {
+      "bytes": 419176,
+      "md5": "08ffb1df06cd3cf98a5f53c2f0c8cdfc",
+      "physical_test": "Passed 120-frame test after reconnection"
+    }
+  },
+  "pipeline": {
+    "frames": 120,
+    "elapsed_us": 7583894,
+    "fps": 15.823005965009532,
+    "core_us": 3691416,
+    "core_ms_per_frame": 30.7618
+  },
+  "overlap": {
+    "frames": 120,
+    "elapsed_us": 5435276,
+    "fps": 22.07799567124098,
+    "core_us": 3682581,
+    "core_ms_per_frame": 30.688174999999998
+  },
+  "baseline300": {
+    "frames": 300,
+    "elapsed_us": 19914799,
+    "fps": 15.064174135023908,
+    "core_us": 9878539,
+    "core_ms_per_frame": 32.92846333333333
+  },
+  "overlap300": {
+    "frames": 300,
+    "elapsed_us": 13315843,
+    "fps": 22.529553705311784,
+    "core_us": 9373645,
+    "core_ms_per_frame": 31.245483333333333
+  },
+  "repeat300_fps_gain_percent": 49.55717786699647,
+  "zz9000ax": "Owner confirms physically installed; app still uses AHI unit 0 / Paula",
+  "interactive": {
+    "pause_resume_inputs": true,
+    "quit_before_limit": true,
+    "frames": 429,
+    "flips": 429,
+    "readbacks": 8,
+    "exit": 0
+  }
+}

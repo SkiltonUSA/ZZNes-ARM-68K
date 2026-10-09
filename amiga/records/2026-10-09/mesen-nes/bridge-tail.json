@@ -1,0 +1,121 @@
+[
+  {
+    "level": "I",
+    "tick": null,
+    "message": "tool: amiga_ping()",
+    "timestamp": 1791558191.515218,
+    "client": "mcp"
+  },
+  {
+    "level": "I",
+    "tick": null,
+    "message": "tool: amiga_list_clients()",
+    "timestamp": 1791558191.611613,
+    "client": "mcp"
+  },
+  {
+    "level": "I",
+    "tick": null,
+    "message": "tool: amiga_get_tasks()",
+    "timestamp": 1791558191.624384,
+    "client": "mcp"
+  },
+  {
+    "level": "I",
+    "tick": null,
+    "message": "tool: amiga_list_tasks()",
+    "timestamp": 1791558375.977194,
+    "client": "mcp"
+  },
+  {
+    "level": "I",
+    "tick": null,
+    "message": "tool: amiga_list_screens()",
+    "timestamp": 1791558375.9979498,
+    "client": "mcp"
+  },
+  {
+    "level": "I",
+    "tick": null,
+    "message": "tool: amiga_list_ports()",
+    "timestamp": 1791558376.00785,
+    "client": "mcp"
+  },
+  {
+    "level": "I",
+    "tick": null,
+    "message": "tool: amiga_run_script(script=Status FULL\n, timeout=30)",
+    "timestamp": 1791558381.7433941,
+    "client": "mcp"
+  },
+  {
+    "level": "I",
+    "tick": null,
+    "message": "tool: amiga_run_script(script=MakeDir RAM:ZZNesPreview\nC:wget -O RAM:ZZNesPreview/ZZNes http://10.0.0.21:55029/ZZNes\nProtect RAM:ZZNesPreview/ZZNes +e\nC:MD5Sum RAM:ZZNesPreview/ZZNes\n, timeout=60)",
+    "timestamp": 1791558432.394204,
+    "client": "mcp"
+  },
+  {
+    "level": "I",
+    "tick": null,
+    "message": "tool: amiga_run_script(script=Stack 65536\nRAM:ZZNesPreview/ZZNes feecde10 RUN DEMO 120 >RAM:ZZNesPreview/first.log\nType RAM:ZZNesPreview/first.log\n, timeout=60)",
+    "timestamp": 1791558462.451651,
+    "client": "mcp"
+  },
+  {
+    "level": "I",
+    "tick": null,
+    "message": "tool: amiga_run_script(script=C:wget -O RAM:ZZNesPreview/ZZNes http://10.0.0.21:55029/ZZNes\nProtect RAM:ZZNesPreview/ZZNes +e\nC:MD5Sum RAM:ZZNesPreview/ZZNes\n, timeout=60)",
+    "timestamp": 1791558530.203024,
+    "client": "mcp"
+  },
+  {
+    "level": "I",
+    "tick": null,
+    "message": "tool: amiga_write_file(path=RAM:ZZNesPreview/start, offset=0, hex_data=537461636b2036353533360a52414d3a5a5a4e6573507265766965772f5a5a4e65732033633436643664312052554e2044454d4f20313230203e52414d3a5a5a4e6573507265766965772f646973706c61792e6c6f670a)",
+    "timestamp": 1791558554.694793,
+    "client": "mcp"
+  },
+  {
+    "level": "I",
+    "tick": null,
+    "message": "tool: amiga_run_script(script=Run >NIL: Execute RAM:ZZNesPreview/start\n, timeout=30)",
+    "timestamp": 1791558554.704308,
+    "client": "mcp"
+  },
+  {
+    "level": "I",
+    "tick": null,
+    "message": "tool: amiga_list_screen_windows()",
+    "timestamp": 1791558558.465285,
+    "client": "mcp"
+  },
+  {
+    "level": "I",
+    "tick": null,
+    "message": "tool: amiga_screenshot(window=ZZNes ARM preview)",
+    "timestamp": 1791558558.485329,
+    "client": "mcp"
+  },
+  {
+    "level": "I",
+    "tick": null,
+    "message": "tool: amiga_run_script(script=List RAM:ZZNesPreview\nType RAM:ZZNesPreview/start\nStatus FULL\n, timeout=30)",
+    "timestamp": 1791558587.618062,
+    "client": "mcp"
+  },
+  {
+    "level": "I",
+    "tick": null,
+    "message": "tool: amiga_run_script(script=List RAM:ZZNesPreview\nStatus FULL\n, timeout=30)",
+    "timestamp": 1791559016.853921,
+    "client": "mcp"
+  },
+  {
+    "level": "I",
+    "tick": null,
+    "message": "tool: amiga_list_ports()",
+    "timestamp": 1791559017.3348138,
+    "client": "mcp"
+  }
+]

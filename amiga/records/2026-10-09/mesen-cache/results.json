@@ -1,0 +1,88 @@
+{
+  "scope": "CPU-only, no game/display/audio FPS measured",
+  "previous_instruction_cache": {
+    "median_cpu_us": 99766.0,
+    "min_cpu_us": 99544,
+    "max_cpu_us": 99907,
+    "measured_samples": 10,
+    "instructions_per_sample": 8991,
+    "nes_cycles_per_sample": 26553,
+    "nes_time_represented_us": 14835.959644044244,
+    "nes_cpu_cycles_per_host_second": 266152.79754625825,
+    "fraction_of_ntsc_cpu_realtime": 0.1487075721592952,
+    "timer_estimated_hz": 333331966
+  },
+  "private_mmu_I_only_boundary_layout": {
+    "median_cpu_us": 52300.0,
+    "min_cpu_us": 52203,
+    "max_cpu_us": 52785,
+    "measured_samples": 10,
+    "instructions_per_sample": 8991,
+    "nes_cycles_per_sample": 26553,
+    "nes_time_represented_us": 14835.959644044244,
+    "nes_cpu_cycles_per_host_second": 507705.5449330784,
+    "fraction_of_ntsc_cpu_realtime": 0.2836703564826815,
+    "timer_estimated_hz": 333332484
+  },
+  "private_mmu_ID_boundary_layout": {
+    "median_cpu_us": 18890.5,
+    "min_cpu_us": 18865,
+    "max_cpu_us": 18969,
+    "measured_samples": 10,
+    "instructions_per_sample": 8991,
+    "nes_cycles_per_sample": 26553,
+    "nes_time_represented_us": 14835.959644044244,
+    "nes_cpu_cycles_per_host_second": 1405627.1670945713,
+    "fraction_of_ntsc_cpu_realtime": 0.7853661705113281,
+    "timer_estimated_hz": 333332097
+  },
+  "full_private_cache_runs": {
+    "cached-full.log": {
+      "median_cpu_us": 3349.5,
+      "min_cpu_us": 3346,
+      "max_cpu_us": 3361,
+      "measured_samples": 10,
+      "instructions_per_sample": 8991,
+      "nes_cycles_per_sample": 26553,
+      "nes_time_represented_us": 14835.959644044244,
+      "nes_cpu_cycles_per_host_second": 7927451.858486341,
+      "fraction_of_ntsc_cpu_realtime": 4.429305760275935,
+      "timer_estimated_hz": 333332161
+    },
+    "repeat1.log": {
+      "median_cpu_us": 3367.5,
+      "min_cpu_us": 3363,
+      "max_cpu_us": 3379,
+      "measured_samples": 10,
+      "instructions_per_sample": 8991,
+      "nes_cycles_per_sample": 26553,
+      "nes_time_represented_us": 14835.959644044244,
+      "nes_cpu_cycles_per_host_second": 7885077.951002227,
+      "fraction_of_ntsc_cpu_realtime": 4.405630183829025,
+      "timer_estimated_hz": 333332140
+    },
+    "repeat2.log": {
+      "median_cpu_us": 3347.5,
+      "min_cpu_us": 3343,
+      "max_cpu_us": 3360,
+      "measured_samples": 10,
+      "instructions_per_sample": 8991,
+      "nes_cycles_per_sample": 26553,
+      "nes_time_represented_us": 14835.959644044244,
+      "nes_cpu_cycles_per_host_second": 7932188.200149365,
+      "fraction_of_ntsc_cpu_realtime": 4.431952096801865,
+      "timer_estimated_hz": 333332356
+    }
+  },
+  "combined": {
+    "samples": 30,
+    "median_us": 3352.0,
+    "min_us": 3343,
+    "max_us": 3379,
+    "speedup_over_previous_icache": 29.763126491646776,
+    "time_reduction_percent": 96.64013792273921,
+    "ntsc_cpu_realtime_multiple": 4.426002280442794,
+    "register_states_matched": 26973,
+    "successful_cached_shutdowns_with_cancellation": 3
+  }
+}

@@ -1,0 +1,3 @@
+.tools/amiga-venv/bin/python tests/amiga/smoke_mcp.py
+PASS: MCP initialize, 138 tools discovered, ping and task inspection
+ARexx/debug tool schemas present; execution requires a booted AmigaOS target.

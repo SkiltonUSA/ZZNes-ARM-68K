@@ -1,0 +1,30 @@
+amiga_fetch_url Fetched 500 bytes from http://127.0.0.1:55029/checksums.json
+Transferred 500 bytes in 0.0s (12083 B/s), 1 chunks, CRC32 verified
+amiga_run_script [OK]
+5a8192e15eee30d452daa1dec9dc5f25  SD032G:Dev/ZZNesPlayer/checksums.json
+Directory "SD032G:Dev/ZZNesPlayer" on Thursday 09-Oct-25
+Start-SuperMarioWorld           228 -s--rwed Today     17:35:00
+1 file - 228 bytes - 2 blocks used
+amiga_ping Amiga alive - clients: 0, chip: 2021848 bytes, fast: 615667392 bytes
+amiga_list_ports Public Message Ports (18):
+  TSPORT
+  WORKBENCH
+  DEFICONS
+  ToolsDaemon 2.1a © Nico François
+  REXX
+  AREXX
+  MagicMenu
+  SIXIES.BRIDGE.NETWATCH
+  AssignWedge.port
+  ZZTemperature.1
+  NewMeter
+  POPO.1
+  QDock
+  ROADIE
+  TCP/IP Control
+  AMIGABRIDGE
+  ConClip.rendezvous
+  deficons
+amiga_list_screens Screens (1):
+
+  Workbench Screen  1920x800  8bpp  LORES  @898BE20

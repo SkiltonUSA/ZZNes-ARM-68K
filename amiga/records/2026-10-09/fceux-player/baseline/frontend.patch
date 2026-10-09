@@ -1,0 +1,109 @@
+--- mesen_nes/host.c
++++ fceux-player/host.c
+@@ -75,15 +75,12 @@
+ static UBYTE buttons;
+ static ULONG us(void){struct timeval t;GetSysTime(&t);return t.tv_secs*1000000u+t.tv_micro;}
+ int nes_arguments(int argc,char **argv){
+-#ifdef NES_PLAYER
++ if(argc<=1)return argc;
+  if(argc==2){rom_path=argv[1];return 1;}
+- player_demo=argc>=4;
+-#endif
+- if(argc>5){puts("Usage: ZZNes <nonce> RUN [ROM.nes|DEMO|CORE] [frame_limit]");return -1;}
+- if(argc>=4 && !strcmp(argv[3],"CORE")){core_only=1;frame_limit=6;}
+- else if(argc>=4 && strcmp(argv[3],"DEMO"))rom_path=argv[3];
++ if(argc<4||argc>5){puts("Usage: ZZFceux [ROM.nes] or <nonce> RUN <ROM.nes> [frame_limit]");return -1;}
++ rom_path=argv[3];
+  if(argc==5){char *end;errno=0;frame_limit=strtoul(argv[4],&end,10);if(errno||*end||!frame_limit||frame_limit>36000)return -1;}
+- return argc>3?3:argc;
++ return 3;
+ }
+ static void paint(void){
+ #ifdef NES_FULLSCREEN
+@@ -279,11 +276,11 @@
+  else memcpy(rom,demo_rom,size);
+  if(size>NES_ROM_LIMIT){puts("ROM exceeds player cartridge limit");goto done;}
+ #ifdef NES_PLAYER
+- {int id=nes_cartridge(rom,size);if(id<0){puts("Unsupported cartridge: require clean NTSC iNES, mapper 0/1/2/3/4/7/90; see ReadMe");goto done;}printf("CARTRIDGE mapper=%d PRG=%u CHR=%u battery=%u\n",id,rom[4]*16384u,rom[5]*8192u,(ULONG)!!(rom[6]&2));}
++ {int id=nes_cartridge(rom,size);if(id<0){puts("Unsupported cartridge: require clean NTSC iNES, mapper 0/90, CHR ROM, no battery/trainer/four-screen; see ReadMe");goto done;}printf("CARTRIDGE mapper=%d PRG=%u CHR=%u battery=%u\n",id,rom[4]*16384u,rom[5]*8192u,(ULONG)!!(rom[6]&2));}
+ #endif
+  memcpy((void *)(base+NES_ROM),rom,size);io->push(base+NES_ROM,size,NULL);io->barrier(NULL);
+  puts("STAGE ROM published; initializing core");fflush(stdout);
+- if(!request(NES_INIT,size)){puts("Only NTSC iNES NROM, 16/32 KiB PRG, 0/8 KiB CHR; no trainer/battery supported");goto done;}
++ if(!request(NES_INIT,size)){puts("FCEUX core rejected cartridge: NTSC mapper 0/90 CHR ROM only");goto done;}
+ #ifdef NES_PLAYER
+  if(!player_load_save())goto done;
+ #endif
+@@ -330,7 +327,7 @@
+  truecolor?"Picasso96 ARGB":"indexed pens"
+ #endif
+  );
+- window=OpenWindowTags(NULL,WA_Title,(ULONG)"ZZNes ARM preview - arrows, Z/X, Enter; Q quits",WA_PubScreen,(ULONG)screen,
++ window=OpenWindowTags(NULL,WA_Title,(ULONG)"ZZFceux ARM preview - arrows, Z/X, Enter; Q quits",WA_PubScreen,(ULONG)screen,
+   WA_Left,80,WA_Top,70,WA_InnerWidth,256,WA_InnerHeight,240,
+   WA_Flags,WFLG_CLOSEGADGET|WFLG_DRAGBAR|WFLG_DEPTHGADGET|WFLG_ACTIVATE|WFLG_SIMPLE_REFRESH,
+   WA_IDCMP,IDCMP_CLOSEWINDOW|IDCMP_RAWKEY|IDCMP_REFRESHWINDOW|IDCMP_INACTIVEWINDOW,TAG_DONE);
+@@ -347,9 +344,9 @@
+  );
+ #ifdef NES_PLAYER
+  if(!core_only)player_audio_open();
+- puts("PLAYER Mesen CPU/PPU/APU, NTSC; P pause, M mute, Q/Esc quit; no timing hacks");
+-#endif
+- printf("ZZNES START ROM=%s bytes=%u timer_hz=%u core_only=%u\n",rom_path?rom_path:"built-in original demo",size,rate,(ULONG)core_only);fflush(stdout);start=us();
++ puts("PLAYER FCEUX CPU/old PPU/APU, NTSC 32kHz quality0; P pause, M mute, Q/Esc quit; no frameskip");
++#endif
++ printf("ZZFCEUX START ROM=%s bytes=%u timer_hz=%u core_only=%u\n",rom_path?rom_path:"built-in original demo",size,rate,(ULONG)core_only);fflush(stdout);start=us();
+  while(!quit && (!frame_limit||frames<frame_limit)){
+ #ifdef NES_PLAYER
+   /* The previous flip can finish while Core1 emulates the next frame.
+@@ -433,7 +430,7 @@
+ #ifdef NES_FULLSCREEN
+  if(full_fault)rc=20;
+ #endif
+- if(start)printf("ZZNES END exit=%d frames=%u elapsed_us=%u core_total_us=%u output_hash=%08x\n",rc,frames,(ULONG)(us()-start),total_core_us,output_hash);
++ if(start)printf("ZZFCEUX END exit=%d frames=%u elapsed_us=%u core_total_us=%u output_hash=%08x\n",rc,frames,(ULONG)(us()-start),total_core_us,output_hash);
+ #ifdef NES_DIRECT
+  printf("DIRECT_END challenges=%u verified_frames=%u copy_us=%u\n",direct_challenges,direct_verified,rate?(ULONG)((uint64_t)direct_ticks*1000000u/rate):0);
+ #endif
+--- mesen_nes/player_frontend.h
++++ fceux-player/player_frontend.h
+@@ -13,7 +13,7 @@
+  struct FileRequester *r;int ok=0;
+  if(rom_path||player_demo)return 1;
+  AslBase=OpenLibrary("asl.library",38);if(!AslBase)return 0;
+- r=AllocAslRequestTags(ASL_FileRequest,ASLFR_TitleText,(ULONG)"ZZNes - select an NTSC .nes cartridge",ASLFR_InitialPattern,(ULONG)"#?.nes",ASLFR_DoPatterns,TRUE,TAG_DONE);
++ r=AllocAslRequestTags(ASL_FileRequest,ASLFR_TitleText,(ULONG)"ZZFceux - select an NTSC .nes cartridge",ASLFR_InitialPattern,(ULONG)"#?.nes",ASLFR_DoPatterns,TRUE,TAG_DONE);
+  if(r){if(AslRequestTags(r,TAG_DONE)){
+    if(strlen((const char *)r->fr_Drawer)<sizeof(chosen_rom)){strcpy(chosen_rom,(const char *)r->fr_Drawer);if(AddPart(chosen_rom,r->fr_File,sizeof(chosen_rom))){rom_path=chosen_rom;ok=1;}}
+   }else quit=1;FreeAslRequest(r);}
+--- mesen_nes/player_audio.h
++++ fceux-player/player_audio.h
+@@ -124,7 +124,7 @@
+  /* AHI may load preferences/drivers using DOS: use a Process, not an Exec
+   * Task. No shell file handles or CLI are inherited by the child. */
+  audio_task=(struct Task *)CreateNewProcTags(NP_Entry,(ULONG)audio_worker,
+-  NP_Name,(ULONG)"ZZNes audio",NP_Priority,0,NP_StackSize,32768,
++  NP_Name,(ULONG)"ZZFceux audio",NP_Priority,0,NP_StackSize,32768,
+   NP_Input,0,NP_Output,0,NP_CloseInput,FALSE,NP_CloseOutput,FALSE,TAG_DONE);
+  if(!audio_task)goto fail;
+  while(!audio_started)Wait(1UL<<audio_parent_signal);
+--- mesen_nes/fullscreen.h
++++ fceux-player/fullscreen.h
+@@ -70,7 +70,7 @@
+  full_allocation=direct_bitmap;
+  full_screen=OpenScreenTags(NULL,SA_DisplayID,mode,SA_Width,320,SA_Height,240,
+   SA_Depth,depth,SA_BitMap,(ULONG)direct_bitmap,SA_AutoScroll,FALSE,SA_Quiet,TRUE,
+-  SA_ShowTitle,FALSE,SA_Type,CUSTOMSCREEN,SA_Title,(ULONG)"ZZNes fullscreen",TAG_DONE);
++  SA_ShowTitle,FALSE,SA_Type,CUSTOMSCREEN,SA_Title,(ULONG)"ZZFceux fullscreen",TAG_DONE);
+  if(!full_screen){puts("FULLSCREEN custom screen open failed");return 0;}
+  printf("FULLSCREEN_BITMAP allocated=%08x screen=%08x width=%u height=%u allocated_height=%u screen_height=%u on_board=%u/%u memory=%08x/%08x pitch=%u/%u\n",
+   (ULONG)direct_bitmap,(ULONG)full_screen->RastPort.BitMap,(ULONG)full_screen->Width,(ULONG)full_screen->Height,
+@@ -96,7 +96,7 @@
+   full_unlock();
+  }
+  window=OpenWindowTags(NULL,WA_CustomScreen,(ULONG)full_screen,WA_Left,0,WA_Top,0,
+-  WA_Width,320,WA_Height,240,WA_Title,(ULONG)"ZZNes fullscreen - Q/Esc quits",
++  WA_Width,320,WA_Height,240,WA_Title,(ULONG)"ZZFceux fullscreen - Q/Esc quits",
+   WA_Flags,WFLG_BACKDROP|WFLG_BORDERLESS|WFLG_RMBTRAP|WFLG_ACTIVATE,
+   WA_IDCMP,IDCMP_RAWKEY|IDCMP_INACTIVEWINDOW|IDCMP_MOUSEBUTTONS,TAG_DONE);
+  if(!window)return 0;

@@ -1,0 +1,50 @@
+amiga_list_ports Public Message Ports (18):
+  TSPORT
+  WORKBENCH
+  DEFICONS
+  ToolsDaemon 2.1a © Nico François
+  REXX
+  AREXX
+  MagicMenu
+  SIXIES.BRIDGE.NETWATCH
+  AssignWedge.port
+  ZZTemperature.1
+  NewMeter
+  POPO.1
+  QDock
+  ROADIE
+  TCP/IP Control
+  AMIGABRIDGE
+  ConClip.rendezvous
+  deficons
+amiga_list_screens Screens (1):
+
+  Workbench Screen  1920x800  8bpp  LORES  @895EF20
+amiga_run_script [OK]
+Directory "SD032G:Dev/ZZNesPlayer" on Thursday 09-Oct-25
+ZZNesSoundTest.nes            24592 ----rwed Today     17:11:56
+COPYING.LGPL                  26419 ----rwed Today     17:11:58
+ReadMe-Amiga.txt               3177 ----rwed Today     17:38:20
+ZZNes                        416820 ----rwed Today     17:38:20
+COPYING                       35147 ----rwed Today     17:12:20
+checksums.json                  500 ----rwed Today     17:39:25
+Start-ZZNesPlayer               153 -s--rwed Today     17:12:20
+ZZNesDemo.nes                 24592 ----rwed Today     17:12:21
+build.json                    10089 ----rwed Today     17:38:20
+ZZNesSoundTest.nes.sav.bak       8192 ----rwed Today     17:13:54
+ZZNesSoundTest.nes.sav         8192 ----rwed Today     17:14:57
+ROMs                            Dir ----rwed Today     17:26:01
+build-mapper90.json           10089 ----rwed Today     17:34:36
+ZZNes-mapper90               416820 ----rwed Today     17:35:00
+Start-SuperMarioWorld           228 -s--rwed Today     17:35:00
+ReadMe-mapper90.txt            3177 ----rwed Today     17:35:01
+checksums-mapper90.json         244 ----rwed Today     17:35:01
+ZZNes.before-mapper90        408972 ----rwed Today     17:38:20
+build.before-mapper90.json       9868 ----rwed Today     17:38:20
+ReadMe.before-mapper90.txt       2749 ----rwed Today     17:38:20
+checksums.before-mapper90.json        437 ----rwed Today     17:38:20
+ZZNes-sparse                 418468 ----rwed Today     17:47:56
+ZZNes-pipeline               419176 ----rwed Today     17:49:14
+ZZNes-audio-profile          420000 ----rwed Today     15:53:05
+ZZNes-overlap                420832 ----rwed Today     15:55:20
+24 files - 3016K bytes - 1 directory - 3058 blocks used

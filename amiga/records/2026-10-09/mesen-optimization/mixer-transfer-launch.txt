@@ -1,0 +1,4 @@
+amiga_fetch_url Fetched 418468 bytes from http://127.0.0.1:55029/ZZNes-sparse
+Transferred 418468 bytes in 20.0s (20904 B/s), 409 chunks, CRC32 verified
+amiga_run_script [OK]
+a92c70840cc8d20162d412a71b76f4af  SD032G:Dev/ZZNesPlayer/ZZNes-sparse

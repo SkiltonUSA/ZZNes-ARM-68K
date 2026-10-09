@@ -1,0 +1,7 @@
+ARM_MODEL frame 1 hash 48ef4dc5
+ARM_MODEL frame 2 hash 48ef4dc5
+ARM_MODEL frame 3 hash d8cc1f38
+ARM_MODEL frame 4 hash ed354ee5
+ARM_MODEL frame 5 hash ed354ee5
+ARM_MODEL frame 6 hash ed354ee5
+PASS relocated ARM CPU+PPU complete-frame hash matches native; aligned data accesses

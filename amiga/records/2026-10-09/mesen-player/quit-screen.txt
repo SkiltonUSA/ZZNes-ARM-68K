@@ -1,0 +1,7 @@
+amiga_list_screens Screens (2):
+
+  ZZNes fullscreen  320x240  8bpp  LORES  @9344CD0
+  Workbench Screen  1920x800  8bpp  LORES  @898BE20
+amiga_list_screen_windows Windows on screen @9344CD0 (1):
+
+  ZZNes fullscreen - Q/Esc quits  pos=(0,0)  size=320x240  @9345AC4

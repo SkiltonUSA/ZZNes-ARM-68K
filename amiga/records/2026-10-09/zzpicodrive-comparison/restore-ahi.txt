@@ -1,0 +1,4 @@
+amiga_run_script [OK] (no output)
+amiga_fetch_url Fetched 110 bytes from http://127.0.0.1:55029/ZZPicoDrive.cfg
+Transferred 110 bytes in 0.0s (3871 B/s), 1 chunks, CRC32 verified
+amiga_run_script [OK] (no output)

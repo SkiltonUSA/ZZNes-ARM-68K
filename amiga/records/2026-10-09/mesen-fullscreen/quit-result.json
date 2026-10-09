@@ -1,0 +1,9 @@
+{
+  "frames": 232,
+  "fps": 30.329100811447248,
+  "elapsed_us": 7649419,
+  "flip_count": 232,
+  "pixel_readbacks": 4,
+  "clean_exit": true,
+  "exit_trigger": "Injected Q down/up after confirming fullscreen window foremost."
+}

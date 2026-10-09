@@ -1,0 +1,43 @@
+{
+  "scope": "six-frame correctness and shutdown acceptance; no game FPS claim",
+  "runs": [
+    {
+      "log": "core.log",
+      "frames": 6,
+      "hashes_match": true,
+      "clean_exit": true,
+      "populated_frame_core_us": [
+        23336,
+        23314,
+        23354
+      ],
+      "wall_us": 353584
+    },
+    {
+      "log": "display6.log",
+      "frames": 6,
+      "hashes_match": true,
+      "clean_exit": true,
+      "populated_frame_core_us": [
+        23538,
+        23424,
+        23450
+      ],
+      "wall_us": 601740
+    }
+  ],
+  "earlier_unexpected_self_restart": "unresolved; occurred during display/capture sequence; not reproduced by isolated core/display runs",
+  "display_depth": 24,
+  "physical_monitor_appearance": "user confirmed picture and arrow-key movement",
+  "sound": "absent",
+  "ntsc_frame_budget_us": 16639,
+  "full_speed_nes_established": false,
+  "interactive": {
+    "frames": 1104,
+    "wall_us": 114369181,
+    "observed_demo_fps": 9.652950124736838,
+    "core_mean_us": 23479.385869565216,
+    "exit": "Q before frame limit; clean restoration/return",
+    "screenshot_capture": false
+  }
+}

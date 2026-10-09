@@ -1,0 +1,26 @@
+[
+  {
+    "build_output": "fceux-player/ZZFceux",
+    "saved_artifact": "artifacts/fceux-player/ZZFceux",
+    "byte_identical": true,
+    "bytes": 265660,
+    "sha256": "93b0da7ebc710c4cf5d4c730ba713a04bff8cf2c22ece1110d22aa7d7e3d934c",
+    "md5": "ce77a7b5fd6a453d50a9a697b86d3ae9"
+  },
+  {
+    "build_output": "fceux-bench/ZZFceuxBench",
+    "saved_artifact": "artifacts/fceux-bench/ZZFceuxBench",
+    "byte_identical": true,
+    "bytes": 186344,
+    "sha256": "15fe68e6bf6f8f0265106c5ba3f41e521953867cb8121f9469f6fac3b472caed",
+    "md5": "b3562f5e0f3ec45ddb84cb7a11c1ddc4"
+  },
+  {
+    "build_output": "mesen-player/ZZNes",
+    "saved_artifact": "artifacts/mesen-audio-process-candidate/ZZNes",
+    "byte_identical": true,
+    "bytes": 426584,
+    "sha256": "584a91668c1cf34ac5c9cfcb8f097c54e4b7da872c5acbcd780bbb6263b20518",
+    "md5": "d5a4bd29ff0a6158a777a8e8312d9785"
+  }
+]

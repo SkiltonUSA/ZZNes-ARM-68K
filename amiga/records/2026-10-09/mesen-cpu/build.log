@@ -1,0 +1,2 @@
+MESEN_CPU status=0/0 checked=8991 mismatch=0 cycles=26553 hash=f86dd990 errors=0 unsupported=0 actual_pc=0000 expected_pc=0000 actual_regs=00000000 expected_regs=00000000
+Built ${WORKSPACE}/.context/amiga/mesen-bench/ZZMesenBench: 218812 bytes; ARM payload 151432 bytes; 256 relocations

@@ -1,0 +1,11 @@
+{
+  "frames": 300,
+  "elapsed_us": 12629683,
+  "fps": 23.75356531118002,
+  "core_ms_per_frame": 28.960513333333335,
+  "scope": "300-frame intro, no gameplay input; installed ZZNes 0.3.2-dev",
+  "flips": 300,
+  "readbacks": 6,
+  "clean_exit": true,
+  "owner_acceptance": "Picture, controls and sound work (user selected option 1)."
+}

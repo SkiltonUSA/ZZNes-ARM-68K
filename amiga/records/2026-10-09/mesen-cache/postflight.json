@@ -1,0 +1,12 @@
+{
+  "ping": "Amiga alive - clients: 0, chip: 2022928 bytes, fast: 617015840 bytes",
+  "clients": "Clients (0): none",
+  "ports": "Public Message Ports (18):\n  TSPORT\n  WORKBENCH\n  DEFICONS\n  ToolsDaemon 2.1a © Nico François\n  REXX\n  AREXX\n  MagicMenu\n  SIXIES.BRIDGE.NETWATCH\n  AssignWedge.port\n  ZZTemperature.1\n  NewMeter\n  POPO.1\n  QDock\n  ROADIE\n  TCP/IP Control\n  AMIGABRIDGE\n  ConClip.rendezvous\n  deficons",
+  "screens": "Screens (1):\n\n  Workbench Screen  1920x800  8bpp  LORES  @8989D90",
+  "cleanup": "RAM:ZZMesenCache/repeat2.log  Deleted\nRAM:ZZMesenCache/repeat1.log  Deleted\nRAM:ZZMesenCache/repeats  Deleted\nRAM:ZZMesenCache/cached-full.log  Deleted\nRAM:ZZMesenCache/start-full  Deleted\nRAM:ZZMesenCache/Cached-Full  Deleted\nRAM:ZZMesenCache/cached.log  Deleted\nRAM:ZZMesenCache/start-cached  Deleted\nRAM:ZZMesenCache/Cached  Deleted\nRAM:ZZMesenCache/mmu.log  Deleted\nRAM:ZZMesenCache/start-mmu  Deleted\nRAM:ZZMesenCache/MMU  Deleted\nRAM:ZZMesenCache  Deleted",
+  "transferred_md5": {
+    "private_mmu": "46fb8b704a9a2d53704cb8a0922ba07e",
+    "cached_boundary": "fd204f20a31ca379da132e7eba9e3679",
+    "cached_final": "7a3c62bd0037af48f9f8e8142a9aecb7"
+  }
+}
