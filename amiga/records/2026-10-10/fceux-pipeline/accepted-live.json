@@ -1,0 +1,9 @@
+{
+  "frames": 37191,
+  "elapsed_us": 677503509,
+  "displayed_fps": 54.89418062925487,
+  "samples_completed": 19801079,
+  "pcm_duration_seconds_at_32000_hz": 618.78371875,
+  "workload": "Existing owner-accepted live session; input and pauses not recorded; not a controlled benchmark",
+  "clean_return": true
+}

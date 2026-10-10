@@ -13,6 +13,46 @@ GPL-3.0-or-later. Credit to [XANI's XACP platform and PicoDrive example](https:/
 for the documented XX19c firmware interface and fullscreen handoff approach.
 No PicoDrive source was copied. SDL is not used.
 
+## ARM presentation optimisation — later on 10 October 2026
+
+A separate `ZZFceux-fast` candidate uses direct 32-bit palette words for BGRA
+and byte-swapped palette words for ARGB, retaining the generic 24-bit fallback.
+ARM presentation drops from **3.32 ms to 1.15 ms per frame** (about 65% less
+work time, 2.9× throughput for that stage). Colours, emphasis, alpha and every
+output pixel match the generic implementation. No NEON or SDL is involved.
+
+| 300-frame startup workload, AHI enabled | Mario Bros | Super Mario World |
+|---|---:|---:|
+| Accepted scheduling build | 53.71 FPS | 51.92 FPS |
+| Faster ARM presentation | **53.99 FPS** | **53.80 FPS** |
+
+Mario's FPS difference is too small to claim a meaningful improvement from a
+single run. SMW improves by about 3.6%. Much of the ARM time saved becomes flip
+waiting; **60 FPS is still unproven**. The accepted build remains available.
+
+The proposed combined emulation/draw command passed correctness and cleanup
+checks, but reduced Mario performance to 50.02 FPS (47.99 with fast packing).
+Moving pacing before the flip also failed to improve throughput (52.98 FPS).
+Neither experiment is selected. The fast candidate retains the accepted
+separate commands, scheduling, audio batching and ownership/cache safeguards.
+
+Build with `--scheduling optimized-fast`. Candidate: **270,212 bytes**, MD5
+`4398f22b8de76db50aad845a384b8749`. Separate Shell launchers are
+`Start-MarioBros-Fast`, `Start-SuperMarioWorld-Fast`, `Start-ZZFceux-Fast` under
+`SD032G:Dev/ZZFceuxPlayer`; invoke with `Execute`. New-candidate owner picture
+and sound acceptance is pending. The earlier accepted optimisation's owner
+confirmation does not automatically apply to this binary.
+
+The prior accepted live session returned cleanly after 37,191 frames / 677.5 s
+(54.89 FPS), with all 19,801,079 audio samples completed. Its inputs and pauses
+were not recorded, so it is not a controlled throughput comparison. See the
+[pipeline experiment record](../records/2026-10-10/fceux-pipeline/) for long-run
+validation, models and failures. The fast build subsequently completed 18,000
+frames in 318.48 s (**56.52 FPS**), with all 9,583,486 samples and clean teardown.
+Start was injected; subsequent gameplay progression was not supervised, so this
+is a stability result rather than a controlled gameplay comparison.
+[SNES is on the future roadmap](../../docs/nes-roadmap.md).
+
 ## Scheduling optimisation — 10 October 2026
 
 A separate **ZZFceux-optimized** candidate now reaches **53.71 / 51.92 FPS**

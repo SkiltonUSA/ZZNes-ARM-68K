@@ -1,3 +1,36 @@
+# Latest ARM presentation handoff — 10 October 2026
+
+## Later 10 October: ARM pixel packing and pipeline experiments
+
+Selected `--scheduling optimized-fast` build: 270,212 bytes, MD5
+`4398f22b8de76db50aad845a384b8749`. Installed separately as
+`SD032G:Dev/ZZFceuxPlayer/ZZFceux-fast`, with `Start-MarioBros-Fast`,
+`Start-SuperMarioWorld-Fast` and requester `Start-ZZFceux-Fast` scripts.
+Previous default and owner-accepted optimized binaries/launchers remain available.
+
+Specialised 32-bit palette stores reduce ARM presentation 3.32 -> 1.15 ms.
+No emulator CPU/PPU/APU, audio batching, allocation/MMU/cache or firmware change.
+300-frame startup runs: Mario 53.99 FPS, SMW 53.80 FPS. Mario's tiny difference
+from 53.71 is within plausible noise. A Start-triggered 18,000-frame stability
+run completed in 318.48 s, 56.52 FPS, all flips and 9,583,486 samples completed,
+zero AHI errors and clean RET1/MMU/register/cache-witness/memory release. It is
+not proof of continuous active gameplay, end-to-end audio synchronisation or
+60 FPS. Native exhaustive pixels, actual audio worker, A9 presentation models
+and standalone build/test checks passed. Standalone binary matches exactly.
+
+Combined ARM command experiments passed correctness but were slower (50.02 /
+47.99 FPS); moving pacing before flip queuing was also slower (52.98). These
+remain explicit diagnostic modes. Fast keeps the accepted separate commands.
+Do not launch `ZZFceux-pipeline*` or `ZZFceux-display-paced` as the selected build.
+The prior accepted live session also ended cleanly: 37,191 frames / 677.5 s,
+54.89 FPS, but inputs/pauses were not captured for a controlled comparison.
+
+SNES was added to `docs/nes-roadmap.md` at the owner's request: future core
+feasibility benchmark first; no SNES implementation or performance claim.
+Evidence: `amiga/records/2026-10-10/fceux-pipeline/`.
+
+The following scheduling handoff is historical.
+
 # Latest handoff — 10 October 2026
 
 ZZFceux optimisation completed: fresh baseline 42.79/43.89 FPS (Mario Bros/SMW),
@@ -64,3 +97,11 @@ Mario Bros' picture and sound, not general compatibility or full speed.
 Next work: profile host scheduling, flip pacing and audio delivery without
 weakening ownership, timeout, cancellation or cleanup checks. No 60 FPS claim.
 The new standalone backup preserves the current work before further changes.
+
+
+Final deployment: Fast launchers installed with executable/script protection;
+installed `ZZFceux-fast` MD5 checked as `4398f22b8de76db50aad845a384b8749`, and
+prior `ZZFceux-optimized` checked unchanged as `bf14d8e7dc20970d95fcd110cc9e6754`.
+Mario Bros Fast was left running for owner picture/sound acceptance (pending);
+fullscreen was confirmed after launch. Q/Esc exits. Check live Core1 ownership
+before launching another application. The temporary transfer server was stopped.

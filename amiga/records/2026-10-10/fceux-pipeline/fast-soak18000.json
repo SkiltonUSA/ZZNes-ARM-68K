@@ -1,0 +1,9 @@
+{
+  "frames": 18000,
+  "elapsed_us": 318479685,
+  "displayed_fps": 56.518518598760856,
+  "samples_completed": 9583486,
+  "audio_highwater": 3,
+  "clean_return": true,
+  "workload": "Start injected once after 4s; gameplay progression not supervised. Native no-input hash comparison is inapplicable. Not continuous active gameplay proof."
+}

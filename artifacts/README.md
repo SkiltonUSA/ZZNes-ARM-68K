@@ -34,3 +34,13 @@ Mario Bros / SMW startup tests: 53.71 / 51.92 displayed FPS with AHI;
 owner confirmed optimised Mario Bros picture and sound are good. SMW and
 measured latency remain separately unconfirmed. See 10 October records. The original
 `fceux-player/` executable and source-provenance snapshot remain preserved.
+
+
+## Later 10 October ARM presentation candidate
+
+`fceux-player-fast/ZZFceux`: 270,212 bytes, MD5
+`4398f22b8de76db50aad845a384b8749`. Copy as `ZZFceux-fast` for the supplied
+`*-Fast` launchers. Build with `SCHEDULING=optimized-fast`. ARM presentation
+falls to ~1.15 ms; displayed startup FPS is 53.99/53.80. Earlier accepted
+binaries remain unchanged. Owner acceptance of the fast binary is pending;
+see the pipeline experiment record for tests and limitations.

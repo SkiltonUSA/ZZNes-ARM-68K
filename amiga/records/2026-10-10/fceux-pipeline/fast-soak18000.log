@@ -1,0 +1,351 @@
+OWNED amiga=50000040 arm_candidate=101f0040 size=4194304 nonce=54c95c48
+BOOTSTRAP amiga=40c65c00 arm=00e55c00 (P96 allocated/locked)
+MAP status=4d415031 SCTLR=08c50878 MIDR=413fc090 MPIDR=80000001
+MAPPING PASS (eight nonce-derived words)
+ARM ready=41524d31 SCTLR=08c5187d MIDR=413fc090 MPIDR=80000001
+CARTRIDGE mapper=0 PRG=16384 CHR=8192 battery=0
+STAGE ROM published; initializing core
+STAGE core initialized; calibrating clock
+STAGE opening display
+FULLSCREEN_BITMAP allocated=094ddd1c screen=094e0d80 width=320 height=240 allocated_height=720 screen_height=720 on_board=1/1 memory=0973def4/40cce480 pitch=1280/1280
+FULLSCREEN mode=50031303 native_format=9 depth=32 slots=3 geometry=320x240 NES=256x240
+BUFFERS pixels=00000000 indices=09619154 legacy_host=0
+AUDIO task: AHI unit 0, 32000 Hz mono; 8 queue slots, 3-frame prebuffer
+PLAYER FCEUX CPU/old PPU/APU, NTSC 32kHz quality0; P pause, M mute, Q/Esc quit; no frameskip
+ZZFCEUX START ROM=SD032G:Dev/ZZNesPlayer/ROMs/011 Mario Bros.nes bytes=24592 timer_hz=333313168 core_only=0
+FRAME n=1 cycles=29782 core_hash=b87d5dc5 output_hash=3fde1dc5 cpu_ppu_us=3183
+FRAME n=60 cycles=1786835 core_hash=a042cdc5 output_hash=811c9dc5 cpu_ppu_us=4008
+FRAME n=120 cycles=3573662 core_hash=924c47d5 output_hash=811c9dc5 cpu_ppu_us=5866
+FRAME n=180 cycles=5360491 core_hash=924c47d5 output_hash=811c9dc5 cpu_ppu_us=5833
+FRAME n=240 cycles=7147321 core_hash=924c47d5 output_hash=811c9dc5 cpu_ppu_us=5841
+FRAME n=300 cycles=8934151 core_hash=924c47d5 output_hash=811c9dc5 cpu_ppu_us=5837
+FRAME n=360 cycles=10720982 core_hash=0bb7ee3b output_hash=811c9dc5 cpu_ppu_us=6135
+FRAME n=420 cycles=12507814 core_hash=a4112721 output_hash=811c9dc5 cpu_ppu_us=6067
+FRAME n=480 cycles=14294642 core_hash=de56b3a9 output_hash=811c9dc5 cpu_ppu_us=6028
+FRAME n=540 cycles=16081474 core_hash=93b8ce64 output_hash=811c9dc5 cpu_ppu_us=6095
+FRAME n=600 cycles=17868301 core_hash=04f0f57f output_hash=811c9dc5 cpu_ppu_us=6167
+FRAME n=660 cycles=19655133 core_hash=87d2bb57 output_hash=811c9dc5 cpu_ppu_us=6092
+FRAME n=720 cycles=21441962 core_hash=6356f1df output_hash=811c9dc5 cpu_ppu_us=6098
+FRAME n=780 cycles=23228793 core_hash=7443b50f output_hash=811c9dc5 cpu_ppu_us=6071
+FRAME n=840 cycles=25015621 core_hash=773d6cb7 output_hash=811c9dc5 cpu_ppu_us=6123
+FRAME n=900 cycles=26802451 core_hash=a14b2d66 output_hash=811c9dc5 cpu_ppu_us=6186
+FRAME n=960 cycles=28589283 core_hash=524c40cb output_hash=811c9dc5 cpu_ppu_us=6246
+FRAME n=1020 cycles=30376112 core_hash=bb6152eb output_hash=811c9dc5 cpu_ppu_us=6151
+FRAME n=1080 cycles=32162944 core_hash=fb923e73 output_hash=811c9dc5 cpu_ppu_us=6156
+FRAME n=1140 cycles=33949771 core_hash=855a371c output_hash=811c9dc5 cpu_ppu_us=6142
+FRAME n=1200 cycles=35736605 core_hash=b6b58c6b output_hash=811c9dc5 cpu_ppu_us=6149
+FRAME n=1260 cycles=37523436 core_hash=54339da3 output_hash=811c9dc5 cpu_ppu_us=6197
+FRAME n=1320 cycles=39310262 core_hash=a7ec3fbf output_hash=811c9dc5 cpu_ppu_us=6150
+FRAME n=1380 cycles=41097091 core_hash=8fb95a93 output_hash=811c9dc5 cpu_ppu_us=6105
+FRAME n=1440 cycles=42883921 core_hash=f86680ab output_hash=811c9dc5 cpu_ppu_us=6119
+FRAME n=1500 cycles=44670752 core_hash=7f879e97 output_hash=811c9dc5 cpu_ppu_us=6113
+FRAME n=1560 cycles=46457582 core_hash=6af24d9f output_hash=811c9dc5 cpu_ppu_us=6109
+FRAME n=1620 cycles=48244412 core_hash=d1fe110c output_hash=811c9dc5 cpu_ppu_us=6119
+FRAME n=1680 cycles=50031243 core_hash=a87097d3 output_hash=811c9dc5 cpu_ppu_us=6143
+FRAME n=1740 cycles=51818074 core_hash=2cdae11f output_hash=811c9dc5 cpu_ppu_us=6182
+FRAME n=1800 cycles=53604903 core_hash=fed0c840 output_hash=811c9dc5 cpu_ppu_us=6196
+FRAME n=1860 cycles=55391735 core_hash=908f9bda output_hash=811c9dc5 cpu_ppu_us=6117
+FRAME n=1920 cycles=57178561 core_hash=1f91009a output_hash=811c9dc5 cpu_ppu_us=6139
+FRAME n=1980 cycles=58965391 core_hash=5e45ba92 output_hash=811c9dc5 cpu_ppu_us=6140
+FRAME n=2040 cycles=60752224 core_hash=e5e17f8a output_hash=811c9dc5 cpu_ppu_us=6142
+FRAME n=2100 cycles=62539055 core_hash=affb15de output_hash=811c9dc5 cpu_ppu_us=6158
+FRAME n=2160 cycles=64325884 core_hash=f68f5708 output_hash=811c9dc5 cpu_ppu_us=6258
+FRAME n=2220 cycles=66112713 core_hash=9cbdaf29 output_hash=811c9dc5 cpu_ppu_us=6206
+FRAME n=2280 cycles=67899541 core_hash=de96bf0e output_hash=811c9dc5 cpu_ppu_us=6194
+FRAME n=2340 cycles=69686371 core_hash=3ca3ee89 output_hash=811c9dc5 cpu_ppu_us=6176
+FRAME n=2400 cycles=71473202 core_hash=72b3c839 output_hash=811c9dc5 cpu_ppu_us=6169
+FRAME n=2460 cycles=73260036 core_hash=0c79bde1 output_hash=811c9dc5 cpu_ppu_us=6134
+FRAME n=2520 cycles=75046863 core_hash=bca1e331 output_hash=811c9dc5 cpu_ppu_us=6132
+FRAME n=2580 cycles=76833693 core_hash=11ceded2 output_hash=811c9dc5 cpu_ppu_us=6147
+FRAME n=2640 cycles=78620524 core_hash=dd665f21 output_hash=811c9dc5 cpu_ppu_us=6182
+FRAME n=2700 cycles=80407353 core_hash=dfdfc1c9 output_hash=811c9dc5 cpu_ppu_us=6132
+FRAME n=2760 cycles=82194184 core_hash=4a741af9 output_hash=811c9dc5 cpu_ppu_us=6159
+FRAME n=2820 cycles=83981012 core_hash=8670b145 output_hash=811c9dc5 cpu_ppu_us=6160
+FRAME n=2880 cycles=85767841 core_hash=37b3678d output_hash=811c9dc5 cpu_ppu_us=6149
+FRAME n=2940 cycles=87554671 core_hash=bac5e9e5 output_hash=811c9dc5 cpu_ppu_us=6144
+FRAME n=3000 cycles=89341501 core_hash=e706680f output_hash=811c9dc5 cpu_ppu_us=6146
+FRAME n=3060 cycles=91128336 core_hash=18a4a0dd output_hash=811c9dc5 cpu_ppu_us=6360
+FRAME n=3120 cycles=92915164 core_hash=924cc93a output_hash=811c9dc5 cpu_ppu_us=6197
+FRAME n=3180 cycles=94701994 core_hash=ff67966c output_hash=811c9dc5 cpu_ppu_us=6280
+FRAME n=3240 cycles=96488824 core_hash=94e86ae8 output_hash=811c9dc5 cpu_ppu_us=6098
+FRAME n=3300 cycles=98275654 core_hash=e03ed008 output_hash=811c9dc5 cpu_ppu_us=6176
+FRAME n=3360 cycles=100062483 core_hash=77de98ee output_hash=811c9dc5 cpu_ppu_us=6207
+FRAME n=3420 cycles=101849311 core_hash=6b85e7fb output_hash=811c9dc5 cpu_ppu_us=6225
+FRAME n=3480 cycles=103636141 core_hash=b9676210 output_hash=811c9dc5 cpu_ppu_us=6169
+FRAME n=3540 cycles=105422971 core_hash=b3b18395 output_hash=811c9dc5 cpu_ppu_us=6230
+FRAME n=3600 cycles=107209802 core_hash=48506089 output_hash=811c9dc5 cpu_ppu_us=6236
+FRAME n=3660 cycles=108996631 core_hash=3ffcf173 output_hash=811c9dc5 cpu_ppu_us=6195
+FRAME n=3720 cycles=110783463 core_hash=91eaaee1 output_hash=811c9dc5 cpu_ppu_us=6165
+FRAME n=3780 cycles=112570293 core_hash=81d548c9 output_hash=811c9dc5 cpu_ppu_us=6163
+FRAME n=3840 cycles=114357125 core_hash=7e8cc7cd output_hash=811c9dc5 cpu_ppu_us=6187
+FRAME n=3900 cycles=116143955 core_hash=9c94591a output_hash=811c9dc5 cpu_ppu_us=6271
+FRAME n=3960 cycles=117930786 core_hash=f056c215 output_hash=811c9dc5 cpu_ppu_us=6173
+FRAME n=4020 cycles=119717612 core_hash=d36afa89 output_hash=811c9dc5 cpu_ppu_us=6175
+FRAME n=4080 cycles=121504443 core_hash=b516a75c output_hash=811c9dc5 cpu_ppu_us=6255
+FRAME n=4140 cycles=123291272 core_hash=e2eab188 output_hash=811c9dc5 cpu_ppu_us=6168
+FRAME n=4200 cycles=125078103 core_hash=62c88ea1 output_hash=811c9dc5 cpu_ppu_us=6159
+FRAME n=4260 cycles=126864934 core_hash=53cd62b7 output_hash=811c9dc5 cpu_ppu_us=6230
+FRAME n=4320 cycles=128651761 core_hash=63692701 output_hash=811c9dc5 cpu_ppu_us=6194
+FRAME n=4380 cycles=130438596 core_hash=ff2ed514 output_hash=811c9dc5 cpu_ppu_us=6272
+FRAME n=4440 cycles=132225421 core_hash=859c1f7a output_hash=811c9dc5 cpu_ppu_us=6213
+FRAME n=4500 cycles=134012254 core_hash=3d527086 output_hash=811c9dc5 cpu_ppu_us=6265
+FRAME n=4560 cycles=135799085 core_hash=56224385 output_hash=811c9dc5 cpu_ppu_us=6117
+FRAME n=4620 cycles=137585911 core_hash=5eb708b9 output_hash=811c9dc5 cpu_ppu_us=6234
+FRAME n=4680 cycles=139372743 core_hash=e6e34078 output_hash=811c9dc5 cpu_ppu_us=5809
+FRAME n=4740 cycles=141159573 core_hash=e6e34078 output_hash=811c9dc5 cpu_ppu_us=5805
+FRAME n=4800 cycles=142946402 core_hash=e6e34078 output_hash=811c9dc5 cpu_ppu_us=5804
+FRAME n=4860 cycles=144733231 core_hash=e6e34078 output_hash=811c9dc5 cpu_ppu_us=5802
+FRAME n=4920 cycles=146520063 core_hash=e6e34078 output_hash=811c9dc5 cpu_ppu_us=5815
+FRAME n=4980 cycles=148306894 core_hash=e6e34078 output_hash=811c9dc5 cpu_ppu_us=5727
+FRAME n=5040 cycles=150093722 core_hash=5866e59a output_hash=811c9dc5 cpu_ppu_us=5772
+FRAME n=5100 cycles=151880552 core_hash=5866e59a output_hash=811c9dc5 cpu_ppu_us=5835
+FRAME n=5160 cycles=153667384 core_hash=5866e59a output_hash=811c9dc5 cpu_ppu_us=5942
+FRAME n=5220 cycles=155454211 core_hash=5866e59a output_hash=811c9dc5 cpu_ppu_us=5844
+FRAME n=5280 cycles=157241042 core_hash=5866e59a output_hash=811c9dc5 cpu_ppu_us=5791
+FRAME n=5340 cycles=159027872 core_hash=5866e59a output_hash=811c9dc5 cpu_ppu_us=5804
+FRAME n=5400 cycles=160814702 core_hash=5866e59a output_hash=811c9dc5 cpu_ppu_us=5837
+FRAME n=5460 cycles=162601531 core_hash=5866e59a output_hash=811c9dc5 cpu_ppu_us=5942
+FRAME n=5520 cycles=164388361 core_hash=5866e59a output_hash=811c9dc5 cpu_ppu_us=5775
+FRAME n=5580 cycles=166175193 core_hash=5866e59a output_hash=811c9dc5 cpu_ppu_us=6008
+FRAME n=5640 cycles=167962023 core_hash=5866e59a output_hash=811c9dc5 cpu_ppu_us=5836
+FRAME n=5700 cycles=169748852 core_hash=5866e59a output_hash=811c9dc5 cpu_ppu_us=6117
+FRAME n=5760 cycles=171535684 core_hash=5866e59a output_hash=811c9dc5 cpu_ppu_us=5769
+FRAME n=5820 cycles=173322512 core_hash=5866e59a output_hash=811c9dc5 cpu_ppu_us=5775
+FRAME n=5880 cycles=175109343 core_hash=67f0b200 output_hash=811c9dc5 cpu_ppu_us=6022
+FRAME n=5940 cycles=176896171 core_hash=9da9b88f output_hash=811c9dc5 cpu_ppu_us=6105
+FRAME n=6000 cycles=178683005 core_hash=9a9cc0ac output_hash=811c9dc5 cpu_ppu_us=6070
+FRAME n=6060 cycles=180469831 core_hash=12510c7c output_hash=811c9dc5 cpu_ppu_us=6161
+FRAME n=6120 cycles=182256665 core_hash=90d6ad22 output_hash=811c9dc5 cpu_ppu_us=6147
+FRAME n=6180 cycles=184043491 core_hash=2d78ac86 output_hash=811c9dc5 cpu_ppu_us=6146
+FRAME n=6240 cycles=185830321 core_hash=5ddc0a1a output_hash=811c9dc5 cpu_ppu_us=6105
+FRAME n=6300 cycles=187617153 core_hash=61538b7d output_hash=811c9dc5 cpu_ppu_us=6153
+FRAME n=6360 cycles=189403984 core_hash=f4dadfbd output_hash=811c9dc5 cpu_ppu_us=6133
+FRAME n=6420 cycles=191190813 core_hash=69aafffb output_hash=811c9dc5 cpu_ppu_us=6164
+FRAME n=6480 cycles=192977645 core_hash=89f8beb9 output_hash=811c9dc5 cpu_ppu_us=6135
+FRAME n=6540 cycles=194764474 core_hash=9856d8c1 output_hash=811c9dc5 cpu_ppu_us=6109
+FRAME n=6600 cycles=196551306 core_hash=3a0c4e49 output_hash=811c9dc5 cpu_ppu_us=6077
+FRAME n=6660 cycles=198338132 core_hash=fc3769c9 output_hash=811c9dc5 cpu_ppu_us=6111
+FRAME n=6720 cycles=200124962 core_hash=3809b2da output_hash=811c9dc5 cpu_ppu_us=6102
+FRAME n=6780 cycles=201911791 core_hash=307e1f1e output_hash=811c9dc5 cpu_ppu_us=6117
+FRAME n=6840 cycles=203698621 core_hash=2987e781 output_hash=811c9dc5 cpu_ppu_us=6116
+FRAME n=6900 cycles=205485453 core_hash=c66e7d9b output_hash=811c9dc5 cpu_ppu_us=6117
+FRAME n=6960 cycles=207272283 core_hash=2d05e03b output_hash=811c9dc5 cpu_ppu_us=6083
+FRAME n=7020 cycles=209059112 core_hash=7b1e6d50 output_hash=811c9dc5 cpu_ppu_us=5873
+FRAME n=7080 cycles=210845945 core_hash=5866e59a output_hash=811c9dc5 cpu_ppu_us=5702
+FRAME n=7140 cycles=212632773 core_hash=5866e59a output_hash=811c9dc5 cpu_ppu_us=5702
+FRAME n=7200 cycles=214419605 core_hash=5866e59a output_hash=811c9dc5 cpu_ppu_us=5699
+FRAME n=7260 cycles=216206434 core_hash=5866e59a output_hash=811c9dc5 cpu_ppu_us=5706
+FRAME n=7320 cycles=217993266 core_hash=5866e59a output_hash=811c9dc5 cpu_ppu_us=5702
+FRAME n=7380 cycles=219780092 core_hash=5866e59a output_hash=811c9dc5 cpu_ppu_us=5703
+FRAME n=7440 cycles=221566922 core_hash=5866e59a output_hash=811c9dc5 cpu_ppu_us=5706
+FRAME n=7500 cycles=223353751 core_hash=3f0b0b26 output_hash=811c9dc5 cpu_ppu_us=6032
+FRAME n=7560 cycles=225140581 core_hash=953daec9 output_hash=811c9dc5 cpu_ppu_us=6118
+FRAME n=7620 cycles=226927412 core_hash=a4067468 output_hash=811c9dc5 cpu_ppu_us=6075
+FRAME n=7680 cycles=228714245 core_hash=dacc6a10 output_hash=811c9dc5 cpu_ppu_us=6142
+FRAME n=7740 cycles=230501074 core_hash=030dc856 output_hash=811c9dc5 cpu_ppu_us=6124
+FRAME n=7800 cycles=232287903 core_hash=d06e84da output_hash=811c9dc5 cpu_ppu_us=6112
+FRAME n=7860 cycles=234074732 core_hash=33c7d133 output_hash=811c9dc5 cpu_ppu_us=6111
+FRAME n=7920 cycles=235861562 core_hash=deb333de output_hash=811c9dc5 cpu_ppu_us=6155
+FRAME n=7980 cycles=237648396 core_hash=8d2e2c20 output_hash=811c9dc5 cpu_ppu_us=6163
+FRAME n=8040 cycles=239435222 core_hash=ec2b35a4 output_hash=811c9dc5 cpu_ppu_us=6115
+FRAME n=8100 cycles=241222052 core_hash=c07d5d3b output_hash=811c9dc5 cpu_ppu_us=6165
+FRAME n=8160 cycles=243008882 core_hash=40792c3d output_hash=811c9dc5 cpu_ppu_us=6110
+FRAME n=8220 cycles=244795716 core_hash=74868fdb output_hash=811c9dc5 cpu_ppu_us=6086
+FRAME n=8280 cycles=246582541 core_hash=99ec57a8 output_hash=811c9dc5 cpu_ppu_us=6130
+FRAME n=8340 cycles=248369374 core_hash=d4985dde output_hash=811c9dc5 cpu_ppu_us=6107
+FRAME n=8400 cycles=250156202 core_hash=65c355d9 output_hash=811c9dc5 cpu_ppu_us=6095
+FRAME n=8460 cycles=251943035 core_hash=d9a23ea3 output_hash=811c9dc5 cpu_ppu_us=6120
+FRAME n=8520 cycles=253729861 core_hash=74ebeec9 output_hash=811c9dc5 cpu_ppu_us=6125
+FRAME n=8580 cycles=255516691 core_hash=ca03e7d2 output_hash=811c9dc5 cpu_ppu_us=6097
+FRAME n=8640 cycles=257303521 core_hash=e1975cc6 output_hash=811c9dc5 cpu_ppu_us=5883
+FRAME n=8700 cycles=259090352 core_hash=5866e59a output_hash=811c9dc5 cpu_ppu_us=5699
+FRAME n=8760 cycles=260877182 core_hash=5866e59a output_hash=811c9dc5 cpu_ppu_us=5698
+FRAME n=8820 cycles=262664014 core_hash=5866e59a output_hash=811c9dc5 cpu_ppu_us=5712
+FRAME n=8880 cycles=264450841 core_hash=5866e59a output_hash=811c9dc5 cpu_ppu_us=5698
+FRAME n=8940 cycles=266237676 core_hash=5866e59a output_hash=811c9dc5 cpu_ppu_us=5700
+FRAME n=9000 cycles=268024502 core_hash=5866e59a output_hash=811c9dc5 cpu_ppu_us=5699
+FRAME n=9060 cycles=269811331 core_hash=f4d5289e output_hash=811c9dc5 cpu_ppu_us=5637
+FRAME n=9120 cycles=271598163 core_hash=ab560500 output_hash=811c9dc5 cpu_ppu_us=6022
+FRAME n=9180 cycles=273384992 core_hash=6ea3a3ed output_hash=811c9dc5 cpu_ppu_us=6106
+FRAME n=9240 cycles=275171824 core_hash=fff79fc8 output_hash=811c9dc5 cpu_ppu_us=6142
+FRAME n=9300 cycles=276958651 core_hash=f5e62d1b output_hash=811c9dc5 cpu_ppu_us=6157
+FRAME n=9360 cycles=278745482 core_hash=72509b83 output_hash=811c9dc5 cpu_ppu_us=6127
+FRAME n=9420 cycles=280532316 core_hash=ee9897d2 output_hash=811c9dc5 cpu_ppu_us=6098
+FRAME n=9480 cycles=282319141 core_hash=9ad0510b output_hash=811c9dc5 cpu_ppu_us=6138
+FRAME n=9540 cycles=284105971 core_hash=47c1f542 output_hash=811c9dc5 cpu_ppu_us=6123
+FRAME n=9600 cycles=285892803 core_hash=0ece6bd8 output_hash=811c9dc5 cpu_ppu_us=6163
+FRAME n=9660 cycles=287679631 core_hash=a580fb47 output_hash=811c9dc5 cpu_ppu_us=6122
+FRAME n=9720 cycles=289466462 core_hash=3fb0c1ba output_hash=811c9dc5 cpu_ppu_us=6197
+FRAME n=9780 cycles=291253291 core_hash=d3f03590 output_hash=811c9dc5 cpu_ppu_us=6092
+FRAME n=9840 cycles=293040125 core_hash=9484d579 output_hash=811c9dc5 cpu_ppu_us=6123
+FRAME n=9900 cycles=294826954 core_hash=e981df8f output_hash=811c9dc5 cpu_ppu_us=6113
+FRAME n=9960 cycles=296613785 core_hash=edad27fa output_hash=811c9dc5 cpu_ppu_us=6099
+FRAME n=10020 cycles=298400612 core_hash=ba6d2fcc output_hash=811c9dc5 cpu_ppu_us=6094
+FRAME n=10080 cycles=300187443 core_hash=1a3805f5 output_hash=811c9dc5 cpu_ppu_us=6103
+FRAME n=10140 cycles=301974272 core_hash=93967a86 output_hash=811c9dc5 cpu_ppu_us=6126
+FRAME n=10200 cycles=303761101 core_hash=7b1e6d50 output_hash=811c9dc5 cpu_ppu_us=5883
+FRAME n=10260 cycles=305547934 core_hash=5866e59a output_hash=811c9dc5 cpu_ppu_us=5707
+FRAME n=10320 cycles=307334766 core_hash=5866e59a output_hash=811c9dc5 cpu_ppu_us=5766
+FRAME n=10380 cycles=309121593 core_hash=5866e59a output_hash=811c9dc5 cpu_ppu_us=5924
+FRAME n=10440 cycles=310908423 core_hash=5866e59a output_hash=811c9dc5 cpu_ppu_us=5774
+FRAME n=10500 cycles=312695251 core_hash=5866e59a output_hash=811c9dc5 cpu_ppu_us=6133
+FRAME n=10560 cycles=314482081 core_hash=5866e59a output_hash=811c9dc5 cpu_ppu_us=5936
+FRAME n=10620 cycles=316268912 core_hash=5866e59a output_hash=811c9dc5 cpu_ppu_us=5766
+FRAME n=10680 cycles=318055742 core_hash=5866e59a output_hash=811c9dc5 cpu_ppu_us=5843
+FRAME n=10740 cycles=319842573 core_hash=5866e59a output_hash=811c9dc5 cpu_ppu_us=5940
+FRAME n=10800 cycles=321629403 core_hash=5866e59a output_hash=811c9dc5 cpu_ppu_us=5758
+FRAME n=10860 cycles=323416234 core_hash=5866e59a output_hash=811c9dc5 cpu_ppu_us=5771
+FRAME n=10920 cycles=325203064 core_hash=5866e59a output_hash=811c9dc5 cpu_ppu_us=5856
+FRAME n=10980 cycles=326989894 core_hash=5866e59a output_hash=811c9dc5 cpu_ppu_us=5768
+FRAME n=11040 cycles=328776722 core_hash=5866e59a output_hash=811c9dc5 cpu_ppu_us=5772
+FRAME n=11100 cycles=330563552 core_hash=bc5ebe91 output_hash=811c9dc5 cpu_ppu_us=6036
+FRAME n=11160 cycles=332350381 core_hash=6e0223ad output_hash=811c9dc5 cpu_ppu_us=6128
+FRAME n=11220 cycles=334137213 core_hash=37a8f7b6 output_hash=811c9dc5 cpu_ppu_us=6085
+FRAME n=11280 cycles=335924043 core_hash=164e0dab output_hash=811c9dc5 cpu_ppu_us=6149
+FRAME n=11340 cycles=337710872 core_hash=95f53a3e output_hash=811c9dc5 cpu_ppu_us=6157
+FRAME n=11400 cycles=339497704 core_hash=83ec5195 output_hash=811c9dc5 cpu_ppu_us=6137
+FRAME n=11460 cycles=341284532 core_hash=ef3f1de0 output_hash=811c9dc5 cpu_ppu_us=6110
+FRAME n=11520 cycles=343071364 core_hash=10cc5823 output_hash=811c9dc5 cpu_ppu_us=6136
+FRAME n=11580 cycles=344858192 core_hash=46848f47 output_hash=811c9dc5 cpu_ppu_us=6138
+FRAME n=11640 cycles=346645022 core_hash=8ac32c91 output_hash=811c9dc5 cpu_ppu_us=6197
+FRAME n=11700 cycles=348431855 core_hash=59a20bbf output_hash=811c9dc5 cpu_ppu_us=6107
+FRAME n=11760 cycles=350218681 core_hash=310530be output_hash=811c9dc5 cpu_ppu_us=6155
+FRAME n=11820 cycles=352005514 core_hash=f783efaf output_hash=811c9dc5 cpu_ppu_us=6085
+FRAME n=11880 cycles=353792343 core_hash=dd348fc8 output_hash=811c9dc5 cpu_ppu_us=6109
+FRAME n=11940 cycles=355579171 core_hash=88eb5e15 output_hash=811c9dc5 cpu_ppu_us=6133
+FRAME n=12000 cycles=357366005 core_hash=4903bbfe output_hash=811c9dc5 cpu_ppu_us=6109
+FRAME n=12060 cycles=359152833 core_hash=0f7f1107 output_hash=811c9dc5 cpu_ppu_us=6093
+FRAME n=12120 cycles=360939661 core_hash=a4d31b0e output_hash=811c9dc5 cpu_ppu_us=6125
+FRAME n=12180 cycles=362726492 core_hash=69dd48eb output_hash=811c9dc5 cpu_ppu_us=6095
+FRAME n=12240 cycles=364513325 core_hash=7b1e6d50 output_hash=811c9dc5 cpu_ppu_us=5882
+FRAME n=12300 cycles=366300151 core_hash=5866e59a output_hash=811c9dc5 cpu_ppu_us=5703
+FRAME n=12360 cycles=368086984 core_hash=5866e59a output_hash=811c9dc5 cpu_ppu_us=5705
+FRAME n=12420 cycles=369873815 core_hash=5866e59a output_hash=811c9dc5 cpu_ppu_us=5700
+FRAME n=12480 cycles=371660641 core_hash=5866e59a output_hash=811c9dc5 cpu_ppu_us=5700
+FRAME n=12540 cycles=373447471 core_hash=5866e59a output_hash=811c9dc5 cpu_ppu_us=5700
+FRAME n=12600 cycles=375234301 core_hash=5866e59a output_hash=811c9dc5 cpu_ppu_us=5698
+FRAME n=12660 cycles=377021132 core_hash=5866e59a output_hash=811c9dc5 cpu_ppu_us=5704
+FRAME n=12720 cycles=378807966 core_hash=c5978f2a output_hash=811c9dc5 cpu_ppu_us=6041
+FRAME n=12780 cycles=380594791 core_hash=4b4d387f output_hash=811c9dc5 cpu_ppu_us=6123
+FRAME n=12840 cycles=382381621 core_hash=da18d9c0 output_hash=811c9dc5 cpu_ppu_us=6072
+FRAME n=12900 cycles=384168452 core_hash=57bd713e output_hash=811c9dc5 cpu_ppu_us=6135
+FRAME n=12960 cycles=385955281 core_hash=b7336038 output_hash=811c9dc5 cpu_ppu_us=6149
+FRAME n=13020 cycles=387742112 core_hash=739e3290 output_hash=811c9dc5 cpu_ppu_us=6134
+FRAME n=13080 cycles=389528943 core_hash=bb17c315 output_hash=811c9dc5 cpu_ppu_us=6098
+FRAME n=13140 cycles=391315774 core_hash=535335f8 output_hash=811c9dc5 cpu_ppu_us=6147
+FRAME n=13200 cycles=393102606 core_hash=a21635a4 output_hash=811c9dc5 cpu_ppu_us=6148
+FRAME n=13260 cycles=394889434 core_hash=736b78fd output_hash=811c9dc5 cpu_ppu_us=6168
+FRAME n=13320 cycles=396676261 core_hash=bc6fe97e output_hash=811c9dc5 cpu_ppu_us=6200
+FRAME n=13380 cycles=398463092 core_hash=d8f0565a output_hash=811c9dc5 cpu_ppu_us=6117
+FRAME n=13440 cycles=400249922 core_hash=6f27d57a output_hash=811c9dc5 cpu_ppu_us=6086
+FRAME n=13500 cycles=402036752 core_hash=7cbe83ab output_hash=811c9dc5 cpu_ppu_us=6133
+FRAME n=13560 cycles=403823586 core_hash=043c6280 output_hash=811c9dc5 cpu_ppu_us=6102
+FRAME n=13620 cycles=405610412 core_hash=a62a6073 output_hash=811c9dc5 cpu_ppu_us=6091
+FRAME n=13680 cycles=407397241 core_hash=79405c12 output_hash=811c9dc5 cpu_ppu_us=6129
+FRAME n=13740 cycles=409184074 core_hash=819e7cb6 output_hash=811c9dc5 cpu_ppu_us=6117
+FRAME n=13800 cycles=410970903 core_hash=b3abcaca output_hash=811c9dc5 cpu_ppu_us=6097
+FRAME n=13860 cycles=412757731 core_hash=1d5531e6 output_hash=811c9dc5 cpu_ppu_us=5878
+FRAME n=13920 cycles=414544564 core_hash=5866e59a output_hash=811c9dc5 cpu_ppu_us=5711
+FRAME n=13980 cycles=416331393 core_hash=5866e59a output_hash=811c9dc5 cpu_ppu_us=5708
+FRAME n=14040 cycles=418118221 core_hash=5866e59a output_hash=811c9dc5 cpu_ppu_us=5707
+FRAME n=14100 cycles=419905051 core_hash=5866e59a output_hash=811c9dc5 cpu_ppu_us=5704
+FRAME n=14160 cycles=421691883 core_hash=5866e59a output_hash=811c9dc5 cpu_ppu_us=5702
+FRAME n=14220 cycles=423478711 core_hash=5866e59a output_hash=811c9dc5 cpu_ppu_us=5703
+FRAME n=14280 cycles=425265542 core_hash=5866e59a output_hash=811c9dc5 cpu_ppu_us=5704
+FRAME n=14340 cycles=427052371 core_hash=26ed54b5 output_hash=811c9dc5 cpu_ppu_us=6025
+FRAME n=14400 cycles=428839205 core_hash=afbe4576 output_hash=811c9dc5 cpu_ppu_us=6139
+FRAME n=14460 cycles=430626032 core_hash=5182b7cb output_hash=811c9dc5 cpu_ppu_us=6077
+FRAME n=14520 cycles=432412861 core_hash=8ced342a output_hash=811c9dc5 cpu_ppu_us=6144
+FRAME n=14580 cycles=434199691 core_hash=d706b776 output_hash=811c9dc5 cpu_ppu_us=6141
+FRAME n=14640 cycles=435986521 core_hash=81ed633c output_hash=811c9dc5 cpu_ppu_us=6113
+FRAME n=14700 cycles=437773352 core_hash=05cdec12 output_hash=811c9dc5 cpu_ppu_us=6148
+FRAME n=14760 cycles=439560181 core_hash=c21aed31 output_hash=811c9dc5 cpu_ppu_us=6182
+FRAME n=14820 cycles=441347011 core_hash=cde721a7 output_hash=811c9dc5 cpu_ppu_us=6172
+FRAME n=14880 cycles=443133843 core_hash=68522793 output_hash=811c9dc5 cpu_ppu_us=6132
+FRAME n=14940 cycles=444920673 core_hash=cf6a1d6d output_hash=811c9dc5 cpu_ppu_us=6182
+FRAME n=15000 cycles=446707503 core_hash=023999e9 output_hash=811c9dc5 cpu_ppu_us=6082
+FRAME n=15060 cycles=448494334 core_hash=4c30d336 output_hash=811c9dc5 cpu_ppu_us=6125
+FRAME n=15120 cycles=450281161 core_hash=0b06e35b output_hash=811c9dc5 cpu_ppu_us=6135
+FRAME n=15180 cycles=452067995 core_hash=034eb5c4 output_hash=811c9dc5 cpu_ppu_us=6114
+FRAME n=15240 cycles=453854822 core_hash=f7e0112d output_hash=811c9dc5 cpu_ppu_us=6106
+FRAME n=15300 cycles=455641653 core_hash=1fa12edb output_hash=811c9dc5 cpu_ppu_us=6113
+FRAME n=15360 cycles=457428484 core_hash=966a2aef output_hash=811c9dc5 cpu_ppu_us=6111
+FRAME n=15420 cycles=459215313 core_hash=8bbb163c output_hash=811c9dc5 cpu_ppu_us=6113
+FRAME n=15480 cycles=461002142 core_hash=5866e59a output_hash=811c9dc5 cpu_ppu_us=5699
+FRAME n=15540 cycles=462788971 core_hash=5866e59a output_hash=811c9dc5 cpu_ppu_us=5773
+FRAME n=15600 cycles=464575802 core_hash=5866e59a output_hash=811c9dc5 cpu_ppu_us=5760
+FRAME n=15660 cycles=466362632 core_hash=5866e59a output_hash=811c9dc5 cpu_ppu_us=5935
+FRAME n=15720 cycles=468149462 core_hash=5866e59a output_hash=811c9dc5 cpu_ppu_us=5781
+FRAME n=15780 cycles=469936294 core_hash=5866e59a output_hash=811c9dc5 cpu_ppu_us=5781
+FRAME n=15840 cycles=471723126 core_hash=5866e59a output_hash=811c9dc5 cpu_ppu_us=6164
+FRAME n=15900 cycles=473509955 core_hash=5866e59a output_hash=811c9dc5 cpu_ppu_us=5780
+FRAME n=15960 cycles=475296783 core_hash=5866e59a output_hash=811c9dc5 cpu_ppu_us=5923
+FRAME n=16020 cycles=477083611 core_hash=5866e59a output_hash=811c9dc5 cpu_ppu_us=5761
+FRAME n=16080 cycles=478870444 core_hash=5866e59a output_hash=811c9dc5 cpu_ppu_us=5864
+FRAME n=16140 cycles=480657272 core_hash=5866e59a output_hash=811c9dc5 cpu_ppu_us=5849
+FRAME n=16200 cycles=482444105 core_hash=5866e59a output_hash=811c9dc5 cpu_ppu_us=5774
+FRAME n=16260 cycles=484230934 core_hash=5866e59a output_hash=811c9dc5 cpu_ppu_us=5761
+FRAME n=16320 cycles=486017766 core_hash=29d38bc9 output_hash=811c9dc5 cpu_ppu_us=5948
+FRAME n=16380 cycles=487804592 core_hash=80ff41d9 output_hash=811c9dc5 cpu_ppu_us=6083
+FRAME n=16440 cycles=489591421 core_hash=ddbf5bc9 output_hash=811c9dc5 cpu_ppu_us=6107
+FRAME n=16500 cycles=491378252 core_hash=6b522d58 output_hash=811c9dc5 cpu_ppu_us=6150
+FRAME n=16560 cycles=493165083 core_hash=8c04b317 output_hash=811c9dc5 cpu_ppu_us=6167
+FRAME n=16620 cycles=494951911 core_hash=156d15ac output_hash=811c9dc5 cpu_ppu_us=6132
+FRAME n=16680 cycles=496738741 core_hash=6149ce17 output_hash=811c9dc5 cpu_ppu_us=6098
+FRAME n=16740 cycles=498525574 core_hash=3259c84b output_hash=811c9dc5 cpu_ppu_us=6118
+FRAME n=16800 cycles=500312401 core_hash=7d09d43e output_hash=811c9dc5 cpu_ppu_us=6111
+FRAME n=16860 cycles=502099236 core_hash=60089f33 output_hash=811c9dc5 cpu_ppu_us=6166
+FRAME n=16920 cycles=503886065 core_hash=9a061ec0 output_hash=811c9dc5 cpu_ppu_us=6100
+FRAME n=16980 cycles=505672891 core_hash=0fb21e61 output_hash=811c9dc5 cpu_ppu_us=6196
+FRAME n=17040 cycles=507459721 core_hash=cee86986 output_hash=811c9dc5 cpu_ppu_us=6102
+FRAME n=17100 cycles=509246552 core_hash=b8aee82f output_hash=811c9dc5 cpu_ppu_us=6120
+FRAME n=17160 cycles=511033381 core_hash=9720e244 output_hash=811c9dc5 cpu_ppu_us=6130
+FRAME n=17220 cycles=512820213 core_hash=28bcfb77 output_hash=811c9dc5 cpu_ppu_us=6123
+FRAME n=17280 cycles=514607044 core_hash=6cf7d09d output_hash=811c9dc5 cpu_ppu_us=6112
+FRAME n=17340 cycles=516393875 core_hash=ee7672af output_hash=811c9dc5 cpu_ppu_us=6118
+FRAME n=17400 cycles=518180701 core_hash=82b2df83 output_hash=811c9dc5 cpu_ppu_us=6120
+FRAME n=17460 cycles=519967533 core_hash=7b1e6d50 output_hash=811c9dc5 cpu_ppu_us=5886
+FRAME n=17520 cycles=521754363 core_hash=5866e59a output_hash=811c9dc5 cpu_ppu_us=5707
+FRAME n=17580 cycles=523541191 core_hash=5866e59a output_hash=811c9dc5 cpu_ppu_us=5703
+FRAME n=17640 cycles=525328022 core_hash=5866e59a output_hash=811c9dc5 cpu_ppu_us=5704
+FRAME n=17700 cycles=527114851 core_hash=5866e59a output_hash=811c9dc5 cpu_ppu_us=5706
+FRAME n=17760 cycles=528901681 core_hash=5866e59a output_hash=811c9dc5 cpu_ppu_us=5707
+FRAME n=17820 cycles=530688513 core_hash=5866e59a output_hash=811c9dc5 cpu_ppu_us=5707
+FRAME n=17880 cycles=532475346 core_hash=5866e59a output_hash=811c9dc5 cpu_ppu_us=5717
+FRAME n=17940 cycles=534262171 core_hash=67f0b200 output_hash=811c9dc5 cpu_ppu_us=6044
+FRAME n=18000 cycles=536049002 core_hash=8011ce9f output_hash=811c9dc5 cpu_ppu_us=6111
+FULLSCREEN_END queued=18000 flips=18000 pending=-1 ack_wait_us=245137530 fault=0
+AUDIO_TASK queued=9583486 submitted=9583486 completed=9583486 highwater=3 error=0 stopped=1
+AUDIO_END samples=9583486 gaps=3672
+STAGE closing frontend; requesting ARM return next
+ZZFCEUX END exit=0 frames=18000 elapsed_us=318479685 core_total_us=108383328 output_hash=811c9dc5
+DIRECT_END challenges=18000 verified_frames=1 copy_us=20717399
+PLAYER_PROFILE audio_prepare_us=6701958 flip_drain_us=92194736 audio_wait_us=463100 audio_copy_us=4935723 audio_send_us=0
+ARM_REQUEST_PROFILE frame_us=117783481 present_us=30486718
+PRESENT_PROFILE pre_us=9146450 request_us=39287812 post_us=4292130
+AUDIO_IO_PROFILE send_us=54766851 waitio_us=237547
+WAIT_PROFILE kind=0 calls=0 requested_us=0 actual_us=0 max_us=0
+WAIT_PROFILE kind=1 calls=4 requested_us=4000 actual_us=5185 max_us=1342
+WAIT_PROFILE kind=2 calls=0 requested_us=0 actual_us=0 max_us=0
+WAIT_PROFILE kind=3 calls=0 requested_us=0 actual_us=0 max_us=0
+WAIT_PROFILE kind=4 calls=239 requested_us=239000 actual_us=446764 max_us=10716
+WAIT_PROFILE kind=5 calls=0 requested_us=0 actual_us=0 max_us=0
+PROFILE frames=18000 request_us=141961758 copy_us=0 colour_us=0 draw_us=54023468 waits=243
+EXIT epilogue=52455431 cache_echoes=0 rounds=0
+CACHE original=08c50878 running=08c5187d restored=08c50878
+MMU_RESTORE phase=3 register_mismatches=00000000 cpsr_control=1d3 expected=1d3 ttbr=10234000 ccsidr=701fe019 witness_bad=0 mailbox_rounds=36003
+REGISTER n=0 original=08c50878 restored=08c50878
+REGISTER n=1 original=08a50000 restored=08a50000
+REGISTER n=2 original=00200000 restored=00200000
+REGISTER n=3 original=00000000 restored=00000000
+REGISTER n=4 original=00020000 restored=00020000
+REGISTER n=5 original=00000001 restored=00000001
+REGISTER n=6 original=600101d3 restored=600101d3
+REGISTER n=7 original=00000006 restored=00000006
+REGISTER n=8 original=00000000 restored=00000000
+REGISTER n=9 original=00098aa4 restored=00098aa4
+REGISTER n=10 original=44e048e0 restored=44e048e0
+REGISTER n=11 original=00000000 restored=00000000
+REGISTER n=12 original=00000001 restored=00000001
+REGISTER n=13 original=72360000 restored=72360000
+LAUNCHER exit=0; owned memory released

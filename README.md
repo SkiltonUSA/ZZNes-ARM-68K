@@ -10,6 +10,36 @@ ZZNes** and the newer, faster **FCEUX-based ZZFceux**. It includes sources,
 build scripts, tests, hardware evidence and the exact saved Amiga executables.
 It does not contain commercial ROMs, Amiga system software or firmware.
 
+## Latest ARM presentation work
+
+The new **ZZFceux-fast** candidate reduces ARM drawing from **3.32 ms to
+1.15 ms per frame** by specialising the 32-bit palette conversion. Colours
+and pixels remain identical; CPU/PPU/APU emulation, audio batching and the
+accepted scheduler are unchanged. No NEON or SDL is involved.
+
+| 300-frame startup test with audio | Mario Bros | Super Mario World |
+|---|---:|---:|
+| Accepted scheduling build | 53.71 FPS | 51.92 FPS |
+| Faster ARM drawing | **53.99 FPS** | **53.80 FPS** |
+
+The ~65% reduction in drawing time largely becomes display wait time; Mario's
+small FPS change is within plausible measurement variation. **60 FPS remains
+unproven.** Combining ARM emulation and drawing into one command was tested
+and rejected for worse throughput. A Start-triggered stability run completed
+**18,000 frames in 5.3 minutes at 56.52 FPS**, with all 9,583,486 samples and
+clean teardown. Progression was not supervised; this is not a controlled
+continuous-gameplay benchmark. Full results and longer-session evidence
+are in the [pipeline record](amiga/records/2026-10-10/fceux-pipeline/).
+
+[Fast candidate executable and provenance](artifacts/fceux-player-fast/):
+270,212 bytes, MD5 `4398f22b8de76db50aad845a384b8749`. Install its executable
+as `ZZFceux-fast` for the supplied `*-Fast` launch scripts, or invoke it directly
+with a 65536-byte stack. Build/test with `SCHEDULING=optimized-fast`. Previous
+accepted binaries remain archived. Owner acceptance of this new build is pending.
+
+[Future roadmap](docs/nes-roadmap.md): timing/audio work, joystick and ZZ9000AX,
+then a separate SNES feasibility benchmark. **SNES support is not implemented.**
+
 ## Current result
 
 The new **ZZFceux-optimized** candidate reaches **53.71 FPS for Mario Bros**

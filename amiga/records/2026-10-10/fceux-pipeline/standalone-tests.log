@@ -1,0 +1,25 @@
+python3 scripts/build_fceux_player.py --scheduling optimized-fast
+Built /Users/dskilton/conductor/workspaces/sixies_development/port-louis/.context/ZZNes-ARM-68K/.context/amiga/fceux-player/ZZFceux: 270212 bytes; ARM image 118452 bytes
+python3 scripts/build_fceux_bench.py --host
+Built /Users/dskilton/conductor/workspaces/sixies_development/port-louis/.context/ZZNes-ARM-68K/.context/amiga/fceux-bench/ZZFceuxBench: 186344 bytes; ARM image 113312 bytes
+python3 scripts/test_standalone.py
+PASS standalone-demo.nes no-input 120 frames, ASan/selected UBSan adapter equivalence
+PASS standalone-demo.nes input 120 frames, ASan/selected UBSan adapter equivalence
+test_bss_stack_overlap_rejected (test_elf.ElfSafety.test_bss_stack_overlap_rejected) ... ok
+test_nonrelative_rejected (test_elf.ElfSafety.test_nonrelative_rejected) ... ok
+test_outside_image_relocation_rejected (test_elf.ElfSafety.test_outside_image_relocation_rejected) ... ok
+test_reserved_targets_rejected (test_elf.ElfSafety.test_reserved_targets_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.002s
+
+OK
+PASS 200000 triple-slot handoffs, ACK wrap, pending protection, unexpected ACK rejection
+Direct presentation plan: 12816 mappings, boundary rejection, no clobber, formats and guards PASS
+PASS: 16384 allocation alignments; private/shared/table/boundary permissions; L2 and unrelated RAM unmapped
+PASS actual audio worker: short flush, 1200 ordered blocks, ring wrap, allocation/open failures, cancellation, device error, resource cleanup
+PASS actual audio worker: short flush, 1838 ordered blocks and forced partial flush, ring wrap, allocation/open failures, cancellation, device error, resource cleanup
+PASS all 65536 input indices, four formats, alpha/emphasis and output guards match generic packer
+PASS 200000 triple-slot handoffs, ACK wrap, pending protection, unexpected ACK rejection
+PASS generated FCEUX audio worker, bounded cadence and flip plan; no hardware accessed
+PASS standalone native checks; no hardware was accessed.

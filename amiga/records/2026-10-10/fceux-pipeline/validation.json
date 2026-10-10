@@ -1,0 +1,22 @@
+{
+  "selected_mode": "optimized-fast",
+  "selected_md5": "4398f22b8de76db50aad845a384b8749",
+  "selected_bytes": 270212,
+  "native_pixel_equivalence": "All 65536 indices, all four formats, alpha/emphasis/output guards; ASan/UBSan",
+  "actual_worker_protocol": "Combined-command worker tested with explicit native architectural stubs; wrong token, stop, presenter error, PCM byte order and sparse/VERIFY publication",
+  "arm_instruction_model": "six frames plus four format stores, challenge guards, cancellation, mapping revocation",
+  "native_suite": "Standalone make test SCHEDULING=optimized-fast passed; generated audio worker and flip/MMU/direct helpers",
+  "reproducibility": "Standalone build byte-identical to deployed candidate",
+  "unchanged": "NES CPU/PPU/APU model, audio queue/batch size, accepted scheduling, shared allocation/MMU/cache policy, firmware, global AHI settings",
+  "owner_acceptance": "Pending for fast candidate; prior accepted scheduling build is confirmed separately",
+  "soak": {
+    "frames": 18000,
+    "elapsed_us": 318479685,
+    "displayed_fps": 56.518518598760856,
+    "samples_completed": 9583486,
+    "audio_highwater": 3,
+    "clean_return": true,
+    "workload": "Start injected once after 4s; gameplay progression not supervised. Native no-input hash comparison is inapplicable. Not continuous active gameplay proof."
+  },
+  "physical_later_frame_pixels": "VERIFY run checked complete frames 1 and 60; native sampled hashes/cycles, 60 flips, 31945 samples, MMU/register/cache witness and cleanup passed"
+}

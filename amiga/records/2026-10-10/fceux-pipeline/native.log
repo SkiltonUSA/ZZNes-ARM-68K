@@ -1,0 +1,2 @@
+PASS 011 Mario Bros.nes no-input 120 frames, ASan/selected UBSan adapter equivalence
+PASS 011 Mario Bros.nes input 120 frames, ASan/selected UBSan adapter equivalence
