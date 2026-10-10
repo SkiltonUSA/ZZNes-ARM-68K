@@ -10,6 +10,25 @@ ZZNes** and the newer, faster **FCEUX-based ZZFceux**. It includes sources,
 build scripts, tests, hardware evidence and the exact saved Amiga executables.
 It does not contain commercial ROMs, Amiga system software or firmware.
 
+## Native MUI library candidate — 0.3.0-dev
+
+New **ZZNesLibrary**: ROM selection and folder import, recent history,
+favourites, live joystick testing, fire-button assignment, 4:3 / widescreen
+monitor correction, five border designs, independent horizontal/vertical edge
+masks and five save-state slots per ROM. F5 saves, F8 restores; Resume slot
+loads a saved game into a fresh player process. Q/Esc returns to the library.
+
+This is an opt-in FCEUX candidate, separate from the accepted 0.2.0-rc1 release.
+Build `make player SCHEDULING=release-ui`, then run
+`python3 scripts/package_nes_library.py`. The player remains native 68k + ARM;
+no SDL or desktop Mesen save-state compatibility is implied.
+
+[Hardware validation and screenshots](amiga/records/2026-10-10/nes-library/) ·
+[User guide](amiga/fceux_player/Library-ReadMe.txt) ·
+[Implementation and credits](amiga/fceux_player/README.md) ·
+[Overscan discussion and requested reference images](amiga/fceux_player/overscan.md)
+
+
 ## 0.2.0-rc1 Workbench prerelease
 
 [Download](https://github.com/SkiltonUSA/ZZNes-ARM-68K/releases/tag/v0.2.0-rc1)

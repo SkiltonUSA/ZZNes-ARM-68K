@@ -21,6 +21,7 @@ static unsigned allocations,signals,opened_devices,fail_at,allocation_calls;
 static unsigned active_count,aborts,sends,completions,forbid_depth,produce,total,burst;
 static unsigned consumed_blocks,consumed_bytes;
 static unsigned force_test;
+static unsigned drain_test,drain_seen,unlink_next;
 static unsigned fail_io,cancel_after,short_drain;
 static ULONG audio_gaps;
 static struct IORequest *pending[2];
@@ -50,7 +51,8 @@ static void SendIO(struct IORequest *r){
   if(++consumed_bytes==2*(1+(consumed_blocks*131)%1024)){consumed_bytes=0;consumed_blocks++;}
  }
  assert(((struct AHIRequest *)r)->ahir_Frequency==32000);
- if(sends)assert(((struct AHIRequest *)r)->ahir_Link);
+ if(sends&&!unlink_next)assert(((struct AHIRequest *)r)->ahir_Link);
+ if(unlink_next){assert(!((struct AHIRequest *)r)->ahir_Link);unlink_next=0;}
  for(unsigned i=0;i<2;i++)if(!pending[i]){pending[i]=r;break;}
  active_count++;sends++;
 }
@@ -65,6 +67,14 @@ static ULONG Wait(ULONG mask){
   pending[i]=NULL;active_count--;completions++;break;
  }
  if(cancel_after&&sends>=cancel_after){audio_stop=1;return mask;}
+#ifdef FC_STATE_AUDIO
+ if(drain_test&&!drain_seen&&produce>=9){
+  if(!audio_state_drained){audio_state_drain=audio_force=1;return mask;}
+  ULONG samples=0;for(unsigned i=0;i<produce;i++)samples+=1+(i*131)%1024;
+  assert(audio_completed==samples&&audio_submitted==samples&&!active_count);
+  audio_state_drain=0;drain_seen=unlink_next=1;
+ }
+#endif
  for(unsigned n=0;n<burst&&produce<total&&audio_write-audio_read<AUDIO_SLOTS;n++){
   struct audio_block *b=&audio_queue[audio_write%AUDIO_SLOTS];
   b->count=1+(produce*131)%1024;
@@ -80,6 +90,10 @@ static void run(unsigned count,unsigned batch,unsigned failure,unsigned cancel,u
  consumed_blocks=consumed_bytes=0;fail_at=failure;total=count;burst=batch;cancel_after=cancel;fail_io=ioerror;short_drain=count<3;
  audio_write=audio_read=audio_worker_mask=audio_started=audio_done=audio_stop=audio_error=audio_force=0;
  audio_submitted=audio_completed=audio_gaps=0;audio_opened=0;audio_parent_signal=1;
+ drain_seen=unlink_next=0;
+#ifdef FC_STATE_AUDIO
+ audio_state_drain=audio_state_drained=0;
+#endif
  memset(pending,0,sizeof pending);
  audio_queue=calloc(AUDIO_SLOTS,sizeof(*audio_queue));assert(audio_queue);
  audio_worker();
@@ -101,5 +115,9 @@ int main(void){
  force_test=1;run(31,1,0,0,0);force_test=0;
  for(unsigned i=1;i<=5;i++)run(6,3,i,0,0);run(6,3,99,0,0);
  run(100,8,0,5,0);run(100,8,0,0,1);
+#ifdef FC_STATE_AUDIO
+ drain_test=1;run(61,1,0,0,0);assert(drain_seen);drain_test=0;
+ puts("PASS save-state AHI drain reaps both requests, resumes without stale link, preserves every PCM sample");
+#endif
  puts("PASS actual audio worker: short flush, 1838 ordered blocks and forced partial flush, ring wrap, allocation/open failures, cancellation, device error, resource cleanup");
 }

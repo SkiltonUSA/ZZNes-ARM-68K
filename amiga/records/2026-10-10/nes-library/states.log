@@ -1,0 +1,15 @@
+PASS replay start=1 120 frames video/PCM/cycles, 15497 state bytes; bad states unchanged
+PASS replay start=60 120 frames video/PCM/cycles, 15497 state bytes; bad states unchanged
+PASS replay start=240 120 frames video/PCM/cycles, 15497 state bytes; bad states unchanged
+PASS replay start=600 120 frames video/PCM/cycles, 15497 state bytes; bad states unchanged
+PASS replay start=1 120 frames video/PCM/cycles, 15497 state bytes; bad states unchanged
+PASS replay start=60 120 frames video/PCM/cycles, 15497 state bytes; bad states unchanged
+PASS replay start=240 120 frames video/PCM/cycles, 15497 state bytes; bad states unchanged
+PASS replay start=600 120 frames video/PCM/cycles, 15497 state bytes; bad states unchanged
+PASS replay start=1 120 frames video/PCM/cycles, 15541 state bytes; bad states unchanged
+PASS replay start=60 120 frames video/PCM/cycles, 15541 state bytes; bad states unchanged
+PASS replay start=240 120 frames video/PCM/cycles, 15541 state bytes; bad states unchanged
+PASS replay start=600 120 frames video/PCM/cycles, 15541 state bytes; bad states unchanged
+PASS fresh-process restore: original-nrom16-1.nes
+PASS fresh-process restore: 011 Mario Bros.nes
+PASS fresh-process restore: 002 Super Mario World.nes

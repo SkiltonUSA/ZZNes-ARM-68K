@@ -140,3 +140,37 @@ ZIP, executable, corresponding source, ReadMe and checksums uploaded; all five
 GitHub asset SHA-256 digests and sizes matched local files. Release source
 commit `ff6d481b33a00bf313b6a7034661f853e7028a4f`. Temporary transfer server
 55031 stopped after installation; Amiga left at Workbench, no Core1 app active.
+
+
+## ZZNes MUI Library candidate — 10 October 2026
+
+Installed separately at `SD032G:Dev/ZZFceuxPlayer/Library-0.3/`:
+`ZZNesLibrary` MD5 `571d796cb818a426f1b99f48b192f619` and `ZZFceux-ui`
+MD5 `e056592277459fdf784c1f4c1fefe388` (293,048 bytes). Icon stack 65536.
+The 0.2.0-rc1/fast/optimized executables and existing ROM files remain unchanged.
+Native MUI 3.8 tabs follow xSysInfo; Library.cfg/.bak holds history/favourites
+and display/input settings. ROM entries point to the previous release's drawer.
+No firmware, AHI, Roadie or startup settings changed.
+
+Opt-in build `--scheduling release-ui`. Five private FCEUX save-state slots
+per ROM path, F5 save/F8 load, Resume slot into a fresh process, .bak retention.
+Physical original-cartridge save/load, overwrite, cold resume and paused
+save/load passed, with clean ARM/bitmap/AHI teardown. Cold resume also matches
+native cycles and pixel hashes at three sampled frames. Native replay includes
+both owner games (mapper0/90), exact PCM and bad-state rejection. A9 instruction
+model and standalone native tests passed; independent build binaries identical.
+
+Display keeps 4:3 on either 4:3 or 16:9 monitors (monitor set to fill), masks
+0/8/16 source pixels on each axis, and offers five original procedural borders.
+Final Mario 300-frame startup validation: 47.74 FPS including first readback
+and audio drain, ARM presentation 2.266 ms. Not a controlled performance gain
+or 60 FPS claim. See records for the intrusive 26.25 FPS VERIFY run and the
+initial, safely cleaned-up audio-drain failure that was fixed.
+
+The user selected 'test joystick later'. Physical directions/fire and final
+visual/audio acceptance remain pending. Controller tab is a read-only live
+lowlevel port-1 test; idle type was UNKNOWN, not a confirmed failure.
+The library is left open on Workbench; no Core1 app remains active. Check
+live ownership before any subsequent ARM launch. Temporary transfer server
+55031 stopped after deployment. Package remains a development candidate,
+not a new GitHub release. Evidence: `amiga/records/2026-10-10/nes-library/`.

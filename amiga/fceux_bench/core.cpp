@@ -31,8 +31,12 @@ static DECLFR(readpad2){(void)A;return X.DB&0xe0;}
 static DECLFW(writepad){(void)A;if((V&1)||strobe)shift=buttons;strobe=V&1;}
 // Services excluded from this benchmark: debugger, cheats, save states,
 // expansion controllers, NSF and movie/screenshot presentation.
+#ifdef FC_STATES
+#include "state_core.h"
+#else
 void AddExState(void *,uint32,int,const char *){}
 void ResetExState(void (*)(void),void (*)(void)){}
+#endif
 void InputScanlineHook(uint8 *,uint8 *,uint32,int){}
 void SetNESDeemph_OldHacky(uint8,int){} // Raw per-pixel emphasis remains XDBuf.
 void FCEU_PutImage(){}
@@ -51,6 +55,9 @@ int fc_init(const uint8_t *rom,uint32_t size){
  if((id!=0&&id!=90)||!prg||!chr||size!=16+prg+chr||prg>524288||chr>262144||
     (prg&(prg-1))||(chr&(chr-1))||(id==0&&(prg>32768||chr!=8192)))return 1;
  loaded=1;info.type=GIT_CART;info.vidsys=GIV_NTSC;info.mappernum=id;
+#ifdef FC_STATES
+ state_rom_hash=state_hash(rom,size);state_rom_size=size;
+#endif
  memset(&FSettings,0,sizeof(FSettings));FSettings.FirstSLine=0;FSettings.LastSLine=239;
  FSettings.SoundVolume=150;FSettings.TriangleVolume=FSettings.Square1Volume=FSettings.Square2Volume=FSettings.NoiseVolume=FSettings.PCMVolume=256;
  FSettings.SndRate=32000;FSettings.soundq=0;

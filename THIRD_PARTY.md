@@ -26,3 +26,8 @@ GCC runtime support is covered by GPLv3 with the GCC Runtime Library Exception
 The standalone builds omit the AmigaBridge client. AmigaOS, P96, AHI, firmware,
 ROMs and game data are not supplied. Any downloaded public test fixtures stay
 in the ignored build directory and retain their upstream provenance manifests.
+
+Native MUI library patterns adapted from SkiltonUSA/xSysInfo (upstream xsysinfo
+contributors, BSD-2-Clause); notice in `amiga/fceux_player/LICENSE-xSysInfo`.
+The overscan guide links klepp0906's Mesen-S #122 screenshots with attribution;
+they are not packaged as player wallpaper. Built-in border designs are original.

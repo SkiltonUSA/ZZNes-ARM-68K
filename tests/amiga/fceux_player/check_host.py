@@ -23,6 +23,7 @@ for name, path, includes in [
 ]:
     binary = OUT / (name + '-host-test')
     subprocess.run(['clang', '-std=c99', '-O2', '-g', '-fsanitize=address,undefined',
+                    *(['-DFC_STATE_AUDIO'] if 'audio_state_drain' in source else []),
                     *['-I' + str(p) for p in includes], str(ROOT / path), '-o', str(binary)], check=True)
     subprocess.run([binary], check=True, env=os.environ | {'UBSAN_OPTIONS': 'halt_on_error=1'})
 if '#define NES_FRAME_PRESENT' in (OUT / 'wire.h').read_text():

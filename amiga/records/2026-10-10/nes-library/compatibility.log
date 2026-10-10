@@ -1,0 +1,9 @@
+PASS original-nrom16-0.nes no-input 120 frames, ASan/selected UBSan adapter equivalence
+PASS original-nrom16-0.nes input 120 frames, ASan/selected UBSan adapter equivalence
+PASS original-nrom16-1.nes no-input 120 frames, ASan/selected UBSan adapter equivalence
+PASS original-nrom16-1.nes input 120 frames, ASan/selected UBSan adapter equivalence
+PASS original-nrom32-0.nes no-input 120 frames, ASan/selected UBSan adapter equivalence
+PASS original-nrom32-0.nes input 120 frames, ASan/selected UBSan adapter equivalence
+PASS original-nrom32-1.nes no-input 120 frames, ASan/selected UBSan adapter equivalence
+PASS original-nrom32-1.nes input 120 frames, ASan/selected UBSan adapter equivalence
+PASS four original audio-enabled NROM layouts; no general mapper compatibility claim

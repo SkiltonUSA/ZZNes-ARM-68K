@@ -1,0 +1,13 @@
+PASS save-state AHI drain reaps both requests, resumes without stale link, preserves every PCM sample
+PASS actual audio worker: short flush, 1838 ordered blocks and forced partial flush, ring wrap, allocation/open failures, cancellation, device error, resource cleanup
+PASS all 65536 input indices, four formats, alpha/emphasis and output guards match generic packer
+PASS 200000 triple-slot handoffs, ACK wrap, pending protection, unexpected ACK rejection
+FRAME_TIMING stage=0 count=6 mean_us=19000 max_us=34001 bins=1,1,1,1,1,1
+FRAME_TIMING stage=1 count=0 mean_us=0 max_us=0 bins=0,0,0,0,0,0
+FRAME_TIMING stage=2 count=0 mean_us=0 max_us=0 bins=0,0,0,0,0,0
+FRAME_TIMING stage=3 count=0 mean_us=0 max_us=0 bins=0,0,0,0,0,0
+FRAME_TIMING stage=4 count=0 mean_us=0 max_us=0 bins=0,0,0,0,0,0
+FRAME_TIMING stage=5 count=1 mean_us=32 max_us=32 bins=1,0,0,0,0,0
+INPUT_PROFILE changes=0
+PASS all pad combinations, reject mouse/unknown, timing bins/startup exclusion/timer wrap
+PASS generated FCEUX audio worker, bounded cadence and flip plan; no hardware accessed

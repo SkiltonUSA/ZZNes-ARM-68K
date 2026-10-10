@@ -1,0 +1,9 @@
+FRAME n=1 cycles=29782 core_hash=b87d5dc5 raw=6fde1dc5 audio=77c8d7e5 samples=532 buttons=0
+FRAME n=2 cycles=59564 core_hash=b87d5dc5 raw=6fde1dc5 audio=77c8d7e5 samples=532 buttons=0
+FRAME n=3 cycles=89344 core_hash=b87d5dc5 raw=6fde1dc5 audio=860daeed samples=533 buttons=0
+FRAME n=4 cycles=119125 core_hash=d1fd130d raw=6ed6dca5 audio=7963853f samples=532 buttons=0
+FRAME n=5 cycles=148903 core_hash=ed354ee5 raw=45299985 audio=a3ac8c95 samples=533 buttons=0
+FRAME n=6 cycles=178684 core_hash=ed354ee5 raw=45299985 audio=4a093ba4 samples=532 buttons=0
+PASS A9 adapter/native, scripted Start input, aligned accesses
+PASS A9 state replay video/PCM/cycles, bounded state area
+PASS ARM presentation: supported formats/options, both-end challenges, guard/padding bytes, cancellation, mapping revocation

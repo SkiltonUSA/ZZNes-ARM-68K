@@ -37,4 +37,9 @@ run(*common, '-I' + str(OUT), 'tests/amiga/mesen_nes/audio_worker.c',
 run(OUT / 'audio-worker-test')
 run(sys.executable, 'tests/amiga/fceux_player/check_host.py')
 run(sys.executable, 'tests/amiga/fceux_player/check_compatibility.py')
+import json
+if json.loads((OUT/'build.json').read_text())['scheduling']=='release-ui':
+    run(sys.executable, 'tests/amiga/fceux_player/check_ui.py', OUT/'original-nrom16-1.nes')
+    run(*common, '-Iamiga/fceux_player', 'tests/amiga/fceux_player/ui_model.c', '-o', OUT/'ui-model-test')
+    run(OUT/'ui-model-test')
 print('PASS standalone native checks; no hardware was accessed.')

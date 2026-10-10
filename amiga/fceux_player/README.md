@@ -13,6 +13,45 @@ GPL-3.0-or-later. Credit to [XANI's XACP platform and PicoDrive example](https:/
 for the documented XX19c firmware interface and fullscreen handoff approach.
 No PicoDrive source was copied. SDL is not used.
 
+## Native MUI library candidate (0.3.0-dev)
+
+Build with `--scheduling release-ui`. This produces **ZZNesLibrary**, the
+native MUI 3.8 launcher, and its matching **ZZFceux** player (install as
+`ZZFceux-ui` beside the launcher). Previous accepted build modes are unchanged.
+
+The resizable, tabbed interface follows the xSysInfo MUI application structure:
+ROM picker and folder import, recent history, favourites, five save slots per
+ROM, a live physical-port-2 joystick test, fire-button assignment, mute and
+monitor/border settings. It closes its window while the synchronous player
+runs, then returns to the library. Library removal never deletes a ROM file.
+Settings/history live in `Library.cfg`, with `Library.bak` recovery; no global
+Workbench, AHI, firmware or startup preferences are changed.
+
+The Display tab offers 4:3 / 16:9 monitor correction and independent 0/8/16 NES
+pixel masks on each axis, with black, white and three original procedural
+border designs. See [overscan explanation and the requested reference
+images](overscan.md). This masks pixels without zooming the remaining picture.
+
+The active backend is **FCEUX**, not Mesen. Upstream Mesen has snapshots, but
+our old extracted Mesen build stripped that facility. This candidate instead
+serializes the active CPU/PPU/APU/mapper/controller state, including LQ audio
+filter history. `F5` saves the selected slot; `F8` restores it; **Resume slot**
+starts a fresh player process from the chosen file. The previous slot remains
+as `.bak`. States are private `.zzs` files, tied to ROM content and a state ABI,
+not compatible with desktop Mesen `.mst` or FCEUX `.fcs` files. CRC-like FNV
+checks catch accidental corruption; these files are not an authenticated or
+hardened untrusted-input format.
+
+The bridge transfers at most 32 KiB in the existing owned save area; no ARM,
+OS, function pointers or framebuffer state is serialized. Fullscreen ACK/lock
+and audio completion precede save/load. Upstream mapper90's state table saved
+only four of eight CHR low registers; the opt-in preparation patch saves all
+eight. Pinned vendor files are unchanged. See `scripts/fceux_states.py`.
+
+MUI patterns are adapted from [xSysInfo](https://github.com/SkiltonUSA/xSysInfo),
+BSD-2-Clause, with its notice retained in `LICENSE-xSysInfo`. Emulation remains
+pinned FCEUX GPL-2.0-or-later; this integration is GPL-3.0-or-later.
+
 ## 0.2.0-rc1: input, profiling and Workbench package
 
 New joystick support through lowlevel.library, controller artwork and a
