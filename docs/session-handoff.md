@@ -133,3 +133,10 @@ and ZZTemperature present. No crash/reboot.
 
 Evidence: `amiga/records/2026-10-10/fceux-release/`. Standalone native/ARM model
 tests pass and generated executable is byte-identical to the deployed binary.
+
+Published prerelease `v0.2.0-rc1` at
+https://github.com/SkiltonUSA/ZZNes-ARM-68K/releases/tag/v0.2.0-rc1 .
+ZIP, executable, corresponding source, ReadMe and checksums uploaded; all five
+GitHub asset SHA-256 digests and sizes matched local files. Release source
+commit `ff6d481b33a00bf313b6a7034661f853e7028a4f`. Temporary transfer server
+55031 stopped after installation; Amiga left at Workbench, no Core1 app active.

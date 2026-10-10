@@ -1,0 +1,38 @@
+{
+  "url": "https://github.com/SkiltonUSA/ZZNes-ARM-68K/releases/tag/v0.2.0-rc1",
+  "tag": "v0.2.0-rc1",
+  "prerelease": true,
+  "target": "ff6d481b33a00bf313b6a7034661f853e7028a4f",
+  "assets": [
+    {
+      "name": "ReadMe.txt",
+      "size": 4278,
+      "digest": "sha256:f29ac85a30ee115cdf1f4473464e8777c6cdcc70f2b76ffc6ea3f28a40670cbb",
+      "browser_download_url": "https://github.com/SkiltonUSA/ZZNes-ARM-68K/releases/download/v0.2.0-rc1/ReadMe.txt"
+    },
+    {
+      "name": "SHA256SUMS.txt",
+      "size": 353,
+      "digest": "sha256:5527252ca23dfe69fb61f433c9493ee2f7d42cbca1de84fec3bc1a869f73d18d",
+      "browser_download_url": "https://github.com/SkiltonUSA/ZZNes-ARM-68K/releases/download/v0.2.0-rc1/SHA256SUMS.txt"
+    },
+    {
+      "name": "ZZFceux-0.2.0-rc1",
+      "size": 275216,
+      "digest": "sha256:283b8c69f426da7901f555214344f7c4052766e093d946e87be747e0c16e8f74",
+      "browser_download_url": "https://github.com/SkiltonUSA/ZZNes-ARM-68K/releases/download/v0.2.0-rc1/ZZFceux-0.2.0-rc1"
+    },
+    {
+      "name": "ZZFceux-0.2.0-rc1.zip",
+      "size": 165781,
+      "digest": "sha256:8aceff0fc928d9e5c296eeee6049cff958e5f9d8069193210aac01411bfad3da",
+      "browser_download_url": "https://github.com/SkiltonUSA/ZZNes-ARM-68K/releases/download/v0.2.0-rc1/ZZFceux-0.2.0-rc1.zip"
+    },
+    {
+      "name": "ZZNes-ARM-68K-0.2.0-rc1-source.tar.gz",
+      "size": 1690334,
+      "digest": "sha256:dd1ae90cb8495c65f4ccaf5181a4adbce1ee3a5b0306b9df1cbfe389b58a09f2",
+      "browser_download_url": "https://github.com/SkiltonUSA/ZZNes-ARM-68K/releases/download/v0.2.0-rc1/ZZNes-ARM-68K-0.2.0-rc1-source.tar.gz"
+    }
+  ]
+}
