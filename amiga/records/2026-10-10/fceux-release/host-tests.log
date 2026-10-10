@@ -1,0 +1,4 @@
+PASS actual audio worker: short flush, 1838 ordered blocks and forced partial flush, ring wrap, allocation/open failures, cancellation, device error, resource cleanup
+PASS all 65536 input indices, four formats, alpha/emphasis and output guards match generic packer
+PASS 200000 triple-slot handoffs, ACK wrap, pending protection, unexpected ACK rejection
+PASS generated FCEUX audio worker, bounded cadence and flip plan; no hardware accessed

@@ -1,0 +1,9 @@
+[OK] (no output)
+Traceback (most recent call last):
+  File "/Users/dskilton/conductor/workspaces/sixies_development/port-louis/.context/amiga/fceux-pipeline/run.py", line 34, in <module>
+    p=out/(name+'.log');m.fetch(f'SD032G:Dev/ZZFceuxPlayer/opt-{name}.log',p)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dskilton/conductor/workspaces/sixies_development/port-louis/amiga/records/2026-10-07/inventory/fetch.py", line 11, in fetch
+    size=next(e['size'] for e in j['entries'] if e['name'].lower()==name.lower())
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+StopIteration

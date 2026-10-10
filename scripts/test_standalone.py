@@ -36,4 +36,5 @@ run(*common, '-I' + str(OUT), 'tests/amiga/mesen_nes/audio_worker.c',
     '-o', OUT / 'audio-worker-test')
 run(OUT / 'audio-worker-test')
 run(sys.executable, 'tests/amiga/fceux_player/check_host.py')
+run(sys.executable, 'tests/amiga/fceux_player/check_compatibility.py')
 print('PASS standalone native checks; no hardware was accessed.')

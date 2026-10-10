@@ -2,14 +2,24 @@
 
 ## Current priority: NES performance and timing
 
-Keep the accepted FCEUX build available. Measure longer play, investigate a
-combined ARM emulation/presentation command, and preserve every-frame display,
-PCM sample order, bounded requests and clean Workbench return. Verify audio
-latency and synchronisation separately from AHI completion. Target sustained
-60 FPS; the accepted build measured 53.71/51.92 FPS in startup tests.
+The 0.2.0-rc1 pass completed timing histograms, a rejected flip-only scheduling
+experiment, joystick input, Workbench ROM selection, four original compatibility
+fixtures and release packaging. Keep the owner-accepted fast build available.
+The candidate measured 55.47 FPS on a reproducible 1,800-frame Mario Start
+sequence and 54.26 FPS for 300 SMW startup frames; no new speed gain or 60 FPS
+claim. See [release findings](../amiga/records/2026-10-10/fceux-release/).
 
-After performance/stability: joystick support and an application-local
-ZZ9000AX audio backend, without changing global AHI preferences.
+Next performance work should isolate AHI driver scheduling and the occasional
+long host stalls. Audio-disabled diagnostics reached 57.27 FPS, so audio is
+one contributor, not the only limiter. Preserve every frame/sample and all
+ownership/cache/teardown checks; measure latency and audible continuity.
+
+ZZ9000AX per-application AHI mode allocation passed for cafe0000/cafe0001
+without preference changes. Actual PCM streaming and physical audio acceptance
+remain to implement/test. Direct Core1-to-AX needs an explicit supported
+ownership/streaming interface; decoder PCM rings do not supply that contract.
+Joystick code and OS polling passed; physical controller mapping acceptance
+is pending. Broader mapper support remains a separate compatibility project.
 
 ## Future project: SNES on the ZZ9000 ARM
 

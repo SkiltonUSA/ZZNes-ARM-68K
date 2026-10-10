@@ -46,3 +46,12 @@ binaries remain unchanged. On 10 October 2026, the owner confirmed Mario Bros
 Fast picture and sound are good. This does not establish SMW acceptance,
 measured latency, exact A/V sync or 60 FPS; see the pipeline experiment record
 for tests and limitations.
+
+## 0.2.0-rc1 Workbench prerelease
+
+`fceux-player-0.2.0-rc1/ZZFceux`: 275,216 bytes, MD5
+`f0b62ec828adf96d0b905f8b9f3e6560`. Standalone build exactly matches physical
+Mario/SMW/original-fixture tests. Joystick input, Workbench icons/ROM drawer
+and timing diagnostics; accepted fast renderer/pacing preserved. No claimed
+new FPS gain, AX playback or owner acceptance of the physical controller.
+See the release findings and ReadMe for complete requirements and limits.

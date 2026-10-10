@@ -1,0 +1,46 @@
+[
+  {
+    "fixture": "original-nrom16-0.nes",
+    "prg_kib": 16,
+    "mirroring": 0,
+    "frames": 120,
+    "modes": [
+      "no-input",
+      "scripted Start"
+    ],
+    "native_and_sanitizer": "pass"
+  },
+  {
+    "fixture": "original-nrom16-1.nes",
+    "prg_kib": 16,
+    "mirroring": 1,
+    "frames": 120,
+    "modes": [
+      "no-input",
+      "scripted Start"
+    ],
+    "native_and_sanitizer": "pass"
+  },
+  {
+    "fixture": "original-nrom32-0.nes",
+    "prg_kib": 32,
+    "mirroring": 0,
+    "frames": 120,
+    "modes": [
+      "no-input",
+      "scripted Start"
+    ],
+    "native_and_sanitizer": "pass"
+  },
+  {
+    "fixture": "original-nrom32-1.nes",
+    "prg_kib": 32,
+    "mirroring": 1,
+    "frames": 120,
+    "modes": [
+      "no-input",
+      "scripted Start"
+    ],
+    "native_and_sanitizer": "pass"
+  }
+]

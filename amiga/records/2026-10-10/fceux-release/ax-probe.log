@@ -1,0 +1,31 @@
+AHI_MODE id=00020001 bits=14 channels=128 name=Paula:14 bit stereo++
+AHI_MODE id=00020002 bits=14 channels=128 name=Paula:Fast 14 bit stereo++ calibrated
+AHI_MODE id=00020003 bits=14 channels=128 name=Paula:14 bit stereo
+AHI_MODE id=00020004 bits=14 channels=128 name=Paula:Fast 14 bit stereo calibrated
+AHI_MODE id=00020005 bits=14 channels=128 name=Paula:14 bit mono
+AHI_MODE id=00020006 bits=14 channels=128 name=Paula:Fast 14 bit mono calibrated
+AHI_MODE id=00020007 bits=8 channels=128 name=Paula:8 bit stereo++
+AHI_MODE id=00020008 bits=8 channels=128 name=Paula:Fast 8 bit stereo++
+AHI_MODE id=00020009 bits=8 channels=128 name=Paula:8 bit stereo
+AHI_MODE id=0002000a bits=8 channels=128 name=Paula:Fast 8 bit stereo
+AHI_MODE id=0002000b bits=8 channels=128 name=Paula:8 bit mono
+AHI_MODE id=0002000c bits=8 channels=128 name=Paula:Fast 8 bit mono
+AHI_MODE id=0002000d bits=14 channels=128 name=Paula:HiFi 14 bit stereo++ calibrated
+AHI_MODE id=0002000e bits=14 channels=128 name=Paula:HiFi 14 bit stereo calibrated
+AHI_MODE id=0002000f bits=14 channels=128 name=Paula:HiFi 14 bit mono calibrated
+AHI_MODE id=00020010 bits=8 channels=128 name=Paula:HiFi 8 bit stereo++
+AHI_MODE id=00020011 bits=8 channels=128 name=Paula:HiFi 8 bit stereo
+AHI_MODE id=00020012 bits=8 channels=128 name=Paula:HiFi 8 bit mono
+AHI_MODE id=00020018 bits=8 channels=4 name=Paula:DMA 8 bit stereo
+AHI_MODE id=00010001 bits=8 channels=128 name=Filesave:HiFi 8 bit mono, 8SVX
+AHI_MODE id=00010002 bits=16 channels=128 name=Filesave:HiFi 16 bit stereo++, AIFF
+AHI_MODE id=00010003 bits=16 channels=128 name=Filesave:HiFi 16 bit mono, AIFF
+AHI_MODE id=00010004 bits=16 channels=128 name=Filesave:HiFi 16 bit stereo++, AIFC
+AHI_MODE id=00010005 bits=16 channels=128 name=Filesave:HiFi 16 bit mono, AIFC
+AHI_MODE id=00010006 bits=16 channels=128 name=Filesave:HiFi 16 bit stereo++, Studio 16
+AHI_MODE id=00010007 bits=16 channels=128 name=Filesave:HiFi 16 bit mono, Studio 16
+AHI_MODE id=cafe0000 bits=16 channels=1 name=ZZ9000AX:16 bit Stereo++
+AX_ALLOC mode=cafe0000 success=1 (no playback)
+AHI_MODE id=cafe0001 bits=16 channels=1 name=ZZ9000AX:16 bit Stereo
+AX_ALLOC mode=cafe0001 success=1 (no playback)
+AX_PROBE found=1; global preferences unchanged; no PCM or Core1 access

@@ -28,4 +28,7 @@ for name, path, includes in [
 if '#define NES_FRAME_PRESENT' in (OUT / 'wire.h').read_text():
     import sys
     subprocess.run([sys.executable, ROOT / 'tests/amiga/fceux_player/check_pipeline.py'], check=True)
+if '#include "joystick.h"' in (OUT / 'host.c').read_text():
+    import sys
+    subprocess.run([sys.executable, ROOT / 'tests/amiga/fceux_player/check_release.py'], check=True)
 print('PASS generated FCEUX audio worker, bounded cadence and flip plan; no hardware accessed')

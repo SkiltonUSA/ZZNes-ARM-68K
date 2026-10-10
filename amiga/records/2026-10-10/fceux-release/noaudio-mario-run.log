@@ -1,0 +1,19 @@
+[OK] (no output)
+Traceback (most recent call last):
+  File "/Users/dskilton/conductor/workspaces/sixies_development/port-louis/scripts/analyze_fceux_player.py", line 11, in <module>
+    q,sub,complete,high=fields(r'AUDIO_TASK queued=(\d+) submitted=(\d+) completed=(\d+) highwater=(\d+) error=0 stopped=1');assert q==sub==complete and q>0
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dskilton/conductor/workspaces/sixies_development/port-louis/scripts/analyze_fceux_player.py", line 8, in fields
+    m=re.search(pattern,s);assert m,pattern;return list(map(int,m.groups()))
+                                  ^
+AssertionError: AUDIO_TASK queued=(\d+) submitted=(\d+) completed=(\d+) highwater=(\d+) error=0 stopped=1
+Traceback (most recent call last):
+  File "/Users/dskilton/conductor/workspaces/sixies_development/port-louis/.context/amiga/fceux-release/run.py", line 37, in <module>
+    r=subprocess.check_output([sys.executable,'scripts/analyze_fceux_player.py',str(p),local],text=True);(out/(name+'.json')).write_text(r);print(r)
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dskilton/.local/share/uv/python/cpython-3.12-macos-aarch64-none/lib/python3.12/subprocess.py", line 466, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dskilton/.local/share/uv/python/cpython-3.12-macos-aarch64-none/lib/python3.12/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/Users/dskilton/conductor/workspaces/sixies_development/port-louis/.tools/amiga-venv/bin/python', 'scripts/analyze_fceux_player.py', '.context/amiga/fceux-release/noaudio-mario300.log', '.context/attachments/yuC3Ij/011 Mario Bros.nes']' returned non-zero exit status 1.

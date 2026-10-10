@@ -107,3 +107,29 @@ Mario Bros Fast was left running; fullscreen was confirmed after launch. On
 are good. Acceptance covers this Mario Bros build, not SMW, measured latency,
 exact A/V sync or 60 FPS. Q/Esc exits. Check live Core1 ownership before launching
 another application. The temporary transfer server was stopped.
+
+
+## ZZFceux 0.2.0-rc1 — profiling/input/release pass (10 October 2026)
+
+Installed separately at `SD032G:Dev/ZZFceuxPlayer/Release-0.2.0-rc1/ZZFceux`,
+275,216 bytes, MD5 `f0b62ec828adf96d0b905f8b9f3e6560`. Workbench drawer/tool
+icons supply 65536-byte stack. Adjacent ROMs contains copies of the owner's
+two cartridges and an original Controller-Test.nes; no commercial ROM goes
+in the GitHub release. Old fast/optimized checksums unchanged.
+
+Mario scripted Start: 1800 frames, 55.47 FPS, 31 native hashes/cycles and all
+958349 samples; SMW startup 300 frames 54.26 FPS; original tone fixture 300
+VERIFY frames, six full framebuffer checks. Flips/RET1/MMU/registers/cache
+witness/release passed. Flip-only pacing brought no gain; accepted pacing
+retained. New per-stage histograms and lowlevel port-1 joystick support.
+Physical controller mapping remains unconfirmed (UNKNOWN/no button input).
+
+AX cafe0000/cafe0001 AHI allocation/free verified without playback or preference
+changes. Player still AHI unit 0 / Paula; AX streaming needs a separate backend.
+No direct Core1-to-AX interface assumed. Workbench icon -> Start -> ASL requester
+-> original fixture -> fullscreen -> Q worked; requester Cancel also released
+Core1. Final state Workbench only, owner port absent, Roadie/bridge/xSysInfo
+and ZZTemperature present. No crash/reboot.
+
+Evidence: `amiga/records/2026-10-10/fceux-release/`. Standalone native/ARM model
+tests pass and generated executable is byte-identical to the deployed binary.

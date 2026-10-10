@@ -10,6 +10,23 @@ ZZNes** and the newer, faster **FCEUX-based ZZFceux**. It includes sources,
 build scripts, tests, hardware evidence and the exact saved Amiga executables.
 It does not contain commercial ROMs, Amiga system software or firmware.
 
+## 0.2.0-rc1 Workbench prerelease
+
+[Download](https://github.com/SkiltonUSA/ZZNes-ARM-68K/releases/tag/v0.2.0-rc1)
+and [findings](amiga/records/2026-10-10/fceux-release/): joystick controls,
+Workbench icon/ROM drawer, original controller/tone fixture, timing histograms
+and deterministic Start diagnostics. Build/test with `SCHEDULING=release-profile`.
+
+Mario: **55.47 FPS**, 1,800 scripted-Start frames and 31 native state matches;
+SMW: **54.26 FPS**, 300 startup frames. All flips/audio and cleanup passed.
+These are different workloads; no new speed improvement or sustained 60 FPS
+claim. An alternative flip-only scheduler was tested and rejected.
+
+AX modes allocated successfully via application-specific AHI without changing
+preferences. **AX PCM playback is not implemented**; output remains AHI unit 0.
+Physical joystick acceptance is pending. The owner-accepted fast build remains
+available. See [ReadMe](amiga/fceux_player/ReadMe.txt) for requirements/limits.
+
 ## Latest ARM presentation work
 
 The new **ZZFceux-fast** candidate reduces ARM drawing from **3.32 ms to

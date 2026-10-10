@@ -1,0 +1,20 @@
+{
+  "version": "0.2.0-rc1",
+  "md5": "f0b62ec828adf96d0b905f8b9f3e6560",
+  "bytes": 275216,
+  "standalone_byte_identical_to_hardware": true,
+  "workbench": [
+    "OpenWorkbenchObjectA starts tool with icon stack",
+    "Start prompt accepted; ASL requester opened",
+    "Cancel button closes requester; owner port released",
+    "second launch selected original Controller-Test.nes; fullscreen opened; Q returned; owner port released"
+  ],
+  "joystick": "library opened/polled; UNKNOWN/no active buttons; physical owner mapping pending",
+  "ax": "cafe0000/cafe0001 per-application allocation/free succeeded; PCM playback not implemented or tested",
+  "selected_schedule": "retained accepted pacing; flip-only gave no measured benefit",
+  "amiga_after": "Workbench only; no Core1 owner; Roadie/bridge/xSysInfo/ZZTemperature present",
+  "unchanged_accepted_md5s": [
+    "4398f22b8de76db50aad845a384b8749",
+    "bf14d8e7dc20970d95fcd110cc9e6754"
+  ]
+}

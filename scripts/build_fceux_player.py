@@ -9,10 +9,13 @@ ROOT=bench.ROOT;SRC=ROOT/'amiga/fceux_player';FRONT=ROOT/'amiga/mesen_nes'
 OUT=ROOT/'.context/amiga/fceux-player'
 
 def prepare_frontend(scheduling="baseline"):
+ release=scheduling in ("release-profile","release-flip","release-noaudio")
+ flip_paced=scheduling=="release-flip"
+ noaudio=scheduling=="release-noaudio"
  pipeline=scheduling in ("pipeline","pipeline-fast")
  display_paced=scheduling=="display-paced"
- fast=scheduling in ("optimized-fast","pipeline-fast","display-paced")
- if scheduling in ("optimized","pipeline","optimized-fast","pipeline-fast","display-paced"):scheduling="deadline-cadence3"
+ fast=release or scheduling in ("optimized-fast","pipeline-fast","display-paced")
+ if release or scheduling in ("optimized","pipeline","optimized-fast","pipeline-fast","display-paced"):scheduling="deadline-cadence3"
  # Same display palette/emphasis approximation as the existing player.
  colors=[int(x,16) for x in re.findall(r'0x([0-9A-Fa-f]{8})',(FRONT/'palette.h').read_text())]
  full=[]
@@ -130,6 +133,9 @@ def prepare_frontend(scheduling="baseline"):
    start=s.index('  /* Bound the emulation rate without busy spinning.')
    end=s.index('  #ifndef NES_PLAYER',start)
    s=s[:start]+'  /* Output cadence is enforced before full_queue, overlapping next emulation with flip. */\n'+s[end:]
+  if release:
+   from fceux_release import frontend as release_frontend
+   s=release_frontend(name,s,flip_paced,noaudio)
   if pipeline:
    from fceux_pipeline import frontend
    s=frontend(name,s)
@@ -154,17 +160,18 @@ def prepare_frontend(scheduling="baseline"):
  (OUT/'nes_api.h').write_bytes((FRONT/'core.h').read_bytes())
  (OUT/'cartridge.h').write_bytes((SRC/'cartridge.h').read_bytes())
  (OUT/'pace.h').write_bytes((SRC/'pace.h').read_bytes())
+ for header in ("frame_profile.h","joystick.h"):(OUT/header).write_bytes((SRC/header).read_bytes())
  (OUT/'wait_profile.h').write_bytes((SRC/'wait_profile.h').read_bytes())
  (OUT/'demo.h').write_text('/* ROM selection is required; no built-in game. */\nstatic const uint8_t demo_rom[1]={0};\n')
 
 def main():
- p=argparse.ArgumentParser(description=__doc__);p.add_argument('--container-command');p.add_argument('--scheduling',choices=['baseline','optimized','optimized-fast','display-paced','pipeline','pipeline-fast','profile','locked-poll','deadline','deadline-audio','deadline-overlap','deadline-copy','deadline-batch','deadline-coalesce','deadline-cadence','deadline-cadence3','deadline-noaudio'],default='baseline');a=p.parse_args()
+ p=argparse.ArgumentParser(description=__doc__);p.add_argument('--container-command');p.add_argument('--scheduling',choices=['release-profile','release-flip','release-noaudio','baseline','optimized','optimized-fast','display-paced','pipeline','pipeline-fast','profile','locked-poll','deadline','deadline-audio','deadline-overlap','deadline-copy','deadline-batch','deadline-coalesce','deadline-cadence','deadline-cadence3','deadline-noaudio'],default='baseline');a=p.parse_args()
  bench.OUT=OUT;sources=bench.prepare();prepare_frontend(a.scheduling)
  bench.build_native(sources)
  flags=['-std=c++14','-DDINGUX','-DNES_PLAYER','-O3','-g','-fwrapv','-fno-exceptions','-fno-rtti','-Wno-deprecated-register','-Wno-writable-strings','-Wno-non-c-typedef-for-linkage','-I'+str(bench.SRC),'-I'+str(OUT)]
  for name,extra in [('player-native',[]),('player-sanitize',['-fsanitize=address,undefined','-fno-sanitize=array-bounds,pointer-overflow','-fno-sanitize-recover=all'])]:
   subprocess.run(['clang++',*flags,*extra,*sources,bench.SRC/'core.cpp',SRC/'adapter.cpp',SRC/'native.cpp','-o',OUT/name],cwd=ROOT,check=True)
- direct_source=OUT/'direct.cpp' if a.scheduling in ('optimized-fast','pipeline-fast','display-paced') else FRONT/'direct.cpp'
+ direct_source=OUT/'direct.cpp' if a.scheduling in ('release-profile','release-flip','release-noaudio','optimized-fast','pipeline-fast','display-paced') else FRONT/'direct.cpp'
  flags=bench.arm_objects(sources,worker=OUT/'worker.cpp',extras=[SRC/'adapter.cpp',direct_source],defines=['-DNES_PLAYER','-DNES_DIRECT','-I'+str(FRONT)])
  sys.path.insert(0,str(bench.SRC));from elf import unpack
  image,rel,entry=unpack((OUT/'fceux.elf').read_bytes());ld='/opt/homebrew/opt/lld/bin/ld.lld'
@@ -177,12 +184,12 @@ def main():
  subprocess.run([*command,'run','--rm','--platform','linux/amd64','-v',f'{ROOT}:/work','-w','/work',PIN['image'],
  'm68k-amigaos-gcc','-std=c99','-noixemul','-m68020','-O2','-g','-Wall','-Wextra','-Werror',
  '-DZZ_HEADLESS_BENCH','-DZZ_RELEASE','-DZZ_NES','-DZZ_BLOCK_SIZE=0x400000','-DZZ_CONTROL=0x80000',
- '-DZZ_APP_NAME="ZZFceux"','-DZZ_APP_VERSION="0.1-dev"','-DZZ_MIN_STACK=65536','-DMB_ALLOCATION=0x400000u','-DMB_MMU','-DMB_DCACHE','-DZZ_HEADLESS_MMU','-DZZ_HEADLESS_ICACHE',
+ '-DZZ_APP_NAME="ZZFceux"',('-DZZ_APP_VERSION="0.2.0-rc1"' if a.scheduling.startswith('release-') else '-DZZ_APP_VERSION="0.1-dev"'),'-DZZ_MIN_STACK=65536','-DMB_ALLOCATION=0x400000u','-DMB_MMU','-DMB_DCACHE','-DZZ_HEADLESS_MMU','-DZZ_HEADLESS_ICACHE',
  '-DNES_PLAYER','-DNES_DIRECT','-DNES_FULLSCREEN','-I'+str(relative),'-Iamiga/mesen_nes','-Iamiga/mesen_bench','-Iamiga/arm_debug','-Iamiga/arm_debug/zz9000',
  'amiga/arm_debug/zz9000/launcher.c',str(relative/'host.c'),'-lamiga','-o',str(relative/'ZZFceux')],cwd=ROOT,check=True)
  binary=OUT/'ZZFceux';assert binary.read_bytes()[:4]==b'\0\0\x03\xf3'
  recorded=[*SRC.rglob('*'),*bench.SRC.rglob('*'),*FRONT.glob('*.h'),FRONT/'worker.cpp',FRONT/'direct.cpp',FRONT/'host.c',
- ROOT/'scripts/build_fceux_player.py',ROOT/'scripts/fceux_pipeline.py',ROOT/'scripts/build_fceux_bench.py',*ROOT.joinpath('amiga/mesen_bench').glob('mmu*'),ROOT/'amiga/mesen_bench/runtime.c',
+ ROOT/'scripts/build_fceux_player.py',ROOT/'scripts/fceux_pipeline.py',ROOT/'scripts/fceux_release.py',ROOT/'scripts/build_fceux_bench.py',*ROOT.joinpath('amiga/mesen_bench').glob('mmu*'),ROOT/'amiga/mesen_bench/runtime.c',
  ROOT/'amiga/arm_debug/zz9000/launcher.c',ROOT/'amiga/arm_debug/zz9000/layout.h',ROOT/'amiga/arm_debug/zz9000/mapping_probe.S',ROOT/'amiga/arm_debug/protocol.h']
  record={'scheduling':a.scheduling,'upstream':bench.COMMIT,'scope':'FCEUX NTSC mapper0/90 player; old PPU quality0 32kHz mono; every frame displayed; XACP XX19c fullscreen; AHI0 DOS Process',
  'image_bytes':len(image),'relocations':len(rel),'flags':[x for x in flags if not x.startswith('-I')],'compiler':subprocess.check_output(['clang','--version'],text=True),

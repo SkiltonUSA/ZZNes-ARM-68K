@@ -13,6 +13,22 @@ GPL-3.0-or-later. Credit to [XANI's XACP platform and PicoDrive example](https:/
 for the documented XX19c firmware interface and fullscreen handoff approach.
 No PicoDrive source was copied. SDL is not used.
 
+## 0.2.0-rc1: input, profiling and Workbench package
+
+New joystick support through lowlevel.library, controller artwork and a
+Workbench ROM requester defaulting to the adjacent ROMs drawer. Release
+package includes an original controller/tone test cartridge only.
+Build with `--scheduling release-profile`; standalone `SCHEDULING=release-profile`.
+The old build modes and accepted executable remain available.
+
+Physical Mario scripted-Start run: **55.47 FPS / 1,800 frames**, 31 native state
+checks and all 958,349 audio samples completed; SMW startup: **54.26 FPS**.
+Flip-only scheduling did not improve performance. This release does not claim
+a further speed gain or sustained 60 FPS. AX mode allocation passed, but the
+player still uses AHI unit 0; physical joystick and new audio acceptance are
+pending. See [full findings](../records/2026-10-10/fceux-release/) and
+[distribution instructions](ReadMe.txt). Earlier sections below are historical.
+
 ## ARM presentation optimisation — later on 10 October 2026
 
 A separate `ZZFceux-fast` candidate uses direct 32-bit palette words for BGRA
