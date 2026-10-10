@@ -28,8 +28,9 @@ all frames displayed, including first-frame readback and final audio drain.
 The gains come from host polling, overlapping audio with ARM work, three-frame
 PCM batches and bounded frame pacing recovery. The loaded ARM image is
 unchanged. No frame skipping, sample dropping, global AHI changes or new NEON
-code. Batching can add audio latency; owner picture/sound acceptance of this
-new candidate is pending. The previous baseline remains installed and archived.
+code. The owner confirmed the optimised Mario Bros picture and sound are good.
+Batching can add audio latency; latency was not measured separately and SMW
+acceptance remains unconfirmed. The previous baseline remains installed and archived.
 
 Both ROM runs passed sampled native hashes/cycles, complete sample delivery,
 all-frame flips and RET1/MMU/cache/register cleanup. Start, pause/resume and

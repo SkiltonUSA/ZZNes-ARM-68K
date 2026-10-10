@@ -18,7 +18,7 @@
   "arm_loaded_image_unchanged_sha256": "044a501aa79996b29336310f1bb43a5380afe94e5b78f75611082fcad1642f83",
   "current_ahi_prefs_sha256": "69ab321259e398b3dfc1e7646b27568f68a3670bd77b988dd9746ba636218e8b",
   "ahi_device": "4.180, 31 October 1997, 68060 version",
-  "new_candidate_audible_acceptance": "pending",
+  "new_candidate_audible_acceptance": "Owner selected option 1 (Picture and sound are good) for live optimised Mario Bros on 2026-10-10; MD5 bf14d8e7dc20970d95fcd110cc9e6754. Does not establish SMW acceptance, measured latency or audible mute behaviour.",
   "standalone_build": "byte-identical MD5 bf14d8e7dc20970d95fcd110cc9e6754",
   "standalone_tests": "make test SCHEDULING=optimized passed; A9 model six generated-ROM frames, four presentation formats and cancellation passed (make -o player test-arm avoids rebuilding the tested player)"
 }

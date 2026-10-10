@@ -41,8 +41,9 @@ the app supplies 32 kHz signed 16-bit mono to AHI. This is not ZZ9000AX playback
 Both ROMs passed six sampled native frame/cycle comparisons, all-frame flip
 checks, first-frame readback and RET1/MMU/register/cache-witness cleanup.
 A separate 432-frame interactive test exercised Start, pause/resume, M and Q;
-all 230,003 samples completed and Workbench returned cleanly. Audible quality
-and latency of this new candidate still need owner confirmation. Gap-counter
+all 230,003 samples completed and Workbench returned cleanly. The owner then
+confirmed that the optimised Mario Bros picture and sound are good. Latency
+was not separately measured; this acceptance does not cover SMW. Gap-counter
 observations were 63/73, down from 299/299, but batching changes the number of
 requests: these counters are **not a comparable audible dropout rate**.
 

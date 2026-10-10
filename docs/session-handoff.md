@@ -12,7 +12,8 @@ Installed as `SD032G:Dev/ZZFceuxPlayer/ZZFceux-optimized` with separate
 `Start-MarioBros-Optimized`, `Start-SuperMarioWorld-Optimized` and
 `Start-ZZFceux-Optimized` launchers. Original default and its launchers are
 unchanged. Mario Bros Optimized was left running for owner picture/sound testing;
-acceptance remains pending. Q/Esc exits. Check live Core1 ownership and screens
+the owner subsequently confirmed both are good (option 1, 10 October). This
+does not establish SMW acceptance or measured latency. Q/Esc exits. Check live Core1 ownership and screens
 before launching any other ARM application. Roadie, bridge and xSysInfo remain
 present. Temporary transfer server was stopped. No global AHI/firmware changes.
 

@@ -91,7 +91,10 @@ preemption moved to Permit. The experiment is retained, not selected.
   model passes 200,000 handoffs. Models do not reproduce OS task scheduling.
 - No core/ARM changes: loaded payload/relocations/entry equality checked;
   existing runtime mapping, cache, nonce and teardown contracts preserved.
-- Candidate picture/sound and latency acceptance by the owner are pending.
+- The owner subsequently selected “Picture and sound are good” for the live
+  optimised Mario Bros build on 10 October. This is subjective acceptance of
+  that ROM/build; SMW, measured latency and audible mute behaviour remain
+  separately unconfirmed.
 
 Detailed evidence is in the adjacent closed logs, JSON summaries, controls
 records and `validation.json`. `variants/*/build.json` and `frontend.patch`

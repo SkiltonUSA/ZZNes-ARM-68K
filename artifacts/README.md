@@ -31,5 +31,6 @@ root, vendored directories and `licenses/`. Keep them with redistributed copies.
 name `ZZFceux-optimized` for the supplied launchers. Sources build with
 `--scheduling optimized` (alias `deadline-cadence3`). It is not the baseline.
 Mario Bros / SMW startup tests: 53.71 / 51.92 displayed FPS with AHI;
-owner audible acceptance pending. See 10 October records. The original
+owner confirmed optimised Mario Bros picture and sound are good. SMW and
+measured latency remain separately unconfirmed. See 10 October records. The original
 `fceux-player/` executable and source-provenance snapshot remain preserved.
