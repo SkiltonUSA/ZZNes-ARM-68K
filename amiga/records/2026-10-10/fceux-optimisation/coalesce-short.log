@@ -1,0 +1,53 @@
+OWNED amiga=50000040 arm_candidate=101f0040 size=4194304 nonce=4e86f080
+BOOTSTRAP amiga=40c65c00 arm=00e55c00 (P96 allocated/locked)
+MAP status=4d415031 SCTLR=08c50878 MIDR=413fc090 MPIDR=80000001
+MAPPING PASS (eight nonce-derived words)
+ARM ready=41524d31 SCTLR=08c5187d MIDR=413fc090 MPIDR=80000001
+CARTRIDGE mapper=0 PRG=16384 CHR=8192 battery=0
+STAGE ROM published; initializing core
+STAGE core initialized; calibrating clock
+STAGE opening display
+FULLSCREEN_BITMAP allocated=094ddc8c screen=094e0d80 width=320 height=240 allocated_height=720 screen_height=720 on_board=1/1 memory=0973def4/40cce480 pitch=1280/1280
+FULLSCREEN mode=50031303 native_format=9 depth=32 slots=3 geometry=320x240 NES=256x240
+BUFFERS pixels=00000000 indices=09619044 legacy_host=0
+AUDIO task: AHI unit 0, 32000 Hz mono; 8 queue slots, 3-frame prebuffer
+PLAYER FCEUX CPU/old PPU/APU, NTSC 32kHz quality0; P pause, M mute, Q/Esc quit; no frameskip
+ZZFCEUX START ROM=SD032G:Dev/ZZNesPlayer/ROMs/011 Mario Bros.nes bytes=24592 timer_hz=333335158 core_only=0
+FRAME n=1 cycles=29782 core_hash=b87d5dc5 output_hash=3fde1dc5 cpu_ppu_us=3179
+FRAME n=2 cycles=59564 core_hash=b87d5dc5 output_hash=811c9dc5 cpu_ppu_us=3176
+FRAME n=3 cycles=89344 core_hash=b87d5dc5 output_hash=811c9dc5 cpu_ppu_us=4337
+FULLSCREEN_END queued=3 flips=3 pending=-1 ack_wait_us=17602 fault=0
+AUDIO_TASK queued=1597 submitted=1597 completed=1597 highwater=3 error=0 stopped=1
+AUDIO_END samples=1597 gaps=0
+STAGE closing frontend; requesting ARM return next
+ZZFCEUX END exit=0 frames=3 elapsed_us=329638 core_total_us=10692 output_hash=811c9dc5
+DIRECT_END challenges=3 verified_frames=1 copy_us=9937
+PLAYER_PROFILE audio_prepare_us=889 flip_drain_us=53 audio_wait_us=53 audio_copy_us=658 audio_send_us=0
+ARM_REQUEST_PROFILE frame_us=13910 present_us=11640
+PRESENT_PROFILE pre_us=475 request_us=12115 post_us=201779
+AUDIO_IO_PROFILE send_us=25252 waitio_us=50
+WAIT_PROFILE kind=0 calls=0 requested_us=0 actual_us=0 max_us=0
+WAIT_PROFILE kind=1 calls=4 requested_us=4000 actual_us=4913 max_us=1273
+WAIT_PROFILE kind=2 calls=0 requested_us=0 actual_us=0 max_us=0
+WAIT_PROFILE kind=3 calls=0 requested_us=0 actual_us=0 max_us=0
+WAIT_PROFILE kind=4 calls=2 requested_us=2000 actual_us=2677 max_us=1344
+WAIT_PROFILE kind=5 calls=0 requested_us=0 actual_us=0 max_us=0
+PROFILE frames=3 request_us=14439 copy_us=0 colour_us=0 draw_us=214523 waits=6
+EXIT epilogue=52455431 cache_echoes=0 rounds=0
+CACHE original=08c50878 running=08c5187d restored=08c50878
+MMU_RESTORE phase=3 register_mismatches=00000000 cpsr_control=1d3 expected=1d3 ttbr=10234000 ccsidr=701fe019 witness_bad=0 mailbox_rounds=9
+REGISTER n=0 original=08c50878 restored=08c50878
+REGISTER n=1 original=08a50000 restored=08a50000
+REGISTER n=2 original=00200000 restored=00200000
+REGISTER n=3 original=00000000 restored=00000000
+REGISTER n=4 original=00020000 restored=00020000
+REGISTER n=5 original=00000001 restored=00000001
+REGISTER n=6 original=600101d3 restored=600101d3
+REGISTER n=7 original=00000006 restored=00000006
+REGISTER n=8 original=00000000 restored=00000000
+REGISTER n=9 original=00098aa4 restored=00098aa4
+REGISTER n=10 original=44e048e0 restored=44e048e0
+REGISTER n=11 original=00000000 restored=00000000
+REGISTER n=12 original=00000001 restored=00000001
+REGISTER n=13 original=72360000 restored=72360000
+LAUNCHER exit=0; owned memory released

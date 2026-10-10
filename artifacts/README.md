@@ -22,3 +22,14 @@ candidate for continued development.
 FCEUX startup scripts retain owner-specific volume and ROM paths. ROM files
 are excluded. The source license and runtime notices are in the repository
 root, vendored directories and `licenses/`. Keep them with redistributed copies.
+
+
+## 10 October scheduling candidate
+
+`fceux-player-optimized/ZZFceux` is the separately installed candidate:
+270,208 bytes, MD5 `bf14d8e7dc20970d95fcd110cc9e6754`. Copy to the Amiga under
+name `ZZFceux-optimized` for the supplied launchers. Sources build with
+`--scheduling optimized` (alias `deadline-cadence3`). It is not the baseline.
+Mario Bros / SMW startup tests: 53.71 / 51.92 displayed FPS with AHI;
+owner audible acceptance pending. See 10 October records. The original
+`fceux-player/` executable and source-provenance snapshot remain preserved.

@@ -35,4 +35,5 @@ audio = audio.split('static void player_audio_close')[0]
 run(*common, '-I' + str(OUT), 'tests/amiga/mesen_nes/audio_worker.c',
     '-o', OUT / 'audio-worker-test')
 run(OUT / 'audio-worker-test')
+run(sys.executable, 'tests/amiga/fceux_player/check_host.py')
 print('PASS standalone native checks; no hardware was accessed.')

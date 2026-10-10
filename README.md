@@ -12,34 +12,54 @@ It does not contain commercial ROMs, Amiga system software or firmware.
 
 ## Current result
 
-On the owner's A4000TX, ZZFceux displays about **44 FPS with audio enabled**.
-The owner confirmed that Mario Bros' picture and sound work. **60 FPS has not
-been achieved.** These are short startup tests, not whole-game compatibility
-or an assertion of perfect audio timing.
+The new **ZZFceux-optimized** candidate reaches **53.71 FPS for Mario Bros**
+and **51.92 FPS for Super Mario World**, with AHI audio enabled on the A4000TX.
+**60 FPS has not been achieved.** These are 300-frame startup workloads with
+all frames displayed, including first-frame readback and final audio drain.
 
 | 300-frame hardware workload | Mario Bros, mapper 0 | Super Mario World, mapper 90 |
 | --- | ---: | ---: |
-| ZZFceux displayed FPS, AHI enabled | **44.19** | **44.30** |
-| ARM emulation + player adapter | 5.813 ms/frame | 7.084 ms/frame |
-| ARM presentation | 3.324 ms/frame | 3.323 ms/frame |
-| FCEUX headless core time | 4.946 ms/frame | 6.104 ms/frame |
-| Earlier Mesen core time | 28.961 ms/frame | 31.141 ms/frame |
-| Ratio of measured core times | 5.86× | 5.10× |
+| Unchanged default, remeasured 10 October | 42.79 FPS | 43.89 FPS |
+| Optimised 68k scheduling + audio batching | **53.71 FPS** | **51.92 FPS** |
+| Improvement | **25.5%** | **18.3%** |
+| ARM emulation + adapter (unchanged) | 5.810 ms/frame | 7.083 ms/frame |
+| ARM presentation | 3.322 ms/frame | 3.323 ms/frame |
 
-The core-time gain comes from a different, lighter emulation model and settings,
-not NEON or SDL. Headless throughput is not displayed FPS. Earlier Mesen player
-measurements were 23.75/22.58 FPS, but had six full framebuffer readbacks versus
-one in normal ZZFceux play; that is not an identical instrumentation comparison.
+The gains come from host polling, overlapping audio with ARM work, three-frame
+PCM batches and bounded frame pacing recovery. The loaded ARM image is
+unchanged. No frame skipping, sample dropping, global AHI changes or new NEON
+code. Batching can add audio latency; owner picture/sound acceptance of this
+new candidate is pending. The previous baseline remains installed and archived.
 
-The frontend improved from 36.41 to 42.50 FPS by reducing diagnostic transfers,
-then to 44.19 FPS by bounded polling during the short locked presentation request.
-Other requests still yield. Every-frame mapping, ownership, command and flip
-checks remain. The measured runs completed all audio samples with no AHI errors,
-but both recorded 299 completed-predecessor audio gap observations. That counter
-alone neither proves nor rules out audible gaps. See the
-[player findings](amiga/fceux_player/README.md),
-[headless comparison](amiga/fceux_bench/README.md) and
-[original logs and owner acceptance](amiga/records/2026-10-09/fceux-player/).
+Both ROM runs passed sampled native hashes/cycles, complete sample delivery,
+all-frame flips and RET1/MMU/cache/register cleanup. Start, pause/resume and
+Q returned cleanly in a separate interactive test. This does not establish
+whole-game compatibility or perfect audible timing. See
+[the experiment record, including failed approaches](amiga/records/2026-10-10/fceux-optimisation/)
+and [player documentation](amiga/fceux_player/README.md).
+
+The earlier switch from Mesen to the lighter FCEUX model remains a separate
+improvement: headless core times changed from 28.961/31.141 ms to 4.946/6.104 ms.
+Those core-time ratios are not displayed FPS. Earlier Mesen player tests also
+used more diagnostic readbacks, so they are not identical instrumentation.
+
+### Try the optimised candidate
+
+[Saved executable and provenance](artifacts/fceux-player-optimized/),
+270,208 bytes, MD5 `bf14d8e7dc20970d95fcd110cc9e6754`.
+Copy its `ZZFceux` executable to the Amiga as `ZZFceux-optimized`, set it
+executable and run with a 65536-byte stack. It opens a ROM requester.
+The included `*-Optimized` scripts use the owner's existing SD032G paths;
+adapt those paths for another installation. Close all other Core1 applications.
+
+```sh
+make player SCHEDULING=optimized
+make test SCHEDULING=optimized
+```
+
+Omitting `SCHEDULING` builds the baseline. Intermediate scheduling modes are
+retained to reproduce experiments, including regressions. They are not defaults.
+The previous owner-accepted picture/sound baseline is described below.
 
 ## Hardware and XACP
 

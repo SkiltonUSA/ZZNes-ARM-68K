@@ -1,0 +1,191 @@
+[
+  {
+    "time": 1791648762.73276,
+    "tool": "amiga_list_screens",
+    "args": {},
+    "result": "Screens (1):\n\n  Workbench Screen  1920x800  8bpp  LORES  @895EF48"
+  },
+  {
+    "time": 1791648762.742094,
+    "tool": "amiga_list_ports",
+    "args": {},
+    "result": "Public Message Ports (19):\n  TSPORT\n  WORKBENCH\n  DEFICONS\n  ToolsDaemon 2.1a \u00a9 Nico Fran\u00e7ois\n  REXX\n  AREXX\n  MagicMenu\n  SIXIES.BRIDGE.NETWATCH\n  AssignWedge.port\n  ZZTemperature.1\n  NewMeter\n  POPO.1\n  QDock\n  ROADIE\n  TCP/IP Control\n  AMIGABRIDGE\n  XSYSINFO.1\n  ConClip.rendezvous\n  deficons"
+  },
+  {
+    "time": 1791648763.429746,
+    "tool": "amiga_run_script",
+    "args": {
+      "script": "Stack 65536\nRun >NIL: SD032G:Dev/ZZFceuxPlayer/ZZFceux-cadence3 0fc11010 RUN \"SD032G:Dev/ZZNesPlayer/ROMs/011 Mario Bros.nes\" 600 >SD032G:Dev/ZZFceuxPlayer/opt-controls.log\n",
+      "timeout": 15
+    },
+    "result": "[OK] (no output)"
+  },
+  {
+    "time": 1791648768.116672,
+    "tool": "amiga_list_screens",
+    "args": {},
+    "result": "Screens (2):\n\n  ZZFceux fullscreen  320x240  8bpp  LORES  @94E0CC8\n  Workbench Screen  1920x800  8bpp  LORES  @895EF48"
+  },
+  {
+    "time": 1791648768.4122229,
+    "tool": "amiga_input_key",
+    "args": {
+      "rawkey": "44",
+      "direction": "down"
+    },
+    "result": "Key 44 down"
+  },
+  {
+    "time": 1791648768.617194,
+    "tool": "amiga_input_key",
+    "args": {
+      "rawkey": "44",
+      "direction": "up"
+    },
+    "result": "Key 44 up"
+  },
+  {
+    "time": 1791648769.944784,
+    "tool": "amiga_list_screens",
+    "args": {},
+    "result": "Screens (2):\n\n  ZZFceux fullscreen  320x240  8bpp  LORES  @94E0CC8\n  Workbench Screen  1920x800  8bpp  LORES  @895EF48"
+  },
+  {
+    "time": 1791648770.136971,
+    "tool": "amiga_input_key",
+    "args": {
+      "rawkey": "19",
+      "direction": "down"
+    },
+    "result": "Key 19 down"
+  },
+  {
+    "time": 1791648770.3157172,
+    "tool": "amiga_input_key",
+    "args": {
+      "rawkey": "19",
+      "direction": "up"
+    },
+    "result": "Key 19 up"
+  },
+  {
+    "time": 1791648785.350858,
+    "tool": "amiga_list_screens",
+    "args": {},
+    "result": "Screens (2):\n\n  ZZFceux fullscreen  320x240  8bpp  LORES  @94E0CC8\n  Workbench Screen  1920x800  8bpp  LORES  @895EF48"
+  },
+  {
+    "time": 1791648785.370889,
+    "tool": "amiga_list_screens",
+    "args": {},
+    "result": "Screens (2):\n\n  ZZFceux fullscreen  320x240  8bpp  LORES  @94E0CC8\n  Workbench Screen  1920x800  8bpp  LORES  @895EF48"
+  },
+  {
+    "time": 1791648785.4174411,
+    "tool": "amiga_input_key",
+    "args": {
+      "rawkey": "19",
+      "direction": "down"
+    },
+    "result": "Key 19 down"
+  },
+  {
+    "time": 1791648785.62649,
+    "tool": "amiga_input_key",
+    "args": {
+      "rawkey": "19",
+      "direction": "up"
+    },
+    "result": "Key 19 up"
+  },
+  {
+    "time": 1791648786.9686441,
+    "tool": "amiga_list_screens",
+    "args": {},
+    "result": "Screens (2):\n\n  ZZFceux fullscreen  320x240  8bpp  LORES  @94E0CC8\n  Workbench Screen  1920x800  8bpp  LORES  @895EF48"
+  },
+  {
+    "time": 1791648787.074259,
+    "tool": "amiga_input_key",
+    "args": {
+      "rawkey": "37",
+      "direction": "down"
+    },
+    "result": "Key 37 down"
+  },
+  {
+    "time": 1791648787.785016,
+    "tool": "amiga_input_key",
+    "args": {
+      "rawkey": "37",
+      "direction": "up"
+    },
+    "result": "Key 37 up"
+  },
+  {
+    "time": 1791648788.7399192,
+    "tool": "amiga_list_screens",
+    "args": {},
+    "result": "Screens (2):\n\n  ZZFceux fullscreen  320x240  8bpp  LORES  @94E0CC8\n  Workbench Screen  1920x800  8bpp  LORES  @895EF48"
+  },
+  {
+    "time": 1791648788.828286,
+    "tool": "amiga_input_key",
+    "args": {
+      "rawkey": "37",
+      "direction": "down"
+    },
+    "result": "Key 37 down"
+  },
+  {
+    "time": 1791648789.17811,
+    "tool": "amiga_input_key",
+    "args": {
+      "rawkey": "37",
+      "direction": "up"
+    },
+    "result": "Key 37 up"
+  },
+  {
+    "time": 1791648789.616329,
+    "tool": "amiga_list_screens",
+    "args": {},
+    "result": "Screens (2):\n\n  ZZFceux fullscreen  320x240  8bpp  LORES  @94E0CC8\n  Workbench Screen  1920x800  8bpp  LORES  @895EF48"
+  },
+  {
+    "time": 1791648790.076742,
+    "tool": "amiga_input_key",
+    "args": {
+      "rawkey": "10",
+      "direction": "down"
+    },
+    "result": "Key 10 down"
+  },
+  {
+    "time": 1791648790.2387068,
+    "tool": "amiga_input_key",
+    "args": {
+      "rawkey": "10",
+      "direction": "up"
+    },
+    "result": "Key 10 up"
+  },
+  {
+    "time": 1791648793.264131,
+    "tool": "amiga_list_screens",
+    "args": {},
+    "result": "Screens (1):\n\n  Workbench Screen  1920x800  8bpp  LORES  @895EF48"
+  },
+  {
+    "time": 1791648793.276758,
+    "tool": "amiga_list_ports",
+    "args": {},
+    "result": "Public Message Ports (19):\n  TSPORT\n  WORKBENCH\n  DEFICONS\n  ToolsDaemon 2.1a \u00a9 Nico Fran\u00e7ois\n  REXX\n  AREXX\n  MagicMenu\n  SIXIES.BRIDGE.NETWATCH\n  AssignWedge.port\n  ZZTemperature.1\n  NewMeter\n  POPO.1\n  QDock\n  ROADIE\n  TCP/IP Control\n  AMIGABRIDGE\n  XSYSINFO.1\n  ConClip.rendezvous\n  deficons"
+  },
+  {
+    "time": 1791648793.2883909,
+    "tool": "amiga_ping",
+    "args": {},
+    "result": "Amiga alive - clients: 0, chip: 2021488 bytes, fast: 617199136 bytes"
+  }
+]

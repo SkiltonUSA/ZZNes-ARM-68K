@@ -13,6 +13,60 @@ GPL-3.0-or-later. Credit to [XANI's XACP platform and PicoDrive example](https:/
 for the documented XX19c firmware interface and fullscreen handoff approach.
 No PicoDrive source was copied. SDL is not used.
 
+## Scheduling optimisation — 10 October 2026
+
+A separate **ZZFceux-optimized** candidate now reaches **53.71 / 51.92 FPS**
+with AHI enabled on the same hardware. Fresh 300-frame comparisons:
+
+| Player | Mario Bros (mapper 0) | Super Mario World (mapper 90) |
+|---|---:|---:|
+| Unchanged installed baseline, measured today | 42.79 FPS | 43.89 FPS |
+| Optimised scheduling + three-frame audio requests | **53.71 FPS** | **51.92 FPS** |
+| Improvement | **25.5%** | **18.3%** |
+
+Every frame is displayed, the APU remains enabled and all 159,725 / 159,724
+samples complete. Timing includes initial framebuffer verification and final
+audio drain. These remain short, no-input startup tests; **60 FPS is not yet
+achieved**. The ARM loaded image, relocations and entry are unchanged. Gains
+come from bounded host polling, overlapping audio delivery with the next ARM
+command, batching three PCM blocks per AHI request, and recovering small frame
+pacing delays. No sample dropping/resampling or frameskip was introduced.
+
+The three-frame audio batches span about 50 ms at full NTSC speed and can add
+buffering latency. The producer retains its eight-slot queue. Pause and exit
+flush partial batches; pacing resets after pauses/long stalls. Global AHI
+preferences are unchanged: unit 0 still selects Paula Fast 8-bit mono at 8 kHz;
+the app supplies 32 kHz signed 16-bit mono to AHI. This is not ZZ9000AX playback.
+
+Both ROMs passed six sampled native frame/cycle comparisons, all-frame flip
+checks, first-frame readback and RET1/MMU/register/cache-witness cleanup.
+A separate 432-frame interactive test exercised Start, pause/resume, M and Q;
+all 230,003 samples completed and Workbench returned cleanly. Audible quality
+and latency of this new candidate still need owner confirmation. Gap-counter
+observations were 63/73, down from 299/299, but batching changes the number of
+requests: these counters are **not a comparable audible dropout rate**.
+
+Installed alongside the previous default (which is unchanged):
+
+```text
+Execute SD032G:Dev/ZZFceuxPlayer/Start-MarioBros-Optimized
+Execute SD032G:Dev/ZZFceuxPlayer/Start-SuperMarioWorld-Optimized
+Execute SD032G:Dev/ZZFceuxPlayer/Start-ZZFceux-Optimized
+```
+
+Candidate MD5: `bf14d8e7dc20970d95fcd110cc9e6754`.
+Build it explicitly, then test the generated host worker:
+
+```sh
+python3 scripts/build_fceux_player.py --scheduling optimized
+python3 tests/amiga/fceux_player/check_host.py
+```
+
+Omitting `--scheduling` retains the baseline. Intermediate experiment modes
+are preserved for reproduction, including unsuccessful ones; do not install
+them as defaults. See the [experiment record](../records/2026-10-10/fceux-optimisation/)
+for timings, failed approaches and validation limits.
+
 ## Physical results — 9 October 2026
 
 Final candidate: **265,660 bytes**, MD5 `ce77a7b5fd6a453d50a9a697b86d3ae9`.

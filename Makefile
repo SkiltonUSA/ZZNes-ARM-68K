@@ -1,10 +1,11 @@
+SCHEDULING ?= baseline
 PYTHON ?= python3
 MODEL_PYTHON ?= .context/venv/bin/python
 
 .PHONY: all player bench mesen test test-arm
 all: player
 player:
-	$(PYTHON) scripts/build_fceux_player.py
+	$(PYTHON) scripts/build_fceux_player.py --scheduling $(SCHEDULING)
 bench:
 	$(PYTHON) scripts/build_fceux_bench.py --host
 mesen:

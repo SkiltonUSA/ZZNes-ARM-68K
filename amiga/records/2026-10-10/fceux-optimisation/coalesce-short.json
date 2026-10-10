@@ -1,0 +1,14 @@
+{
+  "frames": 3,
+  "displayed_fps_including_readback_and_audio_drain": 9.100892494190598,
+  "elapsed_us": 329638,
+  "core_mean_ms": 3.564,
+  "audio_samples_completed": 1597,
+  "audio_gap_observations": 0,
+  "audio_highwater": 3,
+  "verified_framebuffers": 1,
+  "native_sampled_frames_match": 3,
+  "arm_present_mean_ms": 3.3123333333333336,
+  "clean_return": true,
+  "audio_note": "AHI completion verified; audible quality requires owner confirmation; gaps are completed-predecessor observations"
+}

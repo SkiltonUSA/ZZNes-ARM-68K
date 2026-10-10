@@ -1,3 +1,29 @@
+# Latest handoff — 10 October 2026
+
+ZZFceux optimisation completed: fresh baseline 42.79/43.89 FPS (Mario Bros/SMW),
+new candidate 53.71/51.92 FPS with audio and all frames displayed. Build with
+`make player SCHEDULING=optimized`; default build remains baseline. Saved
+candidate is `artifacts/fceux-player-optimized/ZZFceux`, 270,208 bytes, MD5
+`bf14d8e7dc20970d95fcd110cc9e6754`. All changes are 68k scheduling/audio;
+loaded ARM payload/relocations/entry are unchanged. See the 10 October
+experiment record for failed variants, tests, timing limits and buffering cost.
+
+Installed as `SD032G:Dev/ZZFceuxPlayer/ZZFceux-optimized` with separate
+`Start-MarioBros-Optimized`, `Start-SuperMarioWorld-Optimized` and
+`Start-ZZFceux-Optimized` launchers. Original default and its launchers are
+unchanged. Mario Bros Optimized was left running for owner picture/sound testing;
+acceptance remains pending. Q/Esc exits. Check live Core1 ownership and screens
+before launching any other ARM application. Roadie, bridge and xSysInfo remain
+present. Temporary transfer server was stopped. No global AHI/firmware changes.
+
+Both ROM benchmark runs and a 432-frame interactive controls run returned
+cleanly. Completed samples, native frame checks, flips and RET1/MMU/cache
+witness/14-register restoration passed. Audio unit 0 remains Paula Fast 8-bit
+mono / 8 kHz despite 32 kHz signed-16 input; Music Unit 255 selects ZZ9000AX but
+is not used. Device is AHI 4.180 68060. No audible-gap or 60 FPS claim.
+
+The earlier handoff below is retained as history, not current live state.
+
 # NES development handoff — 9 October 2026
 
 The latest working player is ZZFceux, installed at

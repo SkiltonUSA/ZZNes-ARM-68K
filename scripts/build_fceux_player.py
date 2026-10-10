@@ -8,7 +8,8 @@ from amiga import PIN,container_command
 ROOT=bench.ROOT;SRC=ROOT/'amiga/fceux_player';FRONT=ROOT/'amiga/mesen_nes'
 OUT=ROOT/'.context/amiga/fceux-player'
 
-def prepare_frontend():
+def prepare_frontend(scheduling="baseline"):
+ if scheduling=="optimized":scheduling="deadline-cadence3"
  # Same display palette/emphasis approximation as the existing player.
  colors=[int(x,16) for x in re.findall(r'0x([0-9A-Fa-f]{8})',(FRONT/'palette.h').read_text())]
  full=[]
@@ -52,6 +53,72 @@ def prepare_frontend():
    s=s.replace(' printf("PROFILE frames=', ' printf("PRESENT_PROFILE pre_us=%u request_us=%u post_us=%u\\n",present_pre_us,present_request_us,present_post_us);\n printf("PROFILE frames=')
   if name=='host.c':
    s=s.replace(' printf("PRESENT_PROFILE', ' printf("ARM_REQUEST_PROFILE frame_us=%u present_us=%u\\n",rate?(ULONG)(frame_reply_ticks*1000000u/rate):0,rate?(ULONG)(present_reply_ticks*1000000u/rate):0);\n printf("PRESENT_PROFILE')
+  if scheduling!='baseline':
+   if name=='host.c':
+    s=s.replace('#include "fullscreen.h"', '#include "wait_profile.h"\n#include "fullscreen.h"')
+    s=s.replace('if(op!=NES_PRESENT && !pause_us(1000))return 0;',
+      'if(op!=NES_PRESENT && '+('op!=NES_FRAME && ' if scheduling.startswith('deadline') else '!direct_locked && ' if scheduling=='locked-poll' else '')+'!profile_pause(1,1000))return 0;')
+    s=s.replace('!pause_us(target-elapsed)', '!profile_pause(4,target-elapsed)')
+    if scheduling.startswith('deadline'):
+     s=s.replace('if(elapsed<target && !profile_pause(4,target-elapsed))goto done;',
+       'while(elapsed<target){\n'
+       '     if(!full_poll())goto done;\n'
+       '     if(!direct_locked){events();if(quit)break;}\n'
+       '     if(!direct_locked && target-elapsed>4000u && !profile_pause(4,1000))goto done;\n'
+       '     elapsed=us()-frame_start;\n'
+       '    }')
+    if scheduling in ('deadline-cadence','deadline-cadence3'):
+     s=s.replace('static int player_audit;', 'static ULONG next_frame_us;\nstatic int player_audit;')
+     s=s.replace('if(player_paused){\n', 'if(player_paused){\n   next_frame_us=0;\n')
+     s=s.replace('frame_start=us();before=frame_start;',
+       'frame_start=us();next_frame_us=fc_next_deadline(frame_start,next_frame_us);before=frame_start;')
+     s=s.replace('target=16639u;', 'target=(LONG)(next_frame_us-frame_start)>0?next_frame_us-frame_start:0;')
+    if scheduling=='deadline-noaudio':s=s.replace('if(!core_only)player_audio_open();', 'if(!core_only && 0)player_audio_open();')
+    s=s.replace(' printf("PROFILE frames=', ' print_wait_profile();\n printf("PROFILE frames=')
+   if name=='fullscreen.h':
+    s=s.replace('!pause_us(1000)', '!profile_pause(3,1000)')
+    if scheduling.startswith('deadline'):
+     s=s.replace('if(!profile_pause(3,1000)){full_fault=1;return 0;}', '/* Bounded full_poll deadline; do not sleep under bitmap lock. */')
+    elif scheduling=='locked-poll':
+     s=s.replace('if(!profile_pause(3,1000))', 'if(full_slots.pending>=0 && !profile_pause(3,1000))')
+   if name=='player_audio.h':
+    s=s.replace('!pause_us(1000)', '!profile_pause(5,1000)')
+    if scheduling in ('deadline-audio','deadline-overlap','deadline-copy','deadline-batch','deadline-coalesce','deadline-cadence','deadline-cadence3'):s=s.replace('NP_Priority,0,', 'NP_Priority,5,')
+    if scheduling in ('deadline-copy','deadline-batch','deadline-coalesce','deadline-cadence','deadline-cadence3'):
+     start=s.index(' req[1]->ahir_Std.io_Device=');end=s.index(' audio_opened=1;',start)
+     s=s[:start]+' CopyMem(req[0],req[1],sizeof(*req[1])); /* AHI documented clone after OpenDevice. */\n'+s[end:]
+    s=s.replace('SendIO(', 'profile_send_io(').replace('WaitIO(', 'profile_wait_io(')
+    if scheduling in ('deadline-overlap','deadline-copy','deadline-batch','deadline-coalesce','deadline-cadence','deadline-cadence3'):
+     s=s.replace('static int player_audio_submit(void){return !audio_error;}', 'static int player_audio_submit(void){audio_wake();return !audio_error;}')
+     s=s.replace('Permit();audio_samples+=n;audio_wake();return 1;', 'Permit();audio_samples+=n;return 1;')
+    if scheduling in ('deadline-coalesce','deadline-cadence','deadline-cadence3'):
+     s=s.replace('data[i]=AllocVec(2048,', 'data[i]=AllocVec(4096,')
+     s=s.replace('available=audio_write-audio_read;Permit();', 'available=audio_write-audio_read;Permit();\n  if(!available)audio_force=0;',1)
+     s=s.replace('if(primed&&available&&', 'if(primed&&available&&(available>=2||audio_stop==2||audio_force)&&')
+     s=s.replace('ULONG available,n,index;', 'ULONG available,n,index,blocks,k;')
+     begin=s.index('   index=audio_read%AUDIO_SLOTS;');end=s.index('   req[slot]->ahir_Std.io_Command',begin)
+     s=s[:begin]+'''   /* Coalesce two immutable NES blocks without dropping/resampling PCM.
+    * A short final block is flushed by stop/pause. Never exceed 4096 bytes. */
+   blocks=available>=2?2:1;n=0;
+   for(k=0;k<blocks;k++){
+    ULONG count;
+    index=(audio_read+k)%AUDIO_SLOTS;count=audio_queue[index].count;
+    if(count>1024){audio_error=1;break;}
+    CopyMem(audio_queue[index].data,data[slot]+n*2,count*2);n+=count;
+   }
+   if(audio_error)break;
+   Forbid();audio_read+=blocks;Permit();
+'''+s[end:]
+    if scheduling=='deadline-cadence3':
+     s=s.replace('AllocVec(4096,', 'AllocVec(6144,')
+     s=s.replace('available>=2||', 'available>=3||')
+     s=s.replace('blocks=available>=2?2:1;', 'blocks=available>=3?3:available;')
+     s=s.replace('two immutable', 'three immutable').replace('4096 bytes', '6144 bytes')
+    if scheduling=='deadline-batch':
+     s=s.replace('int active[2]={0,0},opened=0,slot=0,primed=0;', 'int active[2]={0,0},opened=0,slot=0,primed=0,submit_forbidden=0;')
+     s=s.replace('submitted_count[slot]=n;profile_send_io', 'if(!submit_forbidden){Forbid();submit_forbidden=1;}\n   submitted_count[slot]=n;profile_send_io')
+     s=s.replace('  Wait(mask|', '  if(submit_forbidden){submit_forbidden=0;Permit();}\n  Wait(mask|')
+     s=s.replace('finish:\n for', 'finish:\n if(submit_forbidden){submit_forbidden=0;Permit();}\n for')
   s=s.replace('ZZNes','ZZFceux').replace('ZZNES','ZZFCEUX')
   (OUT/name).write_text(s)
   patch+=''.join(difflib.unified_diff(original.splitlines(True),s.splitlines(True),'mesen_nes/'+name,'fceux-player/'+name))
@@ -63,11 +130,13 @@ def prepare_frontend():
  (OUT/'frontend.patch').write_text(patch)
  (OUT/'nes_api.h').write_bytes((FRONT/'core.h').read_bytes())
  (OUT/'cartridge.h').write_bytes((SRC/'cartridge.h').read_bytes())
+ (OUT/'pace.h').write_bytes((SRC/'pace.h').read_bytes())
+ (OUT/'wait_profile.h').write_bytes((SRC/'wait_profile.h').read_bytes())
  (OUT/'demo.h').write_text('/* ROM selection is required; no built-in game. */\nstatic const uint8_t demo_rom[1]={0};\n')
 
 def main():
- p=argparse.ArgumentParser(description=__doc__);p.add_argument('--container-command');a=p.parse_args()
- bench.OUT=OUT;sources=bench.prepare();prepare_frontend()
+ p=argparse.ArgumentParser(description=__doc__);p.add_argument('--container-command');p.add_argument('--scheduling',choices=['baseline','optimized','profile','locked-poll','deadline','deadline-audio','deadline-overlap','deadline-copy','deadline-batch','deadline-coalesce','deadline-cadence','deadline-cadence3','deadline-noaudio'],default='baseline');a=p.parse_args()
+ bench.OUT=OUT;sources=bench.prepare();prepare_frontend(a.scheduling)
  bench.build_native(sources)
  flags=['-std=c++14','-DDINGUX','-DNES_PLAYER','-O3','-g','-fwrapv','-fno-exceptions','-fno-rtti','-Wno-deprecated-register','-Wno-writable-strings','-Wno-non-c-typedef-for-linkage','-I'+str(bench.SRC),'-I'+str(OUT)]
  for name,extra in [('player-native',[]),('player-sanitize',['-fsanitize=address,undefined','-fno-sanitize=array-bounds,pointer-overflow','-fno-sanitize-recover=all'])]:
@@ -91,7 +160,7 @@ def main():
  recorded=[*SRC.rglob('*'),*bench.SRC.rglob('*'),*FRONT.glob('*.h'),FRONT/'worker.cpp',FRONT/'direct.cpp',FRONT/'host.c',
  ROOT/'scripts/build_fceux_player.py',ROOT/'scripts/build_fceux_bench.py',*ROOT.joinpath('amiga/mesen_bench').glob('mmu*'),ROOT/'amiga/mesen_bench/runtime.c',
  ROOT/'amiga/arm_debug/zz9000/launcher.c',ROOT/'amiga/arm_debug/zz9000/layout.h',ROOT/'amiga/arm_debug/zz9000/mapping_probe.S',ROOT/'amiga/arm_debug/protocol.h']
- record={'upstream':bench.COMMIT,'scope':'FCEUX NTSC mapper0/90 player; old PPU quality0 32kHz mono; every frame displayed; XACP XX19c fullscreen; AHI0 DOS Process',
+ record={'scheduling':a.scheduling,'upstream':bench.COMMIT,'scope':'FCEUX NTSC mapper0/90 player; old PPU quality0 32kHz mono; every frame displayed; XACP XX19c fullscreen; AHI0 DOS Process',
  'image_bytes':len(image),'relocations':len(rel),'flags':[x for x in flags if not x.startswith('-I')],'compiler':subprocess.check_output(['clang','--version'],text=True),
  'sources':{str(p.relative_to(ROOT)):hashlib.sha256(p.read_bytes()).hexdigest() for p in recorded if p.is_file() and '__pycache__' not in p.parts},
  'outputs':{p.name:hashlib.sha256(p.read_bytes()).hexdigest() for p in [binary,OUT/'fceux.elf',OUT/'integration.patch',OUT/'frontend.patch']},'executable_md5':hashlib.md5(binary.read_bytes()).hexdigest()}

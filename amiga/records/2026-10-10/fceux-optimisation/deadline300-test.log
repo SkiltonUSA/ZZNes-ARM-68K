@@ -1,0 +1,26 @@
+[OK] (no output)
+{
+  "frames": 300,
+  "displayed_fps_including_readback_and_audio_drain": 35.01868538687768,
+  "elapsed_us": 8566855,
+  "core_mean_ms": 5.81013,
+  "audio_samples_completed": 159725,
+  "audio_gap_observations": 299,
+  "audio_highwater": 8,
+  "verified_framebuffers": 1,
+  "native_sampled_frames_match": 6,
+  "arm_present_mean_ms": 3.3202933333333333,
+  "clean_return": true,
+  "audio_note": "AHI completion verified; audible quality requires owner confirmation; gaps are completed-predecessor observations"
+}
+
+PLAYER_PROFILE audio_prepare_us=1024378 flip_drain_us=785289 audio_wait_us=925171 audio_copy_us=76382 audio_send_us=0
+ARM_REQUEST_PROFILE frame_us=1901332 present_us=1158400
+PRESENT_PROFILE pre_us=2225542 request_us=1305670 post_us=243187
+WAIT_PROFILE kind=0 calls=0 requested_us=0 actual_us=0 max_us=0
+WAIT_PROFILE kind=1 calls=4 requested_us=4000 actual_us=5633 max_us=1633
+WAIT_PROFILE kind=2 calls=0 requested_us=0 actual_us=0 max_us=0
+WAIT_PROFILE kind=3 calls=0 requested_us=0 actual_us=0 max_us=0
+WAIT_PROFILE kind=4 calls=0 requested_us=0 actual_us=0 max_us=0
+WAIT_PROFILE kind=5 calls=35 requested_us=35000 actual_us=911408 max_us=39174
+PROFILE frames=300 request_us=2278333 copy_us=0 colour_us=0 draw_us=3800907 waits=39
