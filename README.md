@@ -35,7 +35,9 @@ are in the [pipeline record](amiga/records/2026-10-10/fceux-pipeline/).
 270,212 bytes, MD5 `4398f22b8de76db50aad845a384b8749`. Install its executable
 as `ZZFceux-fast` for the supplied `*-Fast` launch scripts, or invoke it directly
 with a 65536-byte stack. Build/test with `SCHEDULING=optimized-fast`. Previous
-accepted binaries remain archived. Owner acceptance of this new build is pending.
+accepted binaries remain archived. On 10 October 2026, the owner confirmed
+Mario Bros Fast picture and sound are good. This does not establish SMW
+acceptance, measured latency, exact A/V sync or 60 FPS.
 
 [Future roadmap](docs/nes-roadmap.md): timing/audio work, joystick and ZZ9000AX,
 then a separate SNES feasibility benchmark. **SNES support is not implemented.**

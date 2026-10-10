@@ -102,6 +102,8 @@ The new standalone backup preserves the current work before further changes.
 Final deployment: Fast launchers installed with executable/script protection;
 installed `ZZFceux-fast` MD5 checked as `4398f22b8de76db50aad845a384b8749`, and
 prior `ZZFceux-optimized` checked unchanged as `bf14d8e7dc20970d95fcd110cc9e6754`.
-Mario Bros Fast was left running for owner picture/sound acceptance (pending);
-fullscreen was confirmed after launch. Q/Esc exits. Check live Core1 ownership
-before launching another application. The temporary transfer server was stopped.
+Mario Bros Fast was left running; fullscreen was confirmed after launch. On
+10 October 2026, the owner selected option 1 and confirmed its picture and sound
+are good. Acceptance covers this Mario Bros build, not SMW, measured latency,
+exact A/V sync or 60 FPS. Q/Esc exits. Check live Core1 ownership before launching
+another application. The temporary transfer server was stopped.

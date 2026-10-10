@@ -42,5 +42,7 @@ measured latency remain separately unconfirmed. See 10 October records. The orig
 `4398f22b8de76db50aad845a384b8749`. Copy as `ZZFceux-fast` for the supplied
 `*-Fast` launchers. Build with `SCHEDULING=optimized-fast`. ARM presentation
 falls to ~1.15 ms; displayed startup FPS is 53.99/53.80. Earlier accepted
-binaries remain unchanged. Owner acceptance of the fast binary is pending;
-see the pipeline experiment record for tests and limitations.
+binaries remain unchanged. On 10 October 2026, the owner confirmed Mario Bros
+Fast picture and sound are good. This does not establish SMW acceptance,
+measured latency, exact A/V sync or 60 FPS; see the pipeline experiment record
+for tests and limitations.

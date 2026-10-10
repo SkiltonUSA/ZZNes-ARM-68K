@@ -84,7 +84,11 @@ wall-clock interval was longer. Completion counters alone do not establish
 continuous real-time sound or end-to-end audio/video synchronisation. Title
 silence, game state and user pauses may affect what a listener notices. No
 loopback latency measurement was performed. The owner accepted picture/sound
-for that preceding build; the fast candidate requires its own acceptance.
+for that preceding build. On 10 October 2026, the owner also confirmed option 1
+for Mario Bros Fast: picture and sound are good, using the selected binary
+MD5 `4398f22b8de76db50aad845a384b8749`. This is visual/listening acceptance
+for Mario Bros, not SMW acceptance or a measurement of latency, exact A/V sync
+or 60 FPS.
 
 The selected candidate completed **18,000 frames in 318.48 seconds (5.3 minutes),
 56.52 FPS**, after Start was injected. All 18,000 flips and 9,583,486 samples

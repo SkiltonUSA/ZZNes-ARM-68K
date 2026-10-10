@@ -8,7 +8,7 @@
   "native_suite": "Standalone make test SCHEDULING=optimized-fast passed; generated audio worker and flip/MMU/direct helpers",
   "reproducibility": "Standalone build byte-identical to deployed candidate",
   "unchanged": "NES CPU/PPU/APU model, audio queue/batch size, accepted scheduling, shared allocation/MMU/cache policy, firmware, global AHI settings",
-  "owner_acceptance": "Pending for fast candidate; prior accepted scheduling build is confirmed separately",
+  "owner_acceptance": "2026-10-10: owner selected option 1, confirming Mario Bros Fast picture and sound are good for selected_md5. Does not establish SMW acceptance, measured latency, exact A/V sync or 60 FPS.",
   "soak": {
     "frames": 18000,
     "elapsed_us": 318479685,

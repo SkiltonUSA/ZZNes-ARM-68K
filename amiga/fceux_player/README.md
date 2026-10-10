@@ -39,9 +39,9 @@ separate commands, scheduling, audio batching and ownership/cache safeguards.
 Build with `--scheduling optimized-fast`. Candidate: **270,212 bytes**, MD5
 `4398f22b8de76db50aad845a384b8749`. Separate Shell launchers are
 `Start-MarioBros-Fast`, `Start-SuperMarioWorld-Fast`, `Start-ZZFceux-Fast` under
-`SD032G:Dev/ZZFceuxPlayer`; invoke with `Execute`. New-candidate owner picture
-and sound acceptance is pending. The earlier accepted optimisation's owner
-confirmation does not automatically apply to this binary.
+`SD032G:Dev/ZZFceuxPlayer`; invoke with `Execute`. On 10 October 2026, the owner confirmed option 1: Mario Bros Fast
+picture and sound are good. This acceptance applies to the binary above; it
+does not establish SMW acceptance, measured latency, exact A/V sync or 60 FPS.
 
 The prior accepted live session returned cleanly after 37,191 frames / 677.5 s
 (54.89 FPS), with all 19,801,079 audio samples completed. Its inputs and pauses
