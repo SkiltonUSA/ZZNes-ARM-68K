@@ -1,3 +1,24 @@
+# Current Beta handoff — 12 October 2026
+
+Current: ZZNES 0.5.0 Beta, `SD032G:Emulator/ZZNES/ZZNES`;
+player `ZZFceux-ui`. Exact installed binaries in `artifacts/beta-0.5.0/`.
+Current sources/build inputs in `development/beta-20261012/`. This supersedes
+the installation and performance statements in the historical entries below.
+
+See the main README for steady versus whole-loop frame rates, picture omission
+and audio scheduling results. The installed Beta includes accepted cadence,
+PAL handling, current MUI tabs, simplified About credits and per-game saves.
+Both libraries were visually checked and closed cleanly after migration.
+Old Dev folders are recovery copies; final observed machine state was Workbench,
+with no library/player/Core1 owner. During backup review, three NES ROM filenames were corrected to retain `(E)`
+PAL tags; current settings and ROM bytes were preserved. No emulator was
+launched and no new FPS measurement was performed. See the PAL path-fix record.
+
+[Build/backup scope](beta-backup.md) and
+[installed validation](../amiga/records/2026-10-12/emulator-beta/).
+
+---
+
 # Latest ARM presentation handoff — 10 October 2026
 
 ## Later 10 October: ARM pixel packing and pipeline experiments

@@ -15,3 +15,9 @@ test: player bench
 test-arm: player
 	$(PYTHON) scripts/make_nes_demo.py .context/amiga/fceux-player/standalone-demo.nes
 	$(MODEL_PYTHON) tests/amiga/fceux_player/check_arm.py .context/amiga/fceux-player/standalone-demo.nes 6
+
+.PHONY: beta verify-beta
+beta:
+	$(PYTHON) scripts/build_beta.py
+verify-beta:
+	$(PYTHON) scripts/verify_beta.py
