@@ -12,6 +12,12 @@ AmigaOS, ROM files, input, display coordination and AHI audio delivery.
 
 The release includes the Workbench application and player. Supply your own ROMs.
 
+## Screenshots
+
+![ZZNES Workbench interface](docs/screenshots/interface.png)
+
+![ZZNES gameplay](docs/screenshots/gameplay.png)
+
 ## Frame rates on the A4000TX
 
 | Game / emulator | Steady emulation FPS |
