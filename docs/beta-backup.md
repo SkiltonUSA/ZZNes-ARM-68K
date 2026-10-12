@@ -4,7 +4,7 @@
 SD-card image. No commercial ROMs, user saves or personal Library.cfg are included.
 
 - `artifacts/beta-0.5.0/`: exact verified installed application/player,
-  Workbench icon, credits and licences. No new GitHub Release was published.
+  Workbench icon, credits and licences. Packaged in the `v0.5.0-beta` release.
 - `development/beta-20261012/source/`: current editable adapters, shared MUI,
   cadence/compatibility/presentation code, relevant scripts and native tests,
   retaining workspace-relative paths. This snapshot supersedes earlier UI and
@@ -23,6 +23,9 @@ SD-card image. No commercial ROMs, user saves or personal Library.cfg are includ
 make verify-beta
 make beta
 ```
+
+Run `python3 scripts/package_beta.py` to package the archived executables as a
+Workbench ZIP with licence notices and checksums in `.context/releases/`.
 
 The default container command is Podman with the original Mac connection name.
 To use Docker instead:

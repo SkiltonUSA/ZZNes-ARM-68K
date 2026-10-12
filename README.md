@@ -5,16 +5,12 @@ A native MUI emulator library for **AmigaOS / ZZ9000 Cortex-A9**, using
 The ARM runs emulation and renders into ZZ9000 display buffers; the 68k handles
 AmigaOS, ROM files, input, display coordination and AHI audio delivery.
 
-**[Current Beta executables](artifacts/beta-0.5.0/)** ·
+**[Download 0.5.0 Beta](https://github.com/SkiltonUSA/ZZNes-ARM-68K/releases/tag/v0.5.0-beta)** ·
 [Build and backup](docs/beta-backup.md) ·
 [Library guide](docs/amiga-game-library-ui.md) ·
 [Compatibility and timing details](docs/amiga-zznes-pal-compatibility.md)
 
-This backup contains the exact installed Beta executables, editable source,
-verified build inputs, ARM payload and hardware test records. ROMs, personal
-library settings, save files, AmigaOS and firmware are not included. Older
-GitHub releases and build targets remain historical; they do not contain this
-Beta’s complete feature set.
+The release includes the Workbench application and player. Supply your own ROMs.
 
 ## Frame rates on the A4000TX
 
