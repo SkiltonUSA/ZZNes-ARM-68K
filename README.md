@@ -34,8 +34,8 @@ Beta’s complete feature set.
 - Five save slots **per game**, save deletion and continue/resume selection.
 - F5 saves, F8 loads, F9 captures library artwork; P pauses, Q/Escape returns.
 
-SNES save slots contain miniature screenshots. Existing NES state files do
-not contain embedded screenshots; its game library uses separate captures.
+Existing NES state files do not contain embedded screenshots; its game library
+uses separate captures.
 
 Requires the verified AmigaOS 3.2.3 / Picasso96 / MUI / AHI setup and compatible
 XX19c / XACP 1.7 firmware. Only one Core1 application may run at a time.
