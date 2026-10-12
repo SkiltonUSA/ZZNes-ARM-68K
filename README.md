@@ -42,20 +42,12 @@ XX19c / XACP 1.7 firmware. Only one Core1 application may run at a time.
 Other firmware combinations are not established by these tests. No global AHI
 or firmware changes are included. Direct ARM-to-ZZ9000AX audio is not implemented.
 
-## Compatibility and validation
+## Compatibility
 
 PAL/NTSC handling and mapper 0/1/2/4/5/90 support are implemented, within the
 header restrictions documented in the compatibility guide. A supported mapper
 is not a guarantee that every game works. Current audio is 32 kHz mono, with
 the NES three-display-slot handoff retained.
-
-The production cadence host passed automatic/manual snapshots, paused save/load
-and fresh-process resume. After migration, an existing user save loaded for
-120 frames and returned cleanly; its file checksum was unchanged.
-
-The recorded physical runs completed audio delivery, display acknowledgements,
-register/MMU/cache-witness restoration and owned-memory release without reported
-errors. Native/instruction-model tests do not substitute for these hardware checks.
 
 ## Build, backup and credits
 
