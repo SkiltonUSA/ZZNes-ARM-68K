@@ -48,7 +48,7 @@ Log: SD032G:Dev/ZZNes-Diagnostic/player.log
 The earlier accepted fullscreen preview remains in Dev/ZZNesFullscreen.
 
 Credits: Sour/Mesen (GPL-3.0-or-later); Shay Green/blip_buf
-(LGPL-2.1-or-later); XANI's XACP and deferred-PAN interface/design guidance.
+(LGPL-2.1-or-later); Xanai's XACP and deferred-PAN interface/design guidance.
 Port source: amiga/mesen_nes; deterministic adapters in scripts/.
 COPYING and COPYING.LGPL describe redistribution requirements.
 

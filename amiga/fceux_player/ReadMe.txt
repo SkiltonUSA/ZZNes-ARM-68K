@@ -72,7 +72,7 @@ Stages overlap ARM/audio work; do not sum host durations as ARM utilisation.
 ACK observation times include host scheduling and are not exact scanout times.
 
 CREDITS / SOURCE
-XANI / Xanxi-Amiga: XACP platform and ZZPicoDrive deferred-PAN guidance.
+Xanai / Xanxi-Amiga: XACP platform and ZZPicoDrive deferred-PAN guidance.
 https://github.com/Xanxi-Amiga/XACP-ZZ9000
 FCEUX contributors / Rezzy-dev: CPU/PPU/APU core (GPL-2.0-or-later).
 Our integration, launcher, original test ROM and artwork: GPL-3.0-or-later.

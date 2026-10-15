@@ -77,12 +77,12 @@ noncacheable. PCM/save output is cleaned before ACK, and incoming save RAM is
 invalidated before consumption. The host accesses published data only while
 ARM is idle. Firmware/MMU control registers are restored at exit.
 
-XANI's XX19c deferred-PAN/ACK design remains the fullscreen presentation path:
+Xanai's XX19c deferred-PAN/ACK design remains the fullscreen presentation path:
 three slots in an OS-owned P96 bitmap, ownership challenges under bitmap lock,
 ARM colour conversion directly into DDR, checked flip completion and bounded
 teardown. The palette now includes all emphasis combinations using Mesen's
 `EmulationSettings::GenerateFullColorPalette` calculation. No framebuffer
-addresses are hard-coded. No XANI/PicoDrive source was copied.
+addresses are hard-coded. No Xanai/PicoDrive source was copied.
 
 ## Validation and limits
 
@@ -192,7 +192,7 @@ and sustained-play measurements remain unreported.
 Upstream: [Sour/Mesen](https://github.com/SourMesen/Mesen), commit
 `e1180957b31979d4b82d613af9263fcb9442a685` (GPL-3.0-or-later), Shay Green's
 blip_buf (LGPL-2.1-or-later), and
-[XANI's XACP](https://github.com/Xanxi-Amiga/XACP-ZZ9000).
+[Xanai's XACP](https://github.com/Xanxi-Amiga/XACP-ZZ9000).
 Pinned original files, licenses and hashes are in `vendor/player/`; fixture
 hashes and upstream commit are in `tests/amiga/mesen_nes/player-fixtures.json`.
 No commercial ROMs are distributed.

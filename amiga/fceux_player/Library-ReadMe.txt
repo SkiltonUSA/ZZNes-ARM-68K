@@ -61,7 +61,7 @@ CREDITS
 Native MUI structure based on xSysInfo (BSD-2-Clause, LICENSE-xSysInfo).
 Emulation: Rezzy-dev/fceux, pinned 4d01530b6689b06a6d7cf0679b63625e3270ae9a,
 GPL-2.0-or-later. Integration: GPL-3.0-or-later.
-XANI's XACP-ZZ9000 platform and fullscreen/PAN examples made this possible.
+Xanai's XACP-ZZ9000 platform and fullscreen/PAN examples made this possible.
 See overscan.md for the requested Mesen-S #122 discussion and its credited
 comparison images. Those are SNES reference screenshots, not bundled bezels.
 

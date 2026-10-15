@@ -23,6 +23,6 @@ self-restart during a display/capture sequence remains unexplained.
 Mesen by Sour: https://github.com/SourMesen/Mesen
 Pinned source: e1180957b31979d4b82d613af9263fcb9442a685
 License: GPL-3.0-or-later; see COPYING.
-XACP by XANI: https://github.com/Xanxi-Amiga/XACP-ZZ9000
+XACP by Xanai: https://github.com/Xanxi-Amiga/XACP-ZZ9000
 Port/integration source and build instructions: amiga/mesen_nes/ in the
 local development workspace. This preview has not been published as a release.

@@ -34,7 +34,7 @@ owned memory. These are separate native-equivalence and hardware-return
 checks, not an independent proof of NES accuracy or whole-game compatibility.
 
 **Conclusion:** this is a strong candidate for a 60 Hz player. Next integrate
-FCEUX with the existing XANI-style fullscreen buffer flipping, controls and
+FCEUX with the existing Xanai-style fullscreen buffer flipping, controls and
 AHI frontend, then measure displayed frames and listen for gaps on hardware.
 No NEON, SDL or firmware performance change produced these results: the major
 change is the lighter FCEUX CPU/PPU/APU model and settings. Its compatibility
@@ -88,7 +88,7 @@ with native output. These tests do not establish physical cache coherence.
 ## XACP and memory contract
 
 Uses our existing XX19c/XACP 1.7 runtime mapping launcher and Core1-only private
-MMU/L1 contract, built on [XANI's XACP platform](https://github.com/Xanxi-Amiga/XACP-ZZ9000).
+MMU/L1 contract, built on [Xanai's XACP platform](https://github.com/Xanxi-Amiga/XACP-ZZ9000).
 No firmware modification, global L2 maintenance or second Core1 app.
 
 All offsets below are relative to an actual 4 MiB Exec-owned allocation,

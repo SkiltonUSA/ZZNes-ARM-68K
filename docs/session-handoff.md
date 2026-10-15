@@ -97,7 +97,7 @@ left Shift selects, P pauses and M mutes.
 The target is A4000TX / TF4060 / AmigaOS 3.2.3 / ZZ9000 / XX19c / XACP 1.7.
 AHI unit 0 uses Paula despite the physically installed ZZ9000AX. No global AHI,
 firmware, network, Roadie or AmigaBridge changes were made for the new player.
-Core1 must be exclusive, including stock XANI applications that may not publish
+Core1 must be exclusive, including stock Xanai applications that may not publish
 our `Sixies.ARM.Debug.Owner` port. That legacy identifier remains unchanged
 because it is part of runtime coordination, not repository branding.
 

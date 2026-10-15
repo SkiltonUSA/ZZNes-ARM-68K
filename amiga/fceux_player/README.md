@@ -9,7 +9,7 @@ available.
 Upstream: [Rezzy-dev/fceux](https://github.com/Rezzy-dev/fceux), pinned commit
 `4d01530b6689b06a6d7cf0679b63625e3270ae9a`, GPL-2.0-or-later. Selected original
 sources and license are in `../fceux_bench/vendor/`. Our integration is
-GPL-3.0-or-later. Credit to [XANI's XACP platform and PicoDrive example](https://github.com/Xanxi-Amiga/XACP-ZZ9000)
+GPL-3.0-or-later. Credit to [Xanai's XACP platform and PicoDrive example](https://github.com/Xanxi-Amiga/XACP-ZZ9000)
 for the documented XX19c firmware interface and fullscreen handoff approach.
 No PicoDrive source was copied. SDL is not used.
 

@@ -1,14 +1,14 @@
 # ZZPicoDriveMD on the A4000TX
 
-On 9 October 2026, we installed and tested XANI's unmodified ZZPicoDriveMD 1.1
+On 9 October 2026, we installed and tested Xanai's unmodified ZZPicoDriveMD 1.1
 with the owner's Sonic the Hedgehog ROM. The owner confirmed working picture
 and music. The final AHI session was left running.
 
 ## Installation and provenance
 
-[Xanxi / XANI's application](https://github.com/Xanxi-Amiga/XACP-ZZ9000/tree/8bb998e4f9cac88d519ccdf3559c8a404fb6381d/applications/emulators/ZZPicodrive/ZZPicodriveMD)
+[Xanxi / Xanai's application](https://github.com/Xanxi-Amiga/XACP-ZZ9000/tree/8bb998e4f9cac88d519ccdf3559c8a404fb6381d/applications/emulators/ZZPicodrive/ZZPicodriveMD)
 is pinned to commit `8bb998e4f9cac88d519ccdf3559c8a404fb6381d`.
-Credit XANI for the ZZ9000 integration and notaz/contributors for PicoDrive.
+Credit Xanai for the ZZ9000 integration and notaz/contributors for PicoDrive.
 This was an installation of upstream's executable, not our own emulator build.
 
 - Directory: `SD032G:Dev/ZZPicoDriveMD`.
