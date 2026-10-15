@@ -10,7 +10,7 @@ Selected upstream sources retain their notices and exact pinned hashes:
 | Mesen PPU and player | `amiga/mesen_nes/vendor/upstream.json` and `vendor/player/upstream.json`; upstream Mesen license |
 | blip_buf | Shay Green; notices in `amiga/mesen_nes/vendor/player/blip_buf.*`, `COPYING.LGPL` |
 
-Xanai's XACP firmware interfaces and ZZPicoDrive fullscreen example informed the
+Xanxi's XACP firmware interfaces and ZZPicoDrive fullscreen example informed the
 launcher and display work. No firmware or PicoDrive source is distributed here.
 Upstream source files are adapted reproducibly by build scripts; generated
 patches accompany the recorded builds.

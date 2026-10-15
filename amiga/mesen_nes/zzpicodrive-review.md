@@ -1,8 +1,8 @@
-# Guidance from Xanai's ZZPicoDriveMD 1.1
+# Guidance from Xanxi's ZZPicoDriveMD 1.1
 
 Reviewed 9 October 2026 at XACP-ZZ9000 commit
 `8bb998e4f9cac88d519ccdf3559c8a404fb6381d`. This is a source review, not a
-hardware test or installation of ZZPicoDriveMD. Credit: **Xanxi / Xanai** for
+hardware test or installation of ZZPicoDriveMD. Credit: **Xanxi** for
 the ZZ9000 integration; **notaz and contributors** for PicoDrive.
 
 [Upstream application and requirements](https://github.com/Xanxi-Amiga/XACP-ZZ9000/tree/8bb998e4f9cac88d519ccdf3559c8a404fb6381d/applications/emulators/ZZPicodrive/ZZPicodriveMD).
@@ -65,7 +65,7 @@ Framebuffer pages are not made cacheable. Our existing bounded private L1 policy
 remains active for emulation. Full bitmap snapshots on frame 1/every 60 frames
 are compared after unlocking, and error paths retain ownership until Core1 reset.
 
-Xanai's MMU implementation uses fixed firmware-reserved regions and cacheable
+Xanxi's MMU implementation uses fixed firmware-reserved regions and cacheable
 1 MiB sections for video. Those addresses and attributes must **not** be copied
 into our Exec-owned allocation model. The README specifies XX19a/XACP 1.6 or
 an explicitly compatible later firmware and a matching card driver. Our XX19c

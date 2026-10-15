@@ -37,7 +37,7 @@ This port does not include the desktop UI, save states, HD packs or audio.
   bitmap, then the host requests a window blit. Verified separately below;
   no fullscreen PAN/page flip, and the installed preview is unchanged.
 - Optional `--fullscreen`: three screen-bitmap slots, XX19c deferred-PAN/ACK
-  flipping following Xanai's approach, and CPU work overlapping the flip wait.
+  flipping following Xanxi's approach, and CPU work overlapping the flip wait.
   Separate installed fullscreen preview; see the fullscreen milestone below.
 
 No APU, sound, DMC, audio IRQ timing, PAL, mappers beyond NROM, battery saves,
@@ -159,7 +159,7 @@ kept reproducible; no commercial ROM is needed for this milestone.
 ## Performance and ARM-to-P96 experiment, 9 October 2026
 
 The next implementation milestone passed native/model checks and bounded
-physical tests. Xanai's **ZZPicoDriveMD 1.1** provides relevant guidance on ARM
+physical tests. Xanxi's **ZZPicoDriveMD 1.1** provides relevant guidance on ARM
 pixel conversion, buffer ownership, pacing and teardown. See the
 [source review and attribution](zzpicodrive-review.md). No upstream PicoDrive
 code or fixed firmware arena was copied into this GPL Mesen implementation.
@@ -253,7 +253,7 @@ verified restored state, cache witness/canaries and exit 0.
 ## Fullscreen deferred flipping, 9 October 2026
 
 Implemented `--fullscreen`, which implies direct presentation and unified `-O3`.
-This is an independent adaptation of Xanai's **XX19c deferred-PAN/ACK handoff**,
+This is an independent adaptation of Xanxi's **XX19c deferred-PAN/ACK handoff**,
 not copied PicoDrive source. The pinned firmware source confirms one-shot arm at
 USER3, PAN_HI/LO submission, USER4 acknowledgment at a vertical-blank edge, and
 clear/disarm on exit. No firmware/card-driver change was needed. The exact source

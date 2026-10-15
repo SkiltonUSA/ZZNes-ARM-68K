@@ -13,7 +13,7 @@ Q, Escape, a mouse click or window deactivation closes the fullscreen app.
 There is also a five-minute session limit. Sound is not implemented.
 
 ARM converts completed frames into three slots in the P96 screen bitmap.
-The host uses the deferred-PAN/ACK interface demonstrated by Xanai's
+The host uses the deferred-PAN/ACK interface demonstrated by Xanxi's
 ZZPicoDriveMD. The next CPU/PPU frame can overlap the vertical-blank wait.
 No per-frame window blit. 256x240 NES pixels are centred in 320x240 with
 32-pixel black side borders; there is no scaling.
@@ -28,7 +28,7 @@ No APU/audio timing, PAL, other mappers, saves or colour-emphasis display.
 No commercial ROMs are included.
 
 CPU/PPU: Mesen, GPL-3.0-or-later. See COPYING.
-Fullscreen handoff guidance: Xanxi / Xanai, XACP-ZZ9000 / ZZPicoDriveMD.
+Fullscreen handoff guidance: Xanxi, XACP-ZZ9000 / ZZPicoDriveMD.
 Our implementation is independent; no PicoDrive code is included.
 
 This is a separate development preview. The accepted windowed preview in
