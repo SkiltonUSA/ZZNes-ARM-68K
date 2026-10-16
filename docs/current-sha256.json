@@ -900,8 +900,8 @@
   "development/borders-20261016/source/ui_model.h": "5dc22cfcb9a9a74b4d80318853699c3f3c8a6b2eae7957e21f7db4590fe76dba",
   "development/borders-20261016/source/library_mui.h": "0fc8df8228815fdcdaf89353387f0f45c01c1562bdb4d4873cb2476c169153f0",
   "development/borders-20261016/source/library_launch.h": "fe7cec96d404d4c7667d9a5328753a3cbb16a2b28002a261652a94d98de750c7",
-  "development/borders-20261016/source/library_brand.h": "5effc93917d716f880f39468f2924327ab095670a141e786f36e81be6603c860",
-  "development/borders-20261016/source/library_style.h": "6594b1e1083880bd06d1adca49a7d07dbeaf8a7579c70cd8610736d185609ddc",
+  "development/borders-20261016/source/library_brand.h": "6daeccd525642bbb476f7ecff9c76084e379b140d3cbb5b4f28401a40162ea5a",
+  "development/borders-20261016/source/library_style.h": "f08268c5209f1f37e44edd443bfebaf3fd4567aecf15ecbe891bcdc9978f8f8e",
   "development/borders-20261016/source/icon.c": "56c7aa755e40f03239ad8b11dc9d7ef56a763a0820fe45c2cc184d3033cd7034",
   "development/borders-20261016/source/ui_path_index.h": "6a72b1cdf281f58403ead61c0dd0ecfdd3a4c8ddd87866ef741c5f7b71e8e6e1",
   "development/borders-20261016/source/library_keys.h": "8fd79392c2941e4e39bd9291337c8749c46552cf97aef420b0cea3534e18bb2c",
@@ -995,5 +995,8 @@
   "artifacts/beta-0.7.1/SHA256SUMS": "65306488a2c077adebeee7a07e56164256af3f66540d712e5f382c0cea72d17e",
   "artifacts/beta-0.7.1/LICENSE-puff": "969b7be2a930db0cdcb19b0e5b29ae6741f5a8f663b6dba6d647e12ec60cfa8e",
   "amiga/records/2026-10-16/border/native.txt": "e0f6b8e50bcc5c81f1021d21452f6627169434c5cb2301e5de583501d0459e7b",
-  "amiga/records/2026-10-16/border/results.json": "c1a3e79a7bb4002e9dcd5d905b609298d3923a12e443224eb84b07cea9e7b551"
+  "amiga/records/2026-10-16/border/results.json": "c1a3e79a7bb4002e9dcd5d905b609298d3923a12e443224eb84b07cea9e7b551",
+  "development/borders-20261016/source/launch-art.h": "8aae949eef3a4aa6cd13f94d77731a5f1e36d07351f46d3170fdc9dea93250c2",
+  "development/borders-20261016/assets/launch.png": "48029406d3502d22198b962729eaf0107fc4b791a3a9aea39225df61eec6e3d1",
+  "scripts/prepare_launch_art.py": "4d92efa77b91aa30e25494a3befad5a7a93bb27dfad7869b98bb48b0f3a5256b"
 }
