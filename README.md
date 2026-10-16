@@ -1,69 +1,64 @@
-# ZZNES — 0.5.0 Beta
+# ZZNES — 0.6.0 Beta
 
-A native MUI emulator library for **AmigaOS / ZZ9000 Cortex-A9**, using
-**FCEUX / FCE Ultra** and **[Xanxi’s XACP platform](https://github.com/Xanxi-Amiga/XACP-ZZ9000)**.
-The ARM runs emulation and renders into ZZ9000 display buffers; the 68k handles
-AmigaOS, ROM files, input, display coordination and AHI audio delivery.
+A native **MUI** game library for **AmigaOS and ZZ9000**, using **FCEUX / FCE Ultra**
+and **[Xanxi’s XACP platform](https://github.com/Xanxi-Amiga/XACP-ZZ9000)**.
+The Cortex-A9 runs emulation and fullscreen rendering. The 68k handles AmigaOS,
+files, controls, display coordination and batched AHI audio.
 
-**[Download 0.5.0 Beta](https://github.com/SkiltonUSA/ZZNes-ARM-68K/releases/tag/v0.5.0-beta)** ·
-[Build and backup](docs/beta-backup.md) ·
-[Library guide](docs/amiga-game-library-ui.md) ·
-[Compatibility and timing details](docs/amiga-zznes-pal-compatibility.md)
+**[Download 0.6.0 Beta](https://github.com/SkiltonUSA/ZZNes-ARM-68K/releases/tag/v0.6.0-beta)** ·
+[User guide](docs/current-guide.md) · [Changes](CHANGELOG.md) ·
+[Build and measurements](docs/current-development.md) · [Interface gallery](docs/current-interface.md)
 
-The release includes the Workbench application and player. Supply your own ROMs.
+![ZZNES interface](docs/screenshots/interface.png)
 
-## Screenshots
+## Features
 
-![ZZNES Workbench interface](docs/screenshots/interface.png)
+- ZZDosBox-style sidebar: Games, Display, Controllers, Save states and About.
+- Original logo, Workbench icon, startup panel and loading panel with controls.
+- Add ROMs or folders; search, favourites, recent games and captured artwork.
+- Rename titles and delete games with confirmation.
+- Automatic ROM discovery on mounted Workbench volumes, including USB storage.
+- Fullscreen or Workbench window; **Alt+Return** switches during play.
+- Optional FPS overlay and **Classic, Soft or Gradient** software scanlines.
+- Monitor aspect correction, borders, overscan masks and joystick testing.
+- Five save slots per game; save, load, resume and delete.
+- Guarded NEON stores and scanline dimming, with an integer fallback.
 
-![ZZNES gameplay](docs/screenshots/gameplay.png)
+## Requirements
 
-## Frame rates on the A4000TX
+- **ZZ9000** with compatible **XACP firmware**; tested on **XX19c / XACP 1.7**.
+- **Picasso96**, **AHI**, and **MUI 3.8 or compatible**, installed separately.
+- A writable application drawer and your own ROMs.
+- AmigaOS: tested on **3.2.3** with a TF4060-equipped A4000TX.
+
+The NES core reserves 4 MiB of ZZ9000 RAM, plus display and OS allocations.
+Only one Core1 application can run at a time.
+
+## Performance
+
+The established steady emulation measurements remain:
 
 | Game / emulator | Steady emulation FPS |
 | --- | ---: |
 | Contra — ZZNES | **59.893** |
 | Super Mario World — ZZSNES | **59.920** |
 
-[Benchmark details](docs/amiga-zznes-pal-compatibility.md) ·
-[SNES benchmark details](docs/amiga-zzsnes-pal-compatibility.md)
+Repeated 600-frame comparisons measured **12.3% less ARM presentation time**
+with scanlines off, and **33.8% less with Soft scanlines**.
+These are presentation-stage savings, not equivalent increases in game FPS.
+[Method, raw logs and limitations](docs/current-development.md).
 
-## Workbench library
+![ZZNES running in a Workbench window](docs/screenshots/window.png)
 
-- Games, Display, Controllers, Save states and About tabs.
-- ROM/folder import, search, recent history, favourites and local game snapshots.
-- Joystick test and fire mapping, 4:3/widescreen correction, borders and overscan masks.
-- Five save slots **per game**, save deletion and continue/resume selection.
-- F5 saves, F8 loads, F9 captures library artwork; P pauses, Q/Escape returns.
+## Compatibility and credits
 
-Existing NES state files do not contain embedded screenshots; its game library
-uses separate captures.
-
-**MUI 3.8 or a compatible version must be installed separately; MUI is not included.**
-
-Requires the verified AmigaOS 3.2.3 / Picasso96 / MUI / AHI setup and compatible
-XX19c / XACP 1.7 firmware. Only one Core1 application may run at a time.
-Other firmware combinations are not established by these tests. No global AHI
-or firmware changes are included. Direct ARM-to-ZZ9000AX audio is not implemented.
-
-## Compatibility
-
-PAL/NTSC handling and mapper 0/1/2/4/5/90 support are implemented, within the
-header restrictions documented in the compatibility guide. A supported mapper
-is not a guarantee that every game works. Current audio is 32 kHz mono, with
-the NES three-display-slot handoff retained.
-
-## Build, backup and credits
-
-Run `make verify-beta` to verify archived hashes and recalculate the frame-rate
-results from raw logs. `make beta` rebuilds the 68k player and MUI library from
-archived inputs, retaining the exact tested ARM payload. See
-[backup/build scope](docs/beta-backup.md) for the editable source snapshot and
-historical core rebuild paths. Neither command launches the Amiga.
+Automatic PAL/NTSC timing and mapper 0/1/2/4/5/90 support, subject to
+[cartridge restrictions](docs/amiga-zznes-pal-compatibility.md).
+Audio: 32 kHz mono through AHI.
 
 Development: **Codex assisted, Amiga-Bridge MCP**. Interface: **MUI**.
-Thanks to **Xanxi** for XACP and to the FCEUX/FCE Ultra and
-Snes9x/PocketSNES developers for their cores. Component licences and original
-attributions remain with their sources and executable packages.
+Thanks to **Xanxi** for XACP, and the **FCEUX / FCE Ultra** contributors for the core.
+The software scanline effects and NEON presentation work are shared with ZZDosBox;
+they do not require the separate ZZ9000 scanline application or an FPGA change.
 
-[Earlier README and measurements](docs/history/readme-before-beta-20261012.md).
+Component licences and notices are included. The FCEUX core is GPL-2.0-or-later.

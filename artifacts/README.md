@@ -1,3 +1,12 @@
+# Current: ZZNES 0.6.0 Beta
+
+`beta-0.6.0/` contains the checksum-verified installed launcher/player pair,
+Workbench icon and required licence notices. See `docs/current-build.json` and
+`docs/current-sha256.json` for source/artifact provenance. Older entries below
+are historical and do not describe the current default.
+
+---
+
 # Saved Amiga executables
 
 These are exact cached artifacts from the development workspace. They are not

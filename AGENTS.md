@@ -21,3 +21,7 @@ acceptance or real AmigaOS cleanup. Record failures as well as successes.
 The original installed Mesen baseline differs from the current source candidate;
 see artifacts/README.md. Never present an experimental binary as the default.
 Never commit commercial ROMs, credentials, firmware or Amiga system software.
+
+Current beta source/build inputs are in `development/beta-20261015/`; use
+`make current-arm`, `make test-current` and `make verify-current` for that path.
+The old Mesen experiments and their recorded baselines remain historical.

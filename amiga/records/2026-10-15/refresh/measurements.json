@@ -1,0 +1,110 @@
+[
+  {
+    "console": "ZZNES",
+    "file": "ZZNES-bench-0-baseline.log",
+    "case": "baseline",
+    "presented": 569,
+    "arm_present_us": 2342.6555360281195,
+    "steady_emulation_fps": 59.098162047160336,
+    "steady_present_fps": 56.89253001080958
+  },
+  {
+    "console": "ZZNES",
+    "file": "ZZNES-bench-0-optimised.log",
+    "case": "optimised",
+    "presented": 578,
+    "arm_present_us": 2057.9307958477507,
+    "steady_emulation_fps": 60.222824450466724,
+    "steady_present_fps": 58.082128129174656
+  },
+  {
+    "console": "ZZNES",
+    "file": "ZZNES-bench-0-soft-neon.log",
+    "case": "soft-neon",
+    "presented": 577,
+    "arm_present_us": 2165.161178509532,
+    "steady_emulation_fps": 60.23370678231538,
+    "steady_present_fps": 58.19366852886406
+  },
+  {
+    "console": "ZZNES",
+    "file": "ZZNES-bench-0-soft-scalar.log",
+    "case": "soft-scalar",
+    "presented": 574,
+    "arm_present_us": 3268.2160278745646,
+    "steady_emulation_fps": 60.24096385542169,
+    "steady_present_fps": 57.75005775005775
+  },
+  {
+    "console": "ZZNES",
+    "file": "ZZNES-bench-1-baseline.log",
+    "case": "baseline",
+    "presented": 577,
+    "arm_present_us": 2342.3310225303294,
+    "steady_emulation_fps": 60.25548324897566,
+    "steady_present_fps": 57.75339301183944
+  },
+  {
+    "console": "ZZNES",
+    "file": "ZZNES-bench-1-optimised.log",
+    "case": "optimised",
+    "presented": 561,
+    "arm_present_us": 2053.898395721925,
+    "steady_emulation_fps": 60.248222677431016,
+    "steady_present_fps": 56.970318464080215
+  },
+  {
+    "console": "ZZNES",
+    "file": "ZZNES-bench-1-soft-neon.log",
+    "case": "soft-neon",
+    "presented": 576,
+    "arm_present_us": 2166.199652777778,
+    "steady_emulation_fps": 60.23370678231538,
+    "steady_present_fps": 57.636887608069166
+  },
+  {
+    "console": "ZZNES",
+    "file": "ZZNES-bench-1-soft-scalar.log",
+    "case": "soft-scalar",
+    "presented": 538,
+    "arm_present_us": 3269.2434944237916,
+    "steady_emulation_fps": 60.23370678231538,
+    "steady_present_fps": 54.20347986340723
+  },
+  {
+    "console": "ZZNES",
+    "file": "ZZNES-bench-2-baseline.log",
+    "case": "baseline",
+    "presented": 563,
+    "arm_present_us": 2342.3019538188278,
+    "steady_emulation_fps": 60.2990834539315,
+    "steady_present_fps": 57.08088361207832
+  },
+  {
+    "console": "ZZNES",
+    "file": "ZZNES-bench-2-optimised.log",
+    "case": "optimised",
+    "presented": 542,
+    "arm_present_us": 2053.5442804428044,
+    "steady_emulation_fps": 60.412009907569626,
+    "steady_present_fps": 54.86065393899495
+  },
+  {
+    "console": "ZZNES",
+    "file": "ZZNES-bench-2-soft-neon.log",
+    "case": "soft-neon",
+    "presented": 575,
+    "arm_present_us": 2165.44,
+    "steady_emulation_fps": 60.23733510029516,
+    "steady_present_fps": 57.971014492753625
+  },
+  {
+    "console": "ZZNES",
+    "file": "ZZNES-bench-2-soft-scalar.log",
+    "case": "soft-scalar",
+    "presented": 574,
+    "arm_present_us": 3268.705574912892,
+    "steady_emulation_fps": 60.226451457480124,
+    "steady_present_fps": 57.860325175027484
+  }
+]

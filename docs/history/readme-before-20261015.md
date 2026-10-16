@@ -1,0 +1,69 @@
+# ZZNES — 0.5.0 Beta
+
+A native MUI emulator library for **AmigaOS / ZZ9000 Cortex-A9**, using
+**FCEUX / FCE Ultra** and **[Xanxi’s XACP platform](https://github.com/Xanxi-Amiga/XACP-ZZ9000)**.
+The ARM runs emulation and renders into ZZ9000 display buffers; the 68k handles
+AmigaOS, ROM files, input, display coordination and AHI audio delivery.
+
+**[Download 0.5.0 Beta](https://github.com/SkiltonUSA/ZZNes-ARM-68K/releases/tag/v0.5.0-beta)** ·
+[Build and backup](docs/beta-backup.md) ·
+[Library guide](docs/amiga-game-library-ui.md) ·
+[Compatibility and timing details](docs/amiga-zznes-pal-compatibility.md)
+
+The release includes the Workbench application and player. Supply your own ROMs.
+
+## Screenshots
+
+![ZZNES Workbench interface](docs/screenshots/interface.png)
+
+![ZZNES gameplay](docs/screenshots/gameplay.png)
+
+## Frame rates on the A4000TX
+
+| Game / emulator | Steady emulation FPS |
+| --- | ---: |
+| Contra — ZZNES | **59.893** |
+| Super Mario World — ZZSNES | **59.920** |
+
+[Benchmark details](docs/amiga-zznes-pal-compatibility.md) ·
+[SNES benchmark details](docs/amiga-zzsnes-pal-compatibility.md)
+
+## Workbench library
+
+- Games, Display, Controllers, Save states and About tabs.
+- ROM/folder import, search, recent history, favourites and local game snapshots.
+- Joystick test and fire mapping, 4:3/widescreen correction, borders and overscan masks.
+- Five save slots **per game**, save deletion and continue/resume selection.
+- F5 saves, F8 loads, F9 captures library artwork; P pauses, Q/Escape returns.
+
+Existing NES state files do not contain embedded screenshots; its game library
+uses separate captures.
+
+**MUI 3.8 or a compatible version must be installed separately; MUI is not included.**
+
+Requires the verified AmigaOS 3.2.3 / Picasso96 / MUI / AHI setup and compatible
+XX19c / XACP 1.7 firmware. Only one Core1 application may run at a time.
+Other firmware combinations are not established by these tests. No global AHI
+or firmware changes are included. Direct ARM-to-ZZ9000AX audio is not implemented.
+
+## Compatibility
+
+PAL/NTSC handling and mapper 0/1/2/4/5/90 support are implemented, within the
+header restrictions documented in the compatibility guide. A supported mapper
+is not a guarantee that every game works. Current audio is 32 kHz mono, with
+the NES three-display-slot handoff retained.
+
+## Build, backup and credits
+
+Run `make verify-beta` to verify archived hashes and recalculate the frame-rate
+results from raw logs. `make beta` rebuilds the 68k player and MUI library from
+archived inputs, retaining the exact tested ARM payload. See
+[backup/build scope](docs/beta-backup.md) for the editable source snapshot and
+historical core rebuild paths. Neither command launches the Amiga.
+
+Development: **Codex assisted, Amiga-Bridge MCP**. Interface: **MUI**.
+Thanks to **Xanxi** for XACP and to the FCEUX/FCE Ultra and
+Snes9x/PocketSNES developers for their cores. Component licences and original
+attributions remain with their sources and executable packages.
+
+[Earlier README and measurements](docs/history/readme-before-beta-20261012.md).
