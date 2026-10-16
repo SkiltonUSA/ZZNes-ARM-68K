@@ -31,7 +31,7 @@
     "fceux.elf": "107552de4bc7f4a08a5bd8644dca0d1634786853e43c2a48659dd7abc85690ce"
   },
   "snapshot_dir": "development/beta-20261015",
-  "artifact_dir": "artifacts/beta-0.6.1",
+  "artifact_dir": "artifacts/beta-0.6.2",
   "player": "ZZFceux-ui",
   "image": "docker.io/amigadev/crosstools@sha256:93ca1a47903b61873f6638881b44f9f2d6086a39f1b9b916a26faff3a8ea4d3d",
   "arm_sources": [
@@ -58,6 +58,6 @@
     "development/beta-20261015/build-inputs/player/neon_state.S"
   ],
   "arm_flags": [],
-  "library_snapshot_dir": "development/library-20261016",
-  "launcher_version": "0.6.1 Beta"
+  "library_snapshot_dir": "development/logo-20261016",
+  "launcher_version": "0.6.2 Beta"
 }
