@@ -1,6 +1,6 @@
 {
   "console": "ZZNES",
-  "version": "0.6.0 Beta",
+  "version": "0.7.0 Beta",
   "image_bytes": 248696,
   "relocations": 498,
   "sources": {
@@ -27,11 +27,11 @@
     ".context/amiga/emulator-next/ZZNES/player/neon_state.S": "e04645be1ce32924bb93d7a38baaeb87db423e786bb96c76774bef3ca311174e"
   },
   "files": {
-    "ZZFceux-ui": "8a2d696bd6e2cf2d2452525f0c36cf3d07c06edbadf7b946a8a6edd9d724a677",
+    "ZZFceux-ui": "78cbf4edf84b1d48a5ea9a2ec548e66570c8e2c889cdb7fff253b72410eca44c",
     "fceux.elf": "107552de4bc7f4a08a5bd8644dca0d1634786853e43c2a48659dd7abc85690ce"
   },
   "snapshot_dir": "development/beta-20261015",
-  "artifact_dir": "artifacts/beta-0.6.3",
+  "artifact_dir": "artifacts/beta-0.7.0",
   "player": "ZZFceux-ui",
   "image": "docker.io/amigadev/crosstools@sha256:93ca1a47903b61873f6638881b44f9f2d6086a39f1b9b916a26faff3a8ea4d3d",
   "arm_sources": [
@@ -58,6 +58,7 @@
     "development/beta-20261015/build-inputs/player/neon_state.S"
   ],
   "arm_flags": [],
-  "library_snapshot_dir": "development/logo-20261016",
-  "launcher_version": "0.6.3 Beta"
+  "library_snapshot_dir": "development/zip-20261016",
+  "launcher_version": "0.7.0 Beta",
+  "host_snapshot_dir": "development/zip-20261016/host"
 }

@@ -1,4 +1,4 @@
-# ZZNES — 0.6.3 Beta
+# ZZNES — 0.7.0 Beta
 
 <img src="docs/screenshots/logo.png" width="160" alt="ZZNES logo">
 
@@ -7,7 +7,7 @@ and **[Xanxi’s XACP platform](https://github.com/Xanxi-Amiga/XACP-ZZ9000)**.
 The Cortex-A9 runs emulation and fullscreen rendering. The 68k handles AmigaOS,
 files, controls, display coordination and batched AHI audio.
 
-**[Download 0.6.3 Beta](https://github.com/SkiltonUSA/ZZNes-ARM-68K/releases/tag/v0.6.3-beta)** ·
+**[Download 0.7.0 Beta](https://github.com/SkiltonUSA/ZZNes-ARM-68K/releases/tag/v0.7.0-beta)** ·
 [User guide](docs/current-guide.md) · [Changes](CHANGELOG.md) ·
 [Build and measurements](docs/current-development.md) · [Interface gallery](docs/current-interface.md)
 
@@ -17,6 +17,7 @@ files, controls, display coordination and batched AHI audio.
 
 - ZZDosBox-style sidebar: Games, Display, Controllers, Save states and About.
 - Colour logo, Workbench icon, startup panel and loading panel with controls.
+- Single-ROM ZIP loading (stored/deflate); no external unpacker required.
 - Add ROMs or folders; search, favourites, recent games and captured artwork.
 - Rename titles and delete games with confirmation.
 - Automatic ROM discovery on mounted Workbench volumes, including USB storage.
@@ -73,4 +74,5 @@ Thanks to **Xanxi** for XACP, and the **FCEUX / FCE Ultra** contributors for the
 The software scanline effects and NEON presentation work are shared with ZZDosBox;
 they do not require the separate ZZ9000 scanline application or an FPGA change.
 
+ZIP decompression uses Mark Adler’s **puff** from zlib; its notice is included.
 Component licences and notices are included. The FCEUX core is GPL-2.0-or-later.

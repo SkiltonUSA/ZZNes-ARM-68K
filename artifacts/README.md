@@ -1,3 +1,11 @@
+# Current release: ZZNES 0.7.0 Beta
+
+Complete executable package: `beta-0.7.0/`. Updated 68k launcher and player
+with direct ZIP cartridge loading; ARM payload unchanged. Historical packages
+below remain immutable.
+
+---
+
 # Current release: ZZNES 0.6.3 Beta
 
 Complete executable package: beta-0.6.3/. Colour logos and blank launcher title

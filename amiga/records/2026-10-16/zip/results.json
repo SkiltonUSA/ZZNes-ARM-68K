@@ -1,0 +1,55 @@
+{
+  "plain": {
+    "exit": 0,
+    "owned_memory_released": true,
+    "register_mismatches": 0,
+    "cache_witness_errors": 0,
+    "frames": 120
+  },
+  "zip": {
+    "exit": 0,
+    "owned_memory_released": true,
+    "register_mismatches": 0,
+    "cache_witness_errors": 0,
+    "frames": 120
+  },
+  "bad": {
+    "exit": 20,
+    "owned_memory_released": true
+  },
+  "lifecycle": {
+    "exit": 0,
+    "owned_memory_released": true,
+    "register_mismatches": 0,
+    "cache_witness_errors": 0,
+    "save_load_snapshot": true
+  },
+  "ui-player": {
+    "exit": 0,
+    "owned_memory_released": true,
+    "register_mismatches": 0,
+    "cache_witness_errors": 0,
+    "save_load_snapshot": true
+  },
+  "pal_member_filename": {
+    "region": "PAL",
+    "period_us": 19998,
+    "note": "Filename heuristic fixture, not a PAL-game compatibility claim."
+  },
+  "arm_payload_sha256": "7d6aae1e9fecd4d1909e0815a2ebc05524b55bb9105c587a4eb8018164bfdbeb",
+  "artifacts": {
+    "LICENSE-Snes9x": "7c99d452508b90c46d74ac5d516d3d7de4ff3406bc7c4ad595215205369594ba",
+    "COPYING3": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903",
+    "ZZFceux-ui": "78cbf4edf84b1d48a5ea9a2ec548e66570c8e2c889cdb7fff253b72410eca44c",
+    "Credits.txt": "039b2714b2aa9dd8e189ea519a69acabdd49fb4b698ab007824395fb5193dde4",
+    "LICENSE-xSysInfo": "323187598a84a70032b38d9f483ba9c0f6172b0635ef32ce924393356f279829",
+    "ZZNES.png": "457344e28db296fec6399b17915a75a71c5db9f627469a21cf70bfd212e3c545",
+    "ZZNES": "9750340e6e44788a40390325fb99df26b30219260b01ea33ed6492781bfb0532",
+    "ZZNES.info": "13a47a1be68658f90e7e5787b23a440d75e653810fb780e82fd1f9a28dab6a4f",
+    "MakeIcon": "777086a99680a1c718ef71840137834defad05821a520ac97f314fc8740c5ce5",
+    "ReadMe.txt": "d99489195be7e494f45ff514a55871d0285d6b2a524fd1980af73ff915bc82f4",
+    "Version.txt": "8022e6bef5bf1c33588af9a67c5a73d254df6c7dbcc80fc9fff6c753f315d397",
+    "SHA256SUMS": "867f6ca494f2938783517cac247997a23ca695b593b9e5436b7b4746ad1ad5f1",
+    "LICENSE-puff": "969b7be2a930db0cdcb19b0e5b29ae6741f5a8f663b6dba6d647e12ec60cfa8e"
+  }
+}
