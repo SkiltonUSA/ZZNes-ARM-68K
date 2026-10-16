@@ -1,3 +1,17 @@
+# ZZNES 0.7.1 Beta — EmuELEC border
+
+Matching rebuilt launcher/player installed with checksums. Original files and
+current settings retained in Rollback-border-1016. Preferences, ROMs, saves and
+icon metadata retained. EmuELEC occupies existing theme ID 7, with a 9,632-byte
+packed palette table. Allocation bounds and standard cartridge gate unchanged.
+
+Native theme/geometry tests and relocated ARM presenter regression passed.
+Physical ZIP session, pause/save/load/snapshot and display switching passed.
+NES window focus needed a click before injected F10; exit then completed cleanly.
+Current source/payload overlay: development/borders-20261016/.
+
+---
+
 # ZZNES 0.7.0 Beta — direct ZIP loading
 
 Installed the new launcher/player pair with checksum checks. Existing Library.cfg,

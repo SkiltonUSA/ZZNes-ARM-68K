@@ -1,0 +1,29 @@
+{
+  "zip": {
+    "exit": 0,
+    "register_mismatches": 0,
+    "cache_witness_errors": 0,
+    "owned_memory_released": true
+  },
+  "lifecycle": {
+    "exit": 0,
+    "register_mismatches": 0,
+    "cache_witness_errors": 0,
+    "owned_memory_released": true
+  },
+  "artifact_sha256": {
+    "LICENSE-Snes9x": "7c99d452508b90c46d74ac5d516d3d7de4ff3406bc7c4ad595215205369594ba",
+    "COPYING3": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903",
+    "ZZFceux-ui": "88727e29a96fb3abb3923c6b67418452ab9f809dc90c1d1468b357d06147d090",
+    "Credits.txt": "6c99cb4baac38d78e4dbec3d91d51af24a3340be553f2da08d0c376a8e52bc7f",
+    "LICENSE-xSysInfo": "323187598a84a70032b38d9f483ba9c0f6172b0635ef32ce924393356f279829",
+    "ZZNES.png": "457344e28db296fec6399b17915a75a71c5db9f627469a21cf70bfd212e3c545",
+    "ZZNES": "2bf4b640f245930650419e985578f46fcaa86ea3abeeb6cfc0c36c0d91d8da58",
+    "ZZNES.info": "13a47a1be68658f90e7e5787b23a440d75e653810fb780e82fd1f9a28dab6a4f",
+    "MakeIcon": "777086a99680a1c718ef71840137834defad05821a520ac97f314fc8740c5ce5",
+    "ReadMe.txt": "473cc0192cc63c79a0dce46af820f95536e0d27388792ed055308de2677e5856",
+    "Version.txt": "9701236ecc63a46e35789f449a481a2f476c203b2c19673777534dc83a87692f",
+    "SHA256SUMS": "65306488a2c077adebeee7a07e56164256af3f66540d712e5f382c0cea72d17e",
+    "LICENSE-puff": "969b7be2a930db0cdcb19b0e5b29ae6741f5a8f663b6dba6d647e12ec60cfa8e"
+  }
+}

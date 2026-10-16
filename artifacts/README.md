@@ -1,3 +1,11 @@
+# Current release: ZZNES 0.7.1 Beta
+
+Complete executable package: `beta-0.7.1/`. Includes direct ZIP loading and the
+EmuELEC border. Use the matching launcher/player pair. Earlier artifacts below
+remain immutable.
+
+---
+
 # Current release: ZZNES 0.7.0 Beta
 
 Complete executable package: `beta-0.7.0/`. Updated 68k launcher and player

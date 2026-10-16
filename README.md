@@ -1,4 +1,4 @@
-# ZZNES — 0.7.0 Beta
+# ZZNES — 0.7.1 Beta
 
 <img src="docs/screenshots/logo.png" width="160" alt="ZZNES logo">
 
@@ -7,7 +7,7 @@ and **[Xanxi’s XACP platform](https://github.com/Xanxi-Amiga/XACP-ZZ9000)**.
 The Cortex-A9 runs emulation and fullscreen rendering. The 68k handles AmigaOS,
 files, controls, display coordination and batched AHI audio.
 
-**[Download 0.7.0 Beta](https://github.com/SkiltonUSA/ZZNes-ARM-68K/releases/tag/v0.7.0-beta)** ·
+**[Download 0.7.1 Beta](https://github.com/SkiltonUSA/ZZNes-ARM-68K/releases/tag/v0.7.1-beta)** ·
 [User guide](docs/current-guide.md) · [Changes](CHANGELOG.md) ·
 [Build and measurements](docs/current-development.md) · [Interface gallery](docs/current-interface.md)
 
@@ -24,7 +24,7 @@ files, controls, display coordination and batched AHI audio.
 - No fixed ROM-count limit; tested with 20,000 entries per library.
 - Fullscreen or Workbench window; **Alt+Return** switches during play.
 - Optional FPS overlay and **Classic, Soft or Gradient** software scanlines.
-- Monitor aspect correction, borders, overscan masks and joystick testing.
+- Monitor aspect correction, borders including EmuELEC, overscan masks and joystick testing.
 - Five save slots per game; save, load, resume and delete.
 - Guarded NEON stores and scanline dimming, with an integer fallback.
 
