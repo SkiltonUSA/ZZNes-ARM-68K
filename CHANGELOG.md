@@ -1,5 +1,11 @@
 # Changelog
 
+## Unreleased launcher navigation
+
+- Add a red Launch button to the permanent bottom bar, visible on every page.
+- Replace automatic mounted-drive discovery with Disks / Browse / Scan once.
+- Keep Continue and save-state actions separate from starting a game.
+
 ## 0.7.1 Beta
 
 - Add EmuELEC side-panel theme to both display modes.
