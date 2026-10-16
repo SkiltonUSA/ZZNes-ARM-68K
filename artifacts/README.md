@@ -1,3 +1,10 @@
+# Current launcher update: ZZNES 0.6.1 Beta
+
+`beta-0.6.1/` includes the growing-library launcher and unchanged tested
+player from 0.6.0. Old release artifacts remain immutable.
+
+---
+
 # Current: ZZNES 0.6.0 Beta
 
 `beta-0.6.0/` contains the checksum-verified installed launcher/player pair,
