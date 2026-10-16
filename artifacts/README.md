@@ -1,3 +1,10 @@
+# Current release: ZZNES 0.6.3 Beta
+
+Complete executable package: beta-0.6.3/. Colour logos and blank launcher title
+bar; version remains in the footer and About. The player is unchanged.
+
+---
+
 # Current logo update: ZZNES 0.6.2 Beta
 
 Complete package in beta-0.6.2/. New launcher and colour icon; unchanged player.

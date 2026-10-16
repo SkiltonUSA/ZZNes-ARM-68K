@@ -1,4 +1,4 @@
-# ZZNES — 0.6.2 Beta
+# ZZNES — 0.6.3 Beta
 
 <img src="docs/screenshots/logo.png" width="160" alt="ZZNES logo">
 
@@ -7,7 +7,7 @@ and **[Xanxi’s XACP platform](https://github.com/Xanxi-Amiga/XACP-ZZ9000)**.
 The Cortex-A9 runs emulation and fullscreen rendering. The 68k handles AmigaOS,
 files, controls, display coordination and batched AHI audio.
 
-**[Download 0.6.2 Beta](https://github.com/SkiltonUSA/ZZNes-ARM-68K/releases/tag/v0.6.2-beta)** ·
+**[Download 0.6.3 Beta](https://github.com/SkiltonUSA/ZZNes-ARM-68K/releases/tag/v0.6.3-beta)** ·
 [User guide](docs/current-guide.md) · [Changes](CHANGELOG.md) ·
 [Build and measurements](docs/current-development.md) · [Interface gallery](docs/current-interface.md)
 
