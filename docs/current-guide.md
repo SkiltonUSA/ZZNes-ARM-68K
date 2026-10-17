@@ -57,6 +57,12 @@ Software scanlines: **Off**, **Classic** (alternating black rows), **Soft** (5/8
 on alternating rows), or **Gradient** (8/8, 6/8, 4/8, 6/8). They work with either
 display mode and the optional FPS overlay. They change this emulator's output only.
 
+The **Software scanlines** setting uses the ZZDosBox-derived ARM pixel routine;
+Xanxi's separate **ZZScanlines** Workbench utility is not required. The emulator
+does not call that utility or write its scanline-control registers. If global
+Workbench scanlines are enabled, turn them off for an undoubled software effect.
+Classic can hide fine text at 320×240; Soft retains detail in the dimmed rows.
+
 **On-screen FPS** counts presented frames over roughly one-second intervals.
 **Optimised presenter** enables guarded NEON row stores/dimming when firmware has
 already enabled NEON. Disable it for a scalar baseline comparison. It does not

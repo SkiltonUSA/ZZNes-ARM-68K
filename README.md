@@ -29,6 +29,25 @@ files, controls, display coordination and batched AHI audio.
 - Five save slots per game; save, load, resume and delete.
 - Guarded NEON stores and scanline dimming, with an integer fallback.
 
+## Software scanlines
+
+The scanline effect is built into the emulator and rendered by the ZZ9000
+Cortex-A9. **Xanxi’s separate ZZScanlines utility is not required**, and the
+effect does not require additional FPGA scanline support. XACP remains required
+for the emulator itself.
+
+- **Off:** unfiltered output.
+- **Classic:** alternating black rows.
+- **Soft:** alternating dimmed rows, retaining more fine detail.
+- **Gradient:** a repeating four-row brightness pattern.
+
+Select **Display → Software scanlines** (labelled **Scanlines** in older builds).
+The routine is shared with ZZDosBox and works in **fullscreen and Workbench
+windows**, including with the **FPS overlay** enabled.
+
+If Workbench’s global scanline effect is enabled, turn it off to avoid applying
+both effects together. Software scanlines affect this emulator’s image only.
+
 ## Requirements
 
 - **ZZ9000** with compatible **XACP firmware**; tested on **XX19c / XACP 1.7**.
