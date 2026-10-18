@@ -388,3 +388,27 @@ The library is left open on Workbench; no Core1 app remains active. Check
 live ownership before any subsequent ARM launch. Temporary transfer server
 55031 stopped after deployment. Package remains a development candidate,
 not a new GitHub release. Evidence: `amiga/records/2026-10-10/nes-library/`.
+
+## ROM Manager and package-manager pilot — 18 October 2026
+
+Current development launcher adds ROM Manager (bulk recursive import, confirmed
+duplicate-entry cleanup, verified save/battery/snapshot backups) and read-only
+ZZ9000 temperature beside the version. Duplicate matching compares decoded ROM
+bytes; first entry retained, favourite/history merged; no ROM/save deletion.
+Native sanitizers and 20,000-entry tests passed. Both physical launcher fixtures
+removed three duplicates (raw copy, ZIP copy, canonical alias), retained one
+different and one missing entry, imported two nested ROMs, and verified all five
+backup files. Fixture ROM/save bytes remained identical. NES confirmation Cancel
+left Library.cfg byte-identical. Temperature displayed 58.0 C alongside the
+separate sensor monitor; independent ONCE sample was 57.7 C later in the session.
+
+Installed launcher 245,856 bytes, SHA256
+`bce562be14ee2406f295a8322d7e1af0e499f65b769ef71926bd3136a4377a00`. Previous launcher and Library.cfg are in the local
+Rollback-manager-1018 drawer. Deployment preserved live Library.cfg byte-for-byte.
+ARM players and firmware unchanged; no game launches in this UI test. Actual
+USB media backup was not exercised; mounted paths use normal AmigaDOS I/O.
+
+The amipkg package builder bundles Xanxi tools and automatically runs the
+install-missing helper. Physical isolated amipkg pilot passed with the local
+0.7.11-zztest1 recipe-origin fix; stock 0.7.11 fails custom-repo recipes. See
+docs/package-manager.md. No public feed or new tagged release was created.
