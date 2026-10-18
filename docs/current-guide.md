@@ -105,3 +105,11 @@ In 0.7.2-dev, **Display → Pixel scaling → Smooth scrolling** reduces periodi
 scaling columns. It softens pixel edges and uses extra ARM time; **Sharp pixels**
 retains the original appearance. Back up Library.cfg before using this candidate,
 because it writes v4 settings that older launchers cannot read.
+
+### Development defaults
+
+The optimisation candidate starts new libraries in fullscreen with Soft
+software scanlines. Existing saved choices
+still take priority. Display settings remain selectable. **Alt+Return** switches
+window/fullscreen; **F9** captures a screenshot for the library, as shown on the
+loading panel.

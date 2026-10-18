@@ -1,5 +1,11 @@
 # Changelog
 
+## Unreleased — display defaults
+
+- Fullscreen with software scanlines for new libraries.
+- Loading panel labels F9 as Screenshot.
+
+
 ## 0.7.2-dev — optimisation candidate (not a tagged release)
 
 - Prime four NES audio frames before playback, retaining three-frame AHI batches.

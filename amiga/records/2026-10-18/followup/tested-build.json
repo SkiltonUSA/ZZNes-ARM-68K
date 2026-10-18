@@ -1,0 +1,22 @@
+{
+  "candidate": "0.7.2-dev",
+  "source_sha256": {
+    "development/optimisation-20261018/README.md": "3c9744c8da74e155b8f64c9f8850948b1098e0af6222ad940f78b4ebcba5d3a4",
+    "development/optimisation-20261018/host/host.c": "a716faaeb3caf3934a27bc5828af4c3e1b806fc4b0fbbfb4b87cba4d8f55ce90",
+    "development/optimisation-20261018/host/player_audio.h": "bf0c9a86fbc3030b2e6dffe257f337d65e7f7a207fc04a03d560be84413eab5a",
+    "development/optimisation-20261018/player/copy_neon.S": "b3b1aea547d6865041411bd7da0c6829bc7584f4bef3fde5bd5d60b1b9b916f5",
+    "development/optimisation-20261018/player/direct.cpp": "d0eb271448ed20e61f43c54ee25444d797402c4ac91ca607c75e23b66e9e76a1",
+    "development/optimisation-20261018/player/session.h": "7fadcd77bcecc04fd55a2f7fce2691abdd6e0b2985accb395501a9f37661b5d9",
+    "development/optimisation-20261018/player/view.h": "6615c49de7731d1bd064e6ce59faa2c95c45957196ac8663e7ac09e2d0afd830",
+    "development/optimisation-20261018/source/library_launch.h": "98997a868b1205e6abe9b03e502ff095576f5e5f2aa176b63ceb14a85342c188",
+    "development/optimisation-20261018/source/library_mui.h": "15585a00dacc062c49c01b000a4fe3f0e31460ae32cd0311cb301fd1ec8fe274",
+    "development/optimisation-20261018/source/ui_model.h": "2c003a92fef7a10e5b3d949046848dfdba34fcb5c257662ae9db8123b2840a56"
+  },
+  "release_assets_changed": false,
+  "launcher": {
+    "sha256": "96c18c5bc752441de34f614da3307bf515dc2d5ead891cc78fe175eecd20c154",
+    "scanlines": 2,
+    "windowed": 0
+  },
+  "player": "unchanged from ../optimisation/tested-build.json"
+}

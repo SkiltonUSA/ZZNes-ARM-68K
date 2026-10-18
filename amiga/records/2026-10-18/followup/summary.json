@@ -1,0 +1,57 @@
+[
+  {
+    "test": "extended-SuperMarioWorld",
+    "frames": 3000,
+    "elapsed_us": 51054188,
+    "pcm_samples": 1597247,
+    "audio_gaps": 14,
+    "flips": 2887,
+    "presentations": 2887,
+    "verified_frames": 1,
+    "presentation_total_us": 6542253
+  },
+  {
+    "test": "extended-Asterix-PAL",
+    "frames": 3000,
+    "elapsed_us": 61143448,
+    "pcm_samples": 1919585,
+    "audio_gaps": 1,
+    "flips": 3000,
+    "presentations": 3000,
+    "verified_frames": 1,
+    "presentation_total_us": 8564868
+  },
+  {
+    "test": "steady-NES",
+    "frames": 3000,
+    "elapsed_us": 50838394,
+    "pcm_samples": 1597247,
+    "audio_gaps": 0,
+    "flips": 2894,
+    "presentations": 2894,
+    "verified_frames": 1,
+    "presentation_total_us": 6558747
+  },
+  {
+    "test": "nes-repeat-state",
+    "frames": 1117,
+    "elapsed_us": 49691676,
+    "pcm_samples": 594697,
+    "audio_gaps": 2,
+    "flips": 1122,
+    "presentations": 1122,
+    "verified_frames": 1,
+    "presentation_total_us": 3226932
+  },
+  {
+    "test": "nes-repeat-resume",
+    "frames": 300,
+    "elapsed_us": 6030842,
+    "pcm_samples": 159722,
+    "audio_gaps": 0,
+    "flips": 286,
+    "presentations": 286,
+    "verified_frames": 1,
+    "presentation_total_us": 815703
+  }
+]

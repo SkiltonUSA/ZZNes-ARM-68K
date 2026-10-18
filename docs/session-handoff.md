@@ -1,3 +1,18 @@
+## Display defaults and stability follow-up — 18 October 2026 UTC
+
+Installed fullscreen/Soft defaults and the F9 Screenshot loading reminder.
+Sharp remains the default pixel scaling; saved choices still take priority.
+The player is unchanged from the optimisation commit. Extended NTSC/PAL ZIP
+runs and repeated save/load/capture/display-switch/exit/resume passed. Visual
+confirmation of the originally reported scrolling game remains outstanding.
+
+See [follow-up report](stability-20261018.md) and
+[build hashes](../amiga/records/2026-10-18/followup/tested-build.json).
+Audio gap counts are retained; completion is not a claim of uninterrupted audio.
+The earlier isolated SNES startup failure was not reproduced, not proven fixed.
+Tagged releases are unchanged. Core1 is free and the library is closed after
+checks; no firmware, global AHI or saved Workbench mode changes.
+
 ## Optimisation candidate — 18 October 2026 (UTC)
 
 Installed and checksum-verified **0.7.2-dev**, with rollback copies of executables

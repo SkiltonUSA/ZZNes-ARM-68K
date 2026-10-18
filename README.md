@@ -70,7 +70,8 @@ Only one Core1 application can run at a time.
 ## Performance
 
 An opt-in **0.7.2-dev optimisation candidate** adds palette caching, NEON smooth scrolling and faster large libraries.
-[Measurements and validation](docs/optimisation-20261018.md). Existing release downloads are unchanged.
+[Measurements and validation](docs/optimisation-20261018.md) · [Follow-up testing](docs/stability-20261018.md).
+New libraries default to fullscreen with Soft software scanlines; the loading panel lists **F9: Screenshot**. Existing release downloads are unchanged.
 
 The established steady emulation measurements remain:
 

@@ -17,6 +17,9 @@ static void*test_realloc(void*p,size_t n){return fail()?NULL:realloc(p,n);}
 static struct ui_model a,b;
 int main(void){char path[UI_PATH];const unsigned total=20000;clock_t begin=clock();
  int*visible=malloc(total*sizeof(*visible));assert(visible);ui_defaults(&a);
+ assert(a.windowed==0&&a.scanlines==2);
+ /* Explicit saved choices still override fresh-install defaults. */
+ a.windowed=1;a.scanlines=0;
  for(unsigned i=0;i<total;i++){snprintf(path,sizeof(path),"USB:ROMs/Game-%05u.nes",total-i);assert(ui_add(&a,path)==(int)i);a.entry[i].favorite=i%7==0;ui_played(&a,i);}
  assert(a.count==total);for(unsigned i=0;i<total;i++){snprintf(path,sizeof(path),"usb:roms/game-%05u.NES",total-i);assert(ui_add(&a,path)==(int)i);}assert(a.count==total);
  a.smooth=1;a.last=total;a.filter=2;strcpy(a.entry[total-1].title,"Renamed last game");
@@ -25,7 +28,7 @@ int main(void){char path[UI_PATH];const unsigned total=20000;clock_t begin=clock
  assert(ui_visible(&a,2,"",visible)==(total+6)/7);
  assert(ui_visible(&a,0,"rEnAmEd",visible)==1&&visible[0]==(int)total-1);
  FILE*f=tmpfile();assert(f&&ui_write(f,&a));rewind(f);assert(ui_read(f,&b));fclose(f);
- assert(b.smooth==1);assert(b.count==total&&b.last==total&&b.filter==2);assert(!memcmp(a.entry,b.entry,total*sizeof(*a.entry)));
+ assert(b.smooth==1);assert(b.windowed==1&&b.scanlines==0);assert(b.count==total&&b.last==total&&b.filter==2);assert(!memcmp(a.entry,b.entry,total*sizeof(*a.entry)));
  ui_remove(&b,1000);assert(b.count==total-1);assert(ui_add(&b,"USB:ROMs/Game-19000.nes")==19999);assert(ui_add(&b,"USB:ROMs/Game-18999.nes")==1000);
  /* An allocation failure leaves all accepted entries intact and permits retry. */
  for(long point=0;point<5;point++){struct ui_model m={0};assert(ui_add(&m,"Keep.nes")==0);ui_remove(&m,0);

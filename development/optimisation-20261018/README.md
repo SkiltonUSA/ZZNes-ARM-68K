@@ -8,6 +8,8 @@ Run `make test-optimisation-native`; see `docs/optimisation-20261018.md` for
 relocated ARM checks, physical evidence and limits. Builds never deploy.
 
 - Cache palette byte order once, instead of converting each output pixel.
+- New-library defaults: fullscreen, Soft software scanlines and Sharp pixels.
+  The loading panel explicitly labels F9 Screenshot.
 - Add optional horizontal, centre-aligned linear scaling. NEON blends four
   pixels at once using table lookups into a converted source row; scalar
   fallback and partial tails are exact.
