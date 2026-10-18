@@ -1,0 +1,4 @@
+PASS fine scroll: 69 one-pixel transitions, 10 eight-phase wraps
+PASS NTSC fine scroll with native ASan/selected UBSan
+PASS fine scroll: 69 one-pixel transitions, 10 eight-phase wraps
+PASS PAL fine scroll with native ASan/selected UBSan

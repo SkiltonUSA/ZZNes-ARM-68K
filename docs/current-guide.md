@@ -98,3 +98,10 @@ Subdirectories are included; existing library entries are skipped. **Stop scan**
 ends a scan while retaining games already found. No automatic or background
 drive discovery runs on startup or when a USB drive is inserted.
 The red **Launch** button stays in the bottom bar on every page.
+
+## Development candidate: smooth scrolling
+
+In 0.7.2-dev, **Display → Pixel scaling → Smooth scrolling** reduces periodic
+scaling columns. It softens pixel edges and uses extra ARM time; **Sharp pixels**
+retains the original appearance. Back up Library.cfg before using this candidate,
+because it writes v4 settings that older launchers cannot read.

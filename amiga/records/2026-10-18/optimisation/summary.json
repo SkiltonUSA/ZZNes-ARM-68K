@@ -1,0 +1,19 @@
+{
+  "presentation_0": {
+    "baseline_us": 2271.897435897436,
+    "candidate_us": 2175.520353982301,
+    "time_reduction_percent": 4.242140529423355
+  },
+  "presentation_2": {
+    "baseline_us": 2381.2914389799635,
+    "candidate_us": 2281.6113074204945,
+    "time_reduction_percent": 4.185969425152236
+  },
+  "final_sharp_baseline_us": 2139.2311827956987,
+  "final_sharp_us": 2118.868613138686,
+  "final_smooth_us": 3735.8654545454547,
+  "scalar_smooth_us": 4395.062370069409,
+  "neon_smooth_us": 3736.014627130776,
+  "final_gather_smooth_us": 2716.1564245810055,
+  "final_gather_sharp_us": 2123.292532368783
+}

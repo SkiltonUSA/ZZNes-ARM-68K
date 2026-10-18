@@ -54,3 +54,22 @@ test-border:
 	mkdir -p .context
 	$(CC) -O2 -g -fsanitize=address,undefined -DBORDER_NES -Idevelopment/borders-20261016/source -Idevelopment/borders-20261016/player -Idevelopment/beta-20261015/build-inputs/player tests/amiga/emulator/border.c -o .context/test-border
 	.context/test-border
+
+# Measured development candidate; neither target deploys to hardware.
+optimisation:
+	$(PYTHON) scripts/build_current.py --arm --optimisation
+test-optimisation-native:
+	mkdir -p .context
+	$(CXX) -std=c++14 -O2 -g -fsanitize=address,undefined -Idevelopment/optimisation-20261018/player -Idevelopment/borders-20261016/player -Idevelopment/beta-20261015/build-inputs/player tests/amiga/emulator/optimisation.cpp -o .context/test-optimisation-pixels
+	.context/test-optimisation-pixels
+	$(CC) -O2 -g -fsanitize=address,undefined -Idevelopment/optimisation-20261018/source -Idevelopment/borders-20261016/source tests/amiga/emulator/optimisation_library.c -o .context/test-optimisation-library
+	.context/test-optimisation-library
+	$(CC) -O2 -g -fsanitize=address,undefined -Idevelopment/optimisation-20261018/source -Idevelopment/borders-20261016/source tests/amiga/emulator/legacy_model.c -o .context/test-optimisation-legacy
+	.context/test-optimisation-legacy
+
+.PHONY: test-optimisation-arm test-scrolling
+test-optimisation-arm:
+	CURRENT_ARM_DIR=.context/optimisation-build/player $(MODEL_PYTHON) tests/amiga/emulator/check_current_arm.py
+	CURRENT_ARM_DIR=.context/optimisation-build/player $(MODEL_PYTHON) tests/amiga/emulator/check_smooth_arm.py
+test-scrolling:
+	$(PYTHON) tests/amiga/emulator/test_scroll_native.py

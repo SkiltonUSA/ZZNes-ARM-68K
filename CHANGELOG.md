@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.7.2-dev — optimisation candidate (not a tagged release)
+
+- Prime four NES audio frames before playback, retaining three-frame AHI batches.
+- Cache output palette byte order and add optional Smooth scrolling scaling.
+- NEON horizontal interpolation with exact scalar fallback and SIMD restoration.
+- Persist the new scaling option in v4 settings; read previous settings formats.
+- Faster large-library sorting, metadata writing and token parsing.
+- Add native, relocated ARM and physical validation; see [measurements](docs/optimisation-20261018.md).
+
 ## Unreleased launcher navigation
 
 - Label the existing effect Software scanlines; explain that ZZScanlines is not required.

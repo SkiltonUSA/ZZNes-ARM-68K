@@ -7,14 +7,24 @@ from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 def run(a):subprocess.run(list(map(str,a)),cwd=ROOT,check=True)
 def main():
- p=argparse.ArgumentParser();p.add_argument('--arm',action='store_true');a=p.parse_args()
+ p=argparse.ArgumentParser();p.add_argument('--arm',action='store_true');p.add_argument('--optimisation',action='store_true');a=p.parse_args()
  m=json.loads((ROOT/'docs/current-build.json').read_text());snap=ROOT/m['snapshot_dir'];source=snap/'source';out=ROOT/'.context/current-build';stage=out/'player';lib=out/'library'
+ if a.optimisation:
+  if not a.arm:p.error('optimisation candidate requires --arm')
+  out=ROOT/'.context/optimisation-build';stage=out/'player';lib=out/'library'
+ if a.optimisation:m['version']='0.7.2-dev'
  shutil.copytree(snap/'build-inputs/player',stage,dirs_exist_ok=True);library_snap=ROOT/m['library_snapshot_dir']
  shutil.copytree(library_snap/'build-inputs',lib,dirs_exist_ok=True)
  for header in (library_snap/'source').glob('*.h'):shutil.copy2(header,lib/header.name)
  shutil.copytree(library_snap/'source/zip',lib/'zip',dirs_exist_ok=True)
  shutil.copytree(ROOT/m['host_snapshot_dir'],stage,dirs_exist_ok=True)
  shutil.copytree(ROOT/m['player_overlay_dir'],stage,dirs_exist_ok=True)
+ if a.optimisation:
+  overlay=ROOT/'development/optimisation-20261018'
+  shutil.copytree(overlay/'player',stage,dirs_exist_ok=True)
+  if (overlay/'source').exists():shutil.copytree(overlay/'source',lib,dirs_exist_ok=True)
+  if (overlay/'host').exists():shutil.copytree(overlay/'host',stage,dirs_exist_ok=True)
+  header=lib/'library_mui.h';header.write_text(header.read_text().replace('0.7.1 Beta','0.7.2-dev'))
  shutil.copy2(library_snap/'source/icon.c',lib/'icon.c')
  (lib/'icon.c').write_text((lib/'icon.c').read_text().replace('DOSBox icon',m['console']+' icon'))
  if m['console']=='ZZNES':

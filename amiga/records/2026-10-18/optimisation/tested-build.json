@@ -1,0 +1,28 @@
+{
+  "baseline_commit": "a11823a5b1624fe6d7f6053dade85d29e770d84a",
+  "installed": {
+    "ZZNES": {
+      "previous_md5": "72cc7a3ee458987ec98f29b4f458699c",
+      "md5": "7ed0575131a675281d4561bccae584bb",
+      "sha256": "96b105152b8f4bc871f11dcc7f6ac8dd65772c2d1145d3644a0c5a3cb75c8df3",
+      "bytes": 216084
+    },
+    "ZZFceux-ui": {
+      "previous_md5": "e9a6f869308a4c119a78ce0eb14faac2",
+      "md5": "40c8b437a3af57d12eeee1c6d4748269",
+      "sha256": "fb7874a694b2171b0b151cccf0a24729e1e426c9798b8cf58319c494d06e424c",
+      "bytes": 556800
+    }
+  },
+  "source_sha256": {
+    "development/optimisation-20261018/README.md": "ed9f408aadca24ac66e13328754fc5ecc5b47c25a6c43a89b6ec1ac967feb82f",
+    "development/optimisation-20261018/host/host.c": "a716faaeb3caf3934a27bc5828af4c3e1b806fc4b0fbbfb4b87cba4d8f55ce90",
+    "development/optimisation-20261018/host/player_audio.h": "bf0c9a86fbc3030b2e6dffe257f337d65e7f7a207fc04a03d560be84413eab5a",
+    "development/optimisation-20261018/player/copy_neon.S": "b3b1aea547d6865041411bd7da0c6829bc7584f4bef3fde5bd5d60b1b9b916f5",
+    "development/optimisation-20261018/player/direct.cpp": "d0eb271448ed20e61f43c54ee25444d797402c4ac91ca607c75e23b66e9e76a1",
+    "development/optimisation-20261018/player/session.h": "7fadcd77bcecc04fd55a2f7fce2691abdd6e0b2985accb395501a9f37661b5d9",
+    "development/optimisation-20261018/player/view.h": "6615c49de7731d1bd064e6ce59faa2c95c45957196ac8663e7ac09e2d0afd830",
+    "development/optimisation-20261018/source/library_mui.h": "15585a00dacc062c49c01b000a4fe3f0e31460ae32cd0311cb301fd1ec8fe274",
+    "development/optimisation-20261018/source/ui_model.h": "c1fee53f6860068add26cb4f5c411e7cfddf80062f45004ee2092325ae4cff44"
+  }
+}
