@@ -23,3 +23,11 @@
 ## Large libraries
 
 [20,000-entry check on the Amiga](../amiga/records/2026-10-16/large-library/README.md).
+
+## Games with Soft scanlines
+
+Amiga/ZZ9000 framebuffer captures from **0.7.2-dev**, fullscreen with Sharp pixels.
+
+| Contra | Asterix |
+| --- | --- |
+| ![Contra with Soft software scanlines](screenshots/scanlines/nes-contra.png) | ![Asterix with Soft software scanlines](screenshots/scanlines/nes-asterix.png) |

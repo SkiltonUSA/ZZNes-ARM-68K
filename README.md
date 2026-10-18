@@ -48,6 +48,14 @@ windows**, including with the **FPS overlay** enabled.
 If Workbench’s global scanline effect is enabled, turn it off to avoid applying
 both effects together. Software scanlines affect this emulator’s image only.
 
+### Games with Soft scanlines
+
+Captured on real Amiga/ZZ9000 hardware using **0.7.2-dev**, fullscreen and Sharp pixels.
+
+| Contra | Asterix |
+| --- | --- |
+| ![Contra with Soft software scanlines](docs/screenshots/scanlines/nes-contra.png) | ![Asterix with Soft software scanlines](docs/screenshots/scanlines/nes-asterix.png) |
+
 ## Requirements
 
 - **ZZ9000** with compatible **XACP firmware**; tested on **XX19c / XACP 1.7**.
