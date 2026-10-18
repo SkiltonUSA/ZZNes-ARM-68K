@@ -1,0 +1,14 @@
+{
+  "ZZNES/ZZNES": {
+    "bytes": 216144,
+    "md5": "a6ef9405dd179964ce834913c41a0b7a",
+    "sha256": "ebf5c429d85693e8da2c9ed51709f1e6871fa4a40b8b49c62442d5b3f6c1b24d",
+    "previous_md5": "0862a765904b316c11a3dbb6b044b178"
+  },
+  "ZZNES/ZZFceux-ui": {
+    "bytes": 559352,
+    "md5": "20356892c86448699a42a0b2d6cce3d7",
+    "sha256": "191311ad027682f61bb9ef226d585db5b757c95b11820886e13347da4fb2ef2b",
+    "previous_md5": "40c8b437a3af57d12eeee1c6d4748269"
+  }
+}

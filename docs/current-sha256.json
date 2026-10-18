@@ -998,5 +998,10 @@
   "amiga/records/2026-10-16/border/results.json": "c1a3e79a7bb4002e9dcd5d905b609298d3923a12e443224eb84b07cea9e7b551",
   "artifacts/development/scanline-label-20261017/README.md": "b0336ecfadcfcdf59c05db658c67c3be7163d63ecfbc165527f13c0f75c00d9f",
   "artifacts/development/scanline-label-20261017/SHA256SUMS": "fa158aa518c2ccff04b3443147f7d95fc0ba0b9468d2556e4f897cd014483277",
-  "artifacts/development/scanline-label-20261017/ZZNES": "b4f97ff4353b15c504d663b8a6db25247c2868a852bfb98704f9f44fb8192b8d"
+  "artifacts/development/scanline-label-20261017/ZZNES": "b4f97ff4353b15c504d663b8a6db25247c2868a852bfb98704f9f44fb8192b8d",
+  "development/optimisation-20261018/host/host.c": "4714fc7ab9aa9dc53167ac80d66fce286b7fcaeecb7c9ff121aeeee65fde0e88",
+  "development/optimisation-20261018/host/scanline_key.h": "ab955f42a0557fa2ab1c12dbbf2911041d5d4665832df95bb5d1f4e76d99d165",
+  "development/optimisation-20261018/source/library_launch.h": "d44226286452b080f6073113f7ef82d33bedfe8a3f7b30f1e05216e32fd91f3e",
+  "development/optimisation-20261018/source/library_mui.h": "9eaf5ac8c78d5332a02b3a2a40f7c63f27d4eb6d8cefa4f9417c7d265e3fb24b",
+  "tests/amiga/emulator/scanline_key.c": "145f6500e404b227e225a74bf4503c76624d7d59b9687df4f6420821971ac082"
 }

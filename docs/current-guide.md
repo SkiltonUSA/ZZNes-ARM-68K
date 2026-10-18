@@ -84,6 +84,7 @@ its 4:3 viewport fills the screen.
 | M | Mute / unmute |
 | F5 | Save selected slot |
 | F8 | Load selected slot |
+| F7 | Cycle software scanlines: Off → Soft → Gradient → Classic → Off |
 | F9 | Capture library artwork |
 
 Five slots are maintained per game. The Save states page supports resume and
@@ -113,3 +114,11 @@ software scanlines. Existing saved choices
 still take priority. Display settings remain selectable. **Alt+Return** switches
 window/fullscreen; **F9** captures a screenshot for the library, as shown on the
 loading panel.
+
+F7 works while playing or paused, in a window or fullscreen. Gradient is the
+smooth effect; Classic is the hard, black-line effect. Changes apply to the
+current game session; the launcher retains your saved default.
+
+The standard effects shade rows of the 320×240 output: Classic and Soft affect
+alternate rows, while Gradient repeats its brightness pattern over four rows.
+They do not insert a separate gap after each original console picture line.
