@@ -1021,8 +1021,8 @@
   "amiga/scanlines/vendor/upstream.json": "7b7343b357b1044f20916ec402d365e5aa5d656960503f890727d85e64929359",
   "scripts/build_current.py": "9a2ff1f15553468da18a92e09c3903b711fe7897b7866d1ea492c401a7de85ee",
   "scripts/build_scanlines.py": "37677c451757c82816bcee956390980aa2e544c2b06dfe19dd7f020c3a6415dc",
-  "scripts/package_current.py": "c1a8498a15db9badecfe7078ebcaf625871cfd6b3d5f00f44d0f9cda1f414dfb",
+  "scripts/package_current.py": "98dde7b4695dd21404334942293a3c3e1d22d79ccac465b7d96a9b376520152f",
   "tests/amiga/emulator/optimisation_library.c": "8f3786429f2d162b650f437b8eae139b8f5ad7cd7e470b3a061d9d6d5a28e12c",
-  "artifacts/development/fpga-scanlines-20261018/ZZNES-0.7.2-dev-fpga.zip": "567a209c6c14f93640b27095c200e01f10f3deaffe93d4f35eca416bb90574e0",
-  "artifacts/development/fpga-scanlines-20261018/SHA256SUMS": "c75545d9952745ab6edcfa479c3c3c4b09419292c69e4f208d1e9d6e96dc1275"
+  "artifacts/development/fpga-scanlines-20261018/ZZNES-0.7.2-dev-fpga.zip": "6bda23f35132efcc358b9691febde51991cf79fe662da003f12e6c78d7788f9b",
+  "artifacts/development/fpga-scanlines-20261018/SHA256SUMS": "62ea3c7e9aedd1400ba9eeac7f7c95f7d414c26e7e8368e7d4a72e0bdfa5d586"
 }
