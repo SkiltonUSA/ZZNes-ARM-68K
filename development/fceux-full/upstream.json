@@ -1,0 +1,2540 @@
+{
+  "repo": "https://github.com/Rezzy-dev/fceux",
+  "commit": "4d01530b6689b06a6d7cf0679b63625e3270ae9a",
+  "scope": "Complete upstream source, including desktop drivers; excludes compiled desktop binaries",
+  "files": {
+    "Authors": "091ef5ef4b8c6f6d49dc4e5fbff2a6be4139e65acc92f65c54f5d5ce20c08896",
+    "COPYING": "a6996dcf0c334281f734560926e079b2dbbd5b78e81c0ca00a413ec01e1cd2fb",
+    "README": "9551ddd6c7c234eec5323d27d84f6608f213888c72b4ba0da4e91fdb238823e7",
+    "changelog.txt": "0c55eab586fb0846b911e99c97b9ab11b28b55ef49e3c270bdf4b23d63ae87ec",
+    "src/SConscript": "248149a54671d6e7edf8692f5e6b2ceef9bbe757400240240a9d701c17fcfeda",
+    "src/asm.cpp": "b89d6d3d4f0aa416de36b6e47c642f38757d0b9562820aa6063be59c4d6841af",
+    "src/asm.h": "2957772acce954ac4c6bbc7a9332aeba4645534e86bf2dc76a8fd7a566b2aa3c",
+    "src/auxlib.lua": "c13455aff316c7e612072fce981bdf497a770870ee23c86fcd6e72d0bb5f39d4",
+    "src/boards/01-222.cpp": "d5ff30305a8ede92b86505c31f0947773871336e924e0417660707caa5164837",
+    "src/boards/09-034a.cpp": "963bd00b845a44904a2b3e5e91627e2e2d5c8d01e4fa83f69616b68de535df82",
+    "src/boards/103.cpp": "6f0056efef61d4f986fb47e608931334f6473294556549a538711401b338834d",
+    "src/boards/106.cpp": "09d76d25b0fe7186f480dcb81885d1fd12e461fe0b9cf241c3bedcae89aee259",
+    "src/boards/108.cpp": "54c86c7b8c4962cc416171fadb9cdc1423e971e4203e8f8d0df4ada4dad13509",
+    "src/boards/112.cpp": "db49124e248198d68ad1f30c0ce93a97d8fc2eec3afbaa1ca04be3c9f6e1ec7f",
+    "src/boards/116.cpp": "aa2cfebbb01d608f86ec744bc887b9c82a26a9753c7994e1cc5cf9d754ad2f9c",
+    "src/boards/117.cpp": "6585f518e5ca63e67c54d21c51fff4a53ac4012ab2fc748df704cf02b83aaa49",
+    "src/boards/120.cpp": "2cd8516190db83c6086e58260ef31955b8eb006189b957cf836d3a4edb4c699a",
+    "src/boards/121.cpp": "9a84ca4b2074b704d880b339e3fc8125bcce62d9a9aafbeedbfbffb1be38f9bc",
+    "src/boards/12in1.cpp": "232c0f5629c1195a64d43f2a50424ce8a3b53d1243da0c4b20389de388b6260b",
+    "src/boards/15.cpp": "fefcc6ce0d67a03f3e23dc8b5f9583ecf368e81eeca2f33aa931043af34fd805",
+    "src/boards/151.cpp": "84c6cb4a91c8a1626e4e05ea8fde76096aed16f99350f9344a06c6c4153b0c5e",
+    "src/boards/156.cpp": "df80c17510561718af9d8b5d0fbe852d8112c682490f81dcf720113d4f52bf24",
+    "src/boards/158B.cpp": "c3a8507e5d385e0074295a2492c65b0af1a6fb83dea6c43ab57eab7e1b7cc428",
+    "src/boards/164.cpp": "d36fd6eb7be51f890156d3582d669d051c85080a2ea9146b1e30d672902b581f",
+    "src/boards/168.cpp": "637d11698fb88d642a0f456dfd2e631a0d5b626b24d345072ae4e032a8a3a91d",
+    "src/boards/170.cpp": "c7d184595ee4465c01642eec11a0ae43a813ec19f1825a81eff8d7f0a1f81d0d",
+    "src/boards/175.cpp": "5a590e10186f91764ab8831d23a934de79c3099abc1d6ddb19044d94219c0562",
+    "src/boards/176.cpp": "061f2945e31593d9ad6fbf93c34d8a7c2ea8c66acb086db23c696ee7cd649b82",
+    "src/boards/177.cpp": "0489612149738b64f45d1f366f3a28cb00e7305b94ed9c917169bfb9508613a9",
+    "src/boards/178.cpp": "cd9d446bbcaed504a4d7ad80c33cff9bbf40271e8c8b36257cfcc6753632c839",
+    "src/boards/18.cpp": "731d4c0c544e9fe3d091c55094ea0425da7731bd74378bfdffbccecf711f7395",
+    "src/boards/183.cpp": "2cd5ca5de20eb1735f2c605653847c9cc2626e82aa247b2f8a46efdc112b35c4",
+    "src/boards/185.cpp": "b8be7e88281bb13cd4911e022e67971d465421a8626d9e6f684182e88fd326b3",
+    "src/boards/186.cpp": "a0abbe50912c0c8de2269f6f585283ab0f6d5e3486ca464781dcb124aa08cc55",
+    "src/boards/187.cpp": "ed3387923c266065ec242a37289296b76e4856c8f88c218a7982bcafbb7fac77",
+    "src/boards/189.cpp": "630921fde31227fd7964355a8e524d92f071d0c25e6c92c8fe733b4b8bad5482",
+    "src/boards/193.cpp": "45395f145b058d34aa255b419a9faf180d72f93bb7eaa0b3646e4b31ccb7ef06",
+    "src/boards/199.cpp": "35c16f96279caefdf7a0ca5fb394ff72837611206da3e21d842d843aba6e715b",
+    "src/boards/206.cpp": "0d8685110d68e8c0dabdb305ad7f5e42dd4732b4ca370803da839c70ea6346c7",
+    "src/boards/208.cpp": "1fea0aeaa57ce1ffcc2f8332ffdc6ae2197717b5530830978cb1aa4be1c132f5",
+    "src/boards/222.cpp": "e6d8583b3ee26aec0f074ad919009e541af4e0eefd9a72e02460ed1526f5cdb4",
+    "src/boards/225.cpp": "8ec114850b7bf622c833839f78fe2b9853d83eaf715e54d7e1832fc92d432df1",
+    "src/boards/228.cpp": "2addf2aaed7d9146cf4d68f0592e22ae9f468e7dfd3ea0792fa106f9f0305029",
+    "src/boards/230.cpp": "12ef70eb949660dd62cc2f79de944334b795d41c7b51f6270eee1a02d2ba63b8",
+    "src/boards/232.cpp": "8e76a3568731bc455e2d754e6356f6df12e9cb029f83527eb20a6d2733f95fb6",
+    "src/boards/234.cpp": "81640cb95c5d466b4003b9f0b3ce32d6e12cdff501b7b18dae10581701ee2193",
+    "src/boards/235.cpp": "133b394f8557ec761dc24e8276bc5aea2663714f7fcc518044f43d04b337b47c",
+    "src/boards/244.cpp": "01691c9611974a13b01aa034e84b620c1de451662ff8ff5d353a0ecbd99102db",
+    "src/boards/246.cpp": "7b536d89b7fe83ddf1b78d9d02529eedd2d77c4e683dacdc0782386a693cce2a",
+    "src/boards/252.cpp": "aeaa082605871e6d3e6e432ba4f6a7c41eb9c59652995aa39b051b050ff699c8",
+    "src/boards/253.cpp": "dc9533a78148cb316349a78ca203428402805045d7f3e5e8dd785181ab5b3a43",
+    "src/boards/28.cpp": "4871f71ba28dfebb840bc6b396b3e785d70f7a1ffdffdc27a7ad2bfaf3c8b650",
+    "src/boards/32.cpp": "ea82b9bfecf7d109ad2810f9a92b493e41d2c09ee215af089abfd6672d2cf96e",
+    "src/boards/33.cpp": "0030cef76d6baa61d18f8c8a2d11a8af89cc2542215ee25f8c6260d2834143c0",
+    "src/boards/34.cpp": "d6108a2d4172f3b8a281e425c4783eeb421f7bc2f723b25d36c2bc190457dda7",
+    "src/boards/36.cpp": "fccb5a8d11953ceb246e4b78cc520d2d26b2f94c70541246e2fcfded3be58280",
+    "src/boards/3d-block.cpp": "b9f893fab5a66d1bd0a54fb6642d6b78dc524c697baedcf228455a2398350761",
+    "src/boards/40.cpp": "174347e0965b4d00111c51c2f92a1c29ba18ccc407c72b881204e44389685385",
+    "src/boards/41.cpp": "9456c4646c7ec0f28f1e8b5ecad885b88870450b93544bbf8d6e4f73a6ac9fa8",
+    "src/boards/411120-c.cpp": "a37be207634c20f4f14295c832db8e7247154899aeecc1a74d046d1fc2e9bb69",
+    "src/boards/42.cpp": "18d9d406042d40314b36613c98033e11e6cdf5e1eb7da82568a96de4cba12a31",
+    "src/boards/43.cpp": "18187c84032f42f7b29fb6bbb5ed59a7b04a0dd9c24b3db87a2ae71d892cdeb9",
+    "src/boards/46.cpp": "0f0d63d329c73a5a33f5edfa679af3ad39ccd3c9d05972e90d40e186a50dadef",
+    "src/boards/50.cpp": "b5d043aef8976ea34ff12fdc3acfe1e5e65d41464a6014cb8e5b8e3f5fef3d84",
+    "src/boards/51.cpp": "c51b3298dbb6b51fe5109b36ced5c9ed0d3e3159d132432b96dd1a43eaef9675",
+    "src/boards/57.cpp": "cadde822ebd1eebfcd894a7cf68eda299198fb226d4dd521e18120088013607f",
+    "src/boards/603-5052.cpp": "afd94db64d23a1d3f4faa7490180010b1c5de5cbc2f7ad73aabc165c35b70d39",
+    "src/boards/62.cpp": "27eaca4e2e4baa81332578c666db417190b6e5d1143583de4c27269f87eb771c",
+    "src/boards/65.cpp": "040c45a8856e14880fd1fac2eedd0eb7071e7c05eb81f99cdba92a52b63978f4",
+    "src/boards/67.cpp": "1c0547447ad21c47a9463d27952c48966884d86c8c7448c9ed2652071c89776e",
+    "src/boards/68.cpp": "f23baa789a0f3498e1018268dc42d53937dc97c81d87958cac5e964881d90b51",
+    "src/boards/69.cpp": "b1d666489ee6971dabfc9987bb71537d614c81313a538db35de5d9b05c87dbe8",
+    "src/boards/71.cpp": "23fd6b08c3b18999c7fb206c4efbdd526adf7fda00496a54ccb660e62d0b5199",
+    "src/boards/72.cpp": "8dfbb8288f0c5a5cd16a0e6eee8780715ed27f87b4882ff9e3247cf5c4736789",
+    "src/boards/77.cpp": "4aee026a66a6750818e90d26fd51132ce8a09035fe679054e7d4eb8ce08c9df0",
+    "src/boards/79.cpp": "8c5c83b59b6bd7e72153230d9458dd4bf1e28dccf14c205fd4eacb10471512e7",
+    "src/boards/80.cpp": "a1fa219587b8a22f2a5e3ee5105ed544e05ee61946732a6fe5f16e3ed82fdd3c",
+    "src/boards/8157.cpp": "dbc99c736db6ae91c02ac3a51219ec28899a8db5fb2fe418cac312c022c5b681",
+    "src/boards/82.cpp": "7e99b594c516c11b737e4410308eb6e90a47871f6791363a0f3d59535236b5ae",
+    "src/boards/8237.cpp": "a949f7118ca1bb8bf0f1158e526b9494bad410dee8eab5def0ddfdf1bdb539cc",
+    "src/boards/830118C.cpp": "a140f8be098f1651b8974caa3cd5d8033ac8824c350621d18e25c9402cb3f6e5",
+    "src/boards/88.cpp": "7b3c06257238221c940ff2b4e6ef29d4d7e2a8ff24ebe21a96c933634f3ee095",
+    "src/boards/8in1.cpp": "029b9d1f841b5c4e443531f97ebd7b26ff50de4cefe0c3720a75104b85f87eec",
+    "src/boards/90.cpp": "d9de2bdbe7dc2479e7038f70ce8617d518eb394162946eb5bd90a7810a8e9692",
+    "src/boards/91.cpp": "bc5fcd6ea8f1682d30c92a31905a9162678adef1626173fbccbcd089a32f4be3",
+    "src/boards/96.cpp": "6d0abc84c267726e5f147c0b223f61e78cc07a2219b26503f8f95cedbaeb32fb",
+    "src/boards/99.cpp": "64408313e710cb0fa0552e060267a5b08c3b587f38223d9f9e3f84a269ab3731",
+    "src/boards/BMW8544.cpp": "2e04e425d3e218a8f87ac19825b6640cd88c9f4bda44dc2478cc1d5d6e01a529",
+    "src/boards/F-15.cpp": "eae097bb1c759fee5a2681f15ffa5dae86b0843c40c9890badc844d3c814bd1d",
+    "src/boards/SConscript": "9b705401939bb6818750b83429d75fd5c91038f79acd762a39955308788d95d4",
+    "src/boards/__dummy_mapper.cpp": "1327dc164f931d22fbbc33112ccb03d6e8c543b33b15f6a82513a7085ea4561c",
+    "src/boards/a9746.cpp": "0e95075de7df0522e64bf91e59ff1b85e91b0aa489580af78e819a0a9423780b",
+    "src/boards/ac-08.cpp": "fbf3df6ae0d2e5e10002c1107a0816e780c7cb17acb4270282e797e6a887b1f0",
+    "src/boards/addrlatch.cpp": "8d4e57db74071789d515441082e3e56fca6ccaf22502033ba3fde43f38475a21",
+    "src/boards/ax5705.cpp": "90fa3e25aa4c810cfaf831607aa17d872be026ce10cdcaf6c184b4177a8517f2",
+    "src/boards/bandai.cpp": "11df6d02d8f8707817108c2ccf0ff79144e55e19474958c08bece0f2456610ea",
+    "src/boards/bb.cpp": "785fed12950de34073dbab4628021e606a5d159988b84aeb6613ec885e82d8b9",
+    "src/boards/bmc13in1jy110.cpp": "bf111d2cd9bdf898eac0d443b19ba1eeac11dd2037d5597421b28e0bf25a9829",
+    "src/boards/bmc42in1r.cpp": "8821e3f6ee84cab63af59cf96cd342b857bb0de76c1a65ad45c459c2b6e960cd",
+    "src/boards/bmc64in1nr.cpp": "42aad83a4e989f900ce6c11cbd0a3a8efcdfd25f135cc35f2da30bc7162a26ab",
+    "src/boards/bmc70in1.cpp": "a94a16a643554bebdab52111b999db4a0d6237be2d9b9fd4d5f32ef9f1e3ab46",
+    "src/boards/bonza.cpp": "8abb622a3de413d581ee280daeb780f0ec2753509fad603de8f226fc09f7af99",
+    "src/boards/bs-5.cpp": "3fb1238337d5874a96b06cefc4da2b5cd241228cbafc0b6af6a4fc8a04effd50",
+    "src/boards/cityfighter.cpp": "06dd1b6ae8e9ca2a5f761e2d189389f31e53966d7d9d63c923fa7151dd2a1849",
+    "src/boards/coolboy.cpp": "8cb4447c16e3491116ab3c962c51b2bab00fab42443a93d01cc28cfcca5be134",
+    "src/boards/dance2000.cpp": "b2e4175c4e86f0281c9de080b88754144773cd909ea73f2fda309f14fad0bb03",
+    "src/boards/datalatch.cpp": "716717132693a07e72c0fc50f9608b61337e1701e11ba6af342a96e55d778639",
+    "src/boards/dream.cpp": "a9ad3fd7bfbe91dceb740eafa8f62eba5d3a2eb34e6900e7f7abd6a0cecdd64f",
+    "src/boards/edu2000.cpp": "abc2d56cb86a1b4138b3021507f445189af83caaaff9275588d6a151aefa3523",
+    "src/boards/eh8813a.cpp": "3f4e428c811dfd4c54ead3f18c332affa3bbc245db72a8c1837df92df2abf4bb",
+    "src/boards/emu2413.c": "4e31a50d6001f1b15174a6ceb05acc791f0e9d102c32f80a7a4be31a33c30307",
+    "src/boards/emu2413.h": "341de8e0c65f4a17fb361fea2c36368b558e26cc2174486838ebbc222c6a0909",
+    "src/boards/et-100.cpp": "7c983a4f27f219f4edd9786be9ac0a193a624a1663a98ff607482470c26858d7",
+    "src/boards/et-4320.cpp": "1e7e35ea14ec374c3c0aac0083ed18222ea4d625d7315f3275fad189aed428de",
+    "src/boards/famicombox.cpp": "fded5dfcb0deef71266e5c68aa66fadea52b72b634ea99f6573dadc4c12c07b7",
+    "src/boards/ffe.cpp": "678892cbabaf010f70e084ba384a405a8e01dddf0a3eab1643cd7a6d6a8c3899",
+    "src/boards/fk23c.cpp": "9af9c649674e33bf719f632e84a7221a1256f2ad68c7bdb0a4312e42fcbb1ebc",
+    "src/boards/ghostbusters63in1.cpp": "58b67b1cd04f91395ddd4b88caf77ea7777cb7df580e49110f94b60d1a870bea",
+    "src/boards/gs-2004.cpp": "16295607c664473fe32b5d2a4dce94b83bacd39a0a3003a6a5797f7615fe38ee",
+    "src/boards/gs-2013.cpp": "a33534fea6715833fbf5e6a05e9e9055c8d1f71904200edd8130d01528facd44",
+    "src/boards/h2288.cpp": "b02f3e9bba1109c34777f7ea59d6f402172fd13cd83047f2abd6aacdb1e4350b",
+    "src/boards/hp898f.cpp": "8141b8ff3acee094d3bce211e3a0efb9e438bef100e4d51010e1690569942e2b",
+    "src/boards/inlnsf.cpp": "02bdddd5751b21cd337ec21ff21a6e4e32e627ff30787a5a251c32ba2ad12bc6",
+    "src/boards/karaoke.cpp": "f2bd6251b9e5571e224fe166f23ca1230aba00589169ab6b88dfa4d951e5de2f",
+    "src/boards/kof97.cpp": "4fd8b352b5efc6e7066899ca8400e7c24dd26d2f8263480d6e7373270a1bc66e",
+    "src/boards/ks7010.cpp": "3b207367bee923394dfe9f96a69ad51adfd31a8333682e23946f9ab25763420b",
+    "src/boards/ks7012.cpp": "cf77038f22e1916b8ff5f105a38429323f88d39d2316427f277dd292b51f3b7c",
+    "src/boards/ks7013.cpp": "36f5ae5d36fcd7e34a446525824868e1ab38161f97eaf728d6ae8382a533bd00",
+    "src/boards/ks7016.cpp": "e934d9eb2d4a9f8e2a486fb15636d5bf582b4a4e680e52ba12239dc02b168c51",
+    "src/boards/ks7017.cpp": "ad005ea4fb188dcb46b78e11ecb4f2fd0b7b827ad2e97aef00036d260588736d",
+    "src/boards/ks7030.cpp": "3b9b722e8746ea15c3a00e95c8d72d67019ac29b5b40c6212c73fa427b8c05f6",
+    "src/boards/ks7031.cpp": "78440a2bdb0c9cf3c8a56e61eac8b2e8d692869a6b96f83c2aae6a559fada8a9",
+    "src/boards/ks7032.cpp": "c50c7372c6e2fe6cac87f09d57c63dc2f393bd1925d3d61d7f2b0f0ea1456474",
+    "src/boards/ks7037.cpp": "b4713ed13dbba39fad485eb56374b37a1714c09a8b0cfa98504b8d97b47e8092",
+    "src/boards/ks7057.cpp": "3ac932bc388222a9f23a229182ece8b6a9144abdf7d39e746293676de568b7e5",
+    "src/boards/le05.cpp": "c63fb7502caac3a4b19e3614a44f09d6fe0c4cf1bec684d326adcb4d5001cc29",
+    "src/boards/lh32.cpp": "1abeb6847dc7184d8912ecb794ac9647f7915c34ccd86d07e394d402900cc396",
+    "src/boards/lh53.cpp": "fed99efa0f424da3b6f37f40604527a242a908e0a70da37fafb93d521a8ef129",
+    "src/boards/malee.cpp": "c72a80400f57902ee3991d6e9a883fadd768297bf34592501566c49f37774cab",
+    "src/boards/mapinc.h": "8bed99ad73bba94c2dc320691f806fae4aac7b0eb47f81ab24bb54c38d4222bc",
+    "src/boards/mihunche.cpp": "ecf9f99dc858a2683df056371bfb2b4f02aaf45308bf0de7f29d86a89fc36792",
+    "src/boards/mmc1.cpp": "3e40addde27a930c179d48af2105917ec454521d2437884dbea16196400d86a2",
+    "src/boards/mmc2and4.cpp": "a512676a03b9364270de83efdd00e127ee8ede29ea3ae375336098115c493f8e",
+    "src/boards/mmc3.cpp": "f5aaee0906dd3c84be902d6f81edc5fccc4f06e9d32c79c3b03c729c65236380",
+    "src/boards/mmc3.h": "0e9f30e188f21fd891e4b9d61c2928be505c948cdbf65950e3379f05c3341ea8",
+    "src/boards/mmc5.cpp": "25bd221d1daf6ec9b910d1585a3bfccb8a97c854860892e46a4f6d6499aebbd2",
+    "src/boards/n106.cpp": "5a33d0154adc8a169a6f239ff5281ff1ccbb05acafa0d1b80fe7f327e3d33210",
+    "src/boards/n625092.cpp": "1504ab37772bdeec790276cf241f70b5d7833d6921759a6798a8ec69b45572bb",
+    "src/boards/novel.cpp": "dd36983d6583a0b1f682c5a2d80fec1837fb46eaafb563fcba8a7fd1f8e6ce10",
+    "src/boards/onebus.cpp": "70cac8e5d59161fad0e48256c35333e901154a6ddcfbd5568d5689732cbb578e",
+    "src/boards/pec-586.cpp": "a7ff4cc7261c720bee6a9405469b107d02e60c9eab5fabbb8008a049eeaba885",
+    "src/boards/rt-01.cpp": "eb55d1af302c2d2eefc44b44c653d7430676e8b44db15f9b06d9ce08781af04c",
+    "src/boards/sa-9602b.cpp": "2dbff1e88002b8aabc2fa32a3e5d1ffe2c0f1c924291ec4c3a43872781923d02",
+    "src/boards/sachen.cpp": "2468b8485f46519c5915ef628eb6fb6bd46e1959955c95a1a2946f624827fbcd",
+    "src/boards/sb-2000.cpp": "48b1520ebabf3f819d35c506da97574a029f2d6508aefd5961c9ce64ef5a833f",
+    "src/boards/sc-127.cpp": "75b05323dca42794178f78f87d1ed16358537b11360b53e7490c577c35ac1b64",
+    "src/boards/sheroes.cpp": "5acd69cb4f99765a32b9070b5d2af2de5eaccb0fbf4ec44b936006ed6aaf8e36",
+    "src/boards/sl1632.cpp": "a325403c0b4a6ded5842139c63d2aa2f553277cc5e625440a2a66edc9fbb2b63",
+    "src/boards/subor.cpp": "712fe7cc6e1940e519443ee668a3fea5d788f2a3e2e1e4d550816c54cbb796d9",
+    "src/boards/super24.cpp": "e19016059d5975e34219ecab55ee7a0987c5494b6a04f2a9c7189e973ca35ccc",
+    "src/boards/supervision.cpp": "d9f9099d205f3f0de0f68b2e29fc8edd2155e5caa885f11f25532eb2ad163756",
+    "src/boards/t-227-1.cpp": "13a41155602deae8054657da0d971ece81a32302244a358491d5eaecbd552f1f",
+    "src/boards/t-262.cpp": "316065096727c3a678c1ec7428d4c0a69e60fe9665143717657b762b2a0d8965",
+    "src/boards/tengen.cpp": "0aa9e66eceb70d832b48dfcb2dd8ef291f7ff114adb1db5a7a96749f2e1f4e43",
+    "src/boards/tf-1201.cpp": "67c1e0df455454e5ab29717a8614a2f5db4c7e4ff31cb29ef72748c4ff72aab9",
+    "src/boards/transformer.cpp": "e25b66fd626f1ccfa304d25fea7bdabf4372fe9f280c691a2ba8cd51591d0657",
+    "src/boards/unrom512.cpp": "576fd2661112d9f89b51c431c9e4bdebc4a3edb0744c54dd955e73f33253c3cd",
+    "src/boards/vrc1.cpp": "3ccb0d14a8be14bf968a0bef47103ede15b814ece4e14f33ccada8170b0283b8",
+    "src/boards/vrc2and4.cpp": "4a29eace6e227f3248c371063b5f59cfee4ca93ecdd10b5ea6f8f84e0dfdf839",
+    "src/boards/vrc3.cpp": "8e28636482fce26c76a1581ff48d3ce80a036efcb729971d669e6109f0505fb3",
+    "src/boards/vrc5.cpp": "fc93e59f30db2d46a1d5e9fc025f3df8285120efb8055d2430af6c8191c3a978",
+    "src/boards/vrc6.cpp": "cd235a872cbfb989afd816a00bb8d30b6fd2b0a608257b107f69a6c5e8070250",
+    "src/boards/vrc7.cpp": "551040ecf118a26fa0c72b05bf0e561ce05ee5bb21233ba3bdf2c39f60dddf43",
+    "src/boards/vrc7p.cpp": "e707a747d64b54feb34c2087303d76fe3ab2cd269dd81248e45df53d2d2a5e0d",
+    "src/boards/yoko.cpp": "3f47f1d45e663aa8617df15b0103427eaa4f0a0fad7665042c22ec1800d8f1ef",
+    "src/cart.cpp": "ccec05f2c343bcd8f2eaa270e37088caaaf343bf6136998e09a09237040177f6",
+    "src/cart.h": "4735c1d1d807ddcb80e9c01b2c72bb50a4034e2f5e72a20d38a0bed440988281",
+    "src/cheat.cpp": "98ce99f9239017cf1b9b79d7c828cc1b90b71606143de2a75215f92c78cbd715",
+    "src/cheat.h": "a0f2f469d3ae86b5d8806c9af897300201cf6d5ab9525181ef9afd027723d800",
+    "src/conddebug.cpp": "96a082023ca1167762e34ccbf07e0c1038e208994ec52c347417f89b9027de37",
+    "src/conddebug.h": "3fa9b23ad85dcd8a6c29bdbdcab41edce5c2104937a97490bbb3cfe8ecc8ffe7",
+    "src/config.cpp": "124c6e0a87c8c346e967c47d39750059625493ee2fd4a499814ea6c94402cb0d",
+    "src/config.h": "e16f1596201850fd4a63680b27f603cb64e67176159be3d8ed78a4403fdb1700",
+    "src/debug.cpp": "d1c7a873b9a597425a476957beaeb0989c23dc7332b096415d8c7dae084e3681",
+    "src/debug.h": "fb81347dfd1425b7910bc52df403a7500107784a925f1fa624b123c61c9456c8",
+    "src/drawing.cpp": "7e64d5deaa5f52707757f258f3a97d356e768aef9fc18be70e0f9877062b8c2c",
+    "src/drawing.h": "ffab8c861247d0a466938c73099f82dd6a381bf26bc4bc98491b3bf095d23299",
+    "src/driver.h": "8a8af7353dce15ba18b965405e8705bb72e745f22711e109f06c4cd6a0d0c940",
+    "src/drivers/common/SConscript": "f2fd2bef02792b75105397c8875c60e0d4556b5167fc63c4a213822f88f982fb",
+    "src/drivers/common/args.cpp": "aebb9872e3f7e520d7317a5adea07c8dcd220c6744f4d04aa86400a92723f121",
+    "src/drivers/common/args.h": "e9bc461e9fbf00b0dcea71ee76c6624a70357cce3907084616c5384b9d84aa5a",
+    "src/drivers/common/cheat.cpp": "22071360c5d8eaaadf3e632660ef9bf5ccff84d7766e33c755ebdf477e99a7e7",
+    "src/drivers/common/cheat.h": "a325e0afa247bb7dd8184fc76b2ba20769b30fee1fbe8f2011d79c2c8d2b95a6",
+    "src/drivers/common/config.cpp": "3fc23f9e0218884c3429bb779713909e2b340f1b7f03cbb9a4f05967589dc37c",
+    "src/drivers/common/config.h": "ab79b3c7e79fdc2f8eafce56637ea236a25db436e16bce86ff6791f09007e7a3",
+    "src/drivers/common/configSys.cpp": "027f6188bec952378271d30f2ace77c666d2afdee4f0472613510e535a0fd0dd",
+    "src/drivers/common/configSys.h": "772f08f2730982974197628c12aa06aa3b7740b24eeed604d43ab8c8d0caf990",
+    "src/drivers/common/hq2x.cpp": "36d96d9c2cacd976710c61cada5a1dbc8d0c9aca53d45f5a053b76e4ef9a7295",
+    "src/drivers/common/hq2x.h": "dba9e1dd39a4a116e8df67bfa8acfd16b6e08407b9d74b40290474a872bf10b1",
+    "src/drivers/common/hq3x.cpp": "d18180cbd0dac3d2f425c6872b38c6b36d951faf6129f4a7b121b461fb698adf",
+    "src/drivers/common/hq3x.h": "b50b1fac722f63502cb392800ea69df97fe42455823c7490c003db119cf097b7",
+    "src/drivers/common/nes_ntsc.c": "ced483e6dbdd3e8facd1c97d82cf14f68d3270ab78d9b6498411f9f21f68b15c",
+    "src/drivers/common/nes_ntsc.h": "e287ff0f3d5dfcc7d56bad770384704cfccf11c34e0ae0092aeeca8f9232ef12",
+    "src/drivers/common/nes_ntsc_config.h": "7f1a80d8df9ac5bcf689b6062db0a114a49e77af4fb4aa90fb38c71d2be00034",
+    "src/drivers/common/nes_ntsc_impl.h": "f28ef3a16107c073ef61e705376a080ecf1d14be82dd9579c7972e82a5391899",
+    "src/drivers/common/scale2x.cpp": "0108bce64f88cd168d19bb8ae93cbff805eaa0994d8f77b61c11ad3429d11aea",
+    "src/drivers/common/scale2x.h": "08d3077253bd5095b9d4c33a0cd13c92eb6f42e81cbfbab230e2853221450557",
+    "src/drivers/common/scale3x.cpp": "89c322c6d8342fd435f961c6bc2c24091fe0af824b79d6caefef2b6bb02ecc23",
+    "src/drivers/common/scale3x.h": "2477eaf69f76d22769b7ec3e1af8453802421729a21836e87ed08da866df4518",
+    "src/drivers/common/scalebit.cpp": "13396e086ae91b8702df89d4187df988d334fbf99300dcc30b15e60da8257341",
+    "src/drivers/common/scalebit.h": "b1a46076a8a9efef25a1f4487bc4d4670282e4d62f875b1834a4fcd6a7989ba7",
+    "src/drivers/common/vidblit.cpp": "50a6de2cffcdace387f6b1212bbdb7f519f79d4185a572ef2a9a0c1bad5eb3eb",
+    "src/drivers/common/vidblit.h": "26fa069641a671aa20ee08dca73810bbd7bcdd89b0701bca45672239a37d83fc",
+    "src/drivers/dingux-sdl/config.cpp": "b7b1335283ba3fd8d98c7bca9cedde7e7083250801faadfd9f8d19bb9b1131f0",
+    "src/drivers/dingux-sdl/config.h": "8639381c63233c6f2b2593441724175c132dbddce1fff5d6f2315a5c8c5eb3ed",
+    "src/drivers/dingux-sdl/dface.h": "6381b9338d2f2db0009877027ca9af2beb8a49ee742c9a8bfe308a01109fd5f2",
+    "src/drivers/dingux-sdl/dingoo-joystick.cpp": "8cdcf4541a40875052c70d80b975a75c8bafcea40da8bd170291cadd44cac3c5",
+    "src/drivers/dingux-sdl/dingoo-sound.cpp": "a3c7e2fe80bbe413b1551656e86a8241e508cf5639c70a0952b333e8e8e1d173",
+    "src/drivers/dingux-sdl/dingoo-throttle.cpp": "42ddeefcb03f68a11280aba17cd4b0eb9779b8ec526f4017385c2aad34daf763",
+    "src/drivers/dingux-sdl/dingoo-video.cpp": "c3eee54f73630e5d6d64a2a6520e30c9c5f52e05cf8853a35a2d1745d7835441",
+    "src/drivers/dingux-sdl/dingoo-video.h": "c8322b50608f7ebc5df03b0ed1c6b9974fc631a1a2b5360d58afe190b1feb68c",
+    "src/drivers/dingux-sdl/dingoo.cpp": "d344cc4e74402bb0e2287ccc6cd5f77d60fd3f615acc6db9c5cdf8ce3ae89658",
+    "src/drivers/dingux-sdl/dingoo.h": "4e52320e56a24f50023eff7214cf1b23ea220a84ea577f287dd40d4159e31176",
+    "src/drivers/dingux-sdl/dummy-netplay.cpp": "5bf31d14f09dbcb33a6f9544dfced49b8e900088bde3d83e347a47ad6410e0ea",
+    "src/drivers/dingux-sdl/dummy-netplay.h": "7e3b6d343724098656ec4f1076d9ea0559503049138197cb6da078e756a096b7",
+    "src/drivers/dingux-sdl/gui/bg.bmp": "17be76889f15e4eac74b9177524119f4e93d83690887cd26d6468649d8a7b000",
+    "src/drivers/dingux-sdl/gui/control_settings.cpp": "17a3cb6c2edb9de1fbf1171022fba1c4872085eb22f3ab4c1b1e76ee704319cc",
+    "src/drivers/dingux-sdl/gui/file_browser.cpp": "8b6f9c97f0d4ff95d63a45805b39cb3ed09852a9a40e1c5a74f6d9567633501d",
+    "src/drivers/dingux-sdl/gui/file_list.cpp": "8d354baba4935f9c0bbd922fc3741982182d69455754e82faee569298e73dc17",
+    "src/drivers/dingux-sdl/gui/file_list.h": "e82590569a2eb50f9de4000f5adacd1f4dba70e2a02fc444c7159e63090b3e6b",
+    "src/drivers/dingux-sdl/gui/files.h": "bace2eddbffe0e8ccc5c5275cbcca00a52670cffed0054f6f3739aedb35853c6",
+    "src/drivers/dingux-sdl/gui/font.cpp": "1e46080cad2a964e67787e25b49a5c8c09a55c6dde1ab9b5193322890aad6d9a",
+    "src/drivers/dingux-sdl/gui/font.h": "c0633337e32cb1ca344fb4731b27184791b1853429ef1b2229352b965ad344ed",
+    "src/drivers/dingux-sdl/gui/gui.cpp": "8ca65cc79bc68faae0897242fc2c88af92e0ee497fe6f31a5abe423d7eff2f61",
+    "src/drivers/dingux-sdl/gui/gui.h": "7ab6b0bc4c2059f751d17a52c0b95bfd69bc51d655e0bc64bf1cdfbbdefeefb3",
+    "src/drivers/dingux-sdl/gui/main_settings.cpp": "76df1112ead05d0483cdcdf62e4d73eba82e532af44f8c273d27998b69df9edb",
+    "src/drivers/dingux-sdl/gui/settings_menu.cpp": "fcbc142ab6c70f0d3d099a3aeb95a03632a3d74aa93a91585e80e9702d670daf",
+    "src/drivers/dingux-sdl/gui/sound_settings.cpp": "bd842373759cfa112d18511e151cf3c637ee84ed3e3d0bcda369543023fd7965",
+    "src/drivers/dingux-sdl/gui/sp.bmp": "7c7bbdbb5fa2a99af43f286b4d0543667dd86cca3152c667076d44769a15e896",
+    "src/drivers/dingux-sdl/gui/video_settings.cpp": "e170ea16910c002a7f9dc63523bd5d1d36dc72bc8bb46730cf3862fed16cc622",
+    "src/drivers/dingux-sdl/input.cpp": "7cbdaccb871dddedc3bfb914432e465d85998f7190608cb714130742bddeea40",
+    "src/drivers/dingux-sdl/input.h": "318bda5f088e5cfe31e6c6702ea78700c6805ed5395b803f80a173c7e88e7965",
+    "src/drivers/dingux-sdl/keyscan.h": "b0adcc04c869007e27788b6597ac82b92764f5187aebccc70bf09c4c4b4e23b7",
+    "src/drivers/dingux-sdl/main.h": "dce69f39e23147aa72828896e81b13755b9b5341f61fd62bed149d4b5736b2bb",
+    "src/drivers/dingux-sdl/scaler.cpp": "c633258827956e0abe79dcf9c94d7ca8a4ee240f6f4565ad24ac02651351637a",
+    "src/drivers/dingux-sdl/scaler.h": "7b2e12488fe8de2082c3c8d8b0e9d33f183277c6753ff2c8af90e28b9f6a3d09",
+    "src/drivers/dingux-sdl/throttle.h": "237e93ccce88d553a6aed4806256a9a9bdd8e19878af7b41d69e1c8d43d2ca20",
+    "src/drivers/sdl/SConscript": "dbb6268b0b1d36ffec82828e5fb7d0b4d0ee69ba8061f97de3e060f4038c2817",
+    "src/drivers/sdl/config.cpp": "1becc9a5d81d42b216268ca810fbab397c79d6cf078723b0ca5377295dde52aa",
+    "src/drivers/sdl/config.h": "020471e6f70a2389d483efcb7b5fec1c21f9063e26eba1291a4634baa3ece471",
+    "src/drivers/sdl/dface.h": "996d9b017081a7e3485409c9b541cac1bd1f8c251f6af6684ca2c15c76f77fc2",
+    "src/drivers/sdl/gui.cpp": "a149ef7f63d63f7f95fd2a4460da02e466c76acc99f137f8a8ae87b36ad6895d",
+    "src/drivers/sdl/gui.h": "f6b51f10e3a02c8bdff2822cc16cc82e6739332ed071e2a7903a5548d356cf61",
+    "src/drivers/sdl/icon.xpm": "8c8a620fd48303c0053acaa0c0045966c02316624ca48e1de5ea9c97631491eb",
+    "src/drivers/sdl/input.cpp": "d41f853a21cc86af8cf3d28b5bb1840459364ecc82384eed87eba920a712d816",
+    "src/drivers/sdl/input.h": "c5b7d466d226ad46913d9d70a878cd3e1904c76e20ac2a01f3c11c300d2eccab",
+    "src/drivers/sdl/keyscan.h": "f788da8a3456e3ab1bf01a5115fd5be2e8cda9014c32d05cec8349702a546fd1",
+    "src/drivers/sdl/main.h": "f762a8f5713c273df6204df25b4fd6fb14062182f5c71eb0626d86ae9142901d",
+    "src/drivers/sdl/sdl-icon.h": "2eb222c2805bf1656bf6f3fda0245ea846b481723ac08e2de0be875ee5aa6533",
+    "src/drivers/sdl/sdl-joystick.cpp": "d09be58ae0209d37f47725ee382a2bacfbb36cf01baafa7daf686f00f0750d98",
+    "src/drivers/sdl/sdl-netplay.cpp": "e2a56314c894398f80f3035a1a61cfa52f0da51a24330105d6625c5c8a04f6bb",
+    "src/drivers/sdl/sdl-netplay.h": "e16f1596201850fd4a63680b27f603cb64e67176159be3d8ed78a4403fdb1700",
+    "src/drivers/sdl/sdl-opengl.cpp": "94da89e1408335114ddc9c8c756df6a01f0e00a15f9d13d2715aa5ee95260539",
+    "src/drivers/sdl/sdl-opengl.h": "c567adf410740962eda42e7698fb1f6a0afe03ff0518becc30978cb62af7e700",
+    "src/drivers/sdl/sdl-sound.cpp": "7f241b4c3bcddc2aeafc77ba533ccb5e22dc152538881e8d468d7ec771fc2510",
+    "src/drivers/sdl/sdl-throttle.cpp": "f0d788677c38a6d6450c3881b82d88f01eb09322c523a9bb7d270668e7fb973a",
+    "src/drivers/sdl/sdl-video.cpp": "30ea748a4a23139b1f9f225817a3b156c36b5f59853d1e6e6d542be68d62ef26",
+    "src/drivers/sdl/sdl-video.h": "f914de96983bf3398e535c5c5a25b6e03fcb452ff30a5079b4a98f61241a69fe",
+    "src/drivers/sdl/sdl.cpp": "72a2a3914989cd30fe816f98b1adb141d8eecacd477fc633fce10b8fc6becbac",
+    "src/drivers/sdl/sdl.h": "ff33697bd482cbc12879aba4a318e152b7e83785cd29aa4e20f4110615953828",
+    "src/drivers/sdl/throttle.h": "1f94c0fb238fb72dcac18693feb2f62ae6763d4f7bdee84fefa5c19b055f6a93",
+    "src/drivers/sdl/unix-netplay.cpp": "82ba0631b24c6c0467237f72c0cf9fdccf94b13701a046cdd0c9a36cea372768",
+    "src/drivers/sdl/unix-netplay.h": "9d31b9abdbd0785acf9cfe75ca63884055a3060eeb9bd14fbe1aa23850d338b6",
+    "src/drivers/videolog/SConscript": "16803d575f45d471743714b5d947d9e7cd9b698c274b18f151f41b21469449dc",
+    "src/drivers/videolog/nesvideos-piece.cpp": "886c30ef87ae5f450fad6532cb233117e53338a4ecc3900d3fc2af7bae9ffb9a",
+    "src/drivers/videolog/nesvideos-piece.h": "768008def30ab976acb21792c6ba2d7bd042335e79f0e25e95f8d258403a5e11",
+    "src/drivers/videolog/quantize.h": "6b9fd6b3de77e2fe45fb059013e0dfe5d801e726d9ec838f49bcdfea1aa735b2",
+    "src/drivers/videolog/rgbtorgb.cpp": "d181e8fe9c40ace53052b29f92e4b01aff7d8a75729b44e22fa71a4d94d0c946",
+    "src/drivers/videolog/rgbtorgb.h": "f44b095b4833dd9089a0efe71516ec789fca1540e142bc9e5c2948f6f31e4c3b",
+    "src/drivers/videolog/simd.h": "d422a40cf8338a70930f43e015acf177bdacf907cb75327ec0d7cb988a365bc3",
+    "src/drivers/win/7zip/IArchive.h": "d0c8337d7687825091f7f9be389dacabb639eb663a2d149c616591582aef3937",
+    "src/drivers/win/7zip/IProgress.h": "62ca8d0621d76f19443d6473c32fac209ccbff582fc65b9890c8d4e0ca404f8d",
+    "src/drivers/win/7zip/IStream.h": "815196d5e19c97b5a430d966e55809a1ec4897154c239c46941a8fbf19353399",
+    "src/drivers/win/7zip/MyUnknown.h": "0ee4feb9996e42229526c33c8ba4caa294ce8b9119f92d06178b1fdefdb6dfba",
+    "src/drivers/win/7zip/PropID.h": "02dc66e817235f4e201780400957348e67bf312992a971f96179eb3bb5082e16",
+    "src/drivers/win/7zip/Types.h": "8562558d898ca469b44a3cf70c3dddbdbde944343a8a8f62c76a8027eb78b91e",
+    "src/drivers/win/7zip/readme.txt": "e9413eae19237c87c2cf90b124ffd79974664f3cd04a734312efe666bedf98d1",
+    "src/drivers/win/OutputDS.cpp": "2aa68fbf7fc910b62b93251c931af6bfb3b7eeac77bf44dd2039fae6509e152c",
+    "src/drivers/win/SConscript": "60278efe76c9d067e6794bc890a7d36955ea96cff6a58f9dede9912dcdb2e4cc",
+    "src/drivers/win/Win32InputBox.cpp": "f77abdd6bcde5e0aef315148b194537f5ef7f004922e423bee7599cd039ad3aa",
+    "src/drivers/win/Win32InputBox.h": "86e7f95986af5ddda4619195412f7612980753abd1fda454e55a455a4f708d1c",
+    "src/drivers/win/afxres.h": "fb76c913cdbda0e50ef14c3a3b65f9a93f8199a0b1e3924e727d9e6b06ae248c",
+    "src/drivers/win/archive.cpp": "d623ac6f7b77506111fe888ebe40d4383f22c04b1ed6ec10ee8affe31c0ff52e",
+    "src/drivers/win/archive.h": "783267af1c4dc50a758fecb79ac7d155c239e582a5543a6d17cfe1b0b018fe62",
+    "src/drivers/win/args.cpp": "67f33e9ddc52f98c7a15d0d30fcf9226ed07349d0b2a9b338fa099e8ebc42af1",
+    "src/drivers/win/args.h": "0ee9fd2fbe9d91e730e2a7c0f4eaade6e45da7f3de6f138ad9bd7260f69bda54",
+    "src/drivers/win/aviout.cpp": "20e8ee0afefd8dad8466b5cc6f54b228775bac87d20902fa29cf751e5c367bba",
+    "src/drivers/win/cdlogger.cpp": "a400ab4697e298b80c4a77dc39be2d74d5c59160968cda3cc8cffd5b429682d5",
+    "src/drivers/win/cdlogger.h": "3543287d87b33d6732707fc19caf32856b8cef2c2e81e1f42219b533f73f94d2",
+    "src/drivers/win/cheat.cpp": "3357a2b93ad53f97c09207b8d8e9adbec981b84317336ccd48b87e767db89b99",
+    "src/drivers/win/cheat.h": "374eeb037e6e7086c74e3792092284243c3f101ab41e5003d246e12e64937490",
+    "src/drivers/win/common.cpp": "23ca87842d69248e8ddde22d8d059c6d712d7b191ca7e0b54ab089b11332fa63",
+    "src/drivers/win/common.h": "1a93b0de35f24db1ad78ad6790c239065d505de955b1514a2138c24f9b6a785b",
+    "src/drivers/win/config.cpp": "7cdd4aeac9a4c645c69332b9d5f769a0cefa843c8e24852e52167de348025a10",
+    "src/drivers/win/config.h": "86593d47d7e512dad47aa90c35426607c8df0bd05dca2349941be861ca28fa1a",
+    "src/drivers/win/debug.h": "961126061b11e10875fc86498fa97657b08ed8d2f4193389da244d9aa8bd58a1",
+    "src/drivers/win/debugger.cpp": "fbfb266f8bed39c500d7fd120f25719b20295d373bb1e2b286947b7ff85adb58",
+    "src/drivers/win/debugger.h": "a358bfbdfca7ea986a51846b2a6e3eae5bc771869f46351089a0b0ae8f161b5c",
+    "src/drivers/win/debuggersp.cpp": "d7bee3beb158657546fc74239de090aa53939a55a6eac2df14c1d37ae33849bc",
+    "src/drivers/win/debuggersp.h": "890f3d7d8df6f43dad18f37a9d524e2128b24117b7f57c523d0b1f44ae3810fc",
+    "src/drivers/win/directories.cpp": "f2d3ef5999d740f1ae42fbcc383930567941a2db120ee4017f642f6b7b1f2ac6",
+    "src/drivers/win/directories.h": "94ef8409f4e8691c122ea2f10d37f2c48b5d181153304d0c1e6f271e5e244c05",
+    "src/drivers/win/directx/SConscript": "f3062966b184ed21707535034574de3aeaf4385faa9fe3d6db59d58dae39b7e3",
+    "src/drivers/win/directx/ddraw.h": "76e80cc1437f2135706f7a87d327c5fb00520f15cd906afe4618563414700ca6",
+    "src/drivers/win/directx/dinput.h": "d83992c72ef88173dacfb981bd47300d7a845833b23bcbc5a11d66604640a7aa",
+    "src/drivers/win/directx/dsound.h": "778a9296a61588365ff5ce7042f7ac6c70bbfe3bb5a05547d59eace2fbaf1ea2",
+    "src/drivers/win/fceu_x86.manifest": "e82787cc64b3fe9f1d719a14077838d7219702223456196397bc4c97a898a4fc",
+    "src/drivers/win/gui.cpp": "45245d2b265035050fc476264229d133a8d4b73628f98134741654b7e49c2345",
+    "src/drivers/win/gui.h": "177f0838839c65964cf663c2fafc72ad053eb091998509d49c4db1ea8224b4ab",
+    "src/drivers/win/guiconfig.cpp": "4eb062b7fd723e18feeb8ec9d9a1c358d045d09c6c83b0f7e69ca7fb247069df",
+    "src/drivers/win/guiconfig.h": "4724c21108d62eb26d8647bf8cd0c493e874970549a89ddd8d36bb3b792f3418",
+    "src/drivers/win/help.cpp": "3c74fdb36b0e2e99fb8865792d58beeaab90fe31e24a716a08b526461ca7de12",
+    "src/drivers/win/help.h": "f305f999a83b119e6c252e9ee74935a194fa3ee7ea29583d95e8b8a511b3f870",
+    "src/drivers/win/help/fceux.chm": "f36f3a375f9ef7e8328f863acb99a8366d789e99f08a429c3d1f15e2a4b84764",
+    "src/drivers/win/help/readme.txt": "732bd967cdb16262661ec8a5678121238e54dbaab0ca84bc45527a273633519c",
+    "src/drivers/win/input.cpp": "b1e5793a06aa1ac4c65c3245b1f30c494750be22533e6d79fed50c67b88e8a2a",
+    "src/drivers/win/input.h": "d62158cda14dd3c764e394880c53f5d8ed4b681506d06e90327b591af2c844ae",
+    "src/drivers/win/joystick.cpp": "c79f77feea49d187ec18328373720fd04b343cac9de6ff6f18f9d045d9d5bfb3",
+    "src/drivers/win/joystick.h": "533d48b638c7d3a9a133de8eb126c2c72bfb940834a91b786946c421fea0a4e9",
+    "src/drivers/win/keyboard.cpp": "4d10b134f4dc3195a1967bf1d7e25d99ce64ce40e28007e439681c5956651f3a",
+    "src/drivers/win/keyboard.h": "f296646ffdca8b9f9ca98ecd8be726883aadfed416de166419515efaaa193661",
+    "src/drivers/win/keyscan.h": "37b9742cf89ba1ff23ee3d057af238dd6e0b07154215c471f6726abf268fbbd0",
+    "src/drivers/win/log.cpp": "4e2804b7812c528f9cb73caef2446a0e454d9a947b5cde8f2e46b03429ada1e9",
+    "src/drivers/win/log.h": "a01a6750f5162b16289d1e063e16914da2244f8ea2f0e139de460896e1a3731f",
+    "src/drivers/win/lua/include/lauxlib.h": "c741f9c1587f29fd08a79acbe0c46884768a47f89bee4147669f774c5cf50fc0",
+    "src/drivers/win/lua/include/llimits.h": "1910669296681d9d2814ca46c325063724bb634c0428dae4e5ff59be54e0b758",
+    "src/drivers/win/lua/include/lmem.h": "abd1258418486c69bf5a93ceea3a1b9f8af2c7497a4fa6c27b442ffec2c5bbb1",
+    "src/drivers/win/lua/include/lobject.h": "274c18373fbbad71bfebd534cae4b2d2e49934abf6672f44735edc6646fb6a8b",
+    "src/drivers/win/lua/include/lstate.h": "dc64ea7ec74d7c1efaeaf6a9e2257f0b7856a5c988747948af2e76cf079d20fe",
+    "src/drivers/win/lua/include/ltm.h": "54f4c2fa76b8ed8d48163e31807a19999f5d65b009ae862cb757e0773f2aa485",
+    "src/drivers/win/lua/include/lua.h": "966374ffbd2a7fcf361e572d07b156633e97b82adce3c93e4055aef8c095ce52",
+    "src/drivers/win/lua/include/lua.hpp": "fd83f7e823cfbb03ac2da937ec83f01b4a6ddaac220a4fa1ffd6c6c3842c5890",
+    "src/drivers/win/lua/include/luaconf.h": "cbf681372bb6cad1348438258494e22f745c2442d38dfd455c39624dc720ec89",
+    "src/drivers/win/lua/include/lualib.h": "13f880e9dd997a0f7fd0b17ccd949c98f33e95bd120f084de66084e888217413",
+    "src/drivers/win/lua/include/lzio.h": "0ec77d0179bf29c1ccab97028fed761944d5c21c02808e10cd7b5883b58b2ca6",
+    "src/drivers/win/luaconsole.cpp": "9f17dd3a42234f4c978228e196cc46d8e6b25bf8d7af13f4c32285b5627057bf",
+    "src/drivers/win/main.cpp": "05a4456e8c1709730173c030bc2776cde50a8aae8eba4dd5e37e3bf60844f338",
+    "src/drivers/win/main.h": "d70834b8782a50fbf4dfb6214af6a0819c9bab4d6f6ced60c2dd28c78c193f09",
+    "src/drivers/win/mapinput.cpp": "c6b20bd4059394a3de9acc6893acb61d8076687bc7461a4779c4a86c8e130dc3",
+    "src/drivers/win/mapinput.h": "da0b940167d1f5f28154f3e8ec340b70c527782c404aecc98ef198ecfab0e77a",
+    "src/drivers/win/memview.cpp": "162a39e4c6deeb5a601a178ed3c25e16e00751df94b58215dc3901bdf163caaa",
+    "src/drivers/win/memview.h": "45f42b0bdb9d89ae06408d402e8f214967f237d6f1b33502ded0b1d642734cec",
+    "src/drivers/win/memviewsp.cpp": "965309e5066ec66684f88ec55521dad402894fd585c4523e8ff6754661034ebb",
+    "src/drivers/win/memviewsp.h": "9f9e8ee8b6fe93b476771f5f383cdde8692cdee2d3f84188a9bf31c22c35c8a1",
+    "src/drivers/win/memwatch.cpp": "fd57fbad7b967dfb20b8ea2399dbc02c751457dc95dacc4a105e0c959cad20e0",
+    "src/drivers/win/memwatch.h": "687b64a8521a5fd6bdd3ddd8adb5343c89551b869b8843d785b979f16f90440d",
+    "src/drivers/win/monitor.cpp": "b06e4ef9d8d96bcff44e60f5c3a91b7b6f40f03f4255a58802830f8020acb67a",
+    "src/drivers/win/monitor.h": "492c21a8fcd41d4892733044a9bbf578533c846b1273e343836e9047da930957",
+    "src/drivers/win/movieoptions.cpp": "03ed2debf34f6e0ca814ed5e2a74194caebb97fd80449a5d345e7df3c8c01e83",
+    "src/drivers/win/movieoptions.h": "36e4a495a34cbff2dacdd7b42146eda60c07cc9bbc7b3ad36e756dc784df14ac",
+    "src/drivers/win/netplay.cpp": "4cc12fcc04ae6a4447ef9a7f4a555ca144aaa23973fe067f45948e82c58243c2",
+    "src/drivers/win/netplay.h": "de16e085c9c1f2769877360ec74de6d61dd651195b05731bbab49f77050ca13e",
+    "src/drivers/win/ntview.cpp": "84210904821dac47b591b324da9bc87fcdeba6b92dfc18dbc67ef7716515261c",
+    "src/drivers/win/ntview.h": "ed1c1f6ff8cd5b235881a882061ab939692d65fb3f415d39a4127f73403d0358",
+    "src/drivers/win/oakra.h": "f888fed206912d3e2238e2dd6824ce2fca4df6887c9482207c035b6b4af94296",
+    "src/drivers/win/palette.cpp": "0c27bf95b8a10367be80bd2fab1028eb5d210c840210b701e04412235ee30323",
+    "src/drivers/win/palette.h": "696777c10232632999b7e39a1ac047e06baf92078311dc1d853f4724b659694a",
+    "src/drivers/win/ppuview.cpp": "7cbb1245bc3512260b43618e824b6c74dc0b926fcd9ea8ca1eed0c6a25d168b2",
+    "src/drivers/win/ppuview.h": "5d3098181648ca2326a355dba164b680ee7fec51c9abe329a03e7037a260ec7d",
+    "src/drivers/win/pref.cpp": "c769fbecd2910157f58b85060b0794f7ad37d6afd8a417b534fff2628adf03d2",
+    "src/drivers/win/pref.h": "57db6beec464e37f28490a6ffa4e17607121a046a7d9153f1ac5d6f7cac4f3c5",
+    "src/drivers/win/ram_search.cpp": "a844ce92aa884e4c236fd3901775a9d5a2ab5601780a7c92df3cbbb5314501b7",
+    "src/drivers/win/ram_search.h": "8d1b01bd3a03b91f2403067caa5e1ce538e90d9bb85fe636ea8045b4e441fc80",
+    "src/drivers/win/ramwatch.cpp": "76705f1f33ab9edcb98aab9f01bf81f663b85151604997dcc3ca9ab9e5e6d9a5",
+    "src/drivers/win/ramwatch.h": "3f77a1e5bf067907ec8a7cce0dac09818c0ae72fd55f820a26164e70ba7e08b2",
+    "src/drivers/win/replay.cpp": "c0d8a17b316fd9642011c6de717eded22f1ec2c226762637b53e377eaa32acf6",
+    "src/drivers/win/replay.h": "87977d85b380e24a3d6fbe637cb8510d90fd2a4c2d710e1302a20214f7e356b9",
+    "src/drivers/win/res.rc": "2a2dcf83ebcc93464485e281352abd021774c7cb16778e0b001863f5be9a978a",
+    "src/drivers/win/res/ICON_1.ico": "ed292d84156124d2c47029b8e1695dcece73bd699e5ee418fee348d8300bdedb",
+    "src/drivers/win/res/ICON_2.ico": "f25bd561d6de9b816d4949cf6e45cf16c336bdf320c46e21cea5afa9f2aefa3d",
+    "src/drivers/win/res/branch_spritesheet.bmp": "ec5654b3d4287cc00b68aa7d9e01bb3c984919cacd806296ec169daf53a41bfc",
+    "src/drivers/win/res/taseditor-icon.ico": "c92b1c0d7ad324a295ef81dd959e0021338a2fabd76722e79631f4794ab1c51d",
+    "src/drivers/win/res/taseditor-icon32.ico": "8e5290a70f744bce060318ed2c0decf893173a383e3c4794a090edb68b0f12ed",
+    "src/drivers/win/res/te_0.bmp": "ad561e38a0b94990806fa883cd47b4e74646bc50d81c5dc04204ca27f0eac48f",
+    "src/drivers/win/res/te_0_selected.bmp": "789ee5f69e572e24cea63c1fd53785e4834ebfee82c77a5e95515d358a38e753",
+    "src/drivers/win/res/te_1.bmp": "bb755bab816e605d781c606cda62c2b572c269caeb234a5300d124254c1d30a8",
+    "src/drivers/win/res/te_10.bmp": "1bf8db00270867673f4f75272b4ed39954203a69e544ea568443d23d41aac077",
+    "src/drivers/win/res/te_10_selected.bmp": "bdac51e165d368c183dec5d6da3d5bbfd1fbdbb79d3361f81f94c5f7472f5011",
+    "src/drivers/win/res/te_11.bmp": "ba6c1f281bfff6108b4ae6daab16894d0cce80634887b11f12912fd6b26a5355",
+    "src/drivers/win/res/te_11_selected.bmp": "1d60b0b5f4906b871f463c515ffd5438a57eed5d77aaefbd4972d8033ea35b4e",
+    "src/drivers/win/res/te_12.bmp": "ef110d4460c3dea522fdbac738aced4aa0a5cc675d41547618d551d14e271a28",
+    "src/drivers/win/res/te_12_selected.bmp": "0aad8feea9d03b895ca31bb81b366f484e66514be13eb96764c36a97de1bdf05",
+    "src/drivers/win/res/te_13.bmp": "8f076da8ee4689b424523822c41d4085993b19e9a10379ec4499f23d3cfecdf6",
+    "src/drivers/win/res/te_13_selected.bmp": "9648a1c519caa0a7b41d4bf035784205b525e53464db0a1f032e462be948e634",
+    "src/drivers/win/res/te_14.bmp": "6de8e2e2735ee7155c7eaee062bea2e968bfecffe5e002ed85e3a1816900dcb8",
+    "src/drivers/win/res/te_14_selected.bmp": "d09b81fcfd406fc4b32f25c60a3934850c56b3d3b182dc4ff39beaf4eef3e41a",
+    "src/drivers/win/res/te_15.bmp": "016a349662c3dbe66740a2e3139bf941981f553222d0a1227a53cd50e7db526d",
+    "src/drivers/win/res/te_15_selected.bmp": "17c401c32343a3f5bbc9ed6da84f7cc465f91b95e8ee255a6e1d668fca423b4a",
+    "src/drivers/win/res/te_16.bmp": "3dbf137c48403c12095cb80e1281c276991615038c46958f63c94056bc79cf77",
+    "src/drivers/win/res/te_16_selected.bmp": "5a10c15f8502d45fdde441a09406731c76092565413d18daedb963ffac891328",
+    "src/drivers/win/res/te_17.bmp": "98b5143546d5c120d17c8fd945d173dfa115905230879bea2eeca2f5784c6dc3",
+    "src/drivers/win/res/te_17_selected.bmp": "46547db051166e8b6f59a294f5aad9abb423e1e18d757d92ccf4a8924c8dfcd1",
+    "src/drivers/win/res/te_18.bmp": "2031b1a4e72ade58c80cf83ea0bc5ab3c322875bd6f4f234d1dc9d3d36e27ac5",
+    "src/drivers/win/res/te_18_selected.bmp": "a78a821e4da5d5fc153aff7e68e66dce5692561c7b736b7ad0fcd2c792462dfc",
+    "src/drivers/win/res/te_19.bmp": "edf33e24a7c95220605bd4516a2014270873910639bb1bafd40f4cf0c9009c04",
+    "src/drivers/win/res/te_19_selected.bmp": "66336f17ef07ed6325405ef5c50491a1479ff77818a60bf0f472e1c26afe3d83",
+    "src/drivers/win/res/te_1_selected.bmp": "cf754c72d56b7c27c9edc904072e3e2a18c01b258125ad3cbdde890916088355",
+    "src/drivers/win/res/te_2.bmp": "ca3e84aba04d7f0b4b8e8d1c579ac8e20717357d0290e38933affd16ed693894",
+    "src/drivers/win/res/te_2_selected.bmp": "a48730a541edc54d7a3ed022036eca24027cf8ada4a4b6f95e6667e2a084b8b6",
+    "src/drivers/win/res/te_3.bmp": "88dff537b4ec361fe70c1e9877762137120f06c6c5cfcc39fc08249039d544a7",
+    "src/drivers/win/res/te_3_selected.bmp": "4078efc35f19c8ec9a98fc79bb9d7cc5977ef88ed51b9aa53da419fc07d411bf",
+    "src/drivers/win/res/te_4.bmp": "13bce098bdd029946050b507fad8583f2d42c8b88328b09c8ed969c7f01846fd",
+    "src/drivers/win/res/te_4_selected.bmp": "6c412ca5399d36a38b86d2309d83438b13d3240b71046a68ef85bb9ed37143f9",
+    "src/drivers/win/res/te_5.bmp": "b741bfb3057401b48fe715e4e40dc6c3173f4c352f8b851f998afb9fbe4b5fa6",
+    "src/drivers/win/res/te_5_selected.bmp": "4b6b66019c13bc8e87daf3400804fd95dca24903be4c7f057b6ab729676d35cc",
+    "src/drivers/win/res/te_6.bmp": "bd7113c1a3ce258094b14df653c2bfe8c83c2874f5ddef3e534c86aa2654ae41",
+    "src/drivers/win/res/te_6_selected.bmp": "7b1c1a2e8cbc898dcffadf45101426dee7383339e119b3cc6497bd1dd6826079",
+    "src/drivers/win/res/te_7.bmp": "1e19dce5b67e967553165bb4e3348fca877461759633b7e553a0cf85787ee5ca",
+    "src/drivers/win/res/te_7_selected.bmp": "5be1eab744db640da6aa8fd1a4a32962f77189fb9ec7777002e3c507778032b9",
+    "src/drivers/win/res/te_8.bmp": "f8f7e88b8d2372b444c3ef075e2eb44c41559de080a15a0e25312bef5cfa9ed3",
+    "src/drivers/win/res/te_8_selected.bmp": "cfbcbd6bcc47a2c1390c7c9c1df32223d3c6b2ef801aecca6c9d22457ae453f2",
+    "src/drivers/win/res/te_9.bmp": "83b102f2e3a5e124670bdbff19e5ce759ceeb49856b06d70dd804c4e0b715708",
+    "src/drivers/win/res/te_9_selected.bmp": "f606fa605cf660e2cf9a95df7ca99aaeaa1367df60ebf071295ae4ee11d9207b",
+    "src/drivers/win/res/te_arrow.bmp": "e9f1dd7db28f733c98da49c0f070e557cf496af6373974cf6ba903a25545d3f0",
+    "src/drivers/win/res/te_green_arrow.bmp": "e2f6f5bf69571ff89eae748ba69c610b60eb5ece8d90b8fc325e0f0711530806",
+    "src/drivers/win/res/te_green_blue_arrow.bmp": "b61e38d863b205ff70996f01cf09617d9eddade8946fd9b83a91439b9d45c3ac",
+    "src/drivers/win/res/te_piano_0.bmp": "808dc4e4228d1ff35c66ea2e2ba005bcc4083d92c3504f9c648ffa7d9938ccf4",
+    "src/drivers/win/res/te_piano_0_lostpos.bmp": "5d3824c9b02efe339abb5d80e59f91401a3aa5609d49ad93ca1826f90f220dc5",
+    "src/drivers/win/res/te_piano_0_playback.bmp": "a326d227b45b087133ec863673c30b6ddb210eb9a54241bd89c504bf0d632590",
+    "src/drivers/win/res/te_piano_1.bmp": "cee404a77fc50c3ef576c0bcf8af8e986e6b8b1fbd003aa667facf1b90804fd8",
+    "src/drivers/win/res/te_piano_10.bmp": "6344d320d053ed0a1f16d13c281f7c882bc0c6fe38e71bd6248785a784c7940a",
+    "src/drivers/win/res/te_piano_10_lostpos.bmp": "64746c5596e9e38afc80319ba5ddc297adc4f05a89a488c751e79ea8b6cd0bcd",
+    "src/drivers/win/res/te_piano_10_playback.bmp": "782d7193ad72ce7c0d65cf8f318b1294c4e3caf918f8933e75622197b67c0cab",
+    "src/drivers/win/res/te_piano_11.bmp": "0a5b5b7382e6e78e1a0f40df25aa2df4b6bf67f36a226f606d8649c1a2ee5539",
+    "src/drivers/win/res/te_piano_11_lostpos.bmp": "a26baddd5d283cae42ea3fcec0b8dc2b9b16721c31ddc7c6a41ff577ec2b05ab",
+    "src/drivers/win/res/te_piano_11_playback.bmp": "57798f4d364f1305559c5c390a77247e2bbd7a7ed124f8e79b8066d54db38548",
+    "src/drivers/win/res/te_piano_12.bmp": "7612cdf77af6767e47beadd5aa9a9d53bc3ae831684e71e2f2b1a75caefae068",
+    "src/drivers/win/res/te_piano_12_lostpos.bmp": "67bf6ab61123014c27a2e91a928063fe7388293b8ba41d2bd5959a1e2005b77d",
+    "src/drivers/win/res/te_piano_12_playback.bmp": "bf2fb997c62e46126bcc92ea0626299e890579f2b030740c9fff149f5240494f",
+    "src/drivers/win/res/te_piano_13.bmp": "334215c34f65d567ccc277cd64e1299dfa35560b340226dbe9b3c39881973119",
+    "src/drivers/win/res/te_piano_13_lostpos.bmp": "5aefe3834b13de839f5dd6ceb2aab4e3e9cee86d7a0183bfe97917f8deb1feec",
+    "src/drivers/win/res/te_piano_13_playback.bmp": "b59c673c76dfe7c48703e98a684dc92d624684863cb011f68bb754dc36b6541c",
+    "src/drivers/win/res/te_piano_14.bmp": "5347b7f31194321326c2a7e2e7a42a54b8567c1019b70e74512f3036e6c60fab",
+    "src/drivers/win/res/te_piano_14_lostpos.bmp": "6b6494a28b3bdc76005b9ca88c1a84fdadb59dd09d78c08be3862d2957a1f5e4",
+    "src/drivers/win/res/te_piano_14_playback.bmp": "4612be0f27185a52b72ab25be518bd5488c2d70c3eb57ccbe9ba3fd3dba72731",
+    "src/drivers/win/res/te_piano_15.bmp": "5d822abe1f59bf59c8d4d0cb205dc0ce5c35b1217955c1ac20a4fab863411fbf",
+    "src/drivers/win/res/te_piano_15_lostpos.bmp": "185fde8b63c5585f7636233a581b7af8e391e9554f872ee31ea8fc8b76e7cf48",
+    "src/drivers/win/res/te_piano_15_playback.bmp": "9be3c4f79c36dfb8d463d7d976873450172383b5b2c039013a7e631bb9f5a70b",
+    "src/drivers/win/res/te_piano_16.bmp": "6f21eeb1ffa90627ccffd816fb373049001b047c74d911ed1ef4a0cacd134b86",
+    "src/drivers/win/res/te_piano_16_lostpos.bmp": "5b5ff992d8f0a784415debaa744f39cf767e86912f4bba39135d1fa578c806d6",
+    "src/drivers/win/res/te_piano_16_playback.bmp": "b68e972db58f1a7f9ba8b4cacb06cc87cafe11d5534d910f0156f6a85a3316e1",
+    "src/drivers/win/res/te_piano_17.bmp": "e4f7694c23c81cfc0f43529dd01e5ee6a637a8fed65208de5a123933cfe3cea7",
+    "src/drivers/win/res/te_piano_17_lostpos.bmp": "40b35f484101a1abef14715cbcc8a331e1cfb404835b039d216f89f217357482",
+    "src/drivers/win/res/te_piano_17_playback.bmp": "5134513e9c4eeaee92f2b670b62c061d60066cbc8d0bc414a0d78ad4f01dfefc",
+    "src/drivers/win/res/te_piano_18.bmp": "813defefce3b0f359b5e54da65263425b2b9d56e44cd481d56e9b155eebee768",
+    "src/drivers/win/res/te_piano_18_lostpos.bmp": "80c5b989c3f5bca137b2665ec8d302022d87e13c821840b9859a8fafaea50bb4",
+    "src/drivers/win/res/te_piano_18_playback.bmp": "edd175e64a837477050e9dfca9f4a08f09bfb27996c87dffed1e50285f8b858a",
+    "src/drivers/win/res/te_piano_19.bmp": "a8a4d8302c0fbba80f0fb60fc327e5a9c50976e79b21ab85224a306896e4e6fc",
+    "src/drivers/win/res/te_piano_19_lostpos.bmp": "88fa09ac8b0e8438d9cf579cdb9a3ae11f209f17238c995570163a545a1ef06c",
+    "src/drivers/win/res/te_piano_19_playback.bmp": "23f26815da9ddcf8ee9f47822be64f1171d43413237677ca383476e91f18269e",
+    "src/drivers/win/res/te_piano_1_lostpos.bmp": "ce867946b00531e6aa2d9551b498aa274bf4aab4bddef4ca238567c24b57efb7",
+    "src/drivers/win/res/te_piano_1_playback.bmp": "1b26e48d6fe1f55933af104e6e244639fde520a2069af404f0cf3afe7c2991d1",
+    "src/drivers/win/res/te_piano_2.bmp": "27bda866067c92d590dcb46c1aae22a44fe429585055a257a31d5bc532fa9774",
+    "src/drivers/win/res/te_piano_2_lostpos.bmp": "ab719eb667d42ee90be902a4f10f79aab9a46e03f8ac9d53b29bda8446535a29",
+    "src/drivers/win/res/te_piano_2_playback.bmp": "0ffb64ba7ea3d3a82a0d91b9b725048d0dac2870acf21dcf49276f78bf33864e",
+    "src/drivers/win/res/te_piano_3.bmp": "86dd4840bec979afbe3e379ae0a03a6607ceefa9e6a3fead3f61e0133b662c4f",
+    "src/drivers/win/res/te_piano_3_lostpos.bmp": "988f75aa088eaa497898425e0aaf6c7343a9a717fe3326cef3932ff90bc5bc1b",
+    "src/drivers/win/res/te_piano_3_playback.bmp": "962fbc535e4b3edd035c3eec62b2f3af2462ac2c5b4b4fc9d268550bfc8370d1",
+    "src/drivers/win/res/te_piano_4.bmp": "b1a2c894097be15035c5fcbccf63157a7c199b8ab04bf087f1c8e948f9e82b4c",
+    "src/drivers/win/res/te_piano_4_lostpos.bmp": "4e3430d9b953301ae12e9fa0e21fd2dfa3a3dabf6b63c24c19b56d46b97203c8",
+    "src/drivers/win/res/te_piano_4_playback.bmp": "9442cea25d59f75df9521d2eb3695adc4b500265aa483f9675320a8c3ed3e497",
+    "src/drivers/win/res/te_piano_5.bmp": "628201015e03cebb3ae29d41895fc88547837cebfc1df75fb5debec75277bd80",
+    "src/drivers/win/res/te_piano_5_lostpos.bmp": "49691b74dd3a1d2b5bc91f92b0906fdfb99bf4fa574f2740f1ab52eb4c2be72d",
+    "src/drivers/win/res/te_piano_5_playback.bmp": "a355d8e0bb8dd28da335678cd2812ac9a71cd07e896d84e5786c79716ac42767",
+    "src/drivers/win/res/te_piano_6.bmp": "31958740a2fd32434d45e9934df24fca8526a83babf9657b1620cb4211fcbdc5",
+    "src/drivers/win/res/te_piano_6_lostpos.bmp": "429582f4266ad42ee1ac545b5922e0df69c8f7cb112263ce617909c69b2ac95d",
+    "src/drivers/win/res/te_piano_6_playback.bmp": "e38de43c69ebe18c774acecf1838b759d84b2730ab7b0785fccf5afcdda9f452",
+    "src/drivers/win/res/te_piano_7.bmp": "b48c9d73a0ac68f59f97a499c926d94fc0a59e65af5de896bcebf6bdc9c59f5f",
+    "src/drivers/win/res/te_piano_7_lostpos.bmp": "f9fb50a2f7cbef1e3271636e9b3f2a69ff5413e3935ee9854251fb4b7b175212",
+    "src/drivers/win/res/te_piano_7_playback.bmp": "a3c2aeee9d48e09f90ecf1dcc89ffbb1a6c53a30320893f3e3f5c59854aaebf7",
+    "src/drivers/win/res/te_piano_8.bmp": "e1a393db4cee2592b8f01ce16b2009feff490c721f37316e0b7adae0873f8bae",
+    "src/drivers/win/res/te_piano_8_lostpos.bmp": "8aef336fde720edd731d22f204ae4c784cf20a54cd5b1df39110c3c154f3c81b",
+    "src/drivers/win/res/te_piano_8_playback.bmp": "277ea808c8fcfc800c2c9c13827843bd19bf085d914ae9bd2188c1c38454321f",
+    "src/drivers/win/res/te_piano_9.bmp": "ac03ecaf2488eb02a21a936ea8ef80ede794adca392ae6678cdaac52e14efe5b",
+    "src/drivers/win/res/te_piano_9_lostpos.bmp": "019249dfa5cd026c32bc20572499023dcbf85e520458af67ae8a5d51bc61aa54",
+    "src/drivers/win/res/te_piano_9_playback.bmp": "8fa5dbf4e78f202de79a67107fbdf759a84bbe0f6c507d9be54256ec2e26a6d9",
+    "src/drivers/win/resource.h": "5af9d2bca356fe1af4467a68a922c7b14ab535953e370ffb1941b4dcb1dd2d77",
+    "src/drivers/win/sound.cpp": "f796a3b86d22f32e597d47f49aa1babe5c12e332ee002356831a38c9f6336fd7",
+    "src/drivers/win/sound.h": "0d66d05be459a9fc5609e8bf959a796b1201a0f87ebdfd18d302345d1ae14020",
+    "src/drivers/win/state.cpp": "ac46a55737d0c41865f0058629f655d1ac9e83abac8a5efd99035498a15d467e",
+    "src/drivers/win/state.h": "fbe4d4a6bdbf89b45a395a682ec8028fcf3099df86316a716bdeb417ad02f826",
+    "src/drivers/win/tasedit.cpp": "0d56ae74abca408a2a0924af77cb9779ca07ab61ba5154fd4695bd8ce38358c1",
+    "src/drivers/win/tasedit.h": "54b224acd13cbd4f54846b43686c9244eb7ff202bc1be1353109cd28d45a0fd7",
+    "src/drivers/win/taseditlib/taseditproj.cpp": "946f40d17c27095f7b48a161e2e20a731a5da1bc8029245250a939413a5c243a",
+    "src/drivers/win/taseditlib/taseditproj.h": "b9e0876c4700e51b422b97fb6057fc664f1f8bd800f76c0d348757cbe934ec0c",
+    "src/drivers/win/taseditor.cpp": "4aa55649978f76bdb2d5693d225ce9be6c4c0ab8780b10f8c2bb817e37d7ed45",
+    "src/drivers/win/taseditor.h": "81d87a6a012cf1e965746a87431f212369b59de0847c20dbf880486a006c671f",
+    "src/drivers/win/taseditor/bookmark.cpp": "b126e5ad8728f7681ed44d62173dec2b415b58748713e8f3985146eacbee9d0b",
+    "src/drivers/win/taseditor/bookmark.h": "eae605af3631f188600be6c25c870f8a64ded854e4661819391582ae49d235f6",
+    "src/drivers/win/taseditor/bookmarks.cpp": "6d44b4687371877bc947cafa1c1b34c313bbd10c91e0caa04f0a04e4f147619a",
+    "src/drivers/win/taseditor/bookmarks.h": "949d5f3a57a0bb4013ba3919aa7532a28397dad6efce4ea88c519082f39b7491",
+    "src/drivers/win/taseditor/branches.cpp": "30c9973a51a38e669dbccc1d1c2b18ca210d8f89b4ae8b29c79a3f03ca4b09cf",
+    "src/drivers/win/taseditor/branches.h": "ee5b1e2dcaaa35713bc0742772a5781917a48486e59a03a43d3b2c12888aad06",
+    "src/drivers/win/taseditor/editor.cpp": "f58860ff18fa5d75d84bd62a638b2c4200760e8ee16d3de248b130ff9df6ef3e",
+    "src/drivers/win/taseditor/editor.h": "4240f2510ed4ccb87049767bce094250e31746b02a14e0cc96e8f7a32bb4ec2d",
+    "src/drivers/win/taseditor/greenzone.cpp": "93843c8d8cefb9740ce98f02a069fefcfb76db92157f509d8b823241be308993",
+    "src/drivers/win/taseditor/greenzone.h": "b4be735808af904508114cd8c1cbc53e989131ea05b9a362418c39791e1d4267",
+    "src/drivers/win/taseditor/history.cpp": "369308ef345e5eb691b4149d63539bdf5d92a79caaf1118aa8e9fa4ee3d3453b",
+    "src/drivers/win/taseditor/history.h": "7c2b89e9cfe50ee0af567a2fd02143d8bfb7cc8ff0ac4fb727aa7ab35f0c5829",
+    "src/drivers/win/taseditor/inputlog.cpp": "8ab7c82a3c5b5ba120e38bf58c75bc677f18a1cd855a8c0e2ac3a368ce654f71",
+    "src/drivers/win/taseditor/inputlog.h": "750f8a5ac46546bbf9b384b86be495b2b761dbcc36962559b5b2bae6d91ba81c",
+    "src/drivers/win/taseditor/laglog.cpp": "90eb2f37bb8edc4c42b3cd280cd3e39b66d1182bb8e0dfa3978dfa0759f37727",
+    "src/drivers/win/taseditor/laglog.h": "dd8c18c1930484a59f2d93020de1a748f8acd27594b6d06365a059b16a0ff567",
+    "src/drivers/win/taseditor/markers.cpp": "6444488b3326c3ebf8272a1291d4f7b571fc794b4dc5820062fe8af35440c400",
+    "src/drivers/win/taseditor/markers.h": "114d381caf00449f55b785663d9f16b73a59962e54ab99e21727beda37df529c",
+    "src/drivers/win/taseditor/markers_manager.cpp": "a51fd935276c2da8e055d0396cbb4e37c2b02170a9344dd93e6e87578799704a",
+    "src/drivers/win/taseditor/markers_manager.h": "c476ee146bc1f3b1c85707edc799557e0d11535ff555e5f9743d2699fc99d75f",
+    "src/drivers/win/taseditor/piano_roll.cpp": "acd1ce48cfa0cf04d235a39343ae46841edb85524a11786f6abf1ecb06c35c2d",
+    "src/drivers/win/taseditor/piano_roll.h": "3492a5ff9daede37f42ab5515478aafa15de5594dd6ecfe1eb329fd7d793473e",
+    "src/drivers/win/taseditor/playback.cpp": "22573877dddf07ea0ba60a9fa6f401e291d33c3379a086dd0f1beda445311f78",
+    "src/drivers/win/taseditor/playback.h": "121fcdf85f5e02b9f09f5c73ff627f186c817afc1d80710f4e6c311e698d8605",
+    "src/drivers/win/taseditor/popup_display.cpp": "cfe47f6cb756100191c556e616fcb5fa260bd2926b444ca69f23a4cb5f70edf1",
+    "src/drivers/win/taseditor/popup_display.h": "de4ec6b5682984d04508090406234cf30dc85462f96ff58bacf2abba651fd91d",
+    "src/drivers/win/taseditor/recorder.cpp": "cc07b98803e2679a51eb3aa66d3234bd98299d8cdde235a459d4e47b752279fb",
+    "src/drivers/win/taseditor/recorder.h": "2070794baec756d1c86f1724c157247eac3bf0f9f6a6b1b62c78f57f8e35699b",
+    "src/drivers/win/taseditor/selection.cpp": "4405711d4c1f5c666f97a9ce5d6dd38d550191f5cf1872e376a8c5f94eda8508",
+    "src/drivers/win/taseditor/selection.h": "a0055fa40129b624504a49d65f8ad3986f32592ef2f47436a0b5db4c4a14aa66",
+    "src/drivers/win/taseditor/snapshot.cpp": "bf658c1c8d957fd5e39dfa9748a258892641121a36ea27de8db89fc6ac2b5808",
+    "src/drivers/win/taseditor/snapshot.h": "300fea0b7223cb0ed5a45af96936c900262a0059ae7bb5533241e0bb82edd6cf",
+    "src/drivers/win/taseditor/splicer.cpp": "57949690baeca7ff899d1610d027b1333b06387b49b33fda34fbad0ea3be13be",
+    "src/drivers/win/taseditor/splicer.h": "7d5e9e06903c100a35a20bac6e13956da635cf152ab6b48164654d6a2df0403f",
+    "src/drivers/win/taseditor/taseditor_config.cpp": "306de1f9670800afdd5ec6a4e6df22d9ff8b45e0670ac9d3dd67b12ff02c28e5",
+    "src/drivers/win/taseditor/taseditor_config.h": "c00afb31d335f401da6be17c1bbe69fd96fb6444e6e071515545dfbbdc11f006",
+    "src/drivers/win/taseditor/taseditor_lua.cpp": "013890f6fb8dce1da7ded8b99c84b45a7d502cca48375aa7a61d79721a34f2b3",
+    "src/drivers/win/taseditor/taseditor_lua.h": "09c7e67dd0ed4cdd0894917566fafb29e23e117ba9ece0e1b3a8b17701bd3707",
+    "src/drivers/win/taseditor/taseditor_project.cpp": "1c275a3ef565cf3140aa67f1c166eac1fddc07ddb61626a28afd701e8afa8ba9",
+    "src/drivers/win/taseditor/taseditor_project.h": "40c683e602b24f96e98f10a9424fc94eb3320af971f311f6b16e59012f3ff3fd",
+    "src/drivers/win/taseditor/taseditor_window.cpp": "29e157f9e4e0fdfd37891d714cb8176ad4c77089ff283a7a3679e385f03b4b70",
+    "src/drivers/win/taseditor/taseditor_window.h": "ad1b7ddfcba9eb6aab865e528239fcef08b8d6e71d892f81961632ac77b43cf7",
+    "src/drivers/win/texthook.cpp": "1cfe12a70f93ad721b1ec3740d6973706b0e161e3e2cb31d07fa10294af026e6",
+    "src/drivers/win/texthook.h": "24643138f7ad1f34ed41c793e2c0c9967e05c96c1a6008c327872931fe10b4f7",
+    "src/drivers/win/throttle.cpp": "e74b616ae216ed9f7c20e20788e4e086861321a382d8eb535946c8c275bfcd39",
+    "src/drivers/win/throttle.h": "6fc3bbb582b6b0ad2dc8db9126310c1c8d931159802ab2080bfedfad8be6ecaf",
+    "src/drivers/win/timing.cpp": "30472b2ffaceabda230964ff67cc379697db45cad8191674efef3e40b865eca4",
+    "src/drivers/win/timing.h": "25793f7c055e7cc93f4276a4d652e392a41ff51dd5b6465f6f7a47b51d084d7f",
+    "src/drivers/win/tracer.cpp": "ec1b84b84e14dc7cea7bf6290d131d30eecfbc4ceab20eb9bf258439984e479c",
+    "src/drivers/win/tracer.h": "0bb80bbd61c79cb73fa82a650821213b19626a156ba9835749a5ed4a040f8481",
+    "src/drivers/win/video.cpp": "96191ae2920684c03b2e1f24f42efb01e064050d99e88ac2a73f50db7429e132",
+    "src/drivers/win/video.h": "5e0850eae076aebf8a8ad86562ce967f28b5fe8381b391decd9c3dadd006b51c",
+    "src/drivers/win/wave.cpp": "fd34a09c8981b69ae5651474383ae018c748ab2e508e1848e5b9b978b74274e6",
+    "src/drivers/win/wave.h": "9d5b9594773cc87df590a69a0097267920ca9fe775b3b259bc3d85f29ed051a7",
+    "src/drivers/win/window.cpp": "f2d77e71f52e14dbe4ae760913cf127f530ee87ce3a4eccccc2ca13f8ff95606",
+    "src/drivers/win/window.h": "4f82fc7d5e5a6b60763a7b26ca1a2c2099a0efeb16803c03a327cebbc5ac94bf",
+    "src/drivers/win/zlib/SConscript": "9d531d3bc71997c4b6fa8dba5ab3c5c16cc828bdd5af75070f540f2cbbf5cbe3",
+    "src/drivers/win/zlib/adler32.c": "de74c6d948d9572b0c7d9fc0ca2c7556b4fc5fc19fcf366dda70668811f875b5",
+    "src/drivers/win/zlib/algorithm.txt": "59f66173427ac8c9dec989a0874ed3b916c20301e14f421dc1eca2294a6aed60",
+    "src/drivers/win/zlib/changelog": "b8270dec420e45833a20b6a6dd9d0834356cfab4ca390aa31021060d2f12e090",
+    "src/drivers/win/zlib/compress.c": "acd90304ec6e6428fff4b2fa8a4202e00c3d51b05e8f14557e99b37815cbb761",
+    "src/drivers/win/zlib/crc32.c": "224a3831654053c1da50c9df079d9b24f87fa9b330b30e4eeafd0618231452c2",
+    "src/drivers/win/zlib/deflate.c": "2d12a0de62014d7db8cd19e4b641f6ee8d30148ed43979a916b61557348cdf83",
+    "src/drivers/win/zlib/deflate.h": "213ea4c7044c7c9202859a40394407c9f5859ff34b12e2d8ca6a2c06fa3e5f47",
+    "src/drivers/win/zlib/descrip.mms": "71ecb28b4ffe6251ca727c5eed1e9f5fa5b2e87dec1d74a0f9b1b6403acbd835",
+    "src/drivers/win/zlib/example.c": "950ae1fb67836dc6342533c1b72bf6482ff11abcfe656d4578566297435e6435",
+    "src/drivers/win/zlib/faq": "5f7a6c68f59347a969f54d396a07ce53f27da1f336b551ffdb74e21a983ccaa3",
+    "src/drivers/win/zlib/gzio.c": "c036cdcb56a03551d540bab1b480edf7f412ccdf7e75e155a66f5b86b4044549",
+    "src/drivers/win/zlib/infblock.c": "282797dee3077d40cbe492428c2eab75b04b496b854b180b3e85140f8ad58394",
+    "src/drivers/win/zlib/infblock.h": "8e2b864ee159b0e8bc6ca7a9ac71369b3dc06588ea0d6c2b9e8b2d2248ef8004",
+    "src/drivers/win/zlib/infcodes.c": "524e1f47ad64638cd2fd6dd163a8290b313f4d65968e20bd4e05860e1c4d0a4b",
+    "src/drivers/win/zlib/infcodes.h": "665310317ceba2af7032fd50d16eaf191f0ae0c805af712f9f9f655807355c89",
+    "src/drivers/win/zlib/inffast.c": "1043e4300e9a81e7897ebac507f4cbd75bdcdabd0a77410538404d5076f151f9",
+    "src/drivers/win/zlib/inffast.h": "d446d816a4416c849c7e706c583f2f6500ebaa7840d60f4ce2d81a05363e5a35",
+    "src/drivers/win/zlib/inffixed.h": "2a28f6ec7a9042b31ee2f214aff62a8ae9ab079a584e278a8e7e0f156b329d9e",
+    "src/drivers/win/zlib/inflate.c": "ae643f81db42e3664ac56050146dc90212aba4f450aadcb8ed54908b494887d4",
+    "src/drivers/win/zlib/inftrees.c": "43ac236f9a64e933ec06e5bde627e9bb2bda553f6db4b605ecff6862347cbf84",
+    "src/drivers/win/zlib/inftrees.h": "52e1dac5dbd3fa922273adea9dae6c6b8c74acc58e1254f6af0bd47691ec36af",
+    "src/drivers/win/zlib/infutil.c": "a098f985bdaaddfb9aee665f2dceb1cd6bb07ce997c19908f96b9d13984eeb29",
+    "src/drivers/win/zlib/infutil.h": "e235b2fae8e43eb084c8cccd765a1ea8ebceb9cbfe2f6c3852c1cc4caed340ee",
+    "src/drivers/win/zlib/makefile": "69949c9c9c7416e07dec67c71d13316a1fb51a8da85c6e8fe0ea6e3d61a7690c",
+    "src/drivers/win/zlib/maketree.c": "79e6929f54882257335ec830799d0656f410272a1da536d2bf7c1f051eace1c9",
+    "src/drivers/win/zlib/readme": "a3dca6792d71e5439b49bd7d50b4fd1972d5712195e87286e08fca18fcfcf93a",
+    "src/drivers/win/zlib/trees.c": "530cc839f5ec8d87a69ca2d4f86060e9a496e78325e2bd0acb72eae9469cc522",
+    "src/drivers/win/zlib/trees.h": "81579041310716219bbbf7c98849d91f5aeabdd7eadb1f8e9d7e2aa57724b58b",
+    "src/drivers/win/zlib/uncompr.c": "5be2233cd4a5a1760691d8ad066e202b4f24910d457c1f25c173585eeb583c1d",
+    "src/drivers/win/zlib/unzip.c": "b6c000828067c32374af663b07c8ccb88e32136903f8da57fb0998593efb5da3",
+    "src/drivers/win/zlib/unzip.h": "628e85eb8950d236f593dc2a98afdc1bf5048b216f4dc8ebb42d5d706df41675",
+    "src/drivers/win/zlib/zconf.h": "aa3c40b673fda23b01a2051c047b631ac3db27e40e84928ace57a977d57dd43c",
+    "src/drivers/win/zlib/zlib.h": "7388aeb8cc550dcbc158fd43dc90ee900f5fc6a3d055ceaf4c83aa441e6d387f",
+    "src/drivers/win/zlib/zutil.c": "894275ec88727842885537b726a8620a7a03ad30b57df062dba13dae329b8042",
+    "src/drivers/win/zlib/zutil.h": "6247967a84660157ee553061a4504fdc1d4deb7710d6907210d310bf47bf1fd4",
+    "src/emufile.cpp": "cb83d5fcba3d4a969ebb56e3bcee33f90180513be7b1c8451da330cd1cfe8f26",
+    "src/emufile.h": "30f02a28b629217d7e3d3936dd444c811ea8574b93c5fac458d3afd4c889dd9b",
+    "src/emufile_types.h": "6b6c711a0759383ee7e14c702553459d55cdbeda85bf760d15a7b938508f2542",
+    "src/fceu.cpp": "615c3c84860acf080ffc8a072024f487872efbb351e6b96e5e527483a104b30d",
+    "src/fceu.h": "9abfe276af952832a43f7e031511f9577a827bb6a0fb0d9b752e79c37e3d2b51",
+    "src/fceulua.h": "03f9e7cd587d2c9a0218a2c8b851a4b8863754b6102b6fe2a0fa6096fc2367cf",
+    "src/fcoeffs.h": "aac6289c43da2540bad1b2a321dc5afb00225a1504611d07a5ee147d09cefdcc",
+    "src/fds.cpp": "161ffb2237ed452c3c8308e544708c9f5013788ec79e05136cab48b73c5590f4",
+    "src/fds.h": "43fbef64d6f6cf23bb292ef2468fd72359ecb2de28fa4e136dee7824b2ae3231",
+    "src/file.cpp": "38bbdeb4ed9067cb0abf6ecc3a8866865f4f1f0799b48df41b1cb11e718dd111",
+    "src/file.h": "840e5627e495bcdb4afc64edc626045650a0105045e186a50f1412d83da57462",
+    "src/filter.cpp": "7023fc668310fce7971a2b700844f94ae7f31acb1ad871010b67b899ba99d8aa",
+    "src/filter.h": "5e041506f0df99093cec9a924a6d3e3b8fcd7d0ce9b50cf5c75547c72b6e557c",
+    "src/fir/Makefile": "b13e61fc38cae2d07f030840209dcc72c38fcee165ea0844803f78f2b830e6cb",
+    "src/fir/README": "21fcdee71523fa993962bdaf20c651d01c417e497b348af7bac3d5d9565cd67c",
+    "src/fir/SConscript": "5c24ab0cd50f24a6ebd68a4d08105d90e9489d96046945755fcfad9c732cf244",
+    "src/fir/c44100ntsc.coef": "e7141857f06aae613ac2d3a79e598e2f3aad996b72e1dd82ec697c123c1b9418",
+    "src/fir/c44100ntsc.h": "47bbd5ec088344f3d83978796e617ec211dbdeee3b29a5584162428918160691",
+    "src/fir/c44100ntsc.scm": "62d3033549a57fee50744a7aa475115249a16ab2f36a954a3625e4a2d618334f",
+    "src/fir/c44100pal.coef": "f5f4fa3f487ab183d54f42417939835833730ee5e5bc0e11416dd9d0c9db8b99",
+    "src/fir/c44100pal.h": "2609bc4c8e2e18a9ad2e8320c855db01d45603b5da3697784f9c45a19a7e712d",
+    "src/fir/c44100pal.scm": "b8fbaa27a7b094c9b5104b13d3d15cd3a249f885454af18e723099eda0f7ab68",
+    "src/fir/c48000ntsc.coef": "a55cef4d5b30f292e95c97278376c430f0f945b3a89591a64d3b3b570f55145a",
+    "src/fir/c48000ntsc.h": "2252267d2011ef0aacf810610d64f7f0a0ee85d2038398e5b9388dad245ab029",
+    "src/fir/c48000ntsc.scm": "d91895be4bcc330a71419fae8cb8e341adb501030aa120d04b3b98e0c3e82df7",
+    "src/fir/c48000pal.coef": "13c2f8480c9c08e031d1c2be40816330ba031a59b4df76adc1393edaddc215ae",
+    "src/fir/c48000pal.h": "eb477996afd7296c11de4bd4293ad04e5480a37dea5e600ee26fda22c40217ae",
+    "src/fir/c48000pal.scm": "5bebeb8ea0aad558501149ae2540a8da8f800230e795dcf297eb11158d0bb03d",
+    "src/fir/c96000ntsc.coef": "45decb7aee454b88ee626013466bf5fa885cdf0a707ae7e0cd5be23e83195a73",
+    "src/fir/c96000ntsc.h": "08d4cb5f771c4a540c094dd48d98e327415cad0664ff229759ffbfc06dfb7e14",
+    "src/fir/c96000ntsc.scm": "19f7cec89949e0053ebfb77f775a32d78bfc50f7b6a6286dc963217175c5b846",
+    "src/fir/c96000pal.coef": "5431be3920859ea55d4c311dce9e45b2c09a238f6a026cbb527f0490d9deb744",
+    "src/fir/c96000pal.h": "b46de6a2c075627392ce26e2487aa3f1d1e554fc1942290ff39df4f71fef3452",
+    "src/fir/c96000pal.scm": "650fceb3f02b319883fe57b5ae13c9d33bd9a70cf3a8799d0163d6d595f10956",
+    "src/fir/toh.c": "0eccecf2ae1c83a2d195c57586302b9b280d6327268eec5d18feb9cf882f52a6",
+    "src/git.h": "ada8a04aa38d9ad2b7cd6c1303e774f5c67944bbd6157e5b55327c920a1c7621",
+    "src/ines-bad.h": "93846a6ad1a67b9ab10cc2e3495f15bec5928e51e52be703a92bc6115ad2aef7",
+    "src/ines-correct.h": "0deb953a4af53a6e1b7b47e25d6324f34700968b751867842878f6090891e634",
+    "src/ines.cpp": "b4c2d8d68378aa327b4d6be1c4fb8a191d866e2c794924862a1a385c33ad80bc",
+    "src/ines.h": "21d25443738da5ba2d6dcd04264d0a8d8aad7c16cf7bfb48893e20223e101d4e",
+    "src/input.cpp": "0eff0db34a5122a0313219415e818970a971c607f9f42330517b99014860cbd2",
+    "src/input.h": "386802e8d801d760608999b5f906d883c57c13af366733e3e8c46c2d032319f2",
+    "src/input/SConscript": "ae3a71b489ce308e3de5eeca40d59764c43e16ffd5c5d003534b73bdd8bf1d35",
+    "src/input/arkanoid.cpp": "790c30bf270c495f3be08016f6342aeefb7cc157e21b621e013923fd6cab45d9",
+    "src/input/bworld.cpp": "26f43c2f300c8d8e1373c1f8da7591f23655703d6148bc245c6a1da572d856be",
+    "src/input/cursor.cpp": "235bfb2b1844a16c19f7606ebe29799d3ad73b55a9bc42a452f2a6d59dc29e4d",
+    "src/input/fkb.cpp": "39cee8cbb551b7075d2b63b04262ed39e77cd10a2553c8a02cd9ff0d257ef21c",
+    "src/input/fkb.h": "b1f81043d3f8b91fb8e2922b362aaf3c3a8feeab9eb7f5cb73760edc082e6c68",
+    "src/input/ftrainer.cpp": "8e6c536fdd975560a7df3ee38555b85bba909a36b1b3b86e9134bca6d692388d",
+    "src/input/hypershot.cpp": "4f3135b9278109ce40e75b262625e4240e6ae83cf7be722f81eab847cb9b68a9",
+    "src/input/mahjong.cpp": "4d3555b2fa2da6be1bc30c3ad02fc88200681da31dc11387244d73d5817d2388",
+    "src/input/mouse.cpp": "3db87ce9d563ece860444c33a7e60f8edf0b6897e82dde081f7c33a12013f3e9",
+    "src/input/oekakids.cpp": "aca998453580a848bbd2ed6aff3b1798451b0fcf601a8d1f9152257dabaa00da",
+    "src/input/pec586kb.cpp": "9de0d6ef0f2b8cf6349ac1375b7d8eed058b868a95289ff82bddd1c8d8c375bc",
+    "src/input/powerpad.cpp": "86b026dbc9232aac44bd5ca95a874d3e8aa5dec38687746c5efe3e64182c570d",
+    "src/input/quiz.cpp": "7daf3cf69e4c357d91bb3be1506aab85fc9c8937ef1bbe1ec63214adacc5a251",
+    "src/input/shadow.cpp": "4e7612a4e8d10ff67fb20e23a965c67197f65e37306f13f40910b6ebe2208365",
+    "src/input/share.h": "0f329ed29a609c81e19cd30cc7a5472783cd0459e2bb0cb650eea17375bcdac0",
+    "src/input/snesmouse.cpp": "69cafb087b86eeb87247c107d8651b389215fd8b4c71277f2f4f322a8a29b04a",
+    "src/input/suborkb.cpp": "fda80e19d5750c1d3082506ff6d8802b3f6d86f2d3494a599fe2b312e9d049b3",
+    "src/input/suborkb.h": "93fb6ad02cbc4dd138651c23466c753995ca56a03680b24974b85604871446a3",
+    "src/input/toprider.cpp": "9e0a2813c55f883ae73f96a6a4612c4de8c5c3b6b9ebd60517227441d194bcf6",
+    "src/input/zapper.cpp": "4b34142413e4f9b9bcebe6fa9a884744a68233de934ae745d54a0a9b84a42d02",
+    "src/input/zapper.h": "79413e2a6acb2ab34840ab541267506c8f9ffd6474f13301deaf6abd10d7c027",
+    "src/lua-engine.cpp": "eedba1f30249952c2c525ac8233db09aef4cbe255e07ea30991634ba09e8c630",
+    "src/lua/COPYRIGHT": "15c7579ae46d908816dd0ce6f41256a84c2e1862489eb731421626d7335f0db3",
+    "src/lua/HISTORY": "17e10094334619f60ec896eeea6e8fd80ec6879151d52c2ffc13a835672c9f03",
+    "src/lua/README": "eaf56b5de891e11632aa36f302e03d27acd1614944904e2b7cf7955bb0474086",
+    "src/lua/SConscript": "a519434613fe1f677cff58bf167b5581f6aa6259c60ea4524df51072604335f8",
+    "src/lua/lua.vcproj": "f7b4f80fd142f3ce9caa61fe4f614026c7547524ee21685b27639874f8a96070",
+    "src/lua/src/Makefile": "dcb503c312387258a218b44b90a49bef63c54b9fc98c25d6a6a9abefed34aa2b",
+    "src/lua/src/lapi.c": "6aa0d9fdd88b13fe46568ad6722ecf44164fb84476cfdf6480cf05b5704935f8",
+    "src/lua/src/lapi.h": "4aea4c1b975d43184f4f1fd1a42c79cf11d74d2801315740cec07fe9abebb56d",
+    "src/lua/src/lauxlib.c": "b564650bf4aca2757b9966311d32c8d5fea8803f6f33d72a856448d3b5d6d992",
+    "src/lua/src/lauxlib.h": "c741f9c1587f29fd08a79acbe0c46884768a47f89bee4147669f774c5cf50fc0",
+    "src/lua/src/lbaselib.c": "703b8c0de8142d486bc6d6082cf6427583189319a4aed3a02dd8c1653e0fd42b",
+    "src/lua/src/lcode.c": "f8026741a3e6ea3520c751ef2e7f6c0b88e0e36b4dab93a238d2a5ef0dab18a5",
+    "src/lua/src/lcode.h": "97d5a37f3b1b19eda1ef39607b3358aa0f7e917568ccd27ed0f14bc6a70d4b17",
+    "src/lua/src/ldblib.c": "961946ac6f3d0ffbf9d4c8e845bcb57a407c6b98e26ca881144933d0c53051fa",
+    "src/lua/src/ldebug.c": "afa5840195befaec55177273c8168748026b38df3243767fc740cc7ced0c4c8f",
+    "src/lua/src/ldebug.h": "d036f0dbb996bdecd48d505746f72c31b82fb2fc38f111b780568338d4ed9e9c",
+    "src/lua/src/ldo.c": "1839bd9227430c5344b348f57e5cd680f56e854932abde31f402282d95882326",
+    "src/lua/src/ldo.h": "591ad9a90098d3fbf06839da3de752d2c2585cbf5801dde4cdaffe12b23a182e",
+    "src/lua/src/ldump.c": "30d83d766351bb053b3d20793a6bcd2ef0210e8fad76a7032abbe574bafa0ca3",
+    "src/lua/src/lfunc.c": "525681d79098958530e5c937f7cbe94a4dafa679746ffdb16258f82b7ece29ce",
+    "src/lua/src/lfunc.h": "3cea0071ffda94eac378adb5f1ecb467ef2ffafff4315459e4ccdf05b5119da4",
+    "src/lua/src/lgc.c": "c0876e9ed23c43aa2de1ee3f77bdf6933b163a41456e2367a39880a7ea39ab96",
+    "src/lua/src/lgc.h": "fbab2b989515377729d4c029dd58b3b6242877a88a7c4cfa703ea0deeb069a1e",
+    "src/lua/src/linit.c": "c0c97c45862f6c978620a9682cd2201f0fc29c2afbcab824ba20d26cc1745e56",
+    "src/lua/src/liolib.c": "0ced9012bfb8e579f6fbb0090ba875ee1dfb202ff4cff7ff8ac1f9eefd63b3e5",
+    "src/lua/src/llex.c": "aecb5f00908832222e62fb1b970825278dc460a65a080d79a3693f82438e52c8",
+    "src/lua/src/llex.h": "0f3715d22b025727ef11debd641600a123b81718d195cd8445ac6378814458e6",
+    "src/lua/src/llimits.h": "1910669296681d9d2814ca46c325063724bb634c0428dae4e5ff59be54e0b758",
+    "src/lua/src/lmathlib.c": "e2933a56332d567cdd69f0fe514d638a8f82da6878754ff259e77cf2157263c3",
+    "src/lua/src/lmem.c": "e63c50cb1c75356bd4123c9ca05f77bd0cd99e05c099cf6d1bf472086761e9c5",
+    "src/lua/src/lmem.h": "abd1258418486c69bf5a93ceea3a1b9f8af2c7497a4fa6c27b442ffec2c5bbb1",
+    "src/lua/src/loadlib.c": "de790bfe4d23caa69cf5b9f164c7c2445e7380c9b5881c58ea55df81011dc2ea",
+    "src/lua/src/lobject.c": "d704915c79c721556cc5850d741ed3bef1611221356f0e3a2f0ee5cfd5fd3632",
+    "src/lua/src/lobject.h": "274c18373fbbad71bfebd534cae4b2d2e49934abf6672f44735edc6646fb6a8b",
+    "src/lua/src/lopcodes.c": "63cd74edc75970092a8ce078c4ab970efa1ee18de960d00eb826d49fe98d8a76",
+    "src/lua/src/lopcodes.h": "a15fe349da7c1e73b563e8c3249fe7d535eccc844cb30ec80b4e335b0699279b",
+    "src/lua/src/loslib.c": "f0d5892f152cf7e1001b086e48774ccb6e567d11f1bf521f27050c15d9a0f040",
+    "src/lua/src/lparser.c": "61c85a7c4f5387d36b91d53a60df3802d7639928b1d76675ede6fb0868ad2510",
+    "src/lua/src/lparser.h": "84512d6540b83ab599cd8de5a1c8c4deaf71ff353f8e4fbc2e4ca135ba4e9ef0",
+    "src/lua/src/lstate.c": "c36d6b9354aaa30b5323b4984f3172783f69e0deb3186c2ef6f16a8281c59c29",
+    "src/lua/src/lstate.h": "dc64ea7ec74d7c1efaeaf6a9e2257f0b7856a5c988747948af2e76cf079d20fe",
+    "src/lua/src/lstring.c": "aa7e934c435d870b9d937ac2fb03dbfa15d367012d46e7e995a2ad8d440f2f6d",
+    "src/lua/src/lstring.h": "c0e8af4eb33e3357be79f906e7e1191ba53a3a790d36ca15b50471d3a339e1f0",
+    "src/lua/src/lstrlib.c": "a978166ca36525de2708ac931834d575c8df057719bc2da39dbe3befe810ec1d",
+    "src/lua/src/ltable.c": "3a853ce89bf5e834ec53f2a0dd2386eb8b84accbe5fdc18dabd7515b819f0f7c",
+    "src/lua/src/ltable.h": "219e6ac2bf43aaa93093c6bcd571c012660325e6b87ea3d6c1b40679a0acfd64",
+    "src/lua/src/ltablib.c": "e934dc4b2fc117a501c717302a00147f7b44eea978ef87a58a3e40e9bfe45d20",
+    "src/lua/src/ltm.c": "9759ae5d1aa3b11e1c7faa6c0f65e05c7126417f7f8f3f989d82fc170b07f891",
+    "src/lua/src/ltm.h": "54f4c2fa76b8ed8d48163e31807a19999f5d65b009ae862cb757e0773f2aa485",
+    "src/lua/src/lua.c": "eb9ad1894926f0f807934ae52147cf9767ede0fbd01e9a1044dc4847caa9b73d",
+    "src/lua/src/lua.h": "c2a78484b53d115d9229a62e8d16db8309f1c68415b56ad5672e00674119bebb",
+    "src/lua/src/luac.c": "b22ad97edb37c2a4b117ef81489bfc6eee15d58d4476ea149abbef7aabf8773d",
+    "src/lua/src/luaconf.h": "0410ff22f66c275ba8fcee1fa87a0749d26d7952ed30d3bc9161688b39775464",
+    "src/lua/src/lualib.h": "13f880e9dd997a0f7fd0b17ccd949c98f33e95bd120f084de66084e888217413",
+    "src/lua/src/lundump.c": "55ccb55abde44e94e6c4d0bafc94f5870d2674d1944e9a81f6537d9ac92e8ebc",
+    "src/lua/src/lundump.h": "9f3a2924d1585620993a70eea6cf3def34acb8322b2d9c3629bcdacc037edc64",
+    "src/lua/src/lvm.c": "f9f0979df389c571193c4b5d20ae80180d9857ca5a9873c601c42055583cf19d",
+    "src/lua/src/lvm.h": "db4b79dc7f4e7656078aa527350fbf14b2fde5d136ccf1cb4f3dc397def5fb67",
+    "src/lua/src/lzio.c": "892bc24d898c19cbedceba419c68f910b99321c0b462be2c2c00b9d763563173",
+    "src/lua/src/lzio.h": "0ec77d0179bf29c1ccab97028fed761944d5c21c02808e10cd7b5883b58b2ca6",
+    "src/lua/src/print.c": "3c3b1c1dd17896e428b9742614c90ec10776ced65813eb648f02dee649892f2f",
+    "src/movie.cpp": "e09b37ccefd1de0cf66a368ee18436caac2857e191d0a508427d347d7ab03bdd",
+    "src/movie.h": "5a5e965dc57f98d3f569dace2d903a19a9244ecbd29e0e874519ccbf46867213",
+    "src/netplay.cpp": "22e03cc0489d7356c3705e67cc73be17cd318815fafa95754fa594748ae4696a",
+    "src/netplay.h": "08a3abde883bac4f20ce4e1b1b145c288c937cda68fa9249d81e63f95c04cdeb",
+    "src/nsf.cpp": "877589d0885fe86ef1d24d5c297e4c12736330a6e57e93bc575cd505f57e1585",
+    "src/nsf.h": "76635175938bd906dc5527c26082d42679c961635f6db5d65a3b351787ff96d7",
+    "src/oldmovie.cpp": "53d8fdaeaedee4067f135d5a6d3b52cd251d6db22e06f667a9c7a92fcaa7a195",
+    "src/oldmovie.h": "4311f72193aed14e0ba8b07332b8799e151b2322886b067a1ccb8f5aa49c181e",
+    "src/ops.inc": "b93c962ad772b1b022fef1dd8a64917bcdd25c3ba2c39579ff10fcbfb6a6d719",
+    "src/palette.cpp": "838d2e592e5384ab6f9fbb0a50576e28f20d7b1d1eead84db30e13dff160d65b",
+    "src/palette.h": "c68851bfed79244b2421740068d056aa0d34c19ee3e893b50529144f15e34c5c",
+    "src/palettes/SConscript": "a370abcddd29a0b8274d6900d57413951b518983a8d8bce5c1a590f9434f66f5",
+    "src/palettes/conv.c": "f15098b3889fd700b3edf89590ce5b4a08a0832249404ac51aed0dfa64b5f0d0",
+    "src/palettes/palettes.h": "b20860efeca049d2711e7ccc5eb75892b822886d3eaa7c5166b3702c0e3a2a2e",
+    "src/palettes/rp2c04001.h": "000682f8e2037881ad9742bccaa0b0c212974952ec5941f1c2a4c682d57148c6",
+    "src/palettes/rp2c04002.h": "2b90db098fbda7d5dc0ce97a4b60c078310ed520a49567f7c7a25b3abe78bc1e",
+    "src/palettes/rp2c04003.h": "3ee241e3a59f6c46ee06e348b864c782d54b75532857a7fc61384b1738311076",
+    "src/palettes/rp2c05004.h": "769a0ad0d638746901141055d3e4702fb7bb0d02f9abf95ad11161c5038506a8",
+    "src/ppu.cpp": "dc8c90120147577f4e81c661567ecc63461050e71a472ae5c13e72c70aae56f9",
+    "src/ppu.h": "5b19593487e0aec935d1a6d1151a5ed66b979c19d514f9c6755ff9ccbe8bcbe0",
+    "src/pputile.inc": "b0ce5d20d01d08d3a80408504be846a7543f26fb3116a25415a678d0f0639def",
+    "src/sound.cpp": "60a0e69e3b00411b6415008f11e51f097b73594ad3338372326014bc1ffa858e",
+    "src/sound.h": "13c2bb28b740037e3b4dbfce99b2a72d744fe96aaf41f2a9b60da1399a0d0915",
+    "src/state.cpp": "ed92114732f78f3b7cb8504917f753bffed232bc4c24f44f25323c44df0c4bc6",
+    "src/state.h": "29a6262cbf59bcebf3f3ce79e302ed79cc43963242973ed462eae084b12b1d05",
+    "src/types-des.h": "f99e4d15613cf06a0d9e23cd9a3e5553804646b9d632cb378478000a383e1f50",
+    "src/types.h": "07d65ba2e1c6688dbb09536f8a1e2cbad60fccb038b7b541e8b0f1217cc27612",
+    "src/unif.cpp": "4657b0f04bcf6bc763a614971dc289c74413cca800cbeda7c8ac761869460ca8",
+    "src/unif.h": "1b2c6a4bf9af7c885d0bf4d2e896aaaf4fb39df3d576379a81a99e4aec44d4c3",
+    "src/utils/ConvertUTF.c": "200368f171e91beb2050f068bbd73b62f57e1e0417b01d2cdfc94920660e3bb9",
+    "src/utils/ConvertUTF.h": "7c1036fbcbe5999ed647713b64c6d47a2595b1f2b43dbac4633ff350a5299f39",
+    "src/utils/SConscript": "2bc47ee19256e6183901357495867533a6b5d1b7cf4abb8c3a0dd5fdf1c36f53",
+    "src/utils/backward.cpp": "cba6ea1623c3ab23ecfc6795c7b409f7fe7e02ce4dde9b50d4b67bf7579fea06",
+    "src/utils/backward.hpp": "cfd9d142889aca16c356c1659156a2c95a766aea4e3e5696e1e1356b80f72cb9",
+    "src/utils/crc32.cpp": "8fff0ed353bde8c8f45eb8ed04334116bf4816c32e78a3dd3560eb82f67ed720",
+    "src/utils/crc32.h": "4c4d206d7e994a106eacde370924161d3d973ea58c817b0c0cccc9caaf496928",
+    "src/utils/endian.cpp": "0a80cd19ec2726a880c5e225d5d9c519a3ae0077e48c021145009d7ee433886f",
+    "src/utils/endian.h": "7c3b33688ce42bbfeec50c6c681b796f21ce03e01d1ac670434ee68fbe0dfd02",
+    "src/utils/general.cpp": "6c5b5aea3c17d21f2f9a7ed645cd42cea0be96b1380a6cabc99ad0dc598ffdb3",
+    "src/utils/general.h": "7239a477de9c66bbfb257a01a865e4685831305ed52c29f4483a1813f86740f4",
+    "src/utils/guid.cpp": "75547d033ec1297c5dd517872af58d17aa766c486edcef310d4b4567da946b9d",
+    "src/utils/guid.h": "7898db6374e2e6b724686ebdca6d02f98a75f9f62ea77d2ab7c60c04a98322b8",
+    "src/utils/ioapi.cpp": "6efedcbce7be1cd84d01d97a622c6bd78cf870d2917d3343ed9ca352f7dfd6a8",
+    "src/utils/ioapi.h": "8655408534b78dc0889a45f9359fc6d2d5c8e8d8443b81ede596f954c720ef48",
+    "src/utils/md5.cpp": "afc87f93bb2ba955d2875c6707b6e6f833e597c209e11e69d3b3decbd885f28c",
+    "src/utils/md5.h": "01776d592a97ae2cfd197899b18438c2fd25c6de93ce329d22c1ba1a1b009d00",
+    "src/utils/memory.cpp": "b3e9ac13681bec9c187f86a95049f441a8408c4dd201b206726437f9e676326a",
+    "src/utils/memory.h": "50661c68b482e28aa641dec4e96f0f69fe3393e54d88b6265db0f8295162b9c4",
+    "src/utils/unzip.cpp": "bc5e8af49327ddce8bca5f44ad53ab6475a6008d0b59ac3b4e96e75cf72ddf59",
+    "src/utils/unzip.h": "ee687e97a74b349fd5bfb4632449b1f41884b2be8a9a9e513af4cbd4566dfed5",
+    "src/utils/valuearray.h": "9f78bbb283e203a47556f06a3e1b65da2594d619836ef4073c9c0da969e9743b",
+    "src/utils/xstring.cpp": "e19819db237a030fe1bb80170d947ac50310f236a20adac9f45476fca8d405fd",
+    "src/utils/xstring.h": "d5841c40737a63cb72724419434147fc3a51ebf2c53dbfb7d0f9fef5a60b0225",
+    "src/version.h": "b9e55228be605cf8e311a0777cef82e3d8347167e64e6f6219e210ebdb992c94",
+    "src/video.cpp": "c27226e0734408cf8aa5287296974807772dd2dd0b6d325357b8a2d4ab1872e9",
+    "src/video.h": "fb4a9acaf237e1ae90fc55b889b4df1a39e4b0bc548b1242415ec2e52ff801a0",
+    "src/vsuni.cpp": "2271c7d3489b26aa4739df2594c02663b40f1a68f354b58c9b41888ba1e7725a",
+    "src/vsuni.h": "0100efead0399a5045f7f531c5643e2b29c5674a8eaabf92c04bea895b7a108c",
+    "src/wave.cpp": "3357cb01b8f364635afd5119614bb731f6f2c07b3d4daec215431f9098c8f118",
+    "src/wave.h": "aa5d0d8ae21526cca72da510b317ed402caa90400dea50a69ea909676ab09b25",
+    "src/x6502.cpp": "26f310bab1aeca79c13b34d1cab2ec622780aa03424fbb559c769302e32fca06",
+    "src/x6502.h": "b75898364a04746bcfc73ebcba861185d48f58642201b06206f08d1def3b704b",
+    "src/x6502abbrev.h": "bbd3aaa4856d551aa98379c986a75ad3770bd46bad1fe8ae43f9b5237436ae61",
+    "src/x6502struct.h": "1e7435b5dad816dbb032911ae44bea5772e9877f8456139afab954d1282ed8aa"
+  },
+  "mappers": [
+    {
+      "mapper": 0,
+      "name": "NROM",
+      "init": "NROM_Init",
+      "sources": [
+        "src/boards/datalatch.cpp"
+      ]
+    },
+    {
+      "mapper": 1,
+      "name": "MMC1",
+      "init": "Mapper1_Init",
+      "sources": [
+        "src/boards/mmc1.cpp"
+      ]
+    },
+    {
+      "mapper": 2,
+      "name": "UNROM",
+      "init": "UNROM_Init",
+      "sources": [
+        "src/boards/datalatch.cpp"
+      ]
+    },
+    {
+      "mapper": 3,
+      "name": "CNROM",
+      "init": "CNROM_Init",
+      "sources": [
+        "src/boards/datalatch.cpp"
+      ]
+    },
+    {
+      "mapper": 4,
+      "name": "MMC3",
+      "init": "Mapper4_Init",
+      "sources": [
+        "src/boards/mmc3.cpp"
+      ]
+    },
+    {
+      "mapper": 5,
+      "name": "MMC5",
+      "init": "Mapper5_Init",
+      "sources": [
+        "src/boards/mmc5.cpp"
+      ]
+    },
+    {
+      "mapper": 6,
+      "name": "FFE Rev. A",
+      "init": "Mapper6_Init",
+      "sources": [
+        "src/boards/ffe.cpp"
+      ]
+    },
+    {
+      "mapper": 7,
+      "name": "ANROM",
+      "init": "ANROM_Init",
+      "sources": [
+        "src/boards/datalatch.cpp"
+      ]
+    },
+    {
+      "mapper": 8,
+      "name": "",
+      "init": "Mapper8_Init",
+      "sources": [
+        "src/boards/datalatch.cpp"
+      ]
+    },
+    {
+      "mapper": 9,
+      "name": "MMC2",
+      "init": "Mapper9_Init",
+      "sources": [
+        "src/boards/mmc2and4.cpp"
+      ]
+    },
+    {
+      "mapper": 10,
+      "name": "MMC4",
+      "init": "Mapper10_Init",
+      "sources": [
+        "src/boards/mmc2and4.cpp"
+      ]
+    },
+    {
+      "mapper": 11,
+      "name": "Color Dreams",
+      "init": "Mapper11_Init",
+      "sources": [
+        "src/boards/datalatch.cpp"
+      ]
+    },
+    {
+      "mapper": 12,
+      "name": "REX DBZ 5",
+      "init": "Mapper12_Init",
+      "sources": [
+        "src/boards/mmc3.cpp"
+      ]
+    },
+    {
+      "mapper": 13,
+      "name": "CPROM",
+      "init": "CPROM_Init",
+      "sources": [
+        "src/boards/datalatch.cpp"
+      ]
+    },
+    {
+      "mapper": 14,
+      "name": "REX SL-1632",
+      "init": "UNLSL1632_Init",
+      "sources": [
+        "src/boards/sl1632.cpp"
+      ]
+    },
+    {
+      "mapper": 15,
+      "name": "100-in-1",
+      "init": "Mapper15_Init",
+      "sources": [
+        "src/boards/15.cpp"
+      ]
+    },
+    {
+      "mapper": 16,
+      "name": "BANDAI 24C02",
+      "init": "Mapper16_Init",
+      "sources": [
+        "src/boards/bandai.cpp"
+      ]
+    },
+    {
+      "mapper": 17,
+      "name": "FFE Rev. B",
+      "init": "Mapper17_Init",
+      "sources": [
+        "src/boards/ffe.cpp"
+      ]
+    },
+    {
+      "mapper": 18,
+      "name": "JALECO SS880006",
+      "init": "Mapper18_Init",
+      "sources": [
+        "src/boards/18.cpp"
+      ]
+    },
+    {
+      "mapper": 19,
+      "name": "Namcot 106",
+      "init": "Mapper19_Init",
+      "sources": [
+        "src/boards/n106.cpp"
+      ]
+    },
+    {
+      "mapper": 21,
+      "name": "Konami VRC2/VRC4 A",
+      "init": "Mapper21_Init",
+      "sources": [
+        "src/boards/vrc2and4.cpp"
+      ]
+    },
+    {
+      "mapper": 22,
+      "name": "Konami VRC2/VRC4 B",
+      "init": "Mapper22_Init",
+      "sources": [
+        "src/boards/vrc2and4.cpp"
+      ]
+    },
+    {
+      "mapper": 23,
+      "name": "Konami VRC2/VRC4 C",
+      "init": "Mapper23_Init",
+      "sources": [
+        "src/boards/vrc2and4.cpp"
+      ]
+    },
+    {
+      "mapper": 24,
+      "name": "Konami VRC6 Rev. A",
+      "init": "Mapper24_Init",
+      "sources": [
+        "src/boards/vrc6.cpp"
+      ]
+    },
+    {
+      "mapper": 25,
+      "name": "Konami VRC2/VRC4 D",
+      "init": "Mapper25_Init",
+      "sources": [
+        "src/boards/vrc2and4.cpp"
+      ]
+    },
+    {
+      "mapper": 26,
+      "name": "Konami VRC6 Rev. B",
+      "init": "Mapper26_Init",
+      "sources": [
+        "src/boards/vrc6.cpp"
+      ]
+    },
+    {
+      "mapper": 27,
+      "name": "CC-21 MI HUN CHE",
+      "init": "UNLCC21_Init",
+      "sources": [
+        "src/boards/mihunche.cpp"
+      ]
+    },
+    {
+      "mapper": 28,
+      "name": "",
+      "init": "Mapper28_Init",
+      "sources": [
+        "src/boards/28.cpp"
+      ]
+    },
+    {
+      "mapper": 29,
+      "name": "RET-CUFROM",
+      "init": "Mapper29_Init",
+      "sources": [
+        "src/boards/datalatch.cpp"
+      ]
+    },
+    {
+      "mapper": 30,
+      "name": "UNROM 512",
+      "init": "UNROM512_Init",
+      "sources": [
+        "src/boards/unrom512.cpp"
+      ]
+    },
+    {
+      "mapper": 31,
+      "name": "infiniteneslives-NSF",
+      "init": "Mapper31_Init",
+      "sources": [
+        "src/boards/inlnsf.cpp"
+      ]
+    },
+    {
+      "mapper": 32,
+      "name": "IREM G-101",
+      "init": "Mapper32_Init",
+      "sources": [
+        "src/boards/32.cpp"
+      ]
+    },
+    {
+      "mapper": 33,
+      "name": "TC0190FMC/TC0350FMR",
+      "init": "Mapper33_Init",
+      "sources": [
+        "src/boards/33.cpp"
+      ]
+    },
+    {
+      "mapper": 34,
+      "name": "IREM I-IM/BNROM",
+      "init": "Mapper34_Init",
+      "sources": [
+        "src/boards/34.cpp"
+      ]
+    },
+    {
+      "mapper": 35,
+      "name": "Wario Land 2",
+      "init": "UNLSC127_Init",
+      "sources": [
+        "src/boards/sc-127.cpp"
+      ]
+    },
+    {
+      "mapper": 36,
+      "name": "TXC Policeman",
+      "init": "Mapper36_Init",
+      "sources": [
+        "src/boards/36.cpp"
+      ]
+    },
+    {
+      "mapper": 37,
+      "name": "PAL-ZZ SMB/TETRIS/NWC",
+      "init": "Mapper37_Init",
+      "sources": [
+        "src/boards/mmc3.cpp"
+      ]
+    },
+    {
+      "mapper": 38,
+      "name": "Bit Corp.",
+      "init": "Mapper38_Init",
+      "sources": [
+        "src/boards/datalatch.cpp"
+      ]
+    },
+    {
+      "mapper": 40,
+      "name": "SMB2j FDS",
+      "init": "Mapper40_Init",
+      "sources": [
+        "src/boards/40.cpp"
+      ]
+    },
+    {
+      "mapper": 41,
+      "name": "CALTRON 6-in-1",
+      "init": "Mapper41_Init",
+      "sources": [
+        "src/boards/41.cpp"
+      ]
+    },
+    {
+      "mapper": 42,
+      "name": "BIO MIRACLE FDS",
+      "init": "Mapper42_Init",
+      "sources": [
+        "src/boards/42.cpp"
+      ]
+    },
+    {
+      "mapper": 43,
+      "name": "FDS SMB2j LF36",
+      "init": "Mapper43_Init",
+      "sources": [
+        "src/boards/43.cpp"
+      ]
+    },
+    {
+      "mapper": 44,
+      "name": "MMC3 BMC PIRATE A",
+      "init": "Mapper44_Init",
+      "sources": [
+        "src/boards/mmc3.cpp"
+      ]
+    },
+    {
+      "mapper": 45,
+      "name": "MMC3 BMC PIRATE B",
+      "init": "Mapper45_Init",
+      "sources": [
+        "src/boards/mmc3.cpp"
+      ]
+    },
+    {
+      "mapper": 46,
+      "name": "RUMBLESTATION 15-in-1",
+      "init": "Mapper46_Init",
+      "sources": [
+        "src/boards/46.cpp"
+      ]
+    },
+    {
+      "mapper": 47,
+      "name": "NES-QJ SSVB/NWC",
+      "init": "Mapper47_Init",
+      "sources": [
+        "src/boards/mmc3.cpp"
+      ]
+    },
+    {
+      "mapper": 48,
+      "name": "TAITO TCxxx",
+      "init": "Mapper48_Init",
+      "sources": [
+        "src/boards/33.cpp"
+      ]
+    },
+    {
+      "mapper": 49,
+      "name": "MMC3 BMC PIRATE C",
+      "init": "Mapper49_Init",
+      "sources": [
+        "src/boards/mmc3.cpp"
+      ]
+    },
+    {
+      "mapper": 50,
+      "name": "SMB2j FDS Rev. A",
+      "init": "Mapper50_Init",
+      "sources": [
+        "src/boards/50.cpp"
+      ]
+    },
+    {
+      "mapper": 51,
+      "name": "11-in-1 BALL SERIES",
+      "init": "Mapper51_Init",
+      "sources": [
+        "src/boards/51.cpp"
+      ]
+    },
+    {
+      "mapper": 52,
+      "name": "MMC3 BMC PIRATE D",
+      "init": "Mapper52_Init",
+      "sources": [
+        "src/boards/mmc3.cpp"
+      ]
+    },
+    {
+      "mapper": 53,
+      "name": "SUPERVISION 16-in-1",
+      "init": "Supervision16_Init",
+      "sources": [
+        "src/boards/supervision.cpp"
+      ]
+    },
+    {
+      "mapper": 57,
+      "name": "SIMBPLE BMC PIRATE A",
+      "init": "Mapper57_Init",
+      "sources": [
+        "src/boards/57.cpp"
+      ]
+    },
+    {
+      "mapper": 58,
+      "name": "SIMBPLE BMC PIRATE B",
+      "init": "BMCGK192_Init",
+      "sources": [
+        "src/boards/addrlatch.cpp"
+      ]
+    },
+    {
+      "mapper": 59,
+      "name": "",
+      "init": "Mapper59_Init",
+      "sources": [
+        "src/boards/addrlatch.cpp"
+      ]
+    },
+    {
+      "mapper": 60,
+      "name": "SIMBPLE BMC PIRATE C",
+      "init": "BMCD1038_Init",
+      "sources": [
+        "src/boards/addrlatch.cpp"
+      ]
+    },
+    {
+      "mapper": 61,
+      "name": "20-in-1 KAISER Rev. A",
+      "init": "Mapper61_Init",
+      "sources": [
+        "src/boards/addrlatch.cpp"
+      ]
+    },
+    {
+      "mapper": 62,
+      "name": "700-in-1",
+      "init": "Mapper62_Init",
+      "sources": [
+        "src/boards/62.cpp"
+      ]
+    },
+    {
+      "mapper": 64,
+      "name": "TENGEN RAMBO1",
+      "init": "Mapper64_Init",
+      "sources": [
+        "src/boards/tengen.cpp"
+      ]
+    },
+    {
+      "mapper": 65,
+      "name": "IREM-H3001",
+      "init": "Mapper65_Init",
+      "sources": [
+        "src/boards/65.cpp"
+      ]
+    },
+    {
+      "mapper": 66,
+      "name": "MHROM",
+      "init": "MHROM_Init",
+      "sources": [
+        "src/boards/datalatch.cpp"
+      ]
+    },
+    {
+      "mapper": 67,
+      "name": "SUNSOFT-FZII",
+      "init": "Mapper67_Init",
+      "sources": [
+        "src/boards/67.cpp"
+      ]
+    },
+    {
+      "mapper": 68,
+      "name": "Sunsoft Mapper #4",
+      "init": "Mapper68_Init",
+      "sources": [
+        "src/boards/68.cpp"
+      ]
+    },
+    {
+      "mapper": 69,
+      "name": "SUNSOFT-5/FME-7",
+      "init": "Mapper69_Init",
+      "sources": [
+        "src/boards/69.cpp"
+      ]
+    },
+    {
+      "mapper": 70,
+      "name": "BA KAMEN DISCRETE",
+      "init": "Mapper70_Init",
+      "sources": [
+        "src/boards/datalatch.cpp"
+      ]
+    },
+    {
+      "mapper": 71,
+      "name": "CAMERICA BF9093",
+      "init": "Mapper71_Init",
+      "sources": [
+        "src/boards/71.cpp"
+      ]
+    },
+    {
+      "mapper": 72,
+      "name": "JALECO JF-17",
+      "init": "Mapper72_Init",
+      "sources": [
+        "src/boards/72.cpp"
+      ]
+    },
+    {
+      "mapper": 73,
+      "name": "KONAMI VRC3",
+      "init": "Mapper73_Init",
+      "sources": [
+        "src/boards/vrc3.cpp"
+      ]
+    },
+    {
+      "mapper": 74,
+      "name": "TW MMC3+VRAM Rev. A",
+      "init": "Mapper74_Init",
+      "sources": [
+        "src/boards/mmc3.cpp"
+      ]
+    },
+    {
+      "mapper": 75,
+      "name": "KONAMI VRC1",
+      "init": "Mapper75_Init",
+      "sources": [
+        "src/boards/vrc1.cpp"
+      ]
+    },
+    {
+      "mapper": 76,
+      "name": "NAMCOT 108 Rev. A",
+      "init": "Mapper76_Init",
+      "sources": [
+        "src/boards/mmc3.cpp"
+      ]
+    },
+    {
+      "mapper": 77,
+      "name": "IREM LROG017",
+      "init": "Mapper77_Init",
+      "sources": [
+        "src/boards/77.cpp"
+      ]
+    },
+    {
+      "mapper": 78,
+      "name": "Irem 74HC161/32",
+      "init": "Mapper78_Init",
+      "sources": [
+        "src/boards/datalatch.cpp"
+      ]
+    },
+    {
+      "mapper": 79,
+      "name": "AVE/C&E/TXC BOARD",
+      "init": "Mapper79_Init",
+      "sources": [
+        "src/boards/79.cpp"
+      ]
+    },
+    {
+      "mapper": 80,
+      "name": "TAITO X1-005 Rev. A",
+      "init": "Mapper80_Init",
+      "sources": [
+        "src/boards/80.cpp"
+      ]
+    },
+    {
+      "mapper": 82,
+      "name": "TAITO X1-017",
+      "init": "Mapper82_Init",
+      "sources": [
+        "src/boards/82.cpp"
+      ]
+    },
+    {
+      "mapper": 83,
+      "name": "YOKO VRC Rev. B",
+      "init": "Mapper83_Init",
+      "sources": [
+        "src/boards/yoko.cpp"
+      ]
+    },
+    {
+      "mapper": 85,
+      "name": "KONAMI VRC7",
+      "init": "Mapper85_Init",
+      "sources": [
+        "src/boards/vrc7.cpp"
+      ]
+    },
+    {
+      "mapper": 86,
+      "name": "JALECO JF-13",
+      "init": "Mapper86_Init",
+      "sources": [
+        "src/boards/datalatch.cpp"
+      ]
+    },
+    {
+      "mapper": 87,
+      "name": "74*139/74 DISCRETE",
+      "init": "Mapper87_Init",
+      "sources": [
+        "src/boards/datalatch.cpp"
+      ]
+    },
+    {
+      "mapper": 88,
+      "name": "NAMCO 3433",
+      "init": "Mapper88_Init",
+      "sources": [
+        "src/boards/88.cpp"
+      ]
+    },
+    {
+      "mapper": 89,
+      "name": "SUNSOFT-3",
+      "init": "Mapper89_Init",
+      "sources": [
+        "src/boards/datalatch.cpp"
+      ]
+    },
+    {
+      "mapper": 90,
+      "name": "HUMMER/JY BOARD",
+      "init": "Mapper90_Init",
+      "sources": [
+        "src/boards/90.cpp"
+      ]
+    },
+    {
+      "mapper": 91,
+      "name": "EARLY HUMMER/JY BOARD",
+      "init": "Mapper91_Init",
+      "sources": [
+        "src/boards/91.cpp"
+      ]
+    },
+    {
+      "mapper": 92,
+      "name": "JALECO JF-19",
+      "init": "Mapper92_Init",
+      "sources": [
+        "src/boards/addrlatch.cpp"
+      ]
+    },
+    {
+      "mapper": 93,
+      "name": "SUNSOFT-3R",
+      "init": "SUNSOFT_UNROM_Init",
+      "sources": [
+        "src/boards/datalatch.cpp"
+      ]
+    },
+    {
+      "mapper": 94,
+      "name": "HVC-UN1ROM",
+      "init": "Mapper94_Init",
+      "sources": [
+        "src/boards/datalatch.cpp"
+      ]
+    },
+    {
+      "mapper": 95,
+      "name": "NAMCOT 108 Rev. B",
+      "init": "Mapper95_Init",
+      "sources": [
+        "src/boards/80.cpp"
+      ]
+    },
+    {
+      "mapper": 96,
+      "name": "BANDAI OEKAKIDS",
+      "init": "Mapper96_Init",
+      "sources": [
+        "src/boards/96.cpp"
+      ]
+    },
+    {
+      "mapper": 97,
+      "name": "IREM TAM-S1",
+      "init": "Mapper97_Init",
+      "sources": [
+        "src/boards/datalatch.cpp"
+      ]
+    },
+    {
+      "mapper": 99,
+      "name": "VS Uni/Dual- system",
+      "init": "Mapper99_Init",
+      "sources": [
+        "src/boards/99.cpp"
+      ]
+    },
+    {
+      "mapper": 101,
+      "name": "",
+      "init": "Mapper101_Init",
+      "sources": [
+        "src/boards/datalatch.cpp"
+      ]
+    },
+    {
+      "mapper": 103,
+      "name": "FDS DOKIDOKI FULL",
+      "init": "Mapper103_Init",
+      "sources": [
+        "src/boards/103.cpp"
+      ]
+    },
+    {
+      "mapper": 105,
+      "name": "NES-EVENT NWC1990",
+      "init": "Mapper105_Init",
+      "sources": [
+        "src/boards/mmc1.cpp"
+      ]
+    },
+    {
+      "mapper": 106,
+      "name": "SMB3 PIRATE A",
+      "init": "Mapper106_Init",
+      "sources": [
+        "src/boards/106.cpp"
+      ]
+    },
+    {
+      "mapper": 107,
+      "name": "MAGIC CORP A",
+      "init": "Mapper107_Init",
+      "sources": [
+        "src/boards/datalatch.cpp"
+      ]
+    },
+    {
+      "mapper": 108,
+      "name": "FDS UNROM BOARD",
+      "init": "Mapper108_Init",
+      "sources": [
+        "src/boards/108.cpp"
+      ]
+    },
+    {
+      "mapper": 112,
+      "name": "ASDER/NTDEC BOARD",
+      "init": "Mapper112_Init",
+      "sources": [
+        "src/boards/112.cpp"
+      ]
+    },
+    {
+      "mapper": 113,
+      "name": "HACKER/SACHEN BOARD",
+      "init": "Mapper113_Init",
+      "sources": [
+        "src/boards/datalatch.cpp"
+      ]
+    },
+    {
+      "mapper": 114,
+      "name": "MMC3 SG PROT. A",
+      "init": "Mapper114_Init",
+      "sources": [
+        "src/boards/mmc3.cpp"
+      ]
+    },
+    {
+      "mapper": 115,
+      "name": "MMC3 PIRATE A",
+      "init": "Mapper115_Init",
+      "sources": [
+        "src/boards/mmc3.cpp"
+      ]
+    },
+    {
+      "mapper": 116,
+      "name": "MMC1/MMC3/VRC PIRATE",
+      "init": "UNLSL12_Init",
+      "sources": [
+        "src/boards/116.cpp"
+      ]
+    },
+    {
+      "mapper": 117,
+      "name": "FUTURE MEDIA BOARD",
+      "init": "Mapper117_Init",
+      "sources": [
+        "src/boards/117.cpp"
+      ]
+    },
+    {
+      "mapper": 118,
+      "name": "TSKROM",
+      "init": "TKSROM_Init",
+      "sources": [
+        "src/boards/mmc3.cpp"
+      ]
+    },
+    {
+      "mapper": 119,
+      "name": "NES-TQROM",
+      "init": "Mapper119_Init",
+      "sources": [
+        "src/boards/mmc3.cpp"
+      ]
+    },
+    {
+      "mapper": 120,
+      "name": "FDS TOBIDASE",
+      "init": "Mapper120_Init",
+      "sources": [
+        "src/boards/120.cpp"
+      ]
+    },
+    {
+      "mapper": 121,
+      "name": "MMC3 PIRATE PROT. A",
+      "init": "Mapper121_Init",
+      "sources": [
+        "src/boards/121.cpp"
+      ]
+    },
+    {
+      "mapper": 123,
+      "name": "MMC3 PIRATE H2288",
+      "init": "UNLH2288_Init",
+      "sources": [
+        "src/boards/h2288.cpp"
+      ]
+    },
+    {
+      "mapper": 125,
+      "name": "FDS LH32",
+      "init": "LH32_Init",
+      "sources": [
+        "src/boards/lh32.cpp"
+      ]
+    },
+    {
+      "mapper": 132,
+      "name": "TXC/MGENIUS 22111",
+      "init": "UNL22211_Init",
+      "sources": [
+        "src/boards/01-222.cpp"
+      ]
+    },
+    {
+      "mapper": 133,
+      "name": "SA72008",
+      "init": "SA72008_Init",
+      "sources": [
+        "src/boards/sachen.cpp"
+      ]
+    },
+    {
+      "mapper": 134,
+      "name": "MMC3 BMC PIRATE",
+      "init": "Mapper134_Init",
+      "sources": [
+        "src/boards/mmc3.cpp"
+      ]
+    },
+    {
+      "mapper": 136,
+      "name": "TCU02",
+      "init": "TCU02_Init",
+      "sources": [
+        "src/boards/sachen.cpp"
+      ]
+    },
+    {
+      "mapper": 137,
+      "name": "S8259D",
+      "init": "S8259D_Init",
+      "sources": [
+        "src/boards/sachen.cpp"
+      ]
+    },
+    {
+      "mapper": 138,
+      "name": "S8259B",
+      "init": "S8259B_Init",
+      "sources": [
+        "src/boards/sachen.cpp"
+      ]
+    },
+    {
+      "mapper": 139,
+      "name": "S8259C",
+      "init": "S8259C_Init",
+      "sources": [
+        "src/boards/sachen.cpp"
+      ]
+    },
+    {
+      "mapper": 140,
+      "name": "JALECO JF-11/14",
+      "init": "Mapper140_Init",
+      "sources": [
+        "src/boards/datalatch.cpp"
+      ]
+    },
+    {
+      "mapper": 141,
+      "name": "S8259A",
+      "init": "S8259A_Init",
+      "sources": [
+        "src/boards/sachen.cpp"
+      ]
+    },
+    {
+      "mapper": 142,
+      "name": "UNLKS7032",
+      "init": "UNLKS7032_Init",
+      "sources": [
+        "src/boards/ks7032.cpp"
+      ]
+    },
+    {
+      "mapper": 143,
+      "name": "TCA01",
+      "init": "TCA01_Init",
+      "sources": [
+        "src/boards/sachen.cpp"
+      ]
+    },
+    {
+      "mapper": 144,
+      "name": "AGCI 50282",
+      "init": "Mapper144_Init",
+      "sources": [
+        "src/boards/datalatch.cpp"
+      ]
+    },
+    {
+      "mapper": 145,
+      "name": "SA72007",
+      "init": "SA72007_Init",
+      "sources": [
+        "src/boards/sachen.cpp"
+      ]
+    },
+    {
+      "mapper": 146,
+      "name": "SA0161M",
+      "init": "SA0161M_Init",
+      "sources": [
+        "src/boards/sachen.cpp"
+      ]
+    },
+    {
+      "mapper": 147,
+      "name": "TCU01",
+      "init": "TCU01_Init",
+      "sources": [
+        "src/boards/sachen.cpp"
+      ]
+    },
+    {
+      "mapper": 148,
+      "name": "SA0037",
+      "init": "SA0037_Init",
+      "sources": [
+        "src/boards/sachen.cpp"
+      ]
+    },
+    {
+      "mapper": 149,
+      "name": "SA0036",
+      "init": "SA0036_Init",
+      "sources": [
+        "src/boards/sachen.cpp"
+      ]
+    },
+    {
+      "mapper": 150,
+      "name": "S74LS374N",
+      "init": "S74LS374N_Init",
+      "sources": [
+        "src/boards/sachen.cpp"
+      ]
+    },
+    {
+      "mapper": 151,
+      "name": "",
+      "init": "Mapper151_Init",
+      "sources": [
+        "src/boards/151.cpp"
+      ]
+    },
+    {
+      "mapper": 152,
+      "name": "",
+      "init": "Mapper152_Init",
+      "sources": [
+        "src/boards/datalatch.cpp"
+      ]
+    },
+    {
+      "mapper": 153,
+      "name": "BANDAI SRAM",
+      "init": "Mapper153_Init",
+      "sources": [
+        "src/boards/bandai.cpp"
+      ]
+    },
+    {
+      "mapper": 154,
+      "name": "",
+      "init": "Mapper154_Init",
+      "sources": [
+        "src/boards/88.cpp"
+      ]
+    },
+    {
+      "mapper": 155,
+      "name": "",
+      "init": "Mapper155_Init",
+      "sources": [
+        "src/boards/mmc1.cpp"
+      ]
+    },
+    {
+      "mapper": 156,
+      "name": "",
+      "init": "Mapper156_Init",
+      "sources": [
+        "src/boards/156.cpp"
+      ]
+    },
+    {
+      "mapper": 157,
+      "name": "BANDAI BARCODE",
+      "init": "Mapper157_Init",
+      "sources": [
+        "src/boards/bandai.cpp"
+      ]
+    },
+    {
+      "mapper": 159,
+      "name": "BANDAI 24C01",
+      "init": "Mapper159_Init",
+      "sources": [
+        "src/boards/bandai.cpp"
+      ]
+    },
+    {
+      "mapper": 160,
+      "name": "SA009",
+      "init": "SA009_Init",
+      "sources": [
+        "src/boards/sachen.cpp"
+      ]
+    },
+    {
+      "mapper": 162,
+      "name": "",
+      "init": "UNLFS304_Init",
+      "sources": [
+        "src/boards/164.cpp"
+      ]
+    },
+    {
+      "mapper": 163,
+      "name": "",
+      "init": "Mapper163_Init",
+      "sources": [
+        "src/boards/164.cpp"
+      ]
+    },
+    {
+      "mapper": 164,
+      "name": "",
+      "init": "Mapper164_Init",
+      "sources": [
+        "src/boards/164.cpp"
+      ]
+    },
+    {
+      "mapper": 165,
+      "name": "",
+      "init": "Mapper165_Init",
+      "sources": [
+        "src/boards/mmc3.cpp"
+      ]
+    },
+    {
+      "mapper": 166,
+      "name": "SUBOR Rev. A",
+      "init": "Mapper166_Init",
+      "sources": [
+        "src/boards/subor.cpp"
+      ]
+    },
+    {
+      "mapper": 167,
+      "name": "SUBOR Rev. B",
+      "init": "Mapper167_Init",
+      "sources": [
+        "src/boards/subor.cpp"
+      ]
+    },
+    {
+      "mapper": 168,
+      "name": "",
+      "init": "Mapper168_Init",
+      "sources": [
+        "src/boards/168.cpp"
+      ]
+    },
+    {
+      "mapper": 170,
+      "name": "",
+      "init": "Mapper170_Init",
+      "sources": [
+        "src/boards/170.cpp"
+      ]
+    },
+    {
+      "mapper": 171,
+      "name": "",
+      "init": "Mapper171_Init",
+      "sources": [
+        "src/boards/mmc1.cpp"
+      ]
+    },
+    {
+      "mapper": 172,
+      "name": "",
+      "init": "Mapper172_Init",
+      "sources": [
+        "src/boards/01-222.cpp"
+      ]
+    },
+    {
+      "mapper": 173,
+      "name": "",
+      "init": "Mapper173_Init",
+      "sources": [
+        "src/boards/01-222.cpp"
+      ]
+    },
+    {
+      "mapper": 175,
+      "name": "",
+      "init": "Mapper175_Init",
+      "sources": [
+        "src/boards/175.cpp"
+      ]
+    },
+    {
+      "mapper": 176,
+      "name": "BMCFK23C",
+      "init": "BMCFK23C_Init",
+      "sources": [
+        "src/boards/fk23c.cpp"
+      ]
+    },
+    {
+      "mapper": 177,
+      "name": "",
+      "init": "Mapper177_Init",
+      "sources": [
+        "src/boards/177.cpp"
+      ]
+    },
+    {
+      "mapper": 178,
+      "name": "",
+      "init": "Mapper178_Init",
+      "sources": [
+        "src/boards/178.cpp"
+      ]
+    },
+    {
+      "mapper": 180,
+      "name": "",
+      "init": "Mapper180_Init",
+      "sources": [
+        "src/boards/datalatch.cpp"
+      ]
+    },
+    {
+      "mapper": 181,
+      "name": "",
+      "init": "Mapper181_Init",
+      "sources": [
+        "src/boards/185.cpp"
+      ]
+    },
+    {
+      "mapper": 183,
+      "name": "",
+      "init": "Mapper183_Init",
+      "sources": [
+        "src/boards/183.cpp"
+      ]
+    },
+    {
+      "mapper": 184,
+      "name": "",
+      "init": "Mapper184_Init",
+      "sources": [
+        "src/boards/datalatch.cpp"
+      ]
+    },
+    {
+      "mapper": 185,
+      "name": "",
+      "init": "Mapper185_Init",
+      "sources": [
+        "src/boards/185.cpp"
+      ]
+    },
+    {
+      "mapper": 186,
+      "name": "",
+      "init": "Mapper186_Init",
+      "sources": [
+        "src/boards/186.cpp"
+      ]
+    },
+    {
+      "mapper": 187,
+      "name": "",
+      "init": "Mapper187_Init",
+      "sources": [
+        "src/boards/187.cpp"
+      ]
+    },
+    {
+      "mapper": 188,
+      "name": "",
+      "init": "Mapper188_Init",
+      "sources": [
+        "src/boards/karaoke.cpp"
+      ]
+    },
+    {
+      "mapper": 189,
+      "name": "",
+      "init": "Mapper189_Init",
+      "sources": [
+        "src/boards/189.cpp"
+      ]
+    },
+    {
+      "mapper": 191,
+      "name": "",
+      "init": "Mapper191_Init",
+      "sources": [
+        "src/boards/mmc3.cpp"
+      ]
+    },
+    {
+      "mapper": 192,
+      "name": "TW MMC3+VRAM Rev. B",
+      "init": "Mapper192_Init",
+      "sources": [
+        "src/boards/mmc3.cpp"
+      ]
+    },
+    {
+      "mapper": 193,
+      "name": "NTDEC TC-112",
+      "init": "Mapper193_Init",
+      "sources": [
+        "src/boards/193.cpp"
+      ]
+    },
+    {
+      "mapper": 194,
+      "name": "TW MMC3+VRAM Rev. C",
+      "init": "Mapper194_Init",
+      "sources": [
+        "src/boards/mmc3.cpp"
+      ]
+    },
+    {
+      "mapper": 195,
+      "name": "TW MMC3+VRAM Rev. D",
+      "init": "Mapper195_Init",
+      "sources": [
+        "src/boards/mmc3.cpp"
+      ]
+    },
+    {
+      "mapper": 196,
+      "name": "",
+      "init": "Mapper196_Init",
+      "sources": [
+        "src/boards/mmc3.cpp"
+      ]
+    },
+    {
+      "mapper": 197,
+      "name": "",
+      "init": "Mapper197_Init",
+      "sources": [
+        "src/boards/mmc3.cpp"
+      ]
+    },
+    {
+      "mapper": 198,
+      "name": "TW MMC3+VRAM Rev. E",
+      "init": "Mapper198_Init",
+      "sources": [
+        "src/boards/mmc3.cpp"
+      ]
+    },
+    {
+      "mapper": 199,
+      "name": "",
+      "init": "Mapper199_Init",
+      "sources": [
+        "src/boards/199.cpp"
+      ]
+    },
+    {
+      "mapper": 200,
+      "name": "",
+      "init": "Mapper200_Init",
+      "sources": [
+        "src/boards/addrlatch.cpp"
+      ]
+    },
+    {
+      "mapper": 201,
+      "name": "",
+      "init": "Mapper201_Init",
+      "sources": [
+        "src/boards/addrlatch.cpp"
+      ]
+    },
+    {
+      "mapper": 202,
+      "name": "",
+      "init": "Mapper202_Init",
+      "sources": [
+        "src/boards/addrlatch.cpp"
+      ]
+    },
+    {
+      "mapper": 203,
+      "name": "",
+      "init": "Mapper203_Init",
+      "sources": [
+        "src/boards/datalatch.cpp"
+      ]
+    },
+    {
+      "mapper": 204,
+      "name": "",
+      "init": "Mapper204_Init",
+      "sources": [
+        "src/boards/addrlatch.cpp"
+      ]
+    },
+    {
+      "mapper": 205,
+      "name": "",
+      "init": "Mapper205_Init",
+      "sources": [
+        "src/boards/mmc3.cpp"
+      ]
+    },
+    {
+      "mapper": 206,
+      "name": "NAMCOT 108 Rev. C",
+      "init": "Mapper206_Init",
+      "sources": [
+        "src/boards/206.cpp"
+      ]
+    },
+    {
+      "mapper": 207,
+      "name": "TAITO X1-005 Rev. B",
+      "init": "Mapper207_Init",
+      "sources": [
+        "src/boards/80.cpp"
+      ]
+    },
+    {
+      "mapper": 208,
+      "name": "",
+      "init": "Mapper208_Init",
+      "sources": [
+        "src/boards/208.cpp"
+      ]
+    },
+    {
+      "mapper": 209,
+      "name": "",
+      "init": "Mapper209_Init",
+      "sources": [
+        "src/boards/90.cpp"
+      ]
+    },
+    {
+      "mapper": 210,
+      "name": "",
+      "init": "Mapper210_Init",
+      "sources": [
+        "src/boards/n106.cpp"
+      ]
+    },
+    {
+      "mapper": 211,
+      "name": "",
+      "init": "Mapper211_Init",
+      "sources": [
+        "src/boards/90.cpp"
+      ]
+    },
+    {
+      "mapper": 212,
+      "name": "",
+      "init": "Mapper212_Init",
+      "sources": [
+        "src/boards/addrlatch.cpp"
+      ]
+    },
+    {
+      "mapper": 213,
+      "name": "",
+      "init": "Mapper213_Init",
+      "sources": [
+        "src/boards/addrlatch.cpp"
+      ]
+    },
+    {
+      "mapper": 214,
+      "name": "",
+      "init": "Mapper214_Init",
+      "sources": [
+        "src/boards/addrlatch.cpp"
+      ]
+    },
+    {
+      "mapper": 215,
+      "name": "",
+      "init": "UNL8237_Init",
+      "sources": [
+        "src/boards/8237.cpp"
+      ]
+    },
+    {
+      "mapper": 216,
+      "name": "",
+      "init": "Mapper216_Init",
+      "sources": [
+        "src/boards/bonza.cpp"
+      ]
+    },
+    {
+      "mapper": 217,
+      "name": "",
+      "init": "Mapper217_Init",
+      "sources": [
+        "src/boards/addrlatch.cpp"
+      ]
+    },
+    {
+      "mapper": 219,
+      "name": "UNLA9746",
+      "init": "UNLA9746_Init",
+      "sources": [
+        "src/boards/a9746.cpp"
+      ]
+    },
+    {
+      "mapper": 220,
+      "name": "Debug Mapper",
+      "init": "UNLKS7057_Init",
+      "sources": [
+        "src/boards/ks7057.cpp"
+      ]
+    },
+    {
+      "mapper": 221,
+      "name": "UNLN625092",
+      "init": "UNLN625092_Init",
+      "sources": [
+        "src/boards/n625092.cpp"
+      ]
+    },
+    {
+      "mapper": 222,
+      "name": "",
+      "init": "Mapper222_Init",
+      "sources": [
+        "src/boards/222.cpp"
+      ]
+    },
+    {
+      "mapper": 225,
+      "name": "",
+      "init": "Mapper225_Init",
+      "sources": [
+        "src/boards/225.cpp"
+      ]
+    },
+    {
+      "mapper": 226,
+      "name": "BMC 22+20-in-1",
+      "init": "Mapper226_Init",
+      "sources": [
+        "src/boards/bmc42in1r.cpp"
+      ]
+    },
+    {
+      "mapper": 227,
+      "name": "",
+      "init": "Mapper227_Init",
+      "sources": [
+        "src/boards/addrlatch.cpp"
+      ]
+    },
+    {
+      "mapper": 228,
+      "name": "",
+      "init": "Mapper228_Init",
+      "sources": [
+        "src/boards/228.cpp"
+      ]
+    },
+    {
+      "mapper": 229,
+      "name": "",
+      "init": "Mapper229_Init",
+      "sources": [
+        "src/boards/addrlatch.cpp"
+      ]
+    },
+    {
+      "mapper": 230,
+      "name": "BMC Contra+22-in-1",
+      "init": "Mapper230_Init",
+      "sources": [
+        "src/boards/230.cpp"
+      ]
+    },
+    {
+      "mapper": 231,
+      "name": "",
+      "init": "Mapper231_Init",
+      "sources": [
+        "src/boards/addrlatch.cpp"
+      ]
+    },
+    {
+      "mapper": 232,
+      "name": "BMC QUATTRO",
+      "init": "Mapper232_Init",
+      "sources": [
+        "src/boards/232.cpp"
+      ]
+    },
+    {
+      "mapper": 233,
+      "name": "BMC 22+20-in-1 RST",
+      "init": "Mapper233_Init",
+      "sources": [
+        "src/boards/bmc42in1r.cpp"
+      ]
+    },
+    {
+      "mapper": 234,
+      "name": "BMC MAXI",
+      "init": "Mapper234_Init",
+      "sources": [
+        "src/boards/234.cpp"
+      ]
+    },
+    {
+      "mapper": 235,
+      "name": "",
+      "init": "Mapper235_Init",
+      "sources": [
+        "src/boards/235.cpp"
+      ]
+    },
+    {
+      "mapper": 238,
+      "name": "UNL6035052",
+      "init": "UNL6035052_Init",
+      "sources": [
+        "src/boards/603-5052.cpp"
+      ]
+    },
+    {
+      "mapper": 240,
+      "name": "",
+      "init": "Mapper240_Init",
+      "sources": [
+        "src/boards/datalatch.cpp"
+      ]
+    },
+    {
+      "mapper": 241,
+      "name": "",
+      "init": "Mapper241_Init",
+      "sources": [
+        "src/boards/datalatch.cpp"
+      ]
+    },
+    {
+      "mapper": 242,
+      "name": "",
+      "init": "Mapper242_Init",
+      "sources": [
+        "src/boards/addrlatch.cpp"
+      ]
+    },
+    {
+      "mapper": 243,
+      "name": "S74LS374NA",
+      "init": "S74LS374NA_Init",
+      "sources": [
+        "src/boards/sachen.cpp"
+      ]
+    },
+    {
+      "mapper": 244,
+      "name": "DECATHLON",
+      "init": "Mapper244_Init",
+      "sources": [
+        "src/boards/244.cpp"
+      ]
+    },
+    {
+      "mapper": 245,
+      "name": "",
+      "init": "Mapper245_Init",
+      "sources": [
+        "src/boards/mmc3.cpp"
+      ]
+    },
+    {
+      "mapper": 246,
+      "name": "FONG SHEN BANG",
+      "init": "Mapper246_Init",
+      "sources": [
+        "src/boards/246.cpp"
+      ]
+    },
+    {
+      "mapper": 249,
+      "name": "",
+      "init": "Mapper249_Init",
+      "sources": [
+        "src/boards/mmc3.cpp"
+      ]
+    },
+    {
+      "mapper": 250,
+      "name": "",
+      "init": "Mapper250_Init",
+      "sources": [
+        "src/boards/mmc3.cpp"
+      ]
+    },
+    {
+      "mapper": 252,
+      "name": "SAN GUO ZHI PIRATE",
+      "init": "Mapper252_Init",
+      "sources": [
+        "src/boards/252.cpp"
+      ]
+    },
+    {
+      "mapper": 253,
+      "name": "DRAGON BALL PIRATE",
+      "init": "Mapper253_Init",
+      "sources": [
+        "src/boards/253.cpp"
+      ]
+    },
+    {
+      "mapper": 254,
+      "name": "",
+      "init": "Mapper254_Init",
+      "sources": [
+        "src/boards/mmc3.cpp"
+      ]
+    },
+    {
+      "mapper": 256,
+      "name": "ONE-BUS Systems",
+      "init": "UNLOneBus_Init",
+      "sources": [
+        "src/boards/onebus.cpp"
+      ]
+    },
+    {
+      "mapper": 257,
+      "name": "PEC-586 Computer",
+      "init": "UNLPEC586Init",
+      "sources": [
+        "src/boards/pec-586.cpp"
+      ]
+    },
+    {
+      "mapper": 258,
+      "name": "158B Prot Board",
+      "init": "UNL158B_Init",
+      "sources": [
+        "src/boards/158B.cpp"
+      ]
+    },
+    {
+      "mapper": 259,
+      "name": "F-15 MMC3 Based",
+      "init": "BMCF15_Init",
+      "sources": [
+        "src/boards/F-15.cpp"
+      ]
+    }
+  ]
+}

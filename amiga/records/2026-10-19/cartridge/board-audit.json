@@ -1,0 +1,818 @@
+{
+  "scope": "ARM translation-unit audit only; no mapper is enabled by this tool",
+  "compiler": "Apple clang version 21.0.0 (clang-2100.3.34.2)\nTarget: arm64-apple-darwin25.6.0\nThread model: posix\nInstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin\n",
+  "compiled": 156,
+  "total": 162,
+  "boards": [
+    {
+      "source": "src/boards/01-222.cpp",
+      "compiles": true,
+      "diagnostics": ""
+    },
+    {
+      "source": "src/boards/09-034a.cpp",
+      "compiles": true,
+      "diagnostics": ""
+    },
+    {
+      "source": "src/boards/103.cpp",
+      "compiles": true,
+      "diagnostics": ""
+    },
+    {
+      "source": "src/boards/106.cpp",
+      "compiles": true,
+      "diagnostics": ""
+    },
+    {
+      "source": "src/boards/108.cpp",
+      "compiles": true,
+      "diagnostics": ""
+    },
+    {
+      "source": "src/boards/112.cpp",
+      "compiles": true,
+      "diagnostics": ""
+    },
+    {
+      "source": "src/boards/116.cpp",
+      "compiles": true,
+      "diagnostics": ""
+    },
+    {
+      "source": "src/boards/117.cpp",
+      "compiles": true,
+      "diagnostics": ""
+    },
+    {
+      "source": "src/boards/120.cpp",
+      "compiles": true,
+      "diagnostics": ""
+    },
+    {
+      "source": "src/boards/121.cpp",
+      "compiles": true,
+      "diagnostics": ""
+    },
+    {
+      "source": "src/boards/12in1.cpp",
+      "compiles": true,
+      "diagnostics": ""
+    },
+    {
+      "source": "src/boards/15.cpp",
+      "compiles": true,
+      "diagnostics": ""
+    },
+    {
+      "source": "src/boards/151.cpp",
+      "compiles": true,
+      "diagnostics": ""
+    },
+    {
+      "source": "src/boards/156.cpp",
+      "compiles": true,
+      "diagnostics": ""
+    },
+    {
+      "source": "src/boards/158B.cpp",
+      "compiles": true,
+      "diagnostics": ""
+    },
+    {
+      "source": "src/boards/164.cpp",
+      "compiles": true,
+      "diagnostics": ""
+    },
+    {
+      "source": "src/boards/168.cpp",
+      "compiles": true,
+      "diagnostics": ""
+    },
+    {
+      "source": "src/boards/170.cpp",
+      "compiles": true,
+      "diagnostics": ""
+    },
+    {
+      "source": "src/boards/175.cpp",
+      "compiles": true,
+      "diagnostics": ""
+    },
+    {
+      "source": "src/boards/176.cpp",
+      "compiles": true,
+      "diagnostics": ""
+    },
+    {
+      "source": "src/boards/177.cpp",
+      "compiles": true,
+      "diagnostics": ""
+    },
+    {
+      "source": "src/boards/178.cpp",
+      "compiles": true,
+      "diagnostics": ""
+    },
+    {
+      "source": "src/boards/18.cpp",
+      "compiles": true,
+      "diagnostics": ""
+    },
+    {
+      "source": "src/boards/183.cpp",
+      "compiles": true,
+      "diagnostics": ""
+    },
+    {
+      "source": "src/boards/185.cpp",
+      "compiles": true,
+      "diagnostics": ""
+    },
+    {
+      "source": "src/boards/186.cpp",
+      "compiles": true,
+      "diagnostics": ""
+    },
+    {
+      "source": "src/boards/187.cpp",
+      "compiles": true,
+      "diagnostics": ""
+    },
+    {
+      "source": "src/boards/189.cpp",
+      "compiles": true,
+      "diagnostics": ""
+    },
+    {
+      "source": "src/boards/193.cpp",
+      "compiles": true,
+      "diagnostics": ""
+    },
+    {
+      "source": "src/boards/199.cpp",
+      "compiles": true,
+      "diagnostics": ""
+    },
+    {
+      "source": "src/boards/206.cpp",
+      "compiles": true,
+      "diagnostics": ""
+    },
+    {
+      "source": "src/boards/208.cpp",
+      "compiles": true,
+      "diagnostics": ""
+    },
+    {
+      "source": "src/boards/222.cpp",
+      "compiles": true,
+      "diagnostics": ""
+    },
+    {
+      "source": "src/boards/225.cpp",
+      "compiles": true,
+      "diagnostics": ""
+    },
+    {
+      "source": "src/boards/228.cpp",
+      "compiles": true,
+      "diagnostics": ""
+    },
+    {
+      "source": "src/boards/230.cpp",
+      "compiles": true,
+      "diagnostics": ""
+    },
+    {
+      "source": "src/boards/232.cpp",
+      "compiles": true,
+      "diagnostics": ""
+    },
+    {
+      "source": "src/boards/234.cpp",
+      "compiles": true,
+      "diagnostics": ""
+    },
+    {
+      "source": "src/boards/235.cpp",
+      "compiles": true,
+      "diagnostics": ""
+    },
+    {
+      "source": "src/boards/244.cpp",
+      "compiles": true,
+      "diagnostics": ""
+    },
+    {
+      "source": "src/boards/246.cpp",
+      "compiles": true,
+      "diagnostics": ""
+    },
+    {
+      "source": "src/boards/252.cpp",
+      "compiles": true,
+      "diagnostics": ""
+    },
+    {
+      "source": "src/boards/253.cpp",
+      "compiles": true,
+      "diagnostics": ""
+    },
+    {
+      "source": "src/boards/28.cpp",
+      "compiles": true,
+      "diagnostics": ""
+    },
+    {
+      "source": "src/boards/32.cpp",
+      "compiles": true,
+      "diagnostics": ""
+    },
+    {
+      "source": "src/boards/33.cpp",
+      "compiles": true,
+      "diagnostics": ""
+    },
+    {
+      "source": "src/boards/34.cpp",
+      "compiles": true,
+      "diagnostics": ""
+    },
+    {
+      "source": "src/boards/36.cpp",
+      "compiles": true,
+      "diagnostics": ""
+    },
+    {
+      "source": "src/boards/3d-block.cpp",
+      "compiles": true,
+      "diagnostics": ""
+    },
+    {
+      "source": "src/boards/40.cpp",
+      "compiles": true,
+      "diagnostics": ""
+    },
+    {
+      "source": "src/boards/41.cpp",
+      "compiles": true,
+      "diagnostics": ""
+    },
+    {
+      "source": "src/boards/411120-c.cpp",
+      "compiles": true,
+      "diagnostics": ""
+    },
+    {
+      "source": "src/boards/42.cpp",
+      "compiles": true,
+      "diagnostics": ""
+    },
+    {
+      "source": "src/boards/43.cpp",
+      "compiles": true,
+      "diagnostics": ""
+    },
+    {
+      "source": "src/boards/46.cpp",
+      "compiles": true,
+      "diagnostics": ""
+    },
+    {
+      "source": "src/boards/50.cpp",
+      "compiles": true,
+      "diagnostics": ""
+    },
+    {
+      "source": "src/boards/51.cpp",
+      "compiles": true,
+      "diagnostics": ""
+    },
+    {
+      "source": "src/boards/57.cpp",
+      "compiles": true,
+      "diagnostics": ""
+    },
+    {
+      "source": "src/boards/603-5052.cpp",
+      "compiles": true,
+      "diagnostics": ""
+    },
+    {
+      "source": "src/boards/62.cpp",
+      "compiles": true,
+      "diagnostics": ""
+    },
+    {
+      "source": "src/boards/65.cpp",
+      "compiles": true,
+      "diagnostics": ""
+    },
+    {
+      "source": "src/boards/67.cpp",
+      "compiles": true,
+      "diagnostics": ""
+    },
+    {
+      "source": "src/boards/68.cpp",
+      "compiles": true,
+      "diagnostics": ""
+    },
+    {
+      "source": "src/boards/69.cpp",
+      "compiles": true,
+      "diagnostics": ""
+    },
+    {
+      "source": "src/boards/71.cpp",
+      "compiles": true,
+      "diagnostics": ""
+    },
+    {
+      "source": "src/boards/72.cpp",
+      "compiles": true,
+      "diagnostics": ""
+    },
+    {
+      "source": "src/boards/77.cpp",
+      "compiles": true,
+      "diagnostics": ""
+    },
+    {
+      "source": "src/boards/79.cpp",
+      "compiles": true,
+      "diagnostics": ""
+    },
+    {
+      "source": "src/boards/80.cpp",
+      "compiles": true,
+      "diagnostics": ""
+    },
+    {
+      "source": "src/boards/8157.cpp",
+      "compiles": true,
+      "diagnostics": ""
+    },
+    {
+      "source": "src/boards/82.cpp",
+      "compiles": true,
+      "diagnostics": ""
+    },
+    {
+      "source": "src/boards/8237.cpp",
+      "compiles": true,
+      "diagnostics": ""
+    },
+    {
+      "source": "src/boards/830118C.cpp",
+      "compiles": true,
+      "diagnostics": ""
+    },
+    {
+      "source": "src/boards/88.cpp",
+      "compiles": true,
+      "diagnostics": ""
+    },
+    {
+      "source": "src/boards/8in1.cpp",
+      "compiles": true,
+      "diagnostics": ""
+    },
+    {
+      "source": "src/boards/90.cpp",
+      "compiles": true,
+      "diagnostics": ""
+    },
+    {
+      "source": "src/boards/91.cpp",
+      "compiles": true,
+      "diagnostics": ""
+    },
+    {
+      "source": "src/boards/96.cpp",
+      "compiles": true,
+      "diagnostics": ""
+    },
+    {
+      "source": "src/boards/99.cpp",
+      "compiles": true,
+      "diagnostics": ""
+    },
+    {
+      "source": "src/boards/BMW8544.cpp",
+      "compiles": true,
+      "diagnostics": ""
+    },
+    {
+      "source": "src/boards/F-15.cpp",
+      "compiles": true,
+      "diagnostics": ""
+    },
+    {
+      "source": "src/boards/__dummy_mapper.cpp",
+      "compiles": true,
+      "diagnostics": ""
+    },
+    {
+      "source": "src/boards/a9746.cpp",
+      "compiles": true,
+      "diagnostics": ""
+    },
+    {
+      "source": "src/boards/ac-08.cpp",
+      "compiles": true,
+      "diagnostics": ""
+    },
+    {
+      "source": "src/boards/addrlatch.cpp",
+      "compiles": true,
+      "diagnostics": ""
+    },
+    {
+      "source": "src/boards/ax5705.cpp",
+      "compiles": true,
+      "diagnostics": ""
+    },
+    {
+      "source": "src/boards/bandai.cpp",
+      "compiles": true,
+      "diagnostics": ""
+    },
+    {
+      "source": "src/boards/bb.cpp",
+      "compiles": true,
+      "diagnostics": ""
+    },
+    {
+      "source": "src/boards/bmc13in1jy110.cpp",
+      "compiles": true,
+      "diagnostics": ""
+    },
+    {
+      "source": "src/boards/bmc42in1r.cpp",
+      "compiles": true,
+      "diagnostics": ""
+    },
+    {
+      "source": "src/boards/bmc64in1nr.cpp",
+      "compiles": true,
+      "diagnostics": ""
+    },
+    {
+      "source": "src/boards/bmc70in1.cpp",
+      "compiles": true,
+      "diagnostics": ""
+    },
+    {
+      "source": "src/boards/bonza.cpp",
+      "compiles": true,
+      "diagnostics": ""
+    },
+    {
+      "source": "src/boards/bs-5.cpp",
+      "compiles": true,
+      "diagnostics": ""
+    },
+    {
+      "source": "src/boards/cityfighter.cpp",
+      "compiles": true,
+      "diagnostics": ""
+    },
+    {
+      "source": "src/boards/coolboy.cpp",
+      "compiles": true,
+      "diagnostics": ""
+    },
+    {
+      "source": "src/boards/dance2000.cpp",
+      "compiles": true,
+      "diagnostics": ""
+    },
+    {
+      "source": "src/boards/datalatch.cpp",
+      "compiles": false,
+      "diagnostics": "In file included from .context/fceux-full/source/boards/datalatch.cpp:22:\n.context/fceux-full/source/boards/../ines.h:24:10: fatal error: 'stdlib.h' file not found\n   24 | #include <stdlib.h>\n      |          ^~~~~~~~~~\n1 error generated.\n"
+    },
+    {
+      "source": "src/boards/dream.cpp",
+      "compiles": true,
+      "diagnostics": ""
+    },
+    {
+      "source": "src/boards/edu2000.cpp",
+      "compiles": true,
+      "diagnostics": ""
+    },
+    {
+      "source": "src/boards/eh8813a.cpp",
+      "compiles": true,
+      "diagnostics": ""
+    },
+    {
+      "source": "src/boards/et-100.cpp",
+      "compiles": true,
+      "diagnostics": ""
+    },
+    {
+      "source": "src/boards/et-4320.cpp",
+      "compiles": true,
+      "diagnostics": ""
+    },
+    {
+      "source": "src/boards/famicombox.cpp",
+      "compiles": true,
+      "diagnostics": ""
+    },
+    {
+      "source": "src/boards/ffe.cpp",
+      "compiles": true,
+      "diagnostics": ""
+    },
+    {
+      "source": "src/boards/fk23c.cpp",
+      "compiles": false,
+      "diagnostics": "In file included from .context/fceux-full/source/boards/fk23c.cpp:23:\n.context/fceux-full/source/boards/../ines.h:24:10: fatal error: 'stdlib.h' file not found\n   24 | #include <stdlib.h>\n      |          ^~~~~~~~~~\n1 error generated.\n"
+    },
+    {
+      "source": "src/boards/ghostbusters63in1.cpp",
+      "compiles": true,
+      "diagnostics": ""
+    },
+    {
+      "source": "src/boards/gs-2004.cpp",
+      "compiles": true,
+      "diagnostics": ""
+    },
+    {
+      "source": "src/boards/gs-2013.cpp",
+      "compiles": true,
+      "diagnostics": ""
+    },
+    {
+      "source": "src/boards/h2288.cpp",
+      "compiles": true,
+      "diagnostics": ""
+    },
+    {
+      "source": "src/boards/hp898f.cpp",
+      "compiles": true,
+      "diagnostics": ""
+    },
+    {
+      "source": "src/boards/inlnsf.cpp",
+      "compiles": true,
+      "diagnostics": ""
+    },
+    {
+      "source": "src/boards/karaoke.cpp",
+      "compiles": true,
+      "diagnostics": ""
+    },
+    {
+      "source": "src/boards/kof97.cpp",
+      "compiles": true,
+      "diagnostics": ""
+    },
+    {
+      "source": "src/boards/ks7010.cpp",
+      "compiles": true,
+      "diagnostics": ""
+    },
+    {
+      "source": "src/boards/ks7012.cpp",
+      "compiles": true,
+      "diagnostics": ""
+    },
+    {
+      "source": "src/boards/ks7013.cpp",
+      "compiles": true,
+      "diagnostics": ""
+    },
+    {
+      "source": "src/boards/ks7016.cpp",
+      "compiles": false,
+      "diagnostics": ".context/fceux-full/source/boards/ks7016.cpp:47:2: error: unknown type name 'u16'\n   47 |         u16 mask = (A & 0x30);\n      |         ^\n1 error generated.\n"
+    },
+    {
+      "source": "src/boards/ks7017.cpp",
+      "compiles": true,
+      "diagnostics": ""
+    },
+    {
+      "source": "src/boards/ks7030.cpp",
+      "compiles": true,
+      "diagnostics": ""
+    },
+    {
+      "source": "src/boards/ks7031.cpp",
+      "compiles": true,
+      "diagnostics": ""
+    },
+    {
+      "source": "src/boards/ks7032.cpp",
+      "compiles": true,
+      "diagnostics": ""
+    },
+    {
+      "source": "src/boards/ks7037.cpp",
+      "compiles": true,
+      "diagnostics": ""
+    },
+    {
+      "source": "src/boards/ks7057.cpp",
+      "compiles": true,
+      "diagnostics": ""
+    },
+    {
+      "source": "src/boards/le05.cpp",
+      "compiles": true,
+      "diagnostics": ""
+    },
+    {
+      "source": "src/boards/lh32.cpp",
+      "compiles": true,
+      "diagnostics": ""
+    },
+    {
+      "source": "src/boards/lh53.cpp",
+      "compiles": true,
+      "diagnostics": ""
+    },
+    {
+      "source": "src/boards/malee.cpp",
+      "compiles": true,
+      "diagnostics": ""
+    },
+    {
+      "source": "src/boards/mihunche.cpp",
+      "compiles": true,
+      "diagnostics": ""
+    },
+    {
+      "source": "src/boards/mmc1.cpp",
+      "compiles": false,
+      "diagnostics": ".context/fceux-full/source/boards/mmc1.cpp:250:32: error: expected ';' after expression\n  250 |                         FCEU_dwmemset(WRAM, 0, 8192)\n      |                                                     ^\n      |                                                     ;\n1 error generated.\n"
+    },
+    {
+      "source": "src/boards/mmc2and4.cpp",
+      "compiles": true,
+      "diagnostics": ""
+    },
+    {
+      "source": "src/boards/mmc3.cpp",
+      "compiles": true,
+      "diagnostics": ""
+    },
+    {
+      "source": "src/boards/mmc5.cpp",
+      "compiles": true,
+      "diagnostics": ""
+    },
+    {
+      "source": "src/boards/n106.cpp",
+      "compiles": true,
+      "diagnostics": ""
+    },
+    {
+      "source": "src/boards/n625092.cpp",
+      "compiles": true,
+      "diagnostics": ""
+    },
+    {
+      "source": "src/boards/novel.cpp",
+      "compiles": true,
+      "diagnostics": ""
+    },
+    {
+      "source": "src/boards/onebus.cpp",
+      "compiles": true,
+      "diagnostics": ""
+    },
+    {
+      "source": "src/boards/pec-586.cpp",
+      "compiles": true,
+      "diagnostics": ""
+    },
+    {
+      "source": "src/boards/rt-01.cpp",
+      "compiles": false,
+      "diagnostics": ".context/fceux-full/source/boards/rt-01.cpp:36:18: error: use of undeclared identifier 'rand'\n   36 |                 return 0xF2 | (rand() & 0x0D);\n      |                                ^~~~\n1 error generated.\n"
+    },
+    {
+      "source": "src/boards/sa-9602b.cpp",
+      "compiles": true,
+      "diagnostics": ""
+    },
+    {
+      "source": "src/boards/sachen.cpp",
+      "compiles": true,
+      "diagnostics": ""
+    },
+    {
+      "source": "src/boards/sb-2000.cpp",
+      "compiles": true,
+      "diagnostics": ""
+    },
+    {
+      "source": "src/boards/sc-127.cpp",
+      "compiles": true,
+      "diagnostics": ""
+    },
+    {
+      "source": "src/boards/sheroes.cpp",
+      "compiles": true,
+      "diagnostics": ""
+    },
+    {
+      "source": "src/boards/sl1632.cpp",
+      "compiles": true,
+      "diagnostics": ""
+    },
+    {
+      "source": "src/boards/subor.cpp",
+      "compiles": true,
+      "diagnostics": ""
+    },
+    {
+      "source": "src/boards/super24.cpp",
+      "compiles": true,
+      "diagnostics": ""
+    },
+    {
+      "source": "src/boards/supervision.cpp",
+      "compiles": true,
+      "diagnostics": ""
+    },
+    {
+      "source": "src/boards/t-227-1.cpp",
+      "compiles": true,
+      "diagnostics": ""
+    },
+    {
+      "source": "src/boards/t-262.cpp",
+      "compiles": true,
+      "diagnostics": ""
+    },
+    {
+      "source": "src/boards/tengen.cpp",
+      "compiles": true,
+      "diagnostics": ""
+    },
+    {
+      "source": "src/boards/tf-1201.cpp",
+      "compiles": true,
+      "diagnostics": ""
+    },
+    {
+      "source": "src/boards/transformer.cpp",
+      "compiles": true,
+      "diagnostics": ""
+    },
+    {
+      "source": "src/boards/unrom512.cpp",
+      "compiles": false,
+      "diagnostics": "In file included from .context/fceux-full/source/boards/unrom512.cpp:36:\n.context/fceux-full/source/boards/../ines.h:24:10: fatal error: 'stdlib.h' file not found\n   24 | #include <stdlib.h>\n      |          ^~~~~~~~~~\n1 error generated.\n"
+    },
+    {
+      "source": "src/boards/vrc1.cpp",
+      "compiles": true,
+      "diagnostics": ""
+    },
+    {
+      "source": "src/boards/vrc2and4.cpp",
+      "compiles": true,
+      "diagnostics": ""
+    },
+    {
+      "source": "src/boards/vrc3.cpp",
+      "compiles": true,
+      "diagnostics": ""
+    },
+    {
+      "source": "src/boards/vrc5.cpp",
+      "compiles": true,
+      "diagnostics": ""
+    },
+    {
+      "source": "src/boards/vrc6.cpp",
+      "compiles": true,
+      "diagnostics": ""
+    },
+    {
+      "source": "src/boards/vrc7.cpp",
+      "compiles": true,
+      "diagnostics": ""
+    },
+    {
+      "source": "src/boards/vrc7p.cpp",
+      "compiles": true,
+      "diagnostics": ""
+    },
+    {
+      "source": "src/boards/yoko.cpp",
+      "compiles": true,
+      "diagnostics": ""
+    }
+  ]
+}

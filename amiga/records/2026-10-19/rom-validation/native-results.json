@@ -1,0 +1,164 @@
+[
+  {
+    "index": 0,
+    "name": "011 Mario Bros.nes",
+    "returncode": 0,
+    "result": "PASS frames=3630 unique_sampled_frames=14 nonzero_samples=1889862 state_bytes=15497 deterministic_video_audio=1 jammed=0"
+  },
+  {
+    "index": 1,
+    "name": "SuperMarioWorld.nes",
+    "returncode": 0,
+    "result": "PASS frames=3630 unique_sampled_frames=39 nonzero_samples=1811875 state_bytes=15541 deterministic_video_audio=1 jammed=0"
+  },
+  {
+    "index": 2,
+    "name": "Controller-Test.nes",
+    "returncode": 0,
+    "result": "PASS frames=3630 unique_sampled_frames=23 nonzero_samples=1914814 state_bytes=15497 deterministic_video_audio=1 jammed=0"
+  },
+  {
+    "index": 3,
+    "name": "Airwolf (Japan).nes",
+    "returncode": 0,
+    "result": "PASS frames=3630 unique_sampled_frames=44 nonzero_samples=1909870 state_bytes=23703 deterministic_video_audio=1 jammed=0"
+  },
+  {
+    "index": 4,
+    "name": "Asterix (E).nes",
+    "returncode": 0,
+    "result": "PASS frames=3630 unique_sampled_frames=46 nonzero_samples=1683286 state_bytes=23691 deterministic_video_audio=1 jammed=0"
+  },
+  {
+    "index": 5,
+    "name": "AussieRules (E).nes",
+    "returncode": 0,
+    "result": "PASS frames=3630 unique_sampled_frames=32 nonzero_samples=1989847 state_bytes=23703 deterministic_video_audio=1 jammed=0"
+  },
+  {
+    "index": 6,
+    "name": "Castlevania3 US.nes",
+    "returncode": 0,
+    "result": "PASS frames=3630 unique_sampled_frames=19 nonzero_samples=1912204 state_bytes=16616 deterministic_video_audio=1 jammed=0"
+  },
+  {
+    "index": 7,
+    "name": "Contra (USA).nes",
+    "returncode": 0,
+    "result": "PASS frames=3630 unique_sampled_frames=41 nonzero_samples=1676794 state_bytes=23691 deterministic_video_audio=1 jammed=0"
+  },
+  {
+    "index": 8,
+    "name": "Contra Force US.nes",
+    "returncode": 0,
+    "result": "PASS frames=3630 unique_sampled_frames=8 nonzero_samples=0 state_bytes=23705 deterministic_video_audio=1 jammed=0"
+  },
+  {
+    "index": 9,
+    "name": "Donkey Kong 3.nes",
+    "returncode": 0,
+    "result": "PASS frames=3630 unique_sampled_frames=42 nonzero_samples=1889089 state_bytes=15497 deterministic_video_audio=1 jammed=0"
+  },
+  {
+    "index": 10,
+    "name": "HammerHarry (E).nes",
+    "returncode": 0,
+    "result": "PASS frames=3630 unique_sampled_frames=43 nonzero_samples=2212088 state_bytes=23705 deterministic_video_audio=1 jammed=0"
+  },
+  {
+    "index": 11,
+    "name": "GhostsNGoblins.nes",
+    "returncode": 0,
+    "result": "PASS frames=3630 unique_sampled_frames=39 nonzero_samples=1913510 state_bytes=23691 deterministic_video_audio=1 jammed=0"
+  },
+  {
+    "index": 12,
+    "name": "Ghostbusters2.nes",
+    "returncode": 0,
+    "result": "PASS frames=3630 unique_sampled_frames=45 nonzero_samples=1702225 state_bytes=23703 deterministic_video_audio=1 jammed=0"
+  },
+  {
+    "index": 13,
+    "name": "HolyDiver.nes",
+    "returncode": 0,
+    "result": "PASS frames=3630 unique_sampled_frames=35 nonzero_samples=1842973 state_bytes=15499 deterministic_video_audio=1 jammed=0"
+  },
+  {
+    "index": 14,
+    "name": "RollingThunder.nes",
+    "returncode": 0,
+    "result": "PASS frames=3630 unique_sampled_frames=22 nonzero_samples=1635352 state_bytes=23705 deterministic_video_audio=1 jammed=0"
+  },
+  {
+    "index": 15,
+    "name": "Rockman1.nes",
+    "returncode": 0,
+    "result": "PASS frames=3630 unique_sampled_frames=13 nonzero_samples=1787068 state_bytes=23691 deterministic_video_audio=1 jammed=0"
+  },
+  {
+    "index": 16,
+    "name": "Rockman3.nes",
+    "returncode": 20,
+    "result": "HEADER mapper=-1 bytes=917536"
+  },
+  {
+    "index": 17,
+    "name": "Rockman4.nes",
+    "returncode": 20,
+    "result": "HEADER mapper=-1 bytes=1048608"
+  },
+  {
+    "index": 18,
+    "name": "Rockman5.nes",
+    "returncode": 20,
+    "result": "HEADER mapper=-1 bytes=1048608"
+  },
+  {
+    "index": 19,
+    "name": "Rockman7.nes",
+    "returncode": 20,
+    "result": "HEADER mapper=-1 bytes=1048608"
+  },
+  {
+    "index": 20,
+    "name": "Tetris.nes",
+    "returncode": 0,
+    "result": "PASS frames=3630 unique_sampled_frames=35 nonzero_samples=1913271 state_bytes=23691 deterministic_video_audio=1 jammed=0"
+  },
+  {
+    "index": 21,
+    "name": "Lolo1.nes",
+    "returncode": 0,
+    "result": "PASS frames=3630 unique_sampled_frames=21 nonzero_samples=1703641 state_bytes=23703 deterministic_video_audio=1 jammed=0"
+  },
+  {
+    "index": 22,
+    "name": "Lolo2.nes",
+    "returncode": 0,
+    "result": "PASS frames=3630 unique_sampled_frames=15 nonzero_samples=1610857 state_bytes=23703 deterministic_video_audio=1 jammed=0"
+  },
+  {
+    "index": 23,
+    "name": "Lolo3.nes",
+    "returncode": 20,
+    "result": "HEADER mapper=-1 bytes=262160"
+  },
+  {
+    "index": 24,
+    "name": "Cybernoid.nes",
+    "returncode": 0,
+    "result": "PASS frames=3630 unique_sampled_frames=22 nonzero_samples=1787047 state_bytes=23691 deterministic_video_audio=1 jammed=0"
+  },
+  {
+    "index": 25,
+    "name": "EarthwormJim3.nes",
+    "returncode": 0,
+    "result": "PASS frames=3630 unique_sampled_frames=48 nonzero_samples=1726423 state_bytes=23705 deterministic_video_audio=1 jammed=0"
+  },
+  {
+    "index": 26,
+    "name": "Jackal.nes",
+    "returncode": 0,
+    "result": "PASS frames=3630 unique_sampled_frames=48 nonzero_samples=1788014 state_bytes=23691 deterministic_video_audio=1 jammed=0"
+  }
+]

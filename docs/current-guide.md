@@ -1,6 +1,6 @@
-# ZZNES 0.7.1 Beta
+# ZZNES 0.7.4 Beta
 
-Extract the package into a writable drawer and open **ZZNES**. Keep the player
+Use the [offline installer](package-manager.md), or extract the manual ZIP into a writable drawer and open **ZZNES**. Keep the player
 executable beside it. When upgrading, retain your ROMs, States, Snapshots and
 Library.cfg; older library settings are read automatically.
 
@@ -48,25 +48,22 @@ member inside the archive.
 
 ## Display
 
-Choose **Fullscreen** or **Workbench window**. **Alt+Return** switches at a completed
-frame boundary. The window currently displays a fixed 320×240 image. Fullscreen
-retains the existing deferred framebuffer handoff; windowed output uses a private
-ZZ9000 bitmap and an AmigaOS blit.
+Choose **Fullscreen** or **Workbench window**. **Alt+Return** switches during
+play at a completed frame boundary. The gameplay surface is 320×240 by default;
+the launcher itself is resizable and uses scrollable pages on smaller screens.
 
-Software scanlines: **Off**, **Classic** (alternating black rows), **Soft** (5/8 brightness
-on alternating rows), or **Gradient** (8/8, 6/8, 4/8, 6/8). They work with either
-display mode and the optional FPS overlay. They change this emulator's output only.
+**Scanlines** uses Xanxi's FPGA interface in fullscreen and Soft ARM software
+filtering in a window. **F7** cycles Off → Soft → Gradient → Classic in fullscreen,
+and toggles Off/Soft in a window. Compatible FPGA firmware is required for the
+fullscreen effect. The bundled tools are installed automatically by the offline
+installer, or manually with **Install-Scanlines**. The separate utility need
+not run. Hardware filtering is disabled in a window and on normal exit.
+F9 captures the framebuffer before the hardware effect is applied.
 
-The **Software scanlines** setting uses the ZZDosBox-derived ARM pixel routine;
-Xanxi's separate **ZZScanlines** Workbench utility is not required. The emulator
-does not call that utility or write its scanline-control registers. If global
-Workbench scanlines are enabled, turn them off for an undoubled software effect.
-Classic can hide fine text at 320×240; Soft retains detail in the dimmed rows.
-
-**On-screen FPS** counts presented frames over roughly one-second intervals.
-**Optimised presenter** enables guarded NEON row stores/dimming when firmware has
-already enabled NEON. Disable it for a scalar baseline comparison. It does not
-change CPU emulation, game timing or firmware policy.
+**On-screen FPS** counts emulated frames over roughly one-second intervals.
+**Optimised presenter** enables guarded NEON row stores/dimming when firmware
+has enabled NEON. An integer fallback remains available; this does not change
+the ARM clock or firmware policy.
 
 **EmuELEC bezel** adds the supplied dark speaker panels. Both supplied PNGs
 have the same frame, so they share one border choice. Their centre scanline
@@ -84,7 +81,7 @@ its 4:3 viewport fills the screen.
 | M | Mute / unmute |
 | F5 | Save selected slot |
 | F8 | Load selected slot |
-| F7 | Cycle software scanlines: Off → Soft → Gradient → Classic → Off |
+| F7 | Fullscreen scanline modes; windowed Off/Soft |
 | F9 | Capture library artwork |
 
 Five slots are maintained per game. The Save states page supports resume and
@@ -100,25 +97,18 @@ ends a scan while retaining games already found. No automatic or background
 drive discovery runs on startup or when a USB drive is inserted.
 The red **Launch** button stays in the bottom bar on every page.
 
-## Development candidate: smooth scrolling
+## Defaults and scaling
 
-In 0.7.2-dev, **Display → Pixel scaling → Smooth scrolling** reduces periodic
-scaling columns. It softens pixel edges and uses extra ARM time; **Sharp pixels**
-retains the original appearance. Back up Library.cfg before using this candidate,
-because it writes v4 settings that older launchers cannot read.
+New libraries default to fullscreen with Soft scanlines. Existing saved choices
+remain in effect. F7 changes the running session; the launcher retains your
+saved default. Sharp pixels uses nearest-neighbour scaling. Smooth scrolling
+blends adjacent horizontal pixels, softening edges at additional presentation
+cost. It does not change game timing or region.
 
-### Development defaults
+## ROM Manager
 
-The optimisation candidate starts new libraries in fullscreen with Soft
-software scanlines. Existing saved choices
-still take priority. Display settings remain selectable. **Alt+Return** switches
-window/fullscreen; **F9** captures a screenshot for the library, as shown on the
-loading panel.
-
-F7 works while playing or paused, in a window or fullscreen. Gradient is the
-smooth effect; Classic is the hard, black-line effect. Changes apply to the
-current game session; the launcher retains your saved default.
-
-The standard effects shade rows of the 320×240 output: Classic and Soft affect
-alternate rows, while Gradient repeats its brightness pattern over four rows.
-They do not insert a separate gap after each original console picture line.
+Bulk import scans the selected folder and its subfolders once. Duplicate cleanup
+shows the file being scanned and permits cancellation; ZIP decoding takes longer.
+It removes duplicate library entries, not ROM files or saves. Backup copies
+saves, snapshots and library settings to a new verified folder on a mounted disk
+or USB drive. [Details](rom-manager.md).

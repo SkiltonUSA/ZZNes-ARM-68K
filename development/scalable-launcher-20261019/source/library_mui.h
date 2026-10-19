@@ -46,7 +46,7 @@
 #define LIB_PORT "ZZNES_LIBRARY"
 #define LIB_PLAYER "ZZFceux-ui"
 #define LIB_SESSION "ZZSESSION1"
-#define LIB_VERSION "0.7.3-dev"
+#define LIB_VERSION "0.7.4-dev"
 #define LIB_PATTERN "#?.(nes|zip)"
 #define LIB_SNES 0
 #define LIB_SYSTEM "Nintendo Entertainment System"
@@ -158,7 +158,7 @@ static void identify(void){unsigned n;UBYTE*p;rom_valid=0;rom_id=rom_id2=rom_byt
  else strcpy(details,"Unsupported cartridge: requires NTSC/PAL LoROM/HiROM\nup to 4 MiB, without enhancement chips.");}
 #else
  {int mapper=nes_cartridge(p,n);if(mapper>=0){rom_id=bytes_hash(p,n);rom_bytes=n;rom_valid=1;snprintf(details,sizeof(details),"Header supported: %s, mapper %d\nGameplay compatibility varies by title.",fc_rom_pal(p,n,cartridge_name)?"PAL":"NTSC",mapper);}
- else strcpy(details,"Unsupported cartridge: requires supported iNES\nmapper 0/1/2/4/5/90; no trainer or battery.");}
+ else strcpy(details,"Unsupported cartridge: requires supported iNES\nmapper 0/1/2/3/4/5/78/90; no trainer or battery.");}
 #endif
  FreeVec(p);
 }

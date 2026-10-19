@@ -1,0 +1,16 @@
+{
+  "version": "0.7.4-dev",
+  "release": "v0.7.4-beta",
+  "build_directory": ".context/optimisation-build",
+  "build_command": "make optimisation",
+  "executables": {
+    "ZZNES": {
+      "sha256": "ca3c1e90d0b19d124b02458aa2a9539c9ba8fc4a964e1c7bb0a3a2a388900075",
+      "bytes": 257164
+    },
+    "ZZFceux-ui": {
+      "sha256": "6f55b799f6d2af0547ed338407de9d41e08579063f106dbe69cd71a1eaced977",
+      "bytes": 562316
+    }
+  }
+}

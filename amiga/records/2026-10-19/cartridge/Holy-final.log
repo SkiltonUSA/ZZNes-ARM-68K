@@ -1,0 +1,74 @@
+OWNED amiga=50000040 arm_candidate=101f0040 size=4194304 nonce=08bdb8fe
+BOOTSTRAP amiga=40fc77c0 arm=011b77c0 (P96 allocated/locked)
+MAP status=4d415031 SCTLR=08c50878 MIDR=413fc090 MPIDR=80000001
+MAPPING PASS (eight nonce-derived words)
+ARM ready=41524d31 SCTLR=08c5187d MIDR=413fc090 MPIDR=80000001
+REGION NTSC period_us=16639
+CARTRIDGE mapper=78 PRG=131072 CHR=131072 battery=0
+STAGE ROM published; initializing core
+STAGE core initialized; calibrating clock
+STAGE opening display
+SCANLINE_BACKEND window=1 hardware=0 software=0 parity=0
+BUFFERS pixels=00000000 indices=0980c944 legacy_host=0
+JOYSTICK available=1 port=1; red=A blue=B green=Select play=Start
+AUDIO task: AHI unit 0, 32000 Hz mono; 8 queue slots, 4-frame prebuffer
+PLAYER FCEUX CPU/old PPU/APU, auto-region 32kHz quality0; P pause, M mute, Q/Esc quit; bounded picture omission; every core/APU frame retained
+ZZFCEUX START ROM=SD032G:Emulator/ZZNES/ROMs/HolyDiver.nes bytes=262160 timer_hz=333385668 core_only=0
+FRAME n=1 cycles=29784 core_hash=b87d5dc5 output_hash=3fde1dc5 cpu_ppu_us=3173
+SNAPSHOT saved SD032G:Dev/Mapper781019/Holy-final.zzp
+FRAME n=600 cycles=17868302 core_hash=8b060000 output_hash=59f67100 cpu_ppu_us=5905
+FRAME n=1200 cycles=35736601 core_hash=d396ab13 output_hash=489b901d cpu_ppu_us=6209
+STATE save OK bytes=15499 path=SD032G:Dev/Mapper781019/Holy-final.zzs
+STATE load OK path=SD032G:Dev/Mapper781019/Holy-final.zzs
+SNAPSHOT saved SD032G:Dev/Mapper781019/Holy-final.zzp
+SCANLINE_BACKEND released: hardware=0
+FULLSCREEN_BITMAP allocated=0898e124 screen=095e9c20 width=320 height=240 allocated_height=720 screen_height=720 on_board=1/1 memory=0a31afbc/40ccd7c0 pitch=1280/1280
+FULLSCREEN mode=50031303 native_format=9 depth=32 slots=3 geometry=320x240 NES=256x240
+SCANLINE_BACKEND window=0 hardware=0 software=0 parity=0
+FRAME n=1800 cycles=53604902 core_hash=d396ab13 output_hash=489b901d cpu_ppu_us=6271
+FRAME n=2400 cycles=71473201 core_hash=d396ab13 output_hash=489b901d cpu_ppu_us=6164
+FULLSCREEN_END queued=2356 flips=2356 pending=-1 ack_wait_us=13904709 fault=0
+AUDIO_TASK queued=1341691 submitted=1341691 completed=1341691 highwater=7 error=0 stopped=1
+AUDIO_END samples=1341691 gaps=165
+PRESENT_OPTIONS window=0 scanlines=0 fps=1 optimised=1 neon_frames=2356
+STAGE closing frontend; requesting ARM return next
+ZZFCEUX END exit=0 frames=2520 elapsed_us=81506975 core_total_us=15213019 output_hash=489b901d
+DIRECT_END challenges=2356 verified_frames=44 copy_us=5203262
+PLAYER_PROFILE audio_prepare_us=963608 flip_drain_us=5518577 audio_wait_us=97240 audio_copy_us=672979 audio_send_us=0
+ARM_REQUEST_PROFILE frame_us=16602522 present_us=6482459
+PRESENT_PROFILE pre_us=1033605 request_us=7458106 post_us=36268176
+FRAME_TIMING stage=0 count=2460 mean_us=7457 max_us=63812 bins=0,2255,164,7,24,10
+FRAME_TIMING stage=1 count=2460 mean_us=2256 max_us=25415 bins=1476,944,30,5,5,0
+FRAME_TIMING stage=2 count=2460 mean_us=400 max_us=12781 bins=2421,38,1,0,0,0
+FRAME_TIMING stage=3 count=2296 mean_us=18375 max_us=1302677 bins=0,2204,8,1,42,41
+FRAME_TIMING stage=4 count=2460 mean_us=29851 max_us=1313368 bins=0,56,1911,313,89,91
+FRAME_TIMING stage=5 count=1146 mean_us=33321 max_us=772811 bins=0,6,904,62,105,69
+INPUT_PROFILE changes=20
+JOYSTICK_END polls=2520 active=0 last_type=30000000
+AUDIO_IO_PROFILE send_us=2858363 waitio_us=33673
+WAIT_PROFILE kind=0 calls=0 requested_us=0 actual_us=0 max_us=0
+WAIT_PROFILE kind=1 calls=12 requested_us=12000 actual_us=22188 max_us=7828
+WAIT_PROFILE kind=2 calls=0 requested_us=0 actual_us=0 max_us=0
+WAIT_PROFILE kind=3 calls=0 requested_us=0 actual_us=0 max_us=0
+WAIT_PROFILE kind=4 calls=722 requested_us=722000 actual_us=1280190 max_us=15002
+WAIT_PROFILE kind=5 calls=0 requested_us=0 actual_us=0 max_us=0
+PROFILE frames=2520 request_us=18707968 copy_us=0 colour_us=0 draw_us=45865065 waits=1091
+EXIT epilogue=52455431 cache_echoes=0 rounds=0
+CACHE original=08c50878 running=08c5187d restored=08c50878
+MMU_RESTORE phase=3 register_mismatches=00000000 cpsr_control=1d3 expected=1d3 ttbr=10234000 ccsidr=701fe019 witness_bad=0 mailbox_rounds=4881
+REGISTER n=0 original=08c50878 restored=08c50878
+REGISTER n=1 original=10334000 restored=10334000
+REGISTER n=2 original=02000000 restored=02000000
+REGISTER n=3 original=00000000 restored=00000000
+REGISTER n=4 original=00000001 restored=00000001
+REGISTER n=5 original=00000001 restored=00000001
+REGISTER n=6 original=600101d3 restored=600101d3
+REGISTER n=7 original=00000006 restored=00000006
+REGISTER n=8 original=00001000 restored=00001000
+REGISTER n=9 original=00098aa4 restored=00098aa4
+REGISTER n=10 original=44e048e0 restored=44e048e0
+REGISTER n=11 original=00000000 restored=00000000
+REGISTER n=12 original=00000001 restored=00000001
+REGISTER n=13 original=72360000 restored=72360000
+SCANLINE_BACKEND released: hardware=0
+LAUNCHER exit=0; owned memory released

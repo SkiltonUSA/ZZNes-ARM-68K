@@ -1,5 +1,22 @@
 # Changelog
 
+## 0.7.4 Beta — packaged release
+
+- Publish the matched, physically tested 0.7.4-dev launcher and player.
+- Include compact layouts, ROM Manager, temperature and fullscreen FPGA/windowed software scanlines.
+- Add a complete offline amipkg installer with MUI/Picasso96/AHI/ZZ9000 checks and automatic install-missing scanline tools.
+- Include a manual ZIP alternative, checksums and current feature/specification documentation.
+- Incorporate the development changes below; no additional FPS gain is claimed by packaging.
+
+## 0.7.4-dev — cartridge compatibility
+
+- Add mapper 78 with Holy Diver H/V and Cosmo Carrier single-screen wiring.
+- Add CNROM/mapper 3 with bus conflicts; recognize exact DiskDude legacy headers without changing ROM files.
+- Verify Holy Diver and Cybernoid gameplay, states, display switching and cleanup on the Amiga.
+- Include duplicate-scan progress and cancellation in the matched launcher/player build.
+- Import the complete pinned FCEUX source and mapper inventory for the staged full-feature port.
+  Imported boards and desktop tools are not automatically enabled.
+
 ## 0.7.3-dev — scalable launcher
 
 - Compact layout for smaller Workbench screens, with independently scrollable pages.

@@ -1,0 +1,37 @@
+[
+  {
+    "index": 16,
+    "name": "Rockman3.nes",
+    "operation": "remove text whitespace trailer in private test copy",
+    "returncode": 0,
+    "result": "PASS frames=3630 unique_sampled_frames=8 nonzero_samples=1911638 state_bytes=23705 deterministic_video_audio=1 jammed=0"
+  },
+  {
+    "index": 17,
+    "name": "Rockman4.nes",
+    "operation": "remove text whitespace trailer in private test copy",
+    "returncode": 0,
+    "result": "PASS frames=3630 unique_sampled_frames=9 nonzero_samples=1719503 state_bytes=31897 deterministic_video_audio=1 jammed=0"
+  },
+  {
+    "index": 18,
+    "name": "Rockman5.nes",
+    "operation": "remove text whitespace trailer in private test copy",
+    "returncode": 0,
+    "result": "PASS frames=3630 unique_sampled_frames=6 nonzero_samples=1811045 state_bytes=23705 deterministic_video_audio=1 jammed=0"
+  },
+  {
+    "index": 19,
+    "name": "Rockman7.nes",
+    "operation": "remove text whitespace trailer in private test copy",
+    "returncode": 0,
+    "result": "PASS frames=3630 unique_sampled_frames=34 nonzero_samples=1900356 state_bytes=31897 deterministic_video_audio=1 jammed=0"
+  },
+  {
+    "index": 23,
+    "name": "Lolo3.nes",
+    "operation": "zero MJR reserved bytes in private test copy",
+    "returncode": 0,
+    "result": "PASS frames=3630 unique_sampled_frames=15 nonzero_samples=1611042 state_bytes=23703 deterministic_video_audio=1 jammed=0"
+  }
+]

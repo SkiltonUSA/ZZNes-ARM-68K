@@ -16,6 +16,7 @@ def main():
  if m['console']=='ZZSNES':shutil.copytree(ROOT/'development/thin-scanlines-20261016/source',lib,dirs_exist_ok=True)
  shutil.copytree(ROOT/'development/optimisation-20261018/source',lib,dirs_exist_ok=True)
  shutil.copytree(ROOT/'development/scalable-launcher-20261019/source',lib,dirs_exist_ok=True)
+ shutil.copytree(ROOT/'development/mapper78-20261019/common',lib,dirs_exist_ok=True)
  p=lib/'library_mui.h';p.write_text(p.read_text().replace('0.7.1 Beta','0.7.2-dev').replace('0.6.1 Beta','0.6.2-dev'))
  runtime=json.loads(os.environ.get('BETA_CONTAINER_COMMAND','["podman","--connection","nuflix-converter-root","run","--rm","--platform","linux/amd64"]'))
  flags=[];target=out/m['console']

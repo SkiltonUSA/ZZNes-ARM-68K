@@ -1,0 +1,132 @@
+{
+  "0": {
+    "status": "Gameplay",
+    "note": "Mario Bros platform phase",
+    "image": "00/amiga-b.png"
+  },
+  "1": {
+    "status": "Gameplay",
+    "note": "First stage entered from world map",
+    "image": "01/follow-extended-c.png"
+  },
+  "2": {
+    "status": "Diagnostic",
+    "note": "Controller test pattern",
+    "image": "02/amiga-b.png"
+  },
+  "3": {
+    "status": "Menu / intro only",
+    "note": "Briefing, take-off sequence and weapon selection; flight not confirmed",
+    "image": "03/follow-deep-c.png"
+  },
+  "4": {
+    "status": "Gameplay",
+    "note": "Act 1-1",
+    "image": "04/amiga-b.png"
+  },
+  "5": {
+    "status": "Menu only",
+    "note": "Team, colour and opponent selection; match not confirmed",
+    "image": "05/follow-deep-c.png"
+  },
+  "6": {
+    "status": "Intro only",
+    "note": "Name entry and animated castle sequence; native run reached gameplay",
+    "image": "06/follow-deep-c.png"
+  },
+  "7": {
+    "status": "Gameplay",
+    "note": "Stage 1",
+    "image": "07/amiga-b.png"
+  },
+  "8": {
+    "status": "Intro only",
+    "note": "Player selection/story dialogue, then Neocity title; gameplay unconfirmed",
+    "image": "08/follow-deep-a.png"
+  },
+  "9": {
+    "status": "Gameplay",
+    "note": "Greenhouse stage",
+    "image": "09/amiga-b.png"
+  },
+  "10": {
+    "status": "Gameplay",
+    "note": "Street stage",
+    "image": "10/amiga-b.png"
+  },
+  "11": {
+    "status": "Gameplay",
+    "note": "Graveyard stage after longer intro",
+    "image": "11/follow-extended-b.png"
+  },
+  "12": {
+    "status": "Intro only",
+    "note": "Animated sewer/city introduction; controllable level not confirmed on hardware",
+    "image": "12/follow-deep-b.png"
+  },
+  "13": {
+    "status": "Title only (this audit)",
+    "note": "Push Start title; gameplay verified in earlier mapper-78 test of same player",
+    "image": "13/follow-deep-b.png"
+  },
+  "14": {
+    "status": "Gameplay",
+    "note": "Warehouse stage with enemies",
+    "image": "14/follow-extended-c.png"
+  },
+  "15": {
+    "status": "Gameplay",
+    "note": "Stage entered, character jumping",
+    "image": "15/follow-extended-c.png"
+  },
+  "16": {
+    "status": "Rejected",
+    "note": "524,304-byte text-whitespace trailer beyond declared cartridge data"
+  },
+  "17": {
+    "status": "Rejected",
+    "note": "524,304-byte text-whitespace trailer beyond declared cartridge data"
+  },
+  "18": {
+    "status": "Rejected",
+    "note": "524,304-byte text-whitespace trailer beyond declared cartridge data"
+  },
+  "19": {
+    "status": "Rejected",
+    "note": "524,304-byte text-whitespace trailer beyond declared cartridge data"
+  },
+  "23": {
+    "status": "Rejected",
+    "note": "MJR tag in reserved header bytes 13\u201315"
+  },
+  "20": {
+    "status": "Menu only",
+    "note": "Stage/round/music selection; native run reached gameplay",
+    "image": "20/follow-extended-d.png"
+  },
+  "21": {
+    "status": "Gameplay",
+    "note": "Puzzle room reached after opening sequence",
+    "image": "21/follow-deep-b.png"
+  },
+  "22": {
+    "status": "Overworld only",
+    "note": "Overworld movement/castle sequence; puzzle room not verified",
+    "image": "22/follow-deep-c.png"
+  },
+  "24": {
+    "status": "Gameplay",
+    "note": "Cybernoid level with enemies and projectiles",
+    "image": "24/amiga-b.png"
+  },
+  "25": {
+    "status": "Gameplay",
+    "note": "Earthworm Jim stage",
+    "image": "25/amiga-b.png"
+  },
+  "26": {
+    "status": "Gameplay",
+    "note": "Beach stage with jeep",
+    "image": "26/amiga-b.png"
+  }
+}

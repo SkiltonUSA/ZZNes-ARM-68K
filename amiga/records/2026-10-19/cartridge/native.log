@@ -1,0 +1,5 @@
+PASS mapper78 Holy Diver: all 256 banks/mirror values, fixed bank, bus conflicts and state restore
+PASS mapper78 Cosmo Carrier: all 256 banks/mirror values, fixed bank, bus conflicts and state restore
+PASS CNROM: CHR banks, bus conflict, fixed mirroring, state, DiskDude recognition and unmodified ROM
+PASS fine scroll: 69 one-pixel transitions, 10 eight-phase wraps
+PASS fine scroll: 69 one-pixel transitions, 10 eight-phase wraps

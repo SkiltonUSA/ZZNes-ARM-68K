@@ -337,12 +337,12 @@ int ff_window(volatile uint8_t *base,const struct ad_io *io,int connected){
 #ifdef NES_PLAYER
  fc_pal=fc_rom_pal(rom,size,rom_path?cartridge_name:NULL);fc_frame_us=fc_period_us(fc_pal);
  printf("REGION %s period_us=%u\n",fc_pal?"PAL":"NTSC",fc_frame_us);
- {int id=nes_cartridge(rom,size);if(id<0){puts("Unsupported cartridge: require iNES mapper 0/1/2/4/5/90, no battery/trainer/four-screen; see ReadMe");goto done;}printf("CARTRIDGE mapper=%d PRG=%u CHR=%u battery=%u\n",id,rom[4]*16384u,rom[5]*8192u,(ULONG)!!(rom[6]&2));}
+ {int id=nes_cartridge(rom,size);if(id<0){puts("Unsupported cartridge: require iNES mapper 0/1/2/3/4/5/78/90, no battery/trainer; four-screen flag only for mapper 78");goto done;}printf("CARTRIDGE mapper=%d PRG=%u CHR=%u battery=%u\n",id,rom[4]*16384u,rom[5]*8192u,(ULONG)!!(rom[6]&2));}
 #endif
  fc_snapshot_init(rom,size);
  memcpy((void *)(base+NES_ROM),rom,size);io->push(base+NES_ROM,size,NULL);io->barrier(NULL);
  puts("STAGE ROM published; initializing core");fflush(stdout);
- if(!request(NES_INIT,size)){puts("FCEUX core rejected cartridge: mapper 0/1/2/4/5/90");goto done;}
+ if(!request(NES_INIT,size)){puts("FCEUX core rejected cartridge initialization");goto done;}
 #ifdef NES_PLAYER
  if(!player_load_save())goto done;
  if(fc_resume&&fc_state_transaction(1)!=1)goto done;

@@ -1,0 +1,37 @@
+mkdir -p .context
+c++ -std=c++14 -O2 -g -fsanitize=address,undefined -Idevelopment/optimisation-20261018/player -Idevelopment/borders-20261016/player -Idevelopment/beta-20261015/build-inputs/player tests/amiga/emulator/optimisation.cpp -o .context/test-optimisation-pixels
+.context/test-optimisation-pixels
+PASS 1658880 sampled output pixels: sharp/smooth, all options, both byte orders, masks, borders and guards
+cc -O2 -g -fsanitize=address,undefined -Idevelopment/optimisation-20261018/source -Idevelopment/borders-20261016/source tests/amiga/emulator/optimisation_library.c -o .context/test-optimisation-library
+.context/test-optimisation-library
+PASS 20000 ROMs: growth, duplicate index, sort/search/filter, rename, persistence, deletion and allocation-failure recovery (0.127s)
+PASS strict numeric/hex fields, missing/extra tokens, whitespace and allocation fallback
+cc -O2 -g -fsanitize=address,undefined -Idevelopment/optimisation-20261018/source -Idevelopment/borders-20261016/source tests/amiga/emulator/legacy_model.c -o .context/test-optimisation-legacy
+.context/test-optimisation-legacy
+PASS v1 migration/v2 round-trip, dynamic library growth, titles, artwork links, search/filter/order, history overflow, hostile paths, malformed preferences
+CURRENT_ARM_DIR=.context/optimisation-build/player /Users/dskilton/conductor/workspaces/sixies_development/port-louis/.tools/dosbox-model-venv/bin/python tests/amiga/emulator/check_current_arm.py
+PASS ZZNES 0x12000040 format 3 view 16 baseline pixels, all scanlines, NEON/fallback, SIMD restoration, cancellation
+PASS ZZNES 0x12000040 format 4 view 17 baseline pixels, all scanlines, NEON/fallback, SIMD restoration, cancellation
+PASS ZZNES 0x12000040 format 3 view 0 baseline pixels, all scanlines, NEON/fallback, SIMD restoration, cancellation
+PASS ZZNES 0x12000040 format 4 view 80 baseline pixels, all scanlines, NEON/fallback, SIMD restoration, cancellation
+NEON row calls: 2640
+PASS ZZNES 0x150020c0 format 3 view 16 baseline pixels, all scanlines, NEON/fallback, SIMD restoration, cancellation
+PASS ZZNES 0x150020c0 format 4 view 17 baseline pixels, all scanlines, NEON/fallback, SIMD restoration, cancellation
+PASS ZZNES 0x150020c0 format 3 view 0 baseline pixels, all scanlines, NEON/fallback, SIMD restoration, cancellation
+PASS ZZNES 0x150020c0 format 4 view 80 baseline pixels, all scanlines, NEON/fallback, SIMD restoration, cancellation
+NEON row calls: 2640
+CURRENT_ARM_DIR=.context/optimisation-build/player /Users/dskilton/conductor/workspaces/sixies_development/port-louis/.tools/dosbox-model-venv/bin/python tests/amiga/emulator/check_smooth_arm.py
+PASS smooth A9 pixels, guard bytes, revoked mappings and four scanline modes 0x12000040 3 0
+PASS smooth A9 pixels, guard bytes, revoked mappings and four scanline modes 0x12000040 3 16
+PASS smooth A9 pixels, guard bytes, revoked mappings and four scanline modes 0x12000040 4 17
+PASS smooth A9 pixels, guard bytes, revoked mappings and four scanline modes 0x12000040 3 80
+PASS smooth A9 pixels, guard bytes, revoked mappings and four scanline modes 0x12000040 4 91
+PASS smooth A9 pixels, guard bytes, revoked mappings and four scanline modes 0x12000040 4 161
+PASS NEON all weights, short/tail lengths, guards and AAPCS callee-saved D8-D15 0x12000040
+PASS smooth A9 pixels, guard bytes, revoked mappings and four scanline modes 0x150020c0 3 0
+PASS smooth A9 pixels, guard bytes, revoked mappings and four scanline modes 0x150020c0 3 16
+PASS smooth A9 pixels, guard bytes, revoked mappings and four scanline modes 0x150020c0 4 17
+PASS smooth A9 pixels, guard bytes, revoked mappings and four scanline modes 0x150020c0 3 80
+PASS smooth A9 pixels, guard bytes, revoked mappings and four scanline modes 0x150020c0 4 91
+PASS smooth A9 pixels, guard bytes, revoked mappings and four scanline modes 0x150020c0 4 161
+PASS NEON all weights, short/tail lengths, guards and AAPCS callee-saved D8-D15 0x150020c0

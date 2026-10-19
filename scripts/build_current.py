@@ -12,7 +12,7 @@ def main():
  if a.optimisation:
   if not a.arm:p.error('optimisation candidate requires --arm')
   out=ROOT/'.context/optimisation-build';stage=out/'player';lib=out/'library'
- if a.optimisation:m['version']='0.7.2-dev'
+ if a.optimisation:m['version']='0.7.4-dev'
  shutil.copytree(snap/'build-inputs/player',stage,dirs_exist_ok=True);library_snap=ROOT/m['library_snapshot_dir']
  shutil.copytree(library_snap/'build-inputs',lib,dirs_exist_ok=True)
  for header in (library_snap/'source').glob('*.h'):shutil.copy2(header,lib/header.name)
@@ -25,6 +25,8 @@ def main():
   if (overlay/'source').exists():shutil.copytree(overlay/'source',lib,dirs_exist_ok=True)
   if (overlay/'host').exists():shutil.copytree(overlay/'host',stage,dirs_exist_ok=True)
   shutil.copytree(ROOT/'development/scalable-launcher-20261019/source',lib,dirs_exist_ok=True)
+  mapper=ROOT/'development/mapper78-20261019'
+  for target in [stage,lib]:shutil.copytree(mapper/'common',target,dirs_exist_ok=True)
   header=lib/'library_mui.h';header.write_text(header.read_text().replace('0.7.1 Beta','0.7.2-dev'))
  shutil.copy2(library_snap/'source/icon.c',lib/'icon.c')
  (lib/'icon.c').write_text((lib/'icon.c').read_text().replace('DOSBox icon',m['console']+' icon'))
@@ -44,6 +46,7 @@ def main():
    flags+=['-I'+str(d)for d in [stage,core,*[source/'amiga'/d for d in ['fceux_bench','mesen_nes','mesen_bench','arm_debug','arm_debug/zz9000']]]]
   for i,relpath in enumerate(m['arm_sources']):
    src=ROOT/relpath
+   if a.optimisation and (mapper/'core'/src.name).is_file():src=mapper/'core'/src.name
    if src.parent==snap/'build-inputs/player':src=stage/src.name
    obj=stage/f'{i}.o';objects.append(obj);cpp=src.suffix=='.cpp';cc=('arm-none-eabi-g++'if cpp else'arm-none-eabi-gcc')if snes else os.environ.get('CLANG','clang')
    args=flags+(['-std=c++14','-fno-exceptions','-fno-rtti']+([]if snes else['-nostdinc++'])if cpp else[])

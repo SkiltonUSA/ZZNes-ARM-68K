@@ -1,3 +1,40 @@
+## Whole ZZNES ROM directory audit — 19 October 2026
+
+All 27 files in SD032G:Emulator/ZZNES/ROMs inventoried, source-copy MD5 matched
+and launched on physical hardware with installed 0.7.4-dev player. 22 loaded:
+13 games reached gameplay, one diagnostic ran, eight games reached only menus,
+introductions or overworld in this audit. Do not call all 22 gameplay-verified.
+Five originals rejected: Rockman3/4/5/7 each have a 524,304-byte whitespace
+trailer; Lolo3 has MJR in reserved header bytes. Mac-only normalized copies
+passed native run/state replay, but were not installed or hardware-tested.
+All original attempts restored registers/cache witness and released owned RAM.
+Final check: all 27 ROM MD5s and both installed executables unchanged; Core1
+free. No ROM, save, settings or executable changes. See docs/rom-validation-20261019.md
+and private .context/amiga/nes-validation-1019 receipts. No release/GitHub push.
+
+## Cartridge compatibility and full-FCEUX staging — 19 October 2026
+
+Installed matched 0.7.4-dev ZZNES/ZZFceux-ui with checksums; rollback copies are
+in the installed drawer's Rollback-mapper1019. Library.cfg was byte-identical
+through deployment. The launcher is reopened; no Core1 owner remains after tests.
+
+Mapper 3/CNROM and mapper 78/Holy Diver wiring now run the supplied games.
+Exact DiskDude header recognition occurs in memory only. ROMs were not rewritten.
+Native bank/bus/mirror/state tests, scrolling and relocated ARM presenter checks
+passed. Both physical games reached gameplay and passed state, screenshot,
+window/fullscreen and cleanup checks. Audio gaps are recorded, not hidden;
+these runs are not performance measurements. A final 120-frame installed run
+passed. See cartridge-compatibility-20261019.md and 19 October records.
+
+The complete pinned FCEUX source is imported at development/fceux-full/vendor.
+It has 219 iNES mapper registrations; 156/162 board files compile in the initial
+ARM audit. This is source readiness, not full mapper or feature support.
+Current executable gate: 0/1/2/3/4/5/78/90; still no battery, trainer or NES2.
+Follow docs/fceux-integration.md for the accepted full-feature staged plan.
+Do not enable the rest without metadata, allocation, persistence and state work.
+Tagged releases and package ZIPs remain unchanged; the new matched pair is in
+artifacts/development/cartridge-20261019. Earlier 0.7.3-dev packages are older.
+
 ## FPGA fullscreen / Soft window scanlines — 18 October 2026 UTC
 
 Current installed development players use Xanxi FPGA controls in fullscreen,
@@ -429,3 +466,26 @@ by first-open clamp and retested larger-to-smaller on both launchers.
 Sources: development/scalable-launcher-20261019. Artifacts, screenshots,
 layout logs and complete development ZIP: artifacts/development/scalable-launcher-20261019.
 Published beta tags unchanged. See docs/scalable-launcher.md.
+
+
+## Duplicate-scan progress — 19 October 2026
+
+Installed launcher-only follow-up in SD032G:Emulator/ZZNES; same development
+version. Source overlay now includes library_manager.h. Rollback-scan1019 holds
+previous executable/settings. Live Library.cfg preserved; launchers reopened.
+Progress panel 310x122 passed a compact 640x480 budget test on the current
+Workbench, filename-before-read, cancellation/restart and cleanup. SNES ZIPs
+read successfully; NES probe exercised unreadable handling. No actual mode change
+or game execution. See artifacts/development/duplicate-splash-20261019.
+SHA256 ae705ec668c54cded3d575e38e9c91f85660aa0066536874c9241d60a8aa93d1; 256384 bytes. Published packages unchanged.
+
+
+## 0.7.4 Beta distribution — 19 October 2026
+
+Packaged the recorded 0.7.4-dev executables without changes, with the full offline
+amipkg installer and manual ZIP. README/features/specifications and user guide
+now describe the current build. Dependency helper checks MUI/P96/AHI/ZZ9000 and
+closed launcher/Core1 ownership; no automatic system-library or firmware changes.
+Signed archive/member/executable checks passed; see docs/release-validation.md.
+No hardware install or launch was performed during this packaging task. Existing
+installed state is unchanged. Source and release assets are prepared for GitHub.

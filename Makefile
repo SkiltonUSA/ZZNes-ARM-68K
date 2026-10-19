@@ -95,3 +95,9 @@ test-launcher-layout:
 	mkdir -p .context/tests
 	cc -std=c99 -Wall -Wextra -Werror -Wno-unused-variable tests/launcher_layout.c -o .context/tests/launcher-layout
 	.context/tests/launcher-layout
+
+.PHONY: test-mapper78 verify-fceux-full
+test-mapper78:
+	$(PYTHON) tests/amiga/emulator/test_mapper78.py
+verify-fceux-full:
+	$(PYTHON) scripts/prepare_fceux_full.py --verify
