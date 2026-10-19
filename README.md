@@ -69,6 +69,8 @@ adds missing Xanxi scanline tools. Existing settings, ROMs and saves are preserv
 
 ## Scanlines
 
+**Soft scanlines and fullscreen are enabled by default.**
+
 Fullscreen uses **[Xanxi’s FPGA scanline interface and tools](https://github.com/Xanxi-Amiga/zz9000-scanlines)**;
 a Workbench window uses **our ARM Soft software routine**, shared with ZZDosBox.
 The effects do not run together. **F7** cycles Off → Soft → Gradient → Classic
