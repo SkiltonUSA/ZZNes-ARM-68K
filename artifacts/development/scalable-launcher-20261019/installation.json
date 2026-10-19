@@ -1,0 +1,13 @@
+{
+  "version": "0.7.3-dev",
+  "launcher_bytes": 253608,
+  "launcher_sha256": "6d41231b310aab9ca645ba77a8687a862adf3bd53ee16d5ea7acb9f137f5f6c6",
+  "installed_md5": "aa042a394400135ec02908ae6bbc6d1a",
+  "library_before_sha256": "67979e91de1396d1ddf2b2bc80db2b17067c176276d0397989c45179edaaa91b",
+  "library_after_sha256": "67979e91de1396d1ddf2b2bc80db2b17067c176276d0397989c45179edaaa91b",
+  "library_unchanged": true,
+  "players_replaced": false,
+  "screen_mode_changed": false,
+  "rollback_created": true,
+  "launcher_reopened": true
+}

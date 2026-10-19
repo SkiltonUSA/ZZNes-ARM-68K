@@ -32,3 +32,7 @@ payload remains from the original snapshot. Run `make test-zip` after archive ch
 
 Current ARM presentation overlays and packed image are in the snapshot player/
 directory. Run make test-border and make test-current after border changes.
+
+Latest development launcher overlay: `development/scalable-launcher-20261019/source`.
+Use `make launcher` and `make test-launcher-layout`; `--probe` builds an isolated
+read-only MUI check without deployment. Keep historical beta snapshots unchanged.

@@ -89,3 +89,9 @@ test-rom-manager:
 	.context/test-rom-manager
 	$(CC) -O2 -g -fsanitize=address,undefined -Itests/amiga/emulator/mock -Idevelopment/borders-20261016/source tests/amiga/emulator/scan.c -o .context/test-rom-scan
 	.context/test-rom-scan
+
+.PHONY: test-launcher-layout
+test-launcher-layout:
+	mkdir -p .context/tests
+	cc -std=c99 -Wall -Wextra -Werror -Wno-unused-variable tests/launcher_layout.c -o .context/tests/launcher-layout
+	.context/tests/launcher-layout

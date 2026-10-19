@@ -412,3 +412,20 @@ The amipkg package builder bundles Xanxi tools and automatically runs the
 install-missing helper. Physical isolated amipkg pilot passed with the local
 0.7.11-zztest1 recipe-origin fix; stock 0.7.11 fails custom-repo recipes. See
 docs/package-manager.md. No public feed or new tagged release was created.
+
+
+## Scalable launcher — 19 October 2026
+
+Installed ZZNES 0.7.3-dev, 253608 bytes, SHA256
+`6d41231b310aab9ca645ba77a8687a862adf3bd53ee16d5ea7acb9f137f5f6c6`. Previous launcher and Library.cfg retained in
+Rollback-layout-1019 inside the existing emulator drawer. Config checksums match
+before/after replacement and startup. Players, ROMs, saves and firmware unchanged.
+Launcher reopened; no Core1 player active.
+
+All seven pages, scroll bounds, loading cards and actual window resizes passed
+with 640×480 / 800×600 / 1024×768 budgets on the existing physical desktop.
+No actual Workbench resolution change. Initial remembered-size regression fixed
+by first-open clamp and retested larger-to-smaller on both launchers.
+Sources: development/scalable-launcher-20261019. Artifacts, screenshots,
+layout logs and complete development ZIP: artifacts/development/scalable-launcher-20261019.
+Published beta tags unchanged. See docs/scalable-launcher.md.
