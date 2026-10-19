@@ -87,6 +87,16 @@ These earlier gameplay captures show the **software** effect:
 | --- | --- |
 | ![Contra with Soft software scanlines](docs/screenshots/scanlines/nes-contra.png) | ![Asterix with Soft software scanlines](docs/screenshots/scanlines/nes-asterix.png) |
 
+## More games
+
+Captured on the A4000TX/ZZ9000 during compatibility testing.
+
+| Holy Diver | Cybernoid |
+| --- | --- |
+| ![Holy Diver gameplay](docs/screenshots/games/holy-diver.png) | ![Cybernoid gameplay](docs/screenshots/games/cybernoid.png) |
+| **Rockman** | **Jackal** |
+| ![Rockman gameplay](docs/screenshots/games/rockman.png) | ![Jackal gameplay](docs/screenshots/games/jackal.png) |
+
 ## Performance
 
 | Game / emulator | Measured steady emulation FPS |
