@@ -122,7 +122,7 @@ Records: `../records/2026-10-09/mesen-nes/`.
 
 ## Interactive acceptance and installed launcher
 
-The owner confirmed the blue background, orange sprite and arrow-key movement
+The user confirmed the blue background, orange sprite and arrow-key movement
 on the physical monitor. A **1,104-frame, 114.369-second** interactive run then
 exited on injected Q before its 1,200-frame limit. All published-frame checks
 passed; RET1, register/cache restoration and allocation release passed. Roadie
@@ -221,7 +221,7 @@ padding/guard bytes and mapping revocation. Models do not establish physical
 MMU/cache behavior. Required SDK/MCP regressions and ARM/68k builds passed.
 
 Physical direct tests: six frames, then 120 frames, both clean. No screenshot
-capture was used. Pixel memory was validated; owner confirmation of this new
+capture was used. Pixel memory was validated; user confirmation of this new
 path's on-monitor appearance and extended interactive stability remains pending.
 The earlier restart's cause remains unresolved. Temporary candidate:
 `RAM:ZZNesPerf/Direct`, 200,828 bytes, MD5
@@ -318,7 +318,7 @@ execution still exceeds the 16.64 ms NTSC frame budget. No sound or game-FPS
 claim follows from this result. ACK measures firmware flip commitment; monitor
 appearance and interaction are separate acceptance checks.
 
-The owner subsequently confirmed the fullscreen picture and arrow-key movement.
+The user subsequently confirmed the fullscreen picture and arrow-key movement.
 That interactive session completed **2,262 frames / 74.419783 s (30.40 fps)**,
 2,262 acknowledged flips and 38 full NES-pixel readbacks, then exited cleanly.
 Changed frame hashes confirm the controller affected the rendered image. This

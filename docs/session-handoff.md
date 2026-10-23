@@ -16,7 +16,7 @@ and private .context/amiga/nes-validation-1019 receipts. No release/GitHub push.
 
 Installed matched 0.7.4-dev ZZNES/ZZFceux-ui with checksums; rollback copies are
 in the installed drawer's Rollback-mapper1019. Library.cfg was byte-identical
-through deployment. The launcher is reopened; no Core1 owner remains after tests.
+through deployment. The launcher is reopened; no Core1 task remains after tests.
 
 Mapper 3/CNROM and mapper 78/Holy Diver wiring now run the supplied games.
 Exact DiskDude header recognition occurs in memory only. ROMs were not rewritten.
@@ -47,7 +47,7 @@ No firmware, startup or saved Workbench mode changes.
 
 All three player host paths passed physical F7/pause/display-switch/readback/exit
 checks with register/cache restoration. Optical acceptance of the FPGA effect
-still requires the owner or an HDMI capture. ARM payloads are unchanged. Installer
+still requires the user or an HDMI capture. ARM payloads are unchanged. Installer
 fresh/repeat/partial/existing-tool/error checks passed. Preferences and games are
 untouched. Backups: Rollback-fpga-1018. Tagged releases remain unchanged.
 [Report](fpga-scanlines-20261018.md) and
@@ -218,7 +218,7 @@ optimisations and rejected alternatives. Native/model tests are not hardware pro
 
 The shared sidebar, mounted-drive discovery, asynchronous startup/loading panels,
 window/fullscreen switching, FPS and software scanlines are enabled. Preserve
-existing ROM paths and library/save files when upgrading. Only one Core1 owner;
+existing ROM paths and library/save files when upgrading. Only one Core1 task;
 retain runtime mapping, cache witnesses and reset-before-free on every path.
 
 Installed and checksum-verified on the A4000TX. Previous executables, icon and
@@ -240,7 +240,7 @@ and audio scheduling results. The installed Beta includes accepted cadence,
 PAL handling, current MUI tabs, simplified About credits and per-game saves.
 Both libraries were visually checked and closed cleanly after migration.
 Old Dev folders are recovery copies; final observed machine state was Workbench,
-with no library/player/Core1 owner. During backup review, three NES ROM filenames were corrected to retain `(E)`
+with no library/player/Core1 task. During backup review, three NES ROM filenames were corrected to retain `(E)`
 PAL tags; current settings and ROM bytes were preserved. No emulator was
 launched and no new FPS measurement was performed. See the PAL path-fix record.
 
@@ -257,7 +257,7 @@ Selected `--scheduling optimized-fast` build: 270,212 bytes, MD5
 `4398f22b8de76db50aad845a384b8749`. Installed separately as
 `SD032G:Dev/ZZFceuxPlayer/ZZFceux-fast`, with `Start-MarioBros-Fast`,
 `Start-SuperMarioWorld-Fast` and requester `Start-ZZFceux-Fast` scripts.
-Previous default and owner-accepted optimized binaries/launchers remain available.
+Previous default and user-accepted optimized binaries/launchers remain available.
 
 Specialised 32-bit palette stores reduce ARM presentation 3.32 -> 1.15 ms.
 No emulator CPU/PPU/APU, audio batching, allocation/MMU/cache or firmware change.
@@ -276,7 +276,7 @@ Do not launch `ZZFceux-pipeline*` or `ZZFceux-display-paced` as the selected bui
 The prior accepted live session also ended cleanly: 37,191 frames / 677.5 s,
 54.89 FPS, but inputs/pauses were not captured for a controlled comparison.
 
-SNES was added to `docs/nes-roadmap.md` at the owner's request: future core
+SNES was added to `docs/nes-roadmap.md` at the user's request: future core
 feasibility benchmark first; no SNES implementation or performance claim.
 Evidence: `amiga/records/2026-10-10/fceux-pipeline/`.
 
@@ -295,8 +295,8 @@ experiment record for failed variants, tests, timing limits and buffering cost.
 Installed as `SD032G:Dev/ZZFceuxPlayer/ZZFceux-optimized` with separate
 `Start-MarioBros-Optimized`, `Start-SuperMarioWorld-Optimized` and
 `Start-ZZFceux-Optimized` launchers. Original default and its launchers are
-unchanged. Mario Bros Optimized was left running for owner picture/sound testing;
-the owner subsequently confirmed both are good (option 1, 10 October). This
+unchanged. Mario Bros Optimized was left running for user picture/sound testing;
+the user subsequently confirmed both are good (option 1, 10 October). This
 does not establish SMW acceptance or measured latency. Q/Esc exits. Check live Core1 ownership and screens
 before launching any other ARM application. Roadie, bridge and xSysInfo remain
 present. Temporary transfer server was stopped. No global AHI/firmware changes.
@@ -314,13 +314,13 @@ The earlier handoff below is retained as history, not current live state.
 The latest working player is ZZFceux, installed at
 `SD032G:Dev/ZZFceuxPlayer/ZZFceux` (265,660 bytes, MD5
 `ce77a7b5fd6a453d50a9a697b86d3ae9`). Mario Bros was left running when this
-backup was requested. The owner confirmed picture and sound work. Backup work
+backup was requested. The user confirmed picture and sound work. Backup work
 does not connect to the Amiga or alter that state. Check actual current screens
 and Core1 ownership before any future launch; this note is a historical handoff.
 
 Launchers: `Start-MarioBros`, `Start-SuperMarioWorld`, `Start-ZZFceux`.
 Use `Execute` in Amiga Shell; the generic launcher opens the ROM requester.
-ROMs are the owner's private files under `SD032G:Dev/ZZNesPlayer/ROMs` and are
+ROMs are the user's private files under `SD032G:Dev/ZZNesPlayer/ROMs` and are
 not backed up here. Q/Escape exits, Return starts, arrows move, Z/X are A/B,
 left Shift selects, P pauses and M mutes.
 
@@ -342,7 +342,7 @@ its failed executable is excluded from this backup.
 Both final ZZFceux 300-frame tests passed sampled native comparisons, full
 first-frame readback, all-frame flips, completed audio, RET1/MMU/register/cache
 witness checks and memory release. Mario Bros: 44.19 FPS; mapper-90 Super Mario
-World: 44.30 FPS. Audio gap counters remain in the logs; owner acceptance covers
+World: 44.30 FPS. Audio gap counters remain in the logs; user acceptance covers
 Mario Bros' picture and sound, not general compatibility or full speed.
 
 Next work: profile host scheduling, flip pacing and audio delivery without
@@ -354,7 +354,7 @@ Final deployment: Fast launchers installed with executable/script protection;
 installed `ZZFceux-fast` MD5 checked as `4398f22b8de76db50aad845a384b8749`, and
 prior `ZZFceux-optimized` checked unchanged as `bf14d8e7dc20970d95fcd110cc9e6754`.
 Mario Bros Fast was left running; fullscreen was confirmed after launch. On
-10 October 2026, the owner selected option 1 and confirmed its picture and sound
+10 October 2026, the user selected option 1 and confirmed its picture and sound
 are good. Acceptance covers this Mario Bros build, not SMW, measured latency,
 exact A/V sync or 60 FPS. Q/Esc exits. Check live Core1 ownership before launching
 another application. The temporary transfer server was stopped.
@@ -364,7 +364,7 @@ another application. The temporary transfer server was stopped.
 
 Installed separately at `SD032G:Dev/ZZFceuxPlayer/Release-0.2.0-rc1/ZZFceux`,
 275,216 bytes, MD5 `f0b62ec828adf96d0b905f8b9f3e6560`. Workbench drawer/tool
-icons supply 65536-byte stack. Adjacent ROMs contains copies of the owner's
+icons supply 65536-byte stack. Adjacent ROMs contains copies of the user's
 two cartridges and an original Controller-Test.nes; no commercial ROM goes
 in the GitHub release. Old fast/optimized checksums unchanged.
 
@@ -379,7 +379,7 @@ AX cafe0000/cafe0001 AHI allocation/free verified without playback or preference
 changes. Player still AHI unit 0 / Paula; AX streaming needs a separate backend.
 No direct Core1-to-AX interface assumed. Workbench icon -> Start -> ASL requester
 -> original fixture -> fullscreen -> Q worked; requester Cancel also released
-Core1. Final state Workbench only, owner port absent, Roadie/bridge/xSysInfo
+Core1. Final state Workbench only, coordination port absent, Roadie/bridge/xSysInfo
 and ZZTemperature present. No crash/reboot.
 
 Evidence: `amiga/records/2026-10-10/fceux-release/`. Standalone native/ARM model
@@ -408,7 +408,7 @@ per ROM path, F5 save/F8 load, Resume slot into a fresh process, .bak retention.
 Physical original-cartridge save/load, overwrite, cold resume and paused
 save/load passed, with clean ARM/bitmap/AHI teardown. Cold resume also matches
 native cycles and pixel hashes at three sampled frames. Native replay includes
-both owner games (mapper0/90), exact PCM and bad-state rejection. A9 instruction
+both user games (mapper0/90), exact PCM and bad-state rejection. A9 instruction
 model and standalone native tests passed; independent build binaries identical.
 
 Display keeps 4:3 on either 4:3 or 16:9 monitors (monitor set to fill), masks

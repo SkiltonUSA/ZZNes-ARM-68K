@@ -9,7 +9,7 @@ Directory: `SD032G:Emulator/ZZNES/ROMs`. Installed player: ZZFceux-ui 0.7.4-dev,
 - 8 games: load, but only menus, introductions or overworld were observed; gameplay is not established by this audit.
 - 5 originals: rejected before gameplay.
 
-The audit took approximately one hour including inventory, native checks, physical runs and review. Final checks confirmed all 27 ROM MD5s and both installed executable MD5s unchanged, and no Core1 owner remaining.
+The audit took approximately one hour including inventory, native checks, physical runs and review. Final checks confirmed all 27 ROM MD5s and both installed executable MD5s unchanged, and no Core1 task remaining.
 
 ## Scope and method
 

@@ -38,12 +38,12 @@ FCEUX with the existing Xanxi-style fullscreen buffer flipping, controls and
 AHI frontend, then measure displayed frames and listen for gaps on hardware.
 No NEON, SDL or firmware performance change produced these results: the major
 change is the lighter FCEUX CPU/PPU/APU model and settings. Its compatibility
-and sound-quality tradeoffs need owner testing before promotion.
+and sound-quality tradeoffs need user testing before promotion.
 
 Installed separately: `SD032G:Dev/FceuxBench/ZZFceuxBench`, 186,344 bytes,
 MD5 `b3562f5e0f3ec45ddb84cb7a11c1ddc4`. Existing ZZNes 0.3.2-dev remains
 unchanged, MD5 `d54d086434df49e7f5ece528316a6f29`.
-Left Workbench idle; ROADIE and AMIGABRIDGE alive, no Core1 owner.
+Left Workbench idle; ROADIE and AMIGABRIDGE alive, no Core1 task.
 Evidence: [hardware logs and build provenance](../records/2026-10-09/fceux-bench/).
 
 ## Scope

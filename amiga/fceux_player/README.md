@@ -94,7 +94,7 @@ separate commands, scheduling, audio batching and ownership/cache safeguards.
 Build with `--scheduling optimized-fast`. Candidate: **270,212 bytes**, MD5
 `4398f22b8de76db50aad845a384b8749`. Separate Shell launchers are
 `Start-MarioBros-Fast`, `Start-SuperMarioWorld-Fast`, `Start-ZZFceux-Fast` under
-`SD032G:Dev/ZZFceuxPlayer`; invoke with `Execute`. On 10 October 2026, the owner confirmed option 1: Mario Bros Fast
+`SD032G:Dev/ZZFceuxPlayer`; invoke with `Execute`. On 10 October 2026, the user confirmed option 1: Mario Bros Fast
 picture and sound are good. This acceptance applies to the binary above; it
 does not establish SMW acceptance, measured latency, exact A/V sync or 60 FPS.
 
@@ -136,7 +136,7 @@ the app supplies 32 kHz signed 16-bit mono to AHI. This is not ZZ9000AX playback
 Both ROMs passed six sampled native frame/cycle comparisons, all-frame flip
 checks, first-frame readback and RET1/MMU/register/cache-witness cleanup.
 A separate 432-frame interactive test exercised Start, pause/resume, M and Q;
-all 230,003 samples completed and Workbench returned cleanly. The owner then
+all 230,003 samples completed and Workbench returned cleanly. The user then
 confirmed that the optimised Mario Bros picture and sound are good. Latency
 was not separately measured; this acceptance does not cover SMW. Gap-counter
 observations were 63/73, down from 299/299, but batching changes the number of
@@ -185,7 +185,7 @@ frame hashes/cycle counts, completed all 159,725 / 159,724 audio samples, and
 passed RET1, MMU/register restoration, cache witness and memory-release checks.
 There were **299 completed-predecessor audio gap observations** in each run.
 Zero AHI errors and completed samples do not establish smooth audible playback;
-**The owner subsequently confirmed that the picture and sound work** in the
+**The user subsequently confirmed that the picture and sound work** in the
 live Mario Bros test. The counter remains a diagnostic observation, not proof
 of an audible gap. This acceptance does not establish full-speed playback or
 compatibility of other games.
@@ -197,8 +197,8 @@ cleanup passed. Mute/unmute keys were dispatched, but audible muting was not
 independently confirmed. Live log reads failed while the app held the file
 open; final validation used the closed log. No crash/reboot occurred.
 
-Left Mario Bros running for owner testing, `ZZFceux fullscreen` plus Core1
-owner port verified. Q/Esc exits. Original ZZNes is unchanged.
+Left Mario Bros running for user testing, `ZZFceux fullscreen` plus Core1
+coordination port verified. Q/Esc exits. Original ZZNes is unchanged.
 Evidence: [logs, provenance and comparisons](../records/2026-10-09/fceux-player/).
 
 ### Frontend findings
@@ -226,7 +226,7 @@ Execute SD032G:Dev/ZZFceuxPlayer/Start-SuperMarioWorld
 Execute SD032G:Dev/ZZFceuxPlayer/Start-ZZFceux
 ```
 
-The last command opens a ROM requester. The first two use the owner's existing
+The last command opens a ROM requester. The first two use the user's existing
 ROMs in `SD032G:Dev/ZZNesPlayer/ROMs`; no commercial ROMs are distributed.
 Launchers set a 65536-byte Shell stack and save a log in the player directory.
 Close other Core1 applications before launch.
@@ -249,7 +249,7 @@ No battery saves, save states, rewind, joystick support or arbitrary mapper supp
 
 AHI uses **unit 0**, currently Paula on this A4000TX. The fitted ZZ9000AX is not
 selected by this player; no HDMI/AX audio or global AHI configuration changes.
-The AHI owner is the previously tested DOS Process, with an eight-block queue,
+The AHI process is the previously tested DOS Process, with an eight-block queue,
 three-frame prebuffer, ordered immutable PCM slots and explicit drain/cleanup.
 
 ## Presentation and validation

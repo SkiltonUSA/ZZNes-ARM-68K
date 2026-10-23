@@ -1,7 +1,7 @@
 # ZZPicoDriveMD on the A4000TX
 
 On 9 October 2026, we installed and tested Xanxi's unmodified ZZPicoDriveMD 1.1
-with the owner's Sonic the Hedgehog ROM. The owner confirmed working picture
+with the user's Sonic the Hedgehog ROM. The user confirmed working picture
 and music. The final AHI session was left running.
 
 ## Installation and provenance
@@ -23,7 +23,7 @@ This was an installation of upstream's executable, not our own emulator build.
 Run `Execute SD032G:Dev/ZZPicoDriveMD/Start-Sonic-ahi`, or use the executable's
 Workbench requester. Keyboard: arrows, keypad 1/2/3 for A/B/C, Return for Start,
 **Shift+Esc to exit**. Mouse click also exits. Only one Core1 application may run.
-Stock PicoDrive does not advertise our debugger's owner port; inspect screens
+Stock PicoDrive does not advertise our debugger's coordination port; inspect screens
 and current application state before another ARM launch.
 
 ## Measured results
@@ -50,7 +50,7 @@ roughly 60 emulated FPS does not mean 60 distinct frames reached the screen.
 ZZNes's reported test presented every emulated frame. Different console cores,
 games and drawing policies prevent treating this table as a controlled speedup
 ratio. Neither the FPS nor the audio diagnostic counters prove sustained
-whole-game stability. The owner's picture/music confirmation provides a separate
+whole-game stability. The user's picture/music confirmation provides a separate
 physical acceptance check.
 
 ## How it works and what we can learn
@@ -80,11 +80,11 @@ copied into Mesen; its historical non-commercial license requires separate revie
 The stock silence path leaves AHI open, returns zero samples and does not advance
 the PCM read position. ARM continues waiting for ring drainage and stalls after
 the initial frames. CLI audio choices are saved to `ZZPicoDrive.cfg`; our silence
-test therefore left `audio=2`, which the owner's next GUI launch inherited.
+test therefore left `audio=2`, which the user's next GUI launch inherited.
 
 We exited that blank session using Shift+Esc, saved the old config under
 `Logs/ZZPicoDrive.silence.cfg`, restored **`audio=0` (AHI)** and relaunched Sonic.
-The owner confirmed picture and music and reported that it was fast. The silence
+The user confirmed picture and music and reported that it was fast. The silence
 launcher now lives under `Logs/Start-Sonic-silence.diagnostic`; do not select
 Audio=None for normal play in this build. AHI and Paula scripts use absolute ROM
 paths. `ReadMe-Local-Tests.txt` records the workaround on the Amiga.

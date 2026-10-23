@@ -30,7 +30,7 @@ Physical joystick port 2 (lowlevel port 1): directions, red/fire=A,
 blue/second button=B; CD32 green=Select, play=Start. Keyboard remains usable.
 Unknown/mouse devices are ignored; no forced port type or hardware pokes.
 Joystick state is sampled after each flip drains, used on the following frame.
-Physical controller mapping still needs owner acceptance on this machine.
+Physical controller mapping still needs user acceptance on this machine.
 
 SUPPORT / LIMITATIONS
 NTSC iNES mapper 0 or 90, CHR ROM; no trainers, batteries or four-screen mode.

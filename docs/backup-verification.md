@@ -29,7 +29,7 @@ anything on the Amiga. Existing physical evidence is preserved separately.
 [Build/test logs](backup-checks/), [binary comparisons](backup-checks/binary-comparison.json)
 and [source provenance](backup-origin.json) preserve the details. Historical
 absolute paths in these logs are evidence, not required build configuration.
-The original build manifests precede final documentation/owner-acceptance edits;
+The original build manifests precede final documentation/user-acceptance edits;
 current standalone manifests and the repository snapshot record those later files.
 
 The backup includes current sources and selected earlier evidence, not the

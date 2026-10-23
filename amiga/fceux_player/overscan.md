@@ -14,7 +14,7 @@ remaining image, skip frames or stretch cropped content. The default hides
 8 pixels at either side and leaves top/bottom visible. The selected border
 fills the covered pixels and any widescreen side panels.
 
-## Discussion and reference images requested by the owner
+## Discussion and reference images requested by the user
 
 [SourMesen/Mesen-S issue #122](https://github.com/SourMesen/Mesen-S/issues/122)
 discusses cropping and a CRT shader's edge effect. SourMesen explains that an

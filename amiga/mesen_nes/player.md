@@ -119,14 +119,14 @@ Records: `../records/2026-10-09/mesen-player/`.
 - Physical Q exit: 433 frames, 433 flips and eight readbacks; exits before the
   1,200-frame limit, RET1/exit 0, complete MMU restoration. Workbench, Roadie
   and Amiga-Bridge remain available; Core1 ownership is released.
-- The owner missed the brief test; physical picture/speaker acceptance remains
+- The user missed the brief test; physical picture/speaker acceptance remains
   pending. No screenshot capture was used.
 
 The previous **30.40 FPS** accepted fullscreen preview was silent, NROM-only,
 and lacked APU timing/DMC/mapper work. It is not a like-for-like speed claim for
 this player. The new result prioritizes correct core behavior and features;
 it does **not** meet the approximately 60.10 FPS NTSC target. Compatibility,
-sustained play, ROM-requester UI and pause/mute still need owner acceptance.
+sustained play, ROM-requester UI and pause/mute still need user acceptance.
 
 ## Build and run
 
@@ -186,7 +186,7 @@ Records: `../records/2026-10-09/mesen-mapper90/`.
   and Amiga-Bridge remained available. No physical screenshot was captured.
 
 The approximately 60.10 FPS NTSC target remains unmet. The mapper update adds
-cartridge support, not a speed improvement. Owner subsequently confirmed the mapper 90 game works; detailed speaker-quality
+cartridge support, not a speed improvement. User subsequently confirmed the mapper 90 game works; detailed speaker-quality
 and sustained-play measurements remain unreported.
 
 Upstream: [Sour/Mesen](https://github.com/SourMesen/Mesen), commit
@@ -199,7 +199,7 @@ No commercial ROMs are distributed.
 
 ## Optimization pass (0.3.2-dev, 9 October 2026)
 
-Owner confirmed the mapper 90 game works and requested optimization. The first
+User confirmed the mapper 90 game works and requested optimization. The first
 change replaces the mixer's five-channel scan at every CPU timestamp with a
 bounded timestamp bitmap. Deltas are interleaved by timestamp for locality;
 events remain chronological, simultaneous channel changes use the same nonlinear
@@ -230,7 +230,7 @@ retains the existing pause/exit and bounded flip timeout paths. Additional
 host counters separate audio handling and explicit flip draining.
 
 The initial transfer was followed by a network outage before the launch command
-could be delivered. Owner reported responsive Workbench and running network
+could be delivered. User reported responsive Workbench and running network
 services. After reconnection, native checksum and Core1 ownership checks passed,
 and the scheduling candidate completed its physical tests. The outage cause is
 unknown; it is not evidence of a candidate execution failure.
@@ -274,7 +274,7 @@ These are bounded intro measurements, not whole-game compatibility/full-speed
 claims. There are still audio gaps (299 completed-previous-buffer observations
 in the 300-frame test); approximately 60.10 FPS remains the NTSC target.
 
-Owner confirms **ZZ9000AX is physically installed**. This build still opens
+User confirms **ZZ9000AX is physically installed**. This build still opens
 AHI unit 0, configured for Paula in the saved inventory. The Music Unit is
 configured for ZZ9000AX. Direct Core1-to-AX playback and an HDMI PCM service
 are not implemented or verified here. The pinned XX19c source has AX/I2S audio
@@ -314,7 +314,7 @@ not remove their underlying CPU cost or guarantee useful overlap. The unchanged
 ARM core averages about 31 ms, already above the approximately 16.64 ms NTSC
 budget. The ARM ELF is byte-identical to the previous build. Both runs matched
 sampled hashes/cycles, 300 flips and six readbacks. Gap observations are not
-hardware underruns or proof of audible quality. No owner picture/speaker
+hardware underruns or proof of audible quality. No user picture/speaker
 acceptance is claimed for this optional candidate.
 
 Additional physical checks:
@@ -328,7 +328,7 @@ Additional physical checks:
   intact witnesses, all flips acknowledged and Workbench/network restored.
 
 The first Exec-Task candidate was followed by **Guru Meditation**, requiring
-owner reboot. Recovered log stops during ARM clock calibration, before the audio
+user reboot. Recovered log stops during ARM clock calibration, before the audio
 startup message; exact cause remains unproven. Correction uses a DOS Process
 because AHI initialization may need DOS services. Passing tests establish the
 corrected candidate's tested behavior, not proof of the earlier fault's cause.
@@ -352,12 +352,12 @@ Temporary transfer server stopped; final hardware state is idle Workbench.
 
 ## Additional ROM check: Mario Bros — 9 October 2026
 
-Owner-supplied `011 Mario Bros.nes` (mapper 0, 16 KiB PRG / 8 KiB CHR) was
+User-supplied `011 Mario Bros.nes` (mapper 0, 16 KiB PRG / 8 KiB CHR) was
 installed unchanged under `SD032G:Dev/ZZNesPlayer/ROMs/`. Native MD5 matched
 `8d8e0b86dd870302bf4a994e76c55c83`. `Start-MarioBros` uses installed 0.3.2-dev.
 A 300-frame no-input startup run measured **23.7536 FPS**, mean core time
 **28.9605 ms/frame**. All 300 flips, six readbacks and teardown checks passed;
 159,692 audio samples submitted, 299 gap observations. This is a separate ROM
-workload, not an optimization result or full-speed claim. Owner subsequently confirmed picture, controls and sound all work during the
+workload, not an optimization result or full-speed claim. User subsequently confirmed picture, controls and sound all work during the
 interactive session. The timed benchmark itself did not test active gameplay.
 Evidence: `amiga/records/2026-10-09/mario-bros/`. ROM bytes are not committed.

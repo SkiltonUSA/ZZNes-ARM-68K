@@ -42,7 +42,7 @@ The original core vendors/pins and older rebuild tools remain in the repository;
 workspace scripts in the snapshot document how the later stages were generated
 and may still require the documented intermediate caches and toolchain.
 
-The owner’s installed location is `SD032G:Emulator/ZZNES`. The previous
+The user’s installed location is `SD032G:Emulator/ZZNES`. The previous
 `SD032G:Dev/` application drawers remain recovery copies. ROMs were renamed
 for short-name filesystem safety and personal configurations were migrated;
 those personal data files are excluded from Git. Three NES names were then

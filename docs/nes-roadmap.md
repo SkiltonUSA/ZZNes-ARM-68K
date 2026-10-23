@@ -4,7 +4,7 @@
 
 The 0.2.0-rc1 pass completed timing histograms, a rejected flip-only scheduling
 experiment, joystick input, Workbench ROM selection, four original compatibility
-fixtures and release packaging. Keep the owner-accepted fast build available.
+fixtures and release packaging. Keep the user-accepted fast build available.
 The candidate measured 55.47 FPS on a reproducible 1,800-frame Mario Start
 sequence and 54.26 FPS for 300 SMW startup frames; no new speed gain or 60 FPS
 claim. See [release findings](../amiga/records/2026-10-10/fceux-release/).
@@ -23,14 +23,14 @@ is pending. Broader mapper support remains a separate compatibility project.
 
 ## Future project: SNES on the ZZ9000 ARM
 
-Added at the owner's request on 10 October 2026. This is planned work, not
+Added at the user's request on 10 October 2026. This is planned work, not
 support included in the current emulator. ZZNes/ZZFceux currently runs NES only.
 
 1. Review a standalone SNES core. Mesen 2 supports SNES, but its SNES core is
    separate from the NES-only extraction used here. Consider integration cost
    and performance before selecting a core; do not promise full speed.
 2. Build a minimal Cortex-A9 benchmark with CPU, video and sound emulation,
-   using an original/homebrew fixture or an owner-supplied ROM. Compare hashes
+   using an original/homebrew fixture or a user-supplied ROM. Compare hashes
    and timing against native execution before physical Core1 testing.
 3. Decide feasibility using measured complete-frame costs. Start with ordinary
    cartridges; enhancement-chip support needs separate testing.

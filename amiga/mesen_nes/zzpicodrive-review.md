@@ -53,7 +53,7 @@ drawing. No PAN registers are changed. The regular frontend remains available.
 The subsequent **`--fullscreen` build** now uses the verified XX19c deferred-PAN
 interface, three frame slots in the actual OS screen bitmap, ACK-gated ownership
 and CPU work overlapping the vertical-blank wait. It passed physical flip,
-pixel-readback, teardown and owner picture/control checks. See the fullscreen
+pixel-readback, teardown and user picture/control checks. See the fullscreen
 milestone in [the implementation README](README.md). This is a separate path
 from the windowed experiment described above, with no new firmware or copied
 PicoDrive implementation.
