@@ -138,7 +138,8 @@ FCEUX is GPL-2.0-or-later. Component licences, source pins and notices are inclu
 
 ## Translation research
 
-[Experimental 32 MiB register-JIT cache](docs/jit-register-experiment.md):
-The earlier 8 MiB prototype was slower than the interpreter.
-More cache is not a speed claim.
-It remains separate from the released player.
+[Experimental register dispatch](docs/jit-register-experiment.md) removes the
+address lookup: 2.38% less core time than the previous translator in a matched
+Mario Bros. test. It remains separate from the release. Longer-run diagnostics and experimental
+audio handoff comparisons are recorded in the report; the earlier freeze remains
+unexplained.

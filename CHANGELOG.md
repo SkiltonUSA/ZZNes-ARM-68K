@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.8.2-dev — experimental register dispatch
+
+- Call ten generated register handlers through the original opcode switch; remove per-instruction classification and guest-address lookup.
+- Retain the requested 32 MiB executable reservation and 48 MiB owned runtime.
+- Add opt-in batch-ready audio notification and matched hardware/model evidence.
+- Keep releases unchanged; the earlier freeze is recorded and remains unexplained.
+- [Results and limitations](docs/jit-register-experiment.md).
+
 ## 0.7.4 Beta — packaged release
 
 - Publish the matched, physically tested 0.7.4-dev launcher and player.

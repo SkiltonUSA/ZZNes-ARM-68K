@@ -1,0 +1,59 @@
+{
+  "runs": [
+    {
+      "run": "nes-new-1",
+      "frames": 300,
+      "elapsed_us": 10665084,
+      "core_us": 1708072,
+      "hash": "3bd96c26",
+      "audio_gaps": 10
+    },
+    {
+      "run": "nes-new-2",
+      "frames": 300,
+      "elapsed_us": 10667467,
+      "core_us": 1707406,
+      "hash": "3bd96c26",
+      "audio_gaps": 10
+    },
+    {
+      "run": "nes-old-1",
+      "frames": 300,
+      "elapsed_us": 10678704,
+      "core_us": 1748960,
+      "hash": "3bd96c26",
+      "audio_gaps": 10
+    },
+    {
+      "run": "nes-old-2",
+      "frames": 300,
+      "elapsed_us": 10652582,
+      "core_us": 1749903,
+      "hash": "3bd96c26",
+      "audio_gaps": 14
+    },
+    {
+      "run": "nes-ref-1",
+      "frames": 300,
+      "elapsed_us": 10812632,
+      "core_us": 1713867,
+      "hash": "3bd96c26",
+      "audio_gaps": 9
+    },
+    {
+      "run": "nes-ref-2",
+      "frames": 300,
+      "elapsed_us": 10795340,
+      "core_us": 1717008,
+      "hash": "3bd96c26",
+      "audio_gaps": 10
+    }
+  ],
+  "mean_core_us": {
+    "ref": 1715437.5,
+    "old": 1749431.5,
+    "new": 1707739.0
+  },
+  "new_reduction_old_pct": 2.383202771871895,
+  "new_reduction_interpreter_pct": 0.44877764418698174
+}

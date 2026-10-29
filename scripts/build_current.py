@@ -7,7 +7,7 @@ from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 def run(a):subprocess.run(list(map(str,a)),cwd=ROOT,check=True)
 def main():
- p=argparse.ArgumentParser();p.add_argument('--jit-registers',action='store_true',help='Experimental register-only A9 translation; 32 MiB executable cache');p.add_argument('--arm',action='store_true');p.add_argument('--optimisation',action='store_true');a=p.parse_args()
+ p=argparse.ArgumentParser();p.add_argument('--audio-early',action='store_true',help='Experimental batch-ready AHI handoff before presentation');p.add_argument('--jit-registers',action='store_true',help='Experimental register-only A9 translation; 32 MiB executable cache');p.add_argument('--arm',action='store_true');p.add_argument('--optimisation',action='store_true');a=p.parse_args()
  m=json.loads((ROOT/'docs/current-build.json').read_text());snap=ROOT/m['snapshot_dir'];source=snap/'source';out=ROOT/'.context/current-build';stage=out/'player';lib=out/'library'
  if a.optimisation:
   if not a.arm:p.error('optimisation candidate requires --arm')
@@ -15,7 +15,10 @@ def main():
  if a.optimisation:m['version']='0.7.4-dev'
  if a.jit_registers:
   if not a.arm or not a.optimisation:p.error('JIT requires current ARM optimisation build')
-  out=ROOT/'.context/jit-registers32-build';stage=out/'player';lib=out/'library';m['version']='0.8.1-dev'
+  out=ROOT/'.context/jit-switch32-build';stage=out/'player';lib=out/'library';m['version']='0.8.2-dev'
+ if a.audio_early:
+  if not a.jit_registers:p.error('--audio-early requires the isolated register build')
+  out=out.with_name(out.name+'-audio');stage=out/'player';lib=out/'library'
  shutil.copytree(snap/'build-inputs/player',stage,dirs_exist_ok=True);library_snap=ROOT/m['library_snapshot_dir']
  shutil.copytree(library_snap/'build-inputs',lib,dirs_exist_ok=True)
  for header in (library_snap/'source').glob('*.h'):shutil.copy2(header,lib/header.name)
@@ -46,7 +49,7 @@ def main():
    shutil.copytree(mapper/'common',out/'common',dirs_exist_ok=True)
   if a.jit_registers:
    from prepare_console_jit import prepare
-   jit_begin=prepare(core,stage,snes)
+   jit_begin=prepare(core,stage,snes,dispatch=True)
   if snes:
    prefix=json.loads(os.environ.get('ARM_BUILD_COMMAND','[]'))
    flags=m['arm_flags'];flags=[f for f in flags if not f.startswith('-I')];flags=[inside(source/'amiga/pocketsnes/libc_config.h')if f=='/work/amiga/pocketsnes/libc_config.h'else f for f in flags]
@@ -81,6 +84,7 @@ def main():
  if a.jit_registers:block='0x6000000' if snes else '0x3000000'
  defs=['ZZ_HEADLESS_BENCH','ZZ_RELEASE','ZZ_NES','ZZ_BLOCK_SIZE='+block,'ZZ_CONTROL='+control,'ZZ_APP_NAME="'+m['console']+'"','ZZ_APP_VERSION="'+m['version']+'"','ZZ_MIN_STACK=65536','MB_ALLOCATION='+block+'u','MB_MMU','MB_DCACHE','ZZ_HEADLESS_MMU','ZZ_HEADLESS_ICACHE','NES_PLAYER','NES_DIRECT','NES_FULLSCREEN']
  if a.jit_registers:defs+=['CJ_BEGIN='+hex(jit_begin)]
+ if a.audio_early:defs+=['EM_AUDIO_EARLY']
  run(cc+['-D'+d for d in defs]+['-I'+rel(stage)]+['-I'+rel(source/'amiga'/d)for d in ['mesen_nes','mesen_bench','arm_debug','arm_debug/zz9000']]+[rel(source/'amiga/arm_debug/zz9000/launcher.c'),rel(stage/'host.c'),rel(stage/'zip/puff.c'),'-lamiga','-o',rel(out/m['player'])])
  for src,dst in [('launcher.c',m['console']),('icon.c','MakeIcon')]:run(cc+[rel(lib/src)]+([rel(lib/'zip/puff.c')]if src=='launcher.c'else[])+['-lamiga','-o',rel(out/dst)])
  if a.optimisation:

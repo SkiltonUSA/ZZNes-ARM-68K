@@ -1,0 +1,38 @@
+[
+  {
+    "run": "nes-audio-1",
+    "frames": 600,
+    "elapsed_us": 17872940,
+    "core_us": 3416984,
+    "presented": 490,
+    "audio_samples": 319450,
+    "audio_gaps": 56
+  },
+  {
+    "run": "nes-audio-2",
+    "frames": 600,
+    "elapsed_us": 17940435,
+    "core_us": 3417157,
+    "presented": 504,
+    "audio_samples": 319450,
+    "audio_gaps": 50
+  },
+  {
+    "run": "nes-ref-1",
+    "frames": 600,
+    "elapsed_us": 20766565,
+    "core_us": 3416991,
+    "presented": 554,
+    "audio_samples": 319450,
+    "audio_gaps": 66
+  },
+  {
+    "run": "nes-ref-2",
+    "frames": 600,
+    "elapsed_us": 20959014,
+    "core_us": 3417034,
+    "presented": 549,
+    "audio_samples": 319450,
+    "audio_gaps": 77
+  }
+]

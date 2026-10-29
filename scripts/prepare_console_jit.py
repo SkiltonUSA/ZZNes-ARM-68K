@@ -2,7 +2,7 @@
 import shutil,re
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
-def prepare(core,stage,snes):
+def prepare(core,stage,snes,dispatch=False):
  for p in (ROOT/'amiga/common/arm_jit').glob('*.h'):
   shutil.copy2(p,stage/p.name)
   if p.name=='cache_size.h':shutil.copy2(p,core/p.name)
@@ -20,8 +20,20 @@ def prepare(core,stage,snes):
   s,count=re.subn(r'\(\*ICPU\.S9xOpcodes\[\*CPU\.PC\+\+\]\.S9xOpcode\)\s*\(\);', '{unsigned opcode=*CPU.PC++;if(!console_jit_op(opcode))(*ICPU.S9xOpcodes[opcode].S9xOpcode)();}',s)
   assert count==4,count
  else:
-  s=s.replace('void X6502_Run(int32 cycles)', '#include "nes_adapter.h"\nvoid X6502_Run(int32 cycles)')
-  assert s.count('   switch(b1)')==1;s=s.replace('   switch(b1)','   if(!console_jit_op(b1))switch(b1)')
+  header='nes_dispatch.h' if dispatch else 'nes_adapter.h'
+  s=s.replace('void X6502_Run(int32 cycles)', '#include "'+header+'"\nvoid X6502_Run(int32 cycles)')
+  assert s.count('   switch(b1)')==1
+  if dispatch:
+   ops=core/'ops.inc';original=ops.read_text();special=original
+   for i,opcode in enumerate((0xaa,0x8a,0xa8,0x98,0xba,0x9a,0xe8,0xc8,0xca,0x88)):
+    pattern=r'case 0x%02X:.*?break;'%opcode
+    special,n=re.subn(pattern,'case 0x%02X: cj_nes_handlers[%d](&X,0); break;'%(opcode,i),special,count=1,flags=re.S)
+    assert n==1,hex(opcode)
+   (core/'ops_dispatch.inc').write_text(special)
+   # The debugger can also include ops.inc; change only the normal run loop.
+   start=s.index('void X6502_Run(int32 cycles)')
+   s=s[:start]+s[start:].replace('#include "ops.inc"','#include "ops_dispatch.inc"',1)
+  else:s=s.replace('   switch(b1)','   if(!console_jit_op(b1))switch(b1)')
  p.write_text(s)
  if not snes:
   p=core/'payload.ld';p.write_text(p.read_text().replace('0x3d0000','0x5d0000').replace('0x40000','0x50000'))

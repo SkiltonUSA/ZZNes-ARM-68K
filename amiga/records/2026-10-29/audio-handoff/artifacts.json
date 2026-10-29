@@ -1,0 +1,12 @@
+{
+  "reference": {
+    "ZZFceux-ui": "c61acd1c72ef9f634628b48b990b4858e3251a2e6923b12d082d9c57488a44d7",
+    "player/fceux.elf": "05497516d26ac0c43c6cf0644b03fb8791046aa9395b6ec4b858914b730b7e13",
+    "player/zz_payload.h": "37fd0e82bf748c05ee3a0f44a5558caaafdd67c1b73904b16603ac664f042f05"
+  },
+  "early-audio": {
+    "ZZFceux-ui": "0c26899f1a2ccfd9098f88baccb7c40b2f59e94f07584d6fbfe447e4497c9464",
+    "player/fceux.elf": "4a91b6d75e6c90058d6cc728fa61c85393b337360bbf5369c0ae55f504ce1652",
+    "player/zz_payload.h": "37fd0e82bf748c05ee3a0f44a5558caaafdd67c1b73904b16603ac664f042f05"
+  }
+}
