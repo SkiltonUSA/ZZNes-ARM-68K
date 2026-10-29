@@ -3,6 +3,7 @@
 ## 0.8.2-dev — experimental register dispatch
 
 - Call ten generated register handlers through the original opcode switch; remove per-instruction classification and guest-address lookup.
+- Add isolated serial/overlap presentation tests with pinned render locks; hardware checks pass, but no performance gain. Defaults unchanged.
 - Add opt-in 250 µs fullscreen ACK polling and phase profiling; roughly 90% fewer register reads, no useful counter-free FPS gain.
 - Separate timing from recurring pixel verification; complete 16 fixed-presentation hardware comparisons without a repeatable earlier-audio gain.
 - Retain the requested 32 MiB executable reservation and 48 MiB owned runtime.
