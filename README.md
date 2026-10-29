@@ -13,7 +13,9 @@ This beta needs **48 MiB of allocatable ZZ9000 RAM**, plus display and AmigaOS m
 [Installation](docs/package-manager.md) · [User guide](docs/current-guide.md) ·
 [Changes](CHANGELOG.md) · [Interface gallery](docs/current-interface.md)
 
-App version: **0.8.3-dev**.
+Development audio fix: **0.8.4-dev** restores configured AHI output; the download above remains the previous published beta.
+
+Published app version: **0.8.3-dev**.
 
 ![ZZNES interface](docs/screenshots/interface.png)
 
@@ -29,7 +31,7 @@ App version: **0.8.3-dev**.
 - Fullscreen or Workbench window, with **Alt+Return** switching during play.
 - **F7** scanline control: Xanxi FPGA effects in fullscreen; Soft software filtering in a window.
 - Optional FPS overlay, aspect correction, border artwork, overscan masks and **F9** screenshots.
-- Automatic per-app ZZ9000AX audio with AHI unit 0 fallback; system preferences stay unchanged.
+- Configured AHI unit 0 audio: Paula or your chosen AHI driver; system preferences stay unchanged.
 - Five save-state slots per game, with save, load, resume and delete.
 - Joystick testing and live ZZ9000 temperature beside the version.
 - Automatic PAL/NTSC timing; mapper 3/Cybernoid and mapper 78/Holy Diver compatibility fixes.
@@ -43,7 +45,7 @@ App version: **0.8.3-dev**.
 | Host processor | 68020 instruction set; AmigaOS, files, input, display coordination and AHI |
 | Owned ZZ9000 RAM | 48 MiB, including 32 MiB executable reserve; plus display/OS allocations |
 | ROM formats | iNES .nes; single-ROM .zip |
-| Audio | 32 kHz mono, automatic ZZ9000AX AHI output, unit 0 fallback |
+| Audio | 32 kHz mono, configured AHI unit 0 output |
 | Display | Picasso96 fullscreen or Workbench window; optional scaling, borders and FPS |
 | Scanlines | Fullscreen FPGA Classic / Soft / Gradient; windowed ARM Soft |
 | Enabled mappers | 0, 1, 2, 3, 4, 5, 78, 90 within the supported iNES contract |
@@ -155,4 +157,4 @@ unexplained.
 
 [AHI and bitmap-lock profiling](docs/host-service-profiling.md) led to the per-app AX backend below. Four-frame batching showed no FPS gain; the three-frame default stays.
 
-[Per-app ZZ9000AX audio tests](docs/ax-audio.md) measured **3.2% higher FPS for NES / 4.6% for SNES** in matched short runs. This beta includes the AX backend; the figures are game-specific test results.
+[Per-app ZZ9000AX audio tests](docs/ax-audio.md) measured **3.2% higher FPS for NES / 4.6% for SNES** in matched short runs. These are experimental, game-specific results. Normal builds follow configured AHI unit 0 so installing an AX driver does not redirect sound.

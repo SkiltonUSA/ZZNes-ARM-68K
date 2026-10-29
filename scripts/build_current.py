@@ -7,7 +7,7 @@ from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 def run(a):subprocess.run(list(map(str,a)),cwd=ROOT,check=True)
 def main():
- p=argparse.ArgumentParser();p.add_argument('--release-ax',action='store_true',help='Build the normal-play AX audio beta with matching launcher');p.add_argument('--ax-audio-test',action='store_true',help='Isolated per-app ZZ9000AX AHI backend; unit 0 fallback');p.add_argument('--host-service-test',choices=('profile','batch4'),help='Isolated 68k cost profiling or four-frame AHI batch test');p.add_argument('--presentation-test',choices=('serial','overlap'),help='Isolated every-frame presentation test; periodic readbacks and automatic capture disabled');p.add_argument('--ack-poll-us',type=int,choices=(0,250),default=0,help='Experimental bounded fullscreen ACK register polling');p.add_argument('--audio-early',action='store_true',help='Experimental batch-ready AHI handoff before presentation');p.add_argument('--jit-registers',action='store_true',help='Experimental register-only A9 translation; 32 MiB executable cache');p.add_argument('--arm',action='store_true');p.add_argument('--optimisation',action='store_true');a=p.parse_args()
+ p=argparse.ArgumentParser();p.add_argument('--release-ax',action='store_true',help='Build the current beta with configured AHI output and matching launcher');p.add_argument('--ax-audio-test',action='store_true',help='Isolated per-app ZZ9000AX AHI backend; unit 0 fallback');p.add_argument('--host-service-test',choices=('profile','batch4'),help='Isolated 68k cost profiling or four-frame AHI batch test');p.add_argument('--presentation-test',choices=('serial','overlap'),help='Isolated every-frame presentation test; periodic readbacks and automatic capture disabled');p.add_argument('--ack-poll-us',type=int,choices=(0,250),default=0,help='Experimental bounded fullscreen ACK register polling');p.add_argument('--audio-early',action='store_true',help='Experimental batch-ready AHI handoff before presentation');p.add_argument('--jit-registers',action='store_true',help='Experimental register-only A9 translation; 32 MiB executable cache');p.add_argument('--arm',action='store_true');p.add_argument('--optimisation',action='store_true');a=p.parse_args()
  if a.release_ax:
   if a.ax_audio_test or a.presentation_test or a.host_service_test or a.audio_early or a.ack_poll_us:p.error('release build cannot include diagnostic options')
   a.arm=a.optimisation=a.jit_registers=True
@@ -102,7 +102,8 @@ def main():
  if a.presentation_test:
   from prepare_conversion_overlap import prepare_test
   prepare_test(stage,overlap=a.presentation_test=='overlap')
- if a.ax_audio_test or a.release_ax:
+ # Normal play follows AHI unit 0; detecting AX does not identify connected speakers.
+ if a.ax_audio_test:
   from prepare_ax_audio import prepare
   prepare(stage)
  if a.host_service_test:

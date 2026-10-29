@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.8.4-dev — configured audio output
+
+- Restore configured AHI unit 0 for normal playback; an installed ZZ9000AX driver no longer redirects audio away from Paula.
+- Keep the current ARM payload and core fixes unchanged. AX remains an explicit development experiment.
+
 ## 0.8.3 Beta — ZZ9000AX audio and register dispatch
 
 - Select ZZ9000AX 16-bit stereo through per-app AHI; use configured unit 0 if AX is unavailable. Global preferences remain unchanged.

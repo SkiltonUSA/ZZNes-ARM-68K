@@ -606,3 +606,13 @@ records. Private SD032G:Dev/ZZAX1029 removed; Core1 idle, bridge alive, live AHI
 CRC725CE7DB and saved screenmodeCRC9C80FBC5 unchanged. Firmware, startup, installed
 players, libraries/saves and global preferences untouched. Local MCP left running.
 Next gate: listened longer sessions and comparison against unit0 already set toAX.
+
+## Paula audio routing fix — 29 October 2026
+
+ZZNES 0.8.4-dev restores configured AHI unit 0 (Paula on this machine).
+Automatic AX routing caused silence at the connected RCA output. ARM payload
+unchanged; native generated-worker tests and 180-frame physical routing/cleanup
+check pass. Installed in SD032G:Emulator/ZZNES. ROMs/saves/settings and global
+AHI unchanged. Listening confirmation pending. Source build flag remains
+`--release-ax` for compatibility; only `--ax-audio-test` selects AX directly.
+See amiga/records/2026-10-29/paula-routing. Published release unchanged.

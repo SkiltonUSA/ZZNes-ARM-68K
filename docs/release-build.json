@@ -1,16 +1,17 @@
 {
-  "version": "0.8.3-dev",
-  "release": "v0.8.3-beta",
+  "version": "0.8.4-dev",
+  "release": "v0.8.4-beta",
   "build_directory": ".context/ax-release-build",
   "build_command": "python3 scripts/build_current.py --release-ax",
   "executables": {
     "ZZNES": {
-      "sha256": "d838e34d6df1bba214bf0a9084196b7b0159130112e2f30d9137d1dadf5577f7",
+      "sha256": "70147396fdeb4d8218780ca36b045b5fbae2eb99f99ef98cd39cfbe04cd58ec2",
       "bytes": 257152
     },
     "ZZFceux-ui": {
-      "sha256": "9d0640e9ae17858833d580b8073912a4be88df59945792d46a71140911973f88",
-      "bytes": 574820
+      "sha256": "43d0632726ecd0a635417c3924b3337445a0e6592ea9d8f3545d5d54d60ac7e2",
+      "bytes": 563132
     }
-  }
+  },
+  "published": false
 }
