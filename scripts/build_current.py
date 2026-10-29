@@ -59,6 +59,9 @@ def main():
  if a.jit_registers:
   h=lib/'library_mui.h';h.write_text(re.sub(r'#define LIB_VERSION "[^"]+"','#define LIB_VERSION "'+m['version']+'"',h.read_text()))
  snes=m['console']=='ZZSNES';rel=lambda p:str(p.relative_to(ROOT));inside=lambda p:os.environ.get('ARM_CONTAINER_ROOT','/work')+'/'+rel(p)
+ if a.release_ax:
+  from prepare_audio_window import prepare
+  prepare(stage,lib,snes)
  if a.arm:
   core=source/'core';objects=[]
   if a.jit_registers:

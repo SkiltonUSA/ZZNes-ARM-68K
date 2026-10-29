@@ -1,4 +1,4 @@
-# ZZNES 0.8.3 Beta
+# ZZNES user guide
 
 Use the [offline installer](package-manager.md), or extract the manual ZIP into a writable drawer and open **ZZNES**. Keep the player
 executable beside it. When upgrading, retain your ROMs, States, Snapshots and
@@ -48,9 +48,12 @@ member inside the archive.
 
 ## Display
 
-Choose **Fullscreen** or **Workbench window**. **Alt+Return** switches during
-play at a completed frame boundary. The gameplay surface is 320×240 by default;
-the launcher itself is resizable and uses scrollable pages on smaller screens.
+Current development builds offer **Fullscreen**, **Window 1× (320×240)**,
+**Window 2× (640×480)** and **Window 3× (960×720)**. A window falls back to a
+smaller integer size when it cannot fit Workbench. **Alt+Return** switches at a
+completed frame boundary and returns to the previous window size. Larger
+windows may show fewer pictures to preserve emulation and audio timing; 1× or
+fullscreen has the lowest display cost. The launcher remains resizable.
 
 **Scanlines** uses Xanxi's FPGA interface in fullscreen and Soft ARM software
 filtering in a window. **F7** cycles Off → Soft → Gradient → Classic in fullscreen,

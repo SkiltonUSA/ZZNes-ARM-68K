@@ -1,0 +1,63 @@
+OWNED amiga=50000040 arm_candidate=101f0040 size=50331648 nonce=09a8aca5
+BOOTSTRAP amiga=40c52800 arm=00e42800 (P96 allocated/locked)
+MAP status=4d415031 SCTLR=08c50878 MIDR=413fc090 MPIDR=80000001
+MAPPING PASS (eight nonce-derived words)
+ARM ready=41524d31 SCTLR=08c5187d MIDR=413fc090 MPIDR=80000001
+REGION NTSC period_us=16639
+CARTRIDGE mapper=90 PRG=524288 CHR=262144 battery=0
+STAGE ROM published; initializing core
+STAGE core initialized; calibrating clock
+STAGE opening display
+WINDOW scale=3 geometry=960x720
+SCANLINE_BACKEND window=3 hardware=0 software=2 parity=0
+BUFFERS pixels=00000000 indices=09844fcc legacy_host=0
+JOYSTICK available=1 port=1; red=A blue=B green=Select play=Start
+AUDIO task: AHI unit 0, 32000 Hz mono; 8 queue slots, 6-frame prebuffer
+PLAYER FCEUX CPU/old PPU/APU, auto-region 32kHz quality0; P pause, M mute, Q/Esc quit; bounded picture omission; every core/APU frame retained
+ZZFCEUX START ROM=SD032G:Dev/ZZSound1029/mario.nes bytes=786448 timer_hz=333347186 core_only=0
+FRAME n=1 cycles=29781 core_hash=b87d5dc5 output_hash=3fde1dc5 cpu_ppu_us=3616
+FULLSCREEN_END queued=67 flips=67 pending=-1 ack_wait_us=0 fault=0
+AUDIO_TASK queued=95834 submitted=95834 completed=95834 highwater=6 error=0 stopped=1
+AUDIO_END samples=95834 gaps=57
+PRESENT_OPTIONS window=3 scanlines=2 fps=0 optimised=1 neon_frames=67
+STAGE closing frontend; requesting ARM return next
+ZZFCEUX END exit=0 frames=180 elapsed_us=11808878 core_total_us=1263438 output_hash=f6e8347e
+DIRECT_END challenges=67 verified_frames=4 copy_us=512754
+PLAYER_PROFILE audio_prepare_us=1001553 flip_drain_us=3119 audio_wait_us=11626 audio_copy_us=44340 audio_send_us=0
+ARM_REQUEST_PROFILE frame_us=1365709 present_us=548951
+PRESENT_PROFILE pre_us=21155 request_us=560596 post_us=5864642
+FRAME_TIMING stage=0 count=120 mean_us=8295 max_us=17029 bins=0,91,28,1,0,0
+FRAME_TIMING stage=1 count=120 mean_us=31 max_us=35 bins=120,0,0,0,0,0
+FRAME_TIMING stage=2 count=120 mean_us=5643 max_us=26022 bins=79,8,12,11,10,0
+FRAME_TIMING stage=3 count=44 mean_us=75314 max_us=1475259 bins=0,0,42,0,0,2
+FRAME_TIMING stage=4 count=120 mean_us=57273 max_us=1514101 bins=0,0,0,0,68,52
+FRAME_TIMING stage=5 count=0 mean_us=0 max_us=0 bins=0,0,0,0,0,0
+INPUT_PROFILE changes=0
+JOYSTICK_END polls=180 active=0 last_type=30000000
+AUDIO_IO_PROFILE send_us=742744 waitio_us=1775
+WAIT_PROFILE kind=0 calls=0 requested_us=0 actual_us=0 max_us=0
+WAIT_PROFILE kind=1 calls=31 requested_us=31000 actual_us=42040 max_us=6140
+WAIT_PROFILE kind=2 calls=0 requested_us=0 actual_us=0 max_us=0
+WAIT_PROFILE kind=3 calls=0 requested_us=0 actual_us=0 max_us=0
+WAIT_PROFILE kind=4 calls=0 requested_us=0 actual_us=0 max_us=0
+WAIT_PROFILE kind=5 calls=0 requested_us=0 actual_us=0 max_us=0
+PROFILE frames=180 request_us=1447591 copy_us=0 colour_us=0 draw_us=9256592 waits=31
+EXIT epilogue=52455431 cache_echoes=0 rounds=0
+CACHE original=08c50878 running=08c5187d restored=08c50878
+MMU_RESTORE phase=3 register_mismatches=00000000 cpsr_control=1d3 expected=1d3 ttbr=10244000 ccsidr=701fe019 witness_bad=0 mailbox_rounds=250
+REGISTER n=0 original=08c50878 restored=08c50878
+REGISTER n=1 original=00000000 restored=00000000
+REGISTER n=2 original=02000000 restored=02000000
+REGISTER n=3 original=00000000 restored=00000000
+REGISTER n=4 original=00000000 restored=00000000
+REGISTER n=5 original=00000001 restored=00000001
+REGISTER n=6 original=600101d3 restored=600101d3
+REGISTER n=7 original=00000006 restored=00000006
+REGISTER n=8 original=00001000 restored=00001000
+REGISTER n=9 original=00098aa4 restored=00098aa4
+REGISTER n=10 original=44e048e0 restored=44e048e0
+REGISTER n=11 original=00000000 restored=00000000
+REGISTER n=12 original=00000001 restored=00000001
+REGISTER n=13 original=72360000 restored=72360000
+SCANLINE_BACKEND released: hardware=0
+LAUNCHER exit=0; owned memory released
