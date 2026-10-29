@@ -143,3 +143,5 @@ address lookup: 2.38% less core time than the previous translator in a matched
 Mario Bros. test. It remains separate from the release. Longer-run diagnostics and experimental
 audio handoff comparisons are recorded in the report; the earlier freeze remains
 unexplained.
+
+[Controlled audio scheduling tests](docs/fixed-presentation.md) found no repeatable gain; release scheduling stays unchanged.

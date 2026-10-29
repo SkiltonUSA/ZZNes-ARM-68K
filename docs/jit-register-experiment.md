@@ -63,6 +63,11 @@ checks actual producer copy/mute/wrap behavior and batch-ready notification.
 
 [Run evidence](../amiga/records/2026-10-29/switch-dispatch/).
 
+> Measurement correction: these historical audio runs included recurring
+> pixel verification and automatic snapshot work. Their elapsed-time reductions
+> are not normal-play speed gains. The [fixed-presentation follow-up](fixed-presentation.md)
+> found no repeatable advantage from earlier notification.
+
 ## Batch-ready audio comparison
 
 Two 600-frame runs per variant, reference/candidate/candidate/reference order,
