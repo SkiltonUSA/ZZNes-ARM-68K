@@ -1,0 +1,19 @@
+{
+  "version": "0.8.2-dev",
+  "variant": "ax",
+  "ack_profile": false,
+  "fixed_presentation": true,
+  "audit": false,
+  "conversion_profile": false,
+  "capture": false,
+  "warmup": 60,
+  "hashes": {
+    ".context/amiga/ax-output-1029/nes-ax/Player": "35000897d5dc108f7754ce024c22d0f875425ab127223be55911e55a960390ca",
+    ".context/amiga/ax-output-1029/nes-ax/host.c": "5304d7f634cac495c7508ca023f80dda5ead6c1df6df845d6905e36a02715995",
+    ".context/ZZNes-ARM-68K/.context/jit-switch32-build/player/mmu.h": "954a4038c78e1a67fa696592b80bf1fb61aa72eaf7a0f1830d3ba75453382ef7",
+    ".context/ZZNes-ARM-68K/.context/jit-switch32-build/player/mmu_plan.h": "c382cb9f9161a6f698b646f8480c7b6a2ff1d7f4a9f47885262760051c1283b4",
+    ".context/ZZNes-ARM-68K/.context/jit-switch32-build/player/zz_payload.h": "37fd0e82bf748c05ee3a0f44a5558caaafdd67c1b73904b16603ac664f042f05",
+    ".context/amiga/ax-output-1029/nes-ax/player_audio.h": "471975566ae5f5f6166309502a7c63e41d8e71c706465f9ca3c35e07fb40a6b2",
+    ".context/amiga/ax-output-1029/nes-ax/fullscreen.h": "904907bf7d5557308f88458d2c9be8fac7f55b1dba3a67504b47d1f0bf7e3ec0"
+  }
+}

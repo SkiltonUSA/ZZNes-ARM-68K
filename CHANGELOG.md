@@ -2,6 +2,7 @@
 
 ## 0.8.2-dev — experimental register dispatch
 
+- Add opt-in per-app ZZ9000AX AHI output with unit-0 fallback, immutable buffers and hardware timing/lifecycle evidence; global audio preferences unchanged.
 - Call ten generated register handlers through the original opcode switch; remove per-instruction classification and guest-address lookup.
 - Add isolated AHI/bitmap-call profiling and four-frame batch tests; preserve original audio defaults after matched hardware comparisons.
 - Add isolated serial/overlap presentation tests with pinned render locks; hardware checks pass, but no performance gain. Defaults unchanged.
