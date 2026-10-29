@@ -145,3 +145,5 @@ audio handoff comparisons are recorded in the report; the earlier freeze remains
 unexplained.
 
 [Controlled audio scheduling tests](docs/fixed-presentation.md) found no repeatable gain; release scheduling stays unchanged.
+
+[Fullscreen polling experiment](docs/ack-polling.md) reduces reads of the flip acknowledgement register by about 90%, without a proven FPS gain. Original release polling remains unchanged.
