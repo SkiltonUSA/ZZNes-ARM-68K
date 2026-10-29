@@ -105,3 +105,9 @@ verify-fceux-full:
 .PHONY: jit-registers
 jit-registers:
 	$(PYTHON) scripts/build_current.py --arm --optimisation --jit-registers
+
+.PHONY: test-jit-layout
+test-jit-layout:
+	mkdir -p .context/tests
+	clang -O2 -DNES_PLAYER -Idevelopment/beta-20261015/source/amiga/arm_debug -Idevelopment/beta-20261015/source/amiga/arm_debug/zz9000 -I.context/jit-registers32-build/player -DCJ_BEGIN=0x600000 -DMB_ALLOCATION=0x3000000 tests/amiga/console_jit_mmu.c -o .context/tests/jit-layout
+	.context/tests/jit-layout

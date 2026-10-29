@@ -138,6 +138,7 @@ FCEUX is GPL-2.0-or-later. Component licences, source pins and notices are inclu
 
 ## Translation research
 
-[Experimental 8 MiB register-JIT cache](docs/jit-register-experiment.md):
-correctness checks pass, but this initial path is slower than the interpreter.
+[Experimental 32 MiB register-JIT cache](docs/jit-register-experiment.md):
+The earlier 8 MiB prototype was slower than the interpreter.
+More cache is not a speed claim.
 It remains separate from the released player.

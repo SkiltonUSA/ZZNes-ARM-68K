@@ -1,0 +1,24 @@
+{
+  "version": "0.8.1-dev",
+  "experimental": true,
+  "default_enabled": false,
+  "jit_bytes": 33554432,
+  "owned_bytes": 50331648,
+  "tag_bytes": 2097152,
+  "slots": 262144,
+  "scope": "single-instruction register translation; original event boundaries retained",
+  "sources": {
+    "scripts/build_current.py": "1f07b098c39c4baa36e943c3d3e4104c539e823a9ee7c81c8443088392545c4f",
+    "scripts/prepare_console_jit.py": "098e37f1751a81d336afa6749f5a7cad10ecd701d84bf11b6642ff87f5400d89",
+    "amiga/common/arm_jit/snes_adapter.h": "4d2b3c9821ed8dc1c14b47ebe509a5a370355b7baa00efbc93ba6c1f26cd09e1",
+    "amiga/common/arm_jit/cache.h": "8d41459c631fcd45b9cde35a3e0b525fc5a5af3e71b142db20c81de2e363f5a1",
+    "amiga/common/arm_jit/register_op.h": "78f07779754d20250e0600332b458029d7262771d8a0c93b0314c5a249e93a50",
+    "amiga/common/arm_jit/cache_size.h": "6097ae1b4644fd03944e01e7f6c4ec71af860847ff894d0686e4fd0460d95bcc",
+    "amiga/common/arm_jit/nes_adapter.h": "399cd87dffc41827ccd1fce5a675ef26c4dff7a100dc305141d5b8c4f13e60a6"
+  },
+  "outputs": {
+    "ZZFceux-ui": "f487e83c8ca08ec49f9c26a66c81e2d195ddde2f2568766149dc6136797b0e30",
+    "ZZNES": "72f0b23865c5e0e0c4a068373342c621cdfaec927ca03b3793d104626409b04b",
+    "player/fceux.elf": "c9ffeafd9a4f1af8d5cdb513d9c1cbd08a7febfa4283e42d6462ab1d4084fde0"
+  }
+}
