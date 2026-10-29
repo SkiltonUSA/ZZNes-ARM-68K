@@ -1,4 +1,4 @@
-# ZZNES 0.7.4 Beta
+# ZZNES 0.8.3 Beta
 
 Use the [offline installer](package-manager.md), or extract the manual ZIP into a writable drawer and open **ZZNES**. Keep the player
 executable beside it. When upgrading, retain your ROMs, States, Snapshots and
@@ -112,3 +112,13 @@ shows the file being scanned and permits cancellation; ZIP decoding takes longer
 It removes duplicate library entries, not ROM files or saves. Backup copies
 saves, snapshots and library settings to a new verified folder on a mounted disk
 or USB drive. [Details](rom-manager.md).
+
+## Audio output
+
+This beta automatically uses the registered ZZ9000AX 16-bit stereo AHI mode.
+If it is unavailable or busy, playback falls back to configured AHI unit 0.
+System audio preferences are not changed. Use the output connected to the selected
+audio device; installing the AX driver does not configure your external speakers.
+
+The register-dispatch runtime requires 48 MiB of allocatable ZZ9000 memory,
+including its 32 MiB executable reserve, plus display and AmigaOS memory.

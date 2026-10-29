@@ -1,16 +1,16 @@
 {
-  "version": "0.7.4-dev",
-  "release": "v0.7.4-beta",
-  "build_directory": ".context/optimisation-build",
-  "build_command": "make optimisation",
+  "version": "0.8.3-dev",
+  "release": "v0.8.3-beta",
+  "build_directory": ".context/ax-release-build",
+  "build_command": "python3 scripts/build_current.py --release-ax",
   "executables": {
     "ZZNES": {
-      "sha256": "ca3c1e90d0b19d124b02458aa2a9539c9ba8fc4a964e1c7bb0a3a2a388900075",
-      "bytes": 257164
+      "sha256": "d838e34d6df1bba214bf0a9084196b7b0159130112e2f30d9137d1dadf5577f7",
+      "bytes": 257152
     },
     "ZZFceux-ui": {
-      "sha256": "6f55b799f6d2af0547ed338407de9d41e08579063f106dbe69cd71a1eaced977",
-      "bytes": 562316
+      "sha256": "9d0640e9ae17858833d580b8073912a4be88df59945792d46a71140911973f88",
+      "bytes": 574820
     }
   }
 }

@@ -1,4 +1,4 @@
-# ZZNES — 0.7.4 Beta
+# ZZNES — 0.8.3 Beta
 
 <img src="docs/screenshots/logo.png" width="160" alt="ZZNES logo">
 
@@ -7,11 +7,13 @@ and **[Xanxi’s XACP platform](https://github.com/Xanxi-Amiga/XACP-ZZ9000)**.
 The Cortex-A9 runs emulation and fullscreen rendering; the 68k handles AmigaOS,
 files, controls, display coordination and batched AHI audio.
 
-**[Download 0.7.4 Beta — installer or ZIP](https://github.com/SkiltonUSA/ZZNes-ARM-68K/releases/tag/v0.7.4-beta)** ·
+This beta needs **48 MiB of allocatable ZZ9000 RAM**, plus display and AmigaOS memory.
+
+**[Download 0.8.3 Beta — installer or ZIP](https://github.com/SkiltonUSA/ZZNes-ARM-68K/releases/tag/v0.8.3-beta)** ·
 [Installation](docs/package-manager.md) · [User guide](docs/current-guide.md) ·
 [Changes](CHANGELOG.md) · [Interface gallery](docs/current-interface.md)
 
-App version: **0.7.4-dev**.
+App version: **0.8.3-dev**.
 
 ![ZZNES interface](docs/screenshots/interface.png)
 
@@ -27,6 +29,7 @@ App version: **0.7.4-dev**.
 - Fullscreen or Workbench window, with **Alt+Return** switching during play.
 - **F7** scanline control: Xanxi FPGA effects in fullscreen; Soft software filtering in a window.
 - Optional FPS overlay, aspect correction, border artwork, overscan masks and **F9** screenshots.
+- Automatic per-app ZZ9000AX audio with AHI unit 0 fallback; system preferences stay unchanged.
 - Five save-state slots per game, with save, load, resume and delete.
 - Joystick testing and live ZZ9000 temperature beside the version.
 - Automatic PAL/NTSC timing; mapper 3/Cybernoid and mapper 78/Holy Diver compatibility fixes.
@@ -38,9 +41,9 @@ App version: **0.7.4-dev**.
 | Core | FCEUX / FCE Ultra |
 | Emulation processor | ZZ9000 Cortex-A9 / ARMv7-A, application-owned Core1 via XACP |
 | Host processor | 68020 instruction set; AmigaOS, files, input, display coordination and AHI |
-| Owned ZZ9000 RAM | 4 MiB, plus display and AmigaOS allocations |
+| Owned ZZ9000 RAM | 48 MiB, including 32 MiB executable reserve; plus display/OS allocations |
 | ROM formats | iNES .nes; single-ROM .zip |
-| Audio | 32 kHz mono, batched AHI output |
+| Audio | 32 kHz mono, automatic ZZ9000AX AHI output, unit 0 fallback |
 | Display | Picasso96 fullscreen or Workbench window; optional scaling, borders and FPS |
 | Scanlines | Fullscreen FPGA Classic / Soft / Gradient; windowed ARM Soft |
 | Enabled mappers | 0, 1, 2, 3, 4, 5, 78, 90 within the supported iNES contract |
@@ -136,11 +139,11 @@ with the documented local fixes originally used by ZZDosBox.
 FCEUX is GPL-2.0-or-later. Component licences, source pins and notices are included.
 [Release build inputs](docs/release-build.json) · [Third-party notices](THIRD_PARTY.md).
 
-## Translation research
+## Translation and audio
 
 [Experimental register dispatch](docs/jit-register-experiment.md) removes the
 address lookup: 2.38% less core time than the previous translator in a matched
-Mario Bros. test. It remains separate from the release. Longer-run diagnostics and experimental
+Mario Bros. test. The limited register dispatch is included in this beta; it is not a full guest JIT. Longer-run diagnostics and experimental
 audio handoff comparisons are recorded in the report; the earlier freeze remains
 unexplained.
 
@@ -150,6 +153,6 @@ unexplained.
 
 [Pixel-conversion overlap tests](docs/conversion-overlap.md) passed correctness checks but ran slower overall. Existing release scheduling remains the default.
 
-[AHI and bitmap-lock profiling](docs/host-service-profiling.md) identifies host audio servicing as the next investigation target. Four-frame batching showed no FPS gain; the three-frame default stays.
+[AHI and bitmap-lock profiling](docs/host-service-profiling.md) led to the per-app AX backend below. Four-frame batching showed no FPS gain; the three-frame default stays.
 
-[Per-app ZZ9000AX audio tests](docs/ax-audio.md) measured **3.2% higher FPS for NES / 4.6% for SNES** in matched short runs. Experimental; release audio defaults stay unchanged.
+[Per-app ZZ9000AX audio tests](docs/ax-audio.md) measured **3.2% higher FPS for NES / 4.6% for SNES** in matched short runs. This beta includes the AX backend; the figures are game-specific test results.

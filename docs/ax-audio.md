@@ -1,5 +1,9 @@
 # Per-application ZZ9000AX audio experiment
 
+**Release update:** included in [ZZNES 0.8.3 Beta](https://github.com/SkiltonUSA/ZZNes-ARM-68K/releases/tag/v0.8.3-beta). Normal-play
+release validation is recorded in [release-validation.md](release-validation.md).
+The measurements below describe the earlier controlled experiment.
+
 This optional backend selects the installed **ZZ9000AX 16-bit stereo AHI mode**
 without editing global AHI preferences. The normal release still uses unit 0.
 It is an audio-output and host-scheduling experiment, not an ARM-core/JIT change.
