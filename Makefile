@@ -101,3 +101,7 @@ test-mapper78:
 	$(PYTHON) tests/amiga/emulator/test_mapper78.py
 verify-fceux-full:
 	$(PYTHON) scripts/prepare_fceux_full.py --verify
+
+.PHONY: jit-registers
+jit-registers:
+	$(PYTHON) scripts/build_current.py --arm --optimisation --jit-registers

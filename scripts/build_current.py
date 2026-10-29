@@ -7,12 +7,15 @@ from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 def run(a):subprocess.run(list(map(str,a)),cwd=ROOT,check=True)
 def main():
- p=argparse.ArgumentParser();p.add_argument('--arm',action='store_true');p.add_argument('--optimisation',action='store_true');a=p.parse_args()
+ p=argparse.ArgumentParser();p.add_argument('--jit-registers',action='store_true',help='Experimental register-only A9 translation; 8 MiB executable cache');p.add_argument('--arm',action='store_true');p.add_argument('--optimisation',action='store_true');a=p.parse_args()
  m=json.loads((ROOT/'docs/current-build.json').read_text());snap=ROOT/m['snapshot_dir'];source=snap/'source';out=ROOT/'.context/current-build';stage=out/'player';lib=out/'library'
  if a.optimisation:
   if not a.arm:p.error('optimisation candidate requires --arm')
   out=ROOT/'.context/optimisation-build';stage=out/'player';lib=out/'library'
  if a.optimisation:m['version']='0.7.4-dev'
+ if a.jit_registers:
+  if not a.arm or not a.optimisation:p.error('JIT requires current ARM optimisation build')
+  out=ROOT/'.context/jit-registers-build';stage=out/'player';lib=out/'library';m['version']='0.8.0-dev'
  shutil.copytree(snap/'build-inputs/player',stage,dirs_exist_ok=True);library_snap=ROOT/m['library_snapshot_dir']
  shutil.copytree(library_snap/'build-inputs',lib,dirs_exist_ok=True)
  for header in (library_snap/'source').glob('*.h'):shutil.copy2(header,lib/header.name)
@@ -32,9 +35,18 @@ def main():
  (lib/'icon.c').write_text((lib/'icon.c').read_text().replace('DOSBox icon',m['console']+' icon'))
  if m['console']=='ZZNES':
   p=lib/'library_mui.h';s=p.read_text();s=s.replace('"Header supported: NTSC, mapper %d\\nGameplay compatibility varies by title.",mapper','"Header supported: %s, mapper %d\\nGameplay compatibility varies by title.",fc_rom_pal(p,n,model.entry[selected].path)?"PAL":"NTSC",mapper').replace('NTSC mapper 0 or 90, without trainer or battery.','mapper 0/1/2/4/5/90; no trainer or battery.');p.write_text(s)
+ if a.jit_registers:
+  h=lib/'library_mui.h';h.write_text(re.sub(r'#define LIB_VERSION "[^"]+"','#define LIB_VERSION "'+m['version']+'"',h.read_text()))
  snes=m['console']=='ZZSNES';rel=lambda p:str(p.relative_to(ROOT));inside=lambda p:os.environ.get('ARM_CONTAINER_ROOT','/work')+'/'+rel(p)
  if a.arm:
   core=source/'core';objects=[]
+  if a.jit_registers:
+   core=out/'core';shutil.copytree(source/'core',core,dirs_exist_ok=True)
+   shutil.copytree(mapper/'core',core,dirs_exist_ok=True)
+   shutil.copytree(mapper/'common',out/'common',dirs_exist_ok=True)
+  if a.jit_registers:
+   from prepare_console_jit import prepare
+   jit_begin=prepare(core,stage,snes)
   if snes:
    prefix=json.loads(os.environ.get('ARM_BUILD_COMMAND','[]'))
    flags=m['arm_flags'];flags=[f for f in flags if not f.startswith('-I')];flags=[inside(source/'amiga/pocketsnes/libc_config.h')if f=='/work/amiga/pocketsnes/libc_config.h'else f for f in flags]
@@ -44,9 +56,13 @@ def main():
   else:
    prefix=[];flags=['--target=arm-none-eabi','-mcpu=cortex-a9','-marm','-mfloat-abi=soft','-mno-unaligned-access','-ffreestanding','-fno-builtin','-fPIC','-fvisibility=hidden','-fno-stack-protector','-O3','-g','-fwrapv','-DFC_ARM','-DDINGUX','-DFC_STATES','-DNES_PLAYER','-DNES_DIRECT','-DZZ_BLOCK_SIZE=0x400000','-DZZ_CONTROL=0x80000','-DMB_MMU','-DMB_DCACHE','-DMB_ALLOCATION=0x400000u','-Wno-deprecated-register','-Wno-writable-strings','-Wno-non-c-typedef-for-linkage']
    flags+=['-I'+str(d)for d in [stage,core,*[source/'amiga'/d for d in ['fceux_bench','mesen_nes','mesen_bench','arm_debug','arm_debug/zz9000']]]]
+  if a.jit_registers:
+   flags=[f.replace('0x3000000','0x4000000') if snes else f.replace('0x400000','0x1000000') for f in flags]
+   flags+=['-DCJ_BEGIN='+hex(jit_begin)]
   for i,relpath in enumerate(m['arm_sources']):
    src=ROOT/relpath
-   if a.optimisation and (mapper/'core'/src.name).is_file():src=mapper/'core'/src.name
+   if a.jit_registers and src.is_relative_to(source/'core'):src=core/src.relative_to(source/'core')
+   elif a.optimisation and (mapper/'core'/src.name).is_file():src=mapper/'core'/src.name
    if src.parent==snap/'build-inputs/player':src=stage/src.name
    obj=stage/f'{i}.o';objects.append(obj);cpp=src.suffix=='.cpp';cc=('arm-none-eabi-g++'if cpp else'arm-none-eabi-gcc')if snes else os.environ.get('CLANG','clang')
    args=flags+(['-std=c++14','-fno-exceptions','-fno-rtti']+([]if snes else['-nostdinc++'])if cpp else[])
@@ -62,7 +78,9 @@ def main():
  runtime=json.loads(os.environ.get('BETA_CONTAINER_COMMAND','["podman","--connection","nuflix-converter-root","run","--rm","--platform","linux/amd64"]'))
  cc=runtime+['-v',str(ROOT)+':/work','-w','/work',m['image'],'m68k-amigaos-gcc','-std=c99','-noixemul','-m68020','-O2','-g','-Wall','-Wextra','-Werror','-Wno-unused-function','-Wno-misleading-indentation']
  block,control=('0x2000000','0x180000')if snes else('0x400000','0x80000')
+ if a.jit_registers:block='0x4000000' if snes else '0x1000000'
  defs=['ZZ_HEADLESS_BENCH','ZZ_RELEASE','ZZ_NES','ZZ_BLOCK_SIZE='+block,'ZZ_CONTROL='+control,'ZZ_APP_NAME="'+m['console']+'"','ZZ_APP_VERSION="'+m['version']+'"','ZZ_MIN_STACK=65536','MB_ALLOCATION='+block+'u','MB_MMU','MB_DCACHE','ZZ_HEADLESS_MMU','ZZ_HEADLESS_ICACHE','NES_PLAYER','NES_DIRECT','NES_FULLSCREEN']
+ if a.jit_registers:defs+=['CJ_BEGIN='+hex(jit_begin)]
  run(cc+['-D'+d for d in defs]+['-I'+rel(stage)]+['-I'+rel(source/'amiga'/d)for d in ['mesen_nes','mesen_bench','arm_debug','arm_debug/zz9000']]+[rel(source/'amiga/arm_debug/zz9000/launcher.c'),rel(stage/'host.c'),rel(stage/'zip/puff.c'),'-lamiga','-o',rel(out/m['player'])])
  for src,dst in [('launcher.c',m['console']),('icon.c','MakeIcon')]:run(cc+[rel(lib/src)]+([rel(lib/'zip/puff.c')]if src=='launcher.c'else[])+['-lamiga','-o',rel(out/dst)])
  if a.optimisation:
