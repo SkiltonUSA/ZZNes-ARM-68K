@@ -62,6 +62,8 @@ def main():
  if a.release_ax:
   from prepare_audio_window import prepare
   prepare(stage,lib,snes)
+  from prepare_native_columns import prepare_player
+  prepare_player(stage)
  if a.arm:
   core=source/'core';objects=[]
   if a.jit_registers:

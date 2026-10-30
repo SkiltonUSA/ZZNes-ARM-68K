@@ -39,7 +39,10 @@ static int layout_probe(void){
   saved=value(display_mode,MUIA_Cycle_Active);
   for(unsigned i=0;i<4;i++){set(display_mode,MUIA_Cycle_Active,i);if(value(display_mode,MUIA_Cycle_Active)!=i)errors++;}
   set(display_mode,MUIA_Cycle_Active,saved);
-  puts("CHOICES five audio outputs, fullscreen/1x/2x/3x");
+  saved=value(scaling_mode,MUIA_Cycle_Active);
+  for(unsigned i=0;i<3;i++){set(scaling_mode,MUIA_Cycle_Active,i);if(value(scaling_mode,MUIA_Cycle_Active)!=i)errors++;}
+  set(scaling_mode,MUIA_Cycle_Active,saved);
+  puts("CHOICES five audio outputs, fullscreen/1x/2x/3x, Sharp/Smooth/Native columns");
  }
  /* Exercise real MUI resizing, without injecting a held mouse gesture. */
  {const unsigned widths[]={480,608,768};unsigned i;
@@ -52,7 +55,7 @@ static int layout_probe(void){
  }
  /* Keep a real small window available for a screenshot, without mouse drags. */
  layout_page(0);layout_pump();layout_stage("library");Delay(ZZ_UI_CAPTURE_TICKS);
- layout_page(1);layout_pump();layout_stage("display");Delay(ZZ_UI_CAPTURE_TICKS);
+ set(scaling_mode,MUIA_Cycle_Active,2);layout_page(1);layout_pump();layout_stage("display");Delay(ZZ_UI_CAPTURE_TICKS);
  get(pages,MUIA_Group_ChildList,&children);state=children->lh_Head;
  NextObject(&state);scroll=NextObject(&state);virt=(Object*)value(scroll,MUIA_Scrollgroup_Contents);
  for(unsigned i=0;i<3;i++){set(virt,MUIA_Virtgroup_Top,10000);layout_pump();}
