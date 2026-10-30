@@ -127,3 +127,11 @@ never changes global AHI preferences. [Details and tests](output-quality.md).
 
 Automatic and manual screenshots briefly pause playback. Queued audio finishes
 before capture; playback starts again with a fresh prebuffer.
+
+## Native columns (0.8.7-dev)
+
+Display → Scaling → **Native columns** centres 256 equal-width source columns
+inside the 320×240 frame. Side borders replace horizontal stretching; the picture
+is narrower. Edge masks still hide their chosen margins. 2×/3× windows repeat
+every source pixel equally. Choose Sharp or Smooth for monitor aspect correction.
+Use Save settings to retain the choice. Older players do not accept this new mode.

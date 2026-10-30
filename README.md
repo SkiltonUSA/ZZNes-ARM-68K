@@ -17,6 +17,8 @@ This beta needs **48 MiB of allocatable ZZ9000 RAM**, plus display and AmigaOS m
 
 Published app version: **0.8.6-dev**.
 
+Development **0.8.7-dev** adds [Native columns](docs/native-columns.md): equal-width NES pixels with side borders for horizontal scrolling.
+
 ![ZZNES interface](docs/screenshots/interface.png)
 
 ## Features

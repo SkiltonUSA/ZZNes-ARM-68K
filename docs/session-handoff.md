@@ -680,3 +680,19 @@ open and was suspended; corrected query ordering is tested. Reboot once before
 normal use to clear the suspended Probe. Private SD032G:Dev/ZZQuality1030 staging
 is retained until that reboot; do not treat it as an installed app or publish its
 ROM/state contents. No firmware or startup changes.
+
+## Native columns — 30 October 2026
+
+Installed 0.8.7-dev launcher/player in SD032G:Emulator/ZZNES. Native columns
+selected by changing only the final scaling field of Library.cfg to 2. Original
+executables, Library.cfg and Version.txt retained as .pre-columns siblings;
+private evidence under .context/amiga/nes-columns-1030 in the parent workspace.
+Build hashes in docs/native-columns-build.json. Published 0.8.6 Beta unchanged.
+256 columns map one-to-one, centred in320 with32-pixel side borders;240rows
+unchanged. Existing edge masks remain. Sharp/Smooth retain old aspect scaling.
+Native/model tests and two180-frame four-readback hardware checks pass. Two600-frame
+normal Super Mario World runs (fullscreen/3x) complete all PCM, zero starvation,
+register/MMU/cache restoration and owned-memory release. VERIFY readback runs
+intentionally stall audio and are not performance comparisons. Physical compact
+MUI accepts allthree scaling choices. Exact reported scrolling appearance still
+needs confirmation. Global AHI/screenmode unchanged; no SNES runtime changes.

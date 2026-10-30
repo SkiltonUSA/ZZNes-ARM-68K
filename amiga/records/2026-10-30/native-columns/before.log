@@ -1,0 +1,2 @@
+Assertion failed: (fv_valid(512)), function main, file test_columns.cpp, line 11.
+REPRO sharp 256->320: 192 single-width columns, 64 double-width columns

@@ -1,0 +1,4 @@
+PASS installed 0.8.7-dev; Native columns selected; all other library data unchanged; launcher opens/quits; rollback copies retained
+PASS unchanged ENV:Sys/ahi.prefs 725CE7DB
+PASS unchanged ENVARC:Sys/screenmode.prefs 9C80FBC5
+Amiga alive - clients: 0, chip: 2018792 bytes, fast: 613166008 bytes

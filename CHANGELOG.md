@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.8.7-dev — native columns
+
+- Add Native columns beside Sharp/Smooth: centre all 256 source columns without uneven repetition or reduction. Existing edge masks still apply.
+- Keep all 240 rows and repeat pixels evenly in 2×/3× windows. The native picture is narrower; monitor aspect correction remains available through Sharp/Smooth.
+- Preserve existing settings; a native-column preference requires matching launcher/player versions.
+- [Tests and limitations](docs/native-columns.md). Published 0.8.6 Beta remains unchanged.
+
 ## 0.8.6 Beta
 
 - Per-app Paula 14-bit output at 22.05 or 28 kHz; explicit configured AHI and ZZ9000AX choices. Auto preserves the configured output device.

@@ -1,0 +1,3 @@
+REPRO sharp 256->320: 192 single-width columns, 64 double-width columns
+PASS all 256 scroll phases: native columns, masks, monitor choices, byte orders and 1x/2x/3x repetition
+PASS Sharp/Smooth/Native settings and session round trips; invalid scale rejected
