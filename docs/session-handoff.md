@@ -696,3 +696,9 @@ register/MMU/cache restoration and owned-memory release. VERIFY readback runs
 intentionally stall audio and are not performance comparisons. Physical compact
 MUI accepts allthree scaling choices. Exact reported scrolling appearance still
 needs confirmation. Global AHI/screenmode unchanged; no SNES runtime changes.
+
+## Release packaging — 30 October 2026
+
+ZZNES 0.8.7 Beta packages refreshed with ZIP, signed offline amipkg installer,
+build receipt and SHA256SUMS. See docs/release-validation.md. No additional
+hardware changes during packaging. Native-column binaries match the installed tested build; scrolling visual confirmation remains pending.

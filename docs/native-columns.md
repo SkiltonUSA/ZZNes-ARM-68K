@@ -47,5 +47,4 @@ out a separate core rendering issue.
 
 Installed as 0.8.7-dev on the test Amiga with Native columns selected. Original
 executables and library settings have rollback copies. All other library fields
-and global AHI/screenmode preferences were preserved. The published 0.8.6 Beta
-remains unchanged.
+and global AHI/screenmode preferences were preserved. The matching binaries are packaged as 0.8.7 Beta.

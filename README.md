@@ -1,4 +1,4 @@
-# ZZNES — 0.8.6 Beta
+# ZZNES — 0.8.7 Beta
 
 <img src="docs/screenshots/logo.png" width="160" alt="ZZNES logo">
 
@@ -9,15 +9,15 @@ files, controls, display coordination and batched AHI audio.
 
 This beta needs **48 MiB of allocatable ZZ9000 RAM**, plus display and AmigaOS memory.
 
-**[Download 0.8.6 Beta — installer or ZIP](https://github.com/SkiltonUSA/ZZNes-ARM-68K/releases/tag/v0.8.6-beta)** ·
+**[Download 0.8.7 Beta — installer or ZIP](https://github.com/SkiltonUSA/ZZNes-ARM-68K/releases/tag/v0.8.7-beta)** ·
 [Installation](docs/package-manager.md) · [User guide](docs/current-guide.md) ·
 [Changes](CHANGELOG.md) · [Interface gallery](docs/current-interface.md)
 
 **New:** selectable higher-quality Paula audio and 2×/3× windows. [Changes and tests](docs/output-quality.md).
 
-Published app version: **0.8.6-dev**.
+Published app version: **0.8.7-dev**.
 
-Development **0.8.7-dev** adds [Native columns](docs/native-columns.md): equal-width NES pixels with side borders for horizontal scrolling.
+**0.8.7 Beta** adds [Native columns](docs/native-columns.md): equal-width NES pixels with side borders for horizontal scrolling.
 
 ![ZZNES interface](docs/screenshots/interface.png)
 

@@ -1,6 +1,6 @@
 {
   "version": "0.8.7-dev",
-  "published_release": false,
+  "published_release": true,
   "command": "python3 scripts/build_current.py --release-ax",
   "executables": {
     "ZZNES": {

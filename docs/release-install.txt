@@ -1,4 +1,4 @@
-ZZNES 0.8.6 Beta (tested 0.8.6-dev executables)
+ZZNES 0.8.7 Beta (tested 0.8.7-dev executables)
 
 INSTALLER: extract the -beta-amipkg.lha archive, open its drawer and double-click
 Install. Choose a parent drawer; ZZNES is created inside it. To specify an exact
@@ -33,4 +33,8 @@ SHA256-checked archives. PackageManager holds its receipts/cache. Installation
 is not fully transactional; keep a backup before upgrading. Use Install again
 for updates, not the offline placeholder repository URL. No online feed exists.
 
-Release and source: https://github.com/SkiltonUSA/ZZNes-ARM-68K/releases/tag/v0.8.6-beta
+Release and source: https://github.com/SkiltonUSA/ZZNes-ARM-68K/releases/tag/v0.8.7-beta
+
+Display > Scaling > Native columns keeps all 256 NES columns equally wide,
+with side borders. Sharp and Smooth remain available. Save settings to keep
+your selection. Existing preferences are preserved on upgrade.
