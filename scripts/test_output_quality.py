@@ -10,3 +10,6 @@ subprocess.run([sys.executable,str(d/'test_stream.py')],check=True)
 
 subprocess.run(['clang','-std=c99','-Wall','-Wextra','-Werror','-Wno-unused-function','-fsanitize=address,undefined',str(d/'test_settings.c'),'-o',str(o/'settings')],check=True)
 subprocess.run([str(o/'settings')],cwd=o,check=True)
+
+subprocess.run(['clang','-std=c99','-Wall','-Wextra','-Werror','-fsanitize=address,undefined',str(d/'test_capture_audio.c'),'-o',str(o/'capture-audio')],check=True)
+subprocess.run([str(o/'capture-audio')],check=True)
