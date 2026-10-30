@@ -1,57 +1,69 @@
-# ZZNES 0.8.3 Beta validation
+# ZZNES 0.8.6 Beta validation
 
-This release installs matching **0.8.3-dev** launcher/player executables. Normal
-regional cadence, input, state saves and screenshots are enabled. The AX backend
-is automatic, with configured AHI unit 0 as fallback. No global AHI edits.
-
-[Build command and tested executable hashes](release-build.json).
+Matching 0.8.6-dev executables; [build command and hashes](release-build.json).
+These are functional and scheduling tests, not a general FPS or audio-quality guarantee.
 
 | Asset | Bytes | SHA256 |
 | --- | ---: | --- |
-| `ZZNES-0.8.3-dev-beta.zip` | 515893 | `2898037500b1bdb8b8a6958e696b56de7223e7cc57103b4aa8c26e63115f5c30` |
-| `ZZNES-0.8.3-dev-beta-amipkg.lha` | 1380205 | `08f978dfb488899b661e3624a0d61f19d1d9e9279b49e8087ff591b830825c9c` |
-| `ZZNES-release.json` | 981 | `67bdd1555505005f9eb6bfe458c03c85fc8a212de2c905101457159a9bc06588` |
+| `ZZNES-0.8.6-dev-beta-amipkg.lha` | 1390756 | `366468cc1d670578c03544c1620341791e5bcfd897b756df3891b12ebae627e2` |
+| `ZZNES-0.8.6-dev-beta.zip` | 521383 | `f2cac8aaf0de8c485c6ce964b5345d5324af433bdfe09bbd5f99cf8b997ff630` |
+| `ZZNES-release.json` | 981 | `6713e895f0b963b844149d20dfe910705b90fe3098fb842913cffa0a970155f6` |
 
-## Checks
+## Hardware comparisons
 
-- Current-source hash verification passed after refreshing four stale manifest
-  entries for reviewed documentation/audio changes and the build selector.
+| Test | Frames per emulator | Result |
+| --- | ---: | --- |
+| Nine-frame prime, NTSC fullscreen, Paula 22.05 kHz | 6,000 | Zero starvation transitions; before capture-drain addition. |
+| Nine-frame prime, NTSC fullscreen, Paula 28 kHz | 1,800 | Zero starvation transitions; before capture-drain addition. |
+| Nine-frame prime, NTSC 2x and 3x, Paula 22.05 kHz | 1,200 per size | Zero starvation transitions; before capture-drain addition. |
+| Warm-preview PAL fullscreen | 3,000 | Zero starvation transitions. |
+| Final build, cold-preview PAL fullscreen | 3,000 | Zero starvation transitions; capture deliberately pauses playback. |
+| Final build, cold-preview PAL 3x | 600 | Zero starvation transitions; capture deliberately pauses playback. |
+| Final Auto / configured AHI / explicit AX | 180 per route | Correct route, all PCM completed, clean teardown. |
 
-- Both full release builds pass, with ARM image/MMU headers identical to the
-  previously tested register-dispatch builds. Version strings match across each
-  launcher/player and the additional SNES FX player.
-- Native AX ownership, worker and API-failure sanitizer checks pass. Release
-  selection rejects benchmark-only scheduling/polling/batching flags.
-- Two 180-frame physical VERIFY runs pass four exact framebuffer checks each,
-  complete PCM accounting, register/MMU/cache witnesses and owned-memory release.
-- Both normal players pass F9 capture, paused save/load, window/fullscreen
-  switching, resume and quit. User input and snapshots are active in this build.
-- ZIP and nested LHA payloads match byte-for-byte; executable/member hashes,
-  signed catalogue verification, corrupted-signature rejection, prerequisites,
-  icons and ROM/save/config/private-key exclusions pass.
+The earlier six-frame per-app prime still recorded shortages. Nine-frame priming
+was retained with twelve producer slots. The original configured-unit-0 path
+uses a different linked-request counter, so it is not compared numerically with
+the callback starvation counter. Cold-capture silence totals are not zero:
+queued PCM is drained before capture and playback re-primes afterwards.
 
-Both exact offline installer packages were installed successfully on the A4000TX.
-Dependency checks and catalogue signatures passed; installed executable hashes
-matched the tested release builds. Existing library/session/controller settings
-were byte-identical before installation and after opening/closing both launchers.
-The launchers displayed the new versions and existing libraries on Workbench.
-Both icons specify a 64 KiB stack. A first CLI attempt without that stack was
-safely rejected; retrying with `Stack 65536` passed.
+Final interactive tests cover pause, screenshot, state save/load, 3x-window to
+fullscreen and back, resume and F10 exit. Both complete all PCM and restore
+register/cache/MMU witnesses before freeing owned memory. The interactive
+sequence records five starvation transitions on NES and one on SNES; it does
+not prove uninterrupted sound while switching or pausing.
 
-The private test drawer was removed. Core1 is idle, the bridge responds, and
-global AHI / saved screenmode preference checksums are unchanged. Existing
-scanline tools were preserved. Original application files and settings were
-backed up locally before installation. ROMs and existing saves were not changed.
+## Native, model and interface checks
 
+- Sanitizers cover the actual audio worker/API adapter, FIFO order and reuse,
+  partial drains, mode capabilities, settings corruption, device failure,
+  cancellation and teardown ordering.
+- Capture drain is bounded and tested for worker failure, disabled audio and timeout.
+- Relocated ARM tests check scalar-reference pixels, formats, NEON/fallback,
+  enlarged windows, guards and register/MMU/SIMD restoration.
+- Legacy settings, scanning, large libraries, borders and layout tests pass.
+- Physical compact MUI checks exercise all seven pages, five audio choices,
+  fullscreen/1x/2x/3x selection, resizing and the loading panel.
+- ZIP and nested LHA payloads match; signed catalogues, corruption rejection,
+  dependency checks, icons and private-data exclusions pass.
 
-The initial NES test harness looked for a version string in the runtime log,
-which the host does not print. The executable version and transfer checksum were
-already verified; the log assertion was removed, and its successful run retained.
+## Installation and limits
 
-The earlier +3.2% NES / +4.6% SNES FPS figures describe controlled short audio
-comparisons, not a new release-wide performance guarantee. These functional runs
-include deliberate readbacks, file writes and pauses and are not FPS benchmarks.
-Listening/long-session validation remains pending. The earlier unexplained NES
-freeze remains unresolved. This is a beta release.
+The exact offline installer completed on the A4000TX. Installed executable
+hashes match the release build. Existing library/session settings, ROMs and
+saves were preserved. First launcher exit creates Audio.cfg with Auto selected;
+other absent settings stay absent. Workbench icon
+positions were retained. Original executables have same-disk rollback copies
+and a local backup. Global AHI and saved screenmode checksums remain unchanged.
 
-[Hardware logs and checks](../amiga/records/2026-10-29/ax-release/).
+An early standalone AHI probe queried the API before opening its device and
+raised a software failure. It was suspended; the ordering was corrected and
+regression-tested. It was never installed as an emulator. Reboot the test
+machine once to clear that suspended diagnostic before normal use.
+
+Listening remains pending. No eight-hour soak or tear-free physical scanout
+claim is made. The SNES scrolling and heavy Super FX limitations are documented in the
+companion ZZSNES release.
+
+[Investigation and upstream comparisons](output-quality.md) ·
+[Raw evidence and run/binary mapping](../amiga/records/2026-10-30/output-quality/)

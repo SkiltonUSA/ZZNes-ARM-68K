@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.8.6 Beta
+
+- Per-app Paula 14-bit output at 22.05 or 28 kHz; explicit configured AHI and ZZ9000AX choices. Auto preserves the configured output device.
+- Three-buffer callback audio, nine-frame priming, twelve producer slots and starvation diagnostics; no global audio preference changes.
+- Drain queued audio before automatic/manual screenshots and re-prime afterwards; capture deliberately pauses playback.
+- Includes 1×/2×/3× Workbench windows and the previous audio scheduling improvements.
+- [Investigation, upstream comparison and tests](docs/output-quality.md). Listening confirmation remains pending.
+
 ## 0.8.5-dev — audio scheduling and window sizes
 
 - Add 1× (320×240), 2× (640×480) and 3× (960×720) Workbench windows; fit smaller screens automatically and remember the window size across fullscreen switches.

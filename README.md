@@ -1,4 +1,4 @@
-# ZZNES — 0.8.3 Beta
+# ZZNES — 0.8.6 Beta
 
 <img src="docs/screenshots/logo.png" width="160" alt="ZZNES logo">
 
@@ -9,13 +9,13 @@ files, controls, display coordination and batched AHI audio.
 
 This beta needs **48 MiB of allocatable ZZ9000 RAM**, plus display and AmigaOS memory.
 
-**[Download 0.8.3 Beta — installer or ZIP](https://github.com/SkiltonUSA/ZZNes-ARM-68K/releases/tag/v0.8.3-beta)** ·
+**[Download 0.8.6 Beta — installer or ZIP](https://github.com/SkiltonUSA/ZZNes-ARM-68K/releases/tag/v0.8.6-beta)** ·
 [Installation](docs/package-manager.md) · [User guide](docs/current-guide.md) ·
 [Changes](CHANGELOG.md) · [Interface gallery](docs/current-interface.md)
 
-Development build: **0.8.5-dev** adds 2×/3× windows and improves audio scheduling. [Measurements and limits](docs/audio-window.md). The download above remains the previous published beta.
+**New:** selectable higher-quality Paula audio and 2×/3× windows. [Changes and tests](docs/output-quality.md).
 
-Published app version: **0.8.3-dev**.
+Published app version: **0.8.6-dev**.
 
 ![ZZNES interface](docs/screenshots/interface.png)
 
@@ -28,10 +28,10 @@ Published app version: **0.8.3-dev**.
 - Scan a selected folder, SD card or USB drive once to import ROMs.
 - No fixed library-entry cap; tested with 20,000 entries.
 - ROM Manager: bulk import, duplicate-entry cleanup with progress/cancel, and verified backups to disk or USB. Duplicate cleanup keeps ROM files and saves.
-- Fullscreen or 1×/2×/3× Workbench windows, with **Alt+Return** switching during play (current development build).
+- Fullscreen or 1×/2×/3× Workbench windows, with **Alt+Return** switching during play.
 - **F7** scanline control: Xanxi FPGA effects in fullscreen; Soft software filtering in a window.
 - Optional FPS overlay, aspect correction, border artwork, overscan masks and **F9** screenshots.
-- Configured AHI unit 0 audio: Paula or your chosen AHI driver; system preferences stay unchanged.
+- Selectable audio: Auto, configured AHI, Paula 14-bit at 22.05/28 kHz, or explicit ZZ9000AX; system preferences stay unchanged.
 - Five save-state slots per game, with save, load, resume and delete.
 - Joystick testing and live ZZ9000 temperature beside the version.
 - Automatic PAL/NTSC timing; mapper 3/Cybernoid and mapper 78/Holy Diver compatibility fixes.
@@ -45,7 +45,7 @@ Published app version: **0.8.3-dev**.
 | Host processor | 68020 instruction set; AmigaOS, files, input, display coordination and AHI |
 | Owned ZZ9000 RAM | 48 MiB, including 32 MiB executable reserve; plus display/OS allocations |
 | ROM formats | iNES .nes; single-ROM .zip |
-| Audio | 32 kHz mono, configured AHI unit 0 output |
+| Audio | 32 kHz mono, selectable AHI/Paula/ZZ9000AX output |
 | Display | Picasso96 fullscreen or Workbench window; optional scaling, borders and FPS |
 | Scanlines | Fullscreen FPGA Classic / Soft / Gradient; windowed ARM Soft |
 | Enabled mappers | 0, 1, 2, 3, 4, 5, 78, 90 within the supported iNES contract |

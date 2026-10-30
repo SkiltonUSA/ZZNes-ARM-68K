@@ -1,0 +1,2 @@
+python3 scripts/verify_beta.py
+PASS: 430 archived file hashes; all four timing comparisons match raw hardware logs; two headline README rates verified; private ROM/state/config exclusions
