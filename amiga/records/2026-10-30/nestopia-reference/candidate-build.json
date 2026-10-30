@@ -1,0 +1,12 @@
+{
+  "player_sha256": "fe1c140ec64dfb590f5bf4e8bfdd4c6a6398b60772214aae52c4f4fe74b73edb",
+  "packed_arm_sha256": "6abae3dc049bbd9aea6edfe50811aa095f277961c6f7c4f232b198355eda52ff",
+  "mmu_plan_sha256": "83f0f02c85c3df8bb7331eab524466f9d09457804ecbb2dbc8e0515121325550",
+  "build_arguments": "--release-ax --audio-core-quality 1 --audio-fir-neon --audio-word-clear --audio-square-spans --audio-shared-uncached",
+  "tests": [
+    "1200-frame candidate/original model PCM, video, cycles, APU writes identical",
+    "255 audio/adjacent page policy cases plus ROM, mailbox, allocation bounds",
+    "make test-current passed"
+  ],
+  "installed_release_changed": false
+}

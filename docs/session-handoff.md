@@ -702,3 +702,146 @@ needs confirmation. Global AHI/screenmode unchanged; no SNES runtime changes.
 ZZNES 0.8.7 Beta packages refreshed with ZIP, signed offline amipkg installer,
 build receipt and SHA256SUMS. See docs/release-validation.md. No additional
 hardware changes during packaging. Native-column binaries match the installed tested build; scrolling visual confirmation remains pending.
+
+## Audio investigation — 30 October 2026
+
+0.8.8-dev built, not installed/released. AX source/device clock separated; startup
+callback check falls back to configured AHI. Isolated Chrono 600-frame fallback
+passes; standalone AX produces no callbacks in this session. Paula 1200-frame
+run passes counters; remaining crackling is not resolved. Bridge disconnected
+during the final 3000-frame run; do not count it as a pass. Cold-boot AX and
+listening checks pending. No global audio/firmware changes. Exact ARM payload
+preserved. See docs/audio-crackle.md and amiga/records/2026-10-30/audio-crackle.
+Private work: parent .context/amiga/audio-crackle-1030; SD032G:Dev/ZZCrackle.
+Installed application versions unchanged.
+
+
+Audio follow-up: reboot restored AX. Both emulators completed 3000 frames on
+AX and Paula with clean teardown. HiFi 22 kHz substantially improved Chrono
+but did not eliminate NES Super Mario World/Contra title noise. User approved
+Paula 4.33 comparison: installed with verified 4.23 backup and rollback script;
+reboot completed and resident 4.33 confirmed. AHI/AX versions and ENV/ENVARC
+preferences unchanged. Chrono popping then reported absent, some tones off;
+NES popping persists and is audible in raw pre-AHI PCM played on the Mac.
+Isolated NES quality 0/1 core tests are underway; HQ save-state integration
+is still required before promotion. App candidates
+0.8.8/0.7.11 remain private, not installed or released. See audio-crackle.md.
+
+NES quality-1 test: cleaner by listening, but 3000 frames/60.567 s and
+474 audio starvations. Clean restoration/free; not accepted for release.
+Core1 returned; next profile HQ filter and integrate state history.
+
+
+## HQ synthesis optimization follow-up
+
+Private `.context/audio-core-q1-build-neon-clear-spans` is the speed candidate:
+bit-exact NEON FIR, word clear, event-bounded squares. Core time 47.205 to
+34.926 seconds for 3000 SMW frames (26.01% reduction); starvation 474 to 0.
+Contra3000 also zero starvation, all PCM complete, clean restore/free.
+FIR/clear6000: zero starvation. No installed app/release changes.
+Raw HQ PCM on Mac still has reported instrument corruption. Correctly tuned
+32k FIR (`-32k` build) did not improve listening and had29 starvations/6000;
+do not promote. Interpreter comparison passed 480 frames with identical
+CPU/video/audio; HQ state integration remains a release gate. Reports: docs/audio-synthesis.md; private work in parent
+.context/amiga/audio-synthesis-1030. All shared audio prefs unchanged.
+
+Listening follow-up: Contra clean on speed-only HQ candidate. SMW instrument
+corruption persists in raw PCM; compare exact ROM with desktop FCEUX next.
+
+## Nestopia reference reveals stale shared PCM — 30 October 2026
+
+The prior "core corruption" diagnosis is superseded: the Amiga PCM capture was
+after shared-memory transport. Native Nestopia 2.0.0 and our exact ARM image in
+Unicorn both sound clean. 12,089 matching APU writes; DMC playback disabled.
+78,505/78,575 differing Amiga samples match the previous frame's samples.
+
+Private uncached shared-audio-page candidate passes 1,200 frames with zero
+first/repeat-read mismatches. Full 638,940-sample physical capture equals model
+PCM byte-for-byte. Normal single-read player passes 3,000 frames, all PCM,
+zero starvation, register/MMU/cache restoration and owned-memory release.
+Listening: clean, "huge difference". This is not a synthesis/FPS improvement.
+
+Build: `scripts/build_current.py --release-ax --audio-core-quality 1
+--audio-fir-neon --audio-word-clear --audio-square-spans --audio-shared-uncached`.
+Output `.context/audio-core-q1-build-neon-clear-spans-shared-pcm`.
+Source hook `scripts/prepare_audio_publication.py` must modify the generated
+**core/mmu_plan.h** used by core/mmu.c, not the unused player copy. Native page
+tests cover 255 audio/adjacent mappings and preserve ROM/mailbox/bounds.
+Barrier-before-clean alone failed; initial unused-header trial invalid.
+`make test-current` passes with LLVM bin on PATH. Candidate model matches
+original PCM/video/cycles/APU writes over1,200 frames. See audio-synthesis.md
+and amiga/records/2026-10-30/nestopia-reference. Private captures remain in the
+parent workspace .context/amiga/nestopia-review. No installed release/default
+changes; HQ save-state integration still pending. Longer run ended cleanly at
+5,891/6,000 frames, all3,136,693 PCM completed and zero starvation; exit trigger
+unknown, not a full6,000-frame pass. Contra/windowed preflight found another
+Core1 application active and stopped before launching; await the free machine.
+
+Castlevania III follow-up: user had launched installed0.8.7-dev (player
+CRC EDB7CBDF), which does not contain the fix. After they closed it, native
+Nestopia and corrected ARM model each completed1200 startup frames. Corrected
+physical player completed1800/fullscreen/Paula:958,414 samples all delivered,
+zero starvation, display faults0, clean register/cache/MMU restoration/free.
+User confirmed clean sound. Installed defaults unchanged. Contra/windowed retry completed with the same private player: 1,800 frames
+in 31.602700 s, all 958,414 samples completed, zero starvation/display faults,
+and clean register/cache/MMU restoration and memory release. No separate
+listening assessment was requested for this control.
+
+
+## HQ state integration — 30 October 2026
+
+Private `--audio-hq-states` adds 485 live WaveHi history samples and mrindex,
+1,944 bytes total, with envelope v2/schema 0x20261030. The matching launcher
+checks the same format. Legacy quality-0 states reject without mutation; keep
+the installed release for those saves. No conversion or installed default change.
+
+Build all previous HQ speed/shared-PCM flags plus `--audio-hq-states`;
+output `.context/audio-core-q1-build-neon-clear-spans-shared-pcm-states`.
+Source: scripts/prepare_audio_states.py; tests in development/nestopia-reference.
+NTSC/PAL generated tones and SMW/Castlevania exact replay pass, including fresh
+relocated ARM cores; old HQ adapter fails on first resumed frame. Bad/truncated/
+legacy states reject unchanged. Matching library ASan/UBSan checks pass.
+Uninterrupted180-frame CV3 CPU/video/PCM and SIMD preservation match baseline.
+`make test-current` and actual mono/stereo worker tests pass.
+
+First physical CV3/SMW lifecycle:1800frames each, paused save/load, then fresh
+120-frame resume each. All PCM completes and resources restore/free. Each paused
+run counts one intentional pause as starvation; fresh resume counts zero.
+Worker now treats player_paused as intentional drain and re-primes on resume;
+player_paused is volatile across host/worker tasks. Final repeated lifecycles
+pass: CV3/SMW each1800frames plus fresh120, zero starvation in all four runs, all
+PCM completed and clean register/cache/MMU restoration/free.
+Physical first-resume video/cycle endpoints also match a fresh model loading
+those exact private Amiga checkpoints.
+
+Private hardware drawer: SD032G:Dev/NesHQState; normal installed apps unchanged.
+Evidence: amiga/records/2026-10-30/nestopia-reference/hq-states and docs/audio-states.md.
+Private captures/logs: parent .context/amiga/nestopia-review; first host version
+retained in hq-state-first. Do not publish ROMs, states or PCM captures.
+
+
+## 0.8.8 release — 30 October 2026
+
+The audio fix is now the release default for new games: HQ synthesis with NEON
+FIR, word clearing, square spans, uncached shared PCM and versioned HQ states.
+`python3 scripts/build_current.py --release-ax` selects the complete configuration.
+Legacy states load in quality0, re-save in v1 without conversion, and remain
+readable by the earlier player. Loading an HQ state switches back to quality1.
+Both paths keep the shared-PCM fix. Invalid envelopes cannot switch modes.
+
+Legacy PCM/video/cycle replay, fresh relocation, byte-identical legacy re-save,
+HQ-after-legacy and corrupt-state rejection pass for SMW/Castlevania/PAL fixture.
+Physical release tests: both titles1800frames save/load + HQ120 + legacy120;
+all six zero starvation and clean restoration. AX600 also zero starvation,
+all319,466 samples completed, clean shutdown. Final host adds mode diagnostics;
+ARM payload remains SHA2567c591054e80f1d4c5a5185c20e06cbe85ae7d601b16193a5a28f53e158abaffc.
+Current/native display tests, library20k/layout tests, worker/stream mocks and
+HQ/legacy launcher envelopes pass. ZIP/offline installer validations pass.
+
+Installed through the offline installer at the existing application drawer;
+previous files backed up and configuration CRCs unchanged. Source and release
+provenance: docs/release-build.json and amiga/records/2026-10-30/audio-release-0.8.8.
+No global AHI or firmware changes. Private hardware transcripts/ROMs/states and
+installer signing material remain outside Git. Post-install HQ300 and legacy120 checks passed with zero starvation and clean
+return; current launcher reopened, Core1 idle. Publishing v0.8.8-beta with ZIP,
+offline installer and checksum receipt; release-build.json records final hashes.

@@ -1,0 +1,62 @@
+[
+  {
+    "test": "cv3-save-hardware",
+    "original_log_sha256": "60f28b0bc3e1bb4218ce4e4237e20e2525e40335160ee40577694019e4252c44",
+    "end": "ZZFCEUX END exit=0 frames=1800 elapsed_us=41372825 core_total_us=20346054 output_hash=811c9dc5",
+    "audio": "AUDIO_OUTPUT mode=0002000e mix=22030 callbacks=1112 silence_queued=512 starvations=0",
+    "delivery": "AUDIO_TASK queued=958414 submitted=958414 completed=958414 highwater=9 error=0 stopped=1",
+    "restore": "MMU_RESTORE phase=3 register_mismatches=00000000 cpsr_control=1d3 expected=1d3 ttbr=10244000 ccsidr=701fe019 witness_bad=0 mailbox_rounds=2905",
+    "clean_return": true,
+    "state_loaded": true
+  },
+  {
+    "test": "smw-resume-hardware",
+    "original_log_sha256": "7ae67113eb21db219a1b48d84e204365ca26329a118560476be914b9bf90dfdb",
+    "end": "ZZFCEUX END exit=0 frames=120 elapsed_us=3267136 core_total_us=1400706 output_hash=811c9dc5",
+    "audio": "AUDIO_OUTPUT mode=0002000e mix=22030 callbacks=42 silence_queued=2 starvations=0",
+    "delivery": "AUDIO_TASK queued=63895 submitted=63895 completed=63895 highwater=9 error=0 stopped=1",
+    "restore": "MMU_RESTORE phase=3 register_mismatches=00000000 cpsr_control=1d3 expected=1d3 ttbr=10244000 ccsidr=701fe019 witness_bad=0 mailbox_rounds=177",
+    "clean_return": true,
+    "state_loaded": true
+  },
+  {
+    "test": "smw-legacy-hardware",
+    "original_log_sha256": "63835c627ba674fa200c09f2831438a6a4c1627724f33efc3e474fe0fe650ad6",
+    "end": "ZZFCEUX END exit=0 frames=120 elapsed_us=3245465 core_total_us=860016 output_hash=811c9dc5",
+    "audio": "AUDIO_OUTPUT mode=0002000e mix=22030 callbacks=42 silence_queued=2 starvations=0",
+    "delivery": "AUDIO_TASK queued=63889 submitted=63889 completed=63889 highwater=9 error=0 stopped=1",
+    "restore": "MMU_RESTORE phase=3 register_mismatches=00000000 cpsr_control=1d3 expected=1d3 ttbr=10244000 ccsidr=701fe019 witness_bad=0 mailbox_rounds=236",
+    "clean_return": true,
+    "state_loaded": true
+  },
+  {
+    "test": "smw-save-hardware",
+    "original_log_sha256": "92b67e201872bda646a867d7d2dc599339c2d44d6ebfac6f493c75ffb4ed4651",
+    "end": "ZZFCEUX END exit=0 frames=1800 elapsed_us=41485398 core_total_us=20917843 output_hash=811c9dc5",
+    "audio": "AUDIO_OUTPUT mode=0002000e mix=22030 callbacks=1117 silence_queued=516 starvations=0",
+    "delivery": "AUDIO_TASK queued=958414 submitted=958414 completed=958414 highwater=9 error=0 stopped=1",
+    "restore": "MMU_RESTORE phase=3 register_mismatches=00000000 cpsr_control=1d3 expected=1d3 ttbr=10244000 ccsidr=701fe019 witness_bad=0 mailbox_rounds=2727",
+    "clean_return": true,
+    "state_loaded": true
+  },
+  {
+    "test": "cv3-resume-hardware",
+    "original_log_sha256": "374a967f78aacb413c9aaf9e6a7309c7dd33ebe448e8e4ea3311bc139ee1848d",
+    "end": "ZZFCEUX END exit=0 frames=120 elapsed_us=3249258 core_total_us=1382805 output_hash=811c9dc5",
+    "audio": "AUDIO_OUTPUT mode=0002000e mix=22030 callbacks=42 silence_queued=2 starvations=0",
+    "delivery": "AUDIO_TASK queued=63895 submitted=63895 completed=63895 highwater=9 error=0 stopped=1",
+    "restore": "MMU_RESTORE phase=3 register_mismatches=00000000 cpsr_control=1d3 expected=1d3 ttbr=10244000 ccsidr=701fe019 witness_bad=0 mailbox_rounds=182",
+    "clean_return": true,
+    "state_loaded": true
+  },
+  {
+    "test": "cv3-legacy-hardware",
+    "original_log_sha256": "96af6465055eca01754970e692707c3b097df854e014306972324192d4c733ca",
+    "end": "ZZFCEUX END exit=0 frames=120 elapsed_us=3233646 core_total_us=743317 output_hash=811c9dc5",
+    "audio": "AUDIO_OUTPUT mode=0002000e mix=22030 callbacks=42 silence_queued=2 starvations=0",
+    "delivery": "AUDIO_TASK queued=63889 submitted=63889 completed=63889 highwater=9 error=0 stopped=1",
+    "restore": "MMU_RESTORE phase=3 register_mismatches=00000000 cpsr_control=1d3 expected=1d3 ttbr=10244000 ccsidr=701fe019 witness_bad=0 mailbox_rounds=235",
+    "clean_return": true,
+    "state_loaded": true
+  }
+]

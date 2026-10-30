@@ -1,0 +1,17 @@
+{
+  "version": "0.8.8-dev",
+  "installed": false,
+  "published": false,
+  "executables": {
+    "ZZNES": {
+      "bytes": 258680,
+      "sha256": "1a416aaafc34043cad697c80cfe4a6994a400565fd2c9116b835a265b38a466c"
+    },
+    "ZZFceux-ui": {
+      "bytes": 582612,
+      "sha256": "eb17abeab10dc40c90a6e65e2a81154f03697b76959a584261b49f6e17af48a4"
+    }
+  },
+  "arm": "byte-identical recorded image, mapping and relocations",
+  "hardware_final_matrix": "post-reboot: 3000 frames per emulator on AX and Paula, all PCM completed, zero reported starvation, clean restore/free"
+}

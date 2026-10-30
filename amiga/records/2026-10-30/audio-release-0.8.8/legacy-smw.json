@@ -1,0 +1,16 @@
+{
+  "test": "ARM instruction model, not physical hardware",
+  "rom_sha256": "b5cc8b38ce2b0149b7d90c612dd88d8c5fd58285f68c90e52f7485637e8107a9",
+  "baseline_elf_sha256": "6081f1c7f99c30bd72d24660e01f8f5c33c30fb197158317be19d04ff45fa274",
+  "candidate_elf_sha256": "7c591054e80f1d4c5a5185c20e06cbe85ae7d601b16193a5a28f53e158abaffc",
+  "pal": false,
+  "warmup": 180,
+  "replay_frames": 60,
+  "legacy_bytes": 15541,
+  "hq_bytes": 17485,
+  "legacy_exact_pcm_video_cycles": true,
+  "fresh_legacy": true,
+  "legacy_re_save_unchanged": true,
+  "hq_after_legacy": true,
+  "invalid_legacy_no_mutation": true
+}

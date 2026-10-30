@@ -135,3 +135,11 @@ inside the 320×240 frame. Side borders replace horizontal stretching; the pictu
 is narrower. Edge masks still hide their chosen margins. 2×/3× windows repeat
 every source pixel equally. Choose Sharp or Smooth for monitor aspect correction.
 Use Save settings to retain the choice. Older players do not accept this new mode.
+
+
+## Audio and saves (0.8.8)
+
+New games use high-quality synthesis. Existing saves resume with their original
+audio mode and can be saved again normally; no conversion is needed. Both modes
+use the corrected shared-PCM transfer. New HQ states preserve filter history and
+phase and require 0.8.8 or later. [Details](audio-states.md).

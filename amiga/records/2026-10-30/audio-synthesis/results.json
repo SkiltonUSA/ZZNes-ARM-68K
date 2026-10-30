@@ -1,0 +1,46 @@
+[
+  {
+    "variant": "HQ scalar",
+    "log": "coreq1-n-a2-w0-n3000-0.log",
+    "frames": 3000,
+    "elapsed_us": 60566529,
+    "core_us": 47204972,
+    "starvations": 474,
+    "core_time_reduction_percent": 0.0
+  },
+  {
+    "variant": "NEON FIR",
+    "log": "fir-n-a2-w0-n3000-0.log",
+    "frames": 3000,
+    "elapsed_us": 51863105,
+    "core_us": 38672025,
+    "starvations": 36,
+    "core_time_reduction_percent": 18.076373395582145
+  },
+  {
+    "variant": "NEON + word clear",
+    "log": "firc-n-a2-w0-n3000-0.log",
+    "frames": 3000,
+    "elapsed_us": 51121459,
+    "core_us": 37241999,
+    "starvations": 0,
+    "core_time_reduction_percent": 21.10577038367908
+  },
+  {
+    "variant": "NEON + clear + square spans",
+    "log": "span-n-a2-w0-n3000-0.log",
+    "frames": 3000,
+    "elapsed_us": 51153656,
+    "core_us": 34925875,
+    "starvations": 0,
+    "core_time_reduction_percent": 26.012295908151373
+  },
+  {
+    "variant": "NEON + clear long",
+    "log": "clr6-n-a2-w0-n6000-0.log",
+    "frames": 6000,
+    "elapsed_us": 101018932,
+    "core_us": 74560208,
+    "starvations": 0
+  }
+]

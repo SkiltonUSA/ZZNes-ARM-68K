@@ -1,0 +1,14 @@
+{
+  "ZZNES-0.8.8-dev-beta.zip": {
+    "bytes": 523379,
+    "sha256": "c679391fe91fb487f1e28af89533b2e2513b884b9c2f80d7f0e2a663798f6e48"
+  },
+  "ZZNES-0.8.8-dev-beta-amipkg.lha": {
+    "bytes": 1395441,
+    "sha256": "76fd9f7123600c888925f1f698945438fd6e82db0ae443b65b62b604426d9a0a"
+  },
+  "ZZNES-release.json": {
+    "bytes": 981,
+    "sha256": "25e7c45267aac823dafafa49a3afa805af948cbb19b631345d55da10a5abf4ad"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "frames": 600,
+  "audio": "AUDIO_OUTPUT mode=cafe0001 mix=32000 callbacks=276 silence_queued=75 starvations=0",
+  "delivery": "AUDIO_TASK queued=319466 submitted=319466 completed=319466 highwater=9 error=0 stopped=1",
+  "end": "ZZFCEUX END exit=0 frames=600 elapsed_us=11711178 core_total_us=6917750 output_hash=811c9dc5",
+  "clean_return": true,
+  "log_sha256": "2b3f6ff8f0837d942d440ac85e6e38644c13ae38072c66668c33145e33f1b228"
+}

@@ -1,0 +1,17 @@
+{
+  "version": "0.8.8-dev",
+  "installed": false,
+  "published": false,
+  "executables": {
+    "ZZNES": {
+      "bytes": 258680,
+      "sha256": "1a416aaafc34043cad697c80cfe4a6994a400565fd2c9116b835a265b38a466c"
+    },
+    "ZZFceux-ui": {
+      "bytes": 582956,
+      "sha256": "c5281a05fef694c550622312416f66be3595b404f3f234d36bd6164319ea6b2f"
+    }
+  },
+  "arm": "byte-identical recorded image, mapping and relocations",
+  "hardware_final_matrix": "HiFi selection build pending final smoke; matched private HiFi runs recorded separately"
+}

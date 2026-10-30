@@ -1,0 +1,72 @@
+{
+  "nestopia_commit": "27246144887c78154584515f530c61497e92cd05",
+  "captures": {
+    "smw-48000-f1-p0": {
+      "samples": 958357,
+      "seconds": 19.965770833333334,
+      "minimum": -7146,
+      "maximum": 8991,
+      "clipped": 0,
+      "rms": 2203.8906840697045,
+      "sha256": "746f24ef28b68e988235290b507beb02f35b27ef1d0799e4da0ffc8e29e2ce5e"
+    },
+    "smw-48000-f0-p0": {
+      "samples": 958357,
+      "seconds": 19.965770833333334,
+      "minimum": -12924,
+      "maximum": 15746,
+      "clipped": 0,
+      "rms": 3300.271358850044,
+      "sha256": "091893f95e51b81b5a5778802ec4baeb95b4a256a50380d173cf03f119685844"
+    },
+    "smw-32000-f1-p0": {
+      "samples": 638904,
+      "seconds": 19.96575,
+      "minimum": -7124,
+      "maximum": 8907,
+      "clipped": 0,
+      "rms": 2200.627563385085,
+      "sha256": "d492a874251120d7171f86fc29b47b5b6a1c1cedaa01d91f60a1a74f27b03f84"
+    },
+    "contra-48000-f1-p0": {
+      "samples": 958357,
+      "seconds": 19.965770833333334,
+      "minimum": -13713,
+      "maximum": 12276,
+      "clipped": 0,
+      "rms": 1866.7553452111742,
+      "sha256": "6342d93965d95fa44ad7c080f0afecfba62e3242d74853fc3df10b5e070a7a96"
+    },
+    "zznes-smw": {
+      "samples": 638940,
+      "seconds": 19.966875,
+      "minimum": -10949,
+      "maximum": 9052,
+      "clipped": 0,
+      "rms": 2227.073472131254,
+      "sha256": "13244703ef21328c2d0488b9b3446aa3b1bf8532f42b34b5e9ce0e59175f153e"
+    }
+  },
+  "pop_reducer_identical": true,
+  "instrumentation_pcm_identical": true,
+  "filter_variants_video_identical": true,
+  "writes": {
+    "matched_prefix": 12089,
+    "reference_total": 12100,
+    "frame_delta": {
+      "1": 12089
+    },
+    "cycle_delta_range": [
+      106,
+      119
+    ],
+    "dmc_enabled_writes": 0
+  },
+  "earlier_amiga_capture": {
+    "samples": 638940,
+    "different_samples": 78575,
+    "previous_frame_matches": 78505,
+    "affected_frames": 160
+  },
+  "scope": "Native reference and ARM instruction-model captures; no A9 performance claim."
+}

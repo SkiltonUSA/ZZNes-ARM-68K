@@ -7,10 +7,24 @@ from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 def run(a):subprocess.run(list(map(str,a)),cwd=ROOT,check=True)
 def main():
- p=argparse.ArgumentParser();p.add_argument('--release-ax',action='store_true',help='Build the current beta with configured AHI output and matching launcher');p.add_argument('--ax-audio-test',action='store_true',help='Isolated per-app ZZ9000AX AHI backend; unit 0 fallback');p.add_argument('--host-service-test',choices=('profile','batch4'),help='Isolated 68k cost profiling or four-frame AHI batch test');p.add_argument('--presentation-test',choices=('serial','overlap'),help='Isolated every-frame presentation test; periodic readbacks and automatic capture disabled');p.add_argument('--ack-poll-us',type=int,choices=(0,250),default=0,help='Experimental bounded fullscreen ACK register polling');p.add_argument('--audio-early',action='store_true',help='Experimental batch-ready AHI handoff before presentation');p.add_argument('--jit-registers',action='store_true',help='Experimental register-only A9 translation; 32 MiB executable cache');p.add_argument('--arm',action='store_true');p.add_argument('--optimisation',action='store_true');a=p.parse_args()
+ p=argparse.ArgumentParser();p.add_argument('--release-ax',action='store_true',help='Build the current beta with configured AHI output and matching launcher');p.add_argument('--ax-audio-test',action='store_true',help='Isolated per-app ZZ9000AX AHI backend; unit 0 fallback');p.add_argument('--host-service-test',choices=('profile','batch4'),help='Isolated 68k cost profiling or four-frame AHI batch test');p.add_argument('--presentation-test',choices=('serial','overlap'),help='Isolated every-frame presentation test; periodic readbacks and automatic capture disabled');p.add_argument('--ack-poll-us',type=int,choices=(0,250),default=0,help='Experimental bounded fullscreen ACK register polling');p.add_argument('--audio-early',action='store_true',help='Experimental batch-ready AHI handoff before presentation');p.add_argument('--jit-registers',action='store_true',help='Experimental register-only A9 translation; 32 MiB executable cache');p.add_argument('--arm',action='store_true');p.add_argument('--optimisation',action='store_true');p.add_argument('--reuse-arm-from',type=Path,help='Reuse recorded 0.8.7 ARM for host-only audio changes');p.add_argument("--audio-core-quality",type=int,choices=(0,1),help="Isolated matched ARM sound-synthesis experiment; requires --release-ax");p.add_argument("--audio-fir-neon",action="store_true",help="Isolated bit-exact HQ FIR SIMD; requires --audio-core-quality 1");p.add_argument("--audio-word-clear",action="store_true",help="Isolated aligned HQ wave-buffer clearing");p.add_argument("--audio-square-spans",action="store_true",help="Isolated event-bounded HQ square synthesis");p.add_argument("--audio-filter32",action="store_true",help="Isolated HQ anti-alias filter for the 32 kHz source");p.add_argument("--audio-interpreter",action="store_true",help="Isolated audio comparison using original CPU opcode bodies");p.add_argument("--audio-shared-uncached",action="store_true",help="Isolated uncached shared PCM transfer pages");p.add_argument("--audio-hq-states",action="store_true",help="Versioned HQ filter-history save states");a=p.parse_args()
+ if a.audio_hq_states and (a.audio_core_quality!=1 or a.audio_filter32):p.error("--audio-hq-states requires quality 1 with the original FIR")
+ if a.audio_interpreter and a.audio_core_quality is None:p.error("--audio-interpreter requires --audio-core-quality")
+ if a.audio_filter32 and a.audio_core_quality!=1:p.error("--audio-filter32 requires --audio-core-quality 1")
+ if a.audio_shared_uncached and a.audio_core_quality is None:p.error("--audio-shared-uncached requires --audio-core-quality")
+ if a.audio_square_spans and a.audio_core_quality!=1:p.error("--audio-square-spans requires --audio-core-quality 1")
+ if a.audio_word_clear and a.audio_core_quality!=1:p.error("--audio-word-clear requires --audio-core-quality 1")
+ if a.audio_fir_neon and a.audio_core_quality!=1:p.error("--audio-fir-neon requires --audio-core-quality 1")
+ if a.audio_core_quality is not None and (not a.release_ax or a.reuse_arm_from):p.error("--audio-core-quality requires --release-ax and a rebuilt ARM core")
+ if a.reuse_arm_from:p.error('Historical ARM reuse is not compatible with the HQ audio release')
  if a.release_ax:
   if a.ax_audio_test or a.presentation_test or a.host_service_test or a.audio_early or a.ack_poll_us:p.error('release build cannot include diagnostic options')
   a.arm=a.optimisation=a.jit_registers=True
+ release_hq=a.release_ax and a.audio_core_quality is None and not a.reuse_arm_from
+ if release_hq:
+  a.audio_core_quality=1
+  a.audio_fir_neon=a.audio_word_clear=a.audio_square_spans=True
+  a.audio_shared_uncached=a.audio_hq_states=True
  m=json.loads((ROOT/'docs/current-build.json').read_text());snap=ROOT/m['snapshot_dir'];source=snap/'source';out=ROOT/'.context/current-build';stage=out/'player';lib=out/'library'
  if a.optimisation:
   if not a.arm:p.error('optimisation candidate requires --arm')
@@ -35,6 +49,26 @@ def main():
   if a.presentation_test!='serial':p.error('--host-service-test requires --presentation-test serial')
   out=out.with_name(out.name+'-service-'+a.host_service_test);stage=out/'player';lib=out/'library'
  if a.release_ax:
+  m['version']=json.loads((ROOT/'development/ax-audio-20261029/release.json').read_text())['version']
+  out=ROOT/'.context/ax-release-build';stage=out/'player';lib=out/'library'
+ if a.audio_core_quality is not None:
+  out=ROOT/f'.context/audio-core-q{a.audio_core_quality}-build';stage=out/'player';lib=out/'library'
+  m['version']+=f' audio-q{a.audio_core_quality} test'
+ if a.audio_fir_neon:
+  out=out.with_name(out.name+"-neon");stage=out/"player";lib=out/"library";m["version"]+=" FIR SIMD"
+ if a.audio_word_clear:
+  out=out.with_name(out.name+"-clear");stage=out/"player";lib=out/"library";m["version"]+=" word clear"
+ if a.audio_square_spans:
+  out=out.with_name(out.name+"-spans");stage=out/"player";lib=out/"library";m["version"]+=" square spans"
+ if a.audio_filter32:
+  out=out.with_name(out.name+"-32k");stage=out/"player";lib=out/"library";m["version"]+=" 32k FIR"
+ if a.audio_interpreter:
+  out=out.with_name(out.name+"-interpreter");stage=out/"player";lib=out/"library";m["version"]+=" interpreter"
+ if a.audio_shared_uncached:
+  out=out.with_name(out.name+"-shared-pcm");stage=out/"player";lib=out/"library";m["version"]+=" shared PCM"
+ if a.audio_hq_states:
+  out=out.with_name(out.name+"-states");stage=out/"player";lib=out/"library";m["version"]+=" HQ states"
+ if release_hq:
   m['version']=json.loads((ROOT/'development/ax-audio-20261029/release.json').read_text())['version']
   out=ROOT/'.context/ax-release-build';stage=out/'player';lib=out/'library'
  shutil.copytree(snap/'build-inputs/player',stage,dirs_exist_ok=True);library_snap=ROOT/m['library_snapshot_dir']
@@ -70,9 +104,36 @@ def main():
    core=out/'core';shutil.copytree(source/'core',core,dirs_exist_ok=True)
    shutil.copytree(mapper/'core',core,dirs_exist_ok=True)
    shutil.copytree(mapper/'common',out/'common',dirs_exist_ok=True)
+  if a.audio_core_quality is not None:
+   p=core/'compat_core.cpp';text=p.read_text();assert text.count('FSettings.soundq=0;')==1
+   p.write_text(text.replace('FSettings.soundq=0;',f'FSettings.soundq={a.audio_core_quality};'))
+   p=stage/"host.c";p.write_text(p.read_text().replace("32kHz quality0",f"32kHz quality{a.audio_core_quality}"))
+  if a.audio_fir_neon:
+   from prepare_audio_fir import prepare
+   prepare(core,stage)
+   m["arm_sources"].append(str((stage/"audio_fir_neon.S").relative_to(ROOT)))
+  if a.audio_word_clear:
+   from prepare_audio_fir import prepare_clear
+   prepare_clear(core,stage)
+   m["arm_sources"].append(str((stage/"audio_clear.S").relative_to(ROOT)))
+  if a.audio_square_spans:
+   from prepare_audio_fir import prepare_square
+   prepare_square(core)
+  if a.audio_filter32:
+   from prepare_audio_fir import prepare_filter32
+   prepare_filter32(core)
   if a.jit_registers:
    from prepare_console_jit import prepare
    jit_begin=prepare(core,stage,snes,dispatch=True)
+   if a.audio_interpreter:
+    p=core/"x6502.cpp";text=p.read_text();assert text.count('#include "ops_dispatch.inc"')==1
+    p.write_text(text.replace('#include "ops_dispatch.inc"','#include "ops.inc"'))
+  if a.audio_shared_uncached:
+   from prepare_audio_publication import prepare
+   prepare(core)
+  if a.audio_hq_states:
+   from prepare_audio_states import prepare
+   prepare(core,stage,lib)
   if snes:
    prefix=json.loads(os.environ.get('ARM_BUILD_COMMAND','[]'))
    flags=m['arm_flags'];flags=[f for f in flags if not f.startswith('-I')];flags=[inside(source/'amiga/pocketsnes/libc_config.h')if f=='/work/amiga/pocketsnes/libc_config.h'else f for f in flags]
@@ -85,22 +146,26 @@ def main():
   if a.jit_registers:
    flags=[f.replace('0x3000000','0x6000000') if snes else f.replace('0x400000','0x3000000') for f in flags]
    flags+=['-DCJ_BEGIN='+hex(jit_begin)]
-  for i,relpath in enumerate(m['arm_sources']):
-   src=ROOT/relpath
-   if a.jit_registers and src.is_relative_to(source/'core'):src=core/src.relative_to(source/'core')
-   elif a.optimisation and (mapper/'core'/src.name).is_file():src=mapper/'core'/src.name
-   if src.parent==snap/'build-inputs/player':src=stage/src.name
-   obj=stage/f'{i}.o';objects.append(obj);cpp=src.suffix=='.cpp';cc=('arm-none-eabi-g++'if cpp else'arm-none-eabi-gcc')if snes else os.environ.get('CLANG','clang')
-   args=flags+(['-std=c++14','-fno-exceptions','-fno-rtti']+([]if snes else['-nostdinc++'])if cpp else[])
-   run(prefix+[cc,*args,'-c',inside(src)if prefix else src,'-o',inside(obj)if prefix else obj])
-  elf=stage/('pocket.elf'if snes else'fceux.elf');path=inside if prefix else str
-  if snes:
-   gcc=prefix+['arm-none-eabi-gcc','-mcpu=cortex-a9','-marm','-mfloat-abi=soft','-print-libgcc-file-name'];libgcc=subprocess.check_output(gcc,cwd=ROOT,text=True).strip()
-   run(prefix+['arm-none-eabi-ld','-shared','-Bsymbolic','--gc-sections','--exclude-libs=ALL','--no-undefined','-T',path(core/'payload.ld'),*map(path,objects),'--start-group',path(core/'libc.a'),libgcc,'--end-group','-o',path(elf)])
-  else:run([os.environ.get('LD_LLD','ld.lld'),'-shared','-Bsymbolic','--no-undefined','-T',core/'payload.ld',*objects,'-o',elf])
-  spec=importlib.util.spec_from_file_location('pack',core/'elf.py');pack=importlib.util.module_from_spec(spec);spec.loader.exec_module(pack);image,relocs,entry=pack.unpack(elf.read_bytes())
-  previous=(stage/'zz_payload.h').read_text();mapping=re.search(r'static const unsigned char zz_mapping_probe\[\]=\{[^}]+\};',previous).group()
-  (stage/'zz_payload.h').write_text(f'#define ZZ_ENTRY {entry}u\nstatic const unsigned char zz_image[]={{'+','.join(map(str,image))+'};\n'+mapping+'\nstatic const unsigned long zz_relocations[]={'+','.join(map(str,relocs))+'};\n')
+  if a.reuse_arm_from:
+   from reuse_release_arm import header
+   (stage/'zz_payload.h').write_text(header(a.reuse_arm_from.read_bytes()))
+  else:
+   for i,relpath in enumerate(m['arm_sources']):
+    src=ROOT/relpath
+    if a.jit_registers and src.is_relative_to(source/'core'):src=core/src.relative_to(source/'core')
+    elif a.optimisation and (mapper/'core'/src.name).is_file():src=mapper/'core'/src.name
+    if src.parent==snap/'build-inputs/player':src=stage/src.name
+    obj=stage/f'{i}.o';objects.append(obj);cpp=src.suffix=='.cpp';cc=('arm-none-eabi-g++'if cpp else'arm-none-eabi-gcc')if snes else os.environ.get('CLANG','clang')
+    args=flags+(['-std=c++14','-fno-exceptions','-fno-rtti']+([]if snes else['-nostdinc++'])if cpp else[])
+    run(prefix+[cc,*args,'-c',inside(src)if prefix else src,'-o',inside(obj)if prefix else obj])
+   elf=stage/('pocket.elf'if snes else'fceux.elf');path=inside if prefix else str
+   if snes:
+    gcc=prefix+['arm-none-eabi-gcc','-mcpu=cortex-a9','-marm','-mfloat-abi=soft','-print-libgcc-file-name'];libgcc=subprocess.check_output(gcc,cwd=ROOT,text=True).strip()
+    run(prefix+['arm-none-eabi-ld','-shared','-Bsymbolic','--gc-sections','--exclude-libs=ALL','--no-undefined','-T',path(core/'payload.ld'),*map(path,objects),'--start-group',path(core/'libc.a'),libgcc,'--end-group','-o',path(elf)])
+   else:run([os.environ.get('LD_LLD','ld.lld'),'-shared','-Bsymbolic','--no-undefined','-T',core/'payload.ld',*objects,'-o',elf])
+   spec=importlib.util.spec_from_file_location('pack',core/'elf.py');pack=importlib.util.module_from_spec(spec);spec.loader.exec_module(pack);image,relocs,entry=pack.unpack(elf.read_bytes())
+   previous=(stage/'zz_payload.h').read_text();mapping=re.search(r'static const unsigned char zz_mapping_probe\[\]=\{[^}]+\};',previous).group()
+   (stage/'zz_payload.h').write_text(f'#define ZZ_ENTRY {entry}u\nstatic const unsigned char zz_image[]={{'+','.join(map(str,image))+'};\n'+mapping+'\nstatic const unsigned long zz_relocations[]={'+','.join(map(str,relocs))+'};\n')
  if a.ack_poll_us:
   from prepare_ack_poll import prepare
   prepare(stage)
@@ -129,5 +194,5 @@ def main():
  if a.optimisation:
   from build_scanlines import build
   build(out)
- print('PASS: rebuilt',m['console'],'ARM recompiled'if a.arm else'with verified ARM payload','at',out)
+ print('PASS: rebuilt',m['console'],'with preserved release ARM payload'if a.reuse_arm_from else'ARM recompiled'if a.arm else'with verified ARM payload','at',out)
 if __name__=='__main__':main()

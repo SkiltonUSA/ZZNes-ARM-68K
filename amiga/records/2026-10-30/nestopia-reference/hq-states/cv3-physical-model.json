@@ -1,0 +1,7 @@
+{
+  "physical_checkpoint_loaded": true,
+  "first_resume_cycles": 12358910,
+  "first_resume_video_hash": "29424088",
+  "matches_relocated_model": true,
+  "scope": "first resumed video/cycle endpoint; no physical PCM capture in this test"
+}

@@ -1,3 +1,11 @@
+# Current download: ZZNES 0.8.8 Beta
+
+Use the [release ZIP or offline installer](https://github.com/SkiltonUSA/ZZNes-ARM-68K/releases/tag/v0.8.8-beta).
+The checked-in artifacts below are historical. Current build and executable
+hashes are recorded in `docs/release-build.json`.
+
+---
+
 # Current release: ZZNES 0.7.1 Beta
 
 Complete executable package: `beta-0.7.1/`. Includes direct ZIP loading and the

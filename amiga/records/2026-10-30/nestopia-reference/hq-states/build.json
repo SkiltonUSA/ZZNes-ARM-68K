@@ -1,0 +1,19 @@
+{
+  "command": "python3 scripts/build_current.py --release-ax --audio-core-quality 1 --audio-fir-neon --audio-word-clear --audio-square-spans --audio-shared-uncached --audio-hq-states",
+  "files": {
+    "ZZFceux-ui": {
+      "size": 584240,
+      "sha256": "e15def78b0560b146632a9b1885de88cb96791cecb2d397d27c65a9ebe24b906"
+    },
+    "ZZNES": {
+      "size": 259212,
+      "sha256": "d97ebd967d84a2cbd23d4402d0237daccc41e374c039c50af3b2ee4019e69466"
+    },
+    "player/fceux.elf": {
+      "size": 716832,
+      "sha256": "0b97c2ba6e24e774a7c68dc5b7632c7396fb3a2eddf1ea96f73c0256a2078a50"
+    }
+  },
+  "baseline_missing_history": "Original HQ player fails same-process replay at the first frame.",
+  "playback_equivalence": "180 Castlevania III frames: identical CPU/video/PCM with and without state changes; NEON register preservation passed."
+}

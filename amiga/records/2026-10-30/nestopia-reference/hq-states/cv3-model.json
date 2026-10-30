@@ -1,0 +1,13 @@
+{
+  "test": "ARM instruction model, not physical hardware",
+  "rom_sha256": "1c7b2ed2c1fb5839a6764006aa476f5c9d48f99465b6141980f3a5af1dfec0d6",
+  "elf_sha256": "0b97c2ba6e24e774a7c68dc5b7632c7396fb3a2eddf1ea96f73c0256a2078a50",
+  "pal": false,
+  "warmup": 180,
+  "replay_frames": 90,
+  "state_bytes": 18560,
+  "pcm_sha256": "dde2339b83b3611634718e937bb0a3a80ae05b63c8178d631fd1c567502d995a",
+  "same_process": true,
+  "fresh_relocated_process": true,
+  "invalid_states_unchanged": true
+}

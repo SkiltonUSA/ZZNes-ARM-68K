@@ -1,0 +1,20 @@
+[
+  {
+    "test": "installed-cv3-resume",
+    "log_sha256": "df6882d13ad6178065f49e82ca2b420f1ca8d2b0a2db8b2664dd52336706ae7c",
+    "mode": "STATE synthesis=HQ",
+    "end": "ZZFCEUX END exit=0 frames=300 elapsed_us=6146559 core_total_us=3462925 output_hash=811c9dc5",
+    "audio": "AUDIO_OUTPUT mode=00000000 mix=0 callbacks=0 silence_queued=0 starvations=0",
+    "delivery": "AUDIO_TASK queued=159737 submitted=159737 completed=159737 highwater=6 error=0 stopped=1",
+    "clean_return": true
+  },
+  {
+    "test": "installed-cv3-legacy",
+    "log_sha256": "9e712ada78a491199a47b77b1c55351da3d455f7ceb9afeb2044ac31844d96bf",
+    "mode": "STATE synthesis=legacy",
+    "end": "ZZFCEUX END exit=0 frames=120 elapsed_us=3146598 core_total_us=743188 output_hash=811c9dc5",
+    "audio": "AUDIO_OUTPUT mode=00000000 mix=0 callbacks=0 silence_queued=0 starvations=0",
+    "delivery": "AUDIO_TASK queued=63889 submitted=63889 completed=63889 highwater=6 error=0 stopped=1",
+    "clean_return": true
+  }
+]

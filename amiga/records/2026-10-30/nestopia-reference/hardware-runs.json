@@ -1,0 +1,89 @@
+[
+  {
+    "variant": "original triple-read probe",
+    "frames": 1200,
+    "pcm_probe": "PCM_PROBE_SUMMARY frames=1200 first=249 second=214 byte=176",
+    "audio_output": "AUDIO_OUTPUT mode=0002000e mix=22030 callbacks=436 silence_queued=36 starvations=13",
+    "audio_task": "AUDIO_TASK queued=638940 submitted=638940 completed=638940 highwater=9 error=0 stopped=1",
+    "end": "ZZFCEUX END exit=0 frames=1200 elapsed_us=23788663 core_total_us=13971528 output_hash=811c9dc5",
+    "clean_return": true,
+    "log_sha256": "0ce2e1ea0323ee566c945f3e58abf0b7274ad041ed1be049ecc3abe9992ad456"
+  },
+  {
+    "variant": "barrier before clean",
+    "frames": 1200,
+    "pcm_probe": "PCM_PROBE_SUMMARY frames=1200 first=305 second=268 byte=225",
+    "audio_output": "AUDIO_OUTPUT mode=0002000e mix=22030 callbacks=421 silence_queued=21 starvations=19",
+    "audio_task": "AUDIO_TASK queued=638940 submitted=638940 completed=638940 highwater=9 error=0 stopped=1",
+    "end": "ZZFCEUX END exit=0 frames=1200 elapsed_us=23481445 core_total_us=13968435 output_hash=811c9dc5",
+    "clean_return": true,
+    "log_sha256": "ee569436ef6b07f7db199ebf4793172db7795fdd3b24bfe3f8bba8942308e765"
+  },
+  {
+    "variant": "INVALID: unused header changed",
+    "frames": 1200,
+    "pcm_probe": "PCM_PROBE_SUMMARY frames=1200 first=273 second=236 byte=204",
+    "audio_output": "AUDIO_OUTPUT mode=0002000e mix=22030 callbacks=422 silence_queued=22 starvations=20",
+    "audio_task": "AUDIO_TASK queued=638940 submitted=638940 completed=638940 highwater=9 error=0 stopped=1",
+    "end": "ZZFCEUX END exit=0 frames=1200 elapsed_us=23505416 core_total_us=13963309 output_hash=811c9dc5",
+    "clean_return": true,
+    "log_sha256": "6c8f708303fb5b2d944c7f7b1305785324dee81600b061eda57c217da490826b"
+  },
+  {
+    "variant": "uncached PCM triple-read probe",
+    "frames": 1200,
+    "pcm_probe": "PCM_PROBE_SUMMARY frames=1200 first=0 second=0 byte=0",
+    "audio_output": "AUDIO_OUTPUT mode=0002000e mix=22030 callbacks=420 silence_queued=20 starvations=18",
+    "audio_task": "AUDIO_TASK queued=638940 submitted=638940 completed=638940 highwater=9 error=0 stopped=1",
+    "end": "ZZFCEUX END exit=0 frames=1200 elapsed_us=23490846 core_total_us=13992771 output_hash=811c9dc5",
+    "clean_return": true,
+    "log_sha256": "81f6bf1962530a35f22067ac17b3dc23a06b3c614620dcac041ddf5fbcb8e67e"
+  },
+  {
+    "variant": "uncached PCM normal player",
+    "frames": 3000,
+    "audio_output": "AUDIO_OUTPUT mode=0002000e mix=22030 callbacks=1002 silence_queued=2 starvations=0",
+    "audio_task": "AUDIO_TASK queued=1597361 submitted=1597361 completed=1597361 highwater=9 error=0 stopped=1",
+    "end": "ZZFCEUX END exit=0 frames=3000 elapsed_us=51120224 core_total_us=34587053 output_hash=811c9dc5",
+    "clean_return": true,
+    "log_sha256": "e7751a7a4f6800493602a923a5c8efaab12df2460c56b154a17223743495188c"
+  },
+  {
+    "variant": "uncached PCM longer run; incomplete target",
+    "requested_frames": 6000,
+    "completed_frames": 5891,
+    "exit_trigger": "not established",
+    "audio_output": "AUDIO_OUTPUT mode=0002000e mix=22030 callbacks=1966 silence_queued=2 starvations=0",
+    "audio_task": "AUDIO_TASK queued=3136693 submitted=3136693 completed=3136693 highwater=9 error=0 stopped=1",
+    "end": "ZZFCEUX END exit=0 frames=5891 elapsed_us=99200984 core_total_us=67974533 output_hash=811c9dc5",
+    "clean_return": true,
+    "log_sha256": "fd310aa19428df3b922f2784b5c8d3236ce18fbcece826fd3952abb222e32184"
+  },
+  {
+    "variant": "Contra windowed control",
+    "requested_frames": 1800,
+    "status": "not launched: preflight found a concurrent Core1 application",
+    "hardware_changed": false
+  },
+  {
+    "variant": "Castlevania III USA / corrected HQ / Paula / fullscreen",
+    "frames": 1800,
+    "audio_output": "AUDIO_OUTPUT mode=0002000e mix=22030 callbacks=647 silence_queued=47 starvations=0",
+    "audio_task": "AUDIO_TASK queued=958414 submitted=958414 completed=958414 highwater=9 error=0 stopped=1",
+    "end": "ZZFCEUX END exit=0 frames=1800 elapsed_us=32041151 core_total_us=20672520 output_hash=811c9dc5",
+    "clean_return": true,
+    "listening": "clean",
+    "log_sha256": "0a9d3f37eaf5260193ba16dd564a09ae0deea0c50e1c1a875a9af1855790f3f8"
+  },
+  {
+    "variant": "Contra / corrected HQ / Paula / windowed control",
+    "frames": 1800,
+    "audio_output": "AUDIO_OUTPUT mode=0002000e mix=22030 callbacks=624 silence_queued=24 starvations=0",
+    "audio_task": "AUDIO_TASK queued=958414 submitted=958414 completed=958414 highwater=9 error=0 stopped=1",
+    "end": "ZZFCEUX END exit=0 frames=1800 elapsed_us=31602700 core_total_us=19708559 output_hash=811c9dc5",
+    "clean_return": true,
+    "display_faults": 0,
+    "listening": "not separately assessed",
+    "log_sha256": "2c880f726ccfca867539359a1427708bdc82cf73a752bf81ff84685b13c6f04d"
+  }
+]

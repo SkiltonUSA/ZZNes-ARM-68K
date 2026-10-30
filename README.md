@@ -1,4 +1,4 @@
-# ZZNES — 0.8.7 Beta
+# ZZNES — 0.8.8 Beta
 
 <img src="docs/screenshots/logo.png" width="160" alt="ZZNES logo">
 
@@ -9,15 +9,15 @@ files, controls, display coordination and batched AHI audio.
 
 This beta needs **48 MiB of allocatable ZZ9000 RAM**, plus display and AmigaOS memory.
 
-**[Download 0.8.7 Beta — installer or ZIP](https://github.com/SkiltonUSA/ZZNes-ARM-68K/releases/tag/v0.8.7-beta)** ·
+**[Download 0.8.8 Beta — installer or ZIP](https://github.com/SkiltonUSA/ZZNes-ARM-68K/releases/tag/v0.8.8-beta)** ·
 [Installation](docs/package-manager.md) · [User guide](docs/current-guide.md) ·
 [Changes](CHANGELOG.md) · [Interface gallery](docs/current-interface.md)
 
-**New:** selectable higher-quality Paula audio and 2×/3× windows. [Changes and tests](docs/output-quality.md).
+**New:** corrected audio transfer, faster high-quality synthesis and compatible save states. [Sound fix and measurements](docs/audio-synthesis.md).
 
-Published app version: **0.8.7-dev**.
+Published app version: **0.8.8-dev**.
 
-**0.8.7 Beta** adds [Native columns](docs/native-columns.md): equal-width NES pixels with side borders for horizontal scrolling.
+**0.8.8 Beta** fixes stale PCM samples that caused instrument distortion. New games use high-quality audio; existing saves retain their original synthesis mode. [Save compatibility](docs/audio-states.md).
 
 ![ZZNES interface](docs/screenshots/interface.png)
 
@@ -34,9 +34,21 @@ Published app version: **0.8.7-dev**.
 - **F7** scanline control: Xanxi FPGA effects in fullscreen; Soft software filtering in a window.
 - Optional FPS overlay, aspect correction, border artwork, overscan masks and **F9** screenshots.
 - Selectable audio: Auto, configured AHI, Paula 14-bit at 22.05/28 kHz, or explicit ZZ9000AX; system preferences stay unchanged.
-- Five save-state slots per game, with save, load, resume and delete.
+- Five save-state slots per game, with save, load, resume and delete; HQ filter history and legacy-save support.
 - Joystick testing and live ZZ9000 temperature beside the version.
 - Automatic PAL/NTSC timing; mapper 3/Cybernoid and mapper 78/Holy Diver compatibility fixes.
+
+## Sound correction
+
+The ARM-to-68k PCM buffer could return samples from the previous frame. Mapping
+that shared window as noncacheable fixed the observed corruption; private core
+buffers remain cached. A physical 638,940-sample capture matched the ARM
+reference exactly, followed by clean listening checks in Super Mario World and
+Castlevania III. Nestopia was used as an independent reference, not as a replacement core.
+
+NEON FIR filtering, word clearing and event-bounded square synthesis reduced
+measured HQ **core time by 26.01%** against the scalar HQ build. This is processing
+headroom, not a playback-FPS increase. [Method, results and limits](docs/audio-synthesis.md).
 
 ## Specifications
 
@@ -47,7 +59,7 @@ Published app version: **0.8.7-dev**.
 | Host processor | 68020 instruction set; AmigaOS, files, input, display coordination and AHI |
 | Owned ZZ9000 RAM | 48 MiB, including 32 MiB executable reserve; plus display/OS allocations |
 | ROM formats | iNES .nes; single-ROM .zip |
-| Audio | 32 kHz mono, selectable AHI/Paula/ZZ9000AX output |
+| Audio | 32 kHz mono; HQ synthesis for new games, legacy synthesis for old saves; selectable AHI/Paula/ZZ9000AX output |
 | Display | Picasso96 fullscreen or Workbench window; optional scaling, borders and FPS |
 | Scanlines | Fullscreen FPGA Classic / Soft / Gradient; windowed ARM Soft |
 | Enabled mappers | 0, 1, 2, 3, 4, 5, 78, 90 within the supported iNES contract |

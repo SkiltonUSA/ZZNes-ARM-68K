@@ -1,0 +1,2 @@
+PASS ntsc: unity DC; passband 0-8 kHz within 0.8 dB; stopband -58.23 dB; safe products
+PASS pal: unity DC; passband 0-8 kHz within 0.8 dB; stopband -61.04 dB; safe products

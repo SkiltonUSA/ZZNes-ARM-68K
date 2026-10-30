@@ -1,0 +1,1 @@
+PASS 10000 square-wave spans: exact samples/phase/counter, zero/negative counters, wrap and bounds

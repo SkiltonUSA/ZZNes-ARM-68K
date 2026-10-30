@@ -1,4 +1,4 @@
-ZZNES 0.8.7 Beta (tested 0.8.7-dev executables)
+ZZNES 0.8.8 Beta (tested 0.8.8-dev executables)
 
 INSTALLER: extract the -beta-amipkg.lha archive, open its drawer and double-click
 Install. Choose a parent drawer; ZZNES is created inside it. To specify an exact
@@ -12,6 +12,8 @@ This build requires 48 MiB allocatable ZZ9000 RAM plus display/OS memory.
 Audio output: Auto upgrades a configured Paula output to per-app 14-bit /
 22.05 kHz. Other configured outputs stay unchanged. Display also offers Paula
 28 kHz, configured AHI unit 0 and explicit ZZ9000AX. No global AHI changes.
+New games use HQ synthesis. Existing low-quality saves load in their original
+audio mode; both modes use the corrected PCM transfer. HQ saves require 0.8.8+.
 Screenshots deliberately pause playback while the picture is saved.
 Choose Save settings after changing audio output. Reopen old launchers after updating.
 
@@ -33,7 +35,7 @@ SHA256-checked archives. PackageManager holds its receipts/cache. Installation
 is not fully transactional; keep a backup before upgrading. Use Install again
 for updates, not the offline placeholder repository URL. No online feed exists.
 
-Release and source: https://github.com/SkiltonUSA/ZZNes-ARM-68K/releases/tag/v0.8.7-beta
+Release and source: https://github.com/SkiltonUSA/ZZNes-ARM-68K/releases/tag/v0.8.8-beta
 
 Display > Scaling > Native columns keeps all 256 NES columns equally wide,
 with side borders. Sharp and Smooth remain available. Save settings to keep

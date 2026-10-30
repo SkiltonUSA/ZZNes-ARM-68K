@@ -1,32 +1,33 @@
-# ZZNES 0.8.7 Beta validation
+# ZZNES 0.8.8 Beta validation
 
-Matching 0.8.7-dev launcher/player binaries from the installed and tested Native
-columns build. [Executable hashes](release-build.json).
+The matching launcher/player include corrected shared PCM, optimized HQ synthesis
+and legacy-state support. [Executable hashes](release-build.json).
 
 | Asset | Bytes | SHA256 |
 | --- | ---: | --- |
-| `ZZNES-0.8.7-dev-beta-amipkg.lha` | 1392021 | `08ec5281282bf3b670501b208e944f9b5907e90630297b325dc0e827b9f4c872` |
-| `ZZNES-0.8.7-dev-beta.zip` | 521740 | `3c2af263bec8640c5b66795a323ca9d3a1cbee8db689cb3d34d1a289a0d98a61` |
-| `ZZNES-release.json` | 981 | `8b09120060d05d3233c09e4e8a5a9a60bb13f6dc53be6084352cdb4d9280ca58` |
+| `ZZNES-0.8.8-dev-beta.zip` | 523379 | `c679391fe91fb487f1e28af89533b2e2513b884b9c2f80d7f0e2a663798f6e48` |
+| `ZZNES-0.8.8-dev-beta-amipkg.lha` | 1395441 | `76fd9f7123600c888925f1f698945438fd6e82db0ae443b65b62b604426d9a0a` |
+| `ZZNES-release.json` | 981 | `25e7c45267aac823dafafa49a3afa805af948cbb19b631345d55da10a5abf4ad` |
 
 ## Checks and limits
 
-Native sanitizer, relocated ARM pixel/reference, legacy settings and compact
-MUI tests pass. Super Mario World hardware checks cover fullscreen and 3×
-windows: four exact pixel readbacks in each 180-frame verification run, followed
-by 600-frame normal runs with complete PCM delivery and zero starvation
-transitions. Clean register/cache/MMU restoration and owned-memory release pass.
-Verification stalls audio; it is not a performance measurement. The exact
-reported scrolling symptom still needs visual confirmation.
+- HQ and legacy saves reproduce PCM/video/cycles in fresh relocated ARM models;
+  legacy re-saves remain byte-identical. Invalid states reject before mutation.
+- Castlevania III and Super Mario World each pass 1,800 physical frames with
+  pause/save/load, a 120-frame HQ resume and a 120-frame legacy resume. All six
+  runs report zero starvation, complete PCM delivery and clean restoration/free.
+- ZZ9000AX completes 600 HQ frames and 319,466 samples with zero starvation.
+- The final installed player passes a further 300-frame HQ resume and 120-frame
+  legacy resume, with the expected synthesis mode, zero starvation and clean exit.
+- Current native/ARM display tests, 20,000-entry library and compact layout tests,
+  audio-worker/stream tests and state-envelope sanitizer checks pass.
+- ZIP/installer byte equivalence, signatures, file hashes, dependency checks,
+  corruption rejection and private-data exclusions pass. The exact offline
+  installer completed on the Amiga; installed executable checksums match and
+  existing library/session/audio settings were preserved. Previous files were backed up.
 
-[Native-column evidence](native-columns.md) records the runs and limits.
-[Previous audio release validation](output-quality-release-validation.md)
-remains historical evidence for the unchanged audio code, not a rerun on 0.8.7.
-
-The refreshed ZIP and offline amipkg installer pass payload byte-equivalence,
-executable and member hashes, Ed25519 signature verification, corrupt-catalogue
-rejection, dependency-first recipe checks, icons and private-data exclusions.
-The packaging framework is unchanged. The 0.8.7 binaries were installed and
-checked on hardware; this new installer archive was validated locally, not
-rerun on the Amiga. Existing user preferences are preserved; select
-Display → Scaling → Native columns and save settings to use the new mode.
+[Release measurements](../amiga/records/2026-10-30/audio-release-0.8.8/) and
+[sound diagnosis](audio-synthesis.md) record the evidence. Fresh games use HQ;
+legacy saves keep their original synthesis mode. These bounded tests do not
+establish whole-game compatibility or a new FPS gain. Nestopia is a reference,
+not a replacement core. Global AHI preferences and firmware remain unchanged.

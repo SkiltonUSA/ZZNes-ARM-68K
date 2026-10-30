@@ -1,0 +1,16 @@
+{
+  "source": "https://gitlab.com/jgemu/nestopia",
+  "commit": "27246144887c78154584515f530c61497e92cd05",
+  "compiler": "Apple clang version 21.0.0 (clang-2100.3.34.2)\nTarget: arm64-apple-darwin27.0.0\nThread model: posix\nInstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin\n",
+  "flags": [
+    "clang++",
+    "-std=c++98",
+    "-O2",
+    "-DNDEBUG",
+    "-DNST_NO_ZLIB"
+  ],
+  "source_files": 293,
+  "apu_trace": false,
+  "harness_sha256": "5f802cb08380dc0c3a69bb1ab5f3ca5d2c63b91e0434c59fa02c645d457363f6",
+  "executable_sha256": "10797920407fafd3818fbf83a871c68017d9592ab6ac0061e800503ef0b0810f"
+}

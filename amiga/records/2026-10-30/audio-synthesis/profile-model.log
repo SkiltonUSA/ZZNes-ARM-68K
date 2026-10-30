@@ -1,0 +1,17 @@
+ARM-model executed instructions (not cycles): 27616651
+ 31.09%    8587357 _Z14NeoFilterSoundPiS_jS_
+ 12.37%    3416426 _ZL11RefreshLinei
+  9.18%    2534610 _Z12FCEUPPU_Loopi
+  7.16%    1978392 memset
+  6.92%    1911657 _Z14X6502_RunDebugi
+  6.03%    1665385 _Z9nes_framehPFivE
+  4.01%    1107873 _ZL6M90PPUj
+  3.89%    1073628 _ZL6RDoSQ1v
+  3.89%    1073604 _ZL6RDoSQ2v
+  3.48%     961990 _ZL8RDoNoisev
+  3.24%     893689 _Z17FlushEmulateSoundv
+  2.14%     591730 _Z17FCEU_SoundCPUHooki
+  1.62%     447482 _ZL11RDoTrianglev
+  1.62%     446867 _Z6RDoPCMv
+  1.14%     316140 _Z6CartBRj
+  0.71%     195360 _Z7CPUWrapi

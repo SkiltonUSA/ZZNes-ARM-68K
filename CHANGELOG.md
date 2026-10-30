@@ -1,5 +1,16 @@
 # Changelog
 
+## 0.8.8 Beta — audio correction and HQ synthesis
+
+- Keep the AX device clock at 32 kHz independently of the source PCM clock.
+- Detect missing AX startup callbacks and fall back to configured AHI instead of filling the queue and exiting.
+- Prefer Paula HiFi mixing when available, with regular 14-bit fallback.
+- High-quality synthesis: bit-exact NEON FIR, word clearing and square-wave spans reduce measured core time 26.01%; zero starvation in the 3,000-frame comparison. The subsequent shared-PCM fix resolves the observed instrument distortion; enabled for new games. [Report](docs/audio-synthesis.md).
+- Map the host-facing PCM pages uncached/shared: the physical capture matches all 638,940 reference samples, with clean Super Mario World and Castlevania III listening checks.
+- Add versioned HQ FIR-history/phase states with exact fresh-process replay; legacy low-quality saves load in their original synthesis mode and remain compatible when saved again. [State format and tests](docs/audio-states.md).
+- Recognise deliberate pause-to-silence transitions and re-prime AHI on resume.
+- [Measurements and limitations](docs/audio-crackle.md).
+
 ## 0.8.7 Beta — native columns
 
 - Add Native columns beside Sharp/Smooth: centre all 256 source columns without uneven repetition or reduction. Existing edge masks still apply.

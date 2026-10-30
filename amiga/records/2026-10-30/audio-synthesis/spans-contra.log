@@ -1,0 +1,1 @@
+PASS 180 frames: exact=True fallback=False; identical CPU/video endpoints; q0/q1 samples=[95834, 95834], peaks=[9248, 9248], audio differences=0

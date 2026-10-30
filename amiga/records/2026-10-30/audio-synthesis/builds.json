@@ -1,0 +1,39 @@
+{
+  "audio-core-q1-build": {
+    "ZZFceux-ui": "1a48d5fdd08c46e4118484e83490bf4676e9f411b97c7ce3309a95434b16aa57",
+    "player/fceux.elf": "1b9ebf22328642730035e09f8bdd739d039a9068366f365c25a989f8f91d818a",
+    "core/compat_core.cpp": "218ae3cd863b207ecd3a7b3b5bd68536b64ec5b125b969c9ff464a18d003bfa0",
+    "core/sound.cpp": "ddd09769845ef4b833b9ac7d69a1b2bff0e2767301114dd5ae8e34af1fcba56c",
+    "core/filter.cpp": "7f8c7996ab4af938a84b03cd8d62f74de477d9be9687f9c2bf9d77ef0045018b"
+  },
+  "audio-core-q1-build-neon": {
+    "ZZFceux-ui": "58880da11d9f654873b9932ee6d10b0273da13f24e6310e9f8bde5d9128a9568",
+    "player/fceux.elf": "2dc2203727478e65225ca785f5e626b6be142016ede9ffcdb297a0c313c6a0af",
+    "core/compat_core.cpp": "218ae3cd863b207ecd3a7b3b5bd68536b64ec5b125b969c9ff464a18d003bfa0",
+    "core/sound.cpp": "ddd09769845ef4b833b9ac7d69a1b2bff0e2767301114dd5ae8e34af1fcba56c",
+    "core/filter.cpp": "0d9bdbacb7655be559f15d91cddef231ea6bcfb368e665fa40d236fa703cadb7"
+  },
+  "audio-core-q1-build-neon-clear": {
+    "ZZFceux-ui": "4397cf5cea6fdcc9a057cad4a344ef333152824402ad3b1ca30e425eebc835b7",
+    "player/fceux.elf": "f2e601cc0946132abdb7ce85b67f4eaebc037fb12dc1dbfed9890931ced5a60c",
+    "core/compat_core.cpp": "218ae3cd863b207ecd3a7b3b5bd68536b64ec5b125b969c9ff464a18d003bfa0",
+    "core/sound.cpp": "34a6c6aa46834c5bfb1a8e97190e7c2929a1ac5c89102e7d809c039910c177aa",
+    "core/filter.cpp": "0d9bdbacb7655be559f15d91cddef231ea6bcfb368e665fa40d236fa703cadb7"
+  },
+  "audio-core-q1-build-neon-clear-spans": {
+    "ZZFceux-ui": "4d9d777c2e8c85e123bbeb6d4b6af5485badf1d6c569fbf5e6626ae408971318",
+    "player/fceux.elf": "23488b3c7c8fc9fd1e887f262df39df32d7d91077794c14e863e7f485298c697",
+    "core/compat_core.cpp": "218ae3cd863b207ecd3a7b3b5bd68536b64ec5b125b969c9ff464a18d003bfa0",
+    "core/sound.cpp": "0c1b2bdb7bfdcd3fb4be0d0a77fd0bc0c1a5a252ee9d90a27bb88f3e0f65995a",
+    "core/filter.cpp": "0d9bdbacb7655be559f15d91cddef231ea6bcfb368e665fa40d236fa703cadb7",
+    "final_debug_elf_sha256": "b84e604e8eba8ed76434f9094aee5ca7e7e8972254b92486b218babe4b66732b",
+    "rebuild_note": "Final rebuild after header formatting: installed-test executable SHA256 unchanged; ELF debug metadata differs."
+  },
+  "audio-core-q1-build-neon-clear-spans-32k": {
+    "ZZFceux-ui": "64d009701ee1191f7fc9caa98cf7ddcb27f209b8e2fcb69882962704a1ae0b51",
+    "player/fceux.elf": "af421a9273cf2cf17fa2351e7faf6f96099769e9425c5ef05cd1055ac4192e86",
+    "core/compat_core.cpp": "218ae3cd863b207ecd3a7b3b5bd68536b64ec5b125b969c9ff464a18d003bfa0",
+    "core/sound.cpp": "0c1b2bdb7bfdcd3fb4be0d0a77fd0bc0c1a5a252ee9d90a27bb88f3e0f65995a",
+    "core/filter.cpp": "e94f3fec07da03cddcf3e4bf2b00a914ca780bcfb5917b2727e13eb4bc851b83"
+  }
+}

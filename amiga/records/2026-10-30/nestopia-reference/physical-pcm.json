@@ -1,0 +1,9 @@
+{
+  "samples": 638940,
+  "rate": 32000,
+  "bytes": 1277880,
+  "model_pcm_sha256": "13244703ef21328c2d0488b9b3446aa3b1bf8532f42b34b5e9ce0e59175f153e",
+  "physical_matches_model": true,
+  "normal_play_listening": "User confirmed clean audio and a huge difference",
+  "installed_releases_changed": false
+}

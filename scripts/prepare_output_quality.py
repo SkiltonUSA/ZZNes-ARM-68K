@@ -10,12 +10,14 @@ DATA=ROOT/'development/output-quality-20261030'
 
 def prepare_audio(stage):
  from prepare_ax_audio import prepare
+ edit(stage/'host.c','static int player_demo,player_paused,player_muted;','static int player_demo,player_muted;\nstatic volatile int player_paused;')
  edit(stage/'player_audio.h','#define AUDIO_SLOTS 8u','#define AUDIO_SLOTS 12u')
  prepare(stage,DATA)
  shutil.copy2(DATA/'audio_output.h',stage/'audio_output.h')
  p=stage/'player_audio.h';s=p.read_text().replace('AUDIO_AX mode=','AUDIO_OUTPUT mode=').replace('per-app AX mode=','per-app AHI mode=')
  s=s.replace('silence_queued=%u\\n','silence_queued=%u starvations=%u\\n').replace('audio_ax_callbacks,audio_ax_silence);','audio_ax_callbacks,audio_ax_silence,audio_ax_starvations);')
  s=s.replace('8 queue slots','12 queue slots')
+ s=s.replace('if(!audio_opened)goto fail;', 'if(audio_ax_unresponsive)puts("AUDIO: ZZ9000AX did not start; using configured AHI unit 0");\n if(!audio_opened)goto fail;')
  p.write_text(s)
  shutil.copy2(DATA/'capture_audio.h',stage/'capture_audio.h')
  edit(stage/'state_host.h','static int fc_state_transaction(int load){','#include "capture_audio.h"\nstatic int fc_state_transaction(int load){')
@@ -25,6 +27,8 @@ def prepare_audio(stage):
 def prepare_launcher(lib):
  shutil.copy2(DATA/'audio_output.h',lib/'audio_output.h')
  p=lib/'library_mui.h'
+ edit(p,'LIB_VERSION " - Scalable launcher"','LIB_VERSION " - Audio fixes"')
+ edit(p,'"Four-frame audio priming; faster library metadata"','"Shared PCM cache fix; HQ synthesis and legacy save support"')
  edit(p,'static const char *display_choices[]=', '#include "audio_output.h"\nstatic Object *audio_output;\nstatic const char *audio_choices[]={"Auto (configured output)","Configured AHI unit 0","Paula 14-bit / 22.05 kHz","Paula 14-bit / 28 kHz","ZZ9000AX / 32 kHz",NULL};\nstatic const char *display_choices[]=')
  edit(p,'if(!preserve_legacy())return 0;collect();','if(!preserve_legacy())return 0;if(!em_audio_save(value(audio_output,MUIA_Cycle_Active)))return 0;collect();')
  edit(p,'Child,HGroup,Child,mute=CheckMark(FALSE)', 'Child,HGroup,Child,textline("Audio output (all games)"),Child,audio_output=cycle(audio_choices),End,\n    Child,HGroup,Child,mute=CheckMark(FALSE)')

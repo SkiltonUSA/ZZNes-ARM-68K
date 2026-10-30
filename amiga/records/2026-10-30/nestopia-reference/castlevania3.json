@@ -1,0 +1,21 @@
+{
+  "title": "Castlevania III (USA)",
+  "mapper": 5,
+  "rom_sha256": "1c7b2ed2c1fb5839a6764006aa476f5c9d48f99465b6141980f3a5af1dfec0d6",
+  "model_frames": 1200,
+  "model_samples": 638940,
+  "model_clipped_samples": 0,
+  "model_pcm_sha256": "999adab62f11af3f340f92adf5cb9ab11e9ebf1839f9a6d486cd3414952c48b5",
+  "nestopia_frames": 1200,
+  "nestopia_rate": 48000,
+  "nestopia_pcm_sha256": "06b70c4bf83bc76f9fc8132f001ab5c947c052d342f3713f9d78c5c530ac1e5d",
+  "cross_core_pcm_equality_expected": false,
+  "hardware_frames": 1800,
+  "hardware_elapsed_us": 32041151,
+  "hardware_samples_completed": 958414,
+  "hardware_starvations": 0,
+  "hardware_clean_shutdown": true,
+  "listening": "User confirmed the corrected live Castlevania III test sounds clean",
+  "installed_player_crc32": "EDB7CBDF",
+  "installed_version": "0.8.7-dev; unchanged, without shared-PCM fix"
+}
