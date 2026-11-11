@@ -47,12 +47,16 @@ def main():
         m = Machine(build / 'player/fceux.elf', build / 'core/elf.py',
                     48 * 1024**2, base)
         if a.exact and not a.fallback and (quality or not a.scalar_reference):
+            from model_neon import correct_cpacr_read
+            correct_cpacr_read(m)
             m.u.reg_write(UC_ARM_REG_C1_C0_2, 0xf00000)
             m.u.ctl_flush_tb()
             m.u.reg_write(UC_ARM_REG_FPEXC, 0x40000000)
             m.u.reg_write(UC_ARM_REG_FPSCR, 0xa0000000)
             for r in range(UC_ARM_REG_D0, UC_ARM_REG_D31+1):
                 m.u.reg_write(r, 0x0123456789abcdef)
+        if a.exact and not a.fallback and (quality or not a.scalar_reference):
+            assert m.call("db_neon_available",base+0x80000)==1
         m.u.mem_write(base + 0x100000, bytes(rom))
         if a.pal:m.call('_Z13fc_set_regionj',1)
         assert m.call('_Z8nes_initPKhjPtS1_', base + 0x100000, len(rom),

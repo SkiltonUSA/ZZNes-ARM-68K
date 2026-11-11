@@ -1,5 +1,14 @@
 # Changelog
 
+## Unreleased — compact launcher
+
+- Dedicated Sound page; ROM Manager replaces the duplicate Disks page.
+- Search within Games; remove history/favourite filters, header logo and duplicate resume buttons.
+- ZZ8-Bit-style top tabs, compact buttons and fonts, 780-pixel default window and no sidebar.
+- Show the current display, controller, audio and other settings below the game preview.
+- Add a current-action footer and expandable Details log; retain save-state actions on Save states.
+- Clarify CD32 USB and Sega controller routes. [Details](docs/compact-interface.md).
+
 ## 0.8.8 Beta — audio correction and HQ synthesis
 
 - Keep the AX device clock at 32 kHz independently of the source PCM clock.

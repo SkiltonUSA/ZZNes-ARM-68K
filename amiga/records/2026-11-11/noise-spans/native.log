@@ -1,0 +1,1 @@
+PASS 60000 exact noise-span cases: samples, counters, LFSR, both taps, mute, zero/negative counters and guards

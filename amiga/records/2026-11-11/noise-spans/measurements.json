@@ -1,0 +1,31 @@
+{
+  "runs": [
+    {
+      "log": "n11a0n-a2-w2-n1200-0.log",
+      "variant": "reference",
+      "core_us": 13976063,
+      "starvations": 65
+    },
+    {
+      "log": "n11a3n-a2-w2-n1200-0.log",
+      "variant": "reference",
+      "core_us": 13975055,
+      "starvations": 69
+    },
+    {
+      "log": "n11b1n-a2-w2-n1200-0.log",
+      "variant": "noise",
+      "core_us": 13570445,
+      "starvations": 42
+    },
+    {
+      "log": "n11b2n-a2-w2-n1200-0.log",
+      "variant": "noise",
+      "core_us": 13570997,
+      "starvations": 40
+    }
+  ],
+  "reference_mean_us": 13975559,
+  "candidate_mean_us": 13570721,
+  "reduction_percent": 2.896757117192951
+}

@@ -1,0 +1,12 @@
+{
+  "ax-release-build": {
+    "ZZFceux-ui": "f90c5327310da4053176a3388fed96e3cbfb6fe1f2f84b14f6603d754c19aaa7",
+    "player/fceux.elf": "7c591054e80f1d4c5a5185c20e06cbe85ae7d601b16193a5a28f53e158abaffc",
+    "core/sound.cpp": "f3df8be4c66d3e44853e32bc204c5289c0ae090911d5c2dbc9476c283b645d38"
+  },
+  "noise-spans-build": {
+    "ZZFceux-ui": "114fa06d99167a4304bf03346aa94100a183a30c08a90e3263dd285cf4734588",
+    "player/fceux.elf": "8bc281788ad09f218a7e25dd591edd7dc5e169a58eb0a13ca9bada276529222a",
+    "core/sound.cpp": "ec20c10105b2a68424ad522724553f7d3e700dcec67f689aad0e8124cc24c41a"
+  }
+}

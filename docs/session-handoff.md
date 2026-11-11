@@ -845,3 +845,87 @@ No global AHI or firmware changes. Private hardware transcripts/ROMs/states and
 installer signing material remain outside Git. Post-install HQ300 and legacy120 checks passed with zero starvation and clean
 return; current launcher reopened, Core1 idle. Publishing v0.8.8-beta with ZIP,
 offline installer and checksum receipt; release-build.json records final hashes.
+
+## 2026-10-30 — compact launcher installed
+
+Launcher-only update at `SD032G:Emulator/ZZNES/ZZNES`; 264536 bytes,
+MD5 `8e5b0b1719df6f853eb50d53a6b37be4`. Rollback `SD032G:Dev/UI1030NES/Before-compact/ZZNES`.
+Current player/version unchanged. `prepare_compact_ui.py` is called by
+prepare_audio_window, so launcher/full builds include this UI.
+Sound replaces Disks; ROM Manager owns import. Remove header logo, filters,
+sidebar scrollbar and duplicate resume buttons. Smaller MUI fonts match ZZUAE,
+1100px screen-bounded default, live settings summary and RAM-only activity log.
+[Details](compact-interface.md); [checks](../amiga/records/2026-10-30/compact-ui/README.md).
+No release, commit or push performed for this interface update.
+
+### Narrower launcher follow-up
+
+Default width reduced from1100 to900 pixels (height500), as requested.
+640×480 screen fitting unchanged; users can still resize the window.
+Both launcher builds and native layout checks pass.
+Installed and reopened at900×500; MD5 `a846e8c86578d9f9b80e2430bc1e5ca2`.
+Backup `SD032G:Dev/UI1030NES/Before-narrow/ZZNES`; settings/player checksums preserved.
+
+## 2026-11-11 — optimisation profile only
+
+Re-profiled the current release ARM build over 30 Super Mario World opening
+frames after 120 warm-up frames. Existing NEON audio filtering and PPU row work
+remain larger instruction-slot contributors than the CPU switch. These are
+model counts, not hardware timings. No NES implementation or installed change.
+See [record](../amiga/records/2026-11-11/profile/README.md).
+
+## 2026-11-11 — exact HQ noise spans
+
+Added isolated --release-ax --audio-noise-spans build in .context/noise-spans-build.
+Event-bounded noise spans preserve every output sample, LFSR transition, both
+feedback taps, mute timing and PAL/NTSC periods. FIR/rate/state/AHI unchanged.
+Native 60000-case ASan/UBSan test passes. Full-core 600-frame comparisons for
+Super Mario World, Contra and Castlevania III pass on scalar fallback and verified
+NEON paths; PAL Contra 180 frames also passes. CPU/video/PCM and FP state match.
+make test/test-arm pass via Podman; initial default Docker invocation unavailable.
+
+Matched hardware ABBA1200-frame SMW/Paula/window2/scanlines2: reference mean core
+13.975559s, candidate13.570721s (2.8968% less). Starvations65/69 vs42/40 remain.
+All638940 PCM frames complete each run, no display faults, clean register/MMU/cache
+restoration/release. First reference included a thumbnail write; do not use its
+wall time or startup silence for speed claims. Installed release unchanged.
+
+Important model correction: previous profile and test_core_quality CPACR writes
+did not guarantee SIMD execution. Added existing presentation-test Unicorn MRC
+workaround plus db_neon_available assertion to exact SIMD tests and --neon
+profiler. Runtime hardware routine unchanged. Original profile35.49% filter
+was scalar fallback. Verified SIMD reference/candidate totals186269155/180915444
+instruction slots (not cycles). Filter work unchanged. Prior scalar equality
+results remain valid; they were not proof of SIMD execution.
+
+[Record](../amiga/records/2026-11-11/noise-spans/README.md).
+
+## 2026-11-11 — ZZ8-Bit launcher styling
+
+Both console launchers now use six top tabs, the supplied ZZ8-Bit [i] About
+icon, light grey panels, narrow selectors, blue active tabs and a red Launch
+button. Search stays over the library; preview/settings sit at the right.
+Details expands/collapses the bounded activity history. Full and launcher-only
+builds use prepare_console_style.py after the compact UI overlay. ImageMagick
+packs the About icon at build time; the bitmap is embedded in the launcher.
+
+Native layout checks and both physical seven-page MUI probes pass. Includes
+640x480 layout budget and 480/608/768x360 resizing, selectors and Details.
+Workbench mode unchanged. MUI ShowMe getter remained 1 while hidden; the probe
+instead checks that expanding reduces page height and collapsing restores it.
+
+Installed launcher-only builds under SD032G:Emulator/ZZNES and ZZSNES; rollback
+copies in SD032G:Dev/UI1111NES/Before-ZZ8-style and UI1111SNES/Before-ZZ8-style.
+Player/config checksums unchanged. Release player optimisations remain separate.
+No new GitHub publication or release. See docs/compact-interface.md and
+amiga/records/2026-11-11/zz8-interface for source/build/hardware evidence.
+
+### Narrower Games panel
+
+Follow-up: reduce the normal window width from 900 to 780 pixels, preserving
+compact-screen font selection. Games now uses a virtual group directly rather
+than an outer Scrollgroup; the ROM list and settings list retain their own
+scrollbars. Longer configuration pages still scroll. The [i] icon remains.
+Native layout tests and both seven-page hardware probes pass, including the
+640x480 budget and 480/608/768x360 resizing. Launcher-only deployment; no player,
+ROM or saved-settings changes.

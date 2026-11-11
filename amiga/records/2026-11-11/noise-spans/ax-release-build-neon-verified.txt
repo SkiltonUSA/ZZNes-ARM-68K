@@ -1,0 +1,17 @@
+ARM-model instruction slots (not cycles): 186269155 NEON enabled: True
+ 18.34%   34162757 _ZL11RefreshLinei
+ 15.65%   29150725 fc_audio_fir_neon
+ 13.31%   24786494 _Z12FCEUPPU_Loopi
+ 10.28%   19156644 _Z14X6502_RunDebugi
+  8.94%   16653862 _Z9nes_framehPFivE
+  5.95%   11078730 _ZL6M90PPUj
+  5.16%    9620085 _ZL8RDoNoisev
+  4.80%    8936880 _Z17FlushEmulateSoundv
+  3.17%    5913409 _Z17FCEU_SoundCPUHooki
+  2.98%    5558400 memset
+  2.40%    4474808 _ZL11RDoTrianglev
+  2.40%    4468695 _Z6RDoPCMv
+  1.70%    3161784 _Z6CartBRj
+  1.05%    1953768 _Z7CPUWrapi
+  0.64%    1185930 fc_audio_clear_words
+  0.51%     953849 _ZL5RDoSQi

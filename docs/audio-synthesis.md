@@ -226,3 +226,11 @@ defaults at the time.
   DMC spans. Keep exact timer/APU semantics, and measure each change separately.
 - A multistage anti-alias resampler could reduce filtering cost, but the rejected
   filter test does not justify replacing the audio pipeline without comparison.
+
+## Further noise-span experiment
+
+The isolated [noise-span candidate](../development/noise-spans-20261111/README.md)
+preserves samples and timing while removing per-tick timer checks. Repeated
+hardware core-time reduction is 2.90% in one Super Mario World opening sequence.
+It remains experimental; audio starvation persists. [Checks and profiling
+correction](../amiga/records/2026-11-11/noise-spans/README.md).

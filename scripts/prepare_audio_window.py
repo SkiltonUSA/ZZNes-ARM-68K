@@ -16,6 +16,8 @@ def prepare_launcher(lib):
  edit(lib/'ui_model.h','m->windowed>1','m->windowed>3')
  p=lib/'preferences.h'
  if p.exists():edit(p,'p->windowed<2','p->windowed<4')
+ from prepare_compact_ui import prepare as compact_ui
+ compact_ui(lib)
 
 def prepare(stage,lib,snes):
  source=Path(__file__).resolve().parents[1]/'development/audio-window-20261029'
