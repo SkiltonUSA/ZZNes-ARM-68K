@@ -21,6 +21,8 @@ def main():
  p=lib/'library_mui.h';p.write_text(re.sub(r'#define LIB_VERSION "[^"]+"', '#define LIB_VERSION "'+version+'"',p.read_text()))
  from prepare_audio_window import prepare_launcher as prepare_window
  prepare_window(lib)
+ from prepare_nes_padding import prepare_padding
+ prepare_padding(lib)
  runtime=json.loads(os.environ.get('BETA_CONTAINER_COMMAND','["podman","--connection","nuflix-converter-root","run","--rm","--platform","linux/amd64"]'))
  flags=[];target=out/m['console']
  if args.probe:

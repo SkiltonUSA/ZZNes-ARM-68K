@@ -173,3 +173,5 @@ unexplained.
 [AHI and bitmap-lock profiling](docs/host-service-profiling.md) led to the per-app AX backend below. Four-frame batching showed no FPS gain; the three-frame default stays.
 
 [Per-app ZZ9000AX audio tests](docs/ax-audio.md) measured **3.2% higher FPS for NES / 4.6% for SNES** in matched short runs. These are experimental, game-specific results. Normal builds follow configured AHI unit 0 so installing an AX driver does not redirect sound.
+
+[NES ROM padding compatibility](docs/rom-padding.md): automatic whitespace-trailer handling for plain NES files and ZIPs; originals are preserved.
