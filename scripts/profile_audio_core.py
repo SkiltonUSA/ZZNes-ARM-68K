@@ -2,7 +2,7 @@
 """Count executed ARM-model instructions by function, not hardware cycles."""
 import argparse,bisect,collections,subprocess
 from pathlib import Path
-from unicorn import UC_HOOK_BLOCK
+from unicorn import UC_HOOK_BLOCK,UC_HOOK_CODE
 from unicorn.arm_const import UC_ARM_REG_C1_C0_2, UC_ARM_REG_FPEXC
 from test_console_jit_core import Machine
 
@@ -10,6 +10,7 @@ def main():
     p=argparse.ArgumentParser();p.add_argument('rom',type=Path);p.add_argument('build',type=Path)
     p.add_argument('--warmup',type=int,default=120);p.add_argument('--frames',type=int,default=3)
     p.add_argument('--neon',action='store_true',help='Enable modeled VFP/NEON access; default profiles scalar fallback')
+    p.add_argument('--instruction-hooks',action='store_true',help='Count each modeled instruction instead of translation-block slots (slower)')
     a=p.parse_args();elf=a.build/'player/fceux.elf'
     m=Machine(elf,a.build/'core/elf.py',48*1024**2,0x11000040)
     if a.neon:
@@ -31,9 +32,9 @@ def main():
         i=bisect.bisect_right(starts,address)-1
         name=rows[i][2]if i>=0 and address<rows[i][0]+rows[i][1]else'generated/other'
         counts[name]+=size//4
-    m.u.hook_add(UC_HOOK_BLOCK,hit);m.u.ctl_flush_tb()
+    m.u.hook_add(UC_HOOK_CODE if a.instruction_hooks else UC_HOOK_BLOCK,hit);m.u.ctl_flush_tb()
     for _ in range(a.frames):assert m.call('_Z9nes_framehPFivE',0,0)==0
     total=sum(counts.values());assert total
-    print('ARM-model instruction slots (not cycles):',total,'NEON enabled:',a.neon)
+    print('ARM-model '+('instructions' if a.instruction_hooks else 'instruction slots')+' (not cycles):',total,'NEON enabled:',a.neon)
     for name,count in counts.most_common(16):print(f'{100*count/total:6.2f}% {count:10d} {name}')
 if __name__=='__main__':main()

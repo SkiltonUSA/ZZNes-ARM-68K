@@ -1,0 +1,41 @@
+{
+  "scope": "Offline candidate only; no hardware timing or listening claim",
+  "compiler": "Homebrew clang version 23.1.2",
+  "baseline_flags": [
+    "--release-ax",
+    "--audio-noise-spans"
+  ],
+  "candidate_flags": [
+    "--release-ax",
+    "--audio-noise-spans",
+    "--audio-noise-muted"
+  ],
+  "files": {
+    "development/noise-muted-20261115/arm_fixture.c": "af0541104ffa820c659601c9e24d0dd06307a2a0829f011f24f17d1f0eac1da7",
+    "development/noise-muted-20261115/audio_noise_muted.h": "e4690474ca52e979e8a320be5a5eae439fe191028e4901c7ba16a568a2e2c6a5",
+    "development/noise-muted-20261115/create_noise_rom.py": "70d2896c0dd6e888acb26c6aeb9af80199280c76b9304e6676b0a5338449d59a",
+    "development/noise-muted-20261115/test.cpp": "e2b340b3bcd89d57f64ceb338da284adbcd03302b7eba34035e96a3323dc4a02",
+    "development/noise-muted-20261115/test_arm.py": "96d5b17ecabbd41f8c743ef3f5b949131f8f7ecaca360b930bd2afb6768c3159",
+    "scripts/build_current.py": "6f1b082c53c0800153794f7564ebf632485e2bd829d5d9fcf38ec217b6bcfa91",
+    "scripts/prepare_noise_muted.py": "648d0feac225b4b0de45d0718bc9232a9541639bf454ac676167deab36e99166",
+    "scripts/profile_audio_core.py": "a246c0f4ee1811f7d23ae2794fa8d317c3dbf4565dd7c0eafaa9c4c20534afca"
+  },
+  "builds": {
+    "noise-spans-build": {
+      "player/fceux.elf": "78b1de18eb8fab87dfbf4bd7cbd28f3b1878a9037762b0a144b05552958e4e2e",
+      "ZZFceux-ui": "b34ce9bdf6e5deac9f4e83e01f969c672927d1b91b9e323723ba9f2d1deb841b"
+    },
+    "noise-muted-build": {
+      "player/fceux.elf": "eff52b0ab0d24e934eff9934a3dcee1721a5c04b16c83791bb23424a3d28bc8d",
+      "ZZFceux-ui": "d443c37268f850f76ea0cd0ac3cadd24966afcd263494de6b9ea473c3dbbd23b"
+    }
+  },
+  "profile": {
+    "rom_sha256": "1c7b2ed2c1fb5839a6764006aa476f5c9d48f99465b6141980f3a5af1dfec0d6",
+    "warmup_frames": 120,
+    "measured_frames": 3,
+    "reference_instructions": 17802359,
+    "candidate_instructions": 17467653,
+    "reduction_percent": 1.8801216175901183
+  }
+}

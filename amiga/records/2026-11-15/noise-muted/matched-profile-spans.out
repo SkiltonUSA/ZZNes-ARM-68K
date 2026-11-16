@@ -1,0 +1,17 @@
+ARM-model instructions (not cycles): 17802359 NEON enabled: True
+ 16.37%    2914525 fc_audio_fir_neon
+ 16.26%    2893942 _Z12FCEUPPU_Loopi
+ 15.82%    2816660 _ZL11RefreshLinei
+ 10.33%    1838915 _Z14X6502_RunDebugi
+  9.35%    1665385 _Z9nes_framehPFivE
+  5.05%     899539 _ZL11RDoTrianglev
+  5.02%     893692 _Z17FlushEmulateSoundv
+  4.33%     770854 _ZL15MMC5_ReadROMRAMj
+  3.75%     668184 _Z17FCEU_SoundCPUHooki
+  3.12%     555840 memset
+  2.68%     477280 _ZL5RDoSQi
+  2.51%     446786 _Z6RDoPCMv
+  2.01%     358128 _ZL8RDoNoisev
+  0.87%     154560 _Z13FCEU_dwmemsetPvji
+  0.67%     118593 fc_audio_clear_words
+  0.51%      91350 _Z14NeoFilterSoundPiS_jS_

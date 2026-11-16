@@ -1,0 +1,79 @@
+OWNED amiga=50000040 arm_candidate=101f0040 size=50331648 nonce=0c99af8d
+BOOTSTRAP amiga=40c9b640 arm=00e8b640 (P96 allocated/locked)
+MAP status=4d415031 SCTLR=08c50878 MIDR=413fc090 MPIDR=80000001
+MAPPING PASS (eight nonce-derived words)
+ARM ready=41524d31 SCTLR=08c5187d MIDR=413fc090 MPIDR=80000001
+REGION NTSC period_us=16639
+CARTRIDGE mapper=5 PRG=262144 CHR=131072 battery=0
+STAGE ROM published; initializing core
+STAGE core initialized; calibrating clock
+STAGE opening display
+WINDOW scale=2 geometry=640x480
+SCANLINE_BACKEND window=2 hardware=0 software=2 parity=0
+BUFFERS pixels=00000000 indices=0aec4a9c legacy_host=0
+JOYSTICK available=1 port=1; red=A blue=B green=Select play=Start
+AUDIO task: per-app AHI mode=0002000e mix=22030; three immutable buffers
+PLAYER FCEUX CPU/old PPU/APU, auto-region 32kHz HQ default; saves retain synthesis; P pause, M mute, Q/Esc quit; bounded picture omission; every core/APU frame retained
+ZZFCEUX START ROM=SD032G:Dev/Life15NES/game.nes bytes=393232 timer_hz=334073578 core_only=0
+FOCUS_TEST frame=0 window=2 active=1
+FRAME n=1 cycles=29782 core_hash=b87d5dc5 output_hash=811c9dc5 cpu_ppu_us=7648
+FOCUS_SAMPLE frame=250 window=2 active=1
+SCANLINE_BACKEND released: hardware=0
+FULLSCREEN_BITMAP allocated=09debf24 screen=0a1d7a00 width=320 height=240 allocated_height=720 screen_height=720 on_board=1/1 memory=0af0d7dc/40e34140 pitch=1280/1280
+FULLSCREEN mode=50031303 native_format=9 depth=32 slots=3 geometry=320x240 NES=256x240
+SCANLINE_BACKEND window=0 hardware=2 software=0 parity=0
+FOCUS_SAMPLE frame=550 window=0 active=1
+FRAME n=600 cycles=17868302 core_hash=6508c9a4 output_hash=811c9dc5 cpu_ppu_us=11357
+SCANLINE_BACKEND released: hardware=0
+WINDOW scale=2 geometry=640x480
+SCANLINE_BACKEND window=2 hardware=0 software=2 parity=0
+FOCUS_TEST frame=601 window=2 active=0
+FOCUS_TEST frame=603 window=2 active=1
+FOCUS_TEST frame=607 window=2 active=0
+FOCUS_SAMPLE frame=850 window=2 active=0
+FULLSCREEN_END queued=251 flips=251 pending=-1 ack_wait_us=997511 fault=0
+AUDIO_OUTPUT mode=0002000e mix=22030 callbacks=719 silence_queued=419 starvations=223
+AUDIO_TASK queued=479203 submitted=479203 completed=479203 highwater=9 error=0 stopped=1
+AUDIO_END samples=479203 gaps=0
+PRESENT_OPTIONS window=2 scanlines=2 fps=0 optimised=1 neon_frames=251
+STAGE closing frontend; requesting ARM return next
+ZZFCEUX END exit=0 frames=900 elapsed_us=23703815 core_total_us=10171333 output_hash=811c9dc5
+DIRECT_END challenges=251 verified_frames=0 copy_us=1071994
+PLAYER_PROFILE audio_prepare_us=2313912 flip_drain_us=164831 audio_wait_us=62305 audio_copy_us=517949 audio_send_us=0
+ARM_REQUEST_PROFILE frame_us=10643862 present_us=1207381
+PRESENT_PROFILE pre_us=173555 request_us=1728918 post_us=297172
+FRAME_TIMING stage=0 count=840 mean_us=14419 max_us=37048 bins=0,0,706,67,63,4
+FRAME_TIMING stage=1 count=840 mean_us=210 max_us=22710 bins=819,15,3,1,2,0
+FRAME_TIMING stage=2 count=840 mean_us=2566 max_us=27786 bins=556,193,80,8,3,0
+FRAME_TIMING stage=3 count=235 mean_us=8713 max_us=32196 bins=0,134,87,4,10,0
+FRAME_TIMING stage=4 count=840 mean_us=23136 max_us=104174 bins=0,0,333,117,275,115
+FRAME_TIMING stage=5 count=99 mean_us=62229 max_us=89239 bins=0,0,0,0,1,98
+INPUT_PROFILE changes=0
+JOYSTICK_END polls=900 active=0 last_type=10000000
+AUDIO_IO_PROFILE send_us=0 waitio_us=0
+WAIT_PROFILE kind=0 calls=0 requested_us=0 actual_us=0 max_us=0
+WAIT_PROFILE kind=1 calls=4 requested_us=4000 actual_us=46052 max_us=16132
+WAIT_PROFILE kind=2 calls=0 requested_us=0 actual_us=0 max_us=0
+WAIT_PROFILE kind=3 calls=0 requested_us=0 actual_us=0 max_us=0
+WAIT_PROFILE kind=4 calls=0 requested_us=0 actual_us=0 max_us=0
+WAIT_PROFILE kind=5 calls=0 requested_us=0 actual_us=0 max_us=0
+PROFILE frames=900 request_us=12901592 copy_us=0 colour_us=0 draw_us=4283113 waits=4
+EXIT epilogue=52455431 cache_echoes=0 rounds=0
+CACHE original=08c50878 running=08c5187d restored=08c50878
+MMU_RESTORE phase=3 register_mismatches=00000000 cpsr_control=1d3 expected=1d3 ttbr=10244000 ccsidr=701fe019 witness_bad=0 mailbox_rounds=1154
+REGISTER n=0 original=08c50878 restored=08c50878
+REGISTER n=1 original=00000000 restored=00000000
+REGISTER n=2 original=02000000 restored=02000000
+REGISTER n=3 original=00000000 restored=00000000
+REGISTER n=4 original=00000000 restored=00000000
+REGISTER n=5 original=00000001 restored=00000001
+REGISTER n=6 original=600101d3 restored=600101d3
+REGISTER n=7 original=00000006 restored=00000006
+REGISTER n=8 original=00001000 restored=00001000
+REGISTER n=9 original=00098aa4 restored=00098aa4
+REGISTER n=10 original=44e048e0 restored=44e048e0
+REGISTER n=11 original=00000000 restored=00000000
+REGISTER n=12 original=00000001 restored=00000001
+REGISTER n=13 original=72360000 restored=72360000
+SCANLINE_BACKEND released: hardware=0
+LAUNCHER exit=0; owned memory released

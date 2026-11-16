@@ -1,0 +1,1 @@
+PASS 120 frames: exact=True fallback=False; identical CPU/video endpoints; samples=[63887, 63887], peaks=[13391, 13391], audio differences=0; PAL=False; ROM SHA256=c02e59b57c0b441e9bf1cd06af5e20036bfe615c4e2d5453c4f07fd098add0b7

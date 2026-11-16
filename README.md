@@ -181,3 +181,8 @@ unexplained.
 [Current-firmware optimisation checks](amiga/records/2026-11-15/README.md):
 matched workloads, save/cleanup checks and remaining audio limits.
 These opt-in candidates are separate from the published beta.
+
+[Muted-noise experiment](amiga/records/2026-11-15/noise-muted/README.md):
+1.88% fewer modeled ARM instructions in a short matched Castlevania III sample,
+with exact PCM/video results. Hardware timing remains pending; this is not part
+of the published beta.

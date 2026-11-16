@@ -1,0 +1,582 @@
+{
+  "scope": "Linked Cortex-A9 ARM32 model instruction slots, not cycles or hardware speed",
+  "cases": [
+    {
+      "count": 0,
+      "period": 4,
+      "tap": 8,
+      "amplitude": 0,
+      "reference_slots": 27,
+      "candidate_slots": 17
+    },
+    {
+      "count": 0,
+      "period": 4,
+      "tap": 8,
+      "amplitude": 983040,
+      "reference_slots": 27,
+      "candidate_slots": 28
+    },
+    {
+      "count": 0,
+      "period": 4,
+      "tap": 13,
+      "amplitude": 0,
+      "reference_slots": 27,
+      "candidate_slots": 17
+    },
+    {
+      "count": 0,
+      "period": 4,
+      "tap": 13,
+      "amplitude": 983040,
+      "reference_slots": 27,
+      "candidate_slots": 28
+    },
+    {
+      "count": 0,
+      "period": 96,
+      "tap": 8,
+      "amplitude": 0,
+      "reference_slots": 27,
+      "candidate_slots": 17
+    },
+    {
+      "count": 0,
+      "period": 96,
+      "tap": 8,
+      "amplitude": 983040,
+      "reference_slots": 27,
+      "candidate_slots": 28
+    },
+    {
+      "count": 0,
+      "period": 96,
+      "tap": 13,
+      "amplitude": 0,
+      "reference_slots": 27,
+      "candidate_slots": 17
+    },
+    {
+      "count": 0,
+      "period": 96,
+      "tap": 13,
+      "amplitude": 983040,
+      "reference_slots": 27,
+      "candidate_slots": 28
+    },
+    {
+      "count": 0,
+      "period": 4068,
+      "tap": 8,
+      "amplitude": 0,
+      "reference_slots": 27,
+      "candidate_slots": 17
+    },
+    {
+      "count": 0,
+      "period": 4068,
+      "tap": 8,
+      "amplitude": 983040,
+      "reference_slots": 27,
+      "candidate_slots": 28
+    },
+    {
+      "count": 0,
+      "period": 4068,
+      "tap": 13,
+      "amplitude": 0,
+      "reference_slots": 27,
+      "candidate_slots": 17
+    },
+    {
+      "count": 0,
+      "period": 4068,
+      "tap": 13,
+      "amplitude": 983040,
+      "reference_slots": 27,
+      "candidate_slots": 28
+    },
+    {
+      "count": 1,
+      "period": 4,
+      "tap": 8,
+      "amplitude": 0,
+      "reference_slots": 40,
+      "candidate_slots": 20
+    },
+    {
+      "count": 1,
+      "period": 4,
+      "tap": 8,
+      "amplitude": 983040,
+      "reference_slots": 41,
+      "candidate_slots": 42
+    },
+    {
+      "count": 1,
+      "period": 4,
+      "tap": 13,
+      "amplitude": 0,
+      "reference_slots": 40,
+      "candidate_slots": 20
+    },
+    {
+      "count": 1,
+      "period": 4,
+      "tap": 13,
+      "amplitude": 983040,
+      "reference_slots": 41,
+      "candidate_slots": 42
+    },
+    {
+      "count": 1,
+      "period": 96,
+      "tap": 8,
+      "amplitude": 0,
+      "reference_slots": 40,
+      "candidate_slots": 20
+    },
+    {
+      "count": 1,
+      "period": 96,
+      "tap": 8,
+      "amplitude": 983040,
+      "reference_slots": 41,
+      "candidate_slots": 42
+    },
+    {
+      "count": 1,
+      "period": 96,
+      "tap": 13,
+      "amplitude": 0,
+      "reference_slots": 40,
+      "candidate_slots": 20
+    },
+    {
+      "count": 1,
+      "period": 96,
+      "tap": 13,
+      "amplitude": 983040,
+      "reference_slots": 41,
+      "candidate_slots": 42
+    },
+    {
+      "count": 1,
+      "period": 4068,
+      "tap": 8,
+      "amplitude": 0,
+      "reference_slots": 40,
+      "candidate_slots": 20
+    },
+    {
+      "count": 1,
+      "period": 4068,
+      "tap": 8,
+      "amplitude": 983040,
+      "reference_slots": 41,
+      "candidate_slots": 42
+    },
+    {
+      "count": 1,
+      "period": 4068,
+      "tap": 13,
+      "amplitude": 0,
+      "reference_slots": 40,
+      "candidate_slots": 20
+    },
+    {
+      "count": 1,
+      "period": 4068,
+      "tap": 13,
+      "amplitude": 983040,
+      "reference_slots": 41,
+      "candidate_slots": 42
+    },
+    {
+      "count": 128,
+      "period": 4,
+      "tap": 8,
+      "amplitude": 0,
+      "reference_slots": 584,
+      "candidate_slots": 114
+    },
+    {
+      "count": 128,
+      "period": 4,
+      "tap": 8,
+      "amplitude": 983040,
+      "reference_slots": 1008,
+      "candidate_slots": 1009
+    },
+    {
+      "count": 128,
+      "period": 4,
+      "tap": 13,
+      "amplitude": 0,
+      "reference_slots": 584,
+      "candidate_slots": 114
+    },
+    {
+      "count": 128,
+      "period": 4,
+      "tap": 13,
+      "amplitude": 983040,
+      "reference_slots": 967,
+      "candidate_slots": 968
+    },
+    {
+      "count": 128,
+      "period": 96,
+      "tap": 8,
+      "amplitude": 0,
+      "reference_slots": 57,
+      "candidate_slots": 30
+    },
+    {
+      "count": 128,
+      "period": 96,
+      "tap": 8,
+      "amplitude": 983040,
+      "reference_slots": 349,
+      "candidate_slots": 350
+    },
+    {
+      "count": 128,
+      "period": 96,
+      "tap": 13,
+      "amplitude": 0,
+      "reference_slots": 57,
+      "candidate_slots": 30
+    },
+    {
+      "count": 128,
+      "period": 96,
+      "tap": 13,
+      "amplitude": 983040,
+      "reference_slots": 349,
+      "candidate_slots": 350
+    },
+    {
+      "count": 128,
+      "period": 4068,
+      "tap": 8,
+      "amplitude": 0,
+      "reference_slots": 40,
+      "candidate_slots": 20
+    },
+    {
+      "count": 128,
+      "period": 4068,
+      "tap": 8,
+      "amplitude": 983040,
+      "reference_slots": 41,
+      "candidate_slots": 42
+    },
+    {
+      "count": 128,
+      "period": 4068,
+      "tap": 13,
+      "amplitude": 0,
+      "reference_slots": 40,
+      "candidate_slots": 20
+    },
+    {
+      "count": 128,
+      "period": 4068,
+      "tap": 13,
+      "amplitude": 983040,
+      "reference_slots": 41,
+      "candidate_slots": 42
+    },
+    {
+      "count": 1024,
+      "period": 4,
+      "tap": 8,
+      "amplitude": 0,
+      "reference_slots": 4392,
+      "candidate_slots": 338
+    },
+    {
+      "count": 1024,
+      "period": 4,
+      "tap": 8,
+      "amplitude": 983040,
+      "reference_slots": 7867,
+      "candidate_slots": 7868
+    },
+    {
+      "count": 1024,
+      "period": 4,
+      "tap": 13,
+      "amplitude": 0,
+      "reference_slots": 4392,
+      "candidate_slots": 338
+    },
+    {
+      "count": 1024,
+      "period": 4,
+      "tap": 13,
+      "amplitude": 983040,
+      "reference_slots": 8018,
+      "candidate_slots": 8019
+    },
+    {
+      "count": 1024,
+      "period": 96,
+      "tap": 8,
+      "amplitude": 0,
+      "reference_slots": 227,
+      "candidate_slots": 58
+    },
+    {
+      "count": 1024,
+      "period": 96,
+      "tap": 8,
+      "amplitude": 983040,
+      "reference_slots": 2045,
+      "candidate_slots": 2046
+    },
+    {
+      "count": 1024,
+      "period": 96,
+      "tap": 13,
+      "amplitude": 0,
+      "reference_slots": 227,
+      "candidate_slots": 58
+    },
+    {
+      "count": 1024,
+      "period": 96,
+      "tap": 13,
+      "amplitude": 983040,
+      "reference_slots": 2045,
+      "candidate_slots": 2046
+    },
+    {
+      "count": 1024,
+      "period": 4068,
+      "tap": 8,
+      "amplitude": 0,
+      "reference_slots": 40,
+      "candidate_slots": 20
+    },
+    {
+      "count": 1024,
+      "period": 4068,
+      "tap": 8,
+      "amplitude": 983040,
+      "reference_slots": 41,
+      "candidate_slots": 42
+    },
+    {
+      "count": 1024,
+      "period": 4068,
+      "tap": 13,
+      "amplitude": 0,
+      "reference_slots": 40,
+      "candidate_slots": 20
+    },
+    {
+      "count": 1024,
+      "period": 4068,
+      "tap": 13,
+      "amplitude": 983040,
+      "reference_slots": 41,
+      "candidate_slots": 42
+    },
+    {
+      "count": 32768,
+      "period": 4,
+      "tap": 8,
+      "amplitude": 0,
+      "reference_slots": 139304,
+      "candidate_slots": 8274
+    },
+    {
+      "count": 32768,
+      "period": 4,
+      "tap": 8,
+      "amplitude": 983040,
+      "reference_slots": 251108,
+      "candidate_slots": 251109
+    },
+    {
+      "count": 32768,
+      "period": 4,
+      "tap": 13,
+      "amplitude": 0,
+      "reference_slots": 139304,
+      "candidate_slots": 8274
+    },
+    {
+      "count": 32768,
+      "period": 4,
+      "tap": 13,
+      "amplitude": 983040,
+      "reference_slots": 254056,
+      "candidate_slots": 254057
+    },
+    {
+      "count": 32768,
+      "period": 96,
+      "tap": 8,
+      "amplitude": 0,
+      "reference_slots": 5837,
+      "candidate_slots": 402
+    },
+    {
+      "count": 32768,
+      "period": 96,
+      "tap": 8,
+      "amplitude": 983040,
+      "reference_slots": 63221,
+      "candidate_slots": 63222
+    },
+    {
+      "count": 32768,
+      "period": 96,
+      "tap": 13,
+      "amplitude": 0,
+      "reference_slots": 5837,
+      "candidate_slots": 402
+    },
+    {
+      "count": 32768,
+      "period": 96,
+      "tap": 13,
+      "amplitude": 983040,
+      "reference_slots": 64997,
+      "candidate_slots": 64998
+    },
+    {
+      "count": 32768,
+      "period": 4068,
+      "tap": 8,
+      "amplitude": 0,
+      "reference_slots": 176,
+      "candidate_slots": 88
+    },
+    {
+      "count": 32768,
+      "period": 4068,
+      "tap": 8,
+      "amplitude": 983040,
+      "reference_slots": 65100,
+      "candidate_slots": 65101
+    },
+    {
+      "count": 32768,
+      "period": 4068,
+      "tap": 13,
+      "amplitude": 0,
+      "reference_slots": 176,
+      "candidate_slots": 88
+    },
+    {
+      "count": 32768,
+      "period": 4068,
+      "tap": 13,
+      "amplitude": 983040,
+      "reference_slots": 65100,
+      "candidate_slots": 65101
+    },
+    {
+      "count": 65535,
+      "period": 4,
+      "tap": 8,
+      "amplitude": 0,
+      "reference_slots": 278568,
+      "candidate_slots": 16466
+    },
+    {
+      "count": 65535,
+      "period": 4,
+      "tap": 8,
+      "amplitude": 983040,
+      "reference_slots": 502129,
+      "candidate_slots": 502130
+    },
+    {
+      "count": 65535,
+      "period": 4,
+      "tap": 13,
+      "amplitude": 0,
+      "reference_slots": 278568,
+      "candidate_slots": 16466
+    },
+    {
+      "count": 65535,
+      "period": 4,
+      "tap": 13,
+      "amplitude": 983040,
+      "reference_slots": 507079,
+      "candidate_slots": 507080
+    },
+    {
+      "count": 65535,
+      "period": 96,
+      "tap": 8,
+      "amplitude": 0,
+      "reference_slots": 11651,
+      "candidate_slots": 730
+    },
+    {
+      "count": 65535,
+      "period": 96,
+      "tap": 8,
+      "amplitude": 983040,
+      "reference_slots": 126943,
+      "candidate_slots": 126944
+    },
+    {
+      "count": 65535,
+      "period": 96,
+      "tap": 13,
+      "amplitude": 0,
+      "reference_slots": 11651,
+      "candidate_slots": 730
+    },
+    {
+      "count": 65535,
+      "period": 96,
+      "tap": 13,
+      "amplitude": 983040,
+      "reference_slots": 127631,
+      "candidate_slots": 127632
+    },
+    {
+      "count": 65535,
+      "period": 4068,
+      "tap": 8,
+      "amplitude": 0,
+      "reference_slots": 312,
+      "candidate_slots": 98
+    },
+    {
+      "count": 65535,
+      "period": 4068,
+      "tap": 8,
+      "amplitude": 983040,
+      "reference_slots": 108777,
+      "candidate_slots": 108778
+    },
+    {
+      "count": 65535,
+      "period": 4068,
+      "tap": 13,
+      "amplitude": 0,
+      "reference_slots": 312,
+      "candidate_slots": 98
+    },
+    {
+      "count": 65535,
+      "period": 4068,
+      "tap": 13,
+      "amplitude": 983040,
+      "reference_slots": 100083,
+      "candidate_slots": 100084
+    }
+  ]
+}
+PASS 72 linked ARM32 sample/state comparisons

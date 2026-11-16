@@ -941,3 +941,17 @@ window/fullscreen transitions and a 120-frame fresh-process state resume.
 See the report's `lifecycle/` directory. F10 exit is not established: an
 unattended focus check failed on NES, and a delayed-activation experiment was
 not retained. Installed players, defaults and releases remain unchanged.
+
+## 2026-11-15 — muted-noise candidate, offline validation
+
+Opt-in `--release-ax --audio-noise-spans --audio-noise-muted` builds to
+`.context/noise-muted-build`. Eight-event muted LFSR advancement preserves
+PCM/timer/state exactly; 1.88% fewer whole-core model instructions in the short
+matched CV3 sample, not measured hardware speed. Native exhaustive/random,
+linked ARM, matched PAL/NTSC core, HQ/legacy replay and required tests pass.
+See [record](../amiga/records/2026-11-15/noise-muted/README.md).
+
+User selected offline work while the Termic workspace retains hardware access.
+Do not run/deploy another hardware test until that changes. Focus follow-up
+observed concurrent window-scaling tests; no causal conclusion or focus fix.
+Installed players, defaults, packages and versions remain unchanged.
