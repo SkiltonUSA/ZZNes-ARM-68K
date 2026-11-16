@@ -1,0 +1,8 @@
+initial-window [OK]
+ACTIVE_WINDOW ZZNES - Alt+Return fullscreen
+fullscreen [OK]
+ACTIVE_WINDOW ZZFceux fullscreen - Q/Esc quits
+returned-window [OK]
+ACTIVE_WINDOW
+SKIP F10: another window has focus
+PASS bounded focus probe END exit=0 frames=2400

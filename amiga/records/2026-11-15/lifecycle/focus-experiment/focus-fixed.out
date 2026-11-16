@@ -1,0 +1,10 @@
+VERIFIED SD032G:Dev/Life15NES/NES 584504
+NES initial-window [OK]
+ACTIVE_WINDOW ZZNES - Alt+Return fullscreen
+NES fullscreen [OK]
+ACTIVE_WINDOW ZZFceux fullscreen - Q/Esc quits
+NES returned-window [OK]
+ACTIVE_WINDOW
+SKIP further keys: player does not have focus
+
+AssertionError: ['[OK]\nACTIVE_WINDOW ZZNES - Alt+Return fullscreen', '[OK]\nACTIVE_WINDOW ZZFceux fullscreen - Q/Esc quits', '[OK]\nACTIVE_WINDOW']

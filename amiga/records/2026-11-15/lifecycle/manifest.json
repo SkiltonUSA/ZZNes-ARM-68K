@@ -1,0 +1,10 @@
+{
+  "player_sha256": "114fa06d99167a4304bf03346aa94100a183a30c08a90e3263dd285cf4734588",
+  "game": "Castlevania III (USA)",
+  "frames": 6000,
+  "queued_completed_pcm": 3194731,
+  "state_bytes": 18560,
+  "resume_frames": 120,
+  "firmware": "XX19d-RIX/XACP 1.8",
+  "scope": "Private candidates. No installed profile or save changed. Keyboard exit not established: run reached frame limit."
+}

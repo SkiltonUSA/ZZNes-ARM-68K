@@ -38,3 +38,6 @@ Audio starvation observations were 192 → 250. Both runs
 retired 638,940 PCM frames, passed the display handoff and teardown
 checks, and restored register/MMU/cache witnesses. This is additional coverage,
 not proof of audible improvement. The experiment remains opt-in.
+
+Further [physical lifecycle checks](lifecycle/README.md) cover save/load,
+screenshot, window/fullscreen transitions and fresh-process resume.

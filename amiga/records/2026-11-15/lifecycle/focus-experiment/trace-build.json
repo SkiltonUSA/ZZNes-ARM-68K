@@ -1,0 +1,28 @@
+{
+  "base": "noise-spans-build",
+  "player": "ZZFceux-ui",
+  "sha256": "336215a3cf5be8dc55c2e161cf03fbe384896233a7d33437a472d2f06e7672e2",
+  "previous_sha256": "114fa06d99167a4304bf03346aa94100a183a30c08a90e3263dd285cf4734588",
+  "arm_payload_sha256": "e57b6712a331f7617bb6ae1c1ee7c5cdd8d91f0e3253db8986b34861df31540a",
+  "version": "0.8.8-dev",
+  "flags": [
+    "ZZ_HEADLESS_BENCH",
+    "ZZ_RELEASE",
+    "ZZ_NES",
+    "ZZ_BLOCK_SIZE=0x3000000",
+    "ZZ_CONTROL=0x80000",
+    "ZZ_APP_NAME=\"ZZNES\"",
+    "ZZ_APP_VERSION=\"0.8.8-dev\"",
+    "ZZ_MIN_STACK=65536",
+    "MB_ALLOCATION=0x3000000u",
+    "MB_MMU",
+    "MB_DCACHE",
+    "ZZ_HEADLESS_MMU",
+    "ZZ_HEADLESS_ICACHE",
+    "NES_PLAYER",
+    "NES_DIRECT",
+    "NES_FULLSCREEN",
+    "CJ_BEGIN=0x600000"
+  ],
+  "scope": "Host-only delayed activation, recorded ARM payload unchanged"
+}

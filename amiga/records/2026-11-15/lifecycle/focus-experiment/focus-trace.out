@@ -1,0 +1,6 @@
+VERIFIED SD032G:Dev/Life15NES/NES 584756
+NES initial-window [OK]
+ACTIVE_WINDOW
+SKIP further keys: player does not have focus
+
+AssertionError: ['[OK]\nACTIVE_WINDOW']
