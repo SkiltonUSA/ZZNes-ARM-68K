@@ -175,3 +175,9 @@ unexplained.
 [Per-app ZZ9000AX audio tests](docs/ax-audio.md) measured **3.2% higher FPS for NES / 4.6% for SNES** in matched short runs. These are experimental, game-specific results. Normal builds follow configured AHI unit 0 so installing an AX driver does not redirect sound.
 
 [NES ROM padding compatibility](docs/rom-padding.md): automatic whitespace-trailer handling for plain NES files and ZIPs; originals are preserved.
+
+## Development measurements
+
+[Current-firmware optimisation checks](amiga/records/2026-11-15/README.md):
+matched workloads, save/cleanup checks and remaining audio limits.
+These opt-in candidates are separate from the published beta.

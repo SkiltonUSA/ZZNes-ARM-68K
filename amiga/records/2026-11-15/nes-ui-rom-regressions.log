@@ -1,0 +1,13 @@
+mkdir -p .context/tests
+cc -std=c99 -Wall -Wextra -Werror -Wno-unused-variable tests/launcher_layout.c -o .context/tests/launcher-layout
+.context/tests/launcher-layout
+PASS: launcher screen budgets and compact selection
+mkdir -p .context
+cc -O2 -g -fsanitize=address,undefined -Idevelopment/optimisation-20261018/source -Idevelopment/borders-20261016/source tests/amiga/emulator/rom_manager.c -o .context/test-rom-manager
+.context/test-rom-manager
+PASS 20,000-entry duplicate compaction, metadata and selection retention, invalid plans, verified/empty copies, cancellation, non-overwrite and source-change rejection
+cc -O2 -g -fsanitize=address,undefined -Itests/amiga/emulator/mock -Idevelopment/borders-20261016/source tests/amiga/emulator/scan.c -o .context/test-rom-scan
+.context/test-rom-scan
+PASS explicit directory scans, idle inactivity, recursion, dedup, ZIP filtering, invalid roots, cancellation and DOS resource release
+ROM_ZIP_INCLUDE=development/borders-20261016/source/zip python3 tests/amiga/emulator/zip/test.py
+PASS 40 ZIP/plain cases under ASan/UBSan; output guards, exact bytes, CRC, bounds and rejection paths

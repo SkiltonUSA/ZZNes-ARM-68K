@@ -1,0 +1,11 @@
+{
+  "app": "NES",
+  "title": "cv3",
+  "kind": "A",
+  "player": ".context/ZZNes-ARM-68K/.context/ax-release-build/ZZFceux-ui",
+  "player_sha256": "f90c5327310da4053176a3388fed96e3cbfb6fe1f2f84b14f6603d754c19aaa7",
+  "rom_sha256": "1c7b2ed2c1fb5839a6764006aa476f5c9d48f99465b6141980f3a5af1dfec0d6",
+  "state": null,
+  "frames": 1200,
+  "pal": false
+}

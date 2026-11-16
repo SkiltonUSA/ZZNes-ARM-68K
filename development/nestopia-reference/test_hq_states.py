@@ -12,6 +12,7 @@ ROOT = Path(__file__).resolve().parents[2]
 sys.path[:0] = [str(ROOT / 'scripts'), str(ROOT / 'development/output-quality-20261030')]
 from test_console_jit_core import Machine
 from test_core_quality import square_rom
+from model_neon import correct_cpacr_read
 from unicorn.arm_const import UC_ARM_REG_C1_C0_2, UC_ARM_REG_FPEXC
 
 CAP = 122880
@@ -21,9 +22,13 @@ LOAD = '_Z13fc_state_loadPKhj'
 
 def machine(build, rom, base, pal):
     m = Machine(build / 'player/fceux.elf', build / 'core/elf.py', 48 * 1024**2, base)
+    # Match the actual A9 permission read; Unicorn otherwise silently takes
+    # the scalar FIR fallback despite CPACR being set in the register model.
+    correct_cpacr_read(m)
     m.u.reg_write(UC_ARM_REG_C1_C0_2, 0xf00000)
     m.u.ctl_flush_tb()
     m.u.reg_write(UC_ARM_REG_FPEXC, 0x40000000)
+    assert m.call("db_neon_available", base + 0x80000) == 1
     m.u.mem_write(base + 0x100000, rom)
     m.call('_Z13fc_set_regionj', int(pal))
     assert m.call('_Z8nes_initPKhjPtS1_', base + 0x100000, len(rom), base + 0x90000, base + 0xb0000) == 0
@@ -86,7 +91,7 @@ def main():
     result = dict(test='ARM instruction model, not physical hardware',
         rom_sha256=hashlib.sha256(rom).hexdigest(),
         elf_sha256=hashlib.sha256((a.build/'player/fceux.elf').read_bytes()).hexdigest(),
-        pal=a.pal, warmup=a.warmup, replay_frames=a.frames, state_bytes=len(saved),
+        pal=a.pal, neon_permission_verified=True, warmup=a.warmup, replay_frames=a.frames, state_bytes=len(saved),
         pcm_sha256=hashlib.sha256(b''.join(x[3] for x in reference)).hexdigest(),
         same_process=True, fresh_relocated_process=True, invalid_states_unchanged=True)
     if a.output:a.output.write_text(json.dumps(result, indent=2)+'\n')

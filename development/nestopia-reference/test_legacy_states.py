@@ -46,7 +46,7 @@ assert load(new,bytes(bad))==0 and save(new)==unchanged
 result=dict(test='ARM instruction model, not physical hardware',rom_sha256=hashlib.sha256(rom).hexdigest(),
  baseline_elf_sha256=hashlib.sha256((a.baseline/'player/fceux.elf').read_bytes()).hexdigest(),
  candidate_elf_sha256=hashlib.sha256((a.candidate/'player/fceux.elf').read_bytes()).hexdigest(),
- pal=a.pal,warmup=a.warmup,replay_frames=a.frames,legacy_bytes=len(legacy),hq_bytes=len(hq),
+ pal=a.pal,neon_permission_verified=True,warmup=a.warmup,replay_frames=a.frames,legacy_bytes=len(legacy),hq_bytes=len(hq),
  legacy_exact_pcm_video_cycles=True,fresh_legacy=True,legacy_re_save_unchanged=True,
  hq_after_legacy=True,invalid_legacy_no_mutation=True)
 if a.output:a.output.write_text(json.dumps(result,indent=2)+'\n')
