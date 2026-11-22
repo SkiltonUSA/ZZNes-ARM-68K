@@ -1,14 +1,14 @@
-# ZZNES — 0.8.8 Beta
+# ZZNES — 0.8.9 Beta
 
-<!-- installer-refresh-20261122 -->
-## Updated AmiPkg installer
+<!-- current-release -->
+## Current release — 0.8.9 Beta
 
-[Download the 22 November installer refresh](https://github.com/SkiltonUSA/ZZNes-ARM-68K/releases/tag/v0.8.8-beta.20261122) · [Changes and installation](docs/installer-refresh-20261122.md)
+[Download the AmiPkg installer](https://github.com/SkiltonUSA/ZZNes-ARM-68K/releases/tag/v0.8.9-beta) · [Changes and installation](docs/release-notes.md)
 
 - **Settings → ZZOverclock:** 666.7 MHz or experimental 800 MHz, with Apply and Refresh.
-- Overclocking is optional. Without the clock-service firmware, the emulator still runs at standard speed; only clock control is unavailable.
-- Offline installation with dependency checks and a selectable destination. Existing settings and saves are preserved.
-- No automatic clock change or firmware installation. Package revision and embedded application version are listed separately in the release notes.
+- The clock service is optional; standard XACP installations can still run the emulator.
+- Destination selection and dependency checks; existing settings and saves are preserved.
+- Launcher and release use the same version number. No automatic clock change or firmware installation.
 
 <img src="docs/screenshots/logo.png" width="160" alt="ZZNES logo">
 
@@ -19,13 +19,13 @@ files, controls, display coordination and batched AHI audio.
 
 This beta needs **48 MiB of allocatable ZZ9000 RAM**, plus display and AmigaOS memory.
 
-**[Download 0.8.8 Beta — installer or ZIP](https://github.com/SkiltonUSA/ZZNes-ARM-68K/releases/tag/v0.8.8-beta)** ·
+**[Download 0.8.9 Beta — AmiPkg installer](https://github.com/SkiltonUSA/ZZNes-ARM-68K/releases/tag/v0.8.9-beta)** ·
 [Installation](docs/package-manager.md) · [User guide](docs/current-guide.md) ·
 [Changes](CHANGELOG.md) · [Interface gallery](docs/current-interface.md)
 
 **New:** corrected audio transfer, faster high-quality synthesis and compatible save states. [Sound fix and measurements](docs/audio-synthesis.md).
 
-Published app version: **0.8.8-dev**.
+Published app version: **0.8.9-dev**.
 
 **0.8.8 Beta** fixes stale PCM samples that caused instrument distortion. New games use high-quality audio; existing saves retain their original synthesis mode. [Save compatibility](docs/audio-states.md).
 
@@ -202,3 +202,5 @@ of the published beta.
 Fresh installations default to **Paula 14-bit / 22.05 kHz** output. Higher-rate Paula and ZZ9000AX PCM options remain selectable in Sound; existing saved output choices are retained. Native sound-chip synthesis and save-state formats are unchanged.
 
 **Optional clock control:** Settings includes ZZOverclock: 666.7 MHz or experimental 800 MHz. Standard-speed operation does not require the custom clock service. [Clock settings](docs/clock-settings.md).
+
+[Release documentation and verification checklist](docs/release-process.md).
