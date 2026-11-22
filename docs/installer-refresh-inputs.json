@@ -1,0 +1,16 @@
+{
+  "package_version": "0.8.8-dev.20261122",
+  "application_version": "0.8.8-dev",
+  "base_installer_sha256": "76fd9f7123600c888925f1f698945438fd6e82db0ae443b65b62b604426d9a0a",
+  "replacements": {
+    "zznes": {
+      "ZZNES/ZZNES": "4116f2835ee6fa299379b165b35731e4af19ecc702b7a44c8d274ecd2cdb3e73",
+      "ZZNES/ZZClock": "b0ab72855e3e1aa9e5a9cf072ff3f7e2892b70f4b2b7193f000ff26381edf4d0",
+      "ZZNES/ZZFceux-ui": "21e0216116f832902cce5c8efbf59871ae37cee2909f666792a37599cd48bf3d",
+      "ZZNES/Clock-settings.md": "f5054d5ef1bf64c1b49a2693019b5dee302b97f869641832c46a8e4dc95c7474",
+      "ZZNES/Release-notes.md": "93db14d7939412dbbadc760b52a6ef50bb46f84836d590038e867e970ad0d940",
+      "ZZNES/README.md": "c3fa2321ddca0d227ffa5a7f3fc372bd5e64fdbb3f15a907f9ae1c9e01d6584e"
+    }
+  },
+  "validation": "Signed catalogues, CRC and SHA256 round-trip checks; no fresh hardware installation."
+}

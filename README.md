@@ -1,5 +1,15 @@
 # ZZNES — 0.8.8 Beta
 
+<!-- installer-refresh-20261122 -->
+## Updated AmiPkg installer
+
+[Download the 22 November installer refresh](https://github.com/SkiltonUSA/ZZNes-ARM-68K/releases/tag/v0.8.8-beta.20261122) · [Changes and installation](docs/installer-refresh-20261122.md)
+
+- **Settings → ZZOverclock:** 666.7 MHz or experimental 800 MHz, with Apply and Refresh.
+- Overclocking is optional. Without the clock-service firmware, the emulator still runs at standard speed; only clock control is unavailable.
+- Offline installation with dependency checks and a selectable destination. Existing settings and saves are preserved.
+- No automatic clock change or firmware installation. Package revision and embedded application version are listed separately in the release notes.
+
 <img src="docs/screenshots/logo.png" width="160" alt="ZZNES logo">
 
 A native **MUI** game library for **AmigaOS and ZZ9000**, using **FCEUX / FCE Ultra**
@@ -190,3 +200,5 @@ of the published beta.
 ### PCM audio rate
 
 Fresh installations default to **Paula 14-bit / 22.05 kHz** output. Higher-rate Paula and ZZ9000AX PCM options remain selectable in Sound; existing saved output choices are retained. Native sound-chip synthesis and save-state formats are unchanged.
+
+**Optional clock control:** Settings includes ZZOverclock: 666.7 MHz or experimental 800 MHz. Standard-speed operation does not require the custom clock service. [Clock settings](docs/clock-settings.md).
