@@ -1,0 +1,16 @@
+{
+  "base_installer_sha256": "75f79a3194acc22e1c108448b02c9d82b5fbcf04905d7b861e0fc01fb592beda",
+  "installer_sha256": "27dab31618be98b5de0a7ffa6b1b48d2b9bad3e57860f2a2c7cf3bdbc113a18e",
+  "README_sha256": "2083b2be5d4cbe622ec4892e4be5d21738928cce076d87787e81d336d5183045",
+  "license_sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903",
+  "executable_hashes_unchanged": {
+    "ZZNES/Install-Scanlines": "cf300fb5169aefd224205fa14feaf79eac18c933ecc37300e5250ae8205ed00a",
+    "ZZNES/Scanlines/ZZScanlines": "973a23c9bf0a867cba8fe8ed069baeaf90a632ac47ed32a7f5635197492e5757",
+    "ZZNES/Scanlines/ZZScanlinesGUI": "5eeabbb5a691ee5d6c99e134b9e5909599415f2a6d35961c4f2150f158d0cedd",
+    "ZZNES/ZZClock": "b0ab72855e3e1aa9e5a9cf072ff3f7e2892b70f4b2b7193f000ff26381edf4d0",
+    "ZZNES/ZZFceux-ui": "21e0216116f832902cce5c8efbf59871ae37cee2909f666792a37599cd48bf3d",
+    "ZZNES/ZZNES": "1ffe7f401d01965bd8e7e5548a7d33bf18e055e4bd4ac79d83d6fa215431f767"
+  },
+  "component_count": 1,
+  "validation": "signed catalogue, payload checksums, full LHA round-trip, exact README and licence in outer and every component, all executables unchanged"
+}
