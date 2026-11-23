@@ -1,0 +1,37 @@
+{
+  "player": "ZZFceux-ui",
+  "sha256": "21e0216116f832902cce5c8efbf59871ae37cee2909f666792a37599cd48bf3d",
+  "arm_mhz": 800,
+  "window_scale": 2,
+  "scanlines": "software Soft",
+  "output": "Paula HiFi, requested 22050 Hz, actual mixer 22030 Hz",
+  "scope": "Fresh boot, 1200 frames without input. No listening acceptance.",
+  "runs": [
+    {
+      "title": "Castlevania III",
+      "log_sha256": "963f37824a2203315d3ff3aadde780422b48c2d8bef304a7096ece555c87ae4a",
+      "audio": {
+        "mode": "0002000e",
+        "mix_hz": 22030,
+        "callbacks": 436,
+        "silence_buffers": 35,
+        "starvation_events": 0
+      },
+      "delivery": {
+        "queued": 638940,
+        "submitted": 638940,
+        "completed": 638940,
+        "highwater": 9,
+        "error": 0,
+        "stopped": 1
+      },
+      "run": {
+        "exit": 0,
+        "frames": 1200,
+        "elapsed_us": 20823563,
+        "core_us": 11813997
+      },
+      "cleanup": true
+    }
+  ]
+}
