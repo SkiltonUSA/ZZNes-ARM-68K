@@ -1,7 +1,7 @@
 {
-  "base_installer_sha256": "75f79a3194acc22e1c108448b02c9d82b5fbcf04905d7b861e0fc01fb592beda",
-  "installer_sha256": "27dab31618be98b5de0a7ffa6b1b48d2b9bad3e57860f2a2c7cf3bdbc113a18e",
-  "README_sha256": "2083b2be5d4cbe622ec4892e4be5d21738928cce076d87787e81d336d5183045",
+  "base_installer_sha256": "27dab31618be98b5de0a7ffa6b1b48d2b9bad3e57860f2a2c7cf3bdbc113a18e",
+  "installer_sha256": "11f46a6f3eb4ba21c73f95da42fc297cef7a1eb10ea13ec21c75ffc06cc8e2f3",
+  "README_sha256": "63d8f9cb9d3307026436769c128c6e852cad1528c0ffad878f02c85e504d6690",
   "license_sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903",
   "executable_hashes_unchanged": {
     "ZZNES/Install-Scanlines": "cf300fb5169aefd224205fa14feaf79eac18c933ecc37300e5250ae8205ed00a",

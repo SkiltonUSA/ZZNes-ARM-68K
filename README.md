@@ -151,9 +151,12 @@ measurements of this release. [Measurements](docs/current-development.md) ·
 
 ## Compatibility
 
-Mapper support is bounded: battery-backed cartridges, trainers and NES 2.0 are
-not yet enabled. Importing the full FCEUX source does **not** enable every upstream
-mapper or desktop tool. [Supported cartridges](docs/cartridge-compatibility-20261019.md) ·
+The current player accepts bounded iNES cartridges using mapper IDs
+**0, 1, 2, 3, 4, 5, 78 and 90**, subject to board-specific limits.
+**Battery-flagged cartridges, trainers, NES 2.0 and UNIF are not enabled.**
+Save states for accepted games are separate from battery-save support.
+Importing the full FCEUX source does not enable every upstream mapper or tool.
+[Current cartridge support](docs/current-cartridge-support.md) ·
 [ROM audit](docs/rom-validation-20261019.md) · [Integration roadmap](docs/fceux-integration.md).
 
 ## Credits and source

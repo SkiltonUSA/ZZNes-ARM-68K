@@ -9,11 +9,12 @@ NES feature.
    current players. Keep synthesis corruption, transport coherency and device
    starvation separate. Per-app AHI/Paula and explicit AX options already exist;
    broader AX/driver and long-session acceptance remain necessary.
-2. **Compatibility:** expand tested mapper/board, trainer and NES 2.0 coverage
-   against the enabled loader/core paths. Compiling upstream board code does not
+2. **Compatibility:** expand testing of enabled mappers/boards; integrate trainer, battery and
+   NES 2.0 support before claiming coverage for those currently rejected formats. Compiling upstream board code does not
    establish cartridge compatibility.
 3. **State and persistence:** preserve legacy save compatibility while extending
-   coverage to additional mappers, battery-backed cartridges and interrupted saves.
+   coverage to additional enabled mappers and interrupted saves. Battery-backed
+   cartridge integration is separate future work.
 4. **Presentation/input:** retain regional cadence and whole-image scaling;
    broaden scrolling, USB/CD32/Sega mapping and window/fullscreen regression tests.
 5. **Release provenance:** keep launcher/player hashes, build inputs, README and

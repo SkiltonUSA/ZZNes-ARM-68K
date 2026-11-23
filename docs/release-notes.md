@@ -34,3 +34,10 @@ Installers and component LHAs include readme.txt copied from the main README,
 about.txt with credits and licence.txt. Existing component notices are retained.
 This documentation-only refresh leaves executable hashes and application
 versions unchanged.
+
+## Cartridge documentation correction
+
+The README and roadmap now distinguish the eight enabled mapper IDs from
+future trainer, battery and NES 2.0 integration. Save-state support does not
+imply battery-cartridge support. See [current support](current-cartridge-support.md).
+Installer documents are refreshed; executable hashes and versions are unchanged.

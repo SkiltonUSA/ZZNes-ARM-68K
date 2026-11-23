@@ -2,6 +2,8 @@
 
 ## 0.8.9 Beta
 
+- Reconcile the cartridge-support table and roadmap with the retained player: eight mapper IDs, battery/trainer/NES 2.0 rejection, and the distinction between save states and battery saves. Documentation-only archive refresh; binaries unchanged.
+
 - Archive documentation refresh: include the current main README as readme.txt,
   plus about.txt and licence.txt in every installer/component LHA. Executable
   hashes and application versions are unchanged by this refresh.

@@ -28,7 +28,10 @@ The MUI launcher, Workbench/window display path, XACP Core1 ownership and AHI
 handoff remain the platform layer. Qt, Win32 and SDL frontend source is retained
 as reference, not linked into the Amiga application.
 
-## Cartridge audit
+## Historical cartridge audit
+
+The following is the initial import audit, not the current released-player
+feature list. See [current cartridge support](current-cartridge-support.md).
 
 The initial Cortex-A9 translation-unit audit compiles **156 of 162 board source
 files** using the current platform declarations. Compilation does not establish
