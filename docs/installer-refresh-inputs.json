@@ -15,5 +15,7 @@
   },
   "player_policy": "Recorded binaries retained; only launcher rebuilt.",
   "launcher_sha256": "1ffe7f401d01965bd8e7e5548a7d33bf18e055e4bd4ac79d83d6fa215431f767",
-  "release_tag": "v0.8.9-beta"
+  "release_tag": "v0.8.9-beta",
+  "launcher_member": "ZZNES/ZZNES",
+  "readme_member": "ZZNES/README.md"
 }
