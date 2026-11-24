@@ -7,7 +7,7 @@
 static unsigned zzn_trimmed;
 static unsigned zzn_nes_size(const unsigned char *p,unsigned n){
  if(n<16||memcmp(p,"NES\032",4))return n;
- unsigned size=16u+p[4]*16384u+p[5]*8192u;
+ unsigned size=16u+((p[6]&4)?512u:0u)+p[4]*16384u+p[5]*8192u;
  if(size>=n||nes_cartridge(p,size)<0)return n;
  for(unsigned i=size;i<n;i++)if(p[i]!=32&&p[i]!=10&&p[i]!=13)return n;
  return size;

@@ -192,6 +192,10 @@ unexplained.
 
 ## Development measurements
 
+[Trainer cartridge candidate](docs/ines-trainers.md): native and Cortex-A9
+execution/save-state checks and a physical 120-frame smoke test pass; not included
+in the published beta.
+
 [Current-firmware optimisation checks](amiga/records/2026-11-15/README.md):
 matched workloads, save/cleanup checks and remaining audio limits.
 These opt-in candidates are separate from the published beta.

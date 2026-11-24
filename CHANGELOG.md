@@ -1,5 +1,15 @@
 # Changelog
 
+## Unreleased — trainer candidate
+
+- Add opt-in iNES trainer loading on the eight supported mappers, with corrected
+  payload offsets and trainer-preserving launcher whitespace recovery.
+- Native and relocated Cortex-A9 execution/state-replay tests pass; a physical
+  120-frame mapper-0 smoke test exits cleanly. Wider hardware coverage is pending.
+- Restore the released 666/800 MHz calibration policy in fresh builds.
+  Published 0.8.9 binaries remain unchanged.
+- [Implementation and checks](docs/ines-trainers.md).
+
 ## 0.8.9 Beta
 
 - Reconcile the cartridge-support table and roadmap with the retained player: eight mapper IDs, battery/trainer/NES 2.0 rejection, and the distinction between save states and battery saves. Documentation-only archive refresh; binaries unchanged.

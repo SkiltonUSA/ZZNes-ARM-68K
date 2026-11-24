@@ -7,7 +7,8 @@ from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 def run(a):subprocess.run(list(map(str,a)),cwd=ROOT,check=True)
 def main():
- p=argparse.ArgumentParser();p.add_argument('--audio-noise-muted',action='store_true',help='Isolated exact muted-noise advancement; requires --audio-noise-spans');p.add_argument('--audio-noise-spans',action='store_true',help='Isolated exact HQ noise spans; requires --release-ax');p.add_argument('--release-ax',action='store_true',help='Build the current beta with configured AHI output and matching launcher');p.add_argument('--ax-audio-test',action='store_true',help='Isolated per-app ZZ9000AX AHI backend; unit 0 fallback');p.add_argument('--host-service-test',choices=('profile','batch4'),help='Isolated 68k cost profiling or four-frame AHI batch test');p.add_argument('--presentation-test',choices=('serial','overlap'),help='Isolated every-frame presentation test; periodic readbacks and automatic capture disabled');p.add_argument('--ack-poll-us',type=int,choices=(0,250),default=0,help='Experimental bounded fullscreen ACK register polling');p.add_argument('--audio-early',action='store_true',help='Experimental batch-ready AHI handoff before presentation');p.add_argument('--jit-registers',action='store_true',help='Experimental register-only A9 translation; 32 MiB executable cache');p.add_argument('--arm',action='store_true');p.add_argument('--optimisation',action='store_true');p.add_argument('--reuse-arm-from',type=Path,help='Reuse recorded 0.8.7 ARM for host-only audio changes');p.add_argument("--audio-core-quality",type=int,choices=(0,1),help="Isolated matched ARM sound-synthesis experiment; requires --release-ax");p.add_argument("--audio-fir-neon",action="store_true",help="Isolated bit-exact HQ FIR SIMD; requires --audio-core-quality 1");p.add_argument("--audio-word-clear",action="store_true",help="Isolated aligned HQ wave-buffer clearing");p.add_argument("--audio-square-spans",action="store_true",help="Isolated event-bounded HQ square synthesis");p.add_argument("--audio-filter32",action="store_true",help="Isolated HQ anti-alias filter for the 32 kHz source");p.add_argument("--audio-interpreter",action="store_true",help="Isolated audio comparison using original CPU opcode bodies");p.add_argument("--audio-shared-uncached",action="store_true",help="Isolated uncached shared PCM transfer pages");p.add_argument("--audio-hq-states",action="store_true",help="Versioned HQ filter-history save states");a=p.parse_args()
+ p=argparse.ArgumentParser();p.add_argument('--trainer-test',action='store_true',help='Isolated iNES trainer candidate; requires --release-ax');p.add_argument('--audio-noise-muted',action='store_true',help='Isolated exact muted-noise advancement; requires --audio-noise-spans');p.add_argument('--audio-noise-spans',action='store_true',help='Isolated exact HQ noise spans; requires --release-ax');p.add_argument('--release-ax',action='store_true',help='Build the current beta with configured AHI output and matching launcher');p.add_argument('--ax-audio-test',action='store_true',help='Isolated per-app ZZ9000AX AHI backend; unit 0 fallback');p.add_argument('--host-service-test',choices=('profile','batch4'),help='Isolated 68k cost profiling or four-frame AHI batch test');p.add_argument('--presentation-test',choices=('serial','overlap'),help='Isolated every-frame presentation test; periodic readbacks and automatic capture disabled');p.add_argument('--ack-poll-us',type=int,choices=(0,250),default=0,help='Experimental bounded fullscreen ACK register polling');p.add_argument('--audio-early',action='store_true',help='Experimental batch-ready AHI handoff before presentation');p.add_argument('--jit-registers',action='store_true',help='Experimental register-only A9 translation; 32 MiB executable cache');p.add_argument('--arm',action='store_true');p.add_argument('--optimisation',action='store_true');p.add_argument('--reuse-arm-from',type=Path,help='Reuse recorded 0.8.7 ARM for host-only audio changes');p.add_argument("--audio-core-quality",type=int,choices=(0,1),help="Isolated matched ARM sound-synthesis experiment; requires --release-ax");p.add_argument("--audio-fir-neon",action="store_true",help="Isolated bit-exact HQ FIR SIMD; requires --audio-core-quality 1");p.add_argument("--audio-word-clear",action="store_true",help="Isolated aligned HQ wave-buffer clearing");p.add_argument("--audio-square-spans",action="store_true",help="Isolated event-bounded HQ square synthesis");p.add_argument("--audio-filter32",action="store_true",help="Isolated HQ anti-alias filter for the 32 kHz source");p.add_argument("--audio-interpreter",action="store_true",help="Isolated audio comparison using original CPU opcode bodies");p.add_argument("--audio-shared-uncached",action="store_true",help="Isolated uncached shared PCM transfer pages");p.add_argument("--audio-hq-states",action="store_true",help="Versioned HQ filter-history save states");a=p.parse_args()
+ if a.trainer_test and (not a.release_ax or a.audio_noise_spans or a.audio_core_quality is not None):p.error('--trainer-test requires the current --release-ax defaults')
  if a.audio_noise_muted and not a.audio_noise_spans:p.error('--audio-noise-muted requires --audio-noise-spans')
  if a.audio_noise_spans and (not a.release_ax or a.audio_core_quality is not None):p.error('--audio-noise-spans requires the current --release-ax defaults')
  if a.audio_hq_states and (a.audio_core_quality!=1 or a.audio_filter32):p.error("--audio-hq-states requires quality 1 with the original FIR")
@@ -75,6 +76,7 @@ def main():
   out=ROOT/'.context/ax-release-build';stage=out/'player';lib=out/'library'
  if a.audio_noise_spans:out=ROOT/'.context/noise-spans-build';stage=out/'player';lib=out/'library'
  if a.audio_noise_muted:out=ROOT/'.context/noise-muted-build';stage=out/'player';lib=out/'library'
+ if a.trainer_test:out=ROOT/'.context/trainer-build';stage=out/'player';lib=out/'library';m['version']+=' trainer test'
  shutil.copytree(snap/'build-inputs/player',stage,dirs_exist_ok=True);library_snap=ROOT/m['library_snapshot_dir']
  shutil.copytree(library_snap/'build-inputs',lib,dirs_exist_ok=True)
  for header in (library_snap/'source').glob('*.h'):shutil.copy2(header,lib/header.name)
@@ -108,6 +110,11 @@ def main():
    core=out/'core';shutil.copytree(source/'core',core,dirs_exist_ok=True)
    shutil.copytree(mapper/'core',core,dirs_exist_ok=True)
    shutil.copytree(mapper/'common',out/'common',dirs_exist_ok=True)
+  if a.trainer_test:
+   from prepare_trainers import prepare_core,prepare_gate,prepare_launcher
+   prepare_core(core)
+   for folder in (out/'common',stage,lib):prepare_gate(folder/'cartridge.h')
+   prepare_launcher(lib)
   if a.audio_core_quality is not None:
    p=core/'compat_core.cpp';text=p.read_text();assert text.count('FSettings.soundq=0;')==1
    p.write_text(text.replace('FSettings.soundq=0;',f'FSettings.soundq={a.audio_core_quality};'))
@@ -185,6 +192,8 @@ def main():
  if a.release_ax:
   from prepare_output_quality import prepare_audio
   prepare_audio(stage)
+  from prepare_runtime_clock import prepare as prepare_clock
+  prepare_clock(stage)
  # Historical isolated AX experiment; release output is selected per app above.
  if a.ax_audio_test:
   from prepare_ax_audio import prepare
