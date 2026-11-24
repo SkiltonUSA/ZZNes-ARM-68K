@@ -1,5 +1,11 @@
 # Changelog
 
+## Unreleased — register-dispatch compatibility
+
+- Add original self-modifying RAM cartridges, state replay and optional exhaustive
+  register/flag checks. No core or release binary changed.
+- [Validation and limits](docs/validation/ram-code/README.md).
+
 ## Unreleased — trainer candidate
 
 - Add opt-in iNES trainer loading on the eight supported mappers, with corrected

@@ -1,0 +1,6 @@
+{
+  ".context/trainer-build/player/fceux.elf": "0c2b3997526af9b11f63ec8e2e1df17875e18854bf3317b53fe24ecaac2d9e7d",
+  "amiga/common/arm_jit/register_op.h": "78f07779754d20250e0600332b458029d7262771d8a0c93b0314c5a249e93a50",
+  "scripts/test_ram_code.py": "9c8d46c75576a30c56b565c86f124d0bdfc91fad05645a339dab42c9a48d5d4f",
+  "tests/amiga/test_console_jit.py": "ed0dac4b3d10d832c6e9d5a90778996c572a5e40e7975ddcfe519424ba469d0a"
+}
