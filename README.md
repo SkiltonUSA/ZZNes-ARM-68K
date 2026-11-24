@@ -194,7 +194,8 @@ unexplained.
 
 [RAM-code and register-dispatch validation](docs/validation/ram-code/README.md):
 self-modifying RAM, state replay and exhaustive arithmetic checks pass in the ARM
-instruction model. Physical validation of these fixtures remains pending.
+instruction model. Bounded physical launch/display/cleanup checks also pass; full hardware
+state-replay and gameplay coverage remain pending.
 
 [Trainer cartridge candidate](docs/ines-trainers.md): native and Cortex-A9
 execution/save-state checks and a physical 120-frame smoke test pass; not included
