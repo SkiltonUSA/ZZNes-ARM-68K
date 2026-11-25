@@ -1,0 +1,10 @@
+PASS {'case': 'trainer0', 'physical_state_loaded': True, 'trainer_ram_marker': '5a', 'first_resume_cycles': 6819736, 'first_resume_video_hash': 'b87d5dc5', 'matches_relocated_model': True}
+PASS {'case': 'trainer1', 'physical_state_loaded': True, 'trainer_ram_marker': '5a', 'first_resume_cycles': 6819736, 'first_resume_video_hash': 'b87d5dc5', 'matches_relocated_model': True}
+PASS {'case': 'trainer2', 'physical_state_loaded': True, 'trainer_ram_marker': '5a', 'first_resume_cycles': 6641053, 'first_resume_video_hash': 'b87d5dc5', 'matches_relocated_model': True}
+PASS {'case': 'trainer3', 'physical_state_loaded': True, 'trainer_ram_marker': '5a', 'first_resume_cycles': 6909079, 'first_resume_video_hash': 'b87d5dc5', 'matches_relocated_model': True}
+PASS {'case': 'trainer4', 'physical_state_loaded': True, 'trainer_ram_marker': '5a', 'first_resume_cycles': 6283687, 'first_resume_video_hash': 'b87d5dc5', 'matches_relocated_model': True}
+PASS {'case': 'trainer5', 'physical_state_loaded': True, 'trainer_ram_marker': '5a', 'first_resume_cycles': 6819736, 'first_resume_video_hash': 'b87d5dc5', 'matches_relocated_model': True}
+PASS {'case': 'trainer78', 'physical_state_loaded': True, 'trainer_ram_marker': '5a', 'first_resume_cycles': 5866759, 'first_resume_video_hash': 'b87d5dc5', 'matches_relocated_model': True}
+PASS {'case': 'trainer90', 'physical_state_loaded': True, 'trainer_ram_marker': '5a', 'first_resume_cycles': 6641053, 'first_resume_video_hash': 'b87d5dc5', 'matches_relocated_model': True}
+PASS {'case': 'smw', 'physical_state_loaded': True, 'trainer_ram_marker': None, 'first_resume_cycles': 6819738, 'first_resume_video_hash': 'dbe4aa5f', 'matches_relocated_model': True}
+PASS {'case': 'cv3', 'physical_state_loaded': True, 'trainer_ram_marker': None, 'first_resume_cycles': 8963931, 'first_resume_video_hash': '6e049cb4', 'matches_relocated_model': True}

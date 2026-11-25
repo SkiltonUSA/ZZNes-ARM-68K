@@ -1,0 +1,17 @@
+PASS ARM trainer 0 0x12000040 CPU execution and HQ video/audio state replay
+PASS ARM trainer 0 0x150020c0 CPU execution and HQ video/audio state replay
+PASS ARM trainer 1 0x12000040 CPU execution and HQ video/audio state replay
+PASS ARM trainer 1 0x150020c0 CPU execution and HQ video/audio state replay
+PASS ARM trainer 2 0x12000040 CPU execution and HQ video/audio state replay
+PASS ARM trainer 2 0x150020c0 CPU execution and HQ video/audio state replay
+PASS ARM trainer 3 0x12000040 CPU execution and HQ video/audio state replay
+PASS ARM trainer 3 0x150020c0 CPU execution and HQ video/audio state replay
+PASS ARM trainer 4 0x12000040 CPU execution and HQ video/audio state replay
+PASS ARM trainer 4 0x150020c0 CPU execution and HQ video/audio state replay
+PASS ARM trainer 5 0x12000040 CPU execution and HQ video/audio state replay
+PASS ARM trainer 5 0x150020c0 CPU execution and HQ video/audio state replay
+PASS ARM trainer 78 0x12000040 CPU execution and HQ video/audio state replay
+PASS ARM trainer 78 0x150020c0 CPU execution and HQ video/audio state replay
+PASS ARM trainer 90 0x12000040 CPU execution and HQ video/audio state replay
+PASS ARM trainer 90 0x150020c0 CPU execution and HQ video/audio state replay
+PASS Cortex-A9 instruction model; no physical timing claim

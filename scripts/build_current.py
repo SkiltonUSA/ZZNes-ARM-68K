@@ -119,7 +119,7 @@ def main():
    core=out/'core';shutil.copytree(source/'core',core,dirs_exist_ok=True,ignore=shutil.ignore_patterns('next-build.json'))
    shutil.copytree(mapper/'core',core,dirs_exist_ok=True,ignore=shutil.ignore_patterns('next-build.json'))
    shutil.copytree(mapper/'common',out/'common',dirs_exist_ok=True,ignore=shutil.ignore_patterns('next-build.json'))
-  if a.trainer_test:
+  if release_hq or a.trainer_test:
    from prepare_trainers import prepare_core,prepare_gate,prepare_launcher
    prepare_core(core)
    for folder in (out/'common',stage,lib):prepare_gate(folder/'cartridge.h')

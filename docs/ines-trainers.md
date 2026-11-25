@@ -1,7 +1,8 @@
 # iNES trainer candidate
 
-**Development only; not included in 0.8.9 Beta.** The normal release gate still
-rejects trainer cartridges. Battery cartridges, NES 2.0 and UNIF remain outside
+**Development only; not included in 0.8.9 Beta.** The published 0.8.9 gate still
+rejects trainer cartridges. The [0.8.10 candidate](candidate-0.8.10.md) enables
+the validated trainer path in the normal release build. Battery cartridges, NES 2.0 and UNIF remain outside
 this candidate too.
 
 The optional build reads the 512-byte trainer before PRG/CHR data, writes it to

@@ -1,0 +1,10 @@
+PASS mapper 0 trainer: 512-byte load, CPU execution, PRG/CHR offsets, state restore, unchanged input; invalid headers rejected
+PASS mapper 1 trainer: 512-byte load, CPU execution, PRG/CHR offsets, state restore, unchanged input; invalid headers rejected
+PASS mapper 2 trainer: 512-byte load, CPU execution, PRG/CHR offsets, state restore, unchanged input; invalid headers rejected
+PASS mapper 3 trainer: 512-byte load, CPU execution, PRG/CHR offsets, state restore, unchanged input; invalid headers rejected
+PASS mapper 4 trainer: 512-byte load, CPU execution, PRG/CHR offsets, state restore, unchanged input; invalid headers rejected
+PASS mapper 5 trainer: 512-byte load, CPU execution, PRG/CHR offsets, state restore, unchanged input; invalid headers rejected
+PASS mapper 78 trainer: 512-byte load, CPU execution, PRG/CHR offsets, state restore, unchanged input; invalid headers rejected
+PASS mapper 90 trainer: 512-byte load, CPU execution, PRG/CHR offsets, state restore, unchanged input; invalid headers rejected
+PASS trainer raw/stored/deflated recovery preserves all 512 trainer bytes
+PASS raw/stored/deflated padding, original-byte preservation, clean-copy readback, strict header/size/tail checks, ZIP CRC

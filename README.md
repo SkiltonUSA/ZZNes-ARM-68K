@@ -11,6 +11,8 @@
 - Archives include the main README as `readme.txt`, plus `about.txt` and `licence.txt`.
 - Launcher and release use the same version number. No automatic clock change or firmware installation.
 
+Development: [0.8.10 candidate and remaining checks](docs/candidate-0.8.10.md). The public release above is unchanged.
+
 <img src="docs/screenshots/logo.png" width="160" alt="ZZNES logo">
 
 A native **MUI** game library for **AmigaOS and ZZ9000**, using **FCEUX / FCE Ultra**

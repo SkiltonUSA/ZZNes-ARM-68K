@@ -1,4 +1,4 @@
-"""Opt-in iNES trainers, following the pinned FCEUX power-on path."""
+"""Staged iNES trainer support, following the pinned FCEUX power-on path."""
 from pathlib import Path
 
 

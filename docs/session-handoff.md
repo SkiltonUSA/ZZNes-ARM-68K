@@ -955,3 +955,15 @@ User selected offline work while the Termic workspace retains hardware access.
 Do not run/deploy another hardware test until that changes. Focus follow-up
 observed concurrent window-scaling tests; no causal conclusion or focus fix.
 Installed players, defaults, packages and versions remain unchanged.
+
+## 0.8.10 candidate integration — 2026-11-25
+
+Only NES/SNES work is active. The normal release build now includes the changes
+in [candidate notes](candidate-0.8.10.md); exact local/native/ARM checks are in
+[validation](validation/release-0.8.10/README.md). Public/installed versions are
+unchanged. Signed AmiPkg candidates are staged privately, not published.
+
+The physical Stunt Race FX run lost bridge responses during a screenshot request.
+The shared gateway is paused; cleanup is unverified and the existing lease is
+retained. Do not launch another Core1 test until the target is inspected and
+idle is verified. No clock, firmware or other emulator changes were made.

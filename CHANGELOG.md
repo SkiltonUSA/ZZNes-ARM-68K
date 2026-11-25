@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.8.10 candidate — pending hardware acceptance
+
+- Integrate trainer support into the normal release build.
+- Rebuild matching launcher/player versions in an isolated output directory.
+- [Validation and remaining limits](docs/candidate-0.8.10.md).
+
 ## Unreleased — build records
 
 - Add fresh isolated output directories and actual artifact/input hashes after a

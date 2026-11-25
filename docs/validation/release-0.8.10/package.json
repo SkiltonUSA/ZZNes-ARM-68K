@@ -1,0 +1,21 @@
+{
+  "version": "0.8.10-dev",
+  "published": false,
+  "installed_as_default": false,
+  "archive": "ZZNES-0.8.10-dev-amipkg.lha",
+  "archive_sha256": "17b23d76e16b64a6255dac055ecd08c6bfce13535e3d9d2648572e75406aaee1",
+  "bytes": 784442,
+  "checks": [
+    "catalogue signature",
+    "archive round-trip",
+    "payload hashes",
+    "matching executable versions",
+    "exact main README/about/licence",
+    "no private ROM/settings/save payloads"
+  ],
+  "pending": [
+    "physical install",
+    "gameplay/listening acceptance",
+    "clean exit"
+  ]
+}

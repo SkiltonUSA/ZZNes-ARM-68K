@@ -1,0 +1,12 @@
+{
+  "console": "ZZNES",
+  "version": "0.8.10-dev",
+  "output": ".context/release-0.8.10-build",
+  "artifacts": {
+    "ZZNES": "602c0082f035fa951d4e9f7eda25a347ea68b4a4e0be6988b0245d68a06bc517",
+    "ZZFceux-ui": "df715b4d1f02fbad626e0665db858392f41abc601131011b586ef6071f4bb778",
+    "MakeIcon": "604fbeeb57c9269b8729f594f462ff1224501accb6d5566b7ef234d8d88aed5f",
+    "ZZClock": "b0ab72855e3e1aa9e5a9cf072ff3f7e2892b70f4b2b7193f000ff26381edf4d0",
+    "player/zz_payload.h": "335a28a4d6c22994b836b07f69d60f93c0a609aad55fccb8c3103cd3db54dada"
+  }
+}
