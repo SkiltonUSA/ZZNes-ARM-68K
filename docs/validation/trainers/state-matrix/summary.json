@@ -1,0 +1,182 @@
+[
+  {
+    "case": "trainer0-save",
+    "pass": true,
+    "window": 0,
+    "frames": 900,
+    "rom_sha256": "d91ddbe48da6cf08a632590fcf30c6a61d851d00c88445d41ab9014c15772933",
+    "elapsed_us": 19382893,
+    "starvations": 0
+  },
+  {
+    "case": "trainer0-fresh",
+    "pass": true,
+    "window": 0,
+    "frames": 120,
+    "rom_sha256": "d91ddbe48da6cf08a632590fcf30c6a61d851d00c88445d41ab9014c15772933",
+    "elapsed_us": 3165525,
+    "starvations": 0
+  },
+  {
+    "case": "trainer1-save",
+    "pass": true,
+    "window": 1,
+    "frames": 900,
+    "rom_sha256": "a37abb42c9af1e4298f5b561d23b10763ad3af5d129ea30e940b1f30b019f5c3",
+    "elapsed_us": 19579577,
+    "starvations": 0
+  },
+  {
+    "case": "trainer1-fresh",
+    "pass": true,
+    "window": 1,
+    "frames": 120,
+    "rom_sha256": "a37abb42c9af1e4298f5b561d23b10763ad3af5d129ea30e940b1f30b019f5c3",
+    "elapsed_us": 3148944,
+    "starvations": 0
+  },
+  {
+    "case": "trainer2-save",
+    "pass": true,
+    "window": 0,
+    "frames": 900,
+    "rom_sha256": "1084bfab43f6485e15778ce2cdeb54aa4ffc013e17e48c23c3519cfe85afcc50",
+    "elapsed_us": 19533145,
+    "starvations": 0
+  },
+  {
+    "case": "trainer2-fresh",
+    "pass": true,
+    "window": 0,
+    "frames": 120,
+    "rom_sha256": "1084bfab43f6485e15778ce2cdeb54aa4ffc013e17e48c23c3519cfe85afcc50",
+    "elapsed_us": 3138261,
+    "starvations": 0
+  },
+  {
+    "case": "trainer3-save",
+    "pass": true,
+    "window": 1,
+    "frames": 900,
+    "rom_sha256": "3a3364a69adfb6b8ddb599dfeb23226b70f86e5b07f3b2008abfa6c87a2a28ea",
+    "elapsed_us": 19595721,
+    "starvations": 0
+  },
+  {
+    "case": "trainer3-fresh",
+    "pass": true,
+    "window": 1,
+    "frames": 120,
+    "rom_sha256": "3a3364a69adfb6b8ddb599dfeb23226b70f86e5b07f3b2008abfa6c87a2a28ea",
+    "elapsed_us": 3144459,
+    "starvations": 0
+  },
+  {
+    "case": "trainer4-save",
+    "pass": true,
+    "window": 0,
+    "frames": 900,
+    "rom_sha256": "e1e98ab300ba51116ed0bdb6b8e0ad92832e4ff3207b40b18e4ce52c69019e6b",
+    "elapsed_us": 19495077,
+    "starvations": 0
+  },
+  {
+    "case": "trainer4-fresh",
+    "pass": true,
+    "window": 0,
+    "frames": 120,
+    "rom_sha256": "e1e98ab300ba51116ed0bdb6b8e0ad92832e4ff3207b40b18e4ce52c69019e6b",
+    "elapsed_us": 3181873,
+    "starvations": 0
+  },
+  {
+    "case": "trainer5-save",
+    "pass": true,
+    "window": 1,
+    "frames": 900,
+    "rom_sha256": "e2cc0e0c60d4db0303b0444c6fbd7088ff9b4dcf63c6e131edef170ee68be2b9",
+    "elapsed_us": 19594139,
+    "starvations": 0
+  },
+  {
+    "case": "trainer5-fresh",
+    "pass": true,
+    "window": 1,
+    "frames": 120,
+    "rom_sha256": "e2cc0e0c60d4db0303b0444c6fbd7088ff9b4dcf63c6e131edef170ee68be2b9",
+    "elapsed_us": 3148583,
+    "starvations": 0
+  },
+  {
+    "case": "trainer78-save",
+    "pass": true,
+    "window": 0,
+    "frames": 900,
+    "rom_sha256": "48e62581bc6cf5e8eefda7ceb2992406d696d370bdf56c9282b9d553dd18d55f",
+    "elapsed_us": 19729607,
+    "starvations": 0
+  },
+  {
+    "case": "trainer78-fresh",
+    "pass": true,
+    "window": 0,
+    "frames": 120,
+    "rom_sha256": "48e62581bc6cf5e8eefda7ceb2992406d696d370bdf56c9282b9d553dd18d55f",
+    "elapsed_us": 3148303,
+    "starvations": 0
+  },
+  {
+    "case": "trainer90-save",
+    "pass": true,
+    "window": 1,
+    "frames": 900,
+    "rom_sha256": "251db514250624640b0cfe74f6a81fc55b93ca1450c268a7e7020d97e5aaaa4b",
+    "elapsed_us": 19578055,
+    "starvations": 0
+  },
+  {
+    "case": "trainer90-fresh",
+    "pass": true,
+    "window": 1,
+    "frames": 120,
+    "rom_sha256": "251db514250624640b0cfe74f6a81fc55b93ca1450c268a7e7020d97e5aaaa4b",
+    "elapsed_us": 3131400,
+    "starvations": 0
+  },
+  {
+    "case": "smw-save",
+    "pass": true,
+    "window": 0,
+    "frames": 900,
+    "rom_sha256": "b5cc8b38ce2b0149b7d90c612dd88d8c5fd58285f68c90e52f7485637e8107a9",
+    "elapsed_us": 19610766,
+    "starvations": 0
+  },
+  {
+    "case": "smw-fresh",
+    "pass": true,
+    "window": 0,
+    "frames": 120,
+    "rom_sha256": "b5cc8b38ce2b0149b7d90c612dd88d8c5fd58285f68c90e52f7485637e8107a9",
+    "elapsed_us": 3165982,
+    "starvations": 0
+  },
+  {
+    "case": "cv3-save",
+    "pass": true,
+    "window": 1,
+    "frames": 900,
+    "rom_sha256": "1c7b2ed2c1fb5839a6764006aa476f5c9d48f99465b6141980f3a5af1dfec0d6",
+    "elapsed_us": 19462067,
+    "starvations": 0
+  },
+  {
+    "case": "cv3-fresh",
+    "pass": true,
+    "window": 1,
+    "frames": 120,
+    "rom_sha256": "1c7b2ed2c1fb5839a6764006aa476f5c9d48f99465b6141980f3a5af1dfec0d6",
+    "elapsed_us": 3148271,
+    "starvations": 0
+  }
+]

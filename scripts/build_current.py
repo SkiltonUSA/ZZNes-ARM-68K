@@ -5,9 +5,11 @@ Default rebuilds 68k/MUI around the verified ARM image; --arm recompiles it.
 import argparse,hashlib,importlib.util,json,os,re,shutil,subprocess
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
-def run(a):subprocess.run(list(map(str,a)),cwd=ROOT,check=True)
+COMMANDS=[]
+def run(a):
+ command=list(map(str,a));subprocess.run(command,cwd=ROOT,check=True);COMMANDS.append(command)
 def main():
- p=argparse.ArgumentParser();p.add_argument('--trainer-test',action='store_true',help='Isolated iNES trainer candidate; requires --release-ax');p.add_argument('--audio-noise-muted',action='store_true',help='Isolated exact muted-noise advancement; requires --audio-noise-spans');p.add_argument('--audio-noise-spans',action='store_true',help='Isolated exact HQ noise spans; requires --release-ax');p.add_argument('--release-ax',action='store_true',help='Build the current beta with configured AHI output and matching launcher');p.add_argument('--ax-audio-test',action='store_true',help='Isolated per-app ZZ9000AX AHI backend; unit 0 fallback');p.add_argument('--host-service-test',choices=('profile','batch4'),help='Isolated 68k cost profiling or four-frame AHI batch test');p.add_argument('--presentation-test',choices=('serial','overlap'),help='Isolated every-frame presentation test; periodic readbacks and automatic capture disabled');p.add_argument('--ack-poll-us',type=int,choices=(0,250),default=0,help='Experimental bounded fullscreen ACK register polling');p.add_argument('--audio-early',action='store_true',help='Experimental batch-ready AHI handoff before presentation');p.add_argument('--jit-registers',action='store_true',help='Experimental register-only A9 translation; 32 MiB executable cache');p.add_argument('--arm',action='store_true');p.add_argument('--optimisation',action='store_true');p.add_argument('--reuse-arm-from',type=Path,help='Reuse recorded 0.8.7 ARM for host-only audio changes');p.add_argument("--audio-core-quality",type=int,choices=(0,1),help="Isolated matched ARM sound-synthesis experiment; requires --release-ax");p.add_argument("--audio-fir-neon",action="store_true",help="Isolated bit-exact HQ FIR SIMD; requires --audio-core-quality 1");p.add_argument("--audio-word-clear",action="store_true",help="Isolated aligned HQ wave-buffer clearing");p.add_argument("--audio-square-spans",action="store_true",help="Isolated event-bounded HQ square synthesis");p.add_argument("--audio-filter32",action="store_true",help="Isolated HQ anti-alias filter for the 32 kHz source");p.add_argument("--audio-interpreter",action="store_true",help="Isolated audio comparison using original CPU opcode bodies");p.add_argument("--audio-shared-uncached",action="store_true",help="Isolated uncached shared PCM transfer pages");p.add_argument("--audio-hq-states",action="store_true",help="Versioned HQ filter-history save states");a=p.parse_args()
+ p=argparse.ArgumentParser();p.add_argument('--output-dir',type=Path,help='Fresh isolated output directory inside this repository');p.add_argument('--trainer-test',action='store_true',help='Isolated iNES trainer candidate; requires --release-ax');p.add_argument('--audio-noise-muted',action='store_true',help='Isolated exact muted-noise advancement; requires --audio-noise-spans');p.add_argument('--audio-noise-spans',action='store_true',help='Isolated exact HQ noise spans; requires --release-ax');p.add_argument('--release-ax',action='store_true',help='Build the current beta with configured AHI output and matching launcher');p.add_argument('--ax-audio-test',action='store_true',help='Isolated per-app ZZ9000AX AHI backend; unit 0 fallback');p.add_argument('--host-service-test',choices=('profile','batch4'),help='Isolated 68k cost profiling or four-frame AHI batch test');p.add_argument('--presentation-test',choices=('serial','overlap'),help='Isolated every-frame presentation test; periodic readbacks and automatic capture disabled');p.add_argument('--ack-poll-us',type=int,choices=(0,250),default=0,help='Experimental bounded fullscreen ACK register polling');p.add_argument('--audio-early',action='store_true',help='Experimental batch-ready AHI handoff before presentation');p.add_argument('--jit-registers',action='store_true',help='Experimental register-only A9 translation; 32 MiB executable cache');p.add_argument('--arm',action='store_true');p.add_argument('--optimisation',action='store_true');p.add_argument('--reuse-arm-from',type=Path,help='Reuse recorded 0.8.7 ARM for host-only audio changes');p.add_argument("--audio-core-quality",type=int,choices=(0,1),help="Isolated matched ARM sound-synthesis experiment; requires --release-ax");p.add_argument("--audio-fir-neon",action="store_true",help="Isolated bit-exact HQ FIR SIMD; requires --audio-core-quality 1");p.add_argument("--audio-word-clear",action="store_true",help="Isolated aligned HQ wave-buffer clearing");p.add_argument("--audio-square-spans",action="store_true",help="Isolated event-bounded HQ square synthesis");p.add_argument("--audio-filter32",action="store_true",help="Isolated HQ anti-alias filter for the 32 kHz source");p.add_argument("--audio-interpreter",action="store_true",help="Isolated audio comparison using original CPU opcode bodies");p.add_argument("--audio-shared-uncached",action="store_true",help="Isolated uncached shared PCM transfer pages");p.add_argument("--audio-hq-states",action="store_true",help="Versioned HQ filter-history save states");a=p.parse_args()
  if a.trainer_test and (not a.release_ax or a.audio_noise_spans or a.audio_core_quality is not None):p.error('--trainer-test requires the current --release-ax defaults')
  if a.audio_noise_muted and not a.audio_noise_spans:p.error('--audio-noise-muted requires --audio-noise-spans')
  if a.audio_noise_spans and (not a.release_ax or a.audio_core_quality is not None):p.error('--audio-noise-spans requires the current --release-ax defaults')
@@ -77,20 +79,27 @@ def main():
  if a.audio_noise_spans:out=ROOT/'.context/noise-spans-build';stage=out/'player';lib=out/'library'
  if a.audio_noise_muted:out=ROOT/'.context/noise-muted-build';stage=out/'player';lib=out/'library'
  if a.trainer_test:out=ROOT/'.context/trainer-build';stage=out/'player';lib=out/'library';m['version']+=' trainer test'
- shutil.copytree(snap/'build-inputs/player',stage,dirs_exist_ok=True);library_snap=ROOT/m['library_snapshot_dir']
- shutil.copytree(library_snap/'build-inputs',lib,dirs_exist_ok=True)
+ if a.output_dir:
+  out=a.output_dir.resolve() if a.output_dir.is_absolute() else (ROOT/a.output_dir).resolve()
+  if not out.is_relative_to(ROOT) or out==ROOT or out.exists():p.error('--output-dir must be a new directory inside the repository')
+  stage=out/'player';lib=out/'library'
+ # A failed rebuild must not leave a previous success manifest behind.
+ (out/'build.json').unlink(missing_ok=True)
+ for stale in out.rglob('next-build.json'):stale.unlink()
+ shutil.copytree(snap/'build-inputs/player',stage,dirs_exist_ok=True,ignore=shutil.ignore_patterns('next-build.json'));library_snap=ROOT/m['library_snapshot_dir']
+ shutil.copytree(library_snap/'build-inputs',lib,dirs_exist_ok=True,ignore=shutil.ignore_patterns('next-build.json'))
  for header in (library_snap/'source').glob('*.h'):shutil.copy2(header,lib/header.name)
- shutil.copytree(library_snap/'source/zip',lib/'zip',dirs_exist_ok=True)
- shutil.copytree(ROOT/m['host_snapshot_dir'],stage,dirs_exist_ok=True)
- shutil.copytree(ROOT/m['player_overlay_dir'],stage,dirs_exist_ok=True)
+ shutil.copytree(library_snap/'source/zip',lib/'zip',dirs_exist_ok=True,ignore=shutil.ignore_patterns('next-build.json'))
+ shutil.copytree(ROOT/m['host_snapshot_dir'],stage,dirs_exist_ok=True,ignore=shutil.ignore_patterns('next-build.json'))
+ shutil.copytree(ROOT/m['player_overlay_dir'],stage,dirs_exist_ok=True,ignore=shutil.ignore_patterns('next-build.json'))
  if a.optimisation:
   overlay=ROOT/'development/optimisation-20261018'
-  shutil.copytree(overlay/'player',stage,dirs_exist_ok=True)
-  if (overlay/'source').exists():shutil.copytree(overlay/'source',lib,dirs_exist_ok=True)
-  if (overlay/'host').exists():shutil.copytree(overlay/'host',stage,dirs_exist_ok=True)
-  shutil.copytree(ROOT/'development/scalable-launcher-20261019/source',lib,dirs_exist_ok=True)
+  shutil.copytree(overlay/'player',stage,dirs_exist_ok=True,ignore=shutil.ignore_patterns('next-build.json'))
+  if (overlay/'source').exists():shutil.copytree(overlay/'source',lib,dirs_exist_ok=True,ignore=shutil.ignore_patterns('next-build.json'))
+  if (overlay/'host').exists():shutil.copytree(overlay/'host',stage,dirs_exist_ok=True,ignore=shutil.ignore_patterns('next-build.json'))
+  shutil.copytree(ROOT/'development/scalable-launcher-20261019/source',lib,dirs_exist_ok=True,ignore=shutil.ignore_patterns('next-build.json'))
   mapper=ROOT/'development/mapper78-20261019'
-  for target in [stage,lib]:shutil.copytree(mapper/'common',target,dirs_exist_ok=True)
+  for target in [stage,lib]:shutil.copytree(mapper/'common',target,dirs_exist_ok=True,ignore=shutil.ignore_patterns('next-build.json'))
   header=lib/'library_mui.h';header.write_text(header.read_text().replace('0.7.1 Beta','0.7.2-dev'))
  shutil.copy2(library_snap/'source/icon.c',lib/'icon.c')
  (lib/'icon.c').write_text((lib/'icon.c').read_text().replace('DOSBox icon',m['console']+' icon'))
@@ -107,9 +116,9 @@ def main():
  if a.arm:
   core=source/'core';objects=[]
   if a.jit_registers:
-   core=out/'core';shutil.copytree(source/'core',core,dirs_exist_ok=True)
-   shutil.copytree(mapper/'core',core,dirs_exist_ok=True)
-   shutil.copytree(mapper/'common',out/'common',dirs_exist_ok=True)
+   core=out/'core';shutil.copytree(source/'core',core,dirs_exist_ok=True,ignore=shutil.ignore_patterns('next-build.json'))
+   shutil.copytree(mapper/'core',core,dirs_exist_ok=True,ignore=shutil.ignore_patterns('next-build.json'))
+   shutil.copytree(mapper/'common',out/'common',dirs_exist_ok=True,ignore=shutil.ignore_patterns('next-build.json'))
   if a.trainer_test:
    from prepare_trainers import prepare_core,prepare_gate,prepare_launcher
    prepare_core(core)
@@ -215,5 +224,7 @@ def main():
   build(out)
  from build_clock_helper import build as build_clock
  build_clock(ROOT,out,m['image'])
+ from build_identity import record_build
+ record_build(ROOT,out,m['console'],m['version'],[m['console'],m['player'],'MakeIcon','ZZClock','player/zz_payload.h'],COMMANDS)
  print('PASS: rebuilt',m['console'],'with preserved release ARM payload'if a.reuse_arm_from else'ARM recompiled'if a.arm else'with verified ARM payload','at',out)
 if __name__=='__main__':main()

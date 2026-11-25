@@ -1,5 +1,12 @@
 # Changelog
 
+## Unreleased — build records
+
+- Add fresh isolated output directories and actual artifact/input hashes after a
+  successful build; exclude stale copied snapshot manifests. Existing tested
+  binaries and published releases are unchanged.
+- [Checks and limits](docs/validation/build-identities/README.md).
+
 ## Unreleased — register-dispatch compatibility
 
 - Record 120-frame physical fixture runs at 800 MHz with clean teardown;
@@ -15,8 +22,10 @@
   payload offsets and trainer-preserving launcher whitespace recovery.
 - Native and relocated Cortex-A9 execution/state-replay tests pass; a physical
   120-frame mapper-0 smoke test and a further 240-frame matrix on all eight
-  supported mappers exit cleanly. Real-game and interactive state coverage remains
-  pending. [Matrix](docs/validation/trainers/mapper-matrix/summary.json).
+  supported mappers exit cleanly. Twenty further physical save/load and fresh-resume
+  runs pass, with trainer execution markers confirmed in saved guest RAM. Actual
+  modified trainer-game compatibility remains pending.
+  [State matrix](docs/validation/trainers/state-matrix/README.md). [Matrix](docs/validation/trainers/mapper-matrix/summary.json).
 - Restore the released 666/800 MHz calibration policy in fresh builds.
   Published 0.8.9 binaries remain unchanged.
 - [Implementation and checks](docs/ines-trainers.md).

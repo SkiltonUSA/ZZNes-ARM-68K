@@ -1,0 +1,12 @@
+{
+  "console": "ZZNES",
+  "version": "0.8.9-dev trainer test",
+  "output": ".context/trainer-identity-final",
+  "artifacts": {
+    "ZZNES": "e442ae4371f4e44c12f6803424634a7b2344392a6202f39c5b9fa3d0740c7836",
+    "ZZFceux-ui": "1b771929299914ca4b802b19b5aa341b812e7a9319eb28bd30c029541cd8c73e",
+    "MakeIcon": "19678a53bd06142f32daef15bbaeda94127c94aacd5f2b8438703870acca1300",
+    "ZZClock": "b0ab72855e3e1aa9e5a9cf072ff3f7e2892b70f4b2b7193f000ff26381edf4d0",
+    "player/zz_payload.h": "335a28a4d6c22994b836b07f69d60f93c0a609aad55fccb8c3103cd3db54dada"
+  }
+}

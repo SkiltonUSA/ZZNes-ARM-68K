@@ -198,8 +198,9 @@ instruction model. Bounded physical launch/display/cleanup checks also pass; ful
 state-replay and gameplay coverage remain pending.
 
 [Trainer cartridge candidate](docs/ines-trainers.md): native and Cortex-A9
-execution/save-state checks and a physical 120-frame smoke test pass; not included
-in the published beta.
+execution/save-state checks and twenty physical save/resume runs pass, including
+trainer execution markers on eight mappers. Real modified trainer-game coverage
+remains pending; not included in the published beta.
 
 [Current-firmware optimisation checks](amiga/records/2026-11-15/README.md):
 matched workloads, save/cleanup checks and remaining audio limits.
