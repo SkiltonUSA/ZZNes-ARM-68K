@@ -1,0 +1,82 @@
+[
+  {
+    "case": "trainer0",
+    "physical_state_loaded": true,
+    "trainer_ram_marker": "5a",
+    "first_resume_cycles": 6819736,
+    "first_resume_video_hash": "b87d5dc5",
+    "matches_relocated_model": true
+  },
+  {
+    "case": "trainer1",
+    "physical_state_loaded": true,
+    "trainer_ram_marker": "5a",
+    "first_resume_cycles": 6819736,
+    "first_resume_video_hash": "b87d5dc5",
+    "matches_relocated_model": true
+  },
+  {
+    "case": "trainer2",
+    "physical_state_loaded": true,
+    "trainer_ram_marker": "5a",
+    "first_resume_cycles": 6641053,
+    "first_resume_video_hash": "b87d5dc5",
+    "matches_relocated_model": true
+  },
+  {
+    "case": "trainer3",
+    "physical_state_loaded": true,
+    "trainer_ram_marker": "5a",
+    "first_resume_cycles": 6909079,
+    "first_resume_video_hash": "b87d5dc5",
+    "matches_relocated_model": true
+  },
+  {
+    "case": "trainer4",
+    "physical_state_loaded": true,
+    "trainer_ram_marker": "5a",
+    "first_resume_cycles": 6283687,
+    "first_resume_video_hash": "b87d5dc5",
+    "matches_relocated_model": true
+  },
+  {
+    "case": "trainer5",
+    "physical_state_loaded": true,
+    "trainer_ram_marker": "5a",
+    "first_resume_cycles": 6819736,
+    "first_resume_video_hash": "b87d5dc5",
+    "matches_relocated_model": true
+  },
+  {
+    "case": "trainer78",
+    "physical_state_loaded": true,
+    "trainer_ram_marker": "5a",
+    "first_resume_cycles": 5866759,
+    "first_resume_video_hash": "b87d5dc5",
+    "matches_relocated_model": true
+  },
+  {
+    "case": "trainer90",
+    "physical_state_loaded": true,
+    "trainer_ram_marker": "5a",
+    "first_resume_cycles": 6641053,
+    "first_resume_video_hash": "b87d5dc5",
+    "matches_relocated_model": true
+  },
+  {
+    "case": "smw",
+    "physical_state_loaded": true,
+    "trainer_ram_marker": null,
+    "first_resume_cycles": 6819738,
+    "first_resume_video_hash": "dbe4aa5f",
+    "matches_relocated_model": true
+  },
+  {
+    "case": "cv3",
+    "physical_state_loaded": true,
+    "trainer_ram_marker": null,
+    "first_resume_cycles": 8963931,
+    "first_resume_video_hash": "6e049cb4",
+    "matches_relocated_model": true
+  }
+]

@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.8.11 Beta
+
+- Enable raw battery saves for supported MMC1, MMC3 and MMC5 cartridges.
+- Preserve trainer initialization, skip unchanged writes, verify temporary files
+  before replacement and recover a valid backup when the main save is missing.
+- Preserve old save states and existing audio/display settings.
+- Refuse wrong-sized or ambiguous unfinished saves without deleting them.
+- [Save-file guide](docs/battery-saves.md) · [Validation](docs/validation/battery-save/README.md).
+
 ## Unreleased documentation corrections
 
 - Reconcile current features and remaining work with release/validation records;

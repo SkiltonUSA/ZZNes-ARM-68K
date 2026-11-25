@@ -115,3 +115,7 @@ test-jit-layout:
 .PHONY: test-audio-early
 test-audio-early:
 	$(PYTHON) scripts/test_audio_early.py
+
+.PHONY: test-battery
+test-battery:
+	$(PYTHON) scripts/test_battery.py

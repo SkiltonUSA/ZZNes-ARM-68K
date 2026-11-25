@@ -155,3 +155,9 @@ not detected hardware; Auto uses the configured output.
 
 **Details** expands the activity history, which records navigation, game selection, settings changes, import/backup
 actions and player startup/return. It retains the latest 200 messages in memory.
+
+## Cartridge saves
+
+Supported MMC1/MMC3/MMC5 games load their battery RAM automatically and write it
+on clean exit. This is separate from the five save-state slots. Keep the ROM
+folder writable. [Files, backup recovery and limits](battery-saves.md).

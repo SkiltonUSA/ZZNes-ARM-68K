@@ -1,0 +1,9 @@
+python3 scripts/test_battery.py
+PASS mapper 1 battery 8192 bytes trainer=0: bank writes, power/import ordering, guest execution and state restoration
+PASS mapper 1 battery 8192 bytes trainer=1: bank writes, power/import ordering, guest execution and state restoration
+PASS mapper 4 battery 8192 bytes trainer=0: bank writes, power/import ordering, guest execution and state restoration
+PASS mapper 4 battery 8192 bytes trainer=1: bank writes, power/import ordering, guest execution and state restoration
+PASS mapper 5 battery 32768 bytes trainer=0: bank writes, power/import ordering, guest execution and state restoration
+PASS mapper 5 battery 32768 bytes trainer=1: bank writes, power/import ordering, guest execution and state restoration
+PASS 8192-byte battery files: new/existing, exact length, backup recovery, orphan refusal, open/write/close/readback/remove/rename/rollback faults
+PASS 32768-byte battery files: new/existing, exact length, backup recovery, orphan refusal, open/write/close/readback/remove/rename/rollback faults

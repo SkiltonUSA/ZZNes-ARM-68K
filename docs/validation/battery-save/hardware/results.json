@@ -1,0 +1,104 @@
+[
+  {
+    "case": "battery-1-0-first",
+    "pass": true,
+    "refused": false,
+    "save_sha256": "22e37e9d5beee3ad867d43eea3477372f05146afdd9c5949fe691c5907559e9a"
+  },
+  {
+    "case": "battery-1-0-second",
+    "pass": true,
+    "refused": false,
+    "save_sha256": "dd09fcf5ac65f4a3ca308cc0e8bbb6df529cbfbaa62b6630a7a261956733e020"
+  },
+  {
+    "case": "battery-1-1-first",
+    "pass": true,
+    "refused": false,
+    "save_sha256": "34e9b6e2f806dd1cd850bf461b3e6e5b204d2174bad3d0cfb6e78491f4ef12ee"
+  },
+  {
+    "case": "battery-1-1-second",
+    "pass": true,
+    "refused": false,
+    "save_sha256": "2288daad2a3b89bf22915d1e18af645aa7600f4a2f331aef56e2da2186051e06"
+  },
+  {
+    "case": "battery-4-0-first",
+    "pass": true,
+    "refused": false,
+    "save_sha256": "22e37e9d5beee3ad867d43eea3477372f05146afdd9c5949fe691c5907559e9a"
+  },
+  {
+    "case": "battery-4-0-second",
+    "pass": true,
+    "refused": false,
+    "save_sha256": "dd09fcf5ac65f4a3ca308cc0e8bbb6df529cbfbaa62b6630a7a261956733e020"
+  },
+  {
+    "case": "battery-4-1-first",
+    "pass": true,
+    "refused": false,
+    "save_sha256": "34e9b6e2f806dd1cd850bf461b3e6e5b204d2174bad3d0cfb6e78491f4ef12ee"
+  },
+  {
+    "case": "battery-4-1-second",
+    "pass": true,
+    "refused": false,
+    "save_sha256": "2288daad2a3b89bf22915d1e18af645aa7600f4a2f331aef56e2da2186051e06"
+  },
+  {
+    "case": "battery-5-0-first",
+    "pass": true,
+    "refused": false,
+    "save_sha256": "63578968ad855c08a8fdf4c5c56d685d2a4424894069bb0135da17ebff67c1a8"
+  },
+  {
+    "case": "battery-5-0-second",
+    "pass": true,
+    "refused": false,
+    "save_sha256": "3aa48f57d99d9d650d285280952ed4c8dbe71d863873e451854da70e0d9c428d"
+  },
+  {
+    "case": "battery-5-1-first",
+    "pass": true,
+    "refused": false,
+    "save_sha256": "63578968ad855c08a8fdf4c5c56d685d2a4424894069bb0135da17ebff67c1a8"
+  },
+  {
+    "case": "battery-5-1-second",
+    "pass": true,
+    "refused": false,
+    "save_sha256": "3aa48f57d99d9d650d285280952ed4c8dbe71d863873e451854da70e0d9c428d"
+  },
+  {
+    "case": "zip-first",
+    "pass": true,
+    "refused": false,
+    "save_sha256": "22e37e9d5beee3ad867d43eea3477372f05146afdd9c5949fe691c5907559e9a"
+  },
+  {
+    "case": "zip-second",
+    "pass": true,
+    "refused": false,
+    "save_sha256": "dd09fcf5ac65f4a3ca308cc0e8bbb6df529cbfbaa62b6630a7a261956733e020"
+  },
+  {
+    "case": "backup-recovery",
+    "pass": true,
+    "refused": false,
+    "save_sha256": "6a818fbad6456d2c405f253eecf6287b49b8aa07ad15c6852176713b5d6dcfb0"
+  },
+  {
+    "case": "invalid-size",
+    "pass": true,
+    "refused": true,
+    "save_sha256": null
+  },
+  {
+    "case": "orphan-temp",
+    "pass": true,
+    "refused": true,
+    "save_sha256": null
+  }
+]

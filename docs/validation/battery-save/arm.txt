@@ -1,0 +1,13 @@
+PASS ARM battery 1 trainer 0 0x12000040 fresh process, exact SRAM, HQ state/video/PCM/cycles
+PASS ARM battery 1 trainer 0 0x150020c0 fresh process, exact SRAM, HQ state/video/PCM/cycles
+PASS ARM battery 1 trainer 1 0x12000040 fresh process, exact SRAM, HQ state/video/PCM/cycles
+PASS ARM battery 1 trainer 1 0x150020c0 fresh process, exact SRAM, HQ state/video/PCM/cycles
+PASS ARM battery 4 trainer 0 0x12000040 fresh process, exact SRAM, HQ state/video/PCM/cycles
+PASS ARM battery 4 trainer 0 0x150020c0 fresh process, exact SRAM, HQ state/video/PCM/cycles
+PASS ARM battery 4 trainer 1 0x12000040 fresh process, exact SRAM, HQ state/video/PCM/cycles
+PASS ARM battery 4 trainer 1 0x150020c0 fresh process, exact SRAM, HQ state/video/PCM/cycles
+PASS ARM battery 5 trainer 0 0x12000040 fresh process, exact SRAM, HQ state/video/PCM/cycles
+PASS ARM battery 5 trainer 0 0x150020c0 fresh process, exact SRAM, HQ state/video/PCM/cycles
+PASS ARM battery 5 trainer 1 0x12000040 fresh process, exact SRAM, HQ state/video/PCM/cycles
+PASS ARM battery 5 trainer 1 0x150020c0 fresh process, exact SRAM, HQ state/video/PCM/cycles
+PASS Cortex-A9 instruction model; file I/O and physical coherency checked separately

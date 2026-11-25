@@ -1,0 +1,27 @@
+{
+  "player/zz_payload.h": {
+    "candidate": "b0bc0fa30c963079d9ac15111422968d12308652cdf25022897d403a7a56e09f",
+    "release": "b0bc0fa30c963079d9ac15111422968d12308652cdf25022897d403a7a56e09f",
+    "equal": true
+  },
+  "player/fceux.elf": {
+    "candidate": "5b1b90c07543d9d9f2d40822846ad0dc2a9b5bac52c6202fdef96519ab3ec0a5",
+    "release": "274c2b483451763efe4e91897a051a80db0ca38b66de8194f93e5a16dfacf347",
+    "equal": false
+  },
+  "player/host.c": {
+    "equal_except_version": true
+  },
+  "player/battery_host.h": {
+    "equal_except_version": true
+  },
+  "player/battery_files.h": {
+    "equal_except_version": true
+  },
+  "player/player_frontend.h": {
+    "equal_except_version": true
+  },
+  "library/library_mui.h": {
+    "equal_except_version": true
+  }
+}

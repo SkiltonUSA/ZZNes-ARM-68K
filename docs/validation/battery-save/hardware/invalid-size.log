@@ -1,0 +1,54 @@
+OWNED amiga=50000040 arm_candidate=101f0040 size=50331648 nonce=0e8bcb8e
+BOOTSTRAP amiga=40c78400 arm=00e68400 (P96 allocated/locked)
+MAP status=4d415031 SCTLR=08c50878 MIDR=413fc090 MPIDR=80000001
+MAPPING PASS (eight nonce-derived words)
+ARM ready=41524d31 SCTLR=08c5187d MIDR=413fc090 MPIDR=80000001
+REGION NTSC period_us=16639
+CARTRIDGE mapper=1 PRG=131072 CHR=32768 battery=1
+STAGE ROM published; initializing core
+BATTERY unreadable, wrong-size or unfinished save; files retained
+FULLSCREEN_END queued=0 flips=0 pending=-1 ack_wait_us=0 fault=0
+AUDIO_OUTPUT mode=00000000 mix=0 callbacks=0 silence_queued=0 starvations=0
+AUDIO_TASK queued=0 submitted=0 completed=0 highwater=0 error=0 stopped=0
+AUDIO_END samples=0 gaps=0
+PRESENT_OPTIONS window=1 scanlines=0 fps=0 optimised=1 neon_frames=0
+STAGE closing frontend; requesting ARM return next
+DIRECT_END challenges=0 verified_frames=0 copy_us=0
+PLAYER_PROFILE audio_prepare_us=0 flip_drain_us=0 audio_wait_us=0 audio_copy_us=0 audio_send_us=0
+ARM_REQUEST_PROFILE frame_us=0 present_us=0
+PRESENT_PROFILE pre_us=0 request_us=0 post_us=0
+FRAME_TIMING stage=0 count=0 mean_us=0 max_us=0 bins=0,0,0,0,0,0
+FRAME_TIMING stage=1 count=0 mean_us=0 max_us=0 bins=0,0,0,0,0,0
+FRAME_TIMING stage=2 count=0 mean_us=0 max_us=0 bins=0,0,0,0,0,0
+FRAME_TIMING stage=3 count=0 mean_us=0 max_us=0 bins=0,0,0,0,0,0
+FRAME_TIMING stage=4 count=0 mean_us=0 max_us=0 bins=0,0,0,0,0,0
+FRAME_TIMING stage=5 count=0 mean_us=0 max_us=0 bins=0,0,0,0,0,0
+INPUT_PROFILE changes=0
+JOYSTICK_END polls=0 active=0 last_type=00000000
+AUDIO_IO_PROFILE send_us=0 waitio_us=0
+WAIT_PROFILE kind=0 calls=0 requested_us=0 actual_us=0 max_us=0
+WAIT_PROFILE kind=1 calls=5 requested_us=5000 actual_us=6816 max_us=1500
+WAIT_PROFILE kind=2 calls=0 requested_us=0 actual_us=0 max_us=0
+WAIT_PROFILE kind=3 calls=0 requested_us=0 actual_us=0 max_us=0
+WAIT_PROFILE kind=4 calls=0 requested_us=0 actual_us=0 max_us=0
+WAIT_PROFILE kind=5 calls=0 requested_us=0 actual_us=0 max_us=0
+PROFILE frames=0 request_us=0 copy_us=0 colour_us=0 draw_us=0 waits=5
+EXIT epilogue=52455431 cache_echoes=0 rounds=0
+CACHE original=08c50878 running=08c5187d restored=08c50878
+MMU_RESTORE phase=3 register_mismatches=00000000 cpsr_control=1d3 expected=1d3 ttbr=10244000 ccsidr=701fe019 witness_bad=0 mailbox_rounds=1
+REGISTER n=0 original=08c50878 restored=08c50878
+REGISTER n=1 original=00000000 restored=00000000
+REGISTER n=2 original=02000001 restored=02000001
+REGISTER n=3 original=00000000 restored=00000000
+REGISTER n=4 original=00000000 restored=00000000
+REGISTER n=5 original=00000001 restored=00000001
+REGISTER n=6 original=600f01d3 restored=600f01d3
+REGISTER n=7 original=00000006 restored=00000006
+REGISTER n=8 original=00000000 restored=00000000
+REGISTER n=9 original=00098aa4 restored=00098aa4
+REGISTER n=10 original=44e048e0 restored=44e048e0
+REGISTER n=11 original=00000000 restored=00000000
+REGISTER n=12 original=00000001 restored=00000001
+REGISTER n=13 original=72360000 restored=72360000
+ZZNES: Application frontend or ARM transfer failed. See the CLI log for details.
+LAUNCHER exit=20; owned memory released

@@ -56,8 +56,9 @@ many upstream initializers assume allocation succeeds. The current 4 MiB Core1
 allocation and fixed control/MMU regions must not be enlarged by guessing at
 free ZZ9000 memory. Continue to allocate through Exec and verify mappings.
 
-Battery-backed cartridges remain rejected. Version 0.8.10 integrates trainers
-on the eight enabled mapper IDs; this does not enable the remaining imported boards. Existing save files must remain intact
+Version 0.8.11 integrates battery persistence for supported mapper 1/4/5 boards.
+Trainers remain available on the eight enabled mapper IDs. This does not enable
+the remaining imported boards. [Battery limits](battery-saves.md). Existing save files must remain intact
 when the new state implementation is introduced. Region, submapper and board
 wiring must be passed into the mapper, not inferred from its numeric ID alone.
 

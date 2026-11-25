@@ -1,6 +1,6 @@
 # Current NES cartridge support
 
-This describes the rebuilt player packaged with **0.8.10 Beta**, not the entire
+This describes the rebuilt player packaged with **0.8.11 Beta**, not the entire
 imported FCEUX source tree. The executable identity is recorded in
 [the installer manifest](installer-refresh-inputs.json).
 
@@ -10,10 +10,10 @@ imported FCEUX source tree. The executable identity is recorded in
 | Mapper IDs | 0, 1, 2, 3, 4, 5, 78, 90; additional board-specific size/mirroring limits apply |
 | PRG / CHR | Up to 512 KiB PRG and 256 KiB CHR; power-of-two sizing; CHR RAM only where the mapper gate permits |
 | Trainer | 512-byte iNES trainer loaded at $7000–$71FF on supported mapper IDs; preserved through ZIP and padding recovery |
-| Battery flag | Rejected; importing mapper source does not enable battery persistence |
+| Battery flag | Supported mapper 1/4/5 boards: one core-declared persistent RAM region, 1–32 KiB; other battery boards rejected |
 | NES 2.0 / UNIF / other mappers | Not accepted by the current loader |
 | Four-screen flag | Rejected except mapper 78, which uses it for the legacy board distinction |
-| Save states | Supported for accepted cartridges; this is separate from battery-backed cartridge support |
+| Save states | Supported for accepted cartridges, including mapper RAM; raw battery files remain separate |
 | ZIP / padded ROMs | Supported within the existing cartridge contract; [trailing-padding handling](rom-padding.md) never adds mapper support |
 
 The current build prepares its cartridge gate from
@@ -24,5 +24,5 @@ The current build prepares its cartridge gate from
 Holy Diver and Cybernoid have [recorded gameplay checks](cartridge-compatibility-20261019.md).
 A supported header does not establish compatibility with every game or board
 variant. Broader cartridge integration remains [planned work](fceux-integration.md).
-Generic ROM-manager backup/delete code can handle existing battery-save files;
-that does not enable battery-flagged cartridges in this player.
+[Battery files](battery-saves.md) are loaded before the first guest frame and saved
+on clean exit. ROM Manager backs them up and includes them in confirmed deletion.

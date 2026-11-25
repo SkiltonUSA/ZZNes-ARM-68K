@@ -977,3 +977,29 @@ The physical Stunt Race FX run lost bridge responses during a screenshot request
 The shared gateway is paused; cleanup is unverified and the existing lease is
 retained. Do not launch another Core1 test until the target is inspected and
 idle is verified. No clock, firmware or other emulator changes were made.
+
+
+## 0.8.11 battery persistence — current handoff
+
+Supersedes the earlier paused 0.8.10 candidate note. The 0.8.10 NES and 0.7.13
+SNES releases completed installation/publication before this work. NES is now
+installed as 0.8.11-dev in SD032G:Emulator/ZZNES, with matching launcher and player.
+Release tag: v0.8.11-beta. [Evidence](validation/battery-save/README.md).
+
+The normal release build supports single-region mapper 1/4/5 battery RAM, up to
+32 KiB. Seventeen physical persistence/recovery/refusal tests pass; native and
+relocated ARM tests cover mapper banks, trainer ordering, file failures, and
+HQ/legacy state replay. The final ARM payload is byte-identical to the tested
+candidate. Fresh/repeat/production AmiPkg installation and six final battery/old
+state checks pass. One short candidate battery run recorded one starvation; no
+new listening or speed claim. Wider real-game/CRC-board coverage remains pending.
+
+Final installed CV3 window and SMW fullscreen state resumes report zero audio
+starvations/device errors and clean teardown. Settings are unchanged. Core1 is
+idle, Core0 AGA inactive, 800 MHz KEEP retained; gateway lease released. No other
+emulator, firmware, startup or global audio setting was modified.
+
+Isolated release output: .context/release-0.8.11-battery. The earlier experimental
+battery build uses the 0.8.10-dev label; distinguish it by its recorded hashes.
+The accidentally staged .context/release-0.8.11-build is an unused pre-integration
+0.8.10 build and must not be deployed or packaged. Use the -battery output only.

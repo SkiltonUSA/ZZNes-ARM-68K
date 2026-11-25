@@ -1,6 +1,7 @@
-# Released-player audio check
+# Historical retained-player audio check
 
-The released player was tested unchanged on the A4000TX at the standing
+The player identified by SHA-256 in the linked record was tested unchanged
+on the A4000TX at the standing
 800 MHz clock. These checks use a private profile: 2× window, software Soft
 scanlines, Paula HiFi at 22.05 kHz (actual mixer 22,030 Hz), and 1,200 frames
 from reset with no input. Installed settings and saves were unchanged.
@@ -12,7 +13,8 @@ from reset with no input. Installed settings and saves were unchanged.
 All submitted PCM completed, with no device error. Register/MMU/cache witnesses
 and allocation release passed. The 35 scheduled silence buffers in the
 non-starving runs include startup/shutdown handling; they are not 35 underruns.
-These are short delivery checks, not listening acceptance, complete gameplay
+These predate the 0.8.11 battery-save release. They are short delivery checks,
+not listening acceptance, complete gameplay
 coverage or a performance comparison against older releases.
 
 [Player hash and extracted counters](audio-release-check.json). ROMs, saves

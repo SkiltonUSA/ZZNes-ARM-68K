@@ -1,0 +1,5 @@
+[OK]
+cdb5a45dae4977afabc9658799a2ff74  SD032G:Emulator/ZZNES/Library.cfg
+e0c0962c49aa7f4874278d69f9f41793  SD032G:Emulator/ZZNES/Audio.cfg
+dc344b7e211dbdcc5f9dd270cb3d0d29  SD032G:Emulator/ZZNES/InputRoute.cfg
+MISSING-Controls.cfg

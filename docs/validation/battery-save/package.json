@@ -1,0 +1,48 @@
+{
+  "version": "0.8.11-dev",
+  "base_sha256": "055f6e7b43afb94c9c34ec4bc25c801f15d4f803c2b95fdb50b510c0883a7084",
+  "installer_sha256": "79bfa17bb7a1eec1367c45aba731f349c3e5137d1178d9ac68acd68575a9d5c3",
+  "packages": {
+    "zznes": {
+      "files": {
+        "ZZNES/Battery-saves.md": "5a9378ca12460e1ff5a98002f6df10b2ee0c66e720036dbca3b3588463ef703a",
+        "ZZNES/CHANGELOG.md": "14fd86298bd95f56d438152aaeb5292baf20a731beb9050fcbe8610fd5e7d748",
+        "ZZNES/COPYING3": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903",
+        "ZZNES/Changes.md": "14fd86298bd95f56d438152aaeb5292baf20a731beb9050fcbe8610fd5e7d748",
+        "ZZNES/Clock-settings.md": "f5054d5ef1bf64c1b49a2693019b5dee302b97f869641832c46a8e4dc95c7474",
+        "ZZNES/Credits.txt": "6c99cb4baac38d78e4dbec3d91d51af24a3340be553f2da08d0c376a8e52bc7f",
+        "ZZNES/Install-Scanlines": "cf300fb5169aefd224205fa14feaf79eac18c933ecc37300e5250ae8205ed00a",
+        "ZZNES/Install-Scanlines.info": "13a47a1be68658f90e7e5787b23a440d75e653810fb780e82fd1f9a28dab6a4f",
+        "ZZNES/LICENSE-Snes9x": "7c99d452508b90c46d74ac5d516d3d7de4ff3406bc7c4ad595215205369594ba",
+        "ZZNES/LICENSE-puff": "969b7be2a930db0cdcb19b0e5b29ae6741f5a8f663b6dba6d647e12ec60cfa8e",
+        "ZZNES/LICENSE-xSysInfo": "323187598a84a70032b38d9f483ba9c0f6172b0635ef32ce924393356f279829",
+        "ZZNES/README.md": "ca7e0c18c3618a098ff3ddf6f6b2ebb55ac60c8cb3277722117bb97de10ced44",
+        "ZZNES/ReadMe.txt": "ca7e0c18c3618a098ff3ddf6f6b2ebb55ac60c8cb3277722117bb97de10ced44",
+        "ZZNES/Release-notes.md": "78d8530b0dddfe25a91a838b77e0a196d4c4f1062e82ff83b650ece42db71ea2",
+        "ZZNES/SHA256SUMS": "449d8d579516f7d26bf245b571e9cf25139bd5f5385b19c14c1eda7a26dae4a5",
+        "ZZNES/Scanlines.txt": "909755d137fbe3ab426a99d6abb8edfbd10a3d84ead7f5ea34d850768ed76727",
+        "ZZNES/Scanlines/Source/build_scanlines.py": "37677c451757c82816bcee956390980aa2e544c2b06dfe19dd7f020c3a6415dc",
+        "ZZNES/Scanlines/Source/install.c": "09f889813c44dd4bcc5a9926e18585a184be1bb04bc510705b0938c8ed1d2264",
+        "ZZNES/Scanlines/Source/vendor/LICENSE": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986",
+        "ZZNES/Scanlines/Source/vendor/README.md": "deb29b7119d49bcac7bd2aeeeb34a3bb833854f27f5b0c14a37fdc17c6e48dfe",
+        "ZZNES/Scanlines/Source/vendor/ZZScanlines.c": "ecdc8403dde5aa3886bba5ad9fae179b33638a922899b7e32519008018d527fc",
+        "ZZNES/Scanlines/Source/vendor/ZZScanlinesGUI.c": "e90bc5a80aa767b0defaeec26fd80c861252d657494f339520d05483d95bb486",
+        "ZZNES/Scanlines/Source/vendor/upstream.json": "7b7343b357b1044f20916ec402d365e5aa5d656960503f890727d85e64929359",
+        "ZZNES/Scanlines/ZZScanlines": "973a23c9bf0a867cba8fe8ed069baeaf90a632ac47ed32a7f5635197492e5757",
+        "ZZNES/Scanlines/ZZScanlinesGUI": "5eeabbb5a691ee5d6c99e134b9e5909599415f2a6d35961c4f2150f158d0cedd",
+        "ZZNES/Version.txt": "efe739ce9a01fa9f50f20fd9da6cb67512bd5fb005084c45bbec26b27298cb88",
+        "ZZNES/ZZClock": "b0ab72855e3e1aa9e5a9cf072ff3f7e2892b70f4b2b7193f000ff26381edf4d0",
+        "ZZNES/ZZFceux-ui": "ec2e4816fe825a3c4e9ae525a30beec32ceb01a9f772828de5a24fad09d6a24b",
+        "ZZNES/ZZNES": "a95e333234a9ebd4a94c1e77e790eb153cbdc05f012d8519c4991f60c058cbe2",
+        "ZZNES/ZZNES.info": "13a47a1be68658f90e7e5787b23a440d75e653810fb780e82fd1f9a28dab6a4f",
+        "ZZNES/ZZNES.png": "457344e28db296fec6399b17915a75a71c5db9f627469a21cf70bfd212e3c545",
+        "about.txt": "22f36aa8171a2acca578d4110074831297ac43ca836b9f96aa93a7c570e3027e",
+        "licence.txt": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903",
+        "readme.txt": "ca7e0c18c3618a098ff3ddf6f6b2ebb55ac60c8cb3277722117bb97de10ced44"
+      },
+      "archive_sha256": "e18d459eb369f8de92f11e9e6ddf3de6e2fb704a6f09005ac06dca1e008caacc"
+    }
+  },
+  "installer_replacements": {},
+  "validation": "Signatures, payload hashes, full LHA round-trip, physical fresh/repeat/production installation, installed hashes and preserved settings; lifecycle checks recorded separately."
+}

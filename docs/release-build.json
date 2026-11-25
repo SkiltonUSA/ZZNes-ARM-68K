@@ -1,17 +1,17 @@
 {
-  "version": "0.8.8-dev",
-  "release": "v0.8.8-beta",
-  "build_directory": ".context/ax-release-build",
-  "build_command": "python3 scripts/build_current.py --release-ax",
+  "version": "0.8.11-dev",
+  "release": "v0.8.11-beta",
+  "build_directory": ".context/release-0.8.11-battery",
+  "build_command": "python3 scripts/build_current.py --release-ax --output-dir .context/release-0.8.11-battery",
   "executables": {
     "ZZNES": {
-      "bytes": 258792,
-      "sha256": "a3ab86e9c3ce83a553e68bea1bb3240144857fd4bd02e62304091726a78ad696"
+      "bytes": 283640,
+      "sha256": "a95e333234a9ebd4a94c1e77e790eb153cbdc05f012d8519c4991f60c058cbe2"
     },
     "ZZFceux-ui": {
-      "bytes": 583668,
-      "sha256": "f90c5327310da4053176a3388fed96e3cbfb6fe1f2f84b14f6603d754c19aaa7"
+      "bytes": 587004,
+      "sha256": "ec2e4816fe825a3c4e9ae525a30beec32ceb01a9f772828de5a24fad09d6a24b"
     }
   },
-  "published": true
+  "validation": "docs/validation/battery-save/README.md"
 }
