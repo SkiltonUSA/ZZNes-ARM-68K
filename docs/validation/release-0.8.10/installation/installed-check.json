@@ -1,0 +1,14 @@
+[
+  {
+    "case": "installed-nes-cv3",
+    "window": 1,
+    "frames": 120,
+    "resume": 1,
+    "pass": true,
+    "starvations": 0,
+    "silence_queued": 2,
+    "elapsed_us": 3230938,
+    "core_total_us": 1196890,
+    "error": 0
+  }
+]

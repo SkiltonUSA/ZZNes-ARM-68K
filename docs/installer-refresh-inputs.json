@@ -1,21 +1,23 @@
 {
-  "package_version": "0.8.9-dev",
-  "application_version": "0.8.9-dev",
-  "base_installer_sha256": "76fd9f7123600c888925f1f698945438fd6e82db0ae443b65b62b604426d9a0a",
+  "package_version": "0.8.10-dev",
+  "application_version": "0.8.10-dev",
+  "base_installer_sha256": "27dab31618be98b5de0a7ffa6b1b48d2b9bad3e57860f2a2c7cf3bdbc113a18e",
   "replacements": {
     "zznes": {
-      "ZZNES/ZZNES": "1ffe7f401d01965bd8e7e5548a7d33bf18e055e4bd4ac79d83d6fa215431f767",
+      "ZZNES/ZZNES": "602c0082f035fa951d4e9f7eda25a347ea68b4a4e0be6988b0245d68a06bc517",
       "ZZNES/ZZClock": "b0ab72855e3e1aa9e5a9cf072ff3f7e2892b70f4b2b7193f000ff26381edf4d0",
-      "ZZNES/ZZFceux-ui": "21e0216116f832902cce5c8efbf59871ae37cee2909f666792a37599cd48bf3d",
-      "ZZNES/Clock-settings.md": "f5054d5ef1bf64c1b49a2693019b5dee302b97f869641832c46a8e4dc95c7474",
-      "ZZNES/Release-notes.md": "0c47ea3ac80877dcd61b5688731770900d0218bf3efcb40b481a4d0c769e0410",
-      "ZZNES/README.md": "eb00669453dc120e4f12432eed2a4078cbbeab3ee290843e0d70770a2b49cfc1",
-      "ZZNES/CHANGELOG.md": "34093aea58257b799389ac4cd6bc816123bc0377b242267e734743a5084cf138"
+      "ZZNES/ZZFceux-ui": "df715b4d1f02fbad626e0665db858392f41abc601131011b586ef6071f4bb778",
+      "ZZNES/README.md": "89be380ec6ac427542a7f8ffeaddc225fa36da0428f7299701fe514910b4f350",
+      "ZZNES/ReadMe.txt": "89be380ec6ac427542a7f8ffeaddc225fa36da0428f7299701fe514910b4f350",
+      "ZZNES/CHANGELOG.md": "b753e617eafea7ed0aa8715e754dd1882088e78cdc7e17d4a3a15b6323f6630b",
+      "ZZNES/Changes.md": "b753e617eafea7ed0aa8715e754dd1882088e78cdc7e17d4a3a15b6323f6630b",
+      "ZZNES/Release-notes.md": "abce5497297783c408f21408bc37920ac3b3468dbb1ff072a43de4ca41d1db84",
+      "ZZNES/Version.txt": "c843a32865520f7b35b0add499a77e968319424f143c68cef54ffc98ba4353b2"
     }
   },
-  "player_policy": "Recorded binaries retained; only launcher rebuilt.",
-  "launcher_sha256": "1ffe7f401d01965bd8e7e5548a7d33bf18e055e4bd4ac79d83d6fa215431f767",
-  "release_tag": "v0.8.9-beta",
+  "player_policy": "Launcher and ARM/68k players rebuilt together; recorded candidate identities.",
+  "launcher_sha256": "602c0082f035fa951d4e9f7eda25a347ea68b4a4e0be6988b0245d68a06bc517",
+  "release_tag": "v0.8.10-beta",
   "launcher_member": "ZZNES/ZZNES",
   "readme_member": "ZZNES/README.md"
 }

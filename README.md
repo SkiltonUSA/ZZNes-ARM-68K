@@ -1,17 +1,18 @@
-# ZZNES — 0.8.9 Beta
+# ZZNES — 0.8.10 Beta
 
 <!-- current-release -->
-## Current release — 0.8.9 Beta
+## Current release — 0.8.10 Beta
 
-[Download the AmiPkg installer](https://github.com/SkiltonUSA/ZZNes-ARM-68K/releases/tag/v0.8.9-beta) · [Changes and installation](docs/release-notes.md)
+[Download the AmiPkg installer](https://github.com/SkiltonUSA/ZZNes-ARM-68K/releases/tag/v0.8.10-beta) · [Changes and installation](docs/release-notes.md)
 
+- iNES trainer loading on the eight supported mappers, preserving existing save compatibility.
 - **Settings → ZZOverclock:** 666.7 MHz or experimental 800 MHz, with Apply and Refresh.
 - The clock service is optional; standard XACP installations can still run the emulator.
 - Destination selection and dependency checks; existing settings and saves are preserved.
 - Archives include the main README as `readme.txt`, plus `about.txt` and `licence.txt`.
 - Launcher and release use the same version number. No automatic clock change or firmware installation.
 
-Development: [0.8.10 candidate and remaining checks](docs/candidate-0.8.10.md). The public release above is unchanged.
+[Release validation and limits](docs/candidate-0.8.10.md).
 
 <img src="docs/screenshots/logo.png" width="160" alt="ZZNES logo">
 
@@ -22,13 +23,13 @@ files, controls, display coordination and batched AHI audio.
 
 This beta needs **48 MiB of allocatable ZZ9000 RAM**, plus display and AmigaOS memory.
 
-**[Download 0.8.9 Beta — AmiPkg installer](https://github.com/SkiltonUSA/ZZNes-ARM-68K/releases/tag/v0.8.9-beta)** ·
+**[Download 0.8.10 Beta — AmiPkg installer](https://github.com/SkiltonUSA/ZZNes-ARM-68K/releases/tag/v0.8.10-beta)** ·
 [Installation](docs/package-manager.md) · [User guide](docs/current-guide.md) ·
 [Changes](CHANGELOG.md) · [Interface gallery](docs/current-interface.md)
 
 **New:** corrected audio transfer, faster high-quality synthesis and compatible save states. [Sound fix and measurements](docs/audio-synthesis.md).
 
-Published app version: **0.8.9-dev**.
+Published app version: **0.8.10-dev**.
 
 **0.8.8 Beta** fixes stale PCM samples that caused instrument distortion. New games use high-quality audio; existing saves retain their original synthesis mode. [Save compatibility](docs/audio-states.md).
 
@@ -155,7 +156,7 @@ measurements of this release. [Measurements](docs/current-development.md) ·
 
 The current player accepts bounded iNES cartridges using mapper IDs
 **0, 1, 2, 3, 4, 5, 78 and 90**, subject to board-specific limits.
-**Battery-flagged cartridges, trainers, NES 2.0 and UNIF are not enabled.**
+Trainers are supported on the eight enabled mapper IDs. **Battery-flagged cartridges, NES 2.0 and UNIF remain unsupported.**
 Save states for accepted games are separate from battery-save support.
 Importing the full FCEUX source does not enable every upstream mapper or tool.
 [Current cartridge support](docs/current-cartridge-support.md) ·
@@ -199,10 +200,10 @@ self-modifying RAM, state replay and exhaustive arithmetic checks pass in the AR
 instruction model. Bounded physical launch/display/cleanup checks also pass; full hardware
 state-replay and gameplay coverage remain pending.
 
-[Trainer cartridge candidate](docs/ines-trainers.md): native and Cortex-A9
+[Trainer cartridge support](docs/ines-trainers.md): native and Cortex-A9
 execution/save-state checks and twenty physical save/resume runs pass, including
 trainer execution markers on eight mappers. Real modified trainer-game coverage
-remains pending; not included in the published beta.
+remains limited; trainer support is included in 0.8.10 Beta.
 
 [Current-firmware optimisation checks](amiga/records/2026-11-15/README.md):
 matched workloads, save/cleanup checks and remaining audio limits.

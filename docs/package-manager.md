@@ -1,8 +1,6 @@
 # ZZNES offline installer
 
-[Download 0.8.8 Beta](https://github.com/SkiltonUSA/ZZNes-ARM-68K/releases/tag/v0.8.8-beta). Choose `ZZNES-0.8.8-dev-beta-amipkg.lha`
-for the installer or `ZZNES-0.8.8-dev-beta.zip` for manual copying. They contain
-the same tested executable bytes. No ROMs, firmware or system libraries are included.
+[Download 0.8.10 Beta](https://github.com/SkiltonUSA/ZZNes-ARM-68K/releases/tag/v0.8.10-beta). Choose `ZZNES-0.8.10-dev-amipkg.lha`. No ROMs, firmware or system libraries are included.
 
 ## Install
 

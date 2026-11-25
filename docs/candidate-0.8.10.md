@@ -1,8 +1,6 @@
-# ZZNES 0.8.10 Beta candidate
+# ZZNES 0.8.10 Beta validation
 
-Built and tested locally; not yet published or installed as the default.
-Final physical installation and clean-exit validation are pending after a bridge
-screenshot timeout. The current public release remains unchanged.
+Release build and physical checks are recorded below. Listening acceptance remains separate.
 
 The release build enables iNES trainers on the eight supported mapper IDs.
 Trainer bytes are loaded at $7000–$71FF using the pinned FCEUX power-on behaviour;

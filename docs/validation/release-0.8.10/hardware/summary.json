@@ -1,0 +1,122 @@
+[
+  {
+    "case": "matrix-nes-trainer0",
+    "window": 0,
+    "frames": 120,
+    "resume": 1,
+    "pass": true,
+    "starvations": 0,
+    "silence_queued": 2,
+    "elapsed_us": 3247485,
+    "core_total_us": 891111,
+    "error": 0
+  },
+  {
+    "case": "matrix-nes-trainer1",
+    "window": 1,
+    "frames": 120,
+    "resume": 1,
+    "pass": true,
+    "starvations": 0,
+    "silence_queued": 2,
+    "elapsed_us": 3198295,
+    "core_total_us": 899253,
+    "error": 0
+  },
+  {
+    "case": "matrix-nes-trainer2",
+    "window": 0,
+    "frames": 120,
+    "resume": 1,
+    "pass": true,
+    "starvations": 0,
+    "silence_queued": 2,
+    "elapsed_us": 3163841,
+    "core_total_us": 891126,
+    "error": 0
+  },
+  {
+    "case": "matrix-nes-trainer3",
+    "window": 1,
+    "frames": 120,
+    "resume": 1,
+    "pass": true,
+    "starvations": 0,
+    "silence_queued": 2,
+    "elapsed_us": 3164634,
+    "core_total_us": 902256,
+    "error": 0
+  },
+  {
+    "case": "matrix-nes-trainer4",
+    "window": 0,
+    "frames": 120,
+    "resume": 1,
+    "pass": true,
+    "starvations": 0,
+    "silence_queued": 2,
+    "elapsed_us": 3183959,
+    "core_total_us": 890997,
+    "error": 0
+  },
+  {
+    "case": "matrix-nes-trainer5",
+    "window": 1,
+    "frames": 120,
+    "resume": 1,
+    "pass": true,
+    "starvations": 0,
+    "silence_queued": 2,
+    "elapsed_us": 3182113,
+    "core_total_us": 942713,
+    "error": 0
+  },
+  {
+    "case": "matrix-nes-trainer78",
+    "window": 0,
+    "frames": 120,
+    "resume": 1,
+    "pass": true,
+    "starvations": 0,
+    "silence_queued": 2,
+    "elapsed_us": 3187073,
+    "core_total_us": 890499,
+    "error": 0
+  },
+  {
+    "case": "matrix-nes-trainer90",
+    "window": 1,
+    "frames": 120,
+    "resume": 1,
+    "pass": true,
+    "starvations": 0,
+    "silence_queued": 2,
+    "elapsed_us": 3170177,
+    "core_total_us": 948390,
+    "error": 0
+  },
+  {
+    "case": "matrix-nes-smw",
+    "window": 0,
+    "frames": 120,
+    "resume": 1,
+    "pass": true,
+    "starvations": 0,
+    "silence_queued": 2,
+    "elapsed_us": 3166475,
+    "core_total_us": 1180523,
+    "error": 0
+  },
+  {
+    "case": "matrix-nes-cv3",
+    "window": 1,
+    "frames": 120,
+    "resume": 1,
+    "pass": true,
+    "starvations": 0,
+    "silence_queued": 2,
+    "elapsed_us": 3242673,
+    "core_total_us": 1195665,
+    "error": 0
+  }
+]

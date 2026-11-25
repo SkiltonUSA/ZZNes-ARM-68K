@@ -1,6 +1,6 @@
 # Current NES cartridge support
 
-This describes the retained player packaged with **0.8.9 Beta**, not the entire
+This describes the rebuilt player packaged with **0.8.10 Beta**, not the entire
 imported FCEUX source tree. The executable identity is recorded in
 [the installer manifest](installer-refresh-inputs.json).
 
@@ -9,7 +9,8 @@ imported FCEUX source tree. The executable identity is recorded in
 | Header | Bounded iNES; PAL/NTSC detection and exact legacy DiskDude signature handling |
 | Mapper IDs | 0, 1, 2, 3, 4, 5, 78, 90; additional board-specific size/mirroring limits apply |
 | PRG / CHR | Up to 512 KiB PRG and 256 KiB CHR; power-of-two sizing; CHR RAM only where the mapper gate permits |
-| Battery flag / trainer | Rejected by the cartridge gate; importing mapper source does not enable battery persistence |
+| Trainer | 512-byte iNES trainer loaded at $7000–$71FF on supported mapper IDs; preserved through ZIP and padding recovery |
+| Battery flag | Rejected; importing mapper source does not enable battery persistence |
 | NES 2.0 / UNIF / other mappers | Not accepted by the current loader |
 | Four-screen flag | Rejected except mapper 78, which uses it for the legacy board distinction |
 | Save states | Supported for accepted cartridges; this is separate from battery-backed cartridge support |

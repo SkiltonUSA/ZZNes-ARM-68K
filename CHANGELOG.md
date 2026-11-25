@@ -1,6 +1,6 @@
 # Changelog
 
-## 0.8.10 candidate — pending hardware acceptance
+## 0.8.10 Beta
 
 - Integrate trainer support into the normal release build.
 - Rebuild matching launcher/player versions in an isolated output directory.

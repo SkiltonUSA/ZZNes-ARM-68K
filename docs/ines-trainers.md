@@ -1,11 +1,8 @@
 # iNES trainer candidate
 
-**Development only; not included in 0.8.9 Beta.** The published 0.8.9 gate still
-rejects trainer cartridges. The [0.8.10 candidate](candidate-0.8.10.md) enables
-the validated trainer path in the normal release build. Battery cartridges, NES 2.0 and UNIF remain outside
-this candidate too.
+**Included in 0.8.10 Beta** on the eight supported mapper IDs. Battery cartridges, NES 2.0 and UNIF remain outside the cartridge contract.
 
-The optional build reads the 512-byte trainer before PRG/CHR data, writes it to
+The release build reads the 512-byte trainer before PRG/CHR data, writes it to
 $7000–$71FF after mapper power-on, and uses the pinned FCEUX read-handler fallback
 when that board cannot read back the writes. PRG/CHR offsets and cartridge CRC
 skip the trainer. Save-state ROM identity includes it. Original ROM files are

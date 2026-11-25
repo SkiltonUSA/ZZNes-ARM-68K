@@ -1,21 +1,47 @@
 {
   "version": "0.8.10-dev",
-  "published": false,
-  "installed_as_default": false,
-  "archive": "ZZNES-0.8.10-dev-amipkg.lha",
-  "archive_sha256": "17b23d76e16b64a6255dac055ecd08c6bfce13535e3d9d2648572e75406aaee1",
-  "bytes": 784442,
-  "checks": [
-    "catalogue signature",
-    "archive round-trip",
-    "payload hashes",
-    "matching executable versions",
-    "exact main README/about/licence",
-    "no private ROM/settings/save payloads"
-  ],
-  "pending": [
-    "physical install",
-    "gameplay/listening acceptance",
-    "clean exit"
-  ]
+  "base_sha256": "27dab31618be98b5de0a7ffa6b1b48d2b9bad3e57860f2a2c7cf3bdbc113a18e",
+  "installer_sha256": "055f6e7b43afb94c9c34ec4bc25c801f15d4f803c2b95fdb50b510c0883a7084",
+  "packages": {
+    "zznes": {
+      "files": {
+        "ZZNES/CHANGELOG.md": "b753e617eafea7ed0aa8715e754dd1882088e78cdc7e17d4a3a15b6323f6630b",
+        "ZZNES/COPYING3": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903",
+        "ZZNES/Changes.md": "b753e617eafea7ed0aa8715e754dd1882088e78cdc7e17d4a3a15b6323f6630b",
+        "ZZNES/Clock-settings.md": "f5054d5ef1bf64c1b49a2693019b5dee302b97f869641832c46a8e4dc95c7474",
+        "ZZNES/Credits.txt": "6c99cb4baac38d78e4dbec3d91d51af24a3340be553f2da08d0c376a8e52bc7f",
+        "ZZNES/Install-Scanlines": "cf300fb5169aefd224205fa14feaf79eac18c933ecc37300e5250ae8205ed00a",
+        "ZZNES/Install-Scanlines.info": "13a47a1be68658f90e7e5787b23a440d75e653810fb780e82fd1f9a28dab6a4f",
+        "ZZNES/LICENSE-Snes9x": "7c99d452508b90c46d74ac5d516d3d7de4ff3406bc7c4ad595215205369594ba",
+        "ZZNES/LICENSE-puff": "969b7be2a930db0cdcb19b0e5b29ae6741f5a8f663b6dba6d647e12ec60cfa8e",
+        "ZZNES/LICENSE-xSysInfo": "323187598a84a70032b38d9f483ba9c0f6172b0635ef32ce924393356f279829",
+        "ZZNES/README.md": "89be380ec6ac427542a7f8ffeaddc225fa36da0428f7299701fe514910b4f350",
+        "ZZNES/ReadMe.txt": "89be380ec6ac427542a7f8ffeaddc225fa36da0428f7299701fe514910b4f350",
+        "ZZNES/Release-notes.md": "abce5497297783c408f21408bc37920ac3b3468dbb1ff072a43de4ca41d1db84",
+        "ZZNES/SHA256SUMS": "c3f784ddb2edaa888a731ae93d1f2dc1869b28f8a30d6aa578f235692756e610",
+        "ZZNES/Scanlines.txt": "909755d137fbe3ab426a99d6abb8edfbd10a3d84ead7f5ea34d850768ed76727",
+        "ZZNES/Scanlines/Source/build_scanlines.py": "37677c451757c82816bcee956390980aa2e544c2b06dfe19dd7f020c3a6415dc",
+        "ZZNES/Scanlines/Source/install.c": "09f889813c44dd4bcc5a9926e18585a184be1bb04bc510705b0938c8ed1d2264",
+        "ZZNES/Scanlines/Source/vendor/LICENSE": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986",
+        "ZZNES/Scanlines/Source/vendor/README.md": "deb29b7119d49bcac7bd2aeeeb34a3bb833854f27f5b0c14a37fdc17c6e48dfe",
+        "ZZNES/Scanlines/Source/vendor/ZZScanlines.c": "ecdc8403dde5aa3886bba5ad9fae179b33638a922899b7e32519008018d527fc",
+        "ZZNES/Scanlines/Source/vendor/ZZScanlinesGUI.c": "e90bc5a80aa767b0defaeec26fd80c861252d657494f339520d05483d95bb486",
+        "ZZNES/Scanlines/Source/vendor/upstream.json": "7b7343b357b1044f20916ec402d365e5aa5d656960503f890727d85e64929359",
+        "ZZNES/Scanlines/ZZScanlines": "973a23c9bf0a867cba8fe8ed069baeaf90a632ac47ed32a7f5635197492e5757",
+        "ZZNES/Scanlines/ZZScanlinesGUI": "5eeabbb5a691ee5d6c99e134b9e5909599415f2a6d35961c4f2150f158d0cedd",
+        "ZZNES/Version.txt": "c843a32865520f7b35b0add499a77e968319424f143c68cef54ffc98ba4353b2",
+        "ZZNES/ZZClock": "b0ab72855e3e1aa9e5a9cf072ff3f7e2892b70f4b2b7193f000ff26381edf4d0",
+        "ZZNES/ZZFceux-ui": "df715b4d1f02fbad626e0665db858392f41abc601131011b586ef6071f4bb778",
+        "ZZNES/ZZNES": "602c0082f035fa951d4e9f7eda25a347ea68b4a4e0be6988b0245d68a06bc517",
+        "ZZNES/ZZNES.info": "13a47a1be68658f90e7e5787b23a440d75e653810fb780e82fd1f9a28dab6a4f",
+        "ZZNES/ZZNES.png": "457344e28db296fec6399b17915a75a71c5db9f627469a21cf70bfd212e3c545",
+        "about.txt": "183d677b1f0a97cf48294bf8e99cded9bb090cd426a8076b06ceeb2a92886834",
+        "licence.txt": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903",
+        "readme.txt": "89be380ec6ac427542a7f8ffeaddc225fa36da0428f7299701fe514910b4f350"
+      },
+      "archive_sha256": "63a66e249a15690c00ff3b17fb1d6dd6e27556b5f7bd449fd076fb5290d5cc69"
+    }
+  },
+  "installer_replacements": {},
+  "validation": "signatures, payload hashes and full LHA round-trip; no fresh physical install"
 }
