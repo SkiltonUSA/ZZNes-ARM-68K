@@ -14,7 +14,9 @@
 - Add opt-in iNES trainer loading on the eight supported mappers, with corrected
   payload offsets and trainer-preserving launcher whitespace recovery.
 - Native and relocated Cortex-A9 execution/state-replay tests pass; a physical
-  120-frame mapper-0 smoke test exits cleanly. Wider hardware coverage is pending.
+  120-frame mapper-0 smoke test and a further 240-frame matrix on all eight
+  supported mappers exit cleanly. Real-game and interactive state coverage remains
+  pending. [Matrix](docs/validation/trainers/mapper-matrix/summary.json).
 - Restore the released 666/800 MHz calibration policy in fresh builds.
   Published 0.8.9 binaries remain unchanged.
 - [Implementation and checks](docs/ines-trainers.md).

@@ -1,0 +1,47 @@
+MAPPING PASS (eight nonce-derived words)
+REGION NTSC period_us=16639
+CARTRIDGE mapper=4 PRG=131072 CHR=32768 battery=0
+STAGE ROM published; initializing core
+STAGE core initialized; calibrating clock
+STAGE opening display
+FULLSCREEN_BITMAP allocated=08865484 screen=09241960 width=320 height=240 allocated_height=720 screen_height=720 on_board=1/1 memory=095bdae4/40c78400 pitch=1280/1280
+FULLSCREEN mode=50031303 native_format=9 depth=32 slots=3 geometry=320x240 NES=256x240
+SCANLINE_BACKEND window=0 hardware=0 software=0 parity=0
+BUFFERS pixels=00000000 indices=0969eaec legacy_host=0
+JOYSTICK available=1 port=1; red=A blue=B green=Select play=Start
+AUDIO task: per-app AHI mode=0002000e mix=22030; three immutable buffers
+PLAYER FCEUX CPU/old PPU/APU, auto-region 32kHz HQ default; saves retain synthesis; P pause, M mute, Q/Esc quit; bounded picture omission; every core/APU frame retained
+ZZFCEUX START ROM=[fixture]/trainer4.nes bytes=164368 timer_hz=400002096 core_only=0
+FRAME n=1 cycles=29782 core_hash=b87d5dc5 output_hash=3fde1dc5 cpu_ppu_us=6520
+FULLSCREEN_END queued=231 flips=231 pending=-1 ack_wait_us=2706514 fault=0
+AUDIO_OUTPUT mode=0002000e mix=22030 callbacks=277 silence_queued=197 starvations=10
+AUDIO_TASK queued=127781 submitted=127781 completed=127781 highwater=9 error=0 stopped=1
+AUDIO_END samples=127781 gaps=0
+PRESENT_OPTIONS window=0 scanlines=0 fps=0 optimised=1 neon_frames=231
+STAGE closing frontend; requesting ARM return next
+ZZFCEUX END exit=0 frames=240 elapsed_us=9064490 core_total_us=1789608 output_hash=3fde1dc5
+DIRECT_END challenges=231 verified_frames=5 copy_us=397257
+PLAYER_PROFILE audio_prepare_us=292529 flip_drain_us=874330 audio_wait_us=3982 audio_copy_us=88076 audio_send_us=0
+ARM_REQUEST_PROFILE frame_us=1902124 present_us=501834
+PRESENT_PROFILE pre_us=48947 request_us=564425 post_us=5087507
+FRAME_TIMING stage=0 count=180 mean_us=8248 max_us=18318 bins=0,0,179,1,0,0
+FRAME_TIMING stage=1 count=180 mean_us=3593 max_us=15658 bins=39,138,3,0,0,0
+FRAME_TIMING stage=2 count=180 mean_us=1284 max_us=32689 bins=145,31,3,0,1,0
+FRAME_TIMING stage=3 count=174 mean_us=20542 max_us=1052776 bins=0,171,0,0,0,3
+FRAME_TIMING stage=4 count=180 mean_us=33572 max_us=1064317 bins=0,0,118,42,16,4
+FRAME_TIMING stage=5 count=174 mean_us=34662 max_us=991205 bins=0,0,157,9,1,7
+INPUT_PROFILE changes=0
+JOYSTICK_END polls=240 active=0 last_type=10000000
+AUDIO_IO_PROFILE send_us=0 waitio_us=0
+WAIT_PROFILE kind=0 calls=0 requested_us=0 actual_us=0 max_us=0
+WAIT_PROFILE kind=1 calls=8 requested_us=8000 actual_us=10178 max_us=1340
+WAIT_PROFILE kind=2 calls=0 requested_us=0 actual_us=0 max_us=0
+WAIT_PROFILE kind=3 calls=0 requested_us=0 actual_us=0 max_us=0
+WAIT_PROFILE kind=4 calls=0 requested_us=0 actual_us=0 max_us=0
+WAIT_PROFILE kind=5 calls=0 requested_us=0 actual_us=0 max_us=0
+PROFILE frames=240 request_us=1982796 copy_us=0 colour_us=0 draw_us=5732376 waits=8
+EXIT epilogue=52455431 cache_echoes=0 rounds=0
+CACHE original=08c50878 running=08c5187d restored=08c50878
+MMU_RESTORE phase=3 register_mismatches=00000000 cpsr_control=1d3 expected=1d3 ttbr=<allocation-relative> ccsidr=701fe019 witness_bad=0 mailbox_rounds=474
+SCANLINE_BACKEND released: hardware=0
+LAUNCHER exit=0; owned memory released

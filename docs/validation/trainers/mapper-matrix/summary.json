@@ -1,0 +1,54 @@
+{
+  "player_sha256": "d4bd73004525b679f0dd592ddab5b65683746202c833b408e8c73516350d61c4",
+  "clock_mhz": 800,
+  "cases": [
+    {
+      "mapper": 0,
+      "frames": 240,
+      "pass": true,
+      "fixture_sha256": "d91ddbe48da6cf08a632590fcf30c6a61d851d00c88445d41ab9014c15772933"
+    },
+    {
+      "mapper": 1,
+      "frames": 240,
+      "pass": true,
+      "fixture_sha256": "a37abb42c9af1e4298f5b561d23b10763ad3af5d129ea30e940b1f30b019f5c3"
+    },
+    {
+      "mapper": 2,
+      "frames": 240,
+      "pass": true,
+      "fixture_sha256": "1084bfab43f6485e15778ce2cdeb54aa4ffc013e17e48c23c3519cfe85afcc50"
+    },
+    {
+      "mapper": 3,
+      "frames": 240,
+      "pass": true,
+      "fixture_sha256": "3a3364a69adfb6b8ddb599dfeb23226b70f86e5b07f3b2008abfa6c87a2a28ea"
+    },
+    {
+      "mapper": 4,
+      "frames": 240,
+      "pass": true,
+      "fixture_sha256": "e1e98ab300ba51116ed0bdb6b8e0ad92832e4ff3207b40b18e4ce52c69019e6b"
+    },
+    {
+      "mapper": 5,
+      "frames": 240,
+      "pass": true,
+      "fixture_sha256": "e2cc0e0c60d4db0303b0444c6fbd7088ff9b4dcf63c6e131edef170ee68be2b9"
+    },
+    {
+      "mapper": 78,
+      "frames": 240,
+      "pass": true,
+      "fixture_sha256": "48e62581bc6cf5e8eefda7ceb2992406d696d370bdf56c9282b9d553dd18d55f"
+    },
+    {
+      "mapper": 90,
+      "frames": 240,
+      "pass": true,
+      "fixture_sha256": "251db514250624640b0cfe74f6a81fc55b93ca1450c268a7e7020d97e5aaaa4b"
+    }
+  ]
+}

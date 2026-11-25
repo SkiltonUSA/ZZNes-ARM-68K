@@ -35,7 +35,12 @@ mapper-0 trainer fixture at 800 MHz completed with three framebuffer checks,
 zero display faults, register/cache-witness restoration and owned-memory release.
 The player delivered all 63,887 generated samples without an audio-device error;
 four queue starvations were recorded, so this is not an audio-quality result.
-Remaining physical mapper/game coverage and interactive state checks are pending.
+A further physical matrix completes 240 frames on each of mappers 0, 1, 2, 3,
+4, 5, 78 and 90 with framebuffer checks and clean restoration/release. These
+synthetic startup tests do not read back the guest trainer execution marker;
+that proof comes from the native and ARM-model tests. Real-game compatibility
+and interactive state checks remain pending.
+[Physical mapper matrix](validation/trainers/mapper-matrix/summary.json).
 No released binaries were replaced.
 
 Fresh builds now include the previously validated 666/800 MHz host timer gate.
