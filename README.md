@@ -1,6 +1,8 @@
 # ZZNES — 0.8.10 Beta
 
 <!-- current-release -->
+
+[Remaining work and validation limits](docs/nes-roadmap.md). Historical results retain their tested build labels.
 ## Current release — 0.8.10 Beta
 
 [Download the AmiPkg installer](https://github.com/SkiltonUSA/ZZNes-ARM-68K/releases/tag/v0.8.10-beta) · [Changes and installation](docs/release-notes.md)
@@ -27,7 +29,7 @@ This beta needs **48 MiB of allocatable ZZ9000 RAM**, plus display and AmigaOS m
 [Installation](docs/package-manager.md) · [User guide](docs/current-guide.md) ·
 [Changes](CHANGELOG.md) · [Interface gallery](docs/current-interface.md)
 
-**New:** corrected audio transfer, faster high-quality synthesis and compatible save states. [Sound fix and measurements](docs/audio-synthesis.md).
+**Retained audio improvements:** corrected audio transfer, faster high-quality synthesis and compatible save states. [Sound fix and measurements](docs/audio-synthesis.md).
 
 Published app version: **0.8.10-dev**.
 

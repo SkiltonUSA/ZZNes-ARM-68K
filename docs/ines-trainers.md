@@ -1,4 +1,4 @@
-# iNES trainer candidate
+# iNES trainer support
 
 **Included in 0.8.10 Beta** on the eight supported mapper IDs. Battery cartridges, NES 2.0 and UNIF remain outside the cartridge contract.
 
@@ -41,7 +41,9 @@ resume. Super Mario World and Castlevania III also pass. All twenty runs report
 zero audio queue starvations; this is not listening acceptance. Actual modified
 trainer-game compatibility and full gameplay remain pending.
 [Physical mapper matrix](validation/trainers/mapper-matrix/summary.json).
-No released binaries were replaced.
+Those isolated experiments did not replace released binaries at the time.
+Trainer support is now installed and published in 0.8.10 Beta.
+[Final release checks](validation/release-0.8.10/README.md).
 
 Fresh builds now include the previously validated 666/800 MHz host timer gate.
 It measures the timer rather than assuming 333 MHz; this change does not set the
