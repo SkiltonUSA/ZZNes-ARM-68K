@@ -1,5 +1,19 @@
 # Changelog
 
+## Unreleased — cartridge compatibility
+
+- Add NES 2.0 size, region, RAM and supported submapper interpretation.
+- Add bounded UNIF board/chunk import in the launcher, including ZIP input;
+  preserve source files and check optional cartridge CRCs.
+- Integrate AxROM/7, Color Dreams/11 and GxROM/66 with bank and state tests.
+- Use explicit NES 2.0 RAM sizes instead of MMC1/MMC5 CRC guesses.
+- Include UNIF files in Add Game and directory scanning; trim their extension
+  from displayed titles.
+- Validate PAL/NTSC bank switching and fresh-process state replay for all three
+  new mappers on ARM and the Amiga; retain two legacy game-state regressions.
+- This is an isolated 0.8.12 development candidate, not a release.
+  [Scope, evidence and remaining checks](docs/cartridge-formats.md).
+
 ## 0.8.11 Beta
 
 - Enable raw battery saves for supported MMC1, MMC3 and MMC5 cartridges.

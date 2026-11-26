@@ -3,6 +3,12 @@
 <!-- current-release -->
 
 [Remaining work and validation limits](docs/nes-roadmap.md). Historical results retain their tested build labels.
+
+**Development candidate:** bounded NES 2.0 and UNIF loading, with AxROM (7),
+Color Dreams (11) and GxROM (66). Native, ARM and physical PAL/NTSC bank/state
+checks pass, including legacy-state regression. Broader gameplay and release
+acceptance remain pending. These additions are not in the 0.8.11 download.
+[Compatibility scope and tests](docs/cartridge-formats.md).
 ## Current release — 0.8.11 Beta
 
 [Download the AmiPkg installer](https://github.com/SkiltonUSA/ZZNes-ARM-68K/releases/tag/v0.8.11-beta) · [Changes and installation](docs/release-notes.md)

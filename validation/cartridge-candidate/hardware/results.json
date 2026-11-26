@@ -1,0 +1,114 @@
+[
+  {
+    "case": "mapper7-ntsc-cold",
+    "frames": 3,
+    "resume": 0,
+    "pass": true,
+    "exact_arm_reference": true,
+    "starvations": 0
+  },
+  {
+    "case": "mapper7-ntsc-resume",
+    "frames": 3,
+    "resume": 1,
+    "pass": true,
+    "exact_arm_reference": true,
+    "starvations": 0
+  },
+  {
+    "case": "mapper7-pal-cold",
+    "frames": 3,
+    "resume": 0,
+    "pass": true,
+    "exact_arm_reference": true,
+    "starvations": 0
+  },
+  {
+    "case": "mapper7-pal-resume",
+    "frames": 3,
+    "resume": 1,
+    "pass": true,
+    "exact_arm_reference": true,
+    "starvations": 0
+  },
+  {
+    "case": "mapper11-ntsc-cold",
+    "frames": 3,
+    "resume": 0,
+    "pass": true,
+    "exact_arm_reference": true,
+    "starvations": 0
+  },
+  {
+    "case": "mapper11-ntsc-resume",
+    "frames": 3,
+    "resume": 1,
+    "pass": true,
+    "exact_arm_reference": true,
+    "starvations": 0
+  },
+  {
+    "case": "mapper11-pal-cold",
+    "frames": 3,
+    "resume": 0,
+    "pass": true,
+    "exact_arm_reference": true,
+    "starvations": 0
+  },
+  {
+    "case": "mapper11-pal-resume",
+    "frames": 3,
+    "resume": 1,
+    "pass": true,
+    "exact_arm_reference": true,
+    "starvations": 0
+  },
+  {
+    "case": "mapper66-ntsc-cold",
+    "frames": 3,
+    "resume": 0,
+    "pass": true,
+    "exact_arm_reference": true,
+    "starvations": 0
+  },
+  {
+    "case": "mapper66-ntsc-resume",
+    "frames": 3,
+    "resume": 1,
+    "pass": true,
+    "exact_arm_reference": true,
+    "starvations": 0
+  },
+  {
+    "case": "mapper66-pal-cold",
+    "frames": 3,
+    "resume": 0,
+    "pass": true,
+    "exact_arm_reference": true,
+    "starvations": 0
+  },
+  {
+    "case": "mapper66-pal-resume",
+    "frames": 3,
+    "resume": 1,
+    "pass": true,
+    "exact_arm_reference": true,
+    "starvations": 0
+  },
+  {
+    "case": "legacy-cv3",
+    "frames": 120,
+    "resume": 1,
+    "pass": true,
+    "exact_arm_reference": false,
+    "starvations": 0
+  },
+  {
+    "case": "legacy-smw",
+    "frames": 120,
+    "resume": 1,
+    "pass": true,
+    "exact_arm_reference": false,
+    "starvations": 0
+  }
+]

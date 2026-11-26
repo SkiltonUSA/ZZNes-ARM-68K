@@ -14,10 +14,20 @@ remaining compatibility/acceptance work, not unfinished release packaging.
    starvation separate. Per-app AHI/Paula and explicit AX options already exist;
    broader AX/driver and long-session acceptance remain necessary.
 2. **Compatibility:** expand testing of enabled mappers/boards, including CRC-selected
-   MMC1/MMC5 battery variants. NES 2.0, UNIF and additional battery boards remain
-   unsupported. Trainers
-   are supported on the eight enabled mapper IDs in 0.8.10 Beta. Compiling upstream board code does not
+   MMC1/MMC5 battery variants. The released 0.8.11 player does not support
+   NES 2.0 or UNIF. The isolated candidate now has bounded support and three
+   additional mapper IDs; [scope and tests](cartridge-formats.md). Trainers
+   are supported on the eight mapper IDs in the release. Compiling upstream board code does not
    establish cartridge compatibility.
+   The requested expansion now explicitly includes NES 2.0 header/submapper/RAM
+   handling, UNIF chunk and board-name loading, and additional mapper integration.
+   Start with the pinned FCEUX latch boards (AxROM/7, Color Dreams/11 and
+   GxROM/66), then expand after banking, mirroring, trainer, battery and
+   save-state replay checks. Unknown boards and unsupported submapper variants
+   must remain explicit refusals; converting a header alone is not support.
+   ARM and bounded hardware bank/state tests now pass, including two legacy
+   game-state regressions. Keep this work isolated until broader game/UI and
+   release-installation acceptance is complete.
 3. **State and persistence:** preserve legacy save compatibility while extending
    coverage to additional enabled mappers and interrupted saves. Battery persistence is integrated
    for supported mapper 1/4/5 boards; interrupted-save recovery is tested.

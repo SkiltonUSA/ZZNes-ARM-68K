@@ -1,0 +1,16 @@
+VERIFIED SD032G:Dev/NESCart12/NESLoadCheck 27084
+VERIFIED SD032G:Dev/NESCart12/board.unif 131142
+VERIFIED SD032G:Dev/NESCart12/BOARD.UNF 131142
+VERIFIED SD032G:Dev/NESCart12/stored.zip 131272
+VERIFIED SD032G:Dev/NESCart12/deflated.zip 549
+VERIFIED SD032G:Dev/NESCart12/bad-crc.unif 131142
+VERIFIED SD032G:Dev/NESCart12/ambiguous.zip 262426
+PASS {'file': 'board.unif', 'pass_test': True, 'error': 0, 'source_preserved': True, 'output_matches': True}
+PASS {'file': 'BOARD.UNF', 'pass_test': True, 'error': 0, 'source_preserved': True, 'output_matches': True}
+PASS {'file': 'stored.zip', 'pass_test': True, 'error': 0, 'source_preserved': True, 'output_matches': True}
+PASS {'file': 'deflated.zip', 'pass_test': True, 'error': 0, 'source_preserved': True, 'output_matches': True}
+PASS {'file': 'bad-crc.unif', 'pass_test': True, 'error': 1, 'source_preserved': True, 'output_matches': False}
+PASS {'file': 'ambiguous.zip', 'pass_test': True, 'error': 7, 'source_preserved': True, 'output_matches': False}
+[OK]
+DONE
+PASS normalized UNIF physical ARM launch and cleanup

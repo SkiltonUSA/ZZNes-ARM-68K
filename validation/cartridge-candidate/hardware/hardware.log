@@ -1,0 +1,46 @@
+VERIFIED SD032G:Dev/NESCart12/ZZFceux-ui 593508
+VERIFIED SD032G:Dev/NESCart12/ZZNES 293984
+VERIFIED SD032G:Dev/NESCart12/mapper7-ntsc.nes 131088
+VERIFIED SD032G:Dev/NESCart12/mapper7-ntsc.state 25635
+VERIFIED SD032G:Dev/NESCart12/mapper7-pal.nes 131088
+VERIFIED SD032G:Dev/NESCart12/mapper7-pal.state 25635
+VERIFIED SD032G:Dev/NESCart12/mapper11-ntsc.nes 163856
+VERIFIED SD032G:Dev/NESCart12/mapper11-ntsc.state 17443
+VERIFIED SD032G:Dev/NESCart12/mapper11-pal.nes 163856
+VERIFIED SD032G:Dev/NESCart12/mapper11-pal.state 17443
+VERIFIED SD032G:Dev/NESCart12/mapper66-ntsc.nes 163856
+VERIFIED SD032G:Dev/NESCart12/mapper66-ntsc.state 17443
+VERIFIED SD032G:Dev/NESCart12/mapper66-pal.nes 163856
+VERIFIED SD032G:Dev/NESCart12/mapper66-pal.state 17443
+START mapper7-ntsc-cold
+PASS {'case': 'mapper7-ntsc-cold', 'frames': 3, 'resume': 0, 'pass': True, 'exact_arm_reference': True, 'starvations': 0}
+START mapper7-ntsc-resume
+PASS {'case': 'mapper7-ntsc-resume', 'frames': 3, 'resume': 1, 'pass': True, 'exact_arm_reference': True, 'starvations': 0}
+START mapper7-pal-cold
+PASS {'case': 'mapper7-pal-cold', 'frames': 3, 'resume': 0, 'pass': True, 'exact_arm_reference': True, 'starvations': 0}
+START mapper7-pal-resume
+PASS {'case': 'mapper7-pal-resume', 'frames': 3, 'resume': 1, 'pass': True, 'exact_arm_reference': True, 'starvations': 0}
+START mapper11-ntsc-cold
+PASS {'case': 'mapper11-ntsc-cold', 'frames': 3, 'resume': 0, 'pass': True, 'exact_arm_reference': True, 'starvations': 0}
+START mapper11-ntsc-resume
+PASS {'case': 'mapper11-ntsc-resume', 'frames': 3, 'resume': 1, 'pass': True, 'exact_arm_reference': True, 'starvations': 0}
+START mapper11-pal-cold
+PASS {'case': 'mapper11-pal-cold', 'frames': 3, 'resume': 0, 'pass': True, 'exact_arm_reference': True, 'starvations': 0}
+START mapper11-pal-resume
+PASS {'case': 'mapper11-pal-resume', 'frames': 3, 'resume': 1, 'pass': True, 'exact_arm_reference': True, 'starvations': 0}
+START mapper66-ntsc-cold
+PASS {'case': 'mapper66-ntsc-cold', 'frames': 3, 'resume': 0, 'pass': True, 'exact_arm_reference': True, 'starvations': 0}
+START mapper66-ntsc-resume
+PASS {'case': 'mapper66-ntsc-resume', 'frames': 3, 'resume': 1, 'pass': True, 'exact_arm_reference': True, 'starvations': 0}
+START mapper66-pal-cold
+PASS {'case': 'mapper66-pal-cold', 'frames': 3, 'resume': 0, 'pass': True, 'exact_arm_reference': True, 'starvations': 0}
+START mapper66-pal-resume
+PASS {'case': 'mapper66-pal-resume', 'frames': 3, 'resume': 1, 'pass': True, 'exact_arm_reference': True, 'starvations': 0}
+START legacy-cv3
+PASS {'case': 'legacy-cv3', 'frames': 120, 'resume': 1, 'pass': True, 'exact_arm_reference': False, 'starvations': 0}
+START legacy-smw
+PASS {'case': 'legacy-smw', 'frames': 120, 'resume': 1, 'pass': True, 'exact_arm_reference': False, 'starvations': 0}
+[OK]
+CLOCK_HOST command=0 elapsed_us=78 (includes 20ms polling)
+CLOCK_SESSION error=0 target_div=48 temp=59.1 C ctrl=00030008 cfg=000fa240 cpu=1f000200 nonce=800171117 fault=0 core1_idle=1
+CLOCK_KEEP held=1

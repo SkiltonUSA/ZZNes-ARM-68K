@@ -1,0 +1,6 @@
+PASS mapper7-ntsc guest bank switch, green pass screen, live/fresh relocated state, exact video/audio/cycles
+PASS mapper7-pal guest bank switch, green pass screen, live/fresh relocated state, exact video/audio/cycles
+PASS mapper11-ntsc guest bank switch, green pass screen, live/fresh relocated state, exact video/audio/cycles
+PASS mapper11-pal guest bank switch, green pass screen, live/fresh relocated state, exact video/audio/cycles
+PASS mapper66-ntsc guest bank switch, green pass screen, live/fresh relocated state, exact video/audio/cycles
+PASS mapper66-pal guest bank switch, green pass screen, live/fresh relocated state, exact video/audio/cycles

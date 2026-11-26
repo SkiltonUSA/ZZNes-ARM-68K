@@ -1,0 +1,35 @@
+{
+  "expected_sha256": "fb51b2d59a1fdc746395a551614060f1a8e87347828cb83f739a8b4755f9a0cf",
+  "cases": [
+    {
+      "file": "board.unif",
+      "success": true,
+      "source_md5": "c93340bdb74f9809911a698f35495f71"
+    },
+    {
+      "file": "BOARD.UNF",
+      "success": true,
+      "source_md5": "c93340bdb74f9809911a698f35495f71"
+    },
+    {
+      "file": "stored.zip",
+      "success": true,
+      "source_md5": "4f7164c5a3596bafd0962701a93d985a"
+    },
+    {
+      "file": "deflated.zip",
+      "success": true,
+      "source_md5": "63939dcf2c669afa485e95ec85772b84"
+    },
+    {
+      "file": "bad-crc.unif",
+      "success": false,
+      "source_md5": "684deae487748f337b006f90dec44484"
+    },
+    {
+      "file": "ambiguous.zip",
+      "success": false,
+      "source_md5": "620e4f4a08853e0a0e4c8095f328ebd2"
+    }
+  ]
+}

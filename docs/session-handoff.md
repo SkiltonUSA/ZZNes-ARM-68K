@@ -1,3 +1,23 @@
+## Cartridge candidate validated — 26 November 2026
+
+Public release remains 0.8.11 Beta (battery support); the isolated candidate is
+0.8.12-dev. Production was not replaced during these tests. Candidate binaries
+are in SD032G:Dev/NESCart12; sources/build identities and all checks are in
+[cartridge evidence](../validation/cartridge-candidate/README.md).
+
+PAL/NTSC mapper 7/11/66 cold and fresh-restore frames match the ARM reference.
+Two legacy game saves resume for 120 frames with no reported audio starvation.
+Physical 68k UNIF/ZIP conversion, rejection and source preservation pass; a
+converted cartridge runs on ARM. MUI opens, identifies UNIF mapper 7 and closes
+through ARexx QUIT with library persistence. The ZZ8-Bit-only StopPort helper
+cannot signal NES and must not be used for it. No shutdown defect was reproduced.
+
+Core1 ends idle; KEEP 800 MHz unchanged, last checked 59.6 C. Broader commercial
+game/controller/listening tests, new-board UI-created saves and release
+installation remain pending. No unsupported board was silently enabled.
+
+Earlier entries below are historical.
+
 ## 0.8.10 Beta installed — 25 November 2026
 
 Matching launcher/player and signed AmiPkg installed in SD032G:Emulator/ZZNES.

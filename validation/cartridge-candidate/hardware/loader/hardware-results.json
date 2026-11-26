@@ -1,0 +1,44 @@
+[
+  {
+    "file": "board.unif",
+    "pass_test": true,
+    "error": 0,
+    "source_preserved": true,
+    "output_matches": true
+  },
+  {
+    "file": "BOARD.UNF",
+    "pass_test": true,
+    "error": 0,
+    "source_preserved": true,
+    "output_matches": true
+  },
+  {
+    "file": "stored.zip",
+    "pass_test": true,
+    "error": 0,
+    "source_preserved": true,
+    "output_matches": true
+  },
+  {
+    "file": "deflated.zip",
+    "pass_test": true,
+    "error": 0,
+    "source_preserved": true,
+    "output_matches": true
+  },
+  {
+    "file": "bad-crc.unif",
+    "pass_test": true,
+    "error": 1,
+    "source_preserved": true,
+    "output_matches": false
+  },
+  {
+    "file": "ambiguous.zip",
+    "pass_test": true,
+    "error": 7,
+    "source_preserved": true,
+    "output_matches": false
+  }
+]

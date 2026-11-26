@@ -1,0 +1,4 @@
+[OK]
+CLOCK_HOST command=0 elapsed_us=78 (includes 20ms polling)
+CLOCK_SESSION error=0 target_div=48 temp=59.1 C ctrl=00030008 cfg=000fa240 cpu=1f000200 nonce=800171117 fault=0 core1_idle=1
+CLOCK_KEEP held=1

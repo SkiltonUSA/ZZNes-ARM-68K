@@ -14,6 +14,9 @@ int main(int argc,char **argv){
  assert(argc==4);unsigned id=atoi(argv[1]),trainer=atoi(argv[2]);const char*base=argv[3];
  unsigned prg=131072,chr=32768,payload=16+(trainer?512:0);
  std::vector<uint8> rom(payload+prg+chr,0);memcpy(rom.data(),"NES\x1a",4);rom[4]=prg/16384;rom[5]=chr/8192;rom[6]=(id<<4)|2|(trainer?4:0);rom[7]=id&240;
+#ifdef TEST_NES2
+ rom[7]|=8;rom[10]=(id==5?9:7)<<4;
+#endif
  assert(nes_cartridge(rom.data(),rom.size())==int(id));
  // Keep every other header constraint valid so battery rejection is isolated.
  for(unsigned denied: {0u,2u,3u,78u,90u}){
