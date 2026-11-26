@@ -1,10 +1,12 @@
 # Cartridge battery saves
 
-ZZNES 0.8.11 Beta supports battery RAM on accepted iNES mapper 1 (MMC1),
+ZZNES supports battery RAM on accepted mapper 1 (MMC1),
 4 (MMC3) and 5 (MMC5) cartridges. The mapper must expose one persistent region
-of at most 32 KiB. Other battery boards, NES 2.0 and UNIF remain rejected.
+of at most 32 KiB. Version 0.8.12 also accepts the supported NES 2.0 RAM
+declarations: MMC1/MMC3 8 KiB, MMC5 32 KiB. Other battery boards and UNIF
+batteries remain rejected.
 The existing ROM-size, mirroring and header constraints still apply; nonzero
-iNES byte 8 is not accepted. This does not enable every MMC1/MMC3/MMC5 board.
+legacy iNES byte 8 is not accepted. This does not enable every MMC1/MMC3/MMC5 board.
 
 ## Using saves
 

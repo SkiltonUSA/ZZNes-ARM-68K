@@ -1,3 +1,21 @@
+## 0.8.12 Beta installed — 26 November 2026
+
+The signed 0.8.12-dev package is installed at SD032G:Emulator/ZZNES. It promotes
+the tested bounded NES 2.0/UNIF and mapper 7/11/66 integration. Final ARM payload
+is byte-identical to the isolated candidate. Fresh/repeat/upgrade, preservation
+and twelve final installed-player checks pass; see
+[release evidence](../validation/cartridge-candidate/README.md). MUI opens/closes
+with UNIF entries. Configurations remain byte-identical across upgrade.
+
+The isolated installer check is SD032G:Dev/NESInstall0812; old production binaries
+are retained there as .old. Do not use .context/release-0.8.12-cartridge: it is an
+earlier preparation build with the old configuration. The recorded release is
+.context/release-0.8.12-final. Core1 is idle, KEEP 800 MHz unchanged. One short
+fresh MMC5 restart reports a starvation; all five final production resumes
+report zero. Broader commercial games/controllers/listening remain acceptance work.
+
+Earlier entries are historical.
+
 ## Cartridge candidate validated — 26 November 2026
 
 Public release remains 0.8.11 Beta (battery support); the isolated candidate is

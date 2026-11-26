@@ -1,0 +1,47 @@
+[
+  {
+    "case": "installed-cv3",
+    "frames": 120,
+    "window": 1,
+    "resume": 1,
+    "pass": true,
+    "starvations": 0,
+    "error": 0
+  },
+  {
+    "case": "installed-smw",
+    "frames": 120,
+    "window": 0,
+    "resume": 1,
+    "pass": true,
+    "starvations": 0,
+    "error": 0
+  },
+  {
+    "case": "installed-mapper7-restore",
+    "frames": 120,
+    "window": 1,
+    "resume": 1,
+    "pass": true,
+    "starvations": 0,
+    "error": 0
+  },
+  {
+    "case": "installed-mapper11-restore",
+    "frames": 120,
+    "window": 1,
+    "resume": 1,
+    "pass": true,
+    "starvations": 0,
+    "error": 0
+  },
+  {
+    "case": "installed-mapper66-restore",
+    "frames": 120,
+    "window": 1,
+    "resume": 1,
+    "pass": true,
+    "starvations": 0,
+    "error": 0
+  }
+]

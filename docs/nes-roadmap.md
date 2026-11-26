@@ -5,29 +5,21 @@ Current features and installation are in [the README](../README.md). Historical
 the current player. ZZSNES is now a separate released application, not a future
 NES feature.
 
-The 0.8.11 release, signed installer and installed-player checks are complete.
-[Release evidence](validation/battery-save/README.md). The items below are
-remaining compatibility/acceptance work, not unfinished release packaging.
+The 0.8.12 release integrates the tested cartridge layer.
+[Build and validation evidence](../validation/cartridge-candidate/README.md).
+The items below remain broader compatibility and acceptance work.
 
 1. **Audio continuity:** measure sustained delivery and worst-case frame cost on
    current players. Keep synthesis corruption, transport coherency and device
    starvation separate. Per-app AHI/Paula and explicit AX options already exist;
    broader AX/driver and long-session acceptance remain necessary.
-2. **Compatibility:** expand testing of enabled mappers/boards, including CRC-selected
-   MMC1/MMC5 battery variants. The released 0.8.11 player does not support
-   NES 2.0 or UNIF. The isolated candidate now has bounded support and three
-   additional mapper IDs; [scope and tests](cartridge-formats.md). Trainers
-   are supported on the eight mapper IDs in the release. Compiling upstream board code does not
-   establish cartridge compatibility.
-   The requested expansion now explicitly includes NES 2.0 header/submapper/RAM
-   handling, UNIF chunk and board-name loading, and additional mapper integration.
-   Start with the pinned FCEUX latch boards (AxROM/7, Color Dreams/11 and
-   GxROM/66), then expand after banking, mirroring, trainer, battery and
-   save-state replay checks. Unknown boards and unsupported submapper variants
-   must remain explicit refusals; converting a header alone is not support.
-   ARM and bounded hardware bank/state tests now pass, including two legacy
-   game-state regressions. Keep this work isolated until broader game/UI and
-   release-installation acceptance is complete.
+2. **Compatibility:** broaden supported mapper/board testing, including
+   CRC-selected MMC1/MMC5 battery variants. Bounded NES 2.0, UNIF and mapper
+   7/11/66 integration are included in 0.8.12; [scope](cartridge-formats.md).
+   Native, ARM and physical banking/state checks pass, including legacy saves
+   and hardware-created states. Additional boards, unsupported submappers,
+   wider mirroring cases and commercial-title coverage remain. Unknown layouts
+   are refused; importing upstream code does not establish compatibility.
 3. **State and persistence:** preserve legacy save compatibility while extending
    coverage to additional enabled mappers and interrupted saves. Battery persistence is integrated
    for supported mapper 1/4/5 boards; interrupted-save recovery is tested.

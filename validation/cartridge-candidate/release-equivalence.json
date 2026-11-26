@@ -1,0 +1,15 @@
+{
+  "candidate_arm_sha256": "2d201b8defd5085cee9e45d450febb208c6620d5aec5c9afc770f501b2f20b25",
+  "release_arm_sha256": "2d201b8defd5085cee9e45d450febb208c6620d5aec5c9afc770f501b2f20b25",
+  "arm_identical": true,
+  "version_only_source_changes": [
+    "library/library_mui.h"
+  ],
+  "release_artifacts": {
+    "ZZNES": "db6ce2ea64e00bf43064edfd4640d8d1d9e81fc97358c3c0023d1f3b5eece519",
+    "ZZFceux-ui": "182fed3c5311e1ab6304360fc33b18d4bd5e6c59d9742fcbdd07f9c28827bdff",
+    "MakeIcon": "34cc69627884e19a901cf3d49e82ac608bcd919858cee38b97eafde5c77053e8",
+    "ZZClock": "b0ab72855e3e1aa9e5a9cf072ff3f7e2892b70f4b2b7193f000ff26381edf4d0",
+    "player/zz_payload.h": "2d201b8defd5085cee9e45d450febb208c6620d5aec5c9afc770f501b2f20b25"
+  }
+}

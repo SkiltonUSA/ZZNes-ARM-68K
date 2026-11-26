@@ -1,0 +1,31 @@
+PASS NES 2.0 fields, exponent bounds, submappers, authoritative timing; UNIF board/length/CRC/duplicate checks
+PASS mapper 2 NES1 sub0: PRG/CHR banks, bus conflict and state restoration
+PASS mapper 2 NES2 sub0: PRG/CHR banks, bus conflict and state restoration
+PASS mapper 2 NES2 sub1: PRG/CHR banks, bus conflict and state restoration
+PASS mapper 2 NES2 sub2: PRG/CHR banks, bus conflict and state restoration
+PASS mapper 3 NES1 sub0: PRG/CHR banks, bus conflict and state restoration
+PASS mapper 3 NES2 sub0: PRG/CHR banks, bus conflict and state restoration
+PASS mapper 3 NES2 sub1: PRG/CHR banks, bus conflict and state restoration
+PASS mapper 3 NES2 sub2: PRG/CHR banks, bus conflict and state restoration
+PASS mapper 7 NES1 sub0: PRG/CHR banks, bus conflict and state restoration
+PASS mapper 7 NES2 sub0: PRG/CHR banks, bus conflict and state restoration
+PASS mapper 7 NES2 sub1: PRG/CHR banks, bus conflict and state restoration
+PASS mapper 7 NES2 sub2: PRG/CHR banks, bus conflict and state restoration
+PASS mapper 11 NES1 sub0: PRG/CHR banks, bus conflict and state restoration
+PASS mapper 11 NES2 sub0: PRG/CHR banks, bus conflict and state restoration
+PASS mapper 11 NES2 sub1: PRG/CHR banks, bus conflict and state restoration
+PASS mapper 11 NES2 sub2: PRG/CHR banks, bus conflict and state restoration
+PASS mapper 66 NES1 sub0: PRG/CHR banks, bus conflict and state restoration
+PASS mapper 66 NES2 sub0: PRG/CHR banks, bus conflict and state restoration
+PASS mapper 7 NES1 trainer guest execution, read fallback, restore and source preservation
+PASS mapper 7 NES2 trainer guest execution, read fallback, restore and source preservation
+PASS mapper 11 NES1 trainer guest execution, read fallback, restore and source preservation
+PASS mapper 11 NES2 trainer guest execution, read fallback, restore and source preservation
+PASS mapper 66 NES1 trainer guest execution, read fallback, restore and source preservation
+PASS mapper 66 NES2 trainer guest execution, read fallback, restore and source preservation
+PASS mapper 1 battery 8192 bytes trainer=0: bank writes, power/import ordering, guest execution and state restoration
+PASS mapper 1 battery 8192 bytes trainer=1: bank writes, power/import ordering, guest execution and state restoration
+PASS mapper 4 battery 8192 bytes trainer=0: bank writes, power/import ordering, guest execution and state restoration
+PASS mapper 4 battery 8192 bytes trainer=1: bank writes, power/import ordering, guest execution and state restoration
+PASS mapper 5 battery 32768 bytes trainer=0: bank writes, power/import ordering, guest execution and state restoration
+PASS mapper 5 battery 32768 bytes trainer=1: bank writes, power/import ordering, guest execution and state restoration

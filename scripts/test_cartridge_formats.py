@@ -18,6 +18,9 @@ subprocess.run([str(out/'formats')],check=True,env=env)
 for mapper in (2,3,7,11,66):
  for version,sub in [(0,0),(1,0)]+([(1,1),(1,2)]if mapper!=66 else []):
   subprocess.run([str(out/'formats'),str(mapper),str(sub),str(version)],check=True,env=env)
+for mapper in (7,11,66):
+ for version in (0,1):
+  subprocess.run([str(out/'formats'),str(mapper),'0',str(version),'TRAINER'],check=True,env=env)
 # Exercise the same battery/trainer lifecycle against explicit NES 2.0 RAM.
 battery=cmd.copy();battery.insert(1,'-DTEST_NES2')
 battery[battery.index(str(r/'tests/amiga/emulator/cartridge_formats.cpp'))]=str(r/'tests/amiga/emulator/battery.cpp')

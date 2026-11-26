@@ -57,7 +57,8 @@ allocation and fixed control/MMU regions must not be enlarged by guessing at
 free ZZ9000 memory. Continue to allocate through Exec and verify mappings.
 
 Version 0.8.11 integrates battery persistence for supported mapper 1/4/5 boards.
-Trainers remain available on the eight enabled mapper IDs. This does not enable
+Version 0.8.12 adds bounded NES 2.0/UNIF and mapper IDs 7/11/66; trainer
+handling is retained. This does not enable
 the remaining imported boards. [Battery limits](battery-saves.md). Existing save files must remain intact
 when the new state implementation is introduced. Region, submapper and board
 wiring must be passed into the mapper, not inferred from its numeric ID alone.

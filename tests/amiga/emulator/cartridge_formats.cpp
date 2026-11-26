@@ -58,9 +58,30 @@ static void parser(){
  multi.back()^=1;assert(!fc_unif_import(multi.data(),multi.size(),out.data(),out.size(),&count));
  puts("PASS NES 2.0 fields, exponent bounds, submappers, authoritative timing; UNIF board/length/CRC/duplicate checks");
 }
+static void trainer_guest(unsigned id,unsigned version){
+ auto r=image(id,0,version);r[6]|=4;r.insert(r.begin()+16,512,0);
+ const uint8 trainer_code[]={0xa9,0x6d,0x85,3,0x60};
+ memcpy(r.data()+16,trainer_code,sizeof trainer_code);
+ const uint8 code[]={0x78,0xd8,0xa2,0xff,0x9a,0x20,0,0x70,0x4c,8,0x80};
+ for(unsigned bank=0;bank<4;bank++){
+  unsigned offset=528+bank*32768;memcpy(r.data()+offset,code,sizeof code);
+  for(unsigned v=0x7ffa;v<=0x7ffe;v+=2){r[offset+v]=0;r[offset+v+1]=0x80;}
+ }
+ const auto original=r;assert(!fc_init(r.data(),r.size()));
+ for(unsigned i=0;i<3;i++)assert(!fc_frame(0));
+ assert(RAM[3]==0x6d);
+ for(unsigned i=0;i<512;i++)assert(ARead[0x7000+i](0x7000+i)==r[16+i]);
+ std::vector<uint8> save(122880);unsigned n=fc_state_store(save.data(),save.size());assert(n);
+ RAM[3]=0;assert(fc_state_load(save.data(),n));assert(RAM[3]==0x6d);assert(!fc_frame(0));
+ for(unsigned i=0;i<512;i++)assert(ARead[0x7000+i](0x7000+i)==r[16+i]);
+ assert(r==original);
+ printf("PASS mapper %u NES%u trainer guest execution, read fallback, restore and source preservation\n",id,version?2:1);
+}
 int main(int argc,char**argv){
  if(argc==1){parser();return 0;}
- unsigned id=atoi(argv[1]),sub=atoi(argv[2]),version=atoi(argv[3]);auto r=image(id,sub,version);
+ unsigned id=atoi(argv[1]),sub=atoi(argv[2]),version=atoi(argv[3]);
+ if(argc==5){trainer_guest(id,version);return 0;}
+ auto r=image(id,sub,version);
  assert(nes_cartridge(r.data(),r.size())==(int)id);
  assert(!fc_init(r.data(),r.size()));
  unsigned data=id==11?0x21:id==66?0x21:0x12;

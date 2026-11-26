@@ -1,6 +1,6 @@
 # iNES trainer support
 
-**Included in 0.8.10 Beta** on the eight supported mapper IDs. Version 0.8.11 also supports battery RAM on mapper 1/4/5 boards; see [battery saves](battery-saves.md). NES 2.0 and UNIF remain outside the cartridge contract.
+**Included in 0.8.10 Beta** on the eight supported mapper IDs. Version 0.8.11 also supports battery RAM on mapper 1/4/5 boards; see [battery saves](battery-saves.md). Version 0.8.12 adds bounded NES 2.0 and UNIF; see [format support](cartridge-formats.md). The eight-mapper measurements below retain their original test scope.
 
 The release build reads the 512-byte trainer before PRG/CHR data, writes it to
 $7000–$71FF after mapper power-on, and uses the pinned FCEUX read-handler fallback

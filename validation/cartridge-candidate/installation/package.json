@@ -1,0 +1,50 @@
+{
+  "version": "0.8.12-dev",
+  "base_sha256": "79bfa17bb7a1eec1367c45aba731f349c3e5137d1178d9ac68acd68575a9d5c3",
+  "installer_sha256": "9236befbaefd1985be0143aeff120834416f7b72cdf442d468a82a56680a5000",
+  "packages": {
+    "zznes": {
+      "files": {
+        "ZZNES/Battery-saves.md": "eac1227eb7520e0baf249ef5713f0b433a46d47d117eaaa6594122ecbf630ca3",
+        "ZZNES/CHANGELOG.md": "981b9d7427aac1b8514ca652540f60c456abdde2731ea6bf5469c196032702aa",
+        "ZZNES/COPYING3": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903",
+        "ZZNES/Cartridge-formats.md": "09b21c88fea44639ab99aae9306b5bd9f603ef3087568a1514d1967e2fd2d779",
+        "ZZNES/Changes.md": "981b9d7427aac1b8514ca652540f60c456abdde2731ea6bf5469c196032702aa",
+        "ZZNES/Clock-settings.md": "f5054d5ef1bf64c1b49a2693019b5dee302b97f869641832c46a8e4dc95c7474",
+        "ZZNES/Credits.txt": "6c99cb4baac38d78e4dbec3d91d51af24a3340be553f2da08d0c376a8e52bc7f",
+        "ZZNES/Install-Scanlines": "cf300fb5169aefd224205fa14feaf79eac18c933ecc37300e5250ae8205ed00a",
+        "ZZNES/Install-Scanlines.info": "13a47a1be68658f90e7e5787b23a440d75e653810fb780e82fd1f9a28dab6a4f",
+        "ZZNES/LICENSE-Snes9x": "7c99d452508b90c46d74ac5d516d3d7de4ff3406bc7c4ad595215205369594ba",
+        "ZZNES/LICENSE-puff": "969b7be2a930db0cdcb19b0e5b29ae6741f5a8f663b6dba6d647e12ec60cfa8e",
+        "ZZNES/LICENSE-xSysInfo": "323187598a84a70032b38d9f483ba9c0f6172b0635ef32ce924393356f279829",
+        "ZZNES/README.md": "37b9551d938302bc8c49b13f1766e38c88c894110cd468f6a8ae11f5f793c48f",
+        "ZZNES/ReadMe.txt": "37b9551d938302bc8c49b13f1766e38c88c894110cd468f6a8ae11f5f793c48f",
+        "ZZNES/Release-notes.md": "14a2ba0157afa9ddc9b0ec73a0c084e026f34810eeee12511dba41b761085f6d",
+        "ZZNES/SHA256SUMS": "9be6166fdd8e321010637395b3e025f559ecfb4a0cd80d46bf5ea34099221af8",
+        "ZZNES/Scanlines.txt": "909755d137fbe3ab426a99d6abb8edfbd10a3d84ead7f5ea34d850768ed76727",
+        "ZZNES/Scanlines/Source/build_scanlines.py": "37677c451757c82816bcee956390980aa2e544c2b06dfe19dd7f020c3a6415dc",
+        "ZZNES/Scanlines/Source/install.c": "09f889813c44dd4bcc5a9926e18585a184be1bb04bc510705b0938c8ed1d2264",
+        "ZZNES/Scanlines/Source/vendor/LICENSE": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986",
+        "ZZNES/Scanlines/Source/vendor/README.md": "deb29b7119d49bcac7bd2aeeeb34a3bb833854f27f5b0c14a37fdc17c6e48dfe",
+        "ZZNES/Scanlines/Source/vendor/ZZScanlines.c": "ecdc8403dde5aa3886bba5ad9fae179b33638a922899b7e32519008018d527fc",
+        "ZZNES/Scanlines/Source/vendor/ZZScanlinesGUI.c": "e90bc5a80aa767b0defaeec26fd80c861252d657494f339520d05483d95bb486",
+        "ZZNES/Scanlines/Source/vendor/upstream.json": "7b7343b357b1044f20916ec402d365e5aa5d656960503f890727d85e64929359",
+        "ZZNES/Scanlines/ZZScanlines": "973a23c9bf0a867cba8fe8ed069baeaf90a632ac47ed32a7f5635197492e5757",
+        "ZZNES/Scanlines/ZZScanlinesGUI": "5eeabbb5a691ee5d6c99e134b9e5909599415f2a6d35961c4f2150f158d0cedd",
+        "ZZNES/Version.txt": "350a42bf159f7909dbb9c6c0dcd10cebf7e8667e87c59053950e7d1cb891a238",
+        "ZZNES/ZZClock": "b0ab72855e3e1aa9e5a9cf072ff3f7e2892b70f4b2b7193f000ff26381edf4d0",
+        "ZZNES/ZZFceux-ui": "182fed3c5311e1ab6304360fc33b18d4bd5e6c59d9742fcbdd07f9c28827bdff",
+        "ZZNES/ZZNES": "db6ce2ea64e00bf43064edfd4640d8d1d9e81fc97358c3c0023d1f3b5eece519",
+        "ZZNES/ZZNES.info": "13a47a1be68658f90e7e5787b23a440d75e653810fb780e82fd1f9a28dab6a4f",
+        "ZZNES/ZZNES.png": "457344e28db296fec6399b17915a75a71c5db9f627469a21cf70bfd212e3c545",
+        "about.txt": "86dc2b27cfbb43e4789fb24ca2d709eb50f3b8ca70a6ff273eec2a43411e98bc",
+        "licence.txt": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903",
+        "readme.txt": "37b9551d938302bc8c49b13f1766e38c88c894110cd468f6a8ae11f5f793c48f"
+      },
+      "archive_sha256": "22dfe7d176ef371462de8d6a76f7167b8a6d5ad47b96777858de7b39fd26f550"
+    }
+  },
+  "installer_replacements": {},
+  "validation": "Catalogue signature and archive/document hashes; fresh/repeat/production Amiga installs; exact installed binaries; configuration preservation; 12 installed-player battery/legacy/new-mapper state checks; MUI open/close.",
+  "validation_record": "validation/cartridge-candidate/README.md"
+}

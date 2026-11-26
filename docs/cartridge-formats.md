@@ -1,10 +1,8 @@
-# Cartridge compatibility candidate
+# Cartridge formats and compatibility
 
-Status: **0.8.12-dev**, isolated from the published **0.8.11 Beta**.
-Native tests, ARM/68k/MUI compilation and bounded physical bank/state/cleanup
-checks pass. Broader gameplay and release-installation checks are pending.
-No new compatibility or performance
-claim applies to the current download.
+Included in **0.8.12 Beta**. Native, ARM and bounded physical bank/state/cleanup
+checks pass. Broader game, controller and listening coverage remains ongoing;
+no new FPS or audio-quality improvement is claimed.
 
 ## Implemented scope
 
@@ -41,10 +39,10 @@ compatibility with every game using it.
 
 ## Verification
 
-Rebuild the candidate in a new output directory:
+Rebuild in a new output directory:
 
 ```sh
-python3 scripts/build_current.py --release-ax --cartridge-test \
+python3 scripts/build_current.py --release-ax \
   --output-dir .context/cartridge-candidate-new
 python3 scripts/test_cartridge_formats.py
 python3 tests/test_cartridge_loader.py .context/cartridge-candidate-new
@@ -93,9 +91,8 @@ ambiguous-archive refusal, preserving every input file. Its normalized cartridge
 launches on the ARM player and exits cleanly. The MUI library opens with these
 entries, displays their titles and retains the library after clean Quit.
 
-Still required: broader commercial-game and mirroring coverage, interactive library slot/thumbnail checks, additional UNIF boards and final
-release installation. Build identities are recorded in the isolated output's
-`build.json`; no release binaries were replaced.
+Still required: broader commercial-game and mirroring coverage, interactive library slot/thumbnail checks, additional UNIF boards. Build identities are recorded in the isolated output's
+`build.json`.
 
 ## References
 
@@ -104,6 +101,6 @@ release installation. Build identities are recorded in the isolated output's
 [UNIF](https://www.nesdev.org/wiki/UNIF), and
 [UNIF board mapping](https://www.nesdev.org/wiki/UNIF_to_NES_2.0_Mapping).
 Mapper implementations come from the repository's pinned FCEUX core; the
-candidate changes are reproducible overlays in `scripts/prepare_cartridge_formats.py`.
+integration changes are reproducible overlays in `scripts/prepare_cartridge_formats.py`.
 
 [Recorded build identities and native results](../validation/cartridge-candidate/README.md).

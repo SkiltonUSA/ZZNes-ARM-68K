@@ -1,6 +1,9 @@
-# Cartridge compatibility candidate
+# Cartridge compatibility and release validation
 
-Version **0.8.12-dev**; public **0.8.11 Beta** remains unchanged.
+The candidate was **0.8.12-dev cartridge candidate**, isolated from 0.8.11.
+The **0.8.12-dev / 0.8.12 Beta** release uses the byte-identical ARM payload;
+[comparison](release-equivalence.json) and [release identity](release-build.json).
+The candidate records below retain their original build label.
 
 - [Native checks](native.log): metadata, UNIF, bank switching, conflicts,
   nametables and battery/trainer/state tests, with documented sanitizer exclusions.
@@ -20,7 +23,7 @@ runs exit cleanly with zero register/cache-witness mismatches; final Core1
 is idle. No firmware, clock or production installation was changed.
 
 No compatibility or FPS claim is made for a commercial game on a newly added
-mapper. Broader game/UI acceptance and release installation remain pending.
+mapper. Broader game/UI acceptance remains; release installation is recorded below.
 [Scope, limits and reproduction](../../docs/cartridge-formats.md).
 
 ## Physical 68k UNIF import
@@ -54,3 +57,36 @@ frames. HQ synthesis, register/cache-witness restoration and owned-memory
 release pass. [Complete sequence log](hardware/live-states.log). Final Core1
 is idle, KEEP 800 MHz, 60.2 C. Library slot-selection/thumbnail interaction
 and commercial titles still need broader acceptance.
+
+## 0.8.12 release installation
+
+The final build includes the cartridge integration through the normal release
+build path. Its ARM payload is byte-identical to the tested candidate. Native
+trainer execution/read fallback/save restoration passes for mappers 7/11/66 in
+both iNES and NES 2.0. The final launcher loader passes raw/stored/deflated import,
+CRC/refusal and original-file preservation.
+[Native checks](installation/release-native.log) · [Loader checks](installation/release-loader.log).
+
+Signed AmiPkg fresh, repeat and production installations pass dependency checks,
+exact binary/README hashes and preservation of library/audio/controller settings.
+The package contains no ROMs or personal saves. README, credits and licence are
+in the outer installer and its component archive.
+[Package manifest](installation/package.json) ·
+[Fresh](installation/ZZNES-fresh.log) · [Repeat](installation/ZZNES-repeat.log) ·
+[Upgrade](installation/ZZNES-production.log).
+
+Seven fresh-installed player runs pass: two MMC5 persistence runs with exact
+SRAM comparison, Castlevania III and Super Mario World legacy HQ saves, and
+fresh-process restores of hardware-created mapper 7/11/66 states. The second
+short battery run reports one starvation; the other six report zero.
+[Results](installation/candidate-checks.json). The installed MUI launcher also
+opens with raw/zipped UNIF entries, shows extension-free titles and closes via
+ARexx QUIT while preserving the list. [Launcher check](installation/launcher.log).
+
+After the main installation was upgraded, both legacy saves and all three new
+mapper states each resumed for 120 frames. All five report zero starvations and
+device errors, restore register/cache witnesses and release owned memory.
+[Installed results](installation/production-checks.json). These are bounded
+persistence/lifecycle checks, not new gameplay-FPS or listening-quality claims.
+Final Core1 is idle and the existing 800 MHz KEEP setting is retained.
+Missing-driver/fallback policy is unchanged; drivers were not removed for this round.

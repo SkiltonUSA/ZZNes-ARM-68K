@@ -1,0 +1,65 @@
+[
+  {
+    "case": "battery-first",
+    "frames": 120,
+    "window": 1,
+    "resume": 0,
+    "pass": true,
+    "starvations": 0,
+    "error": 0
+  },
+  {
+    "case": "battery-second",
+    "frames": 120,
+    "window": 1,
+    "resume": 0,
+    "pass": true,
+    "starvations": 1,
+    "error": 0
+  },
+  {
+    "case": "cv3",
+    "frames": 120,
+    "window": 1,
+    "resume": 1,
+    "pass": true,
+    "starvations": 0,
+    "error": 0
+  },
+  {
+    "case": "smw",
+    "frames": 120,
+    "window": 0,
+    "resume": 1,
+    "pass": true,
+    "starvations": 0,
+    "error": 0
+  },
+  {
+    "case": "mapper7-restore",
+    "frames": 120,
+    "window": 1,
+    "resume": 1,
+    "pass": true,
+    "starvations": 0,
+    "error": 0
+  },
+  {
+    "case": "mapper11-restore",
+    "frames": 120,
+    "window": 1,
+    "resume": 1,
+    "pass": true,
+    "starvations": 0,
+    "error": 0
+  },
+  {
+    "case": "mapper66-restore",
+    "frames": 120,
+    "window": 1,
+    "resume": 1,
+    "pass": true,
+    "starvations": 0,
+    "error": 0
+  }
+]

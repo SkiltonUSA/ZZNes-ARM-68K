@@ -130,7 +130,7 @@ def main():
   if release_hq or a.battery_test:
    from prepare_battery import prepare
    prepare(core,stage,lib,out/"common",source)
-  if a.cartridge_test:
+  if release_hq or a.cartridge_test:
    from prepare_cartridge_formats import prepare
    prepare(core,stage,lib,out/"common")
   if a.audio_core_quality is not None:

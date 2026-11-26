@@ -1,18 +1,15 @@
-# ZZNES — 0.8.11 Beta
+# ZZNES — 0.8.12 Beta
 
 <!-- current-release -->
 
 [Remaining work and validation limits](docs/nes-roadmap.md). Historical results retain their tested build labels.
 
-**Development candidate:** bounded NES 2.0 and UNIF loading, with AxROM (7),
-Color Dreams (11) and GxROM (66). Native, ARM and physical PAL/NTSC bank/state
-checks pass, including legacy-state regression. Broader gameplay and release
-acceptance remain pending. These additions are not in the 0.8.11 download.
-[Compatibility scope and tests](docs/cartridge-formats.md).
-## Current release — 0.8.11 Beta
+## Current release — 0.8.12 Beta
 
-[Download the AmiPkg installer](https://github.com/SkiltonUSA/ZZNes-ARM-68K/releases/tag/v0.8.11-beta) · [Changes and installation](docs/release-notes.md)
+[Download the AmiPkg installer](https://github.com/SkiltonUSA/ZZNes-ARM-68K/releases/tag/v0.8.12-beta) · [Changes and installation](docs/release-notes.md)
 
+- Bounded NES 2.0 and UNIF import, including ZIPs; originals are preserved. [Cartridge formats](docs/cartridge-formats.md).
+- AxROM (7), Color Dreams (11) and GxROM (66) added.
 - Battery saves for supported MMC1, MMC3 and MMC5 cartridges, with backup recovery. [Save-file guide](docs/battery-saves.md).
 - iNES trainers and legacy save-state compatibility retained.
 - **Settings → ZZOverclock:** 666.7 MHz or experimental 800 MHz, with Apply and Refresh.
@@ -21,7 +18,7 @@ acceptance remain pending. These additions are not in the 0.8.11 download.
 - Archives include the main README as `readme.txt`, plus `about.txt` and `licence.txt`.
 - Launcher and release use the same version number. No automatic clock change or firmware installation.
 
-[Release validation and limits](docs/validation/battery-save/README.md).
+[Release validation and limits](validation/cartridge-candidate/README.md).
 
 <img src="docs/screenshots/logo.png" width="160" alt="ZZNES logo">
 
@@ -32,13 +29,13 @@ files, controls, display coordination and batched AHI audio.
 
 This beta needs **48 MiB of allocatable ZZ9000 RAM**, plus display and AmigaOS memory.
 
-**[Download 0.8.11 Beta — AmiPkg installer](https://github.com/SkiltonUSA/ZZNes-ARM-68K/releases/tag/v0.8.11-beta)** ·
+**[Download 0.8.12 Beta — AmiPkg installer](https://github.com/SkiltonUSA/ZZNes-ARM-68K/releases/tag/v0.8.12-beta)** ·
 [Installation](docs/package-manager.md) · [User guide](docs/current-guide.md) ·
 [Changes](CHANGELOG.md) · [Interface gallery](docs/current-interface.md)
 
 **Retained audio improvements:** corrected audio transfer, faster high-quality synthesis and compatible save states. [Sound fix and measurements](docs/audio-synthesis.md).
 
-Published app version: **0.8.11-dev**.
+Published app version: **0.8.12-dev**.
 
 **0.8.8 Beta** fixes stale PCM samples that caused instrument distortion. New games use high-quality audio; existing saves retain their original synthesis mode. [Save compatibility](docs/audio-states.md).
 
@@ -83,11 +80,11 @@ headroom, not a playback-FPS increase. [Method, results and limits](docs/audio-s
 | Emulation processor | ZZ9000 Cortex-A9 / ARMv7-A, application-owned Core1 via XACP |
 | Host processor | 68020 instruction set; AmigaOS, files, input, display coordination and AHI |
 | Owned ZZ9000 RAM | 48 MiB, including 32 MiB executable reserve; plus display/OS allocations |
-| ROM formats | iNES .nes; single-ROM .zip |
+| ROM formats | iNES / bounded NES 2.0 .nes; selected UNIF .unf/.unif; single-ROM .zip |
 | Audio | 32 kHz mono; HQ synthesis for new games, legacy synthesis for old saves; selectable AHI/Paula/ZZ9000AX output |
 | Display | Picasso96 fullscreen or Workbench window; optional scaling, borders and FPS |
 | Scanlines | Fullscreen FPGA Classic / Soft / Gradient; windowed ARM Soft |
-| Enabled mappers | 0, 1, 2, 3, 4, 5, 78, 90 within the supported iNES contract |
+| Enabled mappers | 0, 1, 2, 3, 4, 5, 7, 11, 66, 78, 90 within the [cartridge limits](docs/cartridge-formats.md) |
 
 ## Requirements
 
@@ -102,9 +99,9 @@ TF4060/68060 and AmigaOS 3.2.3; 68030 performance has not been measured.
 
 ## Installation
 
-Choose **`-beta-amipkg.lha`** for the offline installer, or **`-beta.zip`** for
-manual copying. Both contain the same matched launcher and player, licences
-and scanline tools; neither includes ROMs or Amiga system libraries.
+Choose **`ZZNES-0.8.12-dev-amipkg.lha`** for the offline installer. It contains
+the matched launcher and player, licences and scanline tools; ROMs and Amiga
+system libraries are not included.
 
 Extract the installer, open its drawer and double-click **Install**. It checks
 MUI, Picasso96, AHI and ZZ9000 availability, lets you choose a destination, and
@@ -164,11 +161,16 @@ measurements of this release. [Measurements](docs/current-development.md) ·
 
 ## Compatibility
 
-The current player accepts bounded iNES cartridges using mapper IDs
-**0, 1, 2, 3, 4, 5, 78 and 90**, subject to board-specific limits.
-Trainers are supported on the eight enabled mapper IDs. Battery saves are enabled
-for supported mapper **1, 4 and 5** boards with one persistent RAM region, up to
-32 KiB. Other battery boards, NES 2.0 and UNIF remain unsupported.
+The current player accepts bounded iNES/NES 2.0 cartridges using mapper IDs
+**0, 1, 2, 3, 4, 5, 7, 11, 66, 78 and 90**, subject to board-specific limits.
+The launcher also imports selected UNIF boards from plain files or ZIPs.
+NES 2.0 region, RAM and supported submapper fields are interpreted explicitly;
+unknown boards and unsupported layouts are refused.
+
+Trainer loading and legacy saves are retained. Battery saves are enabled for
+supported mapper **1, 4 and 5** boards with one persistent RAM region, up to
+32 KiB. UNIF battery boards and other battery mappers remain unsupported.
+[Format, size and board limits](docs/cartridge-formats.md).
 [Battery-save behaviour and limits](docs/battery-saves.md).
 Importing the full FCEUX source does not enable every upstream mapper or tool.
 [Current cartridge support](docs/current-cartridge-support.md) ·
@@ -183,7 +185,7 @@ zlib. The offline installer uses **[amipkg](https://github.com/thomas-luebker/am
 with the documented local fixes originally used by ZZDosBox.
 
 FCEUX is GPL-2.0-or-later. Component licences, source pins and notices are included.
-[Release build inputs](docs/validation/battery-save/release-build.json) · [Third-party notices](THIRD_PARTY.md).
+[Release build inputs](validation/cartridge-candidate/release-build.json) · [Third-party notices](THIRD_PARTY.md).
 
 ## Translation and audio
 

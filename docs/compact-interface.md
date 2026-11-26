@@ -1,6 +1,6 @@
 # Compact launcher
 
-Development launcher update, 11 November 2026. Published packages are unchanged.
+Included in the current release. Earlier validation records retain their tested build labels.
 
 - Top tabs: Games, ROM Manager, Display, Sound, Controllers and Save states.
 - The **[i] About** icon sits beside Save settings, matching ZZ8-Bit.

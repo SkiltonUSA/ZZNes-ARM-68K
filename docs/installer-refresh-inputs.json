@@ -1,24 +1,25 @@
 {
-  "package_version": "0.8.11-dev",
-  "application_version": "0.8.11-dev",
-  "base_installer_sha256": "055f6e7b43afb94c9c34ec4bc25c801f15d4f803c2b95fdb50b510c0883a7084",
+  "package_version": "0.8.12-dev",
+  "application_version": "0.8.12-dev",
+  "base_installer_sha256": "79bfa17bb7a1eec1367c45aba731f349c3e5137d1178d9ac68acd68575a9d5c3",
   "replacements": {
     "zznes": {
-      "ZZNES/ZZNES": "a95e333234a9ebd4a94c1e77e790eb153cbdc05f012d8519c4991f60c058cbe2",
+      "ZZNES/ZZNES": "db6ce2ea64e00bf43064edfd4640d8d1d9e81fc97358c3c0023d1f3b5eece519",
       "ZZNES/ZZClock": "b0ab72855e3e1aa9e5a9cf072ff3f7e2892b70f4b2b7193f000ff26381edf4d0",
-      "ZZNES/ZZFceux-ui": "ec2e4816fe825a3c4e9ae525a30beec32ceb01a9f772828de5a24fad09d6a24b",
-      "ZZNES/README.md": "ca7e0c18c3618a098ff3ddf6f6b2ebb55ac60c8cb3277722117bb97de10ced44",
-      "ZZNES/ReadMe.txt": "ca7e0c18c3618a098ff3ddf6f6b2ebb55ac60c8cb3277722117bb97de10ced44",
-      "ZZNES/CHANGELOG.md": "14fd86298bd95f56d438152aaeb5292baf20a731beb9050fcbe8610fd5e7d748",
-      "ZZNES/Changes.md": "14fd86298bd95f56d438152aaeb5292baf20a731beb9050fcbe8610fd5e7d748",
-      "ZZNES/Release-notes.md": "78d8530b0dddfe25a91a838b77e0a196d4c4f1062e82ff83b650ece42db71ea2",
-      "ZZNES/Battery-saves.md": "5a9378ca12460e1ff5a98002f6df10b2ee0c66e720036dbca3b3588463ef703a",
-      "ZZNES/Version.txt": "efe739ce9a01fa9f50f20fd9da6cb67512bd5fb005084c45bbec26b27298cb88"
+      "ZZNES/ZZFceux-ui": "182fed3c5311e1ab6304360fc33b18d4bd5e6c59d9742fcbdd07f9c28827bdff",
+      "ZZNES/README.md": "37b9551d938302bc8c49b13f1766e38c88c894110cd468f6a8ae11f5f793c48f",
+      "ZZNES/ReadMe.txt": "37b9551d938302bc8c49b13f1766e38c88c894110cd468f6a8ae11f5f793c48f",
+      "ZZNES/CHANGELOG.md": "981b9d7427aac1b8514ca652540f60c456abdde2731ea6bf5469c196032702aa",
+      "ZZNES/Changes.md": "981b9d7427aac1b8514ca652540f60c456abdde2731ea6bf5469c196032702aa",
+      "ZZNES/Release-notes.md": "14a2ba0157afa9ddc9b0ec73a0c084e026f34810eeee12511dba41b761085f6d",
+      "ZZNES/Battery-saves.md": "eac1227eb7520e0baf249ef5713f0b433a46d47d117eaaa6594122ecbf630ca3",
+      "ZZNES/Cartridge-formats.md": "09b21c88fea44639ab99aae9306b5bd9f603ef3087568a1514d1967e2fd2d779",
+      "ZZNES/Version.txt": "350a42bf159f7909dbb9c6c0dcd10cebf7e8667e87c59053950e7d1cb891a238"
     }
   },
   "player_policy": "Launcher and ARM/68k players rebuilt together; recorded candidate identities.",
-  "launcher_sha256": "a95e333234a9ebd4a94c1e77e790eb153cbdc05f012d8519c4991f60c058cbe2",
-  "release_tag": "v0.8.11-beta",
+  "launcher_sha256": "db6ce2ea64e00bf43064edfd4640d8d1d9e81fc97358c3c0023d1f3b5eece519",
+  "release_tag": "v0.8.12-beta",
   "launcher_member": "ZZNES/ZZNES",
   "readme_member": "ZZNES/README.md"
 }

@@ -1,23 +1,25 @@
 # Current NES cartridge support
 
-This describes the rebuilt player packaged with **0.8.11 Beta**, not the entire
+This describes the rebuilt player packaged with **0.8.12 Beta**, not the entire
 imported FCEUX source tree. The executable identity is recorded in
 [the installer manifest](installer-refresh-inputs.json).
 
 | Item | Current behaviour |
 | --- | --- |
-| Header | Bounded iNES; PAL/NTSC detection and exact legacy DiskDude signature handling |
-| Mapper IDs | 0, 1, 2, 3, 4, 5, 78, 90; additional board-specific size/mirroring limits apply |
+| Header | Bounded iNES/NES 2.0; PAL/NTSC detection and exact legacy DiskDude signature handling |
+| Mapper IDs | 0, 1, 2, 3, 4, 5, 7, 11, 66, 78, 90; additional board-specific size/mirroring limits apply |
 | PRG / CHR | Up to 512 KiB PRG and 256 KiB CHR; power-of-two sizing; CHR RAM only where the mapper gate permits |
 | Trainer | 512-byte iNES trainer loaded at $7000–$71FF on supported mapper IDs; preserved through ZIP and padding recovery |
 | Battery flag | Supported mapper 1/4/5 boards: one core-declared persistent RAM region, 1–32 KiB; other battery boards rejected |
-| NES 2.0 / UNIF / other mappers | Not accepted by the current loader |
+| NES 2.0 | Explicit region/RAM and supported submappers, bounded exponent sizes; [limits](cartridge-formats.md) |
+| UNIF | Selected NROM/UxROM/CNROM/AxROM/GxROM board names, revisions 1–7; launcher normalizes validated chunks without changing the source |
+| Other mappers | Not accepted by the current loader |
 | Four-screen flag | Rejected except mapper 78, which uses it for the legacy board distinction |
 | Save states | Supported for accepted cartridges, including mapper RAM; raw battery files remain separate |
 | ZIP / padded ROMs | Supported within the existing cartridge contract; [trailing-padding handling](rom-padding.md) never adds mapper support |
 
 The current build prepares its cartridge gate from
-`development/mapper78-20261019/common/cartridge.h` through
+`development/cartridge-formats/cartridge.h` through
 `scripts/build_current.py`. The older standalone probe under
 `amiga/fceux_player` has a narrower gate and does not describe this release.
 

@@ -1,6 +1,6 @@
 # ZZNES user guide
 
-Use the [offline installer](package-manager.md), or extract the manual ZIP into a writable drawer and open **ZZNES**. Keep the player
+Use the [offline installer](package-manager.md), then open **ZZNES**. Keep the player
 executable beside it. When upgrading, retain your ROMs, States, Snapshots and
 Library.cfg; older library settings are read automatically.
 
@@ -8,7 +8,7 @@ The TF4060 is part of the test machine, not a requirement. Host executables
 target 68020 instructions; the ZZ9000 Cortex-A9 runs emulation. A faster 68k
 helps OS, I/O and audio servicing. Performance on a 68030 is not yet verified.
 
-The [compact launcher update](compact-interface.md) is in development; published release archives retain their previous layout.
+The release includes the [compact launcher](compact-interface.md).
 
 ## Games
 
@@ -28,10 +28,16 @@ library save states and captured snapshot. Imported artwork is not deleted.
 The library grows with available memory; there is no fixed ROM-count limit.
 Use **ROM Manager / Import ROMs** to discover ROMs in a selected directory or USB drive.
 
+### Cartridge formats
+
+iNES, bounded NES 2.0 and selected UNIF boards are supported. UNIF imports are
+normalised for the player without changing the source file. Unsupported boards
+and malformed files are refused before launch. See [limits](cartridge-formats.md).
+
 ### ZIP cartridges
 
 Add and Import ROMs accept ZIPs containing one matching cartridge
-(`.nes` for ZZNES; `.sfc` or `.smc` for ZZSNES). Stored and deflated ZIPs work;
+(`.nes`, `.unf` or `.unif`). Stored and deflated ZIPs work;
 no external unpacker or temporary extraction drawer is needed. Companion text
 files and macOS metadata are ignored. The game is checked against its CRC before
 being sent to the ARM.
@@ -51,7 +57,7 @@ member inside the archive.
 
 ## Display
 
-Current development builds offer **Fullscreen**, **Window 1× (320×240)**,
+The Display page offers **Fullscreen**, **Window 1× (320×240)**,
 **Window 2× (640×480)** and **Window 3× (960×720)**. A window falls back to a
 smaller integer size when it cannot fit Workbench. **Alt+Return** switches at a
 completed frame boundary and returns to the previous window size. Larger
@@ -95,14 +101,6 @@ confirmed deletion. Previous states are retained as `.bak` on overwrite.
 The loading panel stays active until the first completed frame or a launch error.
 The About page contains credits and a scrolling change list.
 
-## Disks
-
-Choose a drive or directory with **Browse...**, then press **Scan once**.
-Subdirectories are included; existing library entries are skipped. **Stop scan**
-ends a scan while retaining games already found. No automatic or background
-drive discovery runs on startup or when a USB drive is inserted.
-The red **Launch** button stays in the bottom bar on every page.
-
 ## Defaults and scaling
 
 New libraries default to fullscreen with Soft scanlines. Existing saved choices
@@ -121,7 +119,7 @@ or USB drive. [Details](rom-manager.md).
 
 ## Audio output
 
-In Display, choose **Audio output (all games)** and save settings. Auto upgrades
+In Sound, choose **Audio output (all games)** and save settings. Auto upgrades
 an existing Paula unit-0 configuration to per-app 14-bit stereo at 22.05 kHz;
 other configured output devices stay unchanged. Choose Paula 28 kHz for higher
 rate, Configured AHI for system-managed output, or ZZ9000AX for AX-connected
