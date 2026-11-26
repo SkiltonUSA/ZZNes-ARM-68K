@@ -12,9 +12,10 @@ converted cartridge runs on ARM. MUI opens, identifies UNIF mapper 7 and closes
 through ARexx QUIT with library persistence. The ZZ8-Bit-only StopPort helper
 cannot signal NES and must not be used for it. No shutdown defect was reproduced.
 
-Core1 ends idle; KEEP 800 MHz unchanged, last checked 59.6 C. Broader commercial
-game/controller/listening tests, new-board UI-created saves and release
-installation remain pending. No unsupported board was silently enabled.
+Six further runs create physical saves using F5, reload with F8, then restore
+each new mapper in a fresh player. All pass. Core1 ends idle; KEEP 800 MHz
+unchanged, last checked 60.2 C. Broader commercial game/controller/listening
+tests, library slot/thumbnail interaction and release installation remain pending. No unsupported board was silently enabled.
 
 Earlier entries below are historical.
 

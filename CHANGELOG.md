@@ -11,6 +11,7 @@
   from displayed titles.
 - Validate PAL/NTSC bank switching and fresh-process state replay for all three
   new mappers on ARM and the Amiga; retain two legacy game-state regressions.
+  Additional F5/F8 checks create, reload and fresh-restore hardware states.
 - This is an isolated 0.8.12 development candidate, not a release.
   [Scope, evidence and remaining checks](docs/cartridge-formats.md).
 

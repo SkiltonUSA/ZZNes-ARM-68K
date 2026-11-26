@@ -44,3 +44,13 @@ list on clean Quit. The first close attempt incorrectly used a helper restricted
 to ZZ8-Bit ports; it returned without signalling ZZNES. MUI's ARexx QUIT closes
 the launcher normally. The corrected repeated check passes. This was a test
 harness error, not a verified launcher shutdown defect.
+
+## Hardware-created states
+
+[Six additional runs](hardware/live-state-results.json) exercise the normal
+F5 save and F8 load keys on mappers 7, 11 and 66. Each save is created by the
+physical ARM player, loaded live, and loaded again in a fresh player for 120
+frames. HQ synthesis, register/cache-witness restoration and owned-memory
+release pass. [Complete sequence log](hardware/live-states.log). Final Core1
+is idle, KEEP 800 MHz, 60.2 C. Library slot-selection/thumbnail interaction
+and commercial titles still need broader acceptance.

@@ -1,0 +1,32 @@
+[
+  {
+    "case": "live-mapper7-capture",
+    "pass_test": true,
+    "hardware_created": true
+  },
+  {
+    "case": "live-mapper7-restore",
+    "pass_test": true,
+    "hardware_created": true
+  },
+  {
+    "case": "live-mapper11-capture",
+    "pass_test": true,
+    "hardware_created": true
+  },
+  {
+    "case": "live-mapper11-restore",
+    "pass_test": true,
+    "hardware_created": true
+  },
+  {
+    "case": "live-mapper66-capture",
+    "pass_test": true,
+    "hardware_created": true
+  },
+  {
+    "case": "live-mapper66-restore",
+    "pass_test": true,
+    "hardware_created": true
+  }
+]
